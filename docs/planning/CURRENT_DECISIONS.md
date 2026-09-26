@@ -1,6 +1,14 @@
 # CURRENT DECISIONS
 
-> Phase 1 state. The full register is `docs/planning/PHASE_1_DECISIONS.md`; this file is the quick-reference summary.
+> Phase 3 state. Full registers: `docs/planning/PHASE_1_DECISIONS.md` and `docs/planning/PHASE_3_DECISIONS.md`; this file is the quick-reference summary.
+
+## Phase 3 additions (Chapter 1 prototype)
+- **Slide density** → one core idea per slide; ≤3 short bullets on direction/lab slides; prediction-before-reveal for demos.
+- **Writing space** → ruled answer lines; ≥2 lines for explain prompts.
+- **Tables** → min row height 0.5" (portrait) / 1.1" (landscape investigation tables); shaded header row.
+- **Quiz length** → 8–12 items / 10–15 min / ~50% core, ~25% application, ~25% evidence (no forced prior-unit spiral).
+- **Friday Flex** → 3 tracks (Recover/Practice/Extend), no Week-2 dependency.
+- Chapter 1 released; system validated (see `docs/reviews/PHASE_3_SYSTEM_VALIDATION.md`).
 
 ## LOCKED / HIGH-CONFIDENCE
 - **Grade 4**, CKSci-aligned, "Energy Transfer and Transformation", **9 weeks** (M–Th core + Friday Flex).
