@@ -42,7 +42,8 @@
 - **Friday Flex:** Recover / Practice / Extend (nonessential)
 
 # Student Materials
-- Notes: RELEASED (`production/student-notes/01-ch1-energy-causes-change-guided-notes.docx`)
+- **Interactive Science Notebook: RELEASED** (`production/student-notebook/chapter-01/01-ch1-interactive-notebook.docx` → `production/releases/chapter-01/01-ch1-interactive-science-notebook.pdf`) — primary student-note system (3 inserts; 1 flap)
+- Guided notes: OPTIONAL (historical) (`production/student-notes/01-ch1-energy-causes-change-guided-notes.docx`)
 - Practice: RELEASED (`production/worksheets/01-ch1-energy-causes-change-practice.docx`)
 - Lab/activity: RELEASED (`production/worksheets/01-ch1-energy-detectives-student.docx`)
 - CER: RELEASED (evidence model embedded in detectives page + notes)
@@ -82,7 +83,12 @@
 - Final acceptance: PASS (`qa/acceptance-report.md`)
 
 # Release
-- `production/releases/chapter-01/` — slides.pptx + 6 PDFs (notes, detectives, practice, quiz, teacher key, friday flex).
+- `production/releases/chapter-01/` — slides.pptx + 7 PDFs (interactive-science-notebook, notes, detectives, practice, quiz, teacher key, friday flex).
+
+# Notebook Retrofit (Phase 4.5)
+- Slides: retrofitted with 3 notebook cue slides (Notebook—Energy · Notebook—Energy Model · Notebook—Stored Energy).
+- Interactive feature: STORED ENERGY FLAP (1/chapter).
+- QA: `qa/reports/PHASE_4_5_NOTEBOOK_QA_REPORT.md` (PASS) · `docs/reviews/CHAPTER_1_NOTEBOOK_RETROFIT_PLAN.md`.
 
 # Production Queue (EXECUTED in Phase 3)
 - P1 Teacher Chapter Map ✅ · P2 Slide Deck ✅ · P3 Guided Notes ✅ · P4 Core Investigation ✅
