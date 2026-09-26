@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# Office lock files
+~$*
+
+# Render / cache directories
+.cache/
+tmp/
+temp/
+renders/
+_review_renders/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (if tooling is added later)
+node_modules/
+
+# --- Precise binary exclusions (see docs/technical/BINARY_ASSET_POLICY.md) ---
+# Non-authoritative supplemental library (~219 MB): excluded; metadata tracked in
+# SOURCE_INVENTORY.md and docs/provenance/SOURCE_PROVENANCE.md
+assets/supplemental/
+
+# AI-generated draft PDFs (Level 4 idea banks): excluded; inventory + review tracked in Markdown
+assets/drafts/
+
+# NOTE: Do NOT ignore authoritative PDFs (assets/authoritative/) or production release PDFs.
