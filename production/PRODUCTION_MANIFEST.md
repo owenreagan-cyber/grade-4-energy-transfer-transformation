@@ -19,8 +19,9 @@
 | P8 | Teacher Keys | `production/answer-keys/01-ch1-*-key.md` | `production/releases/chapter-01/` | RELEASED | SOURCE/ADAPTED |
 | P9 | Media Plan | `curriculum/chapter-01/media/01-ch1-media-plan.md` + `01-ch1-explainer-script.md` | — | RELEASED | CUSTOM |
 | P10 | QA Package | `curriculum/chapter-01/qa/` | — | RELEASED | CUSTOM |
+| P11 | Interactive Science Notebook | `production/student-notebook/chapter-01/01-ch1-interactive-notebook.docx` | `production/releases/chapter-01/01-ch1-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
 
-> Chapter 1 is complete (Phase 3).
+> Chapter 1 is complete (Phase 3). Notebook retrofit complete (Phase 4.5).
 
 ## Chapter 2 — Moving Objects Have Energy
 
@@ -36,8 +37,16 @@
 | P8 | Teacher Keys | `production/answer-keys/02-ch2-*-key.md` | `production/releases/chapter-02/` | RELEASED | SOURCE/ADAPTED |
 | P9 | Media Plan | `curriculum/chapter-02/media/02-ch2-media-plan.md` + `02-ch2-explainer-script.md` | — | RELEASED | CUSTOM |
 | P10 | QA Package | `curriculum/chapter-02/qa/` | — | RELEASED | CUSTOM |
+| P11 | Interactive Science Notebook | `production/student-notebook/chapter-02/02-ch2-interactive-notebook.docx` | `production/releases/chapter-02/02-ch2-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
 
-> Chapter 2 is complete (Phase 4). Chapters 3–7 will be added when production begins (Phase 5+).
+> Chapter 2 is complete (Phase 4). Notebook retrofit complete (Phase 4.5). Chapters 3–7 will be added when production begins (Phase 5+).
+
+## Notebook System (Phase 4.5)
+- Primary student-note system: **Interactive Science Notebook** (supersedes flat guided-notes-only).
+- Standard: `docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`.
+- Slide modeling: `docs/planning/SLIDE_TO_NOTEBOOK_MODELING_STANDARD.md`.
+- Templates: `production/templates/student-notebook/`.
+- Old guided-notes PDFs remain OPTIONAL (historical).
 
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`

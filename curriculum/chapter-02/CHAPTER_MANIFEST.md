@@ -47,7 +47,8 @@
 - **Friday Flex:** Recover / Practice / Extend (nonessential)
 
 # Student Materials
-- Notes: RELEASED (`production/student-notes/02-ch2-moving-objects-have-energy-guided-notes.docx`)
+- **Interactive Science Notebook: RELEASED** (`production/student-notebook/chapter-02/02-ch2-interactive-notebook.docx` → `production/releases/chapter-02/02-ch2-interactive-science-notebook.pdf`) — primary student-note system (3 inserts; 1 flap)
+- Guided notes: OPTIONAL (historical) (`production/student-notes/02-ch2-moving-objects-have-energy-guided-notes.docx`)
 - Practice: RELEASED (`production/worksheets/02-ch2-moving-objects-have-energy-practice.docx`)
 - Lab/activity: RELEASED (`production/worksheets/02-ch2-moving-marbles-student.docx`)
 - Quiz: RELEASED (`production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx`)
@@ -85,7 +86,12 @@
 - Final acceptance: PASS (`qa/acceptance-report.md`)
 
 # Release
-- `production/releases/chapter-02/` — slides.pptx + 6 PDFs (notes, moving-marbles, practice, quiz, teacher key, friday flex).
+- `production/releases/chapter-02/` — slides.pptx + 7 PDFs (interactive-science-notebook, notes, moving-marbles, practice, quiz, teacher key, friday flex).
+
+# Notebook Retrofit (Phase 4.5)
+- Slides: retrofitted with 2 notebook cue slides (Notebook—Motion · Notebook—Energy of Motion).
+- Interactive feature: WHAT DID WE SEE? / WHAT CAN WE CONCLUDE? flap (1/chapter).
+- QA: `qa/reports/PHASE_4_5_NOTEBOOK_QA_REPORT.md` (PASS) · `docs/reviews/CHAPTER_2_NOTEBOOK_RETROFIT_PLAN.md`.
 
 # Production Queue (EXECUTED in Phase 4)
 - P1 Teacher Chapter Map ✅ · P2 Slide Deck ✅ · P3 Guided Notes ✅ · P4 Moving Marbles Investigation ✅
