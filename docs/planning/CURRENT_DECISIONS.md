@@ -12,9 +12,16 @@
 
 ## Phase 4 additions (Chapter 2)
 - **Chapter 2 boundary** → moving object causes change only; speed/mass/ramp-height/transfer/collision deferred to Ch.3–5.
-- **Notebook usability** → notes stay flat, visual, writable; no cut/fold/glue assembly.
 - **Lab spec** → adds "setup constants" (identical-object control) + troubleshooting table.
 - Chapter 2 released; consistency verified (see `docs/reviews/PHASE_4_SYSTEM_CONSISTENCY.md`).
+
+## Phase 4.5 additions (Interactive Science Notebook)
+- **Primary student-note system** → Basic Interactive Science Notebook (supersedes the earlier "flat guided-notes-only" direction; `docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`).
+- **Drawing/modeling** is now an intentional core feature; vocabulary = short fill-in + draw + label.
+- **Interactive elements are selective** → ~1 meaningful feature per chapter; every feature has a low-motor alternative.
+- **Slides model notebook work** → NOTEBOOK/WRITE/DRAW/REVEAL cue slides (`docs/planning/SLIDE_TO_NOTEBOOK_MODELING_STANDARD.md`).
+- **Chapters 1–2 retrofitted**; guided notes remain OPTIONAL (historical).
+- Notebook system validated (see `docs/reviews/PHASE_4_5_NOTEBOOK_SYSTEM_VALIDATION.md`).
 
 ## LOCKED / HIGH-CONFIDENCE
 - **Grade 4**, CKSci-aligned, "Energy Transfer and Transformation", **9 weeks** (M–Th core + Friday Flex).

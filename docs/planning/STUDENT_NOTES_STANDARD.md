@@ -1,6 +1,15 @@
 # STUDENT NOTES STANDARD
 
+> **SUPERSEDED (Phase 4.5) as the primary student-note system.** The project's primary student notebook is now the **Interactive Science Notebook** — see `INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`. This file is retained as the historical guided-notes standard.
+
 > Guided notes are a **scaffold for thinking**, not a copy of the Reader.
+
+## Status of this standard
+- **Guided notes remain a possible page type** within the Interactive Science Notebook (a flat, writable page).
+- **Flat writable pages remain preferred for most content.**
+- **Selective interactive pieces are now allowed** (flaps, foldables, sort-and-glue) where they serve the science.
+- **Drawing/modeling is now an intentional core feature** (not merely an add-on).
+- The primary student notebook system is the Interactive Science Notebook, not flat guided notes alone.
 
 ## Rule
 Notes must **NOT** copy the Student Reader. They capture student thinking, evidence, and models.
