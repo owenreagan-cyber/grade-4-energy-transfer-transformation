@@ -10,6 +10,12 @@
 - **Friday Flex** → 3 tracks (Recover/Practice/Extend), no Week-2 dependency.
 - Chapter 1 released; system validated (see `docs/reviews/PHASE_3_SYSTEM_VALIDATION.md`).
 
+## Phase 4 additions (Chapter 2)
+- **Chapter 2 boundary** → moving object causes change only; speed/mass/ramp-height/transfer/collision deferred to Ch.3–5.
+- **Notebook usability** → notes stay flat, visual, writable; no cut/fold/glue assembly.
+- **Lab spec** → adds "setup constants" (identical-object control) + troubleshooting table.
+- Chapter 2 released; consistency verified (see `docs/reviews/PHASE_4_SYSTEM_CONSISTENCY.md`).
+
 ## LOCKED / HIGH-CONFIDENCE
 - **Grade 4**, CKSci-aligned, "Energy Transfer and Transformation", **9 weeks** (M–Th core + Friday Flex).
 - **Content authorities** = CKSci Student Reader + Teacher Guide (13 lessons across 7 chapters).
