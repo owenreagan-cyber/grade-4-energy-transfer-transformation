@@ -2,7 +2,7 @@
 
 - **Deck role:** TEACHING (with clearly-marked lab slides)
 - **Aligned Big Question:** How are energy, change, and movement of objects related?
-- **Total slides:** 22 (instructional; no padding)
+- **Total slides:** 24 (22 instructional + 2 notebook cue slides, Phase 4.5)
 
 | # | Purpose | Core idea | Student-facing text | Visual requirement | Teacher move | Student action | Reveal | Source/provenance | Accessibility |
 |---|---|---|---|---|---|---|---|---|---|
@@ -28,6 +28,12 @@
 | 20 | Examples | real-world motion | "basketball net · raindrops · wind turbine" | 3 icons | share | name | none | SOURCE (Reader pp.9–12) | icons labeled |
 | 21 | Non-example | not moving = no change | "A book sitting on a table is NOT moving — no change." | still book | ask | discuss | reveal | ADAPTED | — |
 | 22 | Synthesis / exit | bring it together | "MOVING OBJECT → CHANGE → EVIDENCE OF ENERGY" | full model + exit prompt | recap | recite + respond | none | ADAPTED | model prominent |
+
+## Notebook cue slides (Phase 4.5 retrofit)
+| Final # | Cue | Position | WRITE (reveal) | DRAWING IDEAS |
+|---|---|---|---|---|
+| 11 | Notebook—Motion | after "Motion definition" (#10) | An object is in motion when its position changes. (POSITION) | moving object + direction arrow |
+| 13 | Notebook—Energy of Motion | after "Energy of motion" (#12) | A moving object has energy of motion. (MOTION) | moving object causing something to change |
 
 ## Rules honored
 - one core idea per slide · large type · minimal paragraphs · arrows/models · prediction-before-reveal · lab slides (#12–16) distinct · no decorative clutter · no speed/mass content · Grade 4 vocabulary only.

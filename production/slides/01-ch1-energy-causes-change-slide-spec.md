@@ -2,7 +2,7 @@
 
 - **Deck role:** TEACHING (with clearly-marked lab/activity slides)
 - **Aligned Big Questions:** Where can we observe evidence of energy causing change? · What are some forms of energy?
-- **Total slides:** 22 (instructional; no padding)
+- **Total slides:** 25 (22 instructional + 3 notebook cue slides, Phase 4.5)
 
 | # | Purpose | Core idea | Student-facing text | Visual requirement | Teacher move | Student action | Reveal | Source/provenance | Accessibility |
 |---|---|---|---|---|---|---|---|---|---|
@@ -28,6 +28,13 @@
 | 20 | Example / non-example | sharpen the idea | "Which one shows stored energy?" | stored vs moving examples | ask | discuss | reveal | ADAPTED | — |
 | 21 | Thursday synthesis | bring it together | "ENERGY → CHANGE → EVIDENCE" | full model, recap | recap week | recite chain | none | ADAPTED | model prominent |
 | 22 | Retrieval / exit | check understanding | "Name one change and the energy that caused it." | exit prompt | ask | respond (oral/written) | none | ADAPTED | — |
+
+## Notebook cue slides (Phase 4.5 retrofit)
+| Final # | Cue | Position | WRITE (reveal) | DRAWING IDEAS |
+|---|---|---|---|---|
+| 7 | Notebook—Energy | after "What is energy?" (#6) | Energy is the ability to cause change. (CHANGE) | flashlight · rolling ball · ringing bell |
+| 9 | Notebook—Energy Model | after "Change is evidence of energy" (#8) | ENERGY → CHANGE → EVIDENCE (chain) | before/after + arrows |
+| 22 | Notebook—Stored Energy | after "An object held up has stored energy" (#21) | Stored energy can cause a change later. (LATER) | battery · stretched rubber band · raised object |
 
 ## Rules honored (`docs/planning/SLIDE_DECK_STANDARD.md`)
 - one core idea per slide · large type · minimal paragraphs · arrows/models · prediction-before-reveal · lab slide distinct (#9) · no decorative clutter · Grade 4 vocabulary only.
