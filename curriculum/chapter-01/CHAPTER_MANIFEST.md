@@ -42,53 +42,49 @@
 - **Friday Flex:** Recover / Practice / Extend (nonessential)
 
 # Student Materials
-- Notes: PLANNED
-- Practice: PLANNED
-- Lab/activity: PLANNED
-- CER: PLANNED
-- Quiz: PLANNED
-- Review: PLANNED
+- Notes: RELEASED (`production/student-notes/01-ch1-energy-causes-change-guided-notes.docx`)
+- Practice: RELEASED (`production/worksheets/01-ch1-energy-causes-change-practice.docx`)
+- Lab/activity: RELEASED (`production/worksheets/01-ch1-energy-detectives-student.docx`)
+- CER: RELEASED (evidence model embedded in detectives page + notes)
+- Quiz: RELEASED (`production/quizzes/01-ch1-energy-causes-change-quiz.docx`)
+- Review: RELEASED (`curriculum/chapter-01/student/01-ch1-friday-flex.md`)
 
 # Teacher Materials
-- Teacher map: PLANNED
-- Slides: PLANNED
-- Lab setup: PLANNED
-- Answer keys: PLANNED
-- Absent-student plan: PLANNED
+- Teacher map: RELEASED
+- Slides: RELEASED (`production/slides/01-ch1-energy-causes-change-slides.pptx`)
+- Lab setup: RELEASED (`production/labs/01-ch1-energy-detectives-teacher-spec.md`)
+- Answer keys: RELEASED (`production/answer-keys/`)
+- Absent-student plan: RELEASED (`curriculum/chapter-01/student/recovery/01-ch1-absent-student-recovery.md`)
 
 # Media
-- Hook: PLANNED
-- Explainer: PLANNED
-- Lab preview: PLANNED
-- Extension: PLANNED
-- Recovery: PLANNED
+- Hook: RELEASED (in-class phenomenon; external candidate UNVERIFIED)
+- Explainer: RELEASED (`curriculum/chapter-01/media/01-ch1-explainer-script.md`)
+- Lab preview: RELEASED (slide deck #9)
+- Extension: RELEASED (Friday Flex EXTEND)
+- Recovery: RELEASED (recovery guide)
 
 # Supplies
-- (see `production/SUPPLY_REQUEST_WORKING.md` — pencil sharpener, flashlight, index cards, classroom devices)
+- `curriculum/chapter-01/teacher/01-ch1-supply-prep-guide.md` (GROUP_COUNT × amount placeholders)
 
 # Assessment
-- Exit tickets · notebook check · Chapter 1 quiz (PLANNED)
+- Exit tickets · notebook check · Chapter 1 quiz (RELEASED)
 
 # Provenance
-- SOURCE / ADAPTED / CUSTOM / EXTENSION (per resource, at production time)
+- SOURCE / ADAPTED / CUSTOM / EXTENSION (per resource, tagged at production time)
 
 # QA Status
-- Source validation: PLANNED
-- Cross-artifact alignment: PLANNED
-- Educational suitability: PLANNED
-- Visual QA: PLANNED
-- Technical QA: PLANNED
-- Classroom simulation: PLANNED
-- Final acceptance: PLANNED
+- Source validation: PASS (`qa/source-validation.md`)
+- Cross-artifact alignment: PASS (`qa/cross-artifact-alignment.md`)
+- Educational suitability: PASS (`qa/educational-suitability.md`)
+- Visual QA: PASS (`qa/acceptance-report.md` gate 5)
+- Technical QA: PASS (`qa/acceptance-report.md` gate 6)
+- Classroom simulation: PASS (`qa/classroom-simulation.md`)
+- Final acceptance: PASS (`qa/acceptance-report.md`)
 
-# Production Queue (do NOT execute in Phase 2)
-- P1 Teacher Chapter Map
-- P2 Slide Deck
-- P3 Guided Notes
-- P4 Core Investigation / Lab Student Page
-- P5 Practice Worksheet
-- P6 Friday Flex
-- P7 Chapter Quiz
-- P8 Teacher Keys
-- P9 Media Plan
-- P10 QA Package
+# Release
+- `production/releases/chapter-01/` — slides.pptx + 6 PDFs (notes, detectives, practice, quiz, teacher key, friday flex).
+
+# Production Queue (EXECUTED in Phase 3)
+- P1 Teacher Chapter Map ✅ · P2 Slide Deck ✅ · P3 Guided Notes ✅ · P4 Core Investigation ✅
+- P5 Practice Worksheet ✅ · P6 Friday Flex ✅ · P7 Chapter Quiz ✅ · P8 Teacher Keys ✅
+- P9 Media Plan ✅ · P10 QA Package ✅

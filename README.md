@@ -7,7 +7,7 @@ Grade 4 Science Unit: **Energy Transfer and Transformation**
 Build a complete 8–9 week Grade 4 science curriculum system (Core Knowledge / CKSci-aligned) around Energy Transfer and Transformation, containing authoritative source references, chapter packages, teacher curriculum maps, presentations, guided notes, worksheets, labs, quizzes, enrichment, Friday Flex resources, assessments, engineering performance tasks, explainer-video scripts, media references, supply lists, answer keys, production specs, and QA standards.
 
 ## Current phase
-**Phase 1 — Project Logic & Curriculum Architecture.** Decisions, systems, and contracts locked. No large-scale curriculum production yet.
+**Phase 3 — Chapter 1 Prototype Package & System Validation.** Chapter 1 ("Energy Causes Change") is fully produced and passed all 8 QA gates. The production system is validated; Chapters 2–7 remain to be produced (Phase 4+).
 
 ## Status
 - 65 source/asset files inventoried (Phase 0) + Chapter 4 derivative regenerated in Phase 1.
@@ -15,8 +15,9 @@ Build a complete 8–9 week Grade 4 science curriculum system (Core Knowledge / 
 - **Canonical Student Reader** locked = `Science 4 - Energy Transfer - Student Book.pdf` (backup copy retained).
 - **22 architecture docs** authored under `docs/planning/` (curriculum, scope & sequence, labs, vocabulary, misconception map, assessment, standards, supply, formats, QA, Git, decisions).
 - 3 AI drafts reviewed in `docs/reviews/PHASE_1_DRAFT_COMPATIBILITY.md` (all REBUILD, none used as-is).
-- Git **not** initialized (strategy documented; initialization deferred to Phase 2).
-- See `SOURCE_INVENTORY.md` for the hash-verified manifest and `docs/planning/` for all architecture docs.
+- **Phase 2**: production templates (25) + QA checklists (12) + Git baseline established.
+- **Phase 3**: Chapter 1 complete — teacher map, daily lessons, slide deck (22 slides, editable PPTX), guided notes, Energy Detectives investigation, practice, Friday Flex, quiz (9 items), 3 answer keys, media plan + explainer script, supply/prep, absent recovery, full QA (all PASS), release set in `production/releases/chapter-01/`.
+- See `SOURCE_INVENTORY.md` for the hash-verified manifest and `docs/reviews/PHASE_3_SYSTEM_VALIDATION.md` for the system validation verdict.
 
 ## Authoritative sources
 - **Student Reader** (complete): `assets/authoritative/student-reader/complete/` — "Science 4 - Energy Transfer - Student Book.pdf" (+ second-copy encoding).
@@ -33,10 +34,10 @@ Full detail: `docs/planning/NINE_WEEK_SCOPE_SEQUENCE.md`.
 ## Directory map
 ```
 assets/   authoritative · supplemental · drafts · staging   (consolidated sources)
-curriculum/  unit + chapter-01..07 + assessment           (EMPTY — Phase 1+)
-production/  slides · student-notes · worksheets · labs · quizzes · friday-flex · videos · answer-keys  (EMPTY)
+curriculum/  unit + chapter-01..07 + assessment           (chapter-01 complete; 02–07 to come)
+production/  slides · student-notes · worksheets · labs · quizzes · answer-keys · releases/chapter-01
 docs/     chat-history · planning · reviews · provenance
-qa/       source-validation · curriculum-alignment · visual · reports
+curriculum/chapter-01/qa/   source-validation · cross-artifact-alignment · educational-suitability · classroom-simulation · acceptance-report
 ```
 
 ## Hard rule
