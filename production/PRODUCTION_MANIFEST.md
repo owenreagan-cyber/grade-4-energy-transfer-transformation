@@ -60,6 +60,28 @@
 
 > Chapter 3 is complete (Phase 5). Chapters 4–7 will be added in Phase 6+.
 
+## Chapter 4 — Energy Transfer (Weeks 4–5, two-week chapter)
+
+| ID | Artifact | Master path | Release path | Status | Provenance |
+|---|---|---|---|---|---|
+| P1 | Teacher Chapter Map | `curriculum/chapter-04/teacher/04-ch4-energy-transfer-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
+| P2 | Daily Lessons (W4 + W5) | `curriculum/chapter-04/teacher/04-ch4-daily-lessons-week{4,5}.md` | — | RELEASED | SOURCE/ADAPTED |
+| P3 | Slide Deck | `production/slides/04-ch4-energy-transfer-slides.pptx` | `production/releases/chapter-04/` | RELEASED | ADAPTED |
+| P4 | Interactive Science Notebook | `production/student-notebook/chapter-04/04-ch4-interactive-notebook.docx` | `production/releases/chapter-04/04-ch4-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
+| P5 | Sound Transfer Investigation | `production/labs/04-ch4-sound-transfer-teacher-spec.md` + `production/worksheets/04-ch4-sound-transfer-student.docx` | `production/releases/chapter-04/` | RELEASED | SOURCE/ADAPTED |
+| P6 | Light Transfer Investigation | `production/labs/04-ch4-light-transfer-teacher-spec.md` + `production/worksheets/04-ch4-light-transfer-student.docx` | `production/releases/chapter-04/` | RELEASED | ADAPTED |
+| P7 | Heat Transfer Investigation | `production/labs/04-ch4-heat-transfer-teacher-spec.md` + `production/worksheets/04-ch4-heat-transfer-student.docx` | `production/releases/chapter-04/` | RELEASED | ADAPTED |
+| P8 | Electricity Transfer Investigation | `production/labs/04-ch4-electricity-transfer-teacher-spec.md` + `production/worksheets/04-ch4-electricity-transfer-student.docx` | `production/releases/chapter-04/` | RELEASED | ADAPTED |
+| P9 | Practice Worksheet | `production/worksheets/04-ch4-energy-transfer-practice.docx` | `production/releases/chapter-04/` | RELEASED | ADAPTED |
+| P10 | Friday Flex | `curriculum/chapter-04/student/04-ch4-friday-flex.md` | `production/releases/chapter-04/` | RELEASED | CUSTOM |
+| P11 | Chapter Quiz | `production/quizzes/04-ch4-energy-transfer-quiz.docx` | `production/releases/chapter-04/` | RELEASED | ADAPTED |
+| P12 | Teacher Keys | `production/answer-keys/04-ch4-*-key.md` (6) | `production/releases/chapter-04/` | RELEASED | SOURCE/ADAPTED |
+| P13 | Media Plan + Scripts | `curriculum/chapter-04/media/` (plan + 5 scripts) | — | RELEASED | CUSTOM |
+| P14 | Absent-Student Recovery | `curriculum/chapter-04/student/recovery/04-ch4-absent-student-recovery.md` | — | RELEASED | SOURCE/ADAPTED |
+| P15 | QA Package (11 gates) | `curriculum/chapter-04/qa/` | — | RELEASED | CUSTOM |
+
+> Chapter 4 is complete (Phase 6). Safe redesigns (no hot plate / wall outlet / chalk dust) recorded in `curriculum/chapter-04/source-map.md`. Chapters 5–7 to come (Phase 7+).
+
 ## Notebook System (Phase 4.5)
 - Primary student-note system: **Interactive Science Notebook** (supersedes flat guided-notes-only).
 - Standard: `docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`.

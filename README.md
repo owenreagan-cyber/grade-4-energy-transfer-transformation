@@ -7,7 +7,7 @@ Grade 4 Science Unit: **Energy Transfer and Transformation**
 Build a complete 8–9 week Grade 4 science curriculum system (Core Knowledge / CKSci-aligned) around Energy Transfer and Transformation, containing authoritative source references, chapter packages, teacher curriculum maps, presentations, guided notes, worksheets, labs, quizzes, enrichment, Friday Flex resources, assessments, engineering performance tasks, explainer-video scripts, media references, supply lists, answer keys, production specs, and QA standards.
 
 ## Current phase
-**Phase 4.5 — Interactive Science Notebook System Alignment.** The primary student-note system is now the **Basic Interactive Science Notebook** (composition-book paste-ins), superseding flat guided-notes-only. Chapters 1–2 were retrofitted with notebook inserts + slide cue alignment and released. Chapter 3 (Phase 5) will use this system from the start.
+**Phase 6 — Chapter 4 Production Package: Energy Transfer.** A two-week chapter (Weeks 4–5) covering sound, light, heat, and low-voltage electricity transfer, the transfer vs transformation vs BOTH distinction, and a full CER. Chapters 1–3 are complete and released; the Interactive Science Notebook system (Phase 4.5) is used throughout.
 
 ## Status
 - 65 source/asset files inventoried (Phase 0) + Chapter 4 derivative regenerated in Phase 1.
@@ -19,7 +19,9 @@ Build a complete 8–9 week Grade 4 science curriculum system (Core Knowledge / 
 - **Phase 3**: Chapter 1 complete — teacher map, daily lessons, slide deck (22 slides, editable PPTX), guided notes, Energy Detectives investigation, practice, Friday Flex, quiz (9 items), 3 answer keys, media plan + explainer script, supply/prep, absent recovery, full QA (all PASS), release set in `production/releases/chapter-01/`.
 - **Phase 4**: Chapter 2 complete — teacher map, daily lessons, slide deck (22 slides, editable PPTX), guided notes, Moving Marbles investigation, practice, Friday Flex, quiz (8 items), 3 answer keys, media plan + explainer script, supply/prep, absent recovery, full QA (all PASS), release set in `production/releases/chapter-02/`. Speed/mass comparisons correctly deferred to Chapter 3/5.
 - **Phase 4.5**: Interactive Science Notebook system established (`docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`); Chapters 1–2 retrofitted with 3 notebook inserts each + slide cue slides + release PDFs; all 8 QA gates PASS. Old guided-notes remain OPTIONAL (historical).
-- See `SOURCE_INVENTORY.md` for the hash-verified manifest, `docs/reviews/PHASE_3_SYSTEM_VALIDATION.md` for the system validation verdict, `docs/reviews/PHASE_4_SYSTEM_CONSISTENCY.md` for the consistency review, and `docs/reviews/PHASE_4_5_NOTEBOOK_SYSTEM_VALIDATION.md` for the notebook-system validation.
+- **Phase 5**: Chapter 3 complete — teacher map, daily lessons, slide deck (28 slides), 3-insert notebook, Ramp It Up! 2.0 + Drop It investigations, practice, Friday Flex, quiz (10 items), 4 answer keys, media plan + 4 scripts, supply/prep, absent recovery, 10-gate QA (all PASS), release set in `production/releases/chapter-03/`. See `docs/reviews/PHASE_5_SYSTEM_CONSISTENCY.md`.
+- **Phase 6**: Chapter 4 complete — two-week teacher map, Week 4 + Week 5 daily lessons, 46-slide deck, 5-insert notebook (transfer/transformation/BOTH flap), sound/light/heat/electricity investigations, practice, Friday Flex (both weeks), quiz (11 items), 6 answer keys, media plan + 5 scripts, supply/prep, absent recovery, 11-gate QA (all PASS), release set in `production/releases/chapter-04/`. Safe redesigns (no hot plate / wall outlet / chalk dust) documented in `curriculum/chapter-04/source-map.md`. See `docs/reviews/PHASE_6_SYSTEM_CONSISTENCY.md` and `docs/reviews/PHASE_6_MISCONCEPTION_AUDIT.md`.
+- See `SOURCE_INVENTORY.md` for the hash-verified manifest and `docs/reviews/` for system validation/consistency reviews.
 
 ## Authoritative sources
 - **Student Reader** (complete): `assets/authoritative/student-reader/complete/` — "Science 4 - Energy Transfer - Student Book.pdf" (+ second-copy encoding).
@@ -36,10 +38,10 @@ Full detail: `docs/planning/NINE_WEEK_SCOPE_SEQUENCE.md`.
 ## Directory map
 ```
 assets/   authoritative · supplemental · drafts · staging   (consolidated sources)
-curriculum/  unit + chapter-01..07 + assessment           (chapters 01–02 complete; 03–07 to come)
-production/  slides · student-notes · student-notebook · worksheets · labs · quizzes · answer-keys · releases/chapter-0{1,2}
+curriculum/  unit + chapter-01..07 + assessment           (chapters 01–04 complete; 05–07 to come)
+production/  slides · student-notes · student-notebook · worksheets · labs · quizzes · answer-keys · releases/chapter-0{1..4}
 docs/     chat-history · planning · reviews · provenance
-curriculum/chapter-0{1,2}/qa/   source-validation · cross-artifact-alignment · educational-suitability · classroom-simulation · acceptance-report
+curriculum/chapter-0{1..4}/qa/   source-validation · cross-artifact-alignment · educational-suitability · data-quality · classroom-simulation · acceptance-report
 ```
 
 ## Hard rule

@@ -32,6 +32,16 @@
 - **Data Quality gate added** → dedicated `qa/data-quality.md` (trials, units, axes, averaging, precision, no invented speed/energy numbers). QA now 10 gates.
 - Chapter 3 released; consistency verified (see `docs/reviews/PHASE_5_SYSTEM_CONSISTENCY.md`).
 
+## Phase 6 additions (Chapter 4 — Energy Transfer, Weeks 4–5)
+- **Chapter 4 boundary** → energy TRANSFER only; no compression-wave/electron/conduction mechanics; collisions (Ch.5) and engineering (Ch.6) deferred.
+- **Transfer vs transformation vs BOTH is the chapter's core distinction** → TRANSFER = energy moves; TRANSFORMATION = energy changes form; BOTH = moves AND changes form. BOTH is explicitly valid; no forced either/or.
+- **Safe investigation redesigns (ADAPTED from TG L8)** → light = flashlight + target (no chalk dust) · heat = warm water + thermometer (no hot plate) · electricity = low-voltage battery circuit (no wall outlet/charger). Science preserved; recorded in `curriculum/chapter-04/source-map.md`.
+- **Locked safety** → no student wall outlets/chargers/hot plates/open flames; heat = teacher-controlled warm water (~40 °C max); electricity = AA/AAA/D cell only; no coin cells by default.
+- **Notebook insert count is flexible** → 5 inserts for a two-week chapter (not forced to 3); interactive Transfer/Transformation/BOTH classification + flat low-motor alternative.
+- **CER progression** → Chapter 4 uses the "I know ___ because ___" claim + evidence + reasoning scaffold (stronger than Ch.1–3).
+- **QA now 11 gates** → adds Data Quality (Phase 5) + Misconception Audit (Phase 6, `docs/reviews/PHASE_6_MISCONCEPTION_AUDIT.md`).
+- Chapter 4 released; consistency verified (see `docs/reviews/PHASE_6_SYSTEM_CONSISTENCY.md`).
+
 ## LOCKED / HIGH-CONFIDENCE
 - **Grade 4**, CKSci-aligned, "Energy Transfer and Transformation", **9 weeks** (M–Th core + Friday Flex).
 - **Content authorities** = CKSci Student Reader + Teacher Guide (13 lessons across 7 chapters).
