@@ -5,6 +5,17 @@
 ## Status vocabulary
 `PLANNED` · `DRAFT` · `QA` · `ACCEPTED` · `RELEASED`
 
+## Phase 11 — Chapter 1 Note-Format Study (comparison artifacts)
+
+> Controlled comparison of INB vs full-size Guided Notes. Prototypes are comparison-only — they do NOT replace released Chapter 1 artifacts.
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| C1 | INB comparison prototype (master + PDF) | `production/comparisons/chapter-01-notes/inb/01-ch1-inb-comparison-master.docx` + `.pdf` | QA | ADAPTED/CUSTOM |
+| C2 | Guided Notes comparison prototype (master + PDF) | `production/comparisons/chapter-01-notes/guided-notes/01-ch1-guided-notes-comparison-master.docx` + `.pdf` | QA | ADAPTED/CUSTOM |
+| C3 | Teaching-comparison slide set | `production/comparisons/chapter-01-notes/01-ch1-note-system-teaching-comparison.pptx` | QA | CUSTOM |
+| C4 | Study QA + recommendation | `qa/comparisons/ch1-notes/` + `docs/reviews/CH1_INB_VS_GUIDED_NOTES_STUDY.md` | QA | CUSTOM |
+
 ## Chapter 1 — Energy Causes Change
 
 | ID | Artifact | Master path | Release path | Status | Provenance |
