@@ -120,7 +120,28 @@
 | P13 | Student Exemplar | `curriculum/chapter-06/teacher/06-ch6-engineering-student-exemplar.md` | — | RELEASED | CUSTOM |
 | P14 | QA Package (11 gates) | `curriculum/chapter-06/qa/` | — | RELEASED | CUSTOM |
 
-> Chapter 6 is complete (Phase 8). Capstone = tabletop alert/signal device (ADAPTED — replaces source solar-oven default + wired doorbell; non-electrical, safe). Recorded in `curriculum/chapter-06/source-map.md`. Chapter 7 to come (Phase 9).
+> Chapter 6 is complete (Phase 8). Capstone = tabletop alert/signal device (ADAPTED — replaces source solar-oven default + wired doorbell; non-electrical, safe). Recorded in `curriculum/chapter-06/source-map.md`.
+
+## Chapter 7 — Solving Problems and Designing Solutions: Thomas A. Edison (+ Unit Final) (Week 9)
+
+| ID | Artifact | Master path | Release path | Status | Provenance |
+|---|---|---|---|---|---|
+| P1 | Teacher Chapter Map | `curriculum/chapter-07/teacher/07-ch7-edison-unit-synthesis-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
+| P2 | Daily Lessons (Week 9) | `curriculum/chapter-07/teacher/07-ch7-daily-lessons.md` | — | RELEASED | SOURCE/ADAPTED |
+| P3 | Slide Deck (26) | `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
+| P4 | Interactive Science Notebook (3 inserts) | `production/student-notebook/chapter-07/07-ch7-interactive-notebook.docx` | `production/releases/chapter-07/07-ch7-interactive-science-notebook.pdf` | RELEASED | ADAPTED/CUSTOM |
+| P5 | Unit Synthesis Review | `production/worksheets/07-unit-synthesis-review.docx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
+| P6 | Energy's Big Questions | `production/worksheets/07-energy-big-questions.docx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
+| P7 | Final Assessment (26 items / 50 pts) | `production/quizzes/07-unit-final-assessment.docx` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | ADAPTED (original) |
+| P8 | Final Assessment Key | `production/answer-keys/07-unit-final-assessment-key.md` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | ADAPTED |
+| P9 | Scoring Guide | `production/quizzes/07-unit-final-assessment-scoring-guide.md` | `production/releases/unit-final/` | RELEASED | ADAPTED |
+| P10 | Corrections / Recovery | `curriculum/chapter-07/student/recovery/07-final-assessment-corrections-recovery.md` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | CUSTOM |
+| P11 | Absent-Student Recovery | `curriculum/chapter-07/student/recovery/07-ch7-absent-student-recovery.md` | — | RELEASED | SOURCE/ADAPTED |
+| P12 | Friday Flex | `curriculum/chapter-07/student/07-friday-flex-unit-close.md` | `production/releases/chapter-07/` | RELEASED | CUSTOM |
+| P13 | Media Plan + Scripts (5) | `curriculum/chapter-07/media/` | — | RELEASED (scripts) / videos PENDING | CUSTOM |
+| P14 | QA Package (14 gates) | `curriculum/chapter-07/qa/` + `docs/reviews/PHASE_9_*` | — | RELEASED | CUSTOM |
+
+> Chapter 7 + unit final complete (Phase 9). Original written final ADAPTED from the official 50-pt Unit Assessment blueprint. Media PENDING/UNSTAGED (Phase 10).
 
 ## Notebook System (Phase 4.5)
 - Primary student-note system: **Interactive Science Notebook** (supersedes flat guided-notes-only).
