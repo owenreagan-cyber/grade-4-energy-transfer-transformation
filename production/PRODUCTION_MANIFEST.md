@@ -101,6 +101,27 @@
 
 > Chapter 5 is complete (Phase 7). Two-part variable isolation (Part A speed · Part B mass/weight) + target-displacement measurement recorded in `curriculum/chapter-05/source-map.md`. Chapters 6–7 to come (Phase 8+).
 
+## Chapter 6 — Energy Transformations + Engineering Design (Weeks 7–8, two-week chapter)
+
+| ID | Artifact | Master path | Release path | Status | Provenance |
+|---|---|---|---|---|---|
+| P1 | Teacher Chapter Map | `curriculum/chapter-06/teacher/06-ch6-energy-transformations-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
+| P2 | Daily Lessons (W7 + W8) | `curriculum/chapter-06/teacher/06-ch6-daily-lessons-week{7,8}.md` | — | RELEASED | SOURCE/ADAPTED |
+| P3 | Slide Deck | `production/slides/06-ch6-energy-transformations-slides.pptx` | `production/releases/chapter-06/` | RELEASED | ADAPTED |
+| P4 | Interactive Science Notebook | `production/student-notebook/chapter-06/06-ch6-interactive-notebook.docx` | `production/releases/chapter-06/06-ch6-interactive-notebook.pdf` | RELEASED | ADAPTED |
+| P5 | Engineering Capstone | `production/labs/06-ch6-engineering-capstone-teacher-spec.md` + `production/worksheets/06-ch6-engineering-performance-task.docx` (7 pages) | `production/releases/chapter-06/` | RELEASED | SOURCE/ADAPTED |
+| P6 | Practice Worksheet | `production/worksheets/06-ch6-energy-transformations-practice.docx` | `production/releases/chapter-06/` | RELEASED | ADAPTED |
+| P7 | Concept Checkpoint | `production/quizzes/06-ch6-concept-checkpoint.docx` | `production/releases/chapter-06/` | RELEASED | ADAPTED |
+| P8 | Engineering Rubric | `production/rubrics/06-ch6-engineering-rubric.docx` (15-point) | `production/releases/chapter-06/` | RELEASED | ADAPTED |
+| P9 | Friday Flex | `curriculum/chapter-06/student/06-ch6-friday-flex.md` | `production/releases/chapter-06/` | RELEASED | CUSTOM |
+| P10 | Teacher Keys | `production/answer-keys/06-ch6-{practice,checkpoint,engineering,engineering-teacher}-key.md` | `production/releases/chapter-06/` | RELEASED | SOURCE/ADAPTED |
+| P11 | Media Plan + Scripts | `curriculum/chapter-06/media/` (plan + 5 scripts) | — | RELEASED (scripts) / videos PENDING | CUSTOM |
+| P12 | Absent-Student Recovery | `curriculum/chapter-06/student/recovery/06-ch6-absent-student-recovery.md` | — | RELEASED | SOURCE/ADAPTED |
+| P13 | Student Exemplar | `curriculum/chapter-06/teacher/06-ch6-engineering-student-exemplar.md` | — | RELEASED | CUSTOM |
+| P14 | QA Package (11 gates) | `curriculum/chapter-06/qa/` | — | RELEASED | CUSTOM |
+
+> Chapter 6 is complete (Phase 8). Capstone = tabletop alert/signal device (ADAPTED — replaces source solar-oven default + wired doorbell; non-electrical, safe). Recorded in `curriculum/chapter-06/source-map.md`. Chapter 7 to come (Phase 9).
+
 ## Notebook System (Phase 4.5)
 - Primary student-note system: **Interactive Science Notebook** (supersedes flat guided-notes-only).
 - Standard: `docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`.
