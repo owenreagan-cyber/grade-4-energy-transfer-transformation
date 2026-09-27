@@ -51,6 +51,15 @@
 - **Supplemental media intake merged** → 9 MP4 videos (~250 MB) + 2 review PDFs staged on-disk (git-ignored); metadata in `docs/planning/MEDIA_ASSET_MANIFEST.md`; reviews in `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md` + `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`; idea bank `docs/planning/SUPPLEMENTAL_IDEA_BANK.md`. Videos UNSTAGED; no LFS; no MP4 embedded in PPTX.
 - Chapter 5 released; consistency verified (see `docs/reviews/PHASE_7_SYSTEM_CONSISTENCY.md`).
 
+## Phase 8 additions (Chapter 6 — Energy Transformations + Engineering Design, Weeks 7–8)
+- **Chapter 6 boundary** → energy TRANSFORMATION + engineering design only; no kinetic/potential/mechanical/radiant/chemical (required), joules, power, efficiency, voltage/current, electron flow, momentum, force calcs.
+- **Core model** → INPUT → CHANGE IN FORM (TRANSFORMATION) → OUTPUT/CHANGE, with the three-way verdict TRANSFER / TRANSFORMATION / BOTH (BOTH remains valid; no forced either/or).
+- **Capstone SELECTED (ADAPTED)** → **tabletop alert/signal device** (non-electrical, safe, weather-independent) replaces the source TG L13 solar-oven default + wired-doorbell Scenario 2. No wall electricity, no open flame/hot plate, no real-door hardware. Solar oven = optional EXTENSION only.
+- **Engineering cycle locked** → DESIGN → BUILD → TEST → REFINE; Test 1 failure = data (not a penalty); redesign = ONE evidence-based change; evidence **supports** (never "proves").
+- **Evidence ≠ proof** re-standardized across student artifacts (source AP 13.5 "prove/disprove" and supplemental slideshow reworded).
+- **Supplemental slideshow intake merged** → `assets/supplemental/review/slides/Energy_Detectives.pptx` (Ch.1 slideshow, 15 slides, ~24.6 MiB) staged on-disk (git-ignored); review in `docs/reviews/CH1_SUPPLEMENTAL_SLIDESHOW_REVIEW.md`; KEEP AS SUPPLEMENTAL (NOT the Ch.1 release deck).
+- Chapter 6 released; consistency verified (see `docs/reviews/PHASE_8_SYSTEM_CONSISTENCY.md`; misconception audit `docs/reviews/PHASE_8_MISCONCEPTION_AUDIT.md`).
+
 ## LOCKED / HIGH-CONFIDENCE
 - **Grade 4**, CKSci-aligned, "Energy Transfer and Transformation", **9 weeks** (M–Th core + Friday Flex).
 - **Content authorities** = CKSci Student Reader + Teacher Guide (13 lessons across 7 chapters).
@@ -65,7 +74,7 @@
 - **Chapter package schema** + **8 QA gates** + **editable-first production** + provenance tags.
 
 ## PROVISIONAL
-- Engineering challenge = **tabletop alert/signal/motion device** (recommended; final selection still refinable).
+- ~~Engineering challenge = tabletop alert/signal/motion device~~ → **SELECTED in Phase 8** (tabletop alert/signal device, non-electrical).
 - Formative checkpoints after Ch.1–3, Ch.4–5, Ch.6–7.
 
 ## REJECTED / SUPERSEDED
