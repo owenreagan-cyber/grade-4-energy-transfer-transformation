@@ -24,6 +24,24 @@
 | Cause-effect table scaffold (Ch.2/Ch.5) | CUSTOM | CORE | reusable for Ch.5 collision predictions |
 | Reading-comprehension text-dependent questions | ADAPTED | FLEX | good flex practice material after de-flagging |
 
+## From `assets/supplemental/review/slides/Energy_Detectives.pptx`
+
+| Idea | Provenance | Tier | Notes |
+|---|---|---|---|
+| Detective / case-file visual theme | SOURCE | EXTENSION | strong visual motif — reuse as design inspiration only |
+| Before/after visual treatment | ADAPTED | CORE | already canonical; reinforces ENERGY → CHANGE → EVIDENCE |
+| ENERGY → CHANGE → EVIDENCE concept | ADAPTED | CORE | canonical model — keep exact wording |
+| Notebook prompt styling | ADAPTED | CORE | align to released ISN system (3 inserts, not excessive cut/glue) |
+| Scavenger-hunt transition slide | ADAPTED | CORE | already in released Ch.1 flow |
+
+### Rejected (do NOT reuse from slideshow)
+- "proof / proves" wording → evidence ≠ proof.
+- ENERGY → ACTION/CHANGE → EVIDENCE variant → keep canonical 3-step model.
+- "No Active Energy" language.
+- Formal transformation teaching in Chapter 1 (transformation is Ch.6 focus).
+- "Motion energy" → keep Ch.2 term "energy of motion."
+- Unverified pencil-sharpener heat claim.
+
 ## Rejected (do NOT reuse — MAJOR flags)
 - Any m/s speed measurement or mm crater-depth numbers (Ch.3 false precision).
 - Force / deformation / contact-force language (Ch.5).

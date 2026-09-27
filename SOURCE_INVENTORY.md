@@ -229,6 +229,14 @@ CLOUD POINTER entries are Google Docs/Slides `.gdoc`/`.gslides` metadata placeho
 
 > 9 generated MP4 videos (~250 MB) + 2 review PDFs copied (not moved) from `~/Downloads` into `assets/supplemental/media/` and `assets/supplemental/review/`. These are **SUPPLEMENTAL / REVIEW / GENERATED MEDIA** (not authoritative). They are git-ignored on disk (per `BINARY_ASSET_POLICY.md`); metadata (hashes, sizes, review/curriculum/staging status) is tracked in **`docs/planning/MEDIA_ASSET_MANIFEST.md`**. Review decisions: `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md` · `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`.
 
+### Supplemental Slideshow Intake (2026-09-27)
+
+> `Energy_Detectives.pptx` (Chapter 1 supplemental slideshow) copied (not moved) from `~/Downloads` into `assets/supplemental/review/slides/`. **Class:** SUPPLEMENTAL / REVIEW / CHAPTER 1 / SLIDESHOW. KEEP AS SUPPLEMENTAL — NOT authoritative, NOT the current release deck, NOT staged. Git-ignored on disk (~24.6 MiB); metadata tracked in `MEDIA_ASSET_MANIFEST.md`. Review: `docs/reviews/CH1_SUPPLEMENTAL_SLIDESHOW_REVIEW.md`.
+
+| File | Class | Type | Size | Path | SHA-256 |
+|---|---|---|---|---|---|
+| `Energy_Detectives.pptx` | SUPPLEMENTAL / REVIEW / SLIDESHOW | PPTX (15 slides) | 25,756,291 bytes | `assets/supplemental/review/slides/Energy_Detectives.pptx` | `75ece737c2c4c1f32898f14ddf42d100131a321b04012da8c9e65f13c10e179c` |
+
 ## Missing / Not Present Locally
 
 - ~~`Chapter_4_Energy_Transfer.pdf`~~ — **RESOLVED in Phase 1.** Regenerated from the canonical Reader (PDF pp.23–30, 8 pages) → entry #65.
