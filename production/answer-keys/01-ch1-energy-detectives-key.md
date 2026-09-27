@@ -13,7 +13,7 @@
 | Part B — question | any reasonable question | — | a question about energy/change | curiosity about phenomena | — | 1 pt | — |
 | Part C (stored energy) — prediction | a guess (will/won't light) | any prediction | predicts before testing | prediction = testable guess | wrong prediction = failure | 1 pt | a "wrong" prediction |
 | Part C — observation | flashlight lit up | "the bulb came on" | reports observed change | light = evidence | — | 1 pt | — |
-| Part C — evidence | light appeared when switched on | "it made light" | names observed change | change proves stored energy | — | 1 pt | — |
+| Part C — evidence | light appeared when switched on | "it made light" | names observed change | change is evidence of stored energy | — | 1 pt | — |
 | Part C — explanation | the battery had stored energy; it caused change later | "battery had energy waiting" | uses stored energy concept | nonmoving object can have stored energy | only moving objects have energy | 2 pts | informal phrasing |
 
 ## Notes
