@@ -161,5 +161,22 @@
 - Templates: `production/templates/student-notebook/`.
 - Old guided-notes PDFs remain OPTIONAL (historical).
 
+## Phase 13B — Unit 2 "Using Natural Resources for Energy" + Final 8.5-Week Package
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| U2-A | Authoritative Teacher Guide (178 pp) | `assets/authoritative/unit-02/teacher-guide/` | RELEASED | SOURCE |
+| U2-B | Authoritative Student Reader (64 pp) | `assets/authoritative/unit-02/student-reader/complete/` | RELEASED | SOURCE |
+| U2-C | 9 chapter derivatives + Glossary | `assets/authoritative/unit-02/student-reader/chapters/` | RELEASED | SOURCE (qpdf extract) |
+| U2-D | Premium guided notes Ch1–9 (DOCX+PDF) | `production/premium-notes/unit-02/` | RELEASED | ADAPTED |
+| U2-E | Slideshow outlines Ch1–9 | `production/slides/outlines/unit-02/` | RELEASED | ADAPTED |
+| U2-F | Video/explainer scripts (7) | `production/media/scripts/unit-02/UNIT2_VIDEO_SCRIPTS.md` | RELEASED (scripts) / videos PENDING | CUSTOM |
+| U2-G | Water Wheel flagship lab (student + teacher) | `production/labs/unit-02/` | RELEASED | ADAPTED |
+| U2-H | Unit 2 written assessment (student + key) | `production/quizzes/unit-02/` | RELEASED | ADAPTED |
+| U2-I | Activities (Detective Chart, Scenario, Sort, Fast & Curious, cookie-mining FLEX, certificate) | `production/activities/unit-02/` | RELEASED | ADAPTED/CUSTOM |
+| U2-J | Friday Flex bank (8.5 weeks) | `production/friday-flex/FRIDAY_FLEX_BANK.md` | RELEASED | CUSTOM |
+| U2-K | Master pacing · supply list · printing guide | `production/final-8.5-week/` | RELEASED | CUSTOM |
+| U2-L | Media map · resource disposition · QA reports | `docs/planning/TWO_UNIT_MEDIA_MAP.md` · `docs/reviews/TWO_UNIT_RESOURCE_DISPOSITION.md` · `qa/reports/PHASE13B_*` | RELEASED | CUSTOM |
+
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`
