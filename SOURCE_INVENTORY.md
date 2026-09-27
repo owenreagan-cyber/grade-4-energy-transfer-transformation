@@ -237,6 +237,20 @@ CLOUD POINTER entries are Google Docs/Slides `.gdoc`/`.gslides` metadata placeho
 |---|---|---|---|---|---|
 | `Energy_Detectives.pptx` | SUPPLEMENTAL / REVIEW / SLIDESHOW | PPTX (15 slides) | 25,756,291 bytes | `assets/supplemental/review/slides/Energy_Detectives.pptx` | `75ece737c2c4c1f32898f14ddf42d100131a321b04012da8c9e65f13c10e179c` |
 
+### Chapter 2 Supplemental Intake (2026-09-27)
+
+> Chapter 2 supplemental media + review assets copied (not moved) from `~/Downloads`. Git-ignored on disk; metadata tracked in `MEDIA_ASSET_MANIFEST.md`. `ch-3.mp4` was **reclassified** (NOT Chapter 3) and renamed to `Chapter_2_Interactive_Notebook.mp4` on intake. Reviews: `docs/reviews/CH2_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md` · `docs/reviews/CH2_SUPPLEMENTAL_SLIDESHOW_REVIEW.md`.
+
+| File | Class | Type | Size | Path | SHA-256 |
+|---|---|---|---|---|---|
+| `Chapter_2_Interactive_Notebook.mp4` (was `ch-3.mp4`) | SUPPLEMENTAL / REVIEW / CHAPTER 2 / MEDIA | MP4 (h264+aac, 6:42) | 31,431,372 bytes | `assets/supplemental/media/chapter-02/Chapter_2_Interactive_Notebook.mp4` | `80ae44210d193f3372d1ebc0b8ba6783d4b37c90b306051f1c1dc955a776af59` |
+| `Moving_Objects_Have_Energy.mp4` | SUPPLEMENTAL / REVIEW / CHAPTER 2 / MEDIA | MP4 (h264+aac, 4:50) | 20,668,556 bytes | `assets/supplemental/media/chapter-02/Moving_Objects_Have_Energy.mp4` | `2885858bf5ac83e28bf9b10acec894d1ed1cda4644cbce2967bd1c253aa83405` |
+| `Marble_Collisions__Investigating_Motion_Energy.mp4` | SUPPLEMENTAL / REVIEW / CHAPTER 2 / MEDIA | MP4 (h264+aac, 5:59) | 31,310,758 bytes | `assets/supplemental/media/chapter-02/Marble_Collisions__Investigating_Motion_Energy.mp4` | `b3f7d670c89b2e2c264f6c566bee471b30e801b1d7fa1bfba03e96e87694f279` |
+| `ch2-interactive-notebook-packet.pdf` | SUPPLEMENTAL / REVIEW / CHAPTER 2 / NOTEBOOK | PDF (7 pages) | 15,861 bytes | `assets/supplemental/review/notebooks/ch2-interactive-notebook-packet.pdf` | `a5151c0e51e518efe03a3b47d3a452f7933b6ef0df95c6fd7a9236992696bfd8` |
+| `Energy_in_Motion.pptx` | SUPPLEMENTAL / REVIEW / CHAPTER 2 / SLIDESHOW | PPTX (14 slides) | 22,649,433 bytes | `assets/supplemental/review/slides/Energy_in_Motion.pptx` | `ad8adbbc817899df9aa052f7ef25f79c0e5aed62b3ddae8e59907714cf23f3b4` |
+
+> `Things_on_the_Move.mp4` (Ch.2) was already ingested in the prior supplemental-media intake and remains byte-identical (SHA-256 `708483c5…`).
+
 ## Missing / Not Present Locally
 
 - ~~`Chapter_4_Energy_Transfer.pdf`~~ — **RESOLVED in Phase 1.** Regenerated from the canonical Reader (PDF pp.23–30, 8 pages) → entry #65.

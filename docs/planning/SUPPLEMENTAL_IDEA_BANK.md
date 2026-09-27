@@ -49,3 +49,37 @@
 - "Evidence is proof" / "prove energy was involved" (project standard: evidence ≠ proof).
 - Wall-outlet / electrical-plug imagery (safety lock).
 - Ch.6/Ch.7 engineering + Edison historical claims (pending verification + not yet built).
+
+## From `assets/supplemental/review/notebooks/ch2-interactive-notebook-packet.pdf`
+
+| Idea | Provenance | Tier | Notes |
+|---|---|---|---|
+| Visual vocabulary anchor (definition + memory-clue sketch frame) | ADAPTED | CORE | already reflected in released Ch.2 ISN; keep as canonical pattern |
+| MOTION → CHANGE → EVIDENCE one-page model | ADAPTED | CORE | canonical Ch.2 model — keep exact wording |
+| Before/after two-box motion diagram | ADAPTED | CORE | already in released Ch.2 ISN |
+| Cause/effect phenomenon practice boxes (raindrop/basketball/hammer) | ADAPTED | FLEX | usable as flex retrieval |
+| Lab data-table scaffold (displacement + sound/motion columns) | ADAPTED | FLEX | align to released Moving Marbles (identical-marble control, one variable) |
+
+### Rejected (do NOT reuse from ch2 notebook packet)
+- Six inserts (too many — released Ch.2 ISN = 3 inserts).
+- Active Motion vs Stored Energy sorting pocket (blurs Ch.1/Ch.2 boundary).
+- Collision framing + "Marble Collisions" lab (Ch.5 content).
+- Multi-variable trial (slow/fast × glass/steel × mass+speed) — violates one-variable rule.
+- "proves/proof" language — project standard is evidence supports/shows.
+- Formal CER + Mastery Badge (too early for Ch.2).
+- Steel ball bearing / heavy-shooter materials (not in released Ch.2 lab).
+
+## From `assets/supplemental/review/slides/Energy_in_Motion.pptx`
+
+| Idea | Provenance | Tier | Notes |
+|---|---|---|---|
+| Polished 16:9 full-slide visual theme | SOURCE | EXTENSION | design inspiration only |
+| Before/after motion diagrams | ADAPTED | CORE | already canonical |
+| Motion / energy-of-motion vocabulary visuals | ADAPTED | CORE | align to released Ch.2 deck wording |
+| Cause/effect framing (moving object → change → evidence) | ADAPTED | CORE | canonical model |
+
+### Rejected (do NOT reuse from ch2 slideshow)
+- Energy Transfer language (Ch.4 content) — appears too early.
+- Stored-energy sorting (blurs Ch.1/Ch.2 boundary).
+- Collision overemphasis (Ch.5 content).
+- Transformation/transfer before their proper chapters.
