@@ -89,3 +89,15 @@
 
 ## OPEN
 - See `OPEN_QUESTIONS.md` — class size/group count, period length, engineering final selection, media choices, slide toolchain, Git binary strategy, assessment weighting.
+
+## Phase 9 additions (Chapter 7 + Unit Final)
+- **Chapter 7 is the Unit Review lesson** (TG pp. 94–98), not a separately numbered lesson — no new Core Vocabulary.
+- **Original written final** = 26 items / 50 pts, ADAPTED from the official 50-pt Unit Assessment blueprint (pp. 129–136) — re-authored, not copied. Core Vocabulary deck allowed.
+- **Engineering cycle locked:** PROBLEM → DESIGN → TEST → EVIDENCE → IMPROVE.
+- **Edison framing locked:** improved (did NOT invent) the bulb; Latimer collaborator; "ten thousand ways" quoted only as the Reader phrases it; no lone-genius myth.
+- **Unit concept map** = ENERGY center + 7 branches (change · motion · speed · transfer · collisions · transformation · engineering).
+- **Assessment balance (by points):** core 26% · data/diagram 30% · application 26% · engineering 18% (written/diagram items weighted higher than MC, matching official philosophy).
+- **Final timing:** 26 items ≈ 30–45 min; splits Wed/Thu at 30-min periods (documented).
+- **Media:** Ch.7 = scripts only (5); videos PENDING/UNSTAGED. Whole-unit staging → Phase 10.
+- **14 QA gates** run; all PASS. Unit instructionally complete; media staging not complete.
+- Evidence ≠ proof reaffirmed across all final-assessment + student-facing language ("supports/shows").

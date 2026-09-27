@@ -64,3 +64,19 @@ Reject an existing video **only** for a MAJOR failure: scientifically false cent
 ## Current verdict
 - All 9 videos: **REVIEWED** (technical + sampled-frame), all **KEEP** (2 = KEEP WITH NOTES), all **UNSTAGED**. No MAJOR FAIL. No regeneration requested.
 - Placement: PENDING (awaiting complete chapter/unit media libraries).
+
+## WHOLE-UNIT MEDIA STATUS (Phase 9 update)
+
+| Chapter | Generated videos | Scripts | Staging |
+|---|---|---|---|
+| 1 — Energy Causes Change | 9 (REVIEWED, KEEP) | complete | UNSTAGED |
+| 2 — Moving Objects Have Energy | 1 (REVIEWED, KEEP) | complete | UNSTAGED |
+| 3 — Energy and Speed | none yet | complete | UNSTAGED |
+| 4 — Sound + Light + Heat + Electricity Transfer | none yet | complete | UNSTAGED |
+| 5 — Collisions Transfer Energy | none yet | complete | UNSTAGED |
+| 6 — Energy Transformations | none yet | complete | UNSTAGED |
+| 7 — Edison + Unit Review | none yet | 5 scripts (media plan) | UNSTAGED |
+
+- No MP4 embedded in any PPTX. No videos staged into lessons yet.
+- **Whole-unit staging remains a later pass (Phase 10).**
+- Scripts only for Ch.3–7; generation is PENDING and does not block release.
