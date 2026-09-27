@@ -225,6 +225,10 @@ CLOUD POINTER entries are Google Docs/Slides `.gdoc`/`.gslides` metadata placeho
 | `energy-transfer-and-transformation-unit-test.pdf` | - |
 | `energy-transfer-and-transformation-worksheets.pdf` | - |
 
+## Supplemental Media Intake (2026-09-27)
+
+> 9 generated MP4 videos (~250 MB) + 2 review PDFs copied (not moved) from `~/Downloads` into `assets/supplemental/media/` and `assets/supplemental/review/`. These are **SUPPLEMENTAL / REVIEW / GENERATED MEDIA** (not authoritative). They are git-ignored on disk (per `BINARY_ASSET_POLICY.md`); metadata (hashes, sizes, review/curriculum/staging status) is tracked in **`docs/planning/MEDIA_ASSET_MANIFEST.md`**. Review decisions: `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md` · `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`.
+
 ## Missing / Not Present Locally
 
 - ~~`Chapter_4_Energy_Transfer.pdf`~~ — **RESOLVED in Phase 1.** Regenerated from the canonical Reader (PDF pp.23–30, 8 pages) → entry #65.
