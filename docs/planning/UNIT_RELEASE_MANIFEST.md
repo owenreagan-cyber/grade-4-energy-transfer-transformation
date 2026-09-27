@@ -1,6 +1,6 @@
 # UNIT RELEASE MANIFEST — Grade 4 Energy Transfer & Transformation
 
-> Whole-unit release status (Phase 9 complete).
+> Whole-unit release status (Phase 10 complete).
 
 ## Chapters
 | Chapter | Title | Status |
@@ -19,12 +19,17 @@
 | Final Assessment (original, 26 items / 50 pts) | RELEASED |
 | Unit Synthesis Review | RELEASED |
 | Engineering Performance Task (Ch.6 capstone) | RELEASED |
-| Media | PARTIAL / UNSTAGED |
+| Final Teacher Package (map · supply · index · printing · playback) | RELEASED |
+| Media | PARTIAL (Ch.1–2 staged · Ch.3–7 scripts-only) |
 | Supplemental Assets | CATALOGED |
 
 ## Release directories
 - `production/releases/chapter-0{1..7}/`
 - `production/releases/unit-final/` (assessment · key · scoring guide · synthesis review · corrections)
+- `production/final-package/` (week-by-week map · supply order · master index · printing guide · media playback guide)
 
 ## Media note
-Chapters 1–2 have generated videos (REVIEWED, UNSTAGED); Chapters 3–7 are scripts-only. Whole-unit media staging is deferred to Phase 10. See `docs/planning/MEDIA_ASSET_MANIFEST.md`.
+Chapters 1–2 have generated videos (REVIEWED, staged in `WHOLE_UNIT_MEDIA_STAGING.md`); Chapters 3–7 are scripts-only (PENDING GENERATION) and do NOT block release. Media is NOT marked RELEASED for Ch.3–7.
+
+## QA note (Phase 10)
+10 automated gates ran: 9 PASS + 1 WARN (18 release PDFs are A4 — print "fit to page"; pre-existing, cosmetic, non-blocking). Final Acceptance = PASS. See `qa/reports/PHASE_10_QA_GATES.md`.
