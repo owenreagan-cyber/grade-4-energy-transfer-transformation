@@ -23,6 +23,15 @@
 - **Chapters 1–2 retrofitted**; guided notes remain OPTIONAL (historical).
 - Notebook system validated (see `docs/reviews/PHASE_4_5_NOTEBOOK_SYSTEM_VALIDATION.md`).
 
+## Phase 5 additions (Chapter 3)
+- **Chapter 3 boundary** → same-object speed↔energy relationship only; mass/collision/transfer/transformation/engineering deferred to Ch.4–7.
+- **Measured vs inferred is the chapter's core distinction** → students measure ramp height, cup displacement, drop height, crater width; they INFER relative speed and the speed↔energy relationship. No "we measured energy/speed" anywhere.
+- **Graph title is locked** → "Ramp Height vs. Average Cup Displacement" (both axes measured). "Speed vs. Energy" is prohibited.
+- **Ramp It Up! 2.0 (ADAPTED)** → adds 3 heights (1/2/3 books), 3 trials, cm displacement, averaging, and a pre-ruled graph over the qualitative AP 4.1.
+- **Drop It (ADAPTED)** → fixed heights 30/60/90 cm + cm crater width (depth qualitative) replace the official knee/waist body-relative heights, for a fairer test across student sizes.
+- **Data Quality gate added** → dedicated `qa/data-quality.md` (trials, units, axes, averaging, precision, no invented speed/energy numbers). QA now 10 gates.
+- Chapter 3 released; consistency verified (see `docs/reviews/PHASE_5_SYSTEM_CONSISTENCY.md`).
+
 ## LOCKED / HIGH-CONFIDENCE
 - **Grade 4**, CKSci-aligned, "Energy Transfer and Transformation", **9 weeks** (M–Th core + Friday Flex).
 - **Content authorities** = CKSci Student Reader + Teacher Guide (13 lessons across 7 chapters).
@@ -47,6 +56,8 @@
 - Solar/weather-dependent capstone as sole pathway → rejected.
 - "Pendulum Bell Alert" shown before independent design → rejected (exemplar only).
 - Clay-depth/loudness as primary collision data → rejected (target displacement).
+- Drop It knee/waist/shoulder body-relative heights → rejected (inconsistent across student sizes); replaced with fixed 30/60/90 cm (Phase 5).
+- Millimeter crater-depth precision → rejected (false precision); crater depth stays qualitative shallow/medium/deep (Phase 5).
 
 ## OPEN
 - See `OPEN_QUESTIONS.md` — class size/group count, period length, engineering final selection, media choices, slide toolchain, Git binary strategy, assessment weighting.
