@@ -12,7 +12,7 @@
 | 4 | Big Question | frame the week | "Where can we observe evidence of energy causing change?" | Big Question banner | introduce | restate | none | SOURCE (TG L1) | large |
 | 5 | Observable change | what counts as change | "A change is something becoming different." | examples: still→moving, dark→light, quiet→loud | define | pair-share an example | none | ADAPTED | minimal text |
 | 6 | Energy definition | core idea | "Energy is the ability to cause change." | definition card + arrow to change | state, then have students repeat | echo/read | none | SOURCE (Reader p.1) | high contrast |
-| 7 | Evidence | change proves energy | "Change is evidence of energy." | ENERGY → CHANGE → EVIDENCE arrows | connect | trace the arrow | none | SOURCE (Reader p.2) | arrows large |
+| 7 | Evidence | change is evidence of energy | "Change is evidence of energy." | ENERGY → CHANGE → EVIDENCE arrows | connect | trace the arrow | none | SOURCE (Reader p.2) | arrows large |
 | 8 | Demonstration | sharpener changes | "What changes does the pencil sharpener cause?" | pencil before/after (dull→sharp), noise icon | run demo | predict then observe | reveal after demo | SOURCE (TG L1) | icons not photos |
 | 9 | Energy Detectives (lab slide) | scavenger-hunt directions | "Find 3 changes. Record: what changed + evidence + energy form." | directions list | launch | begin hunt | none | ADAPTED (AP 1.1) | lab slide styling |
 | 10 | Forms of energy — overview | energy has forms | "Energy has different forms." | 5 icons: motion, sound, light, heat, electrical | introduce | name them | none | SOURCE (Reader p.3) | icon labels |
