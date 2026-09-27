@@ -33,7 +33,10 @@
 
 | File | Working title | Role | Format | Duration | Resolution | Size (bytes) | SHA-256 | Review | Curriculum | Staging | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| `Things_on_the_Move.mp4` | Things on the Move | Ch.2 opening/core explainer | MP4 (h264+aac) | 7:21 | 1280×720 | 41,874,205 | `708483c50ad0c940ac5bb6965ca4406200cd901eb9a77c5231228e0f047951aa` | REVIEWED | KEEP | UNSTAGED | Fits Ch.2 "Moving Objects Have Energy" (NOT Ch.1). Long-form explainer, not a quick hook. |
+| `Things_on_the_Move.mp4` | Things on the Move | Ch.2 opening / broader motion hook | MP4 (h264+aac) | 7:21 | 1280×720 | 41,874,205 | `708483c50ad0c940ac5bb6965ca4406200cd901eb9a77c5231228e0f047951aa` | REVIEWED | KEEP | UNSTAGED | Fits Ch.2 (NOT Ch.1). Long-form; use only if time permits. |
+| `Moving_Objects_Have_Energy.mp4` | Moving Objects Have Energy | Core concept explainer | MP4 (h264+aac) | 4:50 | 1280×720 | 20,668,556 | `2885858bf5ac83e28bf9b10acec894d1ed1cda4644cbce2967bd1c253aa83405` | REVIEWED | KEEP | UNSTAGED | Best direct Ch.2 concept explainer. |
+| `Marble_Collisions__Investigating_Motion_Energy.mp4` | Marble Collisions: Investigating Motion Energy | Moving Marbles investigation / lab preview | MP4 (h264+aac) | 5:59 | 1280×720 | 31,310,758 | `b3f7d670c89b2e2c264f6c566bee471b30e801b1d7fa1bfba03e96e87694f279` | REVIEWED | KEEP | UNSTAGED | Lab preview; show before Moving Marbles. |
+| `Chapter_2_Interactive_Notebook.mp4` | Chapter 2 Interactive Notebook | Notebook walkthrough / student support | MP4 (h264+aac) | 6:42 | 1280×720 | 31,431,372 | `80ae44210d193f3372d1ebc0b8ba6783d4b37c90b306051f1c1dc955a776af59` | REVIEWED | KEEP | UNSTAGED | Originally `ch-3.mp4` — reclassified Ch.2 notebook (NOT Ch.3). |
 
 ## SUPPLEMENTAL PDFs (review assets)
 
@@ -41,20 +44,23 @@
 |---|---|---|---|---|
 | `chapter-reading-worksheet-assessments.pdf` | SUPPLEMENTAL / REVIEW | `assets/supplemental/review/assessments/` | 32,095 | `18ea86ed0e1dd6555e6b8b5bd462fa64c8377180c618f05eb3ce07ef96e7e558` |
 | `ch1-interactive-notebook-packet.pdf` | SUPPLEMENTAL / REVIEW | `assets/supplemental/review/notebooks/` | 14,872 | `44a9c99464d0ce4defbbc11170a4bc3d43680d3c7633f7725ea98e24be769490` |
+| `ch2-interactive-notebook-packet.pdf` | SUPPLEMENTAL / REVIEW / CHAPTER 2 | `assets/supplemental/review/notebooks/` | 15,861 | `a5151c0e51e518efe03a3b47d3a452f7933b6ef0df95c6fd7a9236992696bfd8` |
 | `Energy_Detectives.pptx` | SUPPLEMENTAL / REVIEW / CHAPTER 1 / SLIDESHOW | `assets/supplemental/review/slides/` | 25,756,291 | `75ece737c2c4c1f32898f14ddf42d100131a321b04012da8c9e65f13c10e179c` |
+| `Energy_in_Motion.pptx` | SUPPLEMENTAL / REVIEW / CHAPTER 2 / SLIDESHOW | `assets/supplemental/review/slides/` | 22,649,433 | `ad8adbbc817899df9aa052f7ef25f79c0e5aed62b3ddae8e59907714cf23f3b4` |
 
-> Review decisions for the PDFs live in `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md` and `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`. The slideshow review lives in `docs/reviews/CH1_SUPPLEMENTAL_SLIDESHOW_REVIEW.md`.
+> Review decisions for the PDFs live in `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md`, `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`, and `docs/reviews/CH2_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`. The slideshow reviews live in `docs/reviews/CH1_SUPPLEMENTAL_SLIDESHOW_REVIEW.md` and `docs/reviews/CH2_SUPPLEMENTAL_SLIDESHOW_REVIEW.md`.
 
 ## SUPPLEMENTAL SLIDESHOW (review asset, 2026-09-27)
 
 | File | Chapter | Class | Status | Slide count | Size (bytes) | SHA-256 |
 |---|---|---|---|---|---|---|
 | `Energy_Detectives.pptx` | 1 — Energy Causes Change | SUPPLEMENTAL / REVIEW / SLIDESHOW | KEEP AS SUPPLEMENTAL · NOT AUTHORITATIVE · NOT CURRENT RELEASE DECK · NOT STAGED | 15 | 25,756,291 | `75ece737c2c4c1f32898f14ddf42d100131a321b04012da8c9e65f13c10e179c` |
+| `Energy_in_Motion.pptx` | 2 — Moving Objects Have Energy | SUPPLEMENTAL / REVIEW / SLIDESHOW | KEEP AS SUPPLEMENTAL · NOT AUTHORITATIVE · NOT RELEASE DECK · NOT STAGED | 14 | 22,649,433 | `ad8adbbc817899df9aa052f7ef25f79c0e5aed62b3ddae8e59907714cf23f3b4` |
 
 - **Role:** visual reference / supplemental presentation / possible design inspiration.
-- **Source path:** `~/Downloads/Energy_Detectives.pptx` (original left untouched).
-- **Repo path:** `assets/supplemental/review/slides/Energy_Detectives.pptx` (git-ignored on disk per `BINARY_ASSET_POLICY.md`; ~24.6 MiB).
-- No macros/VBA; no broken media references; opens cleanly (15 slides, 16:9, 15 embedded PNGs).
+- **Source path:** `~/Downloads/Energy_Detectives.pptx` + `~/Downloads/Energy_in_Motion.pptx` (originals left untouched).
+- **Repo path:** `assets/supplemental/review/slides/` (git-ignored on disk per `BINARY_ASSET_POLICY.md`).
+- No macros/VBA; no broken media references; opens cleanly (Energy_Detectives = 15 slides · Energy_in_Motion = 14 slides, both 16:9 image-based).
 
 ## MAJOR FAIL standard (regeneration threshold)
 Reject an existing video **only** for a MAJOR failure: scientifically false central concept · directly contradicts the unit standard · serious safety instruction · teaches a curriculum-harming misconception · corrupted/unplayable file · inappropriate student-facing content.
@@ -62,21 +68,21 @@ Reject an existing video **only** for a MAJOR failure: scientifically false cent
 **NOT** major fails (record as NOTES, do NOT regenerate): longer than ideal · minor vocabulary leakage · slightly early terminology · stylistic preference · redundant example · minor wording the teacher can contextualize · imperfect pacing.
 
 ## Current verdict
-- All 9 videos: **REVIEWED** (technical + sampled-frame), all **KEEP** (2 = KEEP WITH NOTES), all **UNSTAGED**. No MAJOR FAIL. No regeneration requested.
-- Placement: PENDING (awaiting complete chapter/unit media libraries).
+- Chapter 1: **8 videos** REVIEWED (technical + sampled-frame), all KEEP (2 = KEEP WITH NOTES), UNSTAGED.
+- Chapter 2: **4 videos** REVIEWED, all KEEP, UNSTAGED (`ch-3.mp4` correctly reclassified → `Chapter_2_Interactive_Notebook.mp4`).
+- No MAJOR FAIL. No regeneration requested.
 
-## WHOLE-UNIT MEDIA STATUS (Phase 9 update)
+## WHOLE-UNIT MEDIA STATUS (Phase 10 update)
 
 | Chapter | Generated videos | Scripts | Staging |
 |---|---|---|---|
-| 1 — Energy Causes Change | 9 (REVIEWED, KEEP) | complete | UNSTAGED |
-| 2 — Moving Objects Have Energy | 1 (REVIEWED, KEEP) | complete | UNSTAGED |
-| 3 — Energy and Speed | none yet | complete | UNSTAGED |
-| 4 — Sound + Light + Heat + Electricity Transfer | none yet | complete | UNSTAGED |
-| 5 — Collisions Transfer Energy | none yet | complete | UNSTAGED |
-| 6 — Energy Transformations | none yet | complete | UNSTAGED |
-| 7 — Edison + Unit Review | none yet | 5 scripts (media plan) | UNSTAGED |
+| 1 — Energy Causes Change | 8 (REVIEWED, KEEP) | complete | UNSTAGED |
+| 2 — Moving Objects Have Energy | 4 (REVIEWED, KEEP) | complete | UNSTAGED |
+| 3 — Energy and Speed | none | complete | UNSTAGED |
+| 4 — Sound + Light + Heat + Electricity Transfer | none | complete | UNSTAGED |
+| 5 — Collisions Transfer Energy | none | complete | UNSTAGED |
+| 6 — Energy Transformations | none | complete | UNSTAGED |
+| 7 — Edison + Unit Review | none | 5 scripts (media plan) | UNSTAGED |
 
-- No MP4 embedded in any PPTX. No videos staged into lessons yet.
-- **Whole-unit staging remains a later pass (Phase 10).**
-- Scripts only for Ch.3–7; generation is PENDING and does not block release.
+- No MP4 embedded in any PPTX. Staging map: `docs/planning/WHOLE_UNIT_MEDIA_STAGING.md`.
+- Ch.3–7 = scripts only; generation is PENDING and does not block the final classroom package.
