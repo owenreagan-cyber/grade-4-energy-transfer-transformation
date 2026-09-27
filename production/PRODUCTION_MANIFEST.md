@@ -82,6 +82,25 @@
 
 > Chapter 4 is complete (Phase 6). Safe redesigns (no hot plate / wall outlet / chalk dust) recorded in `curriculum/chapter-04/source-map.md`. Chapters 5–7 to come (Phase 7+).
 
+## Chapter 5 — Collisions Transfer Energy (Week 6, one-week chapter)
+
+| ID | Artifact | Master path | Release path | Status | Provenance |
+|---|---|---|---|---|---|
+| P1 | Teacher Chapter Map | `curriculum/chapter-05/teacher/05-ch5-collisions-transfer-energy-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
+| P2 | Daily Lessons (Week 6) | `curriculum/chapter-05/teacher/05-ch5-daily-lessons-week6.md` | — | RELEASED | SOURCE/ADAPTED |
+| P3 | Slide Deck | `production/slides/05-ch5-collisions-slides.pptx` | `production/releases/chapter-05/` | RELEASED | ADAPTED |
+| P4 | Interactive Science Notebook | `production/student-notebook/chapter-05/05-ch5-interactive-notebook.docx` | `production/releases/chapter-05/05-ch5-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
+| P5 | Crash Lab Investigation | `production/labs/05-ch5-crash-lab-teacher-spec.md` + `production/worksheets/05-ch5-crash-lab-student.docx` | `production/releases/chapter-05/` | RELEASED | SOURCE/ADAPTED |
+| P6 | Practice Worksheet | `production/worksheets/05-ch5-collisions-practice.docx` | `production/releases/chapter-05/` | RELEASED | ADAPTED |
+| P7 | Friday Flex | `curriculum/chapter-05/student/05-ch5-friday-flex.md` | `production/releases/chapter-05/` | RELEASED | CUSTOM |
+| P8 | Chapter Quiz | `production/quizzes/05-ch5-collisions-quiz.docx` | `production/releases/chapter-05/` | RELEASED | ADAPTED |
+| P9 | Teacher Keys | `production/answer-keys/05-ch5-*-key.md` (3) | `production/releases/chapter-05/` | RELEASED | SOURCE/ADAPTED |
+| P10 | Media Plan + Scripts | `curriculum/chapter-05/media/` (plan + 4 scripts) | — | RELEASED | CUSTOM |
+| P11 | Absent-Student Recovery | `curriculum/chapter-05/student/recovery/05-ch5-absent-student-recovery.md` | — | RELEASED | SOURCE/ADAPTED |
+| P12 | QA Package (11 gates) | `curriculum/chapter-05/qa/` | — | RELEASED | CUSTOM |
+
+> Chapter 5 is complete (Phase 7). Two-part variable isolation (Part A speed · Part B mass/weight) + target-displacement measurement recorded in `curriculum/chapter-05/source-map.md`. Chapters 6–7 to come (Phase 8+).
+
 ## Notebook System (Phase 4.5)
 - Primary student-note system: **Interactive Science Notebook** (supersedes flat guided-notes-only).
 - Standard: `docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`.

@@ -42,6 +42,15 @@
 - **QA now 11 gates** → adds Data Quality (Phase 5) + Misconception Audit (Phase 6, `docs/reviews/PHASE_6_MISCONCEPTION_AUDIT.md`).
 - Chapter 4 released; consistency verified (see `docs/reviews/PHASE_6_SYSTEM_CONSISTENCY.md`).
 
+## Phase 7 additions (Chapter 5 — Collisions Transfer Energy, Week 6)
+- **Chapter 5 boundary** → collisions transfer energy only; no momentum/impulse/force calculations/contact-force/deformation terms; no kinetic/potential/mechanical vocabulary; sound qualitative; heat NOT measured.
+- **Variable isolation is the chapter's core** → Crash Lab splits the official "change one variable" investigation into **Part A (Speed): same car, vary ramp height** and **Part B (Mass/Weight): same ramp, vary mass/weight**; measured outcome = **target displacement (cm)**. Speed and mass are NEVER confounded.
+- **Primary data = target displacement** → cm displacement with 3 trials + averaging (rejects clay-depth/loudness as primary data, consistent with Phase 6).
+- **Prediction scaffold** → PREDICT → TEST → OBSERVE → COMPARE → EXPLAIN formalized; Newton's cradle = demo/phenomenon only.
+- **Energy-does-not-disappear is the synthesis anchor** → COLLISION → MOTION CAN CHANGE → ENERGY CAN TRANSFER → ENERGY DOES NOT DISAPPEAR.
+- **Supplemental media intake merged** → 9 MP4 videos (~250 MB) + 2 review PDFs staged on-disk (git-ignored); metadata in `docs/planning/MEDIA_ASSET_MANIFEST.md`; reviews in `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md` + `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`; idea bank `docs/planning/SUPPLEMENTAL_IDEA_BANK.md`. Videos UNSTAGED; no LFS; no MP4 embedded in PPTX.
+- Chapter 5 released; consistency verified (see `docs/reviews/PHASE_7_SYSTEM_CONSISTENCY.md`).
+
 ## LOCKED / HIGH-CONFIDENCE
 - **Grade 4**, CKSci-aligned, "Energy Transfer and Transformation", **9 weeks** (M–Th core + Friday Flex).
 - **Content authorities** = CKSci Student Reader + Teacher Guide (13 lessons across 7 chapters).
