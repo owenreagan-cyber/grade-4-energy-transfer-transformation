@@ -39,7 +39,26 @@
 | P10 | QA Package | `curriculum/chapter-02/qa/` | — | RELEASED | CUSTOM |
 | P11 | Interactive Science Notebook | `production/student-notebook/chapter-02/02-ch2-interactive-notebook.docx` | `production/releases/chapter-02/02-ch2-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
 
-> Chapter 2 is complete (Phase 4). Notebook retrofit complete (Phase 4.5). Chapters 3–7 will be added when production begins (Phase 5+).
+> Chapter 2 is complete (Phase 4). Notebook retrofit complete (Phase 4.5).
+
+## Chapter 3 — Energy and Speed Are Related
+
+| ID | Artifact | Master path | Release path | Status | Provenance |
+|---|---|---|---|---|---|
+| P1 | Teacher Chapter Map | `curriculum/chapter-03/teacher/03-ch3-energy-speed-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
+| P2 | Slide Deck | `production/slides/03-ch3-energy-speed-slides.pptx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
+| P3 | Interactive Science Notebook | `production/student-notebook/chapter-03/03-ch3-interactive-notebook.docx` | `production/releases/chapter-03/03-ch3-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
+| P4 | Ramp It Up! 2.0 Investigation | `production/labs/03-ch3-ramp-it-up-teacher-spec.md` + `production/worksheets/03-ch3-ramp-it-up-student.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
+| P5 | Drop It Investigation | `production/labs/03-ch3-drop-it-teacher-spec.md` + `production/worksheets/03-ch3-drop-it-student.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
+| P6 | Practice Worksheet | `production/worksheets/03-ch3-energy-speed-practice.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
+| P7 | Friday Flex | `curriculum/chapter-03/student/03-ch3-friday-flex.md` | `production/releases/chapter-03/` | RELEASED | CUSTOM |
+| P8 | Chapter Quiz | `production/quizzes/03-ch3-energy-speed-quiz.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
+| P9 | Teacher Keys | `production/answer-keys/03-ch3-*-key.md` | `production/releases/chapter-03/` | RELEASED | SOURCE/ADAPTED |
+| P10 | Media Plan + Scripts | `curriculum/chapter-03/media/` (plan + 4 scripts) | — | RELEASED | CUSTOM |
+| P11 | Absent-Student Recovery | `curriculum/chapter-03/student/recovery/03-ch3-absent-student-recovery.md` | — | RELEASED | SOURCE/ADAPTED |
+| P12 | QA Package (10 gates) | `curriculum/chapter-03/qa/` | — | RELEASED | CUSTOM |
+
+> Chapter 3 is complete (Phase 5). Chapters 4–7 will be added in Phase 6+.
 
 ## Notebook System (Phase 4.5)
 - Primary student-note system: **Interactive Science Notebook** (supersedes flat guided-notes-only).
