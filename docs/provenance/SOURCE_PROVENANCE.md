@@ -38,5 +38,11 @@ School-Drive source files carry the macOS `uchg` (user-immutable) flag (set by G
 - Chat-cited numbered activity pages `1.1.pdf`..`13.6.pdf` — not present as separate files; contained in `Science 4 - Energy Transfer - Activity Pages.pdf`.
 - Chat-cited `Pasted text(20260925-202640).txt` / `(20260925-212909).txt` — not found; three unrelated `Pasted text*` files in ~/Downloads were examined and excluded (Claude dev log, Saxon 5 slide-builder code, Canvas/Thales matrix).
 
+## Phase 13A — ChatGPT workstream intake (2026-09-27)
+- 22 net-new supplemental/review files copied (not moved) from `~/Downloads` into `assets/supplemental/review/` (and 3 new MP4s into `assets/supplemental/media/chapter-02/`). Originals preserved in `~/Downloads`.
+- Source: ChatGPT resource-generation workstream (AI-generated review decks, Unit 2 drafts, labs, flex ideas, certificate) + one CKSci official Teacher Guide (`CKSci_G4UsingEnergyResources_TG.pdf` = "Using Natural Resources for Energy" TG, 178 pp — **Level-1 authoritative candidate** for Unit 2, formal authoritative intake pending).
+- 7 additional MP4s + `Energy_Detectives.pptx` + `Energy_in_Motion.pptx` + `chapter-reading-worksheet-assessments.pdf` were already present from prior phases and were **not** re-imported.
+- All 22 new copies verified byte-for-byte (SHA-256) against originals; none altered in place. Catalog + disposition + revision requirements + school content constraint: `docs/reviews/intake/PHASE13A_NEW_RESOURCE_INTAKE.md` and `SOURCE_INVENTORY.md` entries #66–#87.
+
 ## Hash verification
 64 project copies verified byte-for-byte (SHA-256) against originals; 64 originals confirmed unchanged after copy. See `SOURCE_INVENTORY.md` for full hashes.
