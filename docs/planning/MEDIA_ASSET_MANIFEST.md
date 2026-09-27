@@ -41,8 +41,20 @@
 |---|---|---|---|---|
 | `chapter-reading-worksheet-assessments.pdf` | SUPPLEMENTAL / REVIEW | `assets/supplemental/review/assessments/` | 32,095 | `18ea86ed0e1dd6555e6b8b5bd462fa64c8377180c618f05eb3ce07ef96e7e558` |
 | `ch1-interactive-notebook-packet.pdf` | SUPPLEMENTAL / REVIEW | `assets/supplemental/review/notebooks/` | 14,872 | `44a9c99464d0ce4defbbc11170a4bc3d43680d3c7633f7725ea98e24be769490` |
+| `Energy_Detectives.pptx` | SUPPLEMENTAL / REVIEW / CHAPTER 1 / SLIDESHOW | `assets/supplemental/review/slides/` | 25,756,291 | `75ece737c2c4c1f32898f14ddf42d100131a321b04012da8c9e65f13c10e179c` |
 
-> Review decisions for the PDFs live in `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md` and `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`.
+> Review decisions for the PDFs live in `docs/reviews/SUPPLEMENTAL_READING_ASSESSMENTS_REVIEW.md` and `docs/reviews/CH1_SUPPLEMENTAL_NOTEBOOK_PACKET_REVIEW.md`. The slideshow review lives in `docs/reviews/CH1_SUPPLEMENTAL_SLIDESHOW_REVIEW.md`.
+
+## SUPPLEMENTAL SLIDESHOW (review asset, 2026-09-27)
+
+| File | Chapter | Class | Status | Slide count | Size (bytes) | SHA-256 |
+|---|---|---|---|---|---|---|
+| `Energy_Detectives.pptx` | 1 — Energy Causes Change | SUPPLEMENTAL / REVIEW / SLIDESHOW | KEEP AS SUPPLEMENTAL · NOT AUTHORITATIVE · NOT CURRENT RELEASE DECK · NOT STAGED | 15 | 25,756,291 | `75ece737c2c4c1f32898f14ddf42d100131a321b04012da8c9e65f13c10e179c` |
+
+- **Role:** visual reference / supplemental presentation / possible design inspiration.
+- **Source path:** `~/Downloads/Energy_Detectives.pptx` (original left untouched).
+- **Repo path:** `assets/supplemental/review/slides/Energy_Detectives.pptx` (git-ignored on disk per `BINARY_ASSET_POLICY.md`; ~24.6 MiB).
+- No macros/VBA; no broken media references; opens cleanly (15 slides, 16:9, 15 embedded PNGs).
 
 ## MAJOR FAIL standard (regeneration threshold)
 Reject an existing video **only** for a MAJOR failure: scientifically false central concept · directly contradicts the unit standard · serious safety instruction · teaches a curriculum-harming misconception · corrupted/unplayable file · inappropriate student-facing content.
