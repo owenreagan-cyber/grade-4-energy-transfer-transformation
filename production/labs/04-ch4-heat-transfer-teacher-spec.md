@@ -2,7 +2,7 @@
 
 - **Lab #:** Chapter 4 core investigation (Lab 6 station, safe redesign)
 - **Title:** Heat Transfer
-- **Chapter/week:** Chapter 4 · Week 5 (Day 1)
+- **Chapter/week:** Chapter 4 · Week 3 (Tue — heat)
 - **Tag:** CORE
 - **Question:** What evidence shows that energy transferred between warmer and cooler materials?
 - **Big Question:** What evidence shows that heat transfers energy?

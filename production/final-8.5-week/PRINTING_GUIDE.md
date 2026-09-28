@@ -22,15 +22,15 @@
 |---|---|---|---|---|---|---|---|
 | `03-ch3-ramp-it-up-student` | 3 | single (stapled) | no | 20 | yes (`03-ch3-ramp-it-up-key`) | no | no |
 | Moving Marbles student | 2 | single (stapled) | no | 20 | yes | no | no |
-| Crash Lab student | 1–2 | single | no | 20 | yes | no | no |
-| Engineering performance task | 2 | duplex | no | 20 | yes | no | no |
+| Crash Lab student | 2 | single (stapled) | no | 20 | yes | no | no |
+| Engineering performance task | 7 (compact Thu uses pp. 1–2 + one test page; full task = extension) | single | no | 20 | yes | no | no |
 | Transfer/Transformation/BOTH sort cards | 1 | single | optional | 5 (groups) | yes | yes | **laminate** |
 
 ## Unit 1 — Quizzes / Assessment
 
 | Resource | Pages | Single/Duplex | Color | Copies | Teacher key? | Friday optional? | Laminate? |
 |---|---|---|---|---|---|---|---|
-| Unit 1 final assessment | 3–4 | single | no | 20 | yes | no | no |
+| Unit 1 final assessment | 5 | single (stapled) | no | 20 | yes | no | no |
 | Chapter practice/quiz sheets (Ch1–7) | 1 each | single | no | 20 | yes | no | no |
 
 ## Unit 2 — Guided Notes
