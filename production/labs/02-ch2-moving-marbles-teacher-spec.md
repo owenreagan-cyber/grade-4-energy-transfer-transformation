@@ -2,7 +2,7 @@
 
 - **Lab #:** Chapter 2 core investigation (Lab 2 of the 8-lab backbone)
 - **Title:** Moving Marbles
-- **Chapter/week:** Chapter 2 · Week 2
+- **Chapter/week:** Chapter 2 · Week 1 (Thu)
 - **Tag:** CORE
 - **Question:** How does a moving marble provide evidence that it has energy?
 - **Concept:** a moving object has energy of motion because it can cause change
