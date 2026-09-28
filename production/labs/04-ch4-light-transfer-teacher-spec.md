@@ -2,7 +2,7 @@
 
 - **Lab #:** Chapter 4 core investigation (Lab 6 station, safe redesign)
 - **Title:** Light Transfer
-- **Chapter/week:** Chapter 4 · Week 4 (Day 3)
+- **Chapter/week:** Chapter 4 · Week 3 (Mon — light)
 - **Tag:** CORE
 - **Question:** How can light transfer energy from one place to another?
 - **Big Question:** What evidence shows that light transfers energy from place to place?

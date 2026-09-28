@@ -2,7 +2,7 @@
 
 - **Lab #:** Chapter 4 core investigation (Lab 6 of the 8-lab backbone)
 - **Title:** Sound Transfer
-- **Chapter/week:** Chapter 4 · Week 4 (Days 1–2)
+- **Chapter/week:** Chapter 4 · Week 3 (Mon — sound)
 - **Tag:** CORE
 - **Question:** Can sound transfer energy and cause a change without direct contact?
 - **Big Question:** What evidence shows that sound transfers energy from one place to another?

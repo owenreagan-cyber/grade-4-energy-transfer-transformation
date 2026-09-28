@@ -2,7 +2,7 @@
 
 - **Lab #:** Chapter 4 core investigation (Lab 6 station, safe redesign)
 - **Title:** Electricity Transfer
-- **Chapter/week:** Chapter 4 · Week 5 (Day 2)
+- **Chapter/week:** Chapter 4 · Week 3 (Tue — electric current)
 - **Tag:** CORE
 - **Question:** What evidence shows that electric current can transfer energy from place to place?
 - **Big Question:** What evidence shows that electricity transfers energy from place to place?

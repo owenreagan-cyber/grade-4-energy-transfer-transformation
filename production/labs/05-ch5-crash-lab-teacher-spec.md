@@ -2,12 +2,12 @@
 
 - **Lab #:** Lab 7 of the 8-lab backbone
 - **Title:** Crash Lab — Collisions Transfer Energy
-- **Chapter/week:** Chapter 5 · Week 6
+- **Chapter/week:** Chapter 5 · Week 3 (Thu compact investigation)
 - **Tag:** CORE
 - **Question:** What happens when objects collide, and how are collisions predictable?
 - **Big Question:** How is energy involved in collisions? What happens when objects collide?
 - **Concept:** A moving object has energy of motion. In a collision, some of that energy transfers to the target, changing the target's motion, and some becomes sound (and a tiny, hard-to-measure bit of heat). Outcomes are predictable when we isolate ONE variable: speed (Part A) or mass/weight (Part B). Students measure TARGET DISPLACEMENT and INFER the energy transfer.
-- **Time:** two 40–45 min blocks (Part A Wed, Part B Thu)
+- **Time:** one 30-min block (Thu). **Part A (speed, SAME object) is CORE.** **Part B (mass/weight) is an OPTIONAL extension** — a separate fair test, never combined with Part A in the same test. If time is short, run Part A only.
 - **Prep:** moderate (ramps, car sets, release marks)
 - **Cleanup:** return cars/ramps/targets; reset lanes
 - **Group size:** PER GROUP OF 4
@@ -52,7 +52,7 @@ Do NOT teach momentum, impulse, force calculations, contact force, deformation, 
 5. **Compare:** which height moved the target farthest?
 6. **Explain:** higher ramp → faster car → more energy of motion → greater change.
 
-## Procedure — Part B (Mass/Weight)
+## Procedure — Part B (Mass/Weight) — OPTIONAL extension (separate fair test)
 1. **Predict:** "Same ramp, three masses. Which car will move the target farthest?"
 2. **Setup:** ramp at a FIXED height; target at the end of the lane. SAME ramp height each time.
 3. **Test:** release 1 car, then 2 cars taped, then 3 cars taped (or car + added weights); measure target displacement (cm). 3 trials each.
