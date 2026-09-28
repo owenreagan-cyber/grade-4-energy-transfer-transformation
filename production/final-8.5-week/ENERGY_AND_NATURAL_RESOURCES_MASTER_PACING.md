@@ -6,7 +6,7 @@
 > Reader page numbers are the printed page numbers in each Student Reader.
 
 Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Slides** = deck/outline · **Reader** = reader pages · **Act** = lab/demo/activity · **J** = Science Journal · **FC** = formative check · **Time** = expected minutes.
-> Video references (e.g. "Video 1") are **PENDING GENERATION** — every lesson is fully teachable from notes/slides/reader without video. One trimmed classroom cut exists (`wind-hydro-power-classroom-cut.mp4`, Wk 7 Mon wind, OPTIONAL). See `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
+> Video references (e.g. "Video 1") are **PENDING GENERATION** — every lesson is fully teachable from notes/slides/reader without video. Three accepted classroom cuts exist (`fossil-fuel-formation-classroom-cut.mp4` Wk 5 Wed · `turbine-generator-classroom-cut.mp4` Wk 6 Tue · `wind-hydro-power-classroom-cut.mp4` Wk 7 Mon), all OPTIONAL/SUPPORT. See `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
 
 ---
 
@@ -190,7 +190,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Wed — Coal / petroleum / natural gas formation and types
 - **Unit/Ch:** U2 · Ch2 · **BQ:** What are fossil fuels?
-- **Essential:** three fossil fuels; solid/liquid/gas; buried remains + heat + pressure + time.
+- **Essential:** three fossil fuels; solid/liquid/gas; buried remains + heat + pressure + time. (Video: `fossil-fuel-formation-classroom-cut.mp4` — OPTIONAL, 3:39.)
 - **GN:** `unit-02-ch2` p.1 · **Slides:** `02-u2-ch2` S1–S5 · **Reader:** pp.9–11 · **Act:** none
 - **J:** draw the three states. **FC:** state-of-matter check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
@@ -198,7 +198,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Thu — Fossil-fuel formation/extraction model or demo
 - **Unit/Ch:** U2 · Ch2 · **BQ:** How do fossil fuels form?
-- **Essential:** formation model (peat → coal); extraction demo (layers). (Video: PENDING GENERATION.)
+- **Essential:** formation model (peat → coal); extraction demo (layers). (Video: none — formation cut shown Wednesday.)
 - **GN:** `unit-02-ch2` p.2 · **Slides:** `02-u2-ch2` S6–S7 · **Reader:** p.12 · **Act:** layered-sediment formation demo (peat → coal)
 - **J:** before/after formation sketch. **FC:** formation sequence.
 - **Materials:** layered sand / colored paper strips (optional demo) · **Prep:** set demo · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
@@ -223,7 +223,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Tue — Fossil-fuel energy pathway · benefits/limitations
 - **Unit/Ch:** U2 · Ch3 · **BQ:** How does burning fuel make electricity?
-- **Essential:** burn → heat → steam → turbine → generator → electricity. (Video: PENDING GENERATION.)
+- **Essential:** burn → heat → steam → turbine → generator → electricity. (Video: `turbine-generator-classroom-cut.mp4` — OPTIONAL, 3:41.)
 - **GN:** `unit-02-ch3` p.2 · **Slides:** `03-u2-ch3` S5 · **Reader:** pp.17–20 · **Act:** pathway modeling
 - **J:** draw the pathway. **FC:** pathway order.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
