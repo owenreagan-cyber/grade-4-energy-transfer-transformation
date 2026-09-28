@@ -72,13 +72,13 @@
 
 | # | Working title | Runtime | Tier | Exact day | Scope notes | Teacher note | Status |
 |---|---|---|---|---|---|---|---|
-| 1 | Where Does Our Energy Come From? | ~90 s | CORE | Wk 5 Mon (Unit 2 launch) | Ch1 · renewable vs nonrenewable | Stop at 60 s for student prediction. | DELIVERED — rejected (see below) |
+| 1 | Where Does Our Energy Come From? | ~90 s | CORE | Wk 5 Mon (Unit 2 launch) | Ch1 · renewable vs nonrenewable | Stop at 60 s for student prediction. | **PRODUCTION READY — OPTIONAL** (final script `01-where-does-our-energy-come-from-final-script.md`; delivered file rejected, not yet regenerated) |
 | 2 | Renewable vs Nonrenewable | ~2 min | CORE | Wk 5 Tue | Ch1 · time-based framing | End on benefits/limitations balance. | PENDING GENERATION |
 | 3 | Fossil Fuel Formation | 3:39 (cut) | SUPPORT | Wk 5 Wed | Ch2 · buried + heat + pressure + time | Do not require fossil-organism memorization; gloss "petrified". | FULFILLED — `fossil-fuel-formation-classroom-cut.mp4` |
-| 4 | Coal vs Nuclear: Similar Pathway | ~2.5 min | SUPPORT | Wk 6 Thu | Ch3+Ch4 · steam→turbine→generator | Wk 6 SAME/DIFFERENT anchor; no fission detail. | PARTIALLY FULFILLED — shared steam→turbine→generator shown in turbine-generator cut; dedicated coal-vs-nuclear comparison clip still PENDING |
+| 4 | Coal vs Nuclear: Similar Pathway | ~90 s (spec) | SUPPORT | Wk 6 Thu | Ch3+Ch4 · steam→turbine→generator | Wk 6 SAME/DIFFERENT anchor; no fission detail. | **PRODUCTION READY — OPTIONAL** (final script `04-coal-vs-nuclear-final-script.md`; shared pathway already shown in turbine-generator cut) |
 | 5 | How a Turbine Helps Make Electricity | 3:41 (cut) | SUPPORT | Wk 6 Tue | Ch3/4/5/6/8 · shared pathway | Bridge to Water Wheel lab; "motion energy" = "energy of motion". | FULFILLED — `turbine-generator-classroom-cut.mp4` |
 | 6 | Moving Air & Water: Wind + Hydro | ~1:35 (trimmed) | SUPPORT | Wk 7 Mon (wind) | Ch5 · moving air → blades → generator | Use trimmed `wind-hydro-power-classroom-cut.mp4`; do NOT use full file. | DELIVERED — trimmed classroom cut shipped (Phase 13G) |
-| 7 | Sunlight & Earth Heat: Solar + Geothermal | ~2.5 min | SUPPORT | Wk 8 Mon/Tue | Ch7+Ch8 · available light + location | Keep both factual and location-dependent. | REJECTED DELIVERY — `Solar___Geothermal_Energy.mp4` (electron/photon mechanics + "Zero Emissions"); regeneration needed if desired |
+| 7 | Sunlight & Earth Heat: Solar + Geothermal | ~2 min (spec) | SUPPORT | Wk 8 Tue | Ch7+Ch8 · available light + location | Keep both factual and location-dependent. | **PRODUCTION READY — OPTIONAL** (final script `07-solar-geothermal-final-script.md`; delivered file rejected, not yet regenerated) |
 
 ### Delivered Unit 2 files (STAGED · disposition recorded)
 
