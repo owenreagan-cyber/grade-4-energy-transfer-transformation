@@ -2,12 +2,12 @@
 
 - **Lab #:** Chapter 3 core investigation (Lab 3 of the 8-lab backbone)
 - **Title:** Ramp It Up! 2.0
-- **Chapter/week:** Chapter 3 · Week 3 (Day 2)
+- **Chapter/week:** Chapter 3 · Week 2 (Thu trials · Fri analysis)
 - **Tag:** CORE
 - **Question:** How does ramp height affect the change caused by the same ball?
 - **Big Question:** How are energy and speed related?
 - **Concept:** For the SAME object, faster motion (from a higher ramp) is associated with greater energy of motion, shown by a greater observed change (cup displacement). Students measure the change, NOT speed or energy.
-- **Time:** ~25–30 min (setup + trials + recording; analysis/graph on Day 3)
+- **Time:** ~25–30 min (setup + trials + recording; analysis/graph on Friday)
 - **Prep:** medium (ramp + height sets)
 - **Cleanup:** collect balls/ramps/books/cups; collect pages
 - **Group size:** PER GROUP OF 4
@@ -67,7 +67,7 @@
 | Inconsistent trials | same release point; "release, don't push" |
 | Unreadable displacement | pre-mark tape at 5-cm intervals as a ruler guide |
 
-## Data analysis / graph (Day 3)
+## Data analysis / graph (Friday)
 - Graph title: **"Ramp Height vs. Average Cup Displacement."**
 - X-axis: Ramp Height (books). Y-axis: Average Cup Displacement (cm).
 - Do NOT graph "Speed vs. Energy."
