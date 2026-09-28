@@ -1,7 +1,7 @@
 # TWO-UNIT MEDIA MAP
 
 > Full media inventory for the 8.5-week track (Unit 1 + Unit 2). A media library is **not** a viewing schedule — every video is classified CORE / SUPPORT / FLEX / DO NOT USE and given an exact day and teacher note.
-> **No MP4 is embedded in any PPTX.** All playback is local file reference. No video generation is required for release — scripts/outlines cover PENDING GENERATION slots.
+> **Accepted classroom cuts are embedded in their PPTX decks** (native `video/mp4` media parts, teacher-clicked). Raw/untrimmed sources remain local file reference only. Scripts/outlines cover PENDING GENERATION slots.
 
 ## Legend
 - **CORE** = meaningfully improves essential instruction (0–1 per lesson).
@@ -106,15 +106,28 @@
 | `Energy_Causes_Change.mp4` | `unit-02/chapter-01/` | `514b434431ee34185241d17b1eceb879f4b6518a0fafcf6bc359ba8ce2df2a95` | 36,562,945 | 6:43 | 1280×720 | — (misnamed; grid storage) | **DO NOT USE** — "thermal", "Power Grid", "Balancing the grid", "No carbon emissions"/"ZERO EMISSIONS" |
 | `Energy_Innovations.mp4` | `unit-02/chapter-09/` | `43500449da73e621fa80073df91c81b691c40b2929b3d3bed4d30cc5ee3115b5` | 34,808,180 | 6:19 | 1280×720 | Ch9 Innovations | **DO NOT USE** — "Kinetic/Chemical/Mechanical energy", "Emits carbon dioxide", "Changes climate" |
 
+### Phase 13L delivered files (intake recorded)
+
+> Three new files reviewed in `docs/reviews/PHASE13L_NEW_MEDIA_REVIEW.md`. Two accepted (trimmed + embedded in Unit 1 decks), one rejected. Sources preserved under `assets/supplemental/media/` (git-excluded).
+
+| Filename | Path | SHA-256 | Bytes | Runtime | Res | Maps to | Disposition |
+|---|---|---|---|---|---|---|---|
+| `Energy___Speed_Are_Related.mp4` | `chapter-03/` | `a5c83c50703839fb4bbfd7cc04417be8fdfc44b86fdb68af6df1aa1fe7b7839f` | 32,776,547 | 7:17 | 1280×720 | Ch3 Ramp Lab preview | **TRIM → USE** — cut 136–285 s below |
+| `speed-and-energy-ramp-it-up-classroom-cut.mp4` | `chapter-03/` | `e37776710249f75c1596d302060199c0b9e4a02b81106d02e954dca42f69c9c9` | 4,868,741 | 2:29 | 1280×720 | Ch3 Ramp Lab preview | **USE (Wk 2 Wed, `03-ch3` S17)** — Ramp It Up setup → fair test → data table; same object, faster = greater change |
+| `The_Journey_of_Energy.mp4` | `chapter-07/` | `ed3f5005f8143f58dc1abb77e38411b42e96d56ba4eb131bc834b2f9f8289895` | 42,506,751 | 8:03 | 1280×720 | Ch7 Unit review | **TRIM → USE** — cut 28–197 s below |
+| `journey-of-energy-unit1-recap-classroom-cut.mp4` | `chapter-07/` | `8dc946665f0db32e164205821fe39ab09896d405de7433acbe39c8110a6f7664` | 6,778,034 | 2:49 | 1280×720 | Ch7 Unit review | **USE (Wk 4, `07-ch7` S13)** — Unit 1 energy core recap: evidence → transfer/transformation → source/path/receiver → energy does not disappear |
+| `Unit_2_Synthesis__Energy_Detective_Masterclass.mp4` | `unit-02/chapter-09/` | `8882d42e94c39d764825de41a63ad488f64da119135e3e7c70ce09efbb0add6c` | 51,885,280 | 6:26 | 1280×720 | — (Unit 2 synthesis) | **DO NOT USE** — baseload/dispatch/grid jargon + "Drives climate change"/"CUMULATIVE WARMING IMPACT"/"Carbon-free" + kinetic/electron mechanics (photovoltaic p-n junction) |
+
 ---
 
 ## DO NOT USE
 Current DO NOT USE files (excluded from any lesson):
-`Where_Does_Energy_Come_From_.mp4` · `Power_Plant_Energy_Transformations__Tracing_the_Grid.mp4` · `Solar___Geothermal_Energy.mp4` · `The_Timescale_Tradeoff__Physics,_Economics,_and_the_Energy_Grid.mp4` · `Energy_Causes_Change.mp4` · `Energy_Innovations.mp4` — and `Wind___Hydro_Power.mp4` (DO NOT USE as-is; only its wind cut ships).
+`Where_Does_Energy_Come_From_.mp4` · `Power_Plant_Energy_Transformations__Tracing_the_Grid.mp4` · `Solar___Geothermal_Energy.mp4` · `The_Timescale_Tradeoff__Physics,_Economics,_and_the_Energy_Grid.mp4` · `Energy_Causes_Change.mp4` · `Energy_Innovations.mp4` · `Unit_2_Synthesis__Energy_Detective_Masterclass.mp4` — and `Wind___Hydro_Power.mp4` (DO NOT USE as-is; only its wind cut ships).
 
 ## Load rules (applied in pacing)
 - 0–1 CORE video per lesson; do not stack multiple long videos in one day.
 - Ch.1: Mon = `Invisible Boss` + `Energy Detective` only; Thu = `Briefing` only.
 - Ch.2: avoid `Things_on_the_Move` + `Moving_Objects_Have_Energy` full in the same lesson.
 - Unit 2 accepted cuts are SUPPORT/OPTIONAL and fit inside the 30-min period: `fossil-fuel-formation-classroom-cut.mp4` (Wk 5 Wed), `turbine-generator-classroom-cut.mp4` (Wk 6 Tue), `wind-hydro-power-classroom-cut.mp4` (Wk 7 Mon). Do not queue full-length sources.
+- Unit 1 accepted cuts are OPTIONAL and embedded: `speed-and-energy-ramp-it-up-classroom-cut.mp4` (Wk 2, `03-ch3` S17) and `journey-of-energy-unit1-recap-classroom-cut.mp4` (Wk 4, `07-ch7` S13).
 - Remaining Ch.3–7 and Unit 2 #2/#4/#7 slots are scripts only; generation is PENDING and does not block the classroom package.
