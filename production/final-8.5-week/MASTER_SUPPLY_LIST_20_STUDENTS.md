@@ -42,7 +42,7 @@
 | Ruler (height) | 1 | 5 | likely | $0 | — | — | — |
 | Towel | 1 | 5 | likely | $0 | — | dry | — |
 | Small solar cell + LED (solar mini-lab) | 1 | 5 | optional | $10 | test | store | no direct sun at eyes |
-| Flashlight (solar lab, optional) | 1 | 5 | optional | $0 | — | — | — |
+| Flashlight / desk lamp (solar lab indoor backup) | 1 | 5 | optional | $0 | test | — | — |
 
 ### CONSUMABLE
 | Item | Per group | Total | School-owned? | Est. cost | Prep | Cleanup | Safety |

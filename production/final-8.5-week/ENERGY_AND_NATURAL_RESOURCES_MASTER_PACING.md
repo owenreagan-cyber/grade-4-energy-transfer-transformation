@@ -6,7 +6,7 @@
 > Reader page numbers are the printed page numbers in each Student Reader.
 
 Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Slides** = deck/outline · **Reader** = reader pages · **Act** = lab/demo/activity · **J** = Science Journal · **FC** = formative check · **Time** = expected minutes.
-> Video references (e.g. "Video 1") are **PENDING GENERATION** — every lesson is fully teachable from notes/slides/reader without video. See `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
+> Video references (e.g. "Video 1") are **PENDING GENERATION** — every lesson is fully teachable from notes/slides/reader without video. One trimmed classroom cut exists (`wind-hydro-power-classroom-cut.mp4`, Wk 7 Mon wind, OPTIONAL). See `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
 
 ---
 
@@ -255,8 +255,8 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Mon — Wind energy
 - **Unit/Ch:** U2 · Ch5 · **BQ:** How do people use wind as a source of energy?
-- **Essential:** moving air → blades → generator → electricity; location/wind availability. (Video: delivered file needs trimming — defer to Phase 13G.)
-- **GN:** `unit-02-ch5` p.1 · **Slides:** `05-u2-ch5` S1–S3 · **Reader:** pp.25–27 · **Act:** none
+- **Essential:** moving air → blades → generator → electricity; location/wind availability. (Video: `wind-hydro-power-classroom-cut.mp4` — OPTIONAL, 1:35.)
+- **GN:** `unit-02-ch5` p.1 · **Slides:** `05-u2-ch5` S1–S7 · **Reader:** pp.25–27 · **Act:** none
 - **J:** draw a wind turbine. **FC:** pathway check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `unit-02-ch5` p.1.
@@ -264,7 +264,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Tue — Hydroelectric energy
 - **Unit/Ch:** U2 · Ch6 · **BQ:** How do people use moving water as a source of energy?
 - **Essential:** dam/reservoir → turbine → generator; benefits/limitations (fish, flooded land).
-- **GN:** `unit-02-ch6` p.1 · **Slides:** `06-u2-ch6` S1–S3 · **Reader:** pp.31–34 · **Act:** none
+- **GN:** `unit-02-ch6` p.1 · **Slides:** `06-u2-ch6` S1–S7 · **Reader:** pp.31–34 · **Act:** none
 - **J:** draw a dam. **FC:** pathway check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `unit-02-ch6` p.1.
@@ -295,8 +295,8 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Mon — Solar energy
 - **Unit/Ch:** U2 · Ch7 · **BQ:** How do people use sunlight as a source of energy?
-- **Essential:** sunlight → solar cell → electricity; other uses (heat, cook); available light. Video 7 (SUPPORT).
-- **GN:** `unit-02-ch7` p.1 · **Slides:** `07-u2-ch7` S1–S4 · **Reader:** pp.37–39 · **Act:** none
+- **Essential:** sunlight → solar cell → electricity; other uses (heat, cook); available light. (Video: PENDING GENERATION.)
+- **GN:** `unit-02-ch7` p.1 · **Slides:** `07-u2-ch7` S1–S8 · **Reader:** pp.37–39 · **Act:** none
 - **J:** draw a solar use. **FC:** pathway check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `unit-02-ch7` p.1.
@@ -304,7 +304,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Tue — Geothermal energy
 - **Unit/Ch:** U2 · Ch8 · **BQ:** What is geothermal energy, and how do people use it?
 - **Essential:** Earth's heat warms buildings or makes steam → electricity; location dependence.
-- **GN:** `unit-02-ch8` p.1 · **Slides:** `08-u2-ch8` S1–S3 · **Reader:** pp.43–46 · **Act:** none
+- **GN:** `unit-02-ch8` p.1 · **Slides:** `08-u2-ch8` S1–S8 · **Reader:** pp.43–46 · **Act:** none
 - **J:** why location matters. **FC:** two-ways check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `unit-02-ch8` p.1.
@@ -312,7 +312,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Wed — Innovations · unit comparison
 - **Unit/Ch:** U2 · Ch9 · **BQ:** What other energy resources are being developed?
 - **Essential:** biofuels, hybrids, fuel cells, wave energy, motion-harvesting; engineering improves systems.
-- **GN:** `unit-02-ch9` p.1 · **Slides:** `09-u2-ch9` S1–S3 · **Reader:** pp.47–49 · **Act:** none
+- **GN:** `unit-02-ch9` p.1 · **Slides:** `09-u2-ch9` S1–S6 · **Reader:** pp.47–49 · **Act:** none
 - **J:** one innovation + the problem it solves. **FC:** innovations list.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `unit-02-ch9` p.1.
@@ -320,13 +320,13 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Thu — Available Light & Solar Device mini-investigation
 - **Unit/Ch:** U2 · Ch7 · **BQ:** How does available light affect a solar device?
 - **Essential:** a solar device responds to light level (near/far, shaded/lit); observed change = evidence.
-- **GN:** `unit-02-ch7` p.2 · **Slides:** `07-u2-ch7` S5 · **Reader:** pp.40–42 · **Act:** solar mini-investigation (`solar-device-mini-investigation` sheet)
+- **GN:** `unit-02-ch7` p.2 · **Slides:** `07-u2-ch7` S8 · **Reader:** pp.40–42 · **Act:** solar mini-investigation (`solar-device-mini-investigation` sheet)
 - **J:** record light-level observations. **FC:** observation table.
 - **Materials:** small solar cells/LED, flashlight (optional), printed observation sheet · **Prep:** prep kits + print · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
 - **Absent:** partner data + `unit-02-ch7` p.2.
 
 ### Fri — RECOVER / PRACTICE / EXTEND
-- **Act:** Energy Resource Scenario Challenge (FULL FLEX) · unit review (RECOVER) · Detective Chart (EXT)
+- **Act:** Energy Resource Scenario Challenge (PRACTICE) · Resource Detective Chart completion (RECOVER) · innovation design/reflection (EXT)
 - **Type:** FLEX — no new content. **Time:** 25–30 · **Absent:** scenario cards self-contained.
 
 ---
