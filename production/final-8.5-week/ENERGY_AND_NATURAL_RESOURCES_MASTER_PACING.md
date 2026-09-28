@@ -6,6 +6,7 @@
 > Reader page numbers are the printed page numbers in each Student Reader.
 
 Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Slides** = deck/outline · **Reader** = reader pages · **Act** = lab/demo/activity · **J** = Science Journal · **FC** = formative check · **Time** = expected minutes.
+> Video references (e.g. "Video 1") are **PENDING GENERATION** — every lesson is fully teachable from notes/slides/reader without video. See `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
 
 ---
 
@@ -318,9 +319,9 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Thu — Available Light & Solar Device mini-investigation
 - **Unit/Ch:** U2 · Ch7 · **BQ:** How does available light affect a solar device?
 - **Essential:** a solar device responds to light level (near/far, shaded/lit); observed change = evidence.
-- **GN:** `unit-02-ch7` p.2 · **Slides:** `07-u2-ch7` S5 · **Reader:** pp.40–42 · **Act:** solar mini-investigation
+- **GN:** `unit-02-ch7` p.2 · **Slides:** `07-u2-ch7` S5 · **Reader:** pp.40–42 · **Act:** solar mini-investigation (`solar-device-mini-investigation` sheet)
 - **J:** record light-level observations. **FC:** observation table.
-- **Materials:** small solar cells/LED, flashlight (optional) · **Prep:** prep kits · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
+- **Materials:** small solar cells/LED, flashlight (optional), printed observation sheet · **Prep:** prep kits + print · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
 - **Absent:** partner data + `unit-02-ch7` p.2.
 
 ### Fri — RECOVER / PRACTICE / EXTEND
