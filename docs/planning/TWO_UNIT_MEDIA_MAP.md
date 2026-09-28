@@ -68,17 +68,27 @@
 
 ---
 
-## UNIT 2 — 7 scripts (PENDING GENERATION · do not block release)
+## UNIT 2 — 7 scripts (authoritative generation targets · do not block release)
 
-| # | Working title | Runtime | Tier | Exact day | Scope notes | Teacher note |
-|---|---|---|---|---|---|---|
-| 1 | Where Does Our Energy Come From? | ~90 s | CORE | Wk 5 Mon (Unit 2 launch) | Ch1 · renewable vs nonrenewable | Stop at 60 s for student prediction. |
-| 2 | Renewable vs Nonrenewable | ~2 min | CORE | Wk 5 Tue | Ch1 · time-based framing | End on benefits/limitations balance. |
-| 3 | Fossil Fuel Formation | ~2 min | SUPPORT | Wk 5 Thu (optional) | Ch2 · buried + heat + pressure + time | Do not require fossil-organism memorization. |
-| 4 | Coal vs Nuclear: Similar Pathway | ~2.5 min | SUPPORT | Wk 6 Thu | Ch3+Ch4 · steam→turbine→generator | Wk 6 SAME/DIFFERENT anchor; no fission detail. |
-| 5 | How a Turbine Helps Make Electricity | ~90 s | SUPPORT | Wk 6 Tue | Ch3/4/5/6/8 · shared pathway | Bridge to Water Wheel lab. |
-| 6 | Moving Air & Water: Wind + Hydro | ~2.5 min | SUPPORT | Wk 7 Mon/Tue | Ch5+Ch6 · location matters | End on falling water → spinning wheel. |
-| 7 | Sunlight & Earth Heat: Solar + Geothermal | ~2.5 min | SUPPORT | Wk 8 Mon/Tue | Ch7+Ch8 · available light + location | Keep both factual and location-dependent. |
+| # | Working title | Runtime | Tier | Exact day | Scope notes | Teacher note | Status |
+|---|---|---|---|---|---|---|---|
+| 1 | Where Does Our Energy Come From? | ~90 s | CORE | Wk 5 Mon (Unit 2 launch) | Ch1 · renewable vs nonrenewable | Stop at 60 s for student prediction. | DELIVERED — rejected (see below) |
+| 2 | Renewable vs Nonrenewable | ~2 min | CORE | Wk 5 Tue | Ch1 · time-based framing | End on benefits/limitations balance. | PENDING GENERATION |
+| 3 | Fossil Fuel Formation | ~2 min | SUPPORT | Wk 5 Thu (optional) | Ch2 · buried + heat + pressure + time | Do not require fossil-organism memorization. | PENDING GENERATION |
+| 4 | Coal vs Nuclear: Similar Pathway | ~2.5 min | SUPPORT | Wk 6 Thu | Ch3+Ch4 · steam→turbine→generator | Wk 6 SAME/DIFFERENT anchor; no fission detail. | PENDING GENERATION |
+| 5 | How a Turbine Helps Make Electricity | ~90 s | SUPPORT | Wk 6 Tue | Ch3/4/5/6/8 · shared pathway | Bridge to Water Wheel lab. | PENDING GENERATION |
+| 6 | Moving Air & Water: Wind + Hydro | ~2.5 min | SUPPORT | Wk 7 Mon/Tue | Ch5+Ch6 · location matters | End on falling water → spinning wheel. | DELIVERED — needs trimming (Week 7) |
+| 7 | Sunlight & Earth Heat: Solar + Geothermal | ~2.5 min | SUPPORT | Wk 8 Mon/Tue | Ch7+Ch8 · available light + location | Keep both factual and location-dependent. | PENDING GENERATION |
+
+### Delivered Unit 2 files (STAGED · disposition recorded)
+
+> Files exist on disk under `assets/supplemental/media/unit-02/` (git-excluded). Reviewed in `docs/reviews/PHASE13F_UNIT2_MEDIA_REVIEW.md`. None is classroom-ready.
+
+| Filename | Path | SHA-256 | Bytes | Runtime | Res | Maps to script | Disposition |
+|---|---|---|---|---|---|---|---|
+| `Where_Does_Energy_Come_From_.mp4` | `unit-02/chapter-01/` | `f49baa4eae364f03aec5207ac6318c0aa861880b337bc2a6f4e15f77e59877a1` | 35,694,516 | 7:19 | 1280×720 | #1 | **DO NOT USE** — mechanical energy + carbon/zero-carbon/clean framing + grid jargon + 7:19; regenerate against script #1 |
+| `Power_Plant_Energy_Transformations__Tracing_the_Grid.mp4` | `unit-02/chapter-03/` | `ce8f4052b50c5520625d9fe6f023c6a76e71656dc628b3f8e1b737bd08e2b020` | 42,974,182 | 5:00 | 1280×720 | #4/#5 | **DO NOT USE** — fission equations + kinetic/potential/chemical/thermal/mechanical vocabulary; mis-leveled |
+| `Wind___Hydro_Power.mp4` | `unit-02/chapter-05/` | `db03356e8b3aea0b4d2e70efee05e60e7a59e3d3aa0467c03378c72f86835ea5` | 46,136,929 | 9:09 | 1280×720 | #6 | **DO NOT USE as-is (needs trimming)** — climate-change line + carbon + "zero combustion"; Week 7, Phase 13G |
 
 ---
 
