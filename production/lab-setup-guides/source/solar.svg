@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#1F1F1F"/></marker><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#5A5A5A"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" fill="#FFFFFF"/>
+<text x="500" y="50" font-size="19" font-weight="bold" text-anchor="middle" fill="#1F1F1F">SAME device · SAME measurement method · CHANGE ONLY the light</text>
+<rect x="430" y="90" width="140" height="90" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<rect x="450" y="100" width="40" height="26" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<circle cx="550" cy="150" r="12" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<text x="500" y="120" font-size="16" font-weight="normal" text-anchor="middle" fill="#5A5A5A">solar device</text>
+<circle cx="700" cy="130" r="40" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="748.213560437473" y1="149.47954285762742" x2="742.6504573100722" y2="147.23190329713196" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="720.3180186814423" y1="177.86625237952688" x2="717.9736319105066" y2="172.34322325881226" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="680.5204571423726" y1="178.21356043747295" x2="682.7680967028681" y2="172.65045731007223" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="652.1337476204731" y1="150.31801868144223" x2="657.6567767411877" y2="147.97363191050658" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="651.786439562527" y1="110.52045714237258" x2="657.3495426899278" y2="112.76809670286805" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="679.6819813185577" y1="82.13374762047312" x2="682.0263680894934" y2="87.65677674118774" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="719.4795428576274" y1="81.78643956252705" x2="717.2319032971319" y2="87.34954268992777" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="747.8662523795269" y1="109.68198131855776" x2="742.3432232588123" y2="112.0263680894934" stroke="#1F1F1F" stroke-width="2"/>
+<text x="700" y="200" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F1F1F">bright / close</text>
+<circle cx="700" cy="300" r="40" fill="#B9B9B9" stroke="#1F1F1F" stroke-width="2"/>
+<text x="700" y="370" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F1F1F">dim / far</text>
+<rect x="640" y="420" width="120" height="70" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="700" y="440" font-size="17" font-weight="bold" text-anchor="middle" fill="#1F1F1F">shaded</text>
+<text x="700" y="466" font-size="14" font-weight="normal" text-anchor="middle" fill="#5A5A5A">(card/box shade)</text>
+<line x1="660" y1="130" x2="570" y2="130" stroke="#1F1F1F" stroke-width="3" marker-end="url(#arr)"/>
+<line x1="660" y1="300" x2="570" y2="180" stroke="#5A5A5A" stroke-width="3" marker-end="url(#arr)"/>
+<line x1="640" y1="455" x2="570" y2="180" stroke="#5A5A5A" stroke-width="3" marker-end="url(#arr)"/>
+<text x="360" y="180" font-size="18" font-weight="bold" text-anchor="start" fill="#5A5A5A">MEASURE:</text>
+<text x="370" y="210" font-size="16" font-weight="normal" text-anchor="start" fill="#1F1F1F">observable device output</text>
+<text x="370" y="234" font-size="15" font-weight="normal" text-anchor="start" fill="#5A5A5A">(LED on/off, brightness)</text>
+<rect x="80" y="300" width="200" height="46" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<text x="180.0" y="331" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">CHANGE</text>
+<text x="85" y="356" font-size="17" font-weight="bold" text-anchor="start" fill="#1F1F1F">available light</text>
+<text x="85" y="380" font-size="17" font-weight="bold" text-anchor="start" fill="#1F1F1F">condition</text>
+<text x="80" y="420" font-size="17" font-weight="bold" text-anchor="start" fill="#1F1F1F">KEEP SAME:</text>
+<text x="90" y="446" font-size="16" font-weight="normal" text-anchor="start" fill="#5A5A5A">device · method</text>
+<rect x="80" y="470" width="820" height="64" fill="#E4E4E4" stroke="#5A5A5A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="100" y="496" font-size="16" font-weight="bold" text-anchor="start" fill="#1F1F1F">INDOOR BACKUP:</text>
+<text x="220" y="496" font-size="15" font-weight="normal" text-anchor="start" fill="#1F1F1F">one consistent lamp/flashlight per group — same lamp, same distance for every trial.</text>
+<text x="100" y="522" font-size="15" font-weight="normal" text-anchor="start" fill="#1F1F1F" font-style="italic">Test each kit with the lamp the day before so the LED responds. Low-voltage cells only.</text>
+<rect x="80" y="250" width="34" height="34" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<text x="122" y="276" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">CHANGE</text>
+<rect x="218" y="250" width="34" height="34" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="260" y="276" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">KEEP SAME</text>
+<rect x="389" y="250" width="34" height="34" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="3"/>
+<text x="431" y="276" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">MEASURE</text>
+</svg>

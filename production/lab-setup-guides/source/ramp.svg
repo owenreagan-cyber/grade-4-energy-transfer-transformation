@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#1F1F1F"/></marker><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#5A5A5A"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" fill="#FFFFFF"/>
+<line x1="60" y1="470" x2="940" y2="470" stroke="#1F1F1F" stroke-width="3"/>
+<rect x="120" y="430" width="220" height="40" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="360" y="458" font-size="16" font-weight="normal" text-anchor="end" fill="#5A5A5A">book 1</text>
+<rect x="120" y="390" width="220" height="40" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="360" y="418" font-size="16" font-weight="normal" text-anchor="end" fill="#5A5A5A">book 2</text>
+<rect x="120" y="350" width="220" height="40" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="360" y="378" font-size="16" font-weight="normal" text-anchor="end" fill="#5A5A5A">book 3</text>
+<line x1="350" y1="330" x2="350" y2="300" stroke="#1F1F1F" stroke-width="3" marker-end="url(#arr)"/>
+<line x1="350" y1="380" x2="350" y2="410" stroke="#1F1F1F" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="150" y="250" width="200" height="46" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<text x="250.0" y="281" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">CHANGE</text>
+<text x="245" y="316" font-size="19" font-weight="bold" text-anchor="start" fill="#1F1F1F">ramp height</text>
+<text x="245" y="344" font-size="17" font-weight="normal" text-anchor="start" fill="#5A5A5A">1 / 2 / 3 books</text>
+<line x1="120" y1="350" x2="470" y2="470" stroke="#1F1F1F" stroke-width="5"/>
+<rect x="90" y="336" width="40" height="16" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="1"/>
+<circle cx="155" cy="398" r="16" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="180" y1="350" x2="180" y2="470" stroke="#1F1F1F" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="188" y="360" font-size="17" font-weight="normal" text-anchor="start" fill="#5A5A5A">release point (SAME)</text>
+<rect x="470" y="430" width="46" height="40" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="470" y1="430" x2="452" y2="470" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="516" y1="430" x2="534" y2="470" stroke="#1F1F1F" stroke-width="2"/>
+<text x="460" y="520" font-size="17" font-weight="bold" text-anchor="start" fill="#1F1F1F">target cup</text>
+<line x1="520" y1="452" x2="660" y2="452" stroke="#1F1F1F" stroke-width="3" marker-end="url(#arr)"/>
+<text x="585" y="442" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F1F1F">cup displacement</text>
+<text x="585" y="540" font-size="18" font-weight="bold" text-anchor="middle" fill="#5A5A5A">MEASURE</text>
+<rect x="520" y="500" width="200" height="10" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="520" y1="500" x2="520" y2="510" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="560" y1="500" x2="560" y2="510" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="600" y1="500" x2="600" y2="510" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="640" y1="500" x2="640" y2="510" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="680" y1="500" x2="680" y2="510" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="720" y1="500" x2="720" y2="510" stroke="#1F1F1F" stroke-width="1"/>
+<text x="560" y="555" font-size="15" font-weight="normal" text-anchor="middle" fill="#5A5A5A">ruler (cm)</text>
+<text x="760" y="300" font-size="18" font-weight="bold" text-anchor="start" fill="#1F1F1F">KEEP SAME:</text>
+<text x="770" y="330" font-size="17" font-weight="normal" text-anchor="start" fill="#5A5A5A">ball</text>
+<text x="770" y="358" font-size="17" font-weight="normal" text-anchor="start" fill="#5A5A5A">release point</text>
+<text x="770" y="386" font-size="17" font-weight="normal" text-anchor="start" fill="#5A5A5A">target cup</text>
+<text x="770" y="414" font-size="17" font-weight="normal" text-anchor="start" fill="#5A5A5A">surface</text>
+<rect x="60" y="150" width="34" height="34" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<text x="102" y="176" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">CHANGE</text>
+<rect x="198" y="150" width="34" height="34" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="240" y="176" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">KEEP SAME</text>
+<rect x="369" y="150" width="34" height="34" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="3"/>
+<text x="411" y="176" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">MEASURE</text>
+</svg>
