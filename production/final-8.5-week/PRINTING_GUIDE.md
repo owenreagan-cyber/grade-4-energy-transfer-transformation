@@ -61,10 +61,14 @@
 | Cookie-mining FLEX model | 1 | single | no | 10 (pairs) | yes (built-in) | yes | no |
 | Unit 2 written assessment (student) | 3 | single | no | 20 | yes (key) | no | no |
 | Unit 2 assessment key | 1 | single | no | 1 | self | no | **laminate** |
+| Unit 2 study/review sheet (student) | 3 | single (stapled) | no | 20 | yes (`unit2-written-study-review-key`) | no | no |
+| Unit 2 study/review sheet key | 1 | single | no | 1 | self | no | **laminate** |
+| Teacher lab setup diagrams (×4) | 1 each | single | no | 1 (teacher) | self | no | **laminate** |
 | Energy Detective certificate | 1 | single | yes | 20 (as earned) | — | yes | no |
 
 ## Printing notes
 - **Duplex** saves paper on multi-page note sets; keep assessments and lab data sheets **single-sided** so students can write without bleed-through.
 - **Color optional** for notes/chart (design is grayscale-safe); **color recommended** for the Detective Chart and certificate.
-- **Laminate** sort/scenario cards and the Detective Chart + teacher keys for reuse across classes and years.
-- **Total per student (both units):** ≈ 33 note pages + ≈ 10 lab/activity pages + ≈ 7 assessment pages ≈ **50 pages**, plus 1 shared chart and a certificate.
+- **Laminate** sort/scenario cards and the Detective Chart + teacher keys for reuse across classes and years. Laminate the 4 lab setup diagrams for the prep binder.
+- **Teacher-only prints** (not student copies): `UNIT2_ABSENT_RECOVERY_INDEX.md` (digital + optional print) · `UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (digital) · lab setup diagrams (×4, laminate) · review-sheet key (1).
+- **Total per student (both units):** ≈ 33 note pages + ≈ 10 lab/activity pages + ≈ 7 assessment pages + ≈ 3 review pages ≈ **53 pages**, plus 1 shared chart and a certificate.

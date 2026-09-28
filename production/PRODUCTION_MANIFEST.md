@@ -197,5 +197,18 @@
 
 > Unit 2 media (video scripts) remains **PENDING GENERATION** — not a release blocker (`docs/planning/TWO_UNIT_MEDIA_MAP.md`).
 
+## Phase 13K — High-Value Gap Closure
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| K1 | Unit 2 absent-recovery index | `production/final-8.5-week/UNIT2_ABSENT_RECOVERY_INDEX.md` | RELEASED | CUSTOM |
+| K2 | Unit 2 written study/review sheet (student + key, DOCX+PDF) | `production/review/unit-02/unit2-written-study-review.{docx,pdf}` + `unit2-written-study-review-key.{docx,pdf}` | RELEASED | ADAPTED |
+| K3 | Teacher lab setup diagrams ×4 (DOCX+PDF) | `production/lab-setup-guides/{ramp-it-up,crash-lab,water-wheel,solar-device}-setup-guide.{docx,pdf}` | RELEASED | CUSTOM |
+| K4 | Unit 1 assessment administration note | `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` | RELEASED | CUSTOM |
+| K5 | Unit 1 review resource keys ×2 | `production/answer-keys/07-energy-big-questions-key.md` + `07-unit-synthesis-review-key.md` | RELEASED | SOURCE/ADAPTED |
+| K6 | Retired curriculum artifact policy | `docs/architecture/RETIRED_CURRICULUM_ARTIFACT_POLICY.md` | RELEASED | CUSTOM |
+| K7 | Master map/index/inventory/printing/prep sync | `production/final-8.5-week/` + quickstarts | RELEASED | CUSTOM |
+| K8 | Gap-closure QA report | `qa/reports/PHASE13K_QA.md` | RELEASED | CUSTOM |
+
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`

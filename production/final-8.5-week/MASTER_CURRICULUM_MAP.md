@@ -95,7 +95,7 @@
 ## Thursday — FLAGSHIP LAB 1: Ramp It Up!
 - **Unit/Ch:** U1 · Ch3 · **BQ:** How does ramp height relate to cup displacement? · **Objective:** same ball · 1/2/3 books · repeated trials · displacement · average · graph (no fake m/s).
 - **GN:** `03-ch3` p.3. **SLIDES:** `03-ch3` S16–S17. **READER:** pp.15–16.
-- **LAB:** `production/worksheets/03-ch3-ramp-it-up-student.docx` + `production/labs/03-ch3-ramp-it-up-teacher-spec.md` + `production/answer-keys/03-ch3-ramp-it-up-key.md`.
+- **LAB:** `production/worksheets/03-ch3-ramp-it-up-student.docx` + `production/labs/03-ch3-ramp-it-up-teacher-spec.md` + `production/answer-keys/03-ch3-ramp-it-up-key.md` + `production/lab-setup-guides/ramp-it-up-setup-guide.docx` (TEACHER setup diagram).
 - **JOURNAL:** one surprise from your data. **FC:** data table. **ABSENT:** partner data. **STATUS:** RELEASED.
 
 ## Friday — RECOVER / PRACTICE / EXTEND
@@ -131,7 +131,7 @@
 ## Thursday — Compact transfer/collision investigation (Crash Lab Part A)
 - **Unit/Ch:** U1 · Ch5 · **BQ:** What happens when objects collide? · **Objective:** same-object variable isolation; primary outcome = target displacement.
 - **GN:** `05-ch5` p.2. **SLIDES:** `05-ch5` S13–S18. **READER:** pp.29–30.
-- **LAB:** `production/worksheets/05-ch5-crash-lab-student.docx` + `production/labs/05-ch5-crash-lab-teacher-spec.md` + `production/answer-keys/05-ch5-crash-lab-key.md`.
+- **LAB:** `production/worksheets/05-ch5-crash-lab-student.docx` + `production/labs/05-ch5-crash-lab-teacher-spec.md` + `production/answer-keys/05-ch5-crash-lab-key.md` + `production/lab-setup-guides/crash-lab-setup-guide.docx` (TEACHER setup diagram).
 - **JOURNAL:** record one trial. **FC:** data table. **ABSENT:** partner data. **STATUS:** RELEASED.
 
 ## Friday — RECOVER / PRACTICE / EXTEND
@@ -170,7 +170,7 @@
 - **JOURNAL:** redesign idea. **FC:** device energy chain. **ABSENT:** `07-ch7` p.2. **STATUS:** RELEASED.
 
 ## Friday — Unit 1 assessment / corrections / extension
-- **ASSESS:** `production/quizzes/07-unit-final-assessment.docx` + `production/answer-keys/07-unit-final-assessment-key.md` + `production/quizzes/07-unit-final-assessment-scoring-guide.md`. **Known:** ~35–40 min → dedicated block; allow spillover. **EXT:** Rube Goldberg blueprint. **STATUS:** RELEASED (see §Assessment timing in gap audit).
+- **ASSESS:** `production/quizzes/07-unit-final-assessment.docx` + `production/answer-keys/07-unit-final-assessment-key.md` + `production/quizzes/07-unit-final-assessment-scoring-guide.md`. **Known:** ~35–40 min → dedicated block; allow spillover. **Timing/spillover plan:** `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (TEACHER). **EXT:** Rube Goldberg blueprint. **STATUS:** RELEASED.
 
 ---
 
@@ -272,7 +272,7 @@
 
 ## Thursday — FLAGSHIP LAB 2: Water Wheel
 - **Unit/Ch:** U2 · Ch6 · **BQ:** Does pour height change how many paperclips the wheel lifts? · **Objective:** change ONE variable (pour height); keep wheel/water/pour same; measure paperclips lifted.
-- **LAB:** `production/labs/unit-02/water-wheel-flagship-lab-student.docx` + `water-wheel-flagship-lab-teacher.docx` (key embedded in teacher version).
+- **LAB:** `production/labs/unit-02/water-wheel-flagship-lab-student.docx` + `water-wheel-flagship-lab-teacher.docx` (key embedded in teacher version) + `production/lab-setup-guides/water-wheel-setup-guide.docx` (TEACHER setup diagram).
 - **JOURNAL:** one surprise. **FC:** data table. **ABSENT:** partner data. **STATUS:** RELEASED.
 
 ## Friday — RECOVER / PRACTICE / EXTEND
@@ -308,7 +308,7 @@
 ## Thursday — Available Light & Solar Device mini-investigation
 - **Unit/Ch:** U2 · Ch7 · **BQ:** How does available light affect a solar device? · **Objective:** a solar device responds to light level; observed change = evidence.
 - **GN:** `unit-02-ch7` p.2. **SLIDES:** `07-u2-ch7` S8. **READER:** pp.40–42.
-- **ACT:** `production/activities/unit-02/solar-device-mini-investigation.docx` (student) — key embedded in activity/teacher guidance.
+- **ACT:** `production/activities/unit-02/solar-device-mini-investigation.docx` (student) — key embedded in activity/teacher guidance + `production/lab-setup-guides/solar-device-setup-guide.docx` (TEACHER setup diagram).
 - **JOURNAL:** record light-level observations. **FC:** observation table. **ABSENT:** partner data + `unit-02-ch7` p.2. **STATUS:** RELEASED.
 
 ## Friday — RECOVER / PRACTICE / EXTEND
@@ -326,8 +326,8 @@
 
 ## Day 1 — Whole-unit comparison/review
 - **Unit/Ch:** U2 · Ch1–9 · **BQ:** How do I compare all the energy resources I learned? · **Objective:** Detective Chart; renewable vs nonrenewable; benefits/limitations; pathways.
-- **ACT:** `production/activities/unit-02/energy-resource-detective-chart.docx` (2-page). **SLIDES:** `09-u2-ch9` review slides (S8+) or review deck. **READER:** Glossary pp.53+.
-- **JOURNAL:** one resource I would investigate. **FC:** chart check. **ABSENT:** Detective Chart self-contained. **STATUS:** RELEASED.
+- **ACT:** `production/activities/unit-02/energy-resource-detective-chart.docx` (2-page). **REVIEW:** `production/review/unit-02/unit2-written-study-review.docx` (STUDENT) + `unit2-written-study-review-key.docx` (KEY) — optional pre-assessment review. **SLIDES:** `09-u2-ch9` review slides (S8+) or review deck. **READER:** Glossary pp.53+.
+- **JOURNAL:** one resource I would investigate. **FC:** chart check. **ABSENT:** Detective Chart self-contained + review sheet self-contained. **STATUS:** RELEASED.
 
 ## Day 2 — Unit 2 written assessment
 - **Unit/Ch:** U2 · Ch1–9 · **BQ:** (summative) · **Objective:** written assessment (22 points): matching, MC, pathway, comparison, scenario, explanation.
@@ -345,3 +345,4 @@ Expand/contract **Friday FLEX** and **Week 8.5** first. Never add essential new 
 
 ## Cross-unit reference documents (TEACHER ONLY unless noted)
 - Master pacing: `ENERGY_AND_NATURAL_RESOURCES_MASTER_PACING.md` · Teacher prep: `TEACHER_PREP_GUIDE.md` · Supply: `MASTER_SUPPLY_LIST_20_STUDENTS.md` · Printing: `PRINTING_GUIDE.md` · Friday: `production/friday-flex/FRIDAY_FLEX_BANK.md` · Media map: `docs/planning/TWO_UNIT_MEDIA_MAP.md` · Resource inventory: `MASTER_RESOURCE_INVENTORY.md` · Video matrix: `VIDEO_PRESENTATION_INTEGRATION_MATRIX.md`.
+- Unit 2 absent recovery: `UNIT2_ABSENT_RECOVERY_INDEX.md` · Unit 1 assessment administration: `UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` · Lab setup diagrams: `production/lab-setup-guides/*-setup-guide.docx` · Retired artifact policy: `docs/architecture/RETIRED_CURRICULUM_ARTIFACT_POLICY.md`.

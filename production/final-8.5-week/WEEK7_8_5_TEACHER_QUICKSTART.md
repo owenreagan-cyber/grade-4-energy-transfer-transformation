@@ -3,6 +3,7 @@
 > Unit 2 · Ch5 Wind · Ch6 Hydroelectric · Ch7 Solar · Ch8 Geothermal · Ch9 Innovations · Unit 2 assessment.
 > 30-min blocks · 20 students · 5 groups of 4 · Thursday = action/lab · Friday = flex.
 > **Media:** one classroom-ready clip — `wind-hydro-power-classroom-cut.mp4` (Wk 7 Mon, OPTIONAL). No other video is shown.
+> **Absent recovery:** see `production/final-8.5-week/UNIT2_ABSENT_RECOVERY_INDEX.md` (one-page teacher lookup for any missed day).
 
 ---
 
@@ -37,7 +38,7 @@
 
 ### Thursday — FLAGSHIP LAB 2: Water Wheel
 - **OPEN** none (hands-on).
-- **PRINT** nothing new (sheet already issued).
+- **PRINT** nothing new (sheet already issued). **Setup diagram:** `production/lab-setup-guides/water-wheel-setup-guide.docx` (laminate).
 - **GATHER** 5 pre-built wheels, water (~2 L in pitchers), paperclips, ruler, basins/trays, towels.
 - **MEDIA** none.
 - **TEACH** 0–4 launch/safety/station assignment → 4–20 test three pour heights (15/30/45 cm; rotate jobs) → 20–25 cleanup → 25–30 data check + exit.
@@ -93,7 +94,7 @@
 
 ### Thursday — Available-Light Solar investigation
 - **OPEN** `07-u2-ch7-slides.pptx` (S8 — Available Light).
-- **PRINT** `solar-device-mini-investigation` sheet (1 p).
+- **PRINT** `solar-device-mini-investigation` sheet (1 p). **Setup diagram:** `production/lab-setup-guides/solar-device-setup-guide.docx` (laminate).
 - **GATHER** 5 solar kits (small solar cell + LED), 5 flashlights/desk lamps (indoor backup), observation sheet.
 - **MEDIA** none.
 - **TEACH** question (How does available light affect a solar device?) → fair test (same device, same way of observing, change ONLY the light) → predict → test bright/close → dim/far → shaded → record evidence → explain.
@@ -119,7 +120,7 @@
 
 ### Day 1 — Whole-unit comparison / review
 - **OPEN** `09-u2-ch9` review slides (S8+) or review deck.
-- **PRINT** Energy Resource Detective Chart (2 pp).
+- **PRINT** Energy Resource Detective Chart (2 pp). **Study/review sheet:** `production/review/unit-02/unit2-written-study-review.docx` (1/student) + `unit2-written-study-review-key.docx` (teacher).
 - **GATHER** Detective Chart (reuse laminated copies).
 - **MEDIA** none.
 - **TEACH** renewable vs nonrenewable → how used → pathway → benefit → limitation → "works well when…" for coal, petroleum, natural gas, uranium, wind, hydro, solar, geothermal.

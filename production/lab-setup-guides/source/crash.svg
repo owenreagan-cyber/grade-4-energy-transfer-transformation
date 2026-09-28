@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#1F1F1F"/></marker><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 z" fill="#5A5A5A"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" fill="#FFFFFF"/>
+<rect x="60" y="120" width="880" height="240" fill="#FBFBFB" stroke="#1F1F1F" stroke-width="2"/>
+<text x="80" y="150" font-size="16" font-weight="normal" text-anchor="start" fill="#5A5A5A">lane surface (SAME)</text>
+<rect x="110" y="180" width="120" height="120" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="170" y="240" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F1F1F">ramp</text>
+<line x1="170" y1="160" x2="170" y2="130" stroke="#1F1F1F" stroke-width="3" marker-end="url(#arr)"/>
+<text x="150" y="118" font-size="16" font-weight="normal" text-anchor="end" fill="#1F1F1F">1 / 2 / 3 books</text>
+<rect x="300" y="96" width="200" height="46" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<text x="400.0" y="127" font-size="20" font-weight="bold" text-anchor="middle" fill="#FFFFFF">CHANGE</text>
+<text x="305" y="180" font-size="18" font-weight="bold" text-anchor="start" fill="#1F1F1F">ramp height</text>
+<text x="305" y="206" font-size="16" font-weight="normal" text-anchor="start" fill="#5A5A5A">(= speed condition)</text>
+<rect x="250" y="225" width="70" height="34" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<circle cx="268" cy="262" r="7" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="2"/>
+<circle cx="302" cy="262" r="7" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="2"/>
+<text x="285" y="288" font-size="16" font-weight="normal" text-anchor="middle" fill="#5A5A5A">car (SAME)</text>
+<line x1="330" y1="242" x2="470" y2="242" stroke="#1F1F1F" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="470" y="210" width="46" height="60" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="470" y="292" font-size="16" font-weight="normal" text-anchor="middle" fill="#1F1F1F">target</text>
+<line x1="520" y1="240" x2="760" y2="240" stroke="#1F1F1F" stroke-width="3" marker-end="url(#arr)"/>
+<text x="640" y="228" font-size="18" font-weight="bold" text-anchor="middle" fill="#1F1F1F">target displacement</text>
+<text x="640" y="336" font-size="18" font-weight="bold" text-anchor="middle" fill="#5A5A5A">MEASURE</text>
+<rect x="520" y="300" width="240" height="10" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="2"/>
+<line x1="520" y1="300" x2="520" y2="310" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="568" y1="300" x2="568" y2="310" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="616" y1="300" x2="616" y2="310" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="664" y1="300" x2="664" y2="310" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="712" y1="300" x2="712" y2="310" stroke="#1F1F1F" stroke-width="1"/>
+<line x1="760" y1="300" x2="760" y2="310" stroke="#1F1F1F" stroke-width="1"/>
+<text x="640" y="352" font-size="15" font-weight="normal" text-anchor="middle" fill="#5A5A5A">ruler (cm)</text>
+<text x="800" y="250" font-size="17" font-weight="normal" text-anchor="start" fill="#1F1F1F">sound =</text>
+<text x="800" y="276" font-size="16" font-weight="bold" text-anchor="start" fill="#1F1F1F">QUALITATIVE only</text>
+<text x="800" y="300" font-size="15" font-weight="normal" text-anchor="start" fill="#5A5A5A">(louder / quieter)</text>
+<rect x="60" y="390" width="880" height="120" fill="#E4E4E4" stroke="#5A5A5A" stroke-width="2" stroke-dasharray="8,5"/>
+<text x="80" y="422" font-size="18" font-weight="bold" text-anchor="start" fill="#1F1F1F">PART B (OPTIONAL — separate fair test)</text>
+<text x="80" y="452" font-size="16" font-weight="normal" text-anchor="start" fill="#1F1F1F">CHANGE: car mass (1 / 2 / 3 cars taped)  ·  KEEP SAME: ramp height, target, surface</text>
+<text x="80" y="478" font-size="15" font-weight="normal" text-anchor="start" fill="#5A5A5A" font-style="italic">Never change speed AND mass at once.</text>
+<rect x="60" y="60" width="34" height="34" fill="#5A5A5A" stroke="#1F1F1F" stroke-width="2"/>
+<text x="102" y="86" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">CHANGE</text>
+<rect x="198" y="60" width="34" height="34" fill="#E4E4E4" stroke="#1F1F1F" stroke-width="2"/>
+<text x="240" y="86" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">KEEP SAME</text>
+<rect x="369" y="60" width="34" height="34" fill="#FFFFFF" stroke="#1F1F1F" stroke-width="3"/>
+<text x="411" y="86" font-size="19" font-weight="normal" text-anchor="start" fill="#1F1F1F">MEASURE</text>
+</svg>
