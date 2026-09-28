@@ -86,8 +86,9 @@
 ## WEEK 8 — Unit 2 Ch7–9 (Solar · Geothermal · Innovations)
 
 - **Print ahead:** `unit-02-ch7` notes (2 pp), `unit-02-ch8` notes (2 pp), `unit-02-ch9` notes (2 pp), solar mini-investigation sheet (1 p).
-- **Gather:** small solar cells + LEDs, flashlights (optional), Scenario Challenge cards (Fri).
+- **Gather:** small solar cells + LEDs, flashlights (required as indoor backup), Scenario Challenge cards (Fri).
 - **Pre-build:** 5 solar kits (Thu). **Laminate** scenario cards once.
+- **Light contingency (Thu):** PRIMARY = window or outdoor available light. BACKUP = a consistent indoor lamp/flashlight per group (same lamp, same distance for every trial). The question is "how does available light affect the device," NOT "how sunny is today" — bright/close → dim/far → shaded works with a lamp. Test each kit with the lamp the day before so the LED responds visibly.
 - **Charge/test:** `07-u2-ch7`, `08-u2-ch8`, `09-u2-ch9` decks.
 - **Est. prep:** 20 min.
 - **Cleanup:** store solar kits; file cards.

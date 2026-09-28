@@ -67,17 +67,17 @@
 
 | Label | Option | Timing | Materials | Grouping | Teacher prep | Collect/grade? | Journal? | Key? |
 |---|---|---|---|---|---|---|---|---|
-| RECOVER | Unit review (Ch1–9 quick recall) | STANDARD | review sheet | pairs | print review | spot-check | no | yes |
+| RECOVER | Resource Detective Chart completion (catch-up) | STANDARD | 2-page reference chart | pairs | print chart | spot-check | no | yes |
 | PRACTICE | Energy Resource Scenario Challenge | FULL FLEX | scenario cards | groups of 4 | print/label scenarios | collect | optional | yes |
-| EXTEND | Energy Resource Detective Chart completion | FULL FLEX | 2-page reference chart | pairs | print chart | collect, grade light | optional | yes |
+| EXTEND | Innovation design/reflection (Ch9 design-your-own-idea + journal) | FULL FLEX | `unit-02-ch9` p.2, journal | solo/pairs | none | collect journal | yes | rubric |
 
 ## Week 8.5 — Unit 2 synthesis + assessment
 
 | Label | Option | Timing | Materials | Grouping | Teacher prep | Collect/grade? | Journal? | Key? |
 |---|---|---|---|---|---|---|---|---|
 | RECOVER | Unit 2 assessment corrections | FULL FLEX | graded assessment | solo | return assessments | collect | no | yes |
-| PRACTICE | Science-journal reflection: what I learned about resources | QUICK | journal | solo | none | no | yes | — |
-| EXTEND | Optional Energy Detective certificate | QUICK | certificates | whole class | print/sign | no | no | — |
+| PRACTICE | Whole-unit review (Detective Chart + staged review slides) | STANDARD | Detective Chart, `09-u2-ch9` review | pairs | print chart | spot-check | no | yes |
+| EXTEND | Final journal reflection + optional Energy Detective certificate | QUICK | journal, certificates | whole class | print/sign | no | yes | — |
 
 ---
 
