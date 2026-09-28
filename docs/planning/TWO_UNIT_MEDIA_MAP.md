@@ -74,11 +74,11 @@
 |---|---|---|---|---|---|---|---|
 | 1 | Where Does Our Energy Come From? | ~90 s | CORE | Wk 5 Mon (Unit 2 launch) | Ch1 · renewable vs nonrenewable | Stop at 60 s for student prediction. | DELIVERED — rejected (see below) |
 | 2 | Renewable vs Nonrenewable | ~2 min | CORE | Wk 5 Tue | Ch1 · time-based framing | End on benefits/limitations balance. | PENDING GENERATION |
-| 3 | Fossil Fuel Formation | ~2 min | SUPPORT | Wk 5 Thu (optional) | Ch2 · buried + heat + pressure + time | Do not require fossil-organism memorization. | PENDING GENERATION |
-| 4 | Coal vs Nuclear: Similar Pathway | ~2.5 min | SUPPORT | Wk 6 Thu | Ch3+Ch4 · steam→turbine→generator | Wk 6 SAME/DIFFERENT anchor; no fission detail. | PENDING GENERATION |
-| 5 | How a Turbine Helps Make Electricity | ~90 s | SUPPORT | Wk 6 Tue | Ch3/4/5/6/8 · shared pathway | Bridge to Water Wheel lab. | PENDING GENERATION |
+| 3 | Fossil Fuel Formation | 3:39 (cut) | SUPPORT | Wk 5 Wed | Ch2 · buried + heat + pressure + time | Do not require fossil-organism memorization; gloss "petrified". | FULFILLED — `fossil-fuel-formation-classroom-cut.mp4` |
+| 4 | Coal vs Nuclear: Similar Pathway | ~2.5 min | SUPPORT | Wk 6 Thu | Ch3+Ch4 · steam→turbine→generator | Wk 6 SAME/DIFFERENT anchor; no fission detail. | PARTIALLY FULFILLED — shared steam→turbine→generator shown in turbine-generator cut; dedicated coal-vs-nuclear comparison clip still PENDING |
+| 5 | How a Turbine Helps Make Electricity | 3:41 (cut) | SUPPORT | Wk 6 Tue | Ch3/4/5/6/8 · shared pathway | Bridge to Water Wheel lab; "motion energy" = "energy of motion". | FULFILLED — `turbine-generator-classroom-cut.mp4` |
 | 6 | Moving Air & Water: Wind + Hydro | ~1:35 (trimmed) | SUPPORT | Wk 7 Mon (wind) | Ch5 · moving air → blades → generator | Use trimmed `wind-hydro-power-classroom-cut.mp4`; do NOT use full file. | DELIVERED — trimmed classroom cut shipped (Phase 13G) |
-| 7 | Sunlight & Earth Heat: Solar + Geothermal | ~2.5 min | SUPPORT | Wk 8 Mon/Tue | Ch7+Ch8 · available light + location | Keep both factual and location-dependent. | PENDING GENERATION |
+| 7 | Sunlight & Earth Heat: Solar + Geothermal | ~2.5 min | SUPPORT | Wk 8 Mon/Tue | Ch7+Ch8 · available light + location | Keep both factual and location-dependent. | REJECTED DELIVERY — `Solar___Geothermal_Energy.mp4` (electron/photon mechanics + "Zero Emissions"); regeneration needed if desired |
 
 ### Delivered Unit 2 files (STAGED · disposition recorded)
 
@@ -91,13 +91,30 @@
 | `Wind___Hydro_Power.mp4` | `unit-02/chapter-05/` | `db03356e8b3aea0b4d2e70efee05e60e7a59e3d3aa0467c03378c72f86835ea5` | 46,136,929 | 9:09 | 1280×720 | #6 | **DO NOT USE as-is** — climate-change line + carbon + "zero combustion" + hammer/pendulum Unit 1 review. |
 | `wind-hydro-power-classroom-cut.mp4` | `unit-02/chapter-05/` | `0d4ec2bd866c531574333291c5c09fea54c78d76920c42ac2195b0a321864dbd` | 3,742,861 | 1:35 | 1280×720 | #6 | **USE (Wk 7 Mon wind)** — contiguous excerpt 156–251 s; wind turbine pathway only; verified clean. See `docs/reviews/PHASE13G_WEEK7_MEDIA_REVIEW.md`. |
 
+### Phase 13H delivered files (intake recorded)
+
+> Six new files reviewed in `docs/reviews/PHASE13H_FINAL_MEDIA_REVIEW.md`. Two accepted (trimmed), four rejected. All sources preserved under `assets/supplemental/media/unit-02/` (git-excluded).
+
+| Filename | Path | SHA-256 | Bytes | Runtime | Res | Maps to script | Disposition |
+|---|---|---|---|---|---|---|---|
+| `Fossil_Fuel_Formation.mp4` | `unit-02/chapter-02/` | `08d59d655194e10b68b46d45ec5ddd57e61af14d1192eee106ecf70c9ea80ac2` | 45,107,778 | 7:48 | 1280×720 | #3 | **TRIM → USE** — clean content; cut 94–313 s below |
+| `fossil-fuel-formation-classroom-cut.mp4` | `unit-02/chapter-02/` | `1f255f6e0c0fda2540753c085a4fe8b2905706858e35ed7c9730046f9dc8f7f8` | 9,068,796 | 3:39 | 1280×720 | #3 | **USE (Wk 5 Wed)** — definition → oil/gas (ocean) vs coal (swamp) → burial/pressure |
+| `Energy_Detectives.mp4` | `unit-02/chapter-03/` | `e341dec3242ed232617f9b7b6c0ed5e3cd62db7dfc34b24b7f92eeb9bac807ce` | 40,516,861 | 7:17 | 1280×720 | #5 (misnamed; not Unit 1) | **TRIM → USE** — "How do we make electricity?" turbine/generator pathway; cut 80–301 s below |
+| `turbine-generator-classroom-cut.mp4` | `unit-02/chapter-03/` | `649fbc83e7d9ad50d3b833ea00144c94f88119f61c555922bfd059d0babdb149` | 9,315,091 | 3:41 | 1280×720 | #5 | **USE (Wk 6 Tue)** — turbine/generator defs + wind/water/steam → same turbine→generator |
+| `Solar___Geothermal_Energy.mp4` | `unit-02/chapter-07/` | `d1a173f325bbf94295b920e10beea36cce6166188337c7fdc2962eca93232901` | 36,972,264 | 6:48 | 1280×720 | #7 | **DO NOT USE** — electron/photon mechanics (solar cell) + "Zero Emissions" framing |
+| `The_Timescale_Tradeoff__Physics,_Economics,_and_the_Energy_Grid.mp4` | `unit-02/chapter-01/` | `e773c74ce51f5a07540e49e4bd7aeb292d5e0deb704a7b0bead4827720b6f517` | 55,406,093 | 6:47 | 1280×720 | #2 (partial) | **DO NOT USE** — grid economics/policy ("Legacy Systems Dominate U.S. Grid", intermittency gap, capital/storage cost) |
+| `Energy_Causes_Change.mp4` | `unit-02/chapter-01/` | `514b434431ee34185241d17b1eceb879f4b6518a0fafcf6bc359ba8ce2df2a95` | 36,562,945 | 6:43 | 1280×720 | — (misnamed; grid storage) | **DO NOT USE** — "thermal", "Power Grid", "Balancing the grid", "No carbon emissions"/"ZERO EMISSIONS" |
+| `Energy_Innovations.mp4` | `unit-02/chapter-09/` | `43500449da73e621fa80073df91c81b691c40b2929b3d3bed4d30cc5ee3115b5` | 34,808,180 | 6:19 | 1280×720 | Ch9 Innovations | **DO NOT USE** — "Kinetic/Chemical/Mechanical energy", "Emits carbon dioxide", "Changes climate" |
+
 ---
 
-## DO NOT USE (none identified)
-No video in either unit currently carries a **DO NOT USE** classification. Any future MAJOR-fail video (scientifically false central concept, safety error, corruption) would be flagged here and excluded.
+## DO NOT USE
+Current DO NOT USE files (excluded from any lesson):
+`Where_Does_Energy_Come_From_.mp4` · `Power_Plant_Energy_Transformations__Tracing_the_Grid.mp4` · `Solar___Geothermal_Energy.mp4` · `The_Timescale_Tradeoff__Physics,_Economics,_and_the_Energy_Grid.mp4` · `Energy_Causes_Change.mp4` · `Energy_Innovations.mp4` — and `Wind___Hydro_Power.mp4` (DO NOT USE as-is; only its wind cut ships).
 
 ## Load rules (applied in pacing)
 - 0–1 CORE video per lesson; do not stack multiple long videos in one day.
 - Ch.1: Mon = `Invisible Boss` + `Energy Detective` only; Thu = `Briefing` only.
 - Ch.2: avoid `Things_on_the_Move` + `Moving_Objects_Have_Energy` full in the same lesson.
-- All Ch.3–7 and Unit 2 slots are scripts only; generation is PENDING and does not block the classroom package.
+- Unit 2 accepted cuts are SUPPORT/OPTIONAL and fit inside the 30-min period: `fossil-fuel-formation-classroom-cut.mp4` (Wk 5 Wed), `turbine-generator-classroom-cut.mp4` (Wk 6 Tue), `wind-hydro-power-classroom-cut.mp4` (Wk 7 Mon). Do not queue full-length sources.
+- Remaining Ch.3–7 and Unit 2 #2/#4/#7 slots are scripts only; generation is PENDING and does not block the classroom package.
