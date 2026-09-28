@@ -77,7 +77,7 @@
 | 3 | Fossil Fuel Formation | ~2 min | SUPPORT | Wk 5 Thu (optional) | Ch2 · buried + heat + pressure + time | Do not require fossil-organism memorization. | PENDING GENERATION |
 | 4 | Coal vs Nuclear: Similar Pathway | ~2.5 min | SUPPORT | Wk 6 Thu | Ch3+Ch4 · steam→turbine→generator | Wk 6 SAME/DIFFERENT anchor; no fission detail. | PENDING GENERATION |
 | 5 | How a Turbine Helps Make Electricity | ~90 s | SUPPORT | Wk 6 Tue | Ch3/4/5/6/8 · shared pathway | Bridge to Water Wheel lab. | PENDING GENERATION |
-| 6 | Moving Air & Water: Wind + Hydro | ~2.5 min | SUPPORT | Wk 7 Mon/Tue | Ch5+Ch6 · location matters | End on falling water → spinning wheel. | DELIVERED — needs trimming (Week 7) |
+| 6 | Moving Air & Water: Wind + Hydro | ~1:35 (trimmed) | SUPPORT | Wk 7 Mon (wind) | Ch5 · moving air → blades → generator | Use trimmed `wind-hydro-power-classroom-cut.mp4`; do NOT use full file. | DELIVERED — trimmed classroom cut shipped (Phase 13G) |
 | 7 | Sunlight & Earth Heat: Solar + Geothermal | ~2.5 min | SUPPORT | Wk 8 Mon/Tue | Ch7+Ch8 · available light + location | Keep both factual and location-dependent. | PENDING GENERATION |
 
 ### Delivered Unit 2 files (STAGED · disposition recorded)
@@ -88,7 +88,8 @@
 |---|---|---|---|---|---|---|---|
 | `Where_Does_Energy_Come_From_.mp4` | `unit-02/chapter-01/` | `f49baa4eae364f03aec5207ac6318c0aa861880b337bc2a6f4e15f77e59877a1` | 35,694,516 | 7:19 | 1280×720 | #1 | **DO NOT USE** — mechanical energy + carbon/zero-carbon/clean framing + grid jargon + 7:19; regenerate against script #1 |
 | `Power_Plant_Energy_Transformations__Tracing_the_Grid.mp4` | `unit-02/chapter-03/` | `ce8f4052b50c5520625d9fe6f023c6a76e71656dc628b3f8e1b737bd08e2b020` | 42,974,182 | 5:00 | 1280×720 | #4/#5 | **DO NOT USE** — fission equations + kinetic/potential/chemical/thermal/mechanical vocabulary; mis-leveled |
-| `Wind___Hydro_Power.mp4` | `unit-02/chapter-05/` | `db03356e8b3aea0b4d2e70efee05e60e7a59e3d3aa0467c03378c72f86835ea5` | 46,136,929 | 9:09 | 1280×720 | #6 | **DO NOT USE as-is (needs trimming)** — climate-change line + carbon + "zero combustion"; Week 7, Phase 13G |
+| `Wind___Hydro_Power.mp4` | `unit-02/chapter-05/` | `db03356e8b3aea0b4d2e70efee05e60e7a59e3d3aa0467c03378c72f86835ea5` | 46,136,929 | 9:09 | 1280×720 | #6 | **DO NOT USE as-is** — climate-change line + carbon + "zero combustion" + hammer/pendulum Unit 1 review. |
+| `wind-hydro-power-classroom-cut.mp4` | `unit-02/chapter-05/` | `0d4ec2bd866c531574333291c5c09fea54c78d76920c42ac2195b0a321864dbd` | 3,742,861 | 1:35 | 1280×720 | #6 | **USE (Wk 7 Mon wind)** — contiguous excerpt 156–251 s; wind turbine pathway only; verified clean. See `docs/reviews/PHASE13G_WEEK7_MEDIA_REVIEW.md`. |
 
 ---
 
