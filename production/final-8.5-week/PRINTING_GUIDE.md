@@ -20,8 +20,8 @@
 
 | Resource | Pages | Single/Duplex | Color | Copies | Teacher key? | Friday optional? | Laminate? |
 |---|---|---|---|---|---|---|---|
-| `03-ch3-ramp-it-up-student` | 2 | single (stapled) | no | 20 | yes (`03-ch3-ramp-it-up-key`) | no | no |
-| Moving Marbles student | 1 | single | no | 20 | yes | no | no |
+| `03-ch3-ramp-it-up-student` | 3 | single (stapled) | no | 20 | yes (`03-ch3-ramp-it-up-key`) | no | no |
+| Moving Marbles student | 2 | single (stapled) | no | 20 | yes | no | no |
 | Crash Lab student | 1–2 | single | no | 20 | yes | no | no |
 | Engineering performance task | 2 | duplex | no | 20 | yes | no | no |
 | Transfer/Transformation/BOTH sort cards | 1 | single | optional | 5 (groups) | yes | yes | **laminate** |

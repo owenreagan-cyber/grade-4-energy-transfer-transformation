@@ -2,11 +2,11 @@
 
 - **Deck role:** TEACHING (with clearly-marked lab slides)
 - **Aligned Big Question:** How are energy, change, and movement of objects related?
-- **Total slides:** 24 (22 instructional + 2 notebook cue slides, Phase 4.5)
+- **Total slides:** 24 (22 instructional + 2 notes cue slides)
 
 | # | Purpose | Core idea | Student-facing text | Visual requirement | Teacher move | Student action | Reveal | Source/provenance | Accessibility |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | Title | Week 2 focus | "Moving Objects Have Energy — Week 2" | title + MOVING OBJECT→CHANGE→EVIDENCE strip | orient | read | none | ADAPTED | high contrast |
+| 1 | Title | Week 1 focus | "Moving Objects Have Energy — Week 1" | title + MOVING OBJECT→CHANGE→EVIDENCE strip | orient | read | none | ADAPTED | high contrast |
 | 2 | Hook phenomenon | something moved & changed | "What changed?" (marble → target) | rolling marble → moved target | roll marble demo | notice | none | SOURCE (Reader p.9 / TG L3) | large |
 | 3 | Notice/wonder | changes from motion | "I notice… I wonder…" | two-column prompts | ask | share | none | CUSTOM | clear spacing |
 | 4 | Prediction | guess before test | "What will happen when the moving marble reaches the target?" | question card | ask | predict | reveal after demo | ADAPTED | question prominent |
@@ -29,11 +29,11 @@
 | 21 | Non-example | not moving = no change | "A book sitting on a table is NOT moving — no change." | still book | ask | discuss | reveal | ADAPTED | — |
 | 22 | Synthesis / exit | bring it together | "MOVING OBJECT → CHANGE → EVIDENCE OF ENERGY" | full model + exit prompt | recap | recite + respond | none | ADAPTED | model prominent |
 
-## Notebook cue slides (Phase 4.5 retrofit)
+## Notes cue slides (drive the guided notes)
 | Final # | Cue | Position | WRITE (reveal) | DRAWING IDEAS |
 |---|---|---|---|---|
-| 11 | Notebook—Motion | after "Motion definition" (#10) | An object is in motion when its position changes. (POSITION) | moving object + direction arrow |
-| 13 | Notebook—Energy of Motion | after "Energy of motion" (#12) | A moving object has energy of motion. (MOTION) | moving object causing something to change |
+| 11 | Notes—Motion | after "Motion definition" (#10) | An object is in motion when its position changes. (POSITION) | moving object + direction arrow |
+| 13 | Notes—Energy of Motion | after "Energy of motion" (#12) | A moving object has energy of motion. (MOTION) | moving object causing something to change |
 
 ## Rules honored
 - one core idea per slide · large type · minimal paragraphs · arrows/models · prediction-before-reveal · lab slides (#12–16) distinct · no decorative clutter · no speed/mass content · Grade 4 vocabulary only.

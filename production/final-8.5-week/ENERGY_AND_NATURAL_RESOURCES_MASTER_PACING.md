@@ -15,7 +15,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Mon — Energy causes change
 - **Unit/Ch:** U1 · Ch1 · **BQ:** Where can we observe evidence of energy causing change?
 - **Essential:** energy = ability to cause change; change is our evidence. (No advanced forms terms.)
-- **GN:** `01-ch1` p.1 · **Slides:** `01-ch1` S1–S3 · **Reader:** pp.1–2 · **Act:** none (launch)
+- **GN:** `01-ch1` p.1 · **Slides:** `01-ch1` S1–S9 · **Reader:** pp.1–2 · **Act:** none (launch)
 - **J:** draw one change you saw today. **FC:** exit ticket — name one change + its evidence.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** send `01-ch1` p.1 + slide handout; do the journal drawing.
@@ -23,7 +23,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Tue — Stored energy / forms / evidence
 - **Unit/Ch:** U1 · Ch1 · **BQ:** What are some forms of energy? What is stored energy?
 - **Essential:** forms (motion, light, sound, heat, electrical); stored energy can cause change later.
-- **GN:** `01-ch1` p.2 · **Slides:** `01-ch1` S4–S7 · **Reader:** pp.3–6 · **Act:** forms-of-energy sort (FLEX)
+- **GN:** `01-ch1` p.2 · **Slides:** `01-ch1` S12–S23 · **Reader:** pp.3–6 · **Act:** forms-of-energy sort (FLEX)
 - **J:** one stored-energy example. **FC:** stored-energy table check.
 - **Materials:** printed sort cards (FLEX) · **Prep:** cut cards · **Cleanup:** collect cards · **Type:** CORE · **Time:** 25–30
 - **Absent:** `01-ch1` p.2.
@@ -31,7 +31,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Wed — Moving objects have energy
 - **Unit/Ch:** U1 · Ch2 · **BQ:** How are energy, change, and movement of objects related?
 - **Essential:** all moving objects have energy of motion; a moving object can cause change.
-- **GN:** `02-ch2` p.1 · **Slides:** `02-ch2` S1–S3 · **Reader:** pp.7–9 · **Act:** none
+- **GN:** `02-ch2` p.1 · **Slides:** `02-ch2` S1–S13 · **Reader:** pp.7–9 · **Act:** none
 - **J:** predict — will a moving marble move a cup? **FC:** fill-in "energy of motion."
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `02-ch2` p.1.
@@ -39,7 +39,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Thu — Energy Detectives / Moving Marbles mini-investigation
 - **Unit/Ch:** U1 · Ch1–2 · **BQ:** What evidence shows a moving object has energy?
 - **Essential:** moving marble transfers energy to a cup (change = evidence). Same-marble comparisons only.
-- **GN:** `02-ch2` p.2 · **Slides:** `02-ch2` S4–S6 · **Reader:** pp.10–12 · **Act:** Moving Marbles mini-lab
+- **GN:** `02-ch2` p.2 · **Slides:** `02-ch2` S14–S24 · **Reader:** pp.10–12 · **Act:** Moving Marbles mini-lab
 - **J:** before/after drawing. **FC:** observation table.
 - **Materials:** marbles, cups, meter stick · **Prep:** set stations · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
 - **Absent:** partner data + `02-ch2` p.2.
@@ -55,7 +55,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Mon — Same-object speed relationship
 - **Unit/Ch:** U1 · Ch3 · **BQ:** How are energy and speed related?
 - **Essential:** for the SAME object, faster = more energy of motion. (Never compare different masses.)
-- **GN:** `03-ch3` p.1 · **Slides:** `03-ch3` S1–S5 · **Reader:** pp.13–14 · **Act:** none
+- **GN:** `03-ch3` p.1 · **Slides:** `03-ch3` S1–S9 · **Reader:** pp.13–14 · **Act:** none
 - **J:** predict — higher ramp, faster or slower? **FC:** "SAME object" highlight check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `03-ch3` p.1.
@@ -63,7 +63,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Tue — Fair-test setup / Ramp prep
 - **Unit/Ch:** U1 · Ch3 · **BQ:** What makes a fair test?
 - **Essential:** fair test changes ONE thing, keeps everything else the same.
-- **GN:** `03-ch3` p.2 · **Slides:** `03-ch3` S9 · **Reader:** pp.15–16 · **Act:** Ramp It Up! prep (build ramps)
+- **GN:** `03-ch3` p.2 · **Slides:** `03-ch3` S10–S14 · **Reader:** pp.15–16 · **Act:** Ramp It Up! prep (build ramps)
 - **J:** draw the fair-test setup. **FC:** fair-test verbal check.
 - **Materials:** boards/books, ruler, cups, one ball · **Prep:** build 5 ramp stations · **Cleanup:** store · **Type:** CORE · **Time:** 25–30
 - **Absent:** `03-ch3` p.2.
@@ -71,7 +71,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Wed — Guided notes / prediction / lab setup
 - **Unit/Ch:** U1 · Ch3 · **BQ:** What will happen as ramp height increases?
 - **Essential:** prediction + measured vs inferred (measure displacement; infer speed/energy).
-- **GN:** `03-ch3` p.2–3 · **Slides:** `03-ch3` S6–S8 · **Reader:** pp.15–16 · **Act:** prediction + data table setup
+- **GN:** `03-ch3` p.2–3 · **Slides:** `03-ch3` S15–S18 · **Reader:** pp.15–16 · **Act:** prediction + data table setup
 - **J:** write prediction. **FC:** data-table setup check.
 - **Materials:** data sheets · **Prep:** print · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `03-ch3` p.3.
@@ -79,7 +79,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Thu — FLAGSHIP LAB 1: Ramp It Up!
 - **Unit/Ch:** U1 · Ch3 · **BQ:** How does ramp height relate to cup displacement?
 - **Essential:** same ball · 1/2/3 books · repeated trials · cup displacement · average · graph (no direct speed, no fake m/s).
-- **GN:** `03-ch3` p.3 · **Slides:** `03-ch3` S10 · **Reader:** pp.15–16 · **Act:** Ramp It Up! trials
+- **GN:** `03-ch3` p.3 · **Slides:** `03-ch3` S16–S17 · **Reader:** pp.15–16 · **Act:** Ramp It Up! trials
 - **J:** one surprise from your data. **FC:** data table.
 - **Materials:** ramps, cups, balls, rulers · **Prep:** stations ready · **Cleanup:** store · **Type:** CORE · **Time:** 30
 - **Absent:** partner data.
