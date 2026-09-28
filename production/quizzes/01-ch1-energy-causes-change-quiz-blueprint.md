@@ -11,7 +11,7 @@
 | 5 | Diagram/image | label ENERGY → CHANGE → EVIDENCE | core | medium | Reader p.2 |
 | 6 | Scenario | stored energy (battery) | application | medium | Reader p.4 |
 | 7 | Multiple choice | stored energy (nonmoving object) | core | easy | Reader p.4–5 |
-| 8 | Short explanation | evidence reasoning (does change prove energy?) | evidence | medium | Reader p.2 |
+| 8 | Short explanation | evidence reasoning (does change provide evidence of energy?) | evidence | medium | Reader p.2 |
 | 9 | Evidence-or-not | decide whether observation is evidence | evidence | medium | Reader p.2 |
 
 ## Balance tally

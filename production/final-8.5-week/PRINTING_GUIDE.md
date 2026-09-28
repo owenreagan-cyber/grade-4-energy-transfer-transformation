@@ -54,9 +54,10 @@
 | Water Wheel student sheet | 3 | single (stapled) | optional | 20 | yes (teacher guide) | no | no |
 | Water Wheel teacher guide | 2 | single | optional | 1 | self | no | **laminate** |
 | Energy Resource Detective Chart | 2 | single (back-to-back) | optional | 20 | built-in | yes | **laminate** |
-| Scenario Challenge cards | 1 | single | no | 5 (groups) | yes | yes | **laminate** |
-| Transfer/Transformation/BOTH sort | 1 | single | optional | 5 (groups) | yes | yes | **laminate** |
-| Fast & Curious sheet | 1 | single | no | 20 | yes (built-in) | yes | no |
+| Scenario Challenge (cards + frame + key) | 3 | single | no | 5 cards + 20 frames + 1 key | yes | yes | **laminate** |
+| Transfer/Transformation/BOTH sort (mat + cards + key) | 3 | single | optional | 5 mats + 5 card sets + 1 key | yes | yes | **laminate** |
+| Fast & Curious (sheet + key) | 2 | single | no | 20 sheets + 1 key | yes (built-in) | yes | no |
+| Solar device mini-investigation sheet | 1 | single | no | 20 | built-in | no | no |
 | Cookie-mining FLEX model | 1 | single | no | 10 (pairs) | yes (built-in) | yes | no |
 | Unit 2 written assessment (student) | 3 | single | no | 20 | yes (key) | no | no |
 | Unit 2 assessment key | 1 | single | no | 1 | self | no | **laminate** |

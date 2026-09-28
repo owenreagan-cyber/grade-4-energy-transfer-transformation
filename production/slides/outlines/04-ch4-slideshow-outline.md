@@ -155,7 +155,7 @@
 - **Reveal:** answer next.
 
 ### Slide 24 — Q4 Answer
-- **Answer:** B. Heat (thermal energy) transferred from the warm cup to cooler surroundings.
+- **Answer:** B. Heat transferred from the warm cup to cooler surroundings.
 
 ### Slide 25 — Review Q5
 - **Key text:** "Which is a source, path, and receiver?"
