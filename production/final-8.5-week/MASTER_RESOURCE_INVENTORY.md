@@ -95,6 +95,8 @@
 | Engineering capstone | `production/worksheets/06-ch6-engineering-performance-task.docx` | `production/labs/06-ch6-engineering-capstone-teacher-spec.md` | `production/answer-keys/06-ch6-engineering-key.md` + `06-ch6-engineering-teacher-key.md` |
 | Water Wheel (flagship) | `production/labs/unit-02/water-wheel-flagship-lab-student.docx` | `production/labs/unit-02/water-wheel-flagship-lab-teacher.docx` | key embedded in teacher docx |
 
+> **Teacher setup diagrams (×4, TEACHER ONLY — laminate for prep binder):** `production/lab-setup-guides/ramp-it-up-setup-guide.docx` + `.pdf` · `crash-lab-setup-guide.docx` + `.pdf` · `water-wheel-setup-guide.docx` + `.pdf` · `solar-device-setup-guide.docx` + `.pdf` (grayscale-printable, one page each).
+
 ## 6. Student Activities (STUDENT · PRINT/FLEX)
 
 | Activity | File | Key |
@@ -123,6 +125,7 @@
 | Unit 1 final assessment | `production/quizzes/07-unit-final-assessment.docx` | `production/answer-keys/07-unit-final-assessment-key.md` + `production/quizzes/07-unit-final-assessment-scoring-guide.md` |
 | Unit 1 chapter quizzes/checkpoints (Ch1–6) | `production/quizzes/0X-chX-*-quiz.docx`, `06-ch6-concept-checkpoint.docx` | `production/answer-keys/0X-chX-*-quiz-key.md` (Markdown) |
 | Unit 2 written assessment | `production/quizzes/unit-02/unit-2-written-assessment-student.docx` | `production/quizzes/unit-02/unit-2-written-assessment-key.docx` |
+| Unit 2 study/review sheet | `production/review/unit-02/unit2-written-study-review.docx` + `.pdf` | `production/review/unit-02/unit2-written-study-review-key.docx` + `.pdf` |
 | Quiz blueprints | `production/quizzes/*-blueprint.md`, `UNIT_FINAL_ASSESSMENT_BLUEPRINT.md` | — |
 
 ## 10. Answer Keys (KEY)
@@ -130,6 +133,7 @@
 | Item | Path |
 |---|---|
 | Unit 1 practice/quiz/lab keys (23 files) | `production/answer-keys/*.md` |
+| Unit 1 review resource keys (2) | `production/answer-keys/07-energy-big-questions-key.md` · `07-unit-synthesis-review-key.md` |
 | Unit 2 assessment key | `production/quizzes/unit-02/unit-2-written-assessment-key.docx` |
 
 > Note: Unit 1 quiz keys are Markdown; Unit 1 quizzes are DOCX. Functional but a format consolidation is NICE-TO-HAVE (see gap audit).
@@ -169,6 +173,10 @@
 | Teacher prep guide | `production/final-8.5-week/TEACHER_PREP_GUIDE.md` |
 | Master curriculum map | `production/final-8.5-week/MASTER_CURRICULUM_MAP.md` |
 | Quickstarts (4) | `production/final-8.5-week/WEEK1_2_…, WEEK3_4_…, WEEK5_6_…, WEEK7_8_5_TEACHER_QUICKSTART.md` |
+| Unit 1 assessment administration note | `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` |
+| Unit 2 absent-recovery index | `production/final-8.5-week/UNIT2_ABSENT_RECOVERY_INDEX.md` |
+| Teacher lab setup diagrams (×4) | `production/lab-setup-guides/*-setup-guide.docx` + `.pdf` |
+| Retired curriculum artifact policy | `docs/architecture/RETIRED_CURRICULUM_ARTIFACT_POLICY.md` |
 | Unit 1 chapter teacher maps/lessons/notes | `curriculum/chapter-0X/teacher/*` (7 chapters) |
 | Unit 1 chapter supply-prep guides | `curriculum/chapter-01/teacher/01-ch1-supply-prep-guide.md` … `curriculum/chapter-06/teacher/06-ch6-supply-prep-guide.md` |
 | Unit 2 teacher support | master pacing + quickstarts (guided notes/labs carry keys) |
@@ -188,6 +196,7 @@
 |---|---|
 | Unit 1 Ch1–7 absent recovery (7) | `curriculum/chapter-01/student/recovery/01-ch1-absent-student-recovery.md` … `curriculum/chapter-07/student/recovery/07-ch7-absent-student-recovery.md` |
 | Unit 1 final-assessment corrections recovery | `curriculum/chapter-07/student/recovery/07-final-assessment-corrections-recovery.md` |
+| Unit 2 absent-recovery index (teacher) | `production/final-8.5-week/UNIT2_ABSENT_RECOVERY_INDEX.md` |
 | Unit 2 recovery | per-day "ABSENT:" lines in master pacing + quickstarts (self-contained sheets: Detective Chart, scenario cards, partner data) |
 
 ## 17. Supplemental / Reference Resources (SOURCE · git-excluded)
@@ -208,3 +217,5 @@
 | Legacy final-package index | `production/final-package/*.md` | superseded by `final-8.5-week/` documents |
 | Chapter-01 note-system comparison | `production/comparisons/` | study artifact |
 | Draft PDFs (idea banks) | `assets/drafts/` | Level 4 draft, not authority |
+
+> **Retirement convention:** see `docs/architecture/RETIRED_CURRICULUM_ARTIFACT_POLICY.md` (ACTIVE / SUPERSEDED / RETIRED / ARCHIVED; archive target `archive/retired/`). Documentation only — no files moved/deleted by the policy alone.

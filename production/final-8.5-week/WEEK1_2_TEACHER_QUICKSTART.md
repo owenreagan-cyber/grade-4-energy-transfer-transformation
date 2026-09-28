@@ -91,7 +91,7 @@
 
 ### Thu — FLAGSHIP LAB: Ramp It Up!
 - **Open:** `03-ch3` deck (slides S16–S17 as reference).
-- **Print:** Ramp It Up sheet (already handed out Wed).
+- **Print:** Ramp It Up sheet (already handed out Wed). **Setup diagram:** `production/lab-setup-guides/ramp-it-up-setup-guide.docx` (laminate).
 - **Gather:** stations from Tue + balls + cups + rulers.
 - **Run:** 0–4 launch/safety → 4–20 trials (3 heights × 3 trials) → 20–25 cleanup → 25–30 data check.
 - **Students write:** trials + averages (light writing; measure, don't narrate).

@@ -33,7 +33,7 @@
 
 ### Thursday — Compact Crash Lab (Part A only)
 - **OPEN** `05-ch5-collisions-slides.pptx` (S13–S18).
-- **PRINT** `05-ch5-crash-lab-student` (1/student) + have `05-ch5-crash-lab-teacher-spec` open.
+- **PRINT** `05-ch5-crash-lab-student` (1/student) + have `05-ch5-crash-lab-teacher-spec` open. **Setup diagram:** `production/lab-setup-guides/crash-lab-setup-guide.docx` (laminate).
 - **GATHER** 5 stations: identical toy car, ramp, 3 books (heights), cup/block target, ruler (cm), tape.
 - **TEACH** 0–4 launch/safety → 4–20 roll SAME car at 1/2/3 heights, 3 trials, measure target displacement → 20–25 cleanup → 25–30 exit.
 - **STOP-HERE-IF-SHORT** run 1 and 3 heights only (skip middle).
@@ -85,6 +85,6 @@
 - **OPEN** `07-ch7` S24–S26 (assessment expectations + correction process).
 - **PRINT** `07-unit-final-assessment` (1/student) + `07-unit-final-assessment-key` (teacher).
 - **GATHER** Core Vocabulary cards (if allowed); correction sheets.
-- **TEACH** assessment as a dedicated block — allow spillover into the next block; do NOT pack the Rube Goldberg extension with it.
+- **TEACH** assessment as a dedicated block — allow spillover into the next block; do NOT pack the Rube Goldberg extension with it. See `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` for Option A (30-min + spillover) and Option B (oral diagram/CER items).
 - **STOP-HERE-IF-SHORT** give assessment; skip extension.
 - **ABSENT** assessment can be completed in a make-up block; corrections self-contained.

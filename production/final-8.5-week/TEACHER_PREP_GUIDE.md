@@ -21,7 +21,7 @@
 
 - **Print ahead:** `03-ch3` notes (3 pp), `03-ch3-ramp-it-up-student` (2 pp), Fast & Curious (Fri).
 - **Gather:** ramp boards/books, ONE identical ball type, cups, rulers, graph paper.
-- **Pre-build:** 5 ramp stations Tue; keep them for Thu trials.
+- **Pre-build:** 5 ramp stations Tue; keep them for Thu trials. **Laminate** `production/lab-setup-guides/ramp-it-up-setup-guide.docx` for the prep binder.
 - **Charge/test:** `03-ch3` deck.
 - **Est. prep:** 25 min.
 - **Cleanup:** store ramps for Fri analysis; recycle graph scrap.
@@ -32,7 +32,7 @@
 
 - **Print ahead:** `04-ch4` notes (4 pp), `05-ch5` notes (2 pp), Crash Lab student, sort cards (Fri).
 - **Gather:** toy cars (identical), ramp, targets, rulers; Newton's cradle (optional).
-- **Pre-build:** 5 Crash Lab stations (Thu). **Laminate** the sort mat + cards once for reuse.
+- **Pre-build:** 5 Crash Lab stations (Thu). **Laminate** the sort mat + cards once for reuse and `production/lab-setup-guides/crash-lab-setup-guide.docx`.
 - **Charge/test:** `04-ch4`, `05-ch5` decks.
 - **Est. prep:** 25 min.
 - **Cleanup:** collect cars/targets; file sort cards.
@@ -41,7 +41,7 @@
 
 ## WEEK 4 — Unit 1 Ch6–7 (Transformations · Engineering · Edison · synthesis)
 
-- **Print ahead:** `06-ch6` notes (4 pp), `07-ch7` notes (3 pp), Unit 1 final assessment + key.
+- **Print ahead:** `06-ch6` notes (4 pp), `07-ch7` notes (3 pp), Unit 1 final assessment + key. Read `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (30-min block vs spillover).
 - **Gather:** craft-supply bins (engineering application Thu).
 - **Pre-build:** 5 craft bins (tape, string, cups, sticks, rubber bands, paper clips, index cards).
 - **Charge/test:** `06-ch6`, `07-ch7` decks.
@@ -76,7 +76,7 @@
 
 - **Print ahead:** `unit-02-ch5` notes (2 pp), `unit-02-ch6` notes (2 pp), Water Wheel student sheet (3 pp) + teacher guide.
 - **Gather:** water-wheel kits (paper plate/lid, blade cups, axle, thread, paperclips), basin, pour cup, towels, water.
-- **Pre-build:** assemble 5 water wheels Wed; fill water pitchers Thu.
+- **Pre-build:** assemble 5 water wheels Wed; fill water pitchers Thu. **Laminate** `production/lab-setup-guides/water-wheel-setup-guide.docx`.
 - **Charge/test:** `05-u2-ch5`, `06-u2-ch6` decks.
 - **Est. prep:** 35 min (wheel build + water).
 - **Cleanup:** dry wheels; dispose water; dry towels. **Wipe spills immediately.**
@@ -87,7 +87,7 @@
 
 - **Print ahead:** `unit-02-ch7` notes (2 pp), `unit-02-ch8` notes (2 pp), `unit-02-ch9` notes (2 pp), solar mini-investigation sheet (1 p).
 - **Gather:** small solar cells + LEDs, flashlights (required as indoor backup), Scenario Challenge cards (Fri).
-- **Pre-build:** 5 solar kits (Thu). **Laminate** scenario cards once.
+- **Pre-build:** 5 solar kits (Thu). **Laminate** scenario cards once and `production/lab-setup-guides/solar-device-setup-guide.docx`.
 - **Light contingency (Thu):** PRIMARY = window or outdoor available light. BACKUP = a consistent indoor lamp/flashlight per group (same lamp, same distance for every trial). The question is "how does available light affect the device," NOT "how sunny is today" — bright/close → dim/far → shaded works with a lamp. Test each kit with the lamp the day before so the LED responds visibly.
 - **Charge/test:** `07-u2-ch7`, `08-u2-ch8`, `09-u2-ch9` decks.
 - **Est. prep:** 20 min.
@@ -97,7 +97,7 @@
 
 ## WEEK 8.5 — Unit 2 synthesis + assessment (3 days)
 
-- **Print ahead:** Unit 2 written assessment (student, 3 pp) + key; Detective Chart (reuse); certificates (as earned).
+- **Print ahead:** Unit 2 written assessment (student, 3 pp) + key; Detective Chart (reuse); certificates (as earned); Unit 2 study/review sheet (Day 1) + key.
 - **Gather:** certificates; assessment keys.
 - **Pre-build:** none.
 - **Charge/test:** review deck (or `09-u2-ch9` review slides).
