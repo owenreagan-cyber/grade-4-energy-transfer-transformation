@@ -174,7 +174,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Mon — Unit 2 launch · renewable vs nonrenewable
 - **Unit/Ch:** U2 · Ch1 · **BQ:** What is the difference between renewable and nonrenewable resources?
-- **Essential:** renewable = restored as quickly as used; nonrenewable = not. (Video: PENDING — delivered file rejected, see media review.)
+- **Essential:** renewable = restored as quickly as used; nonrenewable = not. (Video: OPTIONAL MEDIA IF GENERATED — `01-where-does-our-energy-come-from-final-script.md`, PRODUCTION READY.)
 - **GN:** `unit-02-ch1` p.1 · **Slides:** `01-u2-ch1` S1–S6 · **Reader:** pp.1–3 · **Act:** none
 - **J:** one renewable + one nonrenewable. **FC:** sort check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
@@ -239,7 +239,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Thu — Coal vs Nuclear SAME / DIFFERENT system model
 - **Unit/Ch:** U2 · Ch3–4 · **BQ:** How are coal and nuclear power plants alike and different?
-- **Essential:** same heat → steam → turbine → generator; different heat source + different limitations. (Video: PENDING GENERATION.)
+- **Essential:** same heat → steam → turbine → generator; different heat source + different limitations. (Video: OPTIONAL MEDIA IF GENERATED — `04-coal-vs-nuclear-final-script.md`, PRODUCTION READY.)
 - **GN:** `unit-02-ch4` p.2 · **Slides:** `04-u2-ch4` S4–S5 · **Reader:** pp.24 · **Act:** SAME/DIFFERENT model
 - **J:** one SAME + one DIFFERENT. **FC:** comparison chart.
 - **Materials:** comparison chart · **Prep:** print · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
@@ -303,7 +303,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Tue — Geothermal energy
 - **Unit/Ch:** U2 · Ch8 · **BQ:** What is geothermal energy, and how do people use it?
-- **Essential:** Earth's heat warms buildings or makes steam → electricity; location dependence.
+- **Essential:** Earth's heat warms buildings or makes steam → electricity; location dependence. (Video: OPTIONAL MEDIA IF GENERATED — `07-solar-geothermal-final-script.md`, PRODUCTION READY.)
 - **GN:** `unit-02-ch8` p.1 · **Slides:** `08-u2-ch8` S1–S8 · **Reader:** pp.43–46 · **Act:** none
 - **J:** why location matters. **FC:** two-ways check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
