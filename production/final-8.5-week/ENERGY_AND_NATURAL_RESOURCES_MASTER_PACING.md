@@ -174,15 +174,15 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Mon — Unit 2 launch · renewable vs nonrenewable
 - **Unit/Ch:** U2 · Ch1 · **BQ:** What is the difference between renewable and nonrenewable resources?
-- **Essential:** renewable = restored as quickly as used; nonrenewable = not. Video 1 (CORE).
+- **Essential:** renewable = restored as quickly as used; nonrenewable = not. (Video: PENDING — delivered file rejected, see media review.)
 - **GN:** `unit-02-ch1` p.1 · **Slides:** `01-u2-ch1` S1–S6 · **Reader:** pp.1–3 · **Act:** none
 - **J:** one renewable + one nonrenewable. **FC:** sort check.
-- **Materials:** projector · **Prep:** queue deck + video · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
+- **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `unit-02-ch1` p.1.
 
 ### Tue — Availability vs renewability · abundant ≠ renewable
 - **Unit/Ch:** U2 · Ch1 · **BQ:** Can a resource be abundant but not renewable?
-- **Essential:** abundant ≠ renewable; renewable ≠ always available. Video 2 (CORE).
+- **Essential:** abundant ≠ renewable; renewable ≠ always available. (Video: PENDING GENERATION.)
 - **GN:** `unit-02-ch1` p.2–3 · **Slides:** `01-u2-ch1` S5–S10 · **Reader:** pp.4–6 · **Act:** none
 - **J:** one "renewable but not available" example. **FC:** key-idea check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
@@ -198,10 +198,11 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Thu — Fossil-fuel formation/extraction model or demo
 - **Unit/Ch:** U2 · Ch2 · **BQ:** How do fossil fuels form?
-- **Essential:** formation model (peat → coal); extraction demo (layers). Video 3 (SUPPORT, optional).
-- **GN:** `unit-02-ch2` p.2 · **Slides:** `02-u2-ch2` S6–S8 · **Reader:** p.12 · **Act:** formation/extraction demo
+- **Essential:** formation model (peat → coal); extraction demo (layers). (Video: PENDING GENERATION.)
+- **GN:** `unit-02-ch2` p.2 · **Slides:** `02-u2-ch2` S6–S7 · **Reader:** p.12 · **Act:** layered-sediment formation demo (peat → coal)
 - **J:** before/after formation sketch. **FC:** formation sequence.
-- **Materials:** layered-sand/candy demo (optional) · **Prep:** set demo · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
+- **Materials:** layered sand / colored paper strips (optional demo) · **Prep:** set demo · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
+- **Model check (required):** "What does this model help us understand?" + "What does this model NOT show?" No quantitative mining impacts. Cookie-mining stays FLEX (Fri).
 - **Absent:** `unit-02-ch2` p.2.
 
 ### Fri — RECOVER / PRACTICE / EXTEND
@@ -222,7 +223,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Tue — Fossil-fuel energy pathway · benefits/limitations
 - **Unit/Ch:** U2 · Ch3 · **BQ:** How does burning fuel make electricity?
-- **Essential:** burn → heat → steam → turbine → generator → electricity. Video 5 (SUPPORT).
+- **Essential:** burn → heat → steam → turbine → generator → electricity. (Video: PENDING GENERATION.)
 - **GN:** `unit-02-ch3` p.2 · **Slides:** `03-u2-ch3` S5 · **Reader:** pp.17–20 · **Act:** pathway modeling
 - **J:** draw the pathway. **FC:** pathway order.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
@@ -238,7 +239,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Thu — Coal vs Nuclear SAME / DIFFERENT system model
 - **Unit/Ch:** U2 · Ch3–4 · **BQ:** How are coal and nuclear power plants alike and different?
-- **Essential:** same heat → steam → turbine → generator; different heat source + different limitations. Video 4 (SUPPORT).
+- **Essential:** same heat → steam → turbine → generator; different heat source + different limitations. (Video: PENDING GENERATION.)
 - **GN:** `unit-02-ch4` p.2 · **Slides:** `04-u2-ch4` S4–S5 · **Reader:** pp.24 · **Act:** SAME/DIFFERENT model
 - **J:** one SAME + one DIFFERENT. **FC:** comparison chart.
 - **Materials:** comparison chart · **Prep:** print · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
@@ -254,7 +255,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Mon — Wind energy
 - **Unit/Ch:** U2 · Ch5 · **BQ:** How do people use wind as a source of energy?
-- **Essential:** moving air → blades → generator → electricity; location/wind availability. Video 6 (SUPPORT).
+- **Essential:** moving air → blades → generator → electricity; location/wind availability. (Video: delivered file needs trimming — defer to Phase 13G.)
 - **GN:** `unit-02-ch5` p.1 · **Slides:** `05-u2-ch5` S1–S3 · **Reader:** pp.25–27 · **Act:** none
 - **J:** draw a wind turbine. **FC:** pathway check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
