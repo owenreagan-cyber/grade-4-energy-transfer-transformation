@@ -95,7 +95,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Mon — Transfer intro (sound/light)
 - **Unit/Ch:** U1 · Ch4 · **BQ:** What evidence shows energy transfers from place to place?
 - **Essential:** transfer = energy moves place-to-place/object-to-object; sound and light as evidence.
-- **GN:** `04-ch4` p.1 · **Slides:** `04-ch4` S1–S3 · **Reader:** pp.17–20 · **Act:** none
+- **GN:** `04-ch4` p.1–2 · **Slides:** `04-ch4` S1–S19 · **Reader:** pp.17–20 · **Act:** sound + light demos
 - **J:** draw a sound or light transfer. **FC:** transfer fill-in.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `04-ch4` p.1.
@@ -103,7 +103,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Tue — Heat/electric current · source/path/receiver
 - **Unit/Ch:** U1 · Ch4 · **BQ:** What evidence shows heat and electric current transfer energy?
 - **Essential:** source → path → receiver; heat and electric-current transfer evidence.
-- **GN:** `04-ch4` p.2 · **Slides:** `04-ch4` S4–S6 · **Reader:** pp.21–24 · **Act:** none
+- **GN:** `04-ch4` p.3 · **Slides:** `04-ch4` S24–S35 · **Reader:** pp.21–24 · **Act:** heat + circuit demos
 - **J:** one source/path/receiver example. **FC:** source/path/receiver fill-in.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `04-ch4` p.2.
@@ -111,7 +111,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Wed — Collisions: before/during/after + prediction
 - **Unit/Ch:** U1 · Ch5 · **BQ:** How is energy involved in collisions?
 - **Essential:** collisions transfer energy and change motion; collisions are predictable.
-- **GN:** `05-ch5` p.1 · **Slides:** `05-ch5` S1–S3 · **Reader:** pp.25–28 · **Act:** Newton's cradle demo (phenomenon only)
+- **GN:** `05-ch5` p.1 · **Slides:** `05-ch5` S1–S12 · **Reader:** pp.25–28 · **Act:** Newton's cradle demo (phenomenon only)
 - **J:** predict a collision outcome. **FC:** before/during/after check.
 - **Materials:** Newton's cradle (optional) · **Prep:** none · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `05-ch5` p.1.
@@ -119,13 +119,13 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Thu — Compact transfer/collision investigation
 - **Unit/Ch:** U1 · Ch5 · **BQ:** What happens when objects collide?
 - **Essential:** same-object variable isolation; primary outcome = target displacement.
-- **GN:** `05-ch5` p.2 · **Slides:** `05-ch5` S4–S6 · **Reader:** pp.29–30 · **Act:** Crash Lab (compact)
+- **GN:** `05-ch5` p.2 · **Slides:** `05-ch5` S13–S18 · **Reader:** pp.29–30 · **Act:** Crash Lab Part A (SAME object · speed); Part B (mass) = optional extension
 - **J:** record one trial. **FC:** data table.
 - **Materials:** toy cars, ramps, targets, rulers · **Prep:** stations · **Cleanup:** collect · **Type:** CORE · **Time:** 30
 - **Absent:** partner data.
 
 ### Fri — RECOVER / PRACTICE / EXTEND
-- **Act:** finish lab (STANDARD) · Transfer/Transformation/BOTH sort (FULL FLEX) · collision review (QUICK)
+- **Act:** finish lab (STANDARD) · Transfer/Transformation/BOTH sort (FULL FLEX, `04-ch4` S36–S40) · collision review (QUICK, `05-ch5` S24–S27)
 - **Type:** FLEX — sort is practice, not new content. **Time:** 25–30 · **Absent:** sort cards are self-contained.
 
 ---
@@ -135,7 +135,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Mon — Transformation: input/output
 - **Unit/Ch:** U1 · Ch6 · **BQ:** How do energy transformations help people?
 - **Essential:** transformation = energy changes form; input/output; devices convert forms.
-- **GN:** `06-ch6` p.1 · **Slides:** `06-ch6` S1–S3 · **Reader:** pp.31–34 · **Act:** device survey
+- **GN:** `06-ch6` p.1–2 · **Slides:** `06-ch6` S1–S23 · **Reader:** pp.31–34 · **Act:** device survey
 - **J:** list one device + its input/output. **FC:** input/output check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `06-ch6` p.1.
@@ -143,7 +143,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Tue — Criteria/constraints · engineering cycle
 - **Unit/Ch:** U1 · Ch6 · **BQ:** How do engineers design solutions?
 - **Essential:** criteria and constraints; engineering design process (test → evidence → redesign → retest).
-- **GN:** `06-ch6` p.2 · **Slides:** `06-ch6` S4–S6 · **Reader:** pp.35–36 · **Act:** none
+- **GN:** `06-ch6` p.3 · **Slides:** `06-ch6` S24–S34 · **Reader:** pp.35–36 · **Act:** none
 - **J:** one criterion + one constraint for a device. **FC:** criteria/constraint check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `06-ch6` p.2.
@@ -151,7 +151,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Wed — Edison / Latimer / testing and redesign
 - **Unit/Ch:** U1 · Ch7 · **BQ:** How did Edison use transfer and transformation to solve problems?
 - **Essential:** Edison/Latimer; iterative testing and redesign; light-bulb filament.
-- **GN:** `07-ch7` p.1 · **Slides:** `07-ch7` S1–S3 · **Reader:** pp.37–40 · **Act:** none
+- **GN:** `07-ch7` p.1 · **Slides:** `07-ch7` S1–S12 · **Reader:** pp.37–40 · **Act:** none
 - **J:** how testing led to redesign. **FC:** Edison synthesis check.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `07-ch7` p.1.
@@ -159,13 +159,13 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Thu — Device Energy Chain / engineering application
 - **Unit/Ch:** U1 · Ch6–7 · **BQ:** How does my device transform energy?
 - **Essential:** apply engineering cycle to a small tabletop device (alert/signal/motion).
-- **GN:** `07-ch7` p.2 · **Slides:** `07-ch7` S4–S6 · **Reader:** pp.41–42 · **Act:** engineering application
+- **GN:** `06-ch6` p.4 · `07-ch7` p.2 · **Slides:** `06-ch6` S29–S44 · **Reader:** pp.41–42 · **Act:** engineering application (compact build/test)
 - **J:** redesign idea. **FC:** device energy chain.
 - **Materials:** craft supplies (reusable) · **Prep:** bins · **Cleanup:** collect · **Type:** CORE · **Time:** 30
 - **Absent:** `07-ch7` p.2.
 
 ### Fri — RECOVER / PRACTICE / EXTEND
-- **Act:** Unit 1 assessment OR corrections (RECOVER, depends on schedule) · Rube Goldberg blueprint (EXT) · Unit 1 corrections (RECOVER)
+- **Act:** Unit 1 assessment (dedicated block — may run into next block; do NOT pack with extension) · Rube Goldberg blueprint (EXT) · Unit 1 corrections (RECOVER)
 - **Type:** FLEX — no new content. **Time:** 25–30 · **Absent:** fine.
 
 ---

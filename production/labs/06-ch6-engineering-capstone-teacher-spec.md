@@ -1,6 +1,8 @@
 # ENGINEERING CAPSTONE — TEACHER SPEC
 
-> Week 8 performance task: **Tabletop Alert / Signal Device**. ADAPTED from TG Lesson 13 (Scenario 2) into a safe, non-electrical, weather-independent challenge. See `curriculum/chapter-06/source-map.md` for the ADAPTED rationale.
+> Week 4 (Thu) engineering application: **Tabletop Alert / Signal Device**. ADAPTED from TG Lesson 13 (Scenario 2) into a safe, non-electrical, weather-independent challenge. See `curriculum/chapter-06/source-map.md` for the ADAPTED rationale.
+
+> **Compact 30-min delivery (final pacing):** the full 4-day DESIGN → BUILD → TEST → REFINE sequence is compressed into one Thu block. Run problem/criteria/constraints (5 min) → build + Test 1 (15 min) → cleanup (5 min) → redesign note/exit (5 min). The full Test-2/present sequence and the 7-page performance-task sheet remain available as optional extension.
 
 ## The problem
 Design a **non-electrical tabletop device** that produces a clear signal when a **model door/gate/trigger** moves. The device must demonstrate **at least one energy transformation**.
