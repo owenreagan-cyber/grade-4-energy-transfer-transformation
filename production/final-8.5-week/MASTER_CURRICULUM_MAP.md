@@ -73,9 +73,9 @@
 |---|---|---|---|---|---|---|
 | Mon | Same-object speed relationship | `03-ch3` p.1 | `03-ch3` S1–S9 | none | — | RELEASED |
 | Tue | Fair-test setup / ramp prep | `03-ch3` p.2 | `03-ch3` S10–S14 | none | build ramps | RELEASED |
-| Wed | Prediction / data-table setup | `03-ch3` p.2–3 | `03-ch3` S15–S18 | none | prediction + table | RELEASED |
-| Thu | FLAGSHIP LAB 1: Ramp It Up! | `03-ch3` p.3 | `03-ch3` S16–S17 | none | Ramp It Up! trials | RELEASED |
-| Fri | RECOVER / PRACTICE / EXTEND | — | `03-ch3` S18–S23 | — | analysis + Fast & Curious | FLEX |
+| Wed | Prediction / data-table setup | `03-ch3` p.2–3 | `03-ch3` S15–S19 | S17 WATCH (opt, 2:29) | prediction + table | RELEASED |
+| Thu | FLAGSHIP LAB 1: Ramp It Up! | `03-ch3` p.3 | `03-ch3` S16 + S18 | none | Ramp It Up! trials | RELEASED |
+| Fri | RECOVER / PRACTICE / EXTEND | — | `03-ch3` S19–S24 | — | analysis + Fast & Curious | FLEX |
 
 ## Monday — Same-object speed relationship
 - **Unit/Ch:** U1 · Ch3 · **BQ:** How are energy and speed related? · **Objective:** for the SAME object, faster = more energy of motion (never compare different masses).
@@ -89,12 +89,12 @@
 
 ## Wednesday — Guided notes / prediction / lab setup
 - **Unit/Ch:** U1 · Ch3 · **BQ:** What will happen as ramp height increases? · **Objective:** prediction + measured vs inferred (measure displacement; infer speed/energy).
-- **GN:** `03-ch3` p.2–3. **SLIDES:** `03-ch3` S15–S18. **READER:** pp.15–16. **ACT:** prediction + data-table setup.
+- **GN:** `03-ch3` p.2–3. **SLIDES:** `03-ch3` S15–S19 (incl. **S17 WATCH — embedded `speed-and-energy-ramp-it-up-classroom-cut.mp4` 2:29**, optional). **READER:** pp.15–16. **ACT:** prediction + data-table setup.
 - **JOURNAL:** write prediction. **FC:** data-table setup check. **ABSENT:** `03-ch3` p.3. **STATUS:** RELEASED.
 
 ## Thursday — FLAGSHIP LAB 1: Ramp It Up!
 - **Unit/Ch:** U1 · Ch3 · **BQ:** How does ramp height relate to cup displacement? · **Objective:** same ball · 1/2/3 books · repeated trials · displacement · average · graph (no fake m/s).
-- **GN:** `03-ch3` p.3. **SLIDES:** `03-ch3` S16–S17. **READER:** pp.15–16.
+- **GN:** `03-ch3` p.3. **SLIDES:** `03-ch3` S16 + S18 (procedure + data table reference). **READER:** pp.15–16.
 - **LAB:** `production/worksheets/03-ch3-ramp-it-up-student.docx` + `production/labs/03-ch3-ramp-it-up-teacher-spec.md` + `production/answer-keys/03-ch3-ramp-it-up-key.md` + `production/lab-setup-guides/ramp-it-up-setup-guide.docx` (TEACHER setup diagram).
 - **JOURNAL:** one surprise from your data. **FC:** data table. **ABSENT:** partner data. **STATUS:** RELEASED.
 
@@ -145,9 +145,9 @@
 |---|---|---|---|---|---|---|
 | Mon | Transformation input/output | `06-ch6` p.1–2 | `06-ch6` S1–S23 | none | device survey | RELEASED |
 | Tue | Criteria/constraints · engineering cycle | `06-ch6` p.3 | `06-ch6` S24–S34 | none | brainstorm | RELEASED |
-| Wed | Edison / Latimer / iteration | `07-ch7` p.1 | `07-ch7` S1–S12 | none | — | RELEASED |
+| Wed | Edison / Latimer / iteration | `07-ch7` p.1 | `07-ch7` S1–S12 (+S13 recap) | S13 WATCH (opt, 2:49) | — | RELEASED |
 | Thu | Device Energy Chain / engineering application | `06-ch6` p.4, `07-ch7` p.2 | `06-ch6` S29–S44 | none | compact build/test | RELEASED |
-| Fri | Unit 1 assessment / corrections / extension | — | `07-ch7` S24–S26 | — | assessment | RELEASED |
+| Fri | Unit 1 assessment / corrections / extension | — | `07-ch7` S25–S27 | — | assessment | RELEASED |
 
 ## Monday — Transformation: input/output
 - **Unit/Ch:** U1 · Ch6 · **BQ:** How do energy transformations help people? · **Objective:** transformation = energy changes form; input/output; devices convert forms.
@@ -160,7 +160,7 @@
 
 ## Wednesday — Edison / Latimer / testing and redesign
 - **Unit/Ch:** U1 · Ch7 · **BQ:** How did Edison use transfer and transformation to solve problems? · **Objective:** Edison/Latimer; iterative testing and redesign; filament.
-- **GN:** `production/premium-notes/07-ch7-edison-unit-synthesis-guided-notes.docx` p.1. **SLIDES:** `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` S1–S12. **READER:** `Chapter_7_Solving_Problems_Thomas_A_Edison.pdf` pp.37–40.
+- **GN:** `production/premium-notes/07-ch7-edison-unit-synthesis-guided-notes.docx` p.1. **SLIDES:** `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` S1–S12 (then **S13 WATCH — embedded `journey-of-energy-unit1-recap-classroom-cut.mp4` 2:49**, optional, opens the Unit 1 review section S14–S24). **READER:** `Chapter_7_Solving_Problems_Thomas_A_Edison.pdf` pp.37–40.
 - **JOURNAL:** how testing led to redesign. **FC:** Edison synthesis check. **ABSENT:** `07-ch7` p.1. **STATUS:** RELEASED.
 
 ## Thursday — Device Energy Chain / engineering application

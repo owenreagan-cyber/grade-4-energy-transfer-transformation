@@ -66,7 +66,7 @@
 - **ABSENT** `06-ch6` p.3.
 
 ### Wednesday — Edison / Latimer / iteration
-- **OPEN** `07-ch7-edison-unit-synthesis-slides.pptx` (S1–S12).
+- **OPEN** `07-ch7-edison-unit-synthesis-slides.pptx` (S1–S12; **optional S13 WATCH — "Unit 1 Energy Core Recap" 2:49** opens the review section).
 - **PRINT** `07-ch7` p.1.
 - **GATHER** none.
 - **TEACH** improve-don't-invent → 6,000 materials → 1879 bamboo/carbon → filament → persistence → Latimer → engineering cycle.
@@ -82,7 +82,7 @@
 - **ABSENT** `06-ch6` p.4 + prototype-diagram path (see spec).
 
 ### Friday — Unit 1 assessment / corrections / extension
-- **OPEN** `07-ch7` S24–S26 (assessment expectations + correction process).
+- **OPEN** `07-ch7` S25–S27 (assessment expectations + correction process).
 - **PRINT** `07-unit-final-assessment` (1/student) + `07-unit-final-assessment-key` (teacher).
 - **GATHER** Core Vocabulary cards (if allowed); correction sheets.
 - **TEACH** assessment as a dedicated block — allow spillover into the next block; do NOT pack the Rube Goldberg extension with it. See `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` for Option A (30-min + spillover) and Option B (oral diagram/CER items).

@@ -80,17 +80,17 @@
 - **Absent:** send GN p.2.
 
 ### Wed — Prediction / data table setup
-- **Open:** `03-ch3` deck (slides S15–S18).
+- **Open:** `03-ch3` deck (slides S15–S19).
 - **Print:** Ramp It Up student sheet (3 pp).
 - **Gather:** data sheets, pencils.
-- **Teach:** predict → procedure (release, no push) → data table (3 heights × 3 trials) → graph axes.
+- **Teach:** predict → procedure (release, no push) → **optional WATCH S17 (2:29 "Ramp It Up in Action")** → data table (3 heights × 3 trials) → graph axes.
 - **Students write:** prediction + set up data table + measured vs inferred (GN p.2–3).
 - **Exit:** data-table setup check.
-- **Stop if short:** move graph setup (S18) to Friday.
+- **Stop if short:** move graph setup (S19) to Friday.
 - **Absent:** send GN p.3.
 
 ### Thu — FLAGSHIP LAB: Ramp It Up!
-- **Open:** `03-ch3` deck (slides S16–S17 as reference).
+- **Open:** `03-ch3` deck (slides S16 + S18 as reference — procedure + data table).
 - **Print:** Ramp It Up sheet (already handed out Wed). **Setup diagram:** `production/lab-setup-guides/ramp-it-up-setup-guide.docx` (laminate).
 - **Gather:** stations from Tue + balls + cups + rulers.
 - **Run:** 0–4 launch/safety → 4–20 trials (3 heights × 3 trials) → 20–25 cleanup → 25–30 data check.
@@ -100,7 +100,7 @@
 - **Absent:** partner data.
 
 ### Fri — Ramp analysis
-- **Open:** `03-ch3` deck (slides S18–S23) for averages, graph, measured vs inferred.
+- **Open:** `03-ch3` deck (slides S19–S24) for averages, graph, measured vs inferred.
 - **Print:** graph paper.
 - **Gather:** collected data sheets.
 - **Do:** averages → graph (Ramp Height vs Average Cup Displacement) → claim/evidence.
@@ -121,6 +121,6 @@
 | W1 Fri | FLEX | — | charade cards |
 | W2 Mon | 03-ch3 S1–S9 | GN 03 p.1 | projector |
 | W2 Tue | 03-ch3 S10–S14 | GN 03 p.2 | ramps, balls, cups |
-| W2 Wed | 03-ch3 S15–S18 | Ramp It Up (3 pp) | data sheets |
-| W2 Thu | 03-ch3 S16–S17 | Ramp It Up sheet | stations, balls, cups |
-| W2 Fri | 03-ch3 S18–S23 | graph paper | data sheets, ramps |
+| W2 Wed | 03-ch3 S15–S19 (S17 = opt WATCH) | Ramp It Up (3 pp) | data sheets |
+| W2 Thu | 03-ch3 S16 + S18 | Ramp It Up sheet | stations, balls, cups |
+| W2 Fri | 03-ch3 S19–S24 | graph paper | data sheets, ramps |

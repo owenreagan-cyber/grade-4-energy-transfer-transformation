@@ -127,6 +127,12 @@ CLOUD POINTER entries are Google Docs/Slides `.gdoc`/`.gslides` metadata placeho
 | 86 | `How_Motion_Proves_Energy_Exists.mp4` | SUPPLEMENTAL REVIEW | MP4 | 6.68 MB | — | AI-generated (ChatGPT workstream) | `assets/supplemental/media/chapter-02/How_Motion_Proves_Energy_Exists.mp4` | `b18c26dc6b20c4825e5393faf7aeda827f7e993875ab48f735ff8318be54250c` |
 | 87 | `How_We_See_Invisible_Energy_of_Motion.mp4` | SUPPLEMENTAL REVIEW | MP4 | 4.70 MB | — | AI-generated (ChatGPT workstream) | `assets/supplemental/media/chapter-02/How_We_See_Invisible_Energy_of_Motion.mp4` | `1fb4b8cf8a566ff14d7415e74f4ab11f2f7ff12653e80f426a226814968d2f52` |
 
+> **Phase 13L addition (2026-09-28):** entries #100–#102 are the three new media files reviewed in `docs/reviews/PHASE13L_NEW_MEDIA_REVIEW.md`. Copied (not moved) from `~/Downloads` into `assets/supplemental/media/` (git-excluded). Two accepted → trimmed classroom cuts embedded in Unit 1 decks (`speed-and-energy-ramp-it-up-classroom-cut.mp4`, `journey-of-energy-unit1-recap-classroom-cut.mp4`); the Unit 2 synthesis masterclass is **DO NOT USE**. Metadata lives in `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
+
+| 100 | `Energy___Speed_Are_Related.mp4` | SUPPLEMENTAL / REVIEW / MEDIA | MP4 | 32.78 MB | 7:17 | AI-generated (ChatGPT workstream) | `assets/supplemental/media/chapter-03/Energy___Speed_Are_Related.mp4` | `a5c83c50703839fb4bbfd7cc04417be8fdfc44b86fdb68af6df1aa1fe7b7839f` |
+| 101 | `The_Journey_of_Energy.mp4` | SUPPLEMENTAL / REVIEW / MEDIA | MP4 | 42.51 MB | 8:03 | AI-generated (ChatGPT workstream) | `assets/supplemental/media/chapter-07/The_Journey_of_Energy.mp4` | `ed3f5005f8143f58dc1abb77e38411b42e96d56ba4eb131bc834b2f9f8289895` |
+| 102 | `Unit_2_Synthesis__Energy_Detective_Masterclass.mp4` | SUPPLEMENTAL / REVIEW / MEDIA | MP4 | 51.89 MB | 6:26 | AI-generated (ChatGPT workstream) | `assets/supplemental/media/unit-02/chapter-09/Unit_2_Synthesis__Energy_Detective_Masterclass.mp4` | `8882d42e94c39d764825de41a63ad488f64da119135e3e7c70ce09efbb0add6c` |
+
 ## Discovery Paths (original absolute locations)
 
 | Original filename | Original discovered path |
@@ -141,6 +147,9 @@ CLOUD POINTER entries are Google Docs/Slides `.gdoc`/`.gslides` metadata placeho
 | `Chapter_1_Energy_Causes_Change.pdf` | `/Users/owen/Downloads/Chapter_1_Energy_Causes_Change.pdf` |
 | `Chapter_2_Moving_Objects_Have_Energy.pdf` | `/Users/owen/Downloads/Chapter_2_Moving_Objects_Have_Energy.pdf` |
 | `Chapter_3_Energy_and_Speed_Are_Related.pdf` | `/Users/owen/Downloads/Chapter_3_Energy_and_Speed_Are_Related.pdf` |
+| `Energy___Speed_Are_Related.mp4` | `/Users/owen/Downloads/Energy___Speed_Are_Related.mp4` |
+| `The_Journey_of_Energy.mp4` | `/Users/owen/Downloads/The_Journey_of_Energy.mp4` |
+| `Unit_2_Synthesis__Energy_Detective_Masterclass.mp4` | `/Users/owen/Downloads/Unit_2_Synthesis__Energy_Detective_Masterclass.mp4` |
 | `Chapter_5_Collisions_Transfer_Energy.pdf` | `/Users/owen/Downloads/Chapter_5_Collisions_Transfer_Energy.pdf` |
 | `Chapter_6_Energy_Transformations_Solve_Problems.pdf` | `/Users/owen/Downloads/Chapter_6_Energy_Transformations_Solve_Problems.pdf` |
 | `Chapter_7_Solving_Problems_Thomas_A_Edison.pdf` | `/Users/owen/Downloads/Chapter_7_Solving_Problems_Thomas_A_Edison.pdf` |
