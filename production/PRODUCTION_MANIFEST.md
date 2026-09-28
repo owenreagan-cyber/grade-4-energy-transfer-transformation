@@ -178,5 +178,24 @@
 | U2-K | Master pacing · supply list · printing guide | `production/final-8.5-week/` | RELEASED | CUSTOM |
 | U2-L | Media map · resource disposition · QA reports | `docs/planning/TWO_UNIT_MEDIA_MAP.md` · `docs/reviews/TWO_UNIT_RESOURCE_DISPOSITION.md` · `qa/reports/PHASE13B_*` | RELEASED | CUSTOM |
 
+## Phase 13C — Final Hardening + Release (this phase)
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| V1 | Unit 2 slide decks Ch1–9 (9 PPTX) | `production/slides/01–09-u2-ch*.pptx` | RELEASED | ADAPTED |
+| V2 | Energy Resource Detective Chart (2-page DOCX+PDF) | `production/activities/unit-02/energy-resource-detective-chart.{docx,pdf}` | RELEASED | ADAPTED |
+| V3 | Transfer/Transformation/BOTH sort (mat + 15 cards + key) | `production/activities/unit-02/transfer-transformation-both-sort.{docx,pdf}` | RELEASED | CUSTOM |
+| V4 | Scenario Challenge (cards + frame + key) | `production/activities/unit-02/energy-resource-scenario-challenge.{docx,pdf}` | RELEASED | CUSTOM |
+| V5 | Fast & Curious (worksheet + key) | `production/activities/unit-02/fast-and-curious.{docx,pdf}` | RELEASED | ADAPTED |
+| V6 | Chocolate-chip mining FLEX model | `production/activities/unit-02/chocolate-chip-mining-flex-model.{docx,pdf}` | FLEX | ADAPTED |
+| V7 | Solar device mini-investigation sheet | `production/activities/unit-02/solar-device-mini-investigation.{docx,pdf}` | RELEASED | ADAPTED |
+| V8 | Teacher Prep Guide | `production/final-8.5-week/TEACHER_PREP_GUIDE.md` | RELEASED | CUSTOM |
+| V9 | Master Resource Index | `production/final-8.5-week/MASTER_RESOURCE_INDEX.md` | RELEASED | CUSTOM |
+| V10 | Resource Completeness Audit | `docs/reviews/PHASE13C_RESOURCE_COMPLETENESS_AUDIT.md` | RELEASED | CUSTOM |
+| V11 | Whole-track QA (science · controversial · visual · simulation) | `qa/reports/PHASE13C_RELEASE_QA.md` | RELEASED | CUSTOM |
+| V12 | Slide/blueprint vocabulary cleanups (Ch4 outline "thermal energy" · Ch1 quiz blueprint "prove") | `production/slides/outlines/04-ch4-slideshow-outline.md` · `production/quizzes/01-ch1-energy-causes-change-quiz-blueprint.md` | RELEASED | ADAPTED |
+
+> Unit 2 media (video scripts) remains **PENDING GENERATION** — not a release blocker (`docs/planning/TWO_UNIT_MEDIA_MAP.md`).
+
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`
