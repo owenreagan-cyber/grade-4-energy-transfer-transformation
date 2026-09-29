@@ -171,6 +171,7 @@
 
 ## Friday — Unit 1 assessment / corrections / extension
 - **ASSESS:** `production/quizzes/07-unit-final-assessment.docx` + `production/answer-keys/07-unit-final-assessment-key.md` + `production/quizzes/07-unit-final-assessment-scoring-guide.md`. **Known:** ~35–40 min → dedicated block; allow spillover. **Timing/spillover plan:** `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (TEACHER). **EXT:** Rube Goldberg blueprint. **STATUS:** RELEASED.
+- **STUDY GUIDE (prep, hand out Thursday):** `production/review/unit-01/unit1-study-guide.docx` (student, 3 pp) + `unit1-study-guide-key.docx` (TEACHER, 1 p). Aligned to the released assessment. **STATUS:** RELEASED.
 
 ---
 
@@ -345,4 +346,5 @@ Expand/contract **Friday FLEX** and **Week 8.5** first. Never add essential new 
 
 ## Cross-unit reference documents (TEACHER ONLY unless noted)
 - Master pacing: `ENERGY_AND_NATURAL_RESOURCES_MASTER_PACING.md` · Teacher prep: `TEACHER_PREP_GUIDE.md` · Supply: `MASTER_SUPPLY_LIST_20_STUDENTS.md` · Printing: `PRINTING_GUIDE.md` · Friday: `production/friday-flex/FRIDAY_FLEX_BANK.md` · Media map: `docs/planning/TWO_UNIT_MEDIA_MAP.md` · Resource inventory: `MASTER_RESOURCE_INVENTORY.md` · Video matrix: `VIDEO_PRESENTATION_INTEGRATION_MATRIX.md`.
+- Infographic reference slides (PROJECT): `01-ch1` S26 (Energy Detective anchor) · `04-ch4` S47 (Transfer vs Transformation) · `05-ch5` S29 (Collision transfer) · `06-ch6` S45 (Engineering design cycle) · `01-u2-ch1` S22 (Renewable vs nonrenewable) · `03-u2-ch3` S20 (Turbine pathways). Files: `production/infographics/*.png`. Unit 1 study guide: `production/review/unit-01/`.
 - Unit 2 absent recovery: `UNIT2_ABSENT_RECOVERY_INDEX.md` · Unit 1 assessment administration: `UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` · Lab setup diagrams: `production/lab-setup-guides/*-setup-guide.docx` · Retired artifact policy: `docs/architecture/RETIRED_CURRICULUM_ARTIFACT_POLICY.md`.

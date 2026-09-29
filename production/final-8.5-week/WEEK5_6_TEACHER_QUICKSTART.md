@@ -45,7 +45,7 @@
 - **ABSENT** `unit-02-ch2` p.2.
 
 ### Friday — Recover / Practice / Extend
-- **OPEN** `01-u2-ch1` review slides (S11–S20) if needed.
+- **OPEN** `01-u2-ch1` review slides (S11–S20) if needed; **COMPARE** slide S22 = Renewable vs Nonrenewable matrix infographic ("Which resources renew quickly enough to be called renewable?").
 - **GATHER** renewable/nonrenewable sort cards + cookie-mining sheet (FLEX only).
 - **MEDIA** none.
 - **TEACH** sort (PRACTICE) → cookie-mining MODEL (EXT, optional; "model vs. real" only). No new content.
@@ -69,7 +69,7 @@
 - **PRINT** `unit-02-ch3` p.2.
 - **GATHER** optional pinwheel/toy fan (dry turbine model).
 - **MEDIA** `turbine-generator-classroom-cut.mp4` (3:41, OPTIONAL) — turbine + generator definitions, then wind/water/steam all spin the SAME turbine→generator. Note "motion energy" = "energy of motion."
-- **TEACH** burn → heat → steam → turbine → generator → electricity; draw the pathway.
+- **TEACH** burn → heat → steam → turbine → generator → electricity; draw the pathway. **COMPARE** slide S20 = "How a Turbine Helps Make Electricity" infographic ("What stays the same? What changes?").
 - **STOP-HERE-IF-SHORT** the pathway chain only.
 - **ABSENT** `unit-02-ch3` p.2.
 

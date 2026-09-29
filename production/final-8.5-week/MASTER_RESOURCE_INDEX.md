@@ -40,6 +40,7 @@
 |---|---|---|---|---|---|
 | Mon–Tue | U1 Ch6 | MAP/GN/SL | `06-ch6` notes · `06-ch6` deck · Reader pp.31–36 | none | CORE |
 | Wed–Thu | U1 Ch6–7 | MAP/GN/SL/LAB | `07-ch7` notes · `07-ch7` deck · `production/worksheets/06-ch6-engineering-performance-task.docx` + `production/answer-keys/06-ch6-engineering-key.md` | none | CORE |
+| Thu (prep) | U1 Ch1–7 | REVIEW | `production/review/unit-01/unit1-study-guide.docx` (student) + `unit1-study-guide-key.docx` (TEACHER) — assessment prep | — | CORE |
 | Fri | U1 Ch1–7 | ASSESS | `production/quizzes/07-unit-final-assessment.docx` + `production/answer-keys/07-unit-final-assessment-key.md` + `production/quizzes/07-unit-final-assessment-scoring-guide.md` + `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (TEACHER) | — | CORE |
 
 ## WEEK 5 — Unit 2 Ch1–2
@@ -99,6 +100,8 @@
 | Absent | Unit 2 absent-recovery index | `production/final-8.5-week/UNIT2_ABSENT_RECOVERY_INDEX.md` | TEACHER |
 | Assessment | Unit 1 assessment administration note | `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` | TEACHER |
 | Lab setup | Teacher lab setup diagrams (×4) | `production/lab-setup-guides/*-setup-guide.docx` + `.pdf` | TEACHER |
+| Study guide | Unit 1 study guide (student + key) | `production/review/unit-01/unit1-study-guide.docx` + `.pdf` · `unit1-study-guide-key.docx` + `.pdf` | CORE |
+| Infographics | Rebuilt classroom infographics (×6) | `production/infographics/*.png` (also embedded as deck REFERENCE slides) | PROJECT |
 | Policy | Retired curriculum artifact policy | `docs/architecture/RETIRED_CURRICULUM_ARTIFACT_POLICY.md` | REF |
 | Friday | Friday Flex bank | `production/friday-flex/FRIDAY_FLEX_BANK.md` | FLEX |
 | Media map | Two-unit media map | `docs/planning/TWO_UNIT_MEDIA_MAP.md` | PENDING MEDIA |

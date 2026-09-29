@@ -41,7 +41,7 @@
 
 ## WEEK 4 — Unit 1 Ch6–7 (Transformations · Engineering · Edison · synthesis)
 
-- **Print ahead:** `06-ch6` notes (4 pp), `07-ch7` notes (3 pp), Unit 1 final assessment + key. Read `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (30-min block vs spillover).
+- **Print ahead:** `06-ch6` notes (4 pp), `07-ch7` notes (3 pp), Unit 1 final assessment + key, **Unit 1 study guide (student, 3 pp, 20 copies) + study-guide key (1, laminate)**. Hand out the study guide Thursday for Friday's assessment. Read `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (30-min block vs spillover).
 - **Gather:** craft-supply bins (engineering application Thu).
 - **Pre-build:** 5 craft bins (tape, string, cups, sticks, rubber bands, paper clips, index cards).
 - **Charge/test:** `06-ch6`, `07-ch7` decks.

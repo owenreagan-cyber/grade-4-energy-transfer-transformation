@@ -210,5 +210,23 @@
 | K7 | Master map/index/inventory/printing/prep sync | `production/final-8.5-week/` + quickstarts | RELEASED | CUSTOM |
 | K8 | Gap-closure QA report | `qa/reports/PHASE13K_QA.md` | RELEASED | CUSTOM |
 
+## Phase 13R — Final Infographic + Study Guide Reconciliation
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| R1 | Unit 1 study guide (student, DOCX+PDF, 3 pp) | `production/review/unit-01/unit1-study-guide.docx` + `.pdf` | RELEASED | ADAPTED |
+| R2 | Unit 1 study guide teacher key (DOCX+PDF, 1 p) | `production/review/unit-01/unit1-study-guide-key.docx` + `.pdf` | RELEASED | SOURCE/ADAPTED |
+| R3 | Infographic — Energy Detective anchor | `production/infographics/unit1-energy-detective-anchor.png` | RELEASED | ADAPTED |
+| R4 | Infographic — Transfer vs Transformation | `production/infographics/unit1-transfer-vs-transformation.png` | RELEASED | ADAPTED |
+| R5 | Infographic — Engineering design cycle | `production/infographics/unit1-engineering-design-cycle.png` | RELEASED | ADAPTED |
+| R6 | Infographic — Collision energy transfer | `production/infographics/unit1-collision-energy-transfer.png` | RELEASED | ADAPTED |
+| R7 | Infographic — Renewable vs nonrenewable matrix | `production/infographics/unit2-renewable-nonrenewable-resources.png` | RELEASED | ADAPTED |
+| R8 | Infographic — Turbine/generator pathways | `production/infographics/unit2-turbine-generator-pathways.png` | RELEASED | ADAPTED |
+| R9 | Infographic reference slides (×6 embedded) | `production/slides/` (01-ch1 S26 · 04-ch4 S47 · 05-ch5 S29 · 06-ch6 S45 · 01-u2-ch1 S22 · 03-u2-ch3 S20) | RELEASED | ADAPTED |
+| R10 | Reconciliation review doc | `docs/reviews/PHASE13R_INFOGRAPHIC_STUDY_GUIDE_RECONCILIATION.md` | RELEASED | CUSTOM |
+| R11 | QA report | `qa/reports/PHASE13R_QA.md` | RELEASED | CUSTOM |
+
+> Rejected delivered sources: `Motion_Energy_Investigation_Matrix.png` (prefilled results), `4_Steps_of_Land_Reclamation.png` (not in course; teacher reference), combined `unit1-and-unit2-study-guide-review-worksheet.pdf` (split/rebuilt). Unit 2 review KEPT as existing Phase 13K sheet.
+
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`
