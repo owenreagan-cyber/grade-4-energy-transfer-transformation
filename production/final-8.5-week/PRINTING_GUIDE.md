@@ -31,6 +31,8 @@
 | Resource | Pages | Single/Duplex | Color | Copies | Teacher key? | Friday optional? | Laminate? |
 |---|---|---|---|---|---|---|---|
 | Unit 1 final assessment | 5 | single (stapled) | no | 20 | yes | no | no |
+| Unit 1 study guide (student) | 3 | single (stapled) | no | 20 | yes (`unit1-study-guide-key`) | no | no |
+| Unit 1 study guide key | 1 | single | no | 1 | self | no | **laminate** |
 | Chapter practice/quiz sheets (Ch1–7) | 1 each | single | no | 20 | yes | no | no |
 
 ## Unit 2 — Guided Notes
@@ -70,5 +72,6 @@
 - **Duplex** saves paper on multi-page note sets; keep assessments and lab data sheets **single-sided** so students can write without bleed-through.
 - **Color optional** for notes/chart (design is grayscale-safe); **color recommended** for the Detective Chart and certificate.
 - **Laminate** sort/scenario cards and the Detective Chart + teacher keys for reuse across classes and years. Laminate the 4 lab setup diagrams for the prep binder.
-- **Teacher-only prints** (not student copies): `UNIT2_ABSENT_RECOVERY_INDEX.md` (digital + optional print) · `UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (digital) · lab setup diagrams (×4, laminate) · review-sheet key (1).
-- **Total per student (both units):** ≈ 33 note pages + ≈ 10 lab/activity pages + ≈ 7 assessment pages + ≈ 3 review pages ≈ **53 pages**, plus 1 shared chart and a certificate.
+- **Teacher-only prints** (not student copies): `UNIT2_ABSENT_RECOVERY_INDEX.md` (digital + optional print) · `UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (digital) · lab setup diagrams (×4, laminate) · review-sheet key (1) · study-guide key (1).
+- **Infographics** (`production/infographics/*.png`): default **PROJECT / DIGITAL** (already embedded as deck REFERENCE slides). Do NOT print 20 color copies. Optional: 1 teacher reference print (grayscale-safe) for a prep binder. The `4_Steps_of_Land_Reclamation` delivered graphic is teacher-reference only — not a student print.
+- **Total per student (both units):** ≈ 33 note pages + ≈ 10 lab/activity pages + ≈ 7 assessment pages + ≈ 3 Unit 1 study-guide pages + ≈ 3 Unit 2 review pages ≈ **56 pages**, plus 1 shared chart and a certificate.

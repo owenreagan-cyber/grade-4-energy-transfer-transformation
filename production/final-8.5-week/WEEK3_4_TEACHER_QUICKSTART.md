@@ -8,7 +8,7 @@
 ## WEEK 3 — Ch4 (Energy Transfer) + Ch5 (Collisions)
 
 ### Monday — Transfer intro (sound + light)
-- **OPEN** `04-ch4-energy-transfer-slides.pptx` (S1–S19).
+- **OPEN** `04-ch4-energy-transfer-slides.pptx` (S1–S19). **REFERENCE** slide S47 = Transfer vs Transformation infographic (look/notice: "Did energy move, change form, or both?").
 - **PRINT** `04-ch4` guided notes p.1–2 (1/student).
 - **GATHER** paper target, plastic cup, tapping stick; flashlight + index-card target + a barrier (book).
 - **TEACH** cup-tap → paper moves (hook) → Big Question → transfer definition → sound investigation → light + barrier test → SOURCE → ENERGY MOVES → TARGET CHANGES.
@@ -24,7 +24,7 @@
 - **ABSENT** `04-ch4` p.3.
 
 ### Wednesday — Collisions (before/during/after)
-- **OPEN** `05-ch5-collisions-slides.pptx` (S1–S12).
+- **OPEN** `05-ch5-collisions-slides.pptx` (S1–S12). **REFERENCE** slide S29 = "What Happens in a Collision?" infographic.
 - **PRINT** `05-ch5` p.1.
 - **GATHER** Newton's cradle (optional teacher demo).
 - **TEACH** collide/collision → before/during/after → motion/shape/sound changes → SAME object, faster = more energy of motion. Keep mass as a *separate* idea (S11).
@@ -58,7 +58,7 @@
 - **ABSENT** `06-ch6` p.1–2.
 
 ### Tuesday — Criteria / constraints / engineering cycle
-- **OPEN** `06-ch6-energy-transformations-slides.pptx` (S24–S34).
+- **OPEN** `06-ch6-energy-transformations-slides.pptx` (S24–S34). **REFERENCE** slide S45 = Engineering design cycle + Edison/Latimer infographic (compare: "What are the criteria and constraints?").
 - **PRINT** `06-ch6` p.3.
 - **GATHER** none (brainstorm only).
 - **TEACH** engineering design (Reader p.36) → vocabulary → design bridge ("signal without wall electricity") → problem + criteria + constraints + materials.
@@ -75,7 +75,7 @@
 
 ### Thursday — Device Energy Chain / engineering application
 - **OPEN** `06-ch6-energy-transformations-slides.pptx` (S29–S44).
-- **PRINT** `06-ch6` p.4 (+ optional `06-ch6-engineering-performance-task` pp.1–2 + one test page).
+- **PRINT** `06-ch6` p.4 (+ optional `06-ch6-engineering-performance-task` pp.1–2 + one test page) + **hand out `production/review/unit-01/unit1-study-guide.docx`** (1/student) for tomorrow's assessment prep; keep `unit1-study-guide-key.docx` (teacher).
 - **GATHER** craft bins: cardboard tubes, paper cups, craft sticks, rubber bands, string, paper clips, washers, bell, tape, blocks, foil. Non-electrical; no wall outlet/flame/hotplate/launching.
 - **TEACH** 0–5 problem/criteria/constraints → 5–20 build + Test 1 (3 trials) → 20–25 cleanup → 25–30 redesign note ("one change + why").
 - **STOP-HERE-IF-SHORT** build + one test only; redesign note verbal.

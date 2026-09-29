@@ -46,16 +46,16 @@
 
 | Deck | File | Slides | Media |
 |---|---|---|---|
-| U1 Ch1 | `production/slides/01-ch1-energy-causes-change-slides.pptx` | 25 | none |
+| U1 Ch1 | `production/slides/01-ch1-energy-causes-change-slides.pptx` | 26 | none · **REFERENCE S26** (Energy Detective anchor) |
 | U1 Ch2 | `production/slides/02-ch2-moving-objects-have-energy-slides.pptx` | 24 | none |
 | U1 Ch3 | `production/slides/03-ch3-energy-speed-slides.pptx` | 28 | none |
-| U1 Ch4 | `production/slides/04-ch4-energy-transfer-slides.pptx` | 46 | none |
-| U1 Ch5 | `production/slides/05-ch5-collisions-slides.pptx` | 28 | none |
-| U1 Ch6 | `production/slides/06-ch6-energy-transformations-slides.pptx` | 44 | none |
+| U1 Ch4 | `production/slides/04-ch4-energy-transfer-slides.pptx` | 47 | none · **REFERENCE S47** (Transfer vs Transformation) |
+| U1 Ch5 | `production/slides/05-ch5-collisions-slides.pptx` | 29 | none · **REFERENCE S29** (Collision transfer) |
+| U1 Ch6 | `production/slides/06-ch6-energy-transformations-slides.pptx` | 45 | none · **REFERENCE S45** (Engineering design cycle) |
 | U1 Ch7 | `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` | 26 | none |
-| U2 Ch1 | `production/slides/01-u2-ch1-renewable-nonrenewable-slides.pptx` | 21 | PLACEHOLDER S4 |
+| U2 Ch1 | `production/slides/01-u2-ch1-renewable-nonrenewable-slides.pptx` | 22 | PLACEHOLDER S4 · **REFERENCE S22** (Renewable matrix) |
 | U2 Ch2 | `production/slides/02-u2-ch2-slides.pptx` | 18 | **EMBEDDED video S7** |
-| U2 Ch3 | `production/slides/03-u2-ch3-slides.pptx` | 19 | **EMBEDDED video S7** |
+| U2 Ch3 | `production/slides/03-u2-ch3-slides.pptx` | 20 | **EMBEDDED video S7** · **REFERENCE S20** (Turbine pathways) |
 | U2 Ch4 | `production/slides/04-u2-ch4-slides.pptx` | 19 | PLACEHOLDER S6 |
 | U2 Ch5 | `production/slides/05-u2-ch5-slides.pptx` | 16 | **EMBEDDED video S6** |
 | U2 Ch6 | `production/slides/06-u2-ch6-slides.pptx` | 15 | none |
@@ -78,6 +78,19 @@
 | Unit 1 Ch1 (8 raw, UNSTAGED) | `assets/supplemental/media/chapter-01/*.mp4` | 1:16–8:26 | OPTIONAL EXTERNAL (not embedded) |
 | Unit 1 Ch2 (4 raw, UNSTAGED) | `assets/supplemental/media/chapter-02/*.mp4` | 4:50–7:21 | OPTIONAL EXTERNAL (not embedded) |
 | Rejected Unit 2 sources (DO NOT USE) | `assets/supplemental/media/unit-02/chapter-*/{Where_Does_Energy_Come_From_,Power_Plant…,Solar___Geothermal_Energy,The_Timescale_Tradeoff,Energy_Causes_Change,Energy_Innovations,Wind___Hydro_Power}.mp4` | — | REJECTED |
+
+## 4b. Infographics (PROJECT · DIGITAL · REFERENCE)
+
+> Rebuilt classroom infographics (16:9, projector-readable, grayscale-safe). Print default = PROJECT/DIGITAL (no 20-color-copy requirement). Each is also embedded as a full-screen REFERENCE slide in its deck.
+
+| Infographic | File | Unit · Ch | Embedded slide |
+|---|---|---|---|
+| Energy Detective anchor | `production/infographics/unit1-energy-detective-anchor.png` | U1 · Ch1 | `01-ch1` S26 |
+| Transfer vs Transformation | `production/infographics/unit1-transfer-vs-transformation.png` | U1 · Ch4 | `04-ch4` S47 |
+| Engineering design cycle | `production/infographics/unit1-engineering-design-cycle.png` | U1 · Ch6 | `06-ch6` S45 |
+| Collision energy transfer | `production/infographics/unit1-collision-energy-transfer.png` | U1 · Ch5 | `05-ch5` S29 |
+| Renewable vs nonrenewable matrix | `production/infographics/unit2-renewable-nonrenewable-resources.png` | U2 · Ch1 | `01-u2-ch1` S22 |
+| Turbine/generator pathways | `production/infographics/unit2-turbine-generator-pathways.png` | U2 · Ch3–6 | `03-u2-ch3` S20 |
 
 ## 5. Labs (TEACHER + STUDENT)
 
@@ -126,6 +139,7 @@
 | Unit 1 chapter quizzes/checkpoints (Ch1–6) | `production/quizzes/0X-chX-*-quiz.docx`, `06-ch6-concept-checkpoint.docx` | `production/answer-keys/0X-chX-*-quiz-key.md` (Markdown) |
 | Unit 2 written assessment | `production/quizzes/unit-02/unit-2-written-assessment-student.docx` | `production/quizzes/unit-02/unit-2-written-assessment-key.docx` |
 | Unit 2 study/review sheet | `production/review/unit-02/unit2-written-study-review.docx` + `.pdf` | `production/review/unit-02/unit2-written-study-review-key.docx` + `.pdf` |
+| Unit 1 study guide | `production/review/unit-01/unit1-study-guide.docx` + `.pdf` (3 pp) | `production/review/unit-01/unit1-study-guide-key.docx` + `.pdf` (1 p) |
 | Quiz blueprints | `production/quizzes/*-blueprint.md`, `UNIT_FINAL_ASSESSMENT_BLUEPRINT.md` | — |
 
 ## 10. Answer Keys (KEY)

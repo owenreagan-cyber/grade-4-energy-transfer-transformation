@@ -51,7 +51,7 @@
 
 ### Fri — FLEX
 - **RECOVER:** Energy Detectives catch-up (finish GN p.3 evidence table).
-- **PRACTICE:** Energy Charades (motion/sound/light/heat/electrical/stored).
+- **PRACTICE:** Energy Charades (motion/sound/light/heat/electrical/stored). **REFERENCE** slide S26 = Energy Detective Anchor chart ("What change is the evidence?").
 - **EXTEND:** journal drawing of one energy change.
 - No new content.
 
