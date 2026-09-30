@@ -29,6 +29,12 @@
 - **First pass:** `docs/reviews/PHASE13U_INDEPENDENT_VISUAL_FIRST_PASS.md`
 - **Certified:** Independent pixel-level art-direction review. Zero blob/AI artifacts; 11 distinct instructional images audited with Laplacian edge-variance sharpness metrics at 150dpi full-resolution. 0 P0/P1/P2 defects. PASS.
 
+## Phase 13W — Media Hardening & Placement
+
+- **Report:** `docs/reviews/PHASE13W_MEDIA_HARDENING.md`
+- **Inventory:** `production/final-8.5-week/FINAL_VIDEO_INVENTORY.md`
+- **Certified:** All 5 embedded classroom cuts verified in the correct deck/slide (H.264 + AAC, SHA-256 matches classroom-cut source); poster frames sharp/bright; speaker notes (ROLE/PLAY/PURPOSE/SKIP IF) added; no external media relationships; portability confirmed; optional scripts remain NO BINARY; rejected sources excluded from active docs. Rendered slides unchanged. PASS.
+
 ---
 
 ## Final Release Record

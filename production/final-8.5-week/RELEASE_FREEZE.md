@@ -16,6 +16,7 @@
 |---|---|
 | Release HEAD | `06111dffa0234e9d57658bdd7b435b1adb4e517d` (frozen `main`) |
 | Freeze baseline | `aea49c7aca9b0fa25ce2c56c61aa978f59b8e5f0` (pre-freeze `main`) |
+| Hardened release HEAD | (set at merge — see `docs/reviews/PHASE13W_MEDIA_HARDENING.md`) |
 | Freeze date | 2026-09-30 |
 | Active branch at freeze | `feature/phase13v-final-release-freeze` (merged `--no-ff` to `main`) |
 | Total decks | 16 (7 Unit 1 · 9 Unit 2) |
@@ -35,6 +36,7 @@
 - **PHASE 13S** — District-adoption / premium-$50-bundle visual certification. PASS.
 - **PHASE 13T** — Maximum-assurance multi-renderer + physical iPad A16 certification. PASS.
 - **PHASE 13U** — Independent visual art-direction review. PASS.
+- **PHASE 13W** — Media hardening & placement (MEDIA_HARDENING). PASS — 5 embedded cuts verified, speaker notes added, `FINAL_VIDEO_INVENTORY.md` created. Rendered slides unchanged.
 
 ---
 
