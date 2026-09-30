@@ -139,7 +139,7 @@
 |---|---|---|---|---|---|
 | P1 | Teacher Chapter Map | `curriculum/chapter-07/teacher/07-ch7-edison-unit-synthesis-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
 | P2 | Daily Lessons (Week 9) | `curriculum/chapter-07/teacher/07-ch7-daily-lessons.md` | — | RELEASED | SOURCE/ADAPTED |
-| P3 | Slide Deck (26) | `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
+| P3 | Slide Deck (27) | `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
 | P4 | Interactive Science Notebook (3 inserts) | `production/student-notebook/chapter-07/07-ch7-interactive-notebook.docx` | `production/releases/chapter-07/07-ch7-interactive-science-notebook.pdf` | RELEASED | ADAPTED/CUSTOM |
 | P5 | Unit Synthesis Review | `production/worksheets/07-unit-synthesis-review.docx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
 | P6 | Energy's Big Questions | `production/worksheets/07-energy-big-questions.docx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |

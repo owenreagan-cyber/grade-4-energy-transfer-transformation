@@ -31,14 +31,14 @@
 | U1 Ch6 | `production/premium-notes/06-ch6-energy-transformations-guided-notes.docx` + `.pdf` | 4 |
 | U1 Ch7 | `production/premium-notes/07-ch7-edison-unit-synthesis-guided-notes.docx` + `.pdf` | 3 |
 | U2 Ch1 | `production/premium-notes/unit-02/unit-02-ch1-renewable-nonrenewable-guided-notes.docx` + `.pdf` | 3 |
-| U2 Ch2 | `production/premium-notes/unit-02/unit-02-ch2-types-of-fossil-fuels-guided-notes.docx` + `.pdf` | — |
-| U2 Ch3 | `production/premium-notes/unit-02/unit-02-ch3-using-fossil-fuels-guided-notes.docx` + `.pdf` | — |
-| U2 Ch4 | `production/premium-notes/unit-02/unit-02-ch4-nuclear-energy-guided-notes.docx` + `.pdf` | — |
-| U2 Ch5 | `production/premium-notes/unit-02/unit-02-ch5-wind-energy-guided-notes.docx` + `.pdf` | — |
-| U2 Ch6 | `production/premium-notes/unit-02/unit-02-ch6-hydroelectric-energy-guided-notes.docx` + `.pdf` | — |
-| U2 Ch7 | `production/premium-notes/unit-02/unit-02-ch7-solar-energy-guided-notes.docx` + `.pdf` | — |
-| U2 Ch8 | `production/premium-notes/unit-02/unit-02-ch8-geothermal-energy-guided-notes.docx` + `.pdf` | — |
-| U2 Ch9 | `production/premium-notes/unit-02/unit-02-ch9-energy-resource-innovations-guided-notes.docx` + `.pdf` | — |
+| U2 Ch2 | `production/premium-notes/unit-02/unit-02-ch2-types-of-fossil-fuels-guided-notes.docx` + `.pdf` | 2 |
+| U2 Ch3 | `production/premium-notes/unit-02/unit-02-ch3-using-fossil-fuels-guided-notes.docx` + `.pdf` | 3 |
+| U2 Ch4 | `production/premium-notes/unit-02/unit-02-ch4-nuclear-energy-guided-notes.docx` + `.pdf` | 2 |
+| U2 Ch5 | `production/premium-notes/unit-02/unit-02-ch5-wind-energy-guided-notes.docx` + `.pdf` | 2 |
+| U2 Ch6 | `production/premium-notes/unit-02/unit-02-ch6-hydroelectric-energy-guided-notes.docx` + `.pdf` | 2 |
+| U2 Ch7 | `production/premium-notes/unit-02/unit-02-ch7-solar-energy-guided-notes.docx` + `.pdf` | 2 |
+| U2 Ch8 | `production/premium-notes/unit-02/unit-02-ch8-geothermal-energy-guided-notes.docx` + `.pdf` | 2 |
+| U2 Ch9 | `production/premium-notes/unit-02/unit-02-ch9-energy-resource-innovations-guided-notes.docx` + `.pdf` | 2 |
 
 > Notes: Unit 1 keys are embedded in the notes themselves; Unit 2 notes carry built-in keys. **Retired** parallel copies: `production/student-notes/01-ch1…docx`, `02-ch2…docx` (superseded by `premium-notes`).
 
@@ -48,11 +48,11 @@
 |---|---|---|---|
 | U1 Ch1 | `production/slides/01-ch1-energy-causes-change-slides.pptx` | 26 | none · **REFERENCE S26** (Energy Detective anchor) |
 | U1 Ch2 | `production/slides/02-ch2-moving-objects-have-energy-slides.pptx` | 24 | none |
-| U1 Ch3 | `production/slides/03-ch3-energy-speed-slides.pptx` | 28 | none |
+| U1 Ch3 | `production/slides/03-ch3-energy-speed-slides.pptx` | 29 | **EMBEDDED video S17** |
 | U1 Ch4 | `production/slides/04-ch4-energy-transfer-slides.pptx` | 47 | none · **REFERENCE S47** (Transfer vs Transformation) |
 | U1 Ch5 | `production/slides/05-ch5-collisions-slides.pptx` | 29 | none · **REFERENCE S29** (Collision transfer) |
 | U1 Ch6 | `production/slides/06-ch6-energy-transformations-slides.pptx` | 45 | none · **REFERENCE S45** (Engineering design cycle) |
-| U1 Ch7 | `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` | 26 | none |
+| U1 Ch7 | `production/slides/07-ch7-edison-unit-synthesis-slides.pptx` | 27 | **EMBEDDED video S13** |
 | U2 Ch1 | `production/slides/01-u2-ch1-renewable-nonrenewable-slides.pptx` | 22 | PLACEHOLDER S4 · **REFERENCE S22** (Renewable matrix) |
 | U2 Ch2 | `production/slides/02-u2-ch2-slides.pptx` | 18 | **EMBEDDED video S7** |
 | U2 Ch3 | `production/slides/03-u2-ch3-slides.pptx` | 20 | **EMBEDDED video S7** · **REFERENCE S20** (Turbine pathways) |
@@ -72,6 +72,8 @@
 | Fossil Fuel Formation (classroom cut) | `assets/supplemental/media/unit-02/chapter-02/fossil-fuel-formation-classroom-cut.mp4` | 3:39 | **EMBEDDED** in `02-u2-ch2` S7 |
 | Turbine & Generator (classroom cut) | `assets/supplemental/media/unit-02/chapter-03/turbine-generator-classroom-cut.mp4` | 3:41 | **EMBEDDED** in `03-u2-ch3` S7 |
 | Wind & Hydro (classroom cut) | `assets/supplemental/media/unit-02/chapter-05/wind-hydro-power-classroom-cut.mp4` | 1:35 | **EMBEDDED** in `05-u2-ch5` S6 |
+| Ramp It Up — Energy & Speed (classroom cut) | `assets/supplemental/media/chapter-03/speed-and-energy-ramp-it-up-classroom-cut.mp4` | 2:29 | **EMBEDDED** in `03-ch3` S17 |
+| Journey of Energy — Unit 1 recap (classroom cut) | `assets/supplemental/media/chapter-07/journey-of-energy-unit1-recap-classroom-cut.mp4` | 2:49 | **EMBEDDED** in `07-ch7` S13 |
 | Unit 2 scripts (3 production-ready) | `production/media/scripts/unit-02/01-…, 04-…, 07-…-final-script.md` | — | PENDING VIDEO (placeholders) |
 | Unit 2 script bank | `production/media/scripts/unit-02/UNIT2_VIDEO_SCRIPTS.md` | — | reference |
 | Production specs | `production/media/scripts/unit-02/PHASE13I_VIDEO_PRODUCTION_SPECS.md` | — | reference |
