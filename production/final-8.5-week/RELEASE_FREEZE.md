@@ -14,7 +14,8 @@
 
 | Field | Value |
 |---|---|
-| Release HEAD | `aea49c7aca9b0fa25ce2c56c61aa978f59b8e5f0` (pre-freeze `main`) |
+| Release HEAD | `06111dffa0234e9d57658bdd7b435b1adb4e517d` (frozen `main`) |
+| Freeze baseline | `aea49c7aca9b0fa25ce2c56c61aa978f59b8e5f0` (pre-freeze `main`) |
 | Freeze date | 2026-09-30 |
 | Active branch at freeze | `feature/phase13v-final-release-freeze` (merged `--no-ff` to `main`) |
 | Total decks | 16 (7 Unit 1 · 9 Unit 2) |
