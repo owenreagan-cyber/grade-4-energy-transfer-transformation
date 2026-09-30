@@ -6,7 +6,7 @@
 > Reader page numbers are the printed page numbers in each Student Reader.
 
 Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Slides** = deck/outline · **Reader** = reader pages · **Act** = lab/demo/activity · **J** = Science Journal · **FC** = formative check · **Time** = expected minutes.
-> Video references (e.g. "Video 1") are **PENDING GENERATION** — every lesson is fully teachable from notes/slides/reader without video. Three accepted classroom cuts exist (`fossil-fuel-formation-classroom-cut.mp4` Wk 5 Wed · `turbine-generator-classroom-cut.mp4` Wk 6 Tue · `wind-hydro-power-classroom-cut.mp4` Wk 7 Mon), all OPTIONAL/SUPPORT. See `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
+> Video references (e.g. "Video 1") are **PENDING GENERATION** — every lesson is fully teachable from notes/slides/reader without video. Five accepted classroom cuts exist (`fossil-fuel-formation-classroom-cut.mp4` Wk 5 Wed · `turbine-generator-classroom-cut.mp4` Wk 6 Tue · `wind-hydro-power-classroom-cut.mp4` Wk 7 Mon · `speed-and-energy-ramp-it-up-classroom-cut.mp4` Wk 2 Wed · `journey-of-energy-unit1-recap-classroom-cut.mp4` Wk 4 synthesis), all OPTIONAL/SUPPORT. See `docs/planning/TWO_UNIT_MEDIA_MAP.md`.
 
 ---
 
