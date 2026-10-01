@@ -45,6 +45,7 @@
 | Quizzes / checkpoints | 6 | Ch1–5 quizzes · Ch6 concept checkpoint |
 | Final assessments | 2 | Unit 1 final (25 items / 50 pts · matching + MC) · Unit 2 written (25 items / 50 pts · matching + MC) |
 | Study guides / review | 2 | Unit 1 study guide · Unit 2 written review |
+| Review games | 2 | Unit 1 clickable review game (53 slides) · Unit 2 clickable review game (55 slides) |
 | Teacher keys | 26 Markdown + 3 DOCX | practice/quiz/lab keys · U2 assessment key · U2 review key · U1 study-guide key |
 | Setup guides | 4 | ramp-it-up · crash-lab · water-wheel · solar-device |
 | Friday Flex resources | 1 bank + 7 chapter pages | `FRIDAY_FLEX_BANK.md` + per-chapter Flex |
@@ -63,6 +64,8 @@
 - **Water Wheel** — Unit 2 flagship lab (turbine/generator pathway)
 - **Unit 1 study guide** — `production/review/unit-01/unit1-study-guide.docx` (+ separate key)
 - **Unit 2 review** — `production/review/unit-02/unit2-written-study-review.docx` (+ separate key)
+- **Unit 1 clickable review game** — `production/review/unit-01/unit1-review-game.pptx` + scorecards + guide
+- **Unit 2 clickable review game** — `production/review/unit-02/unit2-review-game.pptx` + scorecards + guide
 - **Premium infographics** — 6 rebuilt, projector-readable, grayscale-safe, embedded as deck REFERENCE slides
 - **Assessment packages** — Unit 1 final (assessment + key + scoring guide) · Unit 2 written (student + key)
 - **Absent recovery** — Unit 1 per-chapter recovery (7) + Unit 2 absent-recovery index + final-assessment corrections
