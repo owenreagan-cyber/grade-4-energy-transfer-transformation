@@ -127,12 +127,19 @@
 | `08-u2-ch8-slides.pptx` | SLIDES | `production/slides/08-u2-ch8-slides.pptx` | `93c8b756db40e999…` | 55919 | ACTIVE |
 | `09-u2-ch9-slides.pptx` | SLIDES | `production/slides/09-u2-ch9-slides.pptx` | `43169547a4d41c40…` | 50615 | ACTIVE |
 | `chocolate-chip-mining-flex-model.docx` | STUDENT RESOURCES | `production/activities/unit-02/chocolate-chip-mining-flex-model.docx` | `071d9a638f80e5c4…` | 37821 | OPTIONAL |
+| `chocolate-chip-mining-flex-model.pdf` | STUDENT RESOURCES | `production/activities/unit-02/chocolate-chip-mining-flex-model.pdf` | `2f1082cc158ad750…` | 46307 | OPTIONAL |
 | `energy-detective-certificate.docx` | STUDENT RESOURCES | `production/activities/unit-02/energy-detective-certificate.docx` | `108c3d81b2df2c72…` | 37180 | ACTIVE |
+| `energy-detective-certificate.pdf` | STUDENT RESOURCES | `production/activities/unit-02/energy-detective-certificate.pdf` | `24f6c855aa4225f8…` | 29629 | ACTIVE |
 | `energy-resource-detective-chart.docx` | STUDENT RESOURCES | `production/activities/unit-02/energy-resource-detective-chart.docx` | `2df87c915d5812fe…` | 39138 | ACTIVE |
+| `energy-resource-detective-chart.pdf` | STUDENT RESOURCES | `production/activities/unit-02/energy-resource-detective-chart.pdf` | `fa81fb9dc361c1dc…` | 79815 | ACTIVE |
 | `energy-resource-scenario-challenge.docx` | STUDENT RESOURCES | `production/activities/unit-02/energy-resource-scenario-challenge.docx` | `66e5001b95b322ad…` | 38302 | ACTIVE |
+| `energy-resource-scenario-challenge.pdf` | STUDENT RESOURCES | `production/activities/unit-02/energy-resource-scenario-challenge.pdf` | `46118444ca1f99f5…` | 52292 | ACTIVE |
 | `fast-and-curious.docx` | STUDENT RESOURCES | `production/activities/unit-02/fast-and-curious.docx` | `0caff1b205743055…` | 37874 | ACTIVE |
+| `fast-and-curious.pdf` | STUDENT RESOURCES | `production/activities/unit-02/fast-and-curious.pdf` | `df73e739968cb84a…` | 52362 | ACTIVE |
 | `solar-device-mini-investigation.docx` | STUDENT RESOURCES | `production/activities/unit-02/solar-device-mini-investigation.docx` | `2a2b2c6c31a08e7e…` | 37551 | ACTIVE |
+| `solar-device-mini-investigation.pdf` | STUDENT RESOURCES | `production/activities/unit-02/solar-device-mini-investigation.pdf` | `c7e10c6d4f73d7be…` | 44687 | ACTIVE |
 | `transfer-transformation-both-sort.docx` | STUDENT RESOURCES | `production/activities/unit-02/transfer-transformation-both-sort.docx` | `8a54562869081ed5…` | 38235 | ACTIVE |
+| `transfer-transformation-both-sort.pdf` | STUDENT RESOURCES | `production/activities/unit-02/transfer-transformation-both-sort.pdf` | `ec5c4eef654b233f…` | 54406 | ACTIVE |
 | `unit2-written-study-review-key.docx` | STUDY GUIDE | `production/review/unit-02/unit2-written-study-review-key.docx` | `3a32b5c5346c40c5…` | 37593 | TEACHER ONLY |
 | `unit2-written-study-review-key.pdf` | STUDY GUIDE | `production/review/unit-02/unit2-written-study-review-key.pdf` | `f0a2fb7de9dee9de…` | 43138 | TEACHER ONLY |
 | `unit2-written-study-review.docx` | STUDY GUIDE | `production/review/unit-02/unit2-written-study-review.docx` | `3305480bc57f9103…` | 39299 | ACTIVE |

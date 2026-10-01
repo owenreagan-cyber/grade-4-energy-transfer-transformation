@@ -289,9 +289,13 @@ for fn in ["unit2-renewable-nonrenewable-resources.png","unit2-turbine-generator
     HASH_ENTRIES.append(_u2(f"production/infographics/{fn}", "INFOGRAPHICS"))
 for fn in ["energy-resource-detective-chart.docx","energy-resource-scenario-challenge.docx",
            "fast-and-curious.docx","transfer-transformation-both-sort.docx",
-           "solar-device-mini-investigation.docx","energy-detective-certificate.docx"]:
+           "solar-device-mini-investigation.docx","energy-detective-certificate.docx",
+           "energy-resource-detective-chart.pdf","energy-resource-scenario-challenge.pdf",
+           "fast-and-curious.pdf","transfer-transformation-both-sort.pdf",
+           "solar-device-mini-investigation.pdf","energy-detective-certificate.pdf"]:
     HASH_ENTRIES.append(_u2(f"production/activities/unit-02/{fn}", "STUDENT RESOURCES"))
 HASH_ENTRIES.append(_u2("production/activities/unit-02/chocolate-chip-mining-flex-model.docx", "STUDENT RESOURCES", "OPTIONAL"))
+HASH_ENTRIES.append(_u2("production/activities/unit-02/chocolate-chip-mining-flex-model.pdf", "STUDENT RESOURCES", "OPTIONAL"))
 for fn in ["water-wheel-flagship-lab-student.docx","water-wheel-flagship-lab-student.pdf"]:
     HASH_ENTRIES.append(_u2(f"production/labs/unit-02/{fn}", "LABS"))
 for fn in ["water-wheel-flagship-lab-teacher.docx","water-wheel-flagship-lab-teacher.pdf"]:
