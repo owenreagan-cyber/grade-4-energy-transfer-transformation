@@ -252,5 +252,15 @@
 
 > Board = 5 categories × 5 values (25 clues) + a FINAL CHALLENGE button, fully clickable: tile → question → reveal answer → back to board. Categories: Resource Detective · Fossil Fuels · Turbines & Generators · Renewable Power · Resource Challenge. 3 arrow-chain visual questions (no answer leakage). Locked Unit 2 vocabulary avoided (fission, U-235, kinetic, mechanical/chemical/thermal energy, radiant, electron, photon, semiconductor, baseload, dispatch, grid stabilization, peak demand, climate change, global warming, carbon footprint, green/clean energy, zero emissions, policy, activism). Physical iPad (A16) capture verified.
 
+## Phase 13AB — Final Study Guide Reconciliation + Assessment-Prep Certification
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| AB1 | Assessment-prep alignment matrix (Unit 1 + Unit 2, 25/25 each) | `docs/assessment/FINAL_ASSESSMENT_PREP_ALIGNMENT.md` | RELEASED | CUSTOM |
+| AB2 | Unit 2 study/review sheet — hybrid concept added (Section D) + HR header standard | `production/review/unit-02/unit2-written-study-review.{docx,pdf}` + `-key.{docx,pdf}` | RELEASED | ADAPTED |
+| AB3 | Study-guide iPad spot-check tooling | `tools/ipad_qa_studyguides.py` | RELEASED | CUSTOM |
+
+> Unit 1 study guide verified aligned (25/25) — no change. Unit 2 study/review sheet revised to add the tested `hybrid` concept (final assessment Q20) via a single fill-in (no page bloat, 3 pp maintained) and the `Name + HR 4A 4B 4C 4D` header (no Date field). Both study guides scanned clean of off-scope vocabulary; physical iPad (A16) spot check verified both PDFs open crisply. Teacher prep + pacing updated to reference the clickable review game.
+
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`

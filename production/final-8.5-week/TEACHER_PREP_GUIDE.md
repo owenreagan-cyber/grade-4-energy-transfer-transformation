@@ -97,10 +97,10 @@
 
 ## WEEK 8.5 — Unit 2 synthesis + assessment (3 days)
 
-- **Print ahead:** Unit 2 written assessment (student, 3 pp) + key; Detective Chart (reuse); certificates (as earned); Unit 2 study/review sheet (Day 1) + key.
+- **Print ahead:** Unit 2 written assessment (student, 3 pp) + key; Detective Chart (reuse); certificates (as earned); Unit 2 study/review sheet (Day 1, independent/homework review) + key; review-game scorecards (1 per team).
 - **Gather:** certificates; assessment keys.
 - **Pre-build:** none.
-- **Charge/test:** review deck (or `09-u2-ch9` review slides).
+- **Charge/test:** `unit2-review-game.pptx` clickable review game + `unit2-review-game-scorecards.pdf` (guide: `unit2-review-game-guide.md`; 30-min or 15-min quick mode).
 - **Est. prep:** 15 min (print + sign certificates).
 - **Cleanup:** collect assessments; file keys.
 - **Substitutions:** corrections can be done verbally with the key on the board.

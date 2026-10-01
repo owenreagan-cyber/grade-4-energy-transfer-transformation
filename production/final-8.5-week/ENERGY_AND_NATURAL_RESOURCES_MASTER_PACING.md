@@ -336,7 +336,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Day 1 — Whole-unit comparison/review
 - **Unit/Ch:** U2 · Ch1–9 · **BQ:** How do I compare all the energy resources I learned?
 - **Essential:** Energy Resource Detective Chart; renewable vs nonrenewable; benefits/limitations; pathways.
-- **GN:** Detective Chart (2-page) · **Slides:** review deck (or `09-u2-ch9` review) · **Reader:** Glossary pp.53+
+- **GN:** Detective Chart (2-page) · **Slides:** `unit2-review-game.pptx` clickable review game (guide: `unit2-review-game-guide.md`) · **Reader:** Glossary pp.53+
 - **Act:** Detective Chart completion · **J:** one resource I would investigate · **FC:** chart check · **Type:** CORE · **Time:** 25–30
 - **Absent:** Detective Chart is self-contained.
 
