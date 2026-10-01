@@ -43,7 +43,7 @@
 | Worksheets (student) | 18 | practice + lab data sheets (Unit 1) |
 | Activities (Unit 2) | 6 | detective chart · scenario · sort · fast & curious · solar mini-investigation · cookie-mining (FLEX) |
 | Quizzes / checkpoints | 6 | Ch1–5 quizzes · Ch6 concept checkpoint |
-| Final assessments | 2 | Unit 1 final (26 items / 50 pts) · Unit 2 written |
+| Final assessments | 2 | Unit 1 final (25 items / 50 pts · matching + MC) · Unit 2 written (25 items / 50 pts · matching + MC) |
 | Study guides / review | 2 | Unit 1 study guide · Unit 2 written review |
 | Teacher keys | 26 Markdown + 3 DOCX | practice/quiz/lab keys · U2 assessment key · U2 review key · U1 study-guide key |
 | Setup guides | 4 | ramp-it-up · crash-lab · water-wheel · solar-device |

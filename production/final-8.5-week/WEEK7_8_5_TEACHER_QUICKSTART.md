@@ -127,13 +127,13 @@
 - **STOP-HERE-IF-SHORT** renewable vs nonrenewable + one resource row each.
 - **ABSENT** Detective Chart is self-contained.
 
-### Day 2 — Unit 2 written assessment (22 points)
+### Day 2 — Unit 2 written assessment (25 items / 50 points)
 - **OPEN** none.
 - **PRINT** `unit-2-written-assessment-student` (3 pp) + key.
 - **GATHER** printed assessments.
 - **MEDIA** none.
-- **TEACH** distribute → read directions aloud → students work (~25–30 min) → collect. "Check Your Thinking" is a **+2 bonus**, not required.
-- **STOP-HERE-IF-SHORT** if time runs short, the bonus item is optional.
+- **TEACH** distribute → read directions aloud → students work (~25–30 min) → collect.
+- **STOP-HERE-IF-SHORT** if time runs short, allow spillover to corrections block.
 - **ABSENT** schedule a make-up.
 
 ### Day 3 — Corrections · journal reflection · certificate

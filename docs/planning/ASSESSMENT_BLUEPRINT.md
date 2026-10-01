@@ -44,3 +44,45 @@ The final must include:
 ## Key separation
 - Student test and teacher key are **separate files** (never mixed into the student PDF).
 - Weighting / gradebook integration remains OPEN (see `OPEN_QUESTIONS.md`).
+
+---
+
+## LOCKED FINAL ASSESSMENT STANDARD (Phase 13X)
+
+> Supersedes the "Written summative" content list above **for the two final unit assessments**.
+> Chapter quizzes and checkpoints still follow `QUIZ_STANDARD.md`.
+
+The two final unit assessments (Unit 1 and Unit 2) are built to a **locked, objective-only** architecture:
+
+| Rule | Value |
+|---|---|
+| Total questions | 25 |
+| Total points | 50 (2 pts each) |
+| Question types | **Matching only (Q1–8)** + **Multiple Choice only (Q9–25)** |
+| Matching | 8 terms · 10–11 definitions (2–3 extra distractors) |
+| Multiple choice | 4 options (A–D), balanced answer letters |
+| No | short answer · fill-in · CER · essay · constructed response · labeling · true/false |
+| Difficulty | 3–5 inference (default 4) · rest literal/comprehension/visual/comparison/application |
+| Source rule | Notes define the testable boundary; the Reader verifies the science |
+| Header | see print header standard below |
+
+Full per-question blueprints live in `docs/assessment/UNIT1_FINAL_ASSESSMENT_BLUEPRINT.md` and `docs/assessment/UNIT2_FINAL_ASSESSMENT_BLUEPRINT.md`.
+
+---
+
+## GLOBAL PRINT HEADER STANDARD
+
+All printed student resources in this curriculum use this header:
+
+```
+Name: ________________________________    HR:   4A    4B    4C    4D
+```
+
+- No `Date` field unless a later explicit instruction requires one.
+- Do **not** pre-circle a homeroom; students/teacher may mark `4A`, `4B`, `4C`, or `4D`.
+- Student-facing floor: **12 pt** (titles 20–22 pt · section headings 16–18 pt · question stems 13.5–14 pt · options/definitions 13–13.5 pt).
+- Font: Calibri (body) — the approved premium printable font.
+
+This header is the shared print-header standard for **assessments, quizzes, worksheets, and notes**.
+Future generated printables should inherit it from this file (and from `QUIZ_STANDARD.md`).
+Historical printables that still use the older `Name / Date` header are listed in the Phase 13X report for a later, separately scoped normalization.

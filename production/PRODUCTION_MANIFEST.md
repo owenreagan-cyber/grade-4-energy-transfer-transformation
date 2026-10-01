@@ -143,8 +143,8 @@
 | P4 | Interactive Science Notebook (3 inserts) | `production/student-notebook/chapter-07/07-ch7-interactive-notebook.docx` | `production/releases/chapter-07/07-ch7-interactive-science-notebook.pdf` | RELEASED | ADAPTED/CUSTOM |
 | P5 | Unit Synthesis Review | `production/worksheets/07-unit-synthesis-review.docx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
 | P6 | Energy's Big Questions | `production/worksheets/07-energy-big-questions.docx` | `production/releases/chapter-07/` | RELEASED | ADAPTED |
-| P7 | Final Assessment (26 items / 50 pts) | `production/quizzes/07-unit-final-assessment.docx` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | ADAPTED (original) |
-| P8 | Final Assessment Key | `production/answer-keys/07-unit-final-assessment-key.md` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | ADAPTED |
+| P7 | Final Assessment (25 items / 50 pts — Phase 13X rebuild) | `production/quizzes/07-unit-final-assessment.docx` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | ADAPTED |
+| P8 | Final Assessment Key (DOCX/PDF) | `production/quizzes/07-unit-final-assessment-key.docx` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | ADAPTED |
 | P9 | Scoring Guide | `production/quizzes/07-unit-final-assessment-scoring-guide.md` | `production/releases/unit-final/` | RELEASED | ADAPTED |
 | P10 | Corrections / Recovery | `curriculum/chapter-07/student/recovery/07-final-assessment-corrections-recovery.md` | `production/releases/chapter-07/` + `production/releases/unit-final/` | RELEASED | CUSTOM |
 | P11 | Absent-Student Recovery | `curriculum/chapter-07/student/recovery/07-ch7-absent-student-recovery.md` | — | RELEASED | SOURCE/ADAPTED |
@@ -172,7 +172,7 @@
 | U2-E | Slideshow outlines Ch1–9 | `production/slides/outlines/unit-02/` | RELEASED | ADAPTED |
 | U2-F | Video/explainer scripts (7) | `production/media/scripts/unit-02/UNIT2_VIDEO_SCRIPTS.md` | RELEASED (scripts) / videos PENDING | CUSTOM |
 | U2-G | Water Wheel flagship lab (student + teacher) | `production/labs/unit-02/` | RELEASED | ADAPTED |
-| U2-H | Unit 2 written assessment (student + key) | `production/quizzes/unit-02/` | RELEASED | ADAPTED |
+| U2-H | Unit 2 written assessment — student + key (25 items / 50 pts — Phase 13X rebuild) | `production/quizzes/unit-02/` | RELEASED | ADAPTED |
 | U2-I | Activities (Detective Chart, Scenario, Sort, Fast & Curious, cookie-mining FLEX, certificate) | `production/activities/unit-02/` | RELEASED | ADAPTED/CUSTOM |
 | U2-J | Friday Flex bank (8.5 weeks) | `production/friday-flex/FRIDAY_FLEX_BANK.md` | RELEASED | CUSTOM |
 | U2-K | Master pacing · supply list · printing guide | `production/final-8.5-week/` | RELEASED | CUSTOM |

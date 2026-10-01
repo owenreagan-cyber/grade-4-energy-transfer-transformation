@@ -342,7 +342,7 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 
 ### Day 2 — Unit 2 written assessment
 - **Unit/Ch:** U2 · Ch1–9 · **BQ:** (summative)
-- **Essential:** written assessment (22 points): matching, MC, pathway, comparison, scenario, explanation.
+- **Essential:** written assessment (25 items / 50 points): matching (Q1–8) + multiple choice (Q9–25).
 - **GN:** `unit-2-written-assessment-student` · **Slides:** none · **Reader:** — · **Act:** written assessment
 - **J:** none · **FC:** summative · **Materials:** printed assessments · **Prep:** print · **Cleanup:** collect · **Type:** CORE · **Time:** 30
 - **Absent:** schedule a make-up.

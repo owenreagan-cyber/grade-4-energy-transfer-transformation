@@ -170,7 +170,7 @@
 - **JOURNAL:** redesign idea. **FC:** device energy chain. **ABSENT:** `07-ch7` p.2. **STATUS:** RELEASED.
 
 ## Friday — Unit 1 assessment / corrections / extension
-- **ASSESS:** `production/quizzes/07-unit-final-assessment.docx` + `production/answer-keys/07-unit-final-assessment-key.md` + `production/quizzes/07-unit-final-assessment-scoring-guide.md`. **Known:** ~35–40 min → dedicated block; allow spillover. **Timing/spillover plan:** `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (TEACHER). **EXT:** Rube Goldberg blueprint. **STATUS:** RELEASED.
+- **ASSESS:** `production/quizzes/07-unit-final-assessment.docx` + `production/quizzes/07-unit-final-assessment-key.docx` + `production/quizzes/07-unit-final-assessment-scoring-guide.md`. **Known:** ~30–35 min → dedicated block; allow spillover. **Timing/spillover plan:** `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` (TEACHER). **EXT:** Rube Goldberg blueprint. **STATUS:** RELEASED.
 - **STUDY GUIDE (prep, hand out Thursday):** `production/review/unit-01/unit1-study-guide.docx` (student, 3 pp) + `unit1-study-guide-key.docx` (TEACHER, 1 p). Aligned to the released assessment. **STATUS:** RELEASED.
 
 ---
@@ -331,7 +331,7 @@
 - **JOURNAL:** one resource I would investigate. **FC:** chart check. **ABSENT:** Detective Chart self-contained + review sheet self-contained. **STATUS:** RELEASED.
 
 ## Day 2 — Unit 2 written assessment
-- **Unit/Ch:** U2 · Ch1–9 · **BQ:** (summative) · **Objective:** written assessment (22 points): matching, MC, pathway, comparison, scenario, explanation.
+- **Unit/Ch:** U2 · Ch1–9 · **BQ:** (summative) · **Objective:** written assessment (25 items / 50 points): matching (Q1–8) + multiple choice (Q9–25).
 - **ASSESS:** `production/quizzes/unit-02/unit-2-written-assessment-student.docx` + `unit-2-written-assessment-key.docx` (KEY).
 - **ABSENT:** schedule a make-up. **STATUS:** RELEASED.
 
