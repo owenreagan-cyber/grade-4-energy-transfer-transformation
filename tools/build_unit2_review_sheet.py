@@ -20,12 +20,31 @@ def save(doc, fn):
     doc.save(os.path.join(OUT_DIR, fn))
     print("saved", fn)
 
+def title_block_hr(doc, title, subtitle):
+    """Student header with the assessment HR standard (no Date field)."""
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    set_run(p.add_run(title), size=23, bold=True, color=NAVY, font=HEAD_FONT)
+    p2 = doc.add_paragraph()
+    p2.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    set_run(p2.add_run(subtitle), size=12, italic=True, color=GRAY)
+    n = doc.add_paragraph()
+    pPr = n._p.get_or_add_pPr()
+    sp = OxmlElement('w:spacing'); sp.set(qn('w:after'), '40'); pPr.append(sp)
+    set_run(n.add_run("Name: "), size=12, bold=True, color=INK)
+    r = n.add_run("____________________________"); r.underline = True
+    set_run(r, size=12, color=INK)
+    set_run(n.add_run("    HR:  "), size=12, bold=True, color=INK)
+    for hr in ["4A", "4B", "4C", "4D"]:
+        rr = n.add_run("  " + hr + "  "); rr.underline = True
+        set_run(rr, size=12, color=INK)
+
 def wbank(doc, words, size=12):
     body(doc, "Word bank:  " + "    ".join(words), size=size, bold=True, color=NAVY, after=14)
 
 def build_student():
     doc = new_doc()
-    title_block(doc, "Using Natural Resources for Energy", SUB + " · Student")
+    title_block_hr(doc, "Using Natural Resources for Energy", SUB + " · Student")
     body(doc, "Use this sheet to get ready for the Unit 2 assessment. Take your time — this is for YOU.", size=12, italic=True, color=GRAY, after=18)
 
     # --- Section A: Match ---
@@ -70,7 +89,8 @@ def build_student():
     fill(doc, "A nonrenewable resource is NOT restored", blank="________________", trail=".", size=13, after=6)
     fill(doc, "A resource can be abundant (plentiful) but still", blank="________________", trail=".", size=13, after=6)
     body(doc, "The three fossil fuels are coal, petroleum, and ______________.", size=13, bold=True, after=6)
-    body(doc, "Nuclear power uses ______________ as its fuel; its pathway is the SAME as coal.", size=13, after=8)
+    body(doc, "Nuclear power uses ______________ as its fuel; its pathway is the SAME as coal.", size=13, after=6)
+    body(doc, "A hybrid vehicle uses ______________ different sources of fuel.", size=13, after=8)
 
     # PAGE 3
     page_head(doc, "Sections E–G · Page 3", new_page=True)
@@ -232,7 +252,7 @@ def build_key():
     body(doc, "Wind: moving air → blades (turbine) → generator → electricity.  Solar: sunlight → solar cell → electricity.", size=13, after=16)
     heading(doc, "D · Compare")
     body(doc, "renewable: as quickly as it is used.  nonrenewable: as quickly as it is used (cannot be restored quickly).  abundant but still: nonrenewable.", size=13, after=10)
-    body(doc, "Three fossil fuels: coal, petroleum, and natural gas.  Nuclear fuel: uranium.", size=13, after=16)
+    body(doc, "Three fossil fuels: coal, petroleum, and natural gas.  Nuclear fuel: uranium.  Hybrid: two.", size=13, after=16)
     heading(doc, "E · Label It")
     body(doc, "fuel (coal or nuclear) → steam (or water) → turbine → generator → electricity. (Boxes: steam/water, turbine, generator, electricity.)", size=13, after=16)
     heading(doc, "F · Scenario")
