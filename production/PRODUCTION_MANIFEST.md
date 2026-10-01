@@ -236,9 +236,21 @@
 | Z2 | Revised squad scorecard + Team Explain/Challenge cards (PDF) | `production/review/unit-01/unit1-review-game-scorecards.pdf` | RELEASED | ADAPTED |
 | Z3 | Scorecard + cards editable masters | `production/review/unit-01/unit1-review-game-scorecards.docx` + `unit1-review-game-cards.docx` | RELEASED | ADAPTED |
 | Z4 | Teacher answer key / game guide | `production/review/unit-01/unit1-review-game-guide.md` | RELEASED | SOURCE/ADAPTED |
-| Z5 | Build + QA tooling | `tools/build_u1_review_game.js` · `tools/build_u1_review_scorecards.py` · `tools/qa_u1_review_game.py` · `tools/package.json` | RELEASED | CUSTOM |
+| Z5 | Build + QA tooling | `tools/build_u1_review_game.js` · `tools/build_u1_review_scorecards.py` · `tools/qa_u1_review_game.py` · `tools/review_game_lib.js` (shared) · `tools/qa_review_game.py` (shared) · `tools/package.json` | RELEASED | CUSTOM |
 
-> Board = 5 categories × 5 values (25 clues), fully clickable: tile → question → reveal answer → back to board. No external links or file dependencies. CER/Action-Stunt wording replaced with Team Explain / Team Challenge. All off-scope terms removed (kinetic, potential, mechanical/chemical/thermal energy, radiant, momentum, force, impulse, deformation, proves).
+> Board = 5 categories × 5 values (25 clues), fully clickable: tile → question → reveal answer → back to board. No external links or file dependencies. CER/Action-Stunt wording replaced with Team Explain / Team Challenge. All off-scope terms removed (kinetic, potential, mechanical/chemical/thermal energy, radiant, momentum, force, impulse, deformation, proves). (Phase 13AA refactored the deck + QA into shared builders; Unit 1 output verified byte-identical for all slide content and links.)
+
+## Phase 13AA — Clickable Unit 2 Review Game + Review-Day Package
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| AA1 | Unit 2 clickable review game (16:9 PPTX, 55 slides incl. Final Challenge) | `production/review/unit-02/unit2-review-game.pptx` | RELEASED | ADAPTED |
+| AA2 | Squad scorecard + Team Explain/Challenge cards (PDF, 3 pp) | `production/review/unit-02/unit2-review-game-scorecards.pdf` | RELEASED | ADAPTED |
+| AA3 | Scorecard + cards editable masters | `production/review/unit-02/unit2-review-game-scorecards.docx` + `unit2-review-game-cards.docx` | RELEASED | ADAPTED |
+| AA4 | Teacher answer key / game guide + source alignment | `production/review/unit-02/unit2-review-game-guide.md` | RELEASED | SOURCE/ADAPTED |
+| AA5 | Build + QA + iPad capture tooling | `tools/build_u2_review_game.js` · `tools/build_u2_review_scorecards.py` · `tools/ipad_qa_u2_capture.py` (shared: `review_game_lib.js` · `qa_review_game.py`) | RELEASED | CUSTOM |
+
+> Board = 5 categories × 5 values (25 clues) + a FINAL CHALLENGE button, fully clickable: tile → question → reveal answer → back to board. Categories: Resource Detective · Fossil Fuels · Turbines & Generators · Renewable Power · Resource Challenge. 3 arrow-chain visual questions (no answer leakage). Locked Unit 2 vocabulary avoided (fission, U-235, kinetic, mechanical/chemical/thermal energy, radiant, electron, photon, semiconductor, baseload, dispatch, grid stabilization, peak demand, climate change, global warming, carbon footprint, green/clean energy, zero emissions, policy, activism). Physical iPad (A16) capture verified.
 
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`
