@@ -1,0 +1,1 @@
+../../final-8.5-week/MASTER_RESOURCE_INVENTORY.md

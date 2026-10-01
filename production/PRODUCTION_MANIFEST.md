@@ -262,5 +262,17 @@
 
 > Unit 1 study guide verified aligned (25/25) — no change. Unit 2 study/review sheet revised to add the tested `hybrid` concept (final assessment Q20) via a single fill-in (no page bloat, 3 pp maintained) and the `Name + HR 4A 4B 4C 4D` header (no Date field). Both study guides scanned clean of off-scope vocabulary; physical iPad (A16) spot check verified both PDFs open crisply. Teacher prep + pacing updated to reference the clickable review game.
 
+## Phase 13AC — Final Classroom Package Organization + Release Backup Preparation
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| AC1 | Teacher-facing delivery structure (relative-symlink tree: Energy / Natural Resources / Shared) | `production/final-delivery/` | RELEASED | CUSTOM |
+| AC2 | Delivery builder (reproducible symlink + hash + mirror generator) | `tools/build_final_delivery.py` | RELEASED | CUSTOM |
+| AC3 | Release hash manifest (SHA-256 + size) | `production/final-delivery/RELEASE_HASH_MANIFEST.csv` | RELEASED | CUSTOM |
+| AC4 | Google Drive mirror metadata | `docs/reviews/GOOGLE_DRIVE_MIRROR_MANIFEST.md` | RELEASED | CUSTOM |
+| AC5 | Teacher "Start Here" navigation guide | `production/final-delivery/START_HERE_TEACHER_GUIDE.md` | RELEASED | CUSTOM |
+
+> Delivery view is symlink-only (no file duplication); single source of truth stays in `production/`. Dereference for Drive/USB with `cp -RL`. No classroom artifact was modified, copied, or regenerated in this phase.
+
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`

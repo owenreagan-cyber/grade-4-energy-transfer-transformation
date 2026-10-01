@@ -1,0 +1,1 @@
+../../../labs/01-ch1-energy-detectives-teacher-spec.md
