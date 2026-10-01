@@ -137,7 +137,7 @@
 
 | Item | File | Key |
 |---|---|---|
-| Unit 1 final assessment | `production/quizzes/07-unit-final-assessment.docx` | `production/answer-keys/07-unit-final-assessment-key.md` + `production/quizzes/07-unit-final-assessment-scoring-guide.md` |
+| Unit 1 final assessment | `production/quizzes/07-unit-final-assessment.docx` | `production/quizzes/07-unit-final-assessment-key.docx` + `production/quizzes/07-unit-final-assessment-scoring-guide.md` |
 | Unit 1 chapter quizzes/checkpoints (Ch1–6) | `production/quizzes/0X-chX-*-quiz.docx`, `06-ch6-concept-checkpoint.docx` | `production/answer-keys/0X-chX-*-quiz-key.md` (Markdown) |
 | Unit 2 written assessment | `production/quizzes/unit-02/unit-2-written-assessment-student.docx` | `production/quizzes/unit-02/unit-2-written-assessment-key.docx` |
 | Unit 2 study/review sheet | `production/review/unit-02/unit2-written-study-review.docx` + `.pdf` | `production/review/unit-02/unit2-written-study-review-key.docx` + `.pdf` |

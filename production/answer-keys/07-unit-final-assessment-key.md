@@ -1,5 +1,9 @@
 # UNIT FINAL ASSESSMENT — TEACHER KEY & SCORING
 
+> ⚠️ **SUPERSEDED (Phase 13X).** This Markdown key is the retired 26-item written-final key.
+> The active Unit 1 key is now **`production/quizzes/07-unit-final-assessment-key.docx`** (+ PDF), rebuilt to the locked 25-question / 50-point matching + multiple-choice standard.
+> Retained here only for historical reference; do not use as the active key.
+
 > Original Grade 4 written final (26 items · 50 points · 30–45 min). Aligned to the official Unit Assessment blueprint (50 pts) — re-authored, not copied. Core Vocabulary deck may be used.
 
 ## Total = 50 points
