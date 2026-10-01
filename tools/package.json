@@ -1,10 +1,12 @@
 {
   "name": "energy-unit-review-tools",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Build tooling for the Unit 1 clickable review game (Phase 13Z).",
+  "description": "Build tooling for the clickable review games (Unit 1 Phase 13Z · Unit 2 Phase 13AA).",
   "scripts": {
-    "build:review-game": "node build_u1_review_game.js"
+    "build:review-game:u1": "node build_u1_review_game.js",
+    "build:review-game:u2": "node build_u2_review_game.js",
+    "build:review-game": "node build_u1_review_game.js && node build_u2_review_game.js"
   },
   "dependencies": {
     "pptxgenjs": "^4.0.1"
