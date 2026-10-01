@@ -228,5 +228,17 @@
 
 > Rejected delivered sources: `Motion_Energy_Investigation_Matrix.png` (prefilled results), `4_Steps_of_Land_Reclamation.png` (not in course; teacher reference), combined `unit1-and-unit2-study-guide-review-worksheet.pdf` (split/rebuilt). Unit 2 review KEPT as existing Phase 13K sheet.
 
+## Phase 13Z — Clickable Unit 1 Review Game Deck
+
+| ID | Artifact | Path | Status | Provenance |
+|---|---|---|---|---|
+| Z1 | Unit 1 clickable Jeopardy review game (16:9 PPTX, 53 slides) | `production/review/unit-01/unit1-review-game.pptx` | RELEASED | ADAPTED |
+| Z2 | Revised squad scorecard + Team Explain/Challenge cards (PDF) | `production/review/unit-01/unit1-review-game-scorecards.pdf` | RELEASED | ADAPTED |
+| Z3 | Scorecard + cards editable masters | `production/review/unit-01/unit1-review-game-scorecards.docx` + `unit1-review-game-cards.docx` | RELEASED | ADAPTED |
+| Z4 | Teacher answer key / game guide | `production/review/unit-01/unit1-review-game-guide.md` | RELEASED | SOURCE/ADAPTED |
+| Z5 | Build + QA tooling | `tools/build_u1_review_game.js` · `tools/build_u1_review_scorecards.py` · `tools/qa_u1_review_game.py` · `tools/package.json` | RELEASED | CUSTOM |
+
+> Board = 5 categories × 5 values (25 clues), fully clickable: tile → question → reveal answer → back to board. No external links or file dependencies. CER/Action-Stunt wording replaced with Team Explain / Team Challenge. All off-scope terms removed (kinetic, potential, mechanical/chemical/thermal energy, radiant, momentum, force, impulse, deformation, proves).
+
 ## Provenance tags
 `SOURCE` · `ADAPTED` · `CUSTOM` · `EXTENSION`

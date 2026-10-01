@@ -101,6 +101,7 @@
 | Assessment | Unit 1 assessment administration note | `production/final-8.5-week/UNIT1_ASSESSMENT_ADMINISTRATION_NOTE.md` | TEACHER |
 | Lab setup | Teacher lab setup diagrams (×4) | `production/lab-setup-guides/*-setup-guide.docx` + `.pdf` | TEACHER |
 | Study guide | Unit 1 study guide (student + key) | `production/review/unit-01/unit1-study-guide.docx` + `.pdf` · `unit1-study-guide-key.docx` + `.pdf` | CORE |
+| Review game | Unit 1 clickable Jeopardy review game (deck + scorecards + answer key) | `production/review/unit-01/unit1-review-game.pptx` · `unit1-review-game-scorecards.pdf` · `unit1-review-game-guide.md` | FLEX |
 | Infographics | Rebuilt classroom infographics (×6) | `production/infographics/*.png` (also embedded as deck REFERENCE slides) | PROJECT |
 | Policy | Retired curriculum artifact policy | `docs/architecture/RETIRED_CURRICULUM_ARTIFACT_POLICY.md` | REF |
 | Friday | Friday Flex bank | `production/friday-flex/FRIDAY_FLEX_BANK.md` | FLEX |

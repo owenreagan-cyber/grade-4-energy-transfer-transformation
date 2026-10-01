@@ -142,6 +142,7 @@
 | Unit 2 written assessment | `production/quizzes/unit-02/unit-2-written-assessment-student.docx` | `production/quizzes/unit-02/unit-2-written-assessment-key.docx` |
 | Unit 2 study/review sheet | `production/review/unit-02/unit2-written-study-review.docx` + `.pdf` | `production/review/unit-02/unit2-written-study-review-key.docx` + `.pdf` |
 | Unit 1 study guide | `production/review/unit-01/unit1-study-guide.docx` + `.pdf` (3 pp) | `production/review/unit-01/unit1-study-guide-key.docx` + `.pdf` (1 p) |
+| Unit 1 clickable review game | `production/review/unit-01/unit1-review-game.pptx` (53 slides) | `production/review/unit-01/unit1-review-game-guide.md` (answer key) + `unit1-review-game-scorecards.pdf` |
 | Quiz blueprints | `production/quizzes/*-blueprint.md`, `UNIT_FINAL_ASSESSMENT_BLUEPRINT.md` | — |
 
 ## 10. Answer Keys (KEY)
@@ -158,6 +159,7 @@
 
 | Item | Path |
 |---|---|
+| **Unit 1 clickable Jeopardy review game** | `production/review/unit-01/unit1-review-game.pptx` + `unit1-review-game-scorecards.pdf` + `unit1-review-game-guide.md` |
 | Fast & Curious (ramp game) | `production/activities/unit-02/fast-and-curious.docx` |
 | Transfer/Transformation/BOTH sort (mat + cards) | `production/activities/unit-02/transfer-transformation-both-sort.docx` |
 | Energy Charades (word cards) | via `production/friday-flex/FRIDAY_FLEX_BANK.md` (Week 1) |
