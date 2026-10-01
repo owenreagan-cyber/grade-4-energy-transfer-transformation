@@ -147,7 +147,39 @@
 
 ## Sync Notes
 
-- Drive tree: `My Drive → 2026-2027 → Science → Energy` (Unit 1) and `… → Natural Resources` (Unit 2).
-- `TEACHER ONLY` items live in a parallel teacher-only folder; do not share them with students.
-- Embedded classroom-cut MP4s are git-excluded (`assets/supplemental/media/`) but are listed here for backup integrity.
+- Drive tree: `My Drive → 2026-27 → Science → Energy` (Unit 1), `… → Natural Resources` (Unit 2), and `… → Shared` (cross-unit).
+- Teacher/student distinction: teacher planning maps/quickstarts live in `Unit 1 Teacher Guide` / `Unit 2 Teacher Guide`; answer keys and teacher specs are named `-key` / `-teacher` / `-spec` within each category folder.
+- Embedded classroom-cut MP4s are git-excluded (`assets/supplemental/media/`) but are mirrored under `Energy/Media/` and `Natural Resources/Media/` for backup integrity.
 - Verify integrity with `shasum -a 256 -c` against `RELEASE_HASH_MANIFEST.csv`.
+
+## Future Updates
+
+No uncontrolled two-way sync. Future changes follow:
+
+```
+LOCAL RELEASE REPOSITORY
+        ↓
+TARGETED UPDATE
+        ↓
+HASH VERIFICATION
+        ↓
+GOOGLE DRIVE MIRROR UPDATE
+```
+
+## Mirror Execution Record — Phase 13AD
+
+| Field | Value |
+|---|---|
+| Upload date | 2026-10-01 |
+| Destination account | `GoogleDrive-owen.reagan@thalesacademy.org` (school) |
+| Drive root | `My Drive → 2026-27 → Science` |
+| Folders confirmed | `Energy/` · `Natural Resources/` · `Shared/` |
+| Total files mirrored | 211 |
+| — Energy/ (incl. 2 MP4 media) | 127 |
+| — Natural Resources/ (incl. 3 MP4 media) | 70 |
+| — Shared/ | 14 |
+| Total bytes | 79.4 MB |
+| Hash verification | PASS — 131 manifest binaries matched; 6-file sample read-back byte-identical |
+| File-count verification | PASS — 211 local manifest ↔ 211 Drive (0 missing, 0 unexpected) |
+| Duplicate / stale audit | PASS — no duplicate unit folders, no rejected videos, no draft/superseded files |
+| Exceptions | NONE (pre-existing `Energy/Textbooks/` source material left untouched) |
