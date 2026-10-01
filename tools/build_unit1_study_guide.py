@@ -1,6 +1,6 @@
 """Unit 1 study guide — student + teacher key (Phase 13R).
 
-Week 4 assessment prep. Aligned to the released Unit 1 assessment (26 items / 50 pts).
+Week 4 assessment prep. Aligned to the released Unit 1 assessment (25 items / 50 pts).
 Covers: energy = ability to cause change, evidence, stored energy, energy of motion,
 same-object speed, transfer, transformation, BOTH, collisions, criteria, constraints,
 design/test/refine, Edison/Latimer.
