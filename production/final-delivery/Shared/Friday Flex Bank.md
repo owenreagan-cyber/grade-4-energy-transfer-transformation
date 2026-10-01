@@ -1,0 +1,1 @@
+../../friday-flex/FRIDAY_FLEX_BANK.md
