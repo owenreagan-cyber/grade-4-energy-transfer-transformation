@@ -517,7 +517,7 @@ def chapter1_spread(doc):
             ["Misconception / fix", "\u201cOnly moving objects have energy\u201d → pair moving + stored examples. \u201cEnergy is a visible substance\u201d → we see the change, not the energy."],
             ["Do-not-overteach", "Do not introduce transfer/transformation or kinetic/potential. Keep p. 6 as a forward preview only."],
             ["If short on time", "Cut the cup/balloon/salt demo · move Energy Detectives to Friday FLEX."],
-            ["Collect / grade", "Exit ticket (formative) · notes completion (not graded). No scored chapter item."],
+            ["Collect / grade", "Exit ticket (formative) · notes completion (not graded). Scored chapter item: Chapter 1 quiz (9-item, end of chapter)."],
             ["Absent / makeup", "Absent-student recovery guide — curriculum/chapter-01/student/recovery/01-ch1-absent-student-recovery.md"],
             ["What comes next", "Chapter 2 — Moving Objects Have Energy (marble collision demo)."],
         ],

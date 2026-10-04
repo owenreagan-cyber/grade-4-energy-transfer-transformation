@@ -21,4 +21,4 @@
 - No collisions or engineering design.
 
 ## Total
-16 points (scored to a class-appropriate denominator; raw score + percentage — see OPEN_QUESTIONS).
+16 points · raw score + percentage (score out of 16; adjust the denominator only if an item is dropped).

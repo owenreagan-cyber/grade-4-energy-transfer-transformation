@@ -41,7 +41,7 @@ Our class looked around the room for changes. Here is what some classmates found
 1. What is energy? (Write the sentence.)
 2. In the table above, pick ONE row. What **changed**, and what **energy** do you think caused it?
 3. A battery is sitting still on a table. Does it have energy? Explain using the word **stored energy**.
-4. What is the **evidence** that energy was present in the flashlight when our class turned it on?
+4. What is the **evidence** that energy was present in the light bulb when our class turned it on?
 
 ## Step 5 — The essential conclusion (copy this into your notes)
 ```
