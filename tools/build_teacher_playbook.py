@@ -355,16 +355,16 @@ def how_slides_notes_work(doc):
             ["Vocabulary TEACH vs RECORD", "TEACH = full-screen card (word + visual + exact source def + Reader page). RECORD = fill-in from memory, card covered."],
             ["9-step choreography", "BIG QUESTION → PHENOMENON → VOCAB CARDS → VOCAB NOTES → READ → CHECKS → CONCEPT NOTES → APPLICATION → RETURN TO BQ"],
             ["Mode badges", "BQ · D (demo) · V (vocab) · R (read) · C (check) · N (notes) · W (write) · T (talk) · P (practice) · J (journal)."],
-            ["Notes navigation (permanent)", "BQ / V1 / V2 / N1 / N2 — distinct from temporary HUD action bubbles."],
+            ["Notes navigation (permanent)", "BQ / V1 / V2 / N1 / N2 / N3 / N4 — distinct from temporary HUD action bubbles."],
         ],
         [Inches(1.6), Inches(5.4)], size=9.5, first_bold=True)
-    callout(doc, "STATUS", "Guided Notes and slide decks for Chapters 1–7 are being rebuilt in Phases 3–4 (add per-section Reader page refs, chapter badge, full-screen vocab cards, canonical slide sequence). References in chapter spreads are PLANNED placeholders until then.", accent_hex="#1F2A5A")
+    callout(doc, "STATUS", "Chapter 1 Guided Notes are FINAL (AVAILABLE). Chapters 2–7 notes and all slide decks are being rebuilt in Phases 3–4 (add per-section Reader page refs, chapter badge, full-screen vocab cards, canonical slide sequence). Chapter 1 spread references are real; Chapters 2–7 spread references remain PLANNED placeholders until then.", accent_hex="#1F2A5A")
 
 def resource_map(doc):
     section_heading(doc, "Resource Map")
     data_table(doc, ["Resource", "Audience", "Required", "Graded", "Status", "Teacher key"],
         [
-            ["Guided Notes (Ch1–7)", "Student", "CORE", "No (formative)", "PLANNED — Phase 3/4", "PLANNED"],
+            ["Guided Notes (Ch1–7)", "Student", "CORE", "No (formative)", "Ch1 AVAILABLE/FINAL · Ch2–7 PLANNED", "Ch1 AVAILABLE · Ch2–7 PLANNED"],
             ["Science Journal prompts", "Student", "CORE", "No", "AVAILABLE", "—"],
             ["Chapter practice/application", "Student", "CORE", "No (practice)", "AVAILABLE", "AVAILABLE"],
             ["Ramp It Up 2.0", "Student (lab)", "CORE", "Formative", "ADAPT — PLANNED", "PLANNED"],
@@ -488,12 +488,12 @@ def chapter1_spread(doc):
     title_band(doc, "LEFT PAGE — TEACH IT", color_hex=c["primary"], size=12)
     data_table(doc, ["Field", "Content"],
         [
-            ["Big Question", "Where can we observe evidence of energy causing change?  ·  What are some forms of energy?"],
+            ["Big Question", "Where can we observe evidence of energy causing change? (TG Lesson 2 adds \u201cWhat are some forms of energy?\u201d \u2192 addressed by N2 on the notes)"],
             ["Reader pages", "Printed 1–6 · PDF 7–12 (core instruction pp. 1–5; p. 6 = forward preview \u201cEnergy Can Move and Change\u201d)"],
             ["Approximate time", "Two 30-min blocks (Block 1 \u201cObserve & Name\u201d · Block 2 \u201cForms & Stored\u201d)"],
-            ["Student resources", "Guided Notes (3 pp) — PLANNED rebuild · practice — AVAILABLE · Energy Detectives (FLEX) — AVAILABLE"],
-            ["Vocabulary / V-groups", "V1: energy · change (Reader p. 1) · V2: stored energy (Reader p. 4). evidence = Language of Instruction (no Reader page)."],
-            ["N-anchor map", "N1 MODEL IT: ENERGY → CHANGE → EVIDENCE · N2 DRAW/LABEL before-after · FORMS table · STORED examples · EVIDENCE table · CHECK YOUR THINKING"],
+            ["Student resources", "Guided Notes — AVAILABLE/FINAL (01-ch1-energy-causes-change-guided-notes, 3 pp) · practice — AVAILABLE · Energy Detectives (FLEX) — AVAILABLE"],
+            ["Vocabulary / V-groups", "V1: energy · change (Reader p. 1) · V2: stored energy (Reader p. 4). evidence + position = Language of Instruction (no Reader page) → concept blanks in N1/N3."],
+            ["N-anchor map", "N1 Energy Causes Change (ENERGY→CHANGE→EVIDENCE) · N2 Energy Occurs in Different Forms (5-form table) · N3 Objects Can Store Energy (STORED→RELEASE→CHANGE + examples + position) · N4 Recognizing Evidence (BEFORE/AFTER + CHECK YOUR THINKING) · BQ · NOW I THINK"],
             ["Lesson blocks (Block 1)", "BQ → sharpener DEMO → discuss change → vocab cards (energy, change) → read pp. 1–2 → MODEL IT + DRAW/LABEL → exit"],
             ["Lesson blocks (Block 2)", "recall → read p. 3 (forms) → vocab card (stored) → read pp. 4–5 → FORMS + STORED + evidence table → application → return to BQ"],
             ["What to project", "Slide deck — PLANNED Phase 4 (BQ banner · demo BEFORE/AFTER · vocab cards · notes mirror)"],
@@ -558,7 +558,7 @@ def answer_key_architecture(doc):
         [
             ["Ch1 practice key", "01-ch1-energy-causes-change-practice-key", "AVAILABLE"],
             ["Ch1 quiz key", "01-ch1-energy-causes-change-quiz-key", "AVAILABLE"],
-            ["Ch1 guided-notes key", "01-ch1 guided notes (rebuild)", "PLANNED / NOT YET GENERATED"],
+            ["Ch1 guided-notes key", "01-ch1-energy-causes-change-guided-notes-key", "AVAILABLE (FINAL · 3 pp)"],
             ["Ramp It Up 2.0 key", "03-ch3-ramp-it-up (ADAPT)", "PLANNED / NOT YET GENERATED (update existing)"],
             ["Pom-Pom Launcher key", "net-new build", "PLANNED / NOT YET GENERATED"],
             ["Study guide key", "unit1 study guide", "AVAILABLE"],

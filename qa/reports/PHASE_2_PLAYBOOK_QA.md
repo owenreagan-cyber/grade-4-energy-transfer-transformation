@@ -9,4 +9,4 @@ Overall: **PASS**
 - [PASS] grayscale contrast (primary vs white) — chapter primaries vs white < 3:1: none
 - [PASS] no banned/stale language — banned language: none
 - [PASS] required assessment terms — missing: none
-- [PASS] PDF render (size + footer) — size=True (Page size:       612 x 792 pts (letter)); Pages:           23; footer_pages=23
+- [PASS] PDF render (size + footer) — size=True (Page size:       612 x 792 pts (letter)); Pages:           24; footer_pages=24
