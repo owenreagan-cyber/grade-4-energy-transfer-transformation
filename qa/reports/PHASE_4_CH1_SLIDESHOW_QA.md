@@ -1,0 +1,26 @@
+# Phase 4 — Chapter 1 Slideshow Automated QA
+
+Overall: **PASS**
+
+Artifact: `production/slides/01-ch1-energy-causes-change-slides.pptx`
+
+- [PASS] slide dimensions (16:9) — 13.333 x 7.500 in (expect 13.333 x 7.5 / 16:9)
+- [PASS] font floor >= 12pt (chrome) — min 12.0 pt (floor 12, chrome) · max 54.0 pt
+- [PASS] vocab term >= 48pt — vocab term >= 48pt present
+- [PASS] no shape overflow — 0 shape(s) overflow slide: none
+- [PASS] visual-token compliance — unknown fills: none
+- [PASS] BQ/V/N anchors + order — missing/out-of-order anchors: none
+- [PASS] BQ exact wording — BQ exact wording present
+- [PASS] note wording mirror — missing note wording: none
+- [PASS] answers revealed (check slides) — answers missing: none
+- [PASS] no front-loaded answers — front-loaded (bold+gold) answers on wrong slides: none
+- [PASS] Reader page refs — reader refs found: ['Reader p. 1', 'Reader p. 3', 'Reader p. 4', 'pp. 1–2', 'pp. 4–5', 'pp. 1–6']
+- [PASS] vocab grouping (V1/V2) — V1 (energy+change) and V2 (stored energy) groupings present
+- [PASS] N2 five forms — N2 forms missing: none
+- [PASS] N3 three examples — N3 examples missing: none
+- [PASS] model chains (N1/N3) — model chains missing: none
+- [PASS] review A/B/C/D structure — 6 review questions; all have A/B/C/D
+- [PASS] no banned/stale language — banned language: none
+- [PASS] transfer/transform scope — transfer/transform outside unit title: none
+- [PASS] render QA (PDF pages) — PDF pages 45 == slides 45
+- [PASS] slide count — 45 slides

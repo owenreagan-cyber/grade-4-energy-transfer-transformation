@@ -496,7 +496,7 @@ def chapter1_spread(doc):
             ["N-anchor map", "N1 Energy Causes Change (ENERGY→CHANGE→EVIDENCE) · N2 Energy Occurs in Different Forms (5-form table) · N3 Objects Can Store Energy (STORED→RELEASE→CHANGE + examples + position) · N4 Recognizing Evidence (BEFORE/AFTER + CHECK YOUR THINKING) · BQ · NOW I THINK"],
             ["Lesson blocks (Block 1)", "BQ → sharpener DEMO → discuss change → vocab cards (energy, change) → read pp. 1–2 → MODEL IT + DRAW/LABEL → exit"],
             ["Lesson blocks (Block 2)", "recall → read p. 3 (forms) → vocab card (stored) → read pp. 4–5 → FORMS + STORED + evidence table → application → return to BQ"],
-            ["What to project", "Slide deck — PLANNED Phase 4 (BQ banner · demo BEFORE/AFTER · vocab cards · notes mirror)"],
+            ["What to project", "01-ch1-energy-causes-change-slides.pptx — FINAL (45 slides, 16:9) · BQ 2/3/33 · V1 10–12 · V2 20–22 · N1 13–16 · N2 17–19 · N3 23–27 · N4 28–31 · demo 4, 6–9 · review 34–45 · Reader pp. 1–6"],
             ["What students do", "Predict → observe → fill Key Words → complete ENERGY→CHANGE→EVIDENCE model → draw before/after → record evidence → answer Big Question"],
         ],
         [Inches(1.6), Inches(5.4)], size=9, first_bold=True)
@@ -540,6 +540,27 @@ def chapter1_demo_guide(doc):
             ["If Short on Time", "Skip the side-by-side comparison · use a single sharpen. Fall back to \u201cflip the light switch\u201d as a backup change."],
         ],
         [Inches(1.5), Inches(5.5)], size=9, first_bold=True)
+
+def chapter1_slide_map(doc):
+    c = CHAPTERS[1]
+    section_heading(doc, "Chapter 1 — Slideshow Map (FINAL)", color=C(c["primary"]))
+    callout(doc, "FILE", "production/slides/01-ch1-energy-causes-change-slides.pptx — 45 slides (16:9). Rendered PDF + 45 PNG previews alongside. Speaker notes on every slide (MODE · TIME · ASK · LISTEN FOR · REVEAL · NEXT).", accent_hex=c["primary"])
+    _para(doc, "", after=10)
+    data_table(doc, ["Anchor", "Slides", "What happens on screen"],
+        [
+            ["BQ", "2 · 3 · 33", "2 = Big Question banner + TURN & TALK · 3 = My first thinking (write) · 33 = BQ · NOW I THINK (return, write)"],
+            ["V1 (energy · change)", "10–12", "10 = two vocab cards · 11 = notes write · 12 = notes reveal (change · different)"],
+            ["V2 (stored energy)", "20–22", "20 = one large vocab card · 21 = notes write · 22 = notes reveal (later)"],
+            ["N1 Energy Causes Change", "13–16", "13 = definition · 14 = ENERGY → CHANGE → EVIDENCE model · 15 = write · 16 = reveal (cause · change · evidence)"],
+            ["N2 Energy Occurs in Different Forms", "17–19", "17 = five forms · 18 = clap check · 19 = 5-row form/example table"],
+            ["N3 Objects Can Store Energy", "23–27", "23 = still-battery predict · 24 = position · 25 = STORED → RELEASE → CHANGE model · 26 = write · 27 = reveal (position)"],
+            ["N4 Recognizing Evidence", "28–31", "28 = evidence concept · 29 = BEFORE/AFTER draw · 30 = CHECK YOUR THINKING write · 31 = sample + classify"],
+            ["Phenomenon / demo", "4 · 6–9", "4 = light-switch change · 6 = observe dull pencil · 7 = predict · 8 = before/after · 9 = change = evidence"],
+            ["Application / evidence", "32", "Which change shows energy at work? (choose the change)"],
+            ["End-of-chapter review", "34–45", "6 multiple-choice (A/B/C/D) — question state then answer state; letters shuffled A/B/C/D/B/C"],
+        ],
+        [Inches(1.9), Inches(1.1), Inches(4.0)], size=9, first_bold=True)
+    _para(doc, "Reader cues on-slide: V1/N1 pp. 1–2 · N2 p. 3 · V2/N3 pp. 4–5 · N4 pp. 1–6 · BQ p. 1. Timing: two 30-min blocks (Block 1 = slides 1–12 · Block 2 = slides 13–33) + review slides 34–45 as a third short block or Friday FLEX.", size=9, italic=True, color=INK_SOFT, after=8)
 
 def answer_key_architecture(doc):
     section_heading(doc, "Answer-Key Architecture")
@@ -611,6 +632,7 @@ def build():
     spread_template(doc); _page_break(doc)
     chapter1_spread(doc)
     chapter1_demo_guide(doc); _page_break(doc)
+    chapter1_slide_map(doc); _page_break(doc)
     answer_key_architecture(doc); _page_break(doc)
     special_sections(doc); _page_break(doc)
     chapter_placeholders(doc)

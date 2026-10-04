@@ -7,6 +7,7 @@
 | Resource | Audience | Chapter / day | Required / optional | Graded | Master location | Current status | Teacher key | Playbook reference |
 |---|---|---|---|---|---|---|---|---|
 | Guided Notes (per chapter) | Student | Ch1–7 | CORE | Not graded (formative) | `production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx` | Ch1 **AVAILABLE/FINAL** (3 pp) · Ch2–7 PLANNED (rebuild) | Ch1 key **AVAILABLE** (`…-key.docx`) · Ch2–7 PLANNED | Chapter spreads · §How Slides + Notes Work |
+| Chapter slideshow (per chapter) | Teacher | Ch1–7 | CORE | — | `production/slides/01-ch1-energy-causes-change-slides.pptx` | Ch1 **AVAILABLE/FINAL** (45 slides + PDF + 45 PNG previews) · Ch2–7 PLANNED (rebuild) | Not required (answers revealed on CHECK slides) | Chapter spreads · §Ch1 Slideshow Map |
 | Science Journal prompts | Student | Daily (distributed in map) | CORE | Not graded | `production/final-8.5-week/MASTER_CURRICULUM_MAP.md` (JOURNAL prompts) | AVAILABLE | Not required | Chapter spreads |
 | Chapter practice / application | Student | Ch1–7 | CORE | Not graded (practice) | `production/worksheets/` | AVAILABLE (KEEP; relabel Ch5 mass/weight §C as OPTIONAL/EXT) | AVAILABLE (`production/answer-keys/`) | Chapter spreads |
 | Ramp It Up 2.0 | Student (lab) | Ch3 · Week 2 (2-day) | CORE (flagship investigation) | Graded (formative) | `production/labs/03-ch3-ramp-it-up-teacher-spec.md` | ADAPT — PLANNED (calibration · roles · actual height · Design-Your-Ramp) | PLANNED (update) | Ramp It Up 2.0 guide |
@@ -25,7 +26,7 @@
 
 | Class | Count | Notes |
 |---|---|---|
-| AVAILABLE | 9 | study guide · review game · test · existing keys · demo content · FLEX · absent · journal prompts · **Ch1 Guided Notes (student + key)** |
-| PLANNED | 4 | Guided Notes Ch2–7 (rebuild) · Slides (rebuild) · Ramp It Up 2.0 (ADAPT) · Pom-Pom Launcher (net-new) |
+| AVAILABLE | 10 | study guide · review game · test · existing keys · demo content · FLEX · absent · journal prompts · **Ch1 Guided Notes (student + key)** · **Ch1 Slideshow (45 slides)** |
+| PLANNED | 4 | Guided Notes Ch2–7 (rebuild) · Slides Ch2–7 (rebuild) · Ramp It Up 2.0 (ADAPT) · Pom-Pom Launcher (net-new) |
 | PARTIAL | 1 | media (Ch1–2 staged · Ch3–7 scripts-only) |
 | NOT REQUIRED / RETIRED | 1 | INB + legacy `student-notes/01,02` |
