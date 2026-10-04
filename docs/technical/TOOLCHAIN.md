@@ -69,7 +69,9 @@ pdftoppm -png -r <dpi> <file.pdf> <out_prefix>   # PDF -> PNG for visual inspect
 
 ## rsvg-convert role
 
-- SVG -> PNG rasterization for diagram assets (`build_lab_setup_guides.py`).
+- SVG -> PNG rasterization for diagram assets (`build_lab_setup_guides.py`) and the Unit 1 visual system (`tools/build_visual_system.py`).
+- **Certified version (Phase 1.1 freeze):** `rsvg-convert version 2.62.3` (Homebrew `librsvg`; cairo 1.18.4, pango 1.58.2, harfbuzz 14.3.1, fontconfig 2.18.3).
+- **Reproducibility policy:** the root `Brewfile` declares `librsvg` (the required package). Exact Homebrew formula pinning is not used — the repo does not support a reliable pinning mechanism. Version changes are detected by `rsvg-convert --version` and **require visual re-certification** of the affected PNG renders (re-run `tools/qa_visual_system.py`, which exercises the `render_integrity` gate, and eyeball the grayscale proof) before any asset is treated as release-ready.
 
 ## ImageMagick role
 

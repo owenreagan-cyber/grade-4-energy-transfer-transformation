@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="200" viewBox="0 0 620 200" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="620" height="200" rx="12" fill="#FFFFFF" stroke="#D8DCE4" stroke-width="1"/>
+<rect x="24" y="70" width="160" height="60" rx="10" fill="rgba(31,42,90,0.12)" stroke="#D8DCE4" stroke-width="1.25"/>
+<text x="104" y="106" font-size="16" fill="#1F2A5A" font-weight="Bold" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">SOURCE</text>
+<rect x="436" y="70" width="160" height="60" rx="10" fill="rgba(31,92,61,0.12)" stroke="#D8DCE4" stroke-width="1.25"/>
+<text x="516" y="106" font-size="16" fill="#1F5C3D" font-weight="Bold" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">RECEIVER</text>
+<path d="M184 100 H436 L446 100 L434 92 M436 100 L434 108" fill="none" stroke="#1A1D26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="310" y="60" font-size="14" fill="#4A5268" font-weight="DemiBold" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">PATH</text>
+<text x="310" y="24" font-size="16" fill="#1A1D26" font-weight="Bold" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">Sample Energy Path Diagram</text>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M8 24 C8 14 15 8 24 8 C33 8 40 14 40 24 C40 34 33 40 24 40 C15 40 8 34 8 24 Z" fill="none" stroke="#1A1D26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="24" cy="24" r="5" fill="none" stroke="#1A1D26" stroke-width="2"/>
+<circle cx="24" cy="24" r="2" fill="#1A1D26" stroke="none" stroke-width="1"/>
+</g>
+</svg>

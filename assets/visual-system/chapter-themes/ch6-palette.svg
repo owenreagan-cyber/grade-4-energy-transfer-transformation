@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="180" viewBox="0 0 300 180" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="300" height="180" rx="10" fill="#FFFFFF" stroke="#D8DCE4" stroke-width="1"/>
+<text x="16" y="28" font-size="15" fill="#1A1D26" font-weight="Bold" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">Engineering / Transformation</text>
+<text x="16" y="46" font-size="11" fill="#4A5268" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">CH6 · dark green · brass/gold · blue-gray · off-white</text>
+<rect x="16" y="66" width="60" height="60" rx="6" fill="#1F5C3D" stroke="#D8DCE4" stroke-width="1"/>
+<text x="46" y="142" font-size="10" fill="#4A5268" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">primary</text>
+<text x="46" y="154" font-size="10" fill="#1A1D26" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">#1F5C3D</text>
+<rect x="84" y="66" width="60" height="60" rx="6" fill="#8F6D24" stroke="#D8DCE4" stroke-width="1"/>
+<text x="114" y="142" font-size="10" fill="#4A5268" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">accent</text>
+<text x="114" y="154" font-size="10" fill="#1A1D26" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">#8F6D24</text>
+<rect x="152" y="66" width="60" height="60" rx="6" fill="#5A6B7A" stroke="#D8DCE4" stroke-width="1"/>
+<text x="182" y="142" font-size="10" fill="#4A5268" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">neutral</text>
+<text x="182" y="154" font-size="10" fill="#1A1D26" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">#5A6B7A</text>
+<rect x="220" y="66" width="60" height="60" rx="6" fill="#F4F5F3" stroke="#D8DCE4" stroke-width="1"/>
+<text x="250" y="142" font-size="10" fill="#4A5268" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">surface</text>
+<text x="250" y="154" font-size="10" fill="#1A1D26" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">#F4F5F3</text>
+</svg>

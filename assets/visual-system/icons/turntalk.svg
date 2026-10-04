@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M8 14h22v14a5 5 0 0 1-5 5H16l-5 3v-3H8z" fill="none" stroke="#1A1D26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 28h14v10a4 4 0 0 1-4 4h-5l-4 2v-2h-3z" fill="#FFFFFF" stroke="#1A1D26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

@@ -1,0 +1,212 @@
+{
+  "$schema": "design-tokens-v1",
+  "name": "Grade 4 Energy Transfer & Transformation — Unit 1 Visual System",
+  "design_system_version": "1.0",
+  "version_identifier": "UNIT1_VISUAL_SYSTEM_VERSION = 1.0",
+  "status": "FROZEN",
+  "freeze_note": "design-tokens.json is the single machine-readable source of truth. Figma mirrors these tokens; exported SVGs mirror these tokens; DOCX/PPTX generators must consume or reproduce these values. Any future visual-system change requires a token update + regenerated assets + QA re-run.",
+  "source": "docs/standards/VISUAL_DESIGN_SYSTEM.md",
+  "audience": "Grade 4 · 30-minute blocks · print + projector",
+  "art_direction": {
+    "target": "modern museum exhibit + excellent elementary science textbook + strong teacher presentation",
+    "avoid": [
+      "busy Canva-marketplace look",
+      "childish clip art",
+      "excessive gradients",
+      "heavy decorative frames",
+      "cramped textbook pages"
+    ],
+    "principles": [
+      "Every visual teaches — no decorative clutter",
+      "Family resemblance + clear mode shifts, not one identical template",
+      "Color is never the only signal (grayscale-safe)",
+      "Generous Grade 4 writing space",
+      "Premium but restrained; no ornate fantasy/trading-card styling"
+    ]
+  },
+  "fonts": {
+    "primary": "Avenir Next",
+    "fallback": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+    "note": "Single family, weight + size for hierarchy. No decorative display faces."
+  },
+  "type": {
+    "slide": {
+      "canvas": "16:9 (1280 x 720 pt)",
+      "deck_major_pt": 50,
+      "slide_title_pt": 42,
+      "body_pt": 32,
+      "label_pt": 28,
+      "floor_pt": 28,
+      "weights": { "title": "Bold", "body": "Regular", "label": "DemiBold" }
+    },
+    "handout": {
+      "canvas": "US Letter (612 x 792 pt)",
+      "page_title_pt": 26,
+      "section_pt": 16,
+      "body_pt": 14,
+      "label_pt": 11,
+      "floor_pt": 11,
+      "weights": { "title": "Bold", "section": "Bold", "body": "Regular", "label": "DemiBold" },
+      "note": "Body never below 12pt; 11pt reserved for captions/page refs only."
+    }
+  },
+  "spacing": {
+    "unit": "pt",
+    "scale": { "xs": 4, "sm": 8, "md": 12, "lg": 16, "xl": 24, "2xl": 32, "3xl": 48 },
+    "slide_gutter_pt": 24,
+    "handout_gutter_pt": 18
+  },
+  "margins": {
+    "slide": { "left_pt": 40, "right_pt": 40, "top_pt": 32, "bottom_pt": 28 },
+    "handout": { "left_pt": 54, "right_pt": 54, "top_pt": 48, "bottom_pt": 54 },
+    "note": "Slide safe area = 40pt inset on all sides (projector overscan)."
+  },
+  "grid": {
+    "slide": { "columns": 12, "gutter_pt": 24, "module_gap_pt": 8 },
+    "handout": { "columns": 8, "gutter_pt": 18, "module_gap_pt": 12 }
+  },
+  "radius": {
+    "card_pt": 12,
+    "badge_pill": 999,
+    "image_frame_pt": 8,
+    "button": 999,
+    "note": "Pills for badges/HUD only; panels use 12pt soft corners. No ornate frames."
+  },
+  "line_weights": {
+    "hairline_pt": 0.75,
+    "panel_border_pt": 1.25,
+    "diagram_arrow_pt": 2.5,
+    "emphatic_pt": 3.0,
+    "icon_stroke_pt": 2.0
+  },
+  "icons": {
+    "grid": 48,
+    "viewbox": "0 0 48 48",
+    "stroke_pt": 2,
+    "caps": "round",
+    "joins": "round",
+    "fill": "currentColor",
+    "style": "single-color line icons; filled state only for active status"
+  },
+  "arrows": {
+    "transfer": "solid straight arrow, filled head, 2.5pt, chapter accent",
+    "motion": "curved arrow, filled head, 2.5pt, chapter accent",
+    "transformation": "arrow with solid diamond marker at midpoint (form change), 2.5pt",
+    "cause_effect": "arrow with chevron, 2.5pt, ink",
+    "head_scale": 1.8,
+    "note": "Arrows = model, not mechanism. No compression-wave/electron detail."
+  },
+  "callout": {
+    "accent_bar_pt": 3,
+    "radius_pt": 12,
+    "fill": "surface",
+    "teacher_tag": ["LIVE", "BACKUP", "TIME", "ASK", "LISTEN-FOR", "NEXT", "IF-SHORT-ON-TIME"]
+  },
+  "table": {
+    "header_fill": "primary 10% tint",
+    "header_text": "ink, bold",
+    "header_rule_pt": 1.5,
+    "row_rule_pt": 0.75,
+    "min_row_height_in": 0.5,
+    "note": "Shaded header row required; landscape investigation tables min 1.1 in."
+  },
+  "chart": {
+    "axis_pt": 2,
+    "tick_pt": 1,
+    "data_fill": "chapter accent + ink",
+    "grid": "light, non-competition",
+    "note": "Student graphs: clean axes, tick marks, no heavy grid."
+  },
+  "grayscale": {
+    "rule": "Color never the only signal; use label text + shape + position.",
+    "contrast_floor": ">= 3:1 after desaturation for primary vs white",
+    "note": "Primary desaturates darker than accent so headings survive B/W print."
+  },
+  "contrast": {
+    "body_text": ">= 4.5:1",
+    "large_text_24pt": ">= 3:1",
+    "projector_target": ">= 4.5:1",
+    "standard": "WCAG AA"
+  },
+  "colors": {
+    "unit": {
+      "ink": "#1A1D26",
+      "ink_soft": "#4A5268",
+      "paper": "#FFFFFF",
+      "mist": "#F6F7F9",
+      "rule": "#D8DCE4"
+    },
+    "chapters": {
+      "ch1": {
+        "name": "Discovery / Evidence",
+        "primary": "#1F2A5A",
+        "accent": "#A67C16",
+        "neutral": "#7A5620",
+        "surface": "#F5EEDC",
+        "keywords": ["deep navy", "warm gold", "muted amber", "cream"]
+      },
+      "ch2": {
+        "name": "Motion",
+        "primary": "#0F5A5C",
+        "accent": "#0E8A97",
+        "neutral": "#5B6770",
+        "surface": "#FFFFFF",
+        "keywords": ["deep teal", "aqua", "slate", "white"]
+      },
+      "ch3": {
+        "name": "Measurement / Data",
+        "primary": "#1B4FC2",
+        "accent": "#5E8A18",
+        "neutral": "#2B2F36",
+        "surface": "#E9EBEF",
+        "keywords": ["cobalt", "chartreuse", "charcoal", "light gray"]
+      },
+      "ch4": {
+        "name": "Pathways / Connections",
+        "primary": "#6A3FB5",
+        "accent": "#0E93A6",
+        "neutral": "#2A2350",
+        "surface": "#EFEDF6",
+        "keywords": ["violet", "cyan", "dark indigo", "light neutral"]
+      },
+      "ch5": {
+        "name": "Impact / Before-After",
+        "primary": "#A62626",
+        "accent": "#C25A1E",
+        "neutral": "#2E2E30",
+        "surface": "#F7EFE2",
+        "keywords": ["deep red", "orange", "charcoal", "cream"]
+      },
+      "ch6": {
+        "name": "Engineering / Transformation",
+        "primary": "#1F5C3D",
+        "accent": "#8F6D24",
+        "neutral": "#5A6B7A",
+        "surface": "#F4F5F3",
+        "keywords": ["dark green", "brass/gold", "blue-gray", "off-white"]
+      },
+      "ch7": {
+        "name": "Innovation / Historical Engineering",
+        "primary": "#3E2C1F",
+        "accent": "#A06E16",
+        "neutral": "#2E3238",
+        "surface": "#EFE3CE",
+        "keywords": ["warm sepia", "deep brown", "tungsten amber", "dark slate"]
+      }
+    }
+  },
+  "hud_actions": {
+    "normal": ["RECITE", "WRITE", "PREDICT", "VOTE", "TURN & TALK", "CHECK", "TRACE", "DRAW", "WATCH"],
+    "optional": ["OBSERVE", "EVIDENCE", "DATA", "ENGINEER", "EXPLAIN"],
+    "role": "temporary action guidance, NOT note navigation",
+    "note_nav": ["BQ", "V1", "V2", "N1", "N2"]
+  },
+  "resource_badges": ["GUIDED NOTES", "PRACTICE", "LAB", "SCIENCE JOURNAL", "REVIEW", "STEM CHALLENGE"],
+  "components": {
+    "chapter_tab": { "width_pt": 320, "height_pt": 52, "radius_pt": 10 },
+    "vocabulary_card": { "width_pt": 560, "height_pt": 360, "radius_pt": 12 },
+    "bq_panel": { "height_pt": 96, "radius_pt": 12, "width_mode": "full" },
+    "hud_bubble": { "width_pt": 240, "height_pt": 64, "radius_pt": 999 },
+    "resource_badge": { "width_pt": 260, "height_pt": 44, "radius_pt": 999 }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "figma-parity-v1",
+  "parity_version": "1.0",
+  "design_system_version": "1.0",
+  "verified_at": "2026-10-03",
+  "verified_by": "cursor-coordinator (MCP use_figma / get_variable_defs / get_metadata)",
+  "figma_file": "Grade 4 Energy — Unit 1 Visual System",
+  "figma_file_key": "eiWPWePF0nhpujdcxYLo0e",
+  "canonical_source": "assets/visual-system/design-tokens.json",
+  "role": "QA snapshot of Figma values, NOT a source of truth. design-tokens.json is authoritative. tools/qa_visual_system.py fails if this manifest diverges from the canonical tokens. Re-verify procedure: list Figma variables (getLocalVariablesAsync) and component dimensions (get_metadata), compare to tokens, then update verified_at.",
+  "font_note": "Canonical family is Avenir Next (system font, used in local SVG/PDF). Figma does not bundle Avenir Next, so the Figma pilot substitutes Inter. Non-blocking; local canonical assets remain Avenir Next.",
+  "colors": {
+    "unit": {
+      "ink": "#1A1D26",
+      "ink_soft": "#4A5268",
+      "paper": "#FFFFFF",
+      "mist": "#F6F7F9",
+      "rule": "#D8DCE4"
+    },
+    "chapters": {
+      "ch1": { "primary": "#1F2A5A", "accent": "#A67C16", "neutral": "#7A5620", "surface": "#F5EEDC" },
+      "ch2": { "primary": "#0F5A5C", "accent": "#0E8A97", "neutral": "#5B6770", "surface": "#FFFFFF" },
+      "ch3": { "primary": "#1B4FC2", "accent": "#5E8A18", "neutral": "#2B2F36", "surface": "#E9EBEF" },
+      "ch4": { "primary": "#6A3FB5", "accent": "#0E93A6", "neutral": "#2A2350", "surface": "#EFEDF6" },
+      "ch5": { "primary": "#A62626", "accent": "#C25A1E", "neutral": "#2E2E30", "surface": "#F7EFE2" },
+      "ch6": { "primary": "#1F5C3D", "accent": "#8F6D24", "neutral": "#5A6B7A", "surface": "#F4F5F3" },
+      "ch7": { "primary": "#3E2C1F", "accent": "#A06E16", "neutral": "#2E3238", "surface": "#EFE3CE" }
+    }
+  },
+  "components": {
+    "chapter_tab": { "width_pt": 320, "height_pt": 52 },
+    "vocabulary_card": { "width_pt": 560, "height_pt": 360 },
+    "bq_panel": { "height_pt": 96, "width_mode": "full" },
+    "hud_bubble": { "width_pt": 240, "height_pt": 64 },
+    "resource_badge": { "width_pt": 260, "height_pt": 44 }
+  }
+}

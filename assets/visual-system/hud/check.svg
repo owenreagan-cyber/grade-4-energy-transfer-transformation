@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif" color="#1F2A5A">
+<rect x="0" y="0" width="240" height="64" rx="32" fill="currentColor" stroke="none" stroke-width="1"/>
+<circle cx="32" cy="32" r="18" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<g transform="translate(20,20)" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M10 25 l9 9 L40 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="62" y="39" font-size="24" fill="#FFFFFF" font-weight="Bold" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">CHECK</text>
+</svg>

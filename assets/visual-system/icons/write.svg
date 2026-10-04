@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M14 40 L8 46 L12 36 L34 14 A4 4 0 0 1 40 20 L18 42 Z" fill="none" stroke="#1A1D26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="30" y1="18" x2="38" y2="26" stroke="#1A1D26" stroke-width="2" stroke-linecap="round"/>
+</g>
+</svg>

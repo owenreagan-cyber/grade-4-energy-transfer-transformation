@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" font-family="Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 20 h12 a6 6 0 0 1 0 12 h-2 l-6 5 v-5 h-4 a6 6 0 0 1 0 -12 Z" fill="none" stroke="#1A1D26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="14" y1="24" x2="22" y2="24" stroke="#1A1D26" stroke-width="2" stroke-linecap="round"/>
+<line x1="14" y1="29" x2="26" y2="29" stroke="#1A1D26" stroke-width="2" stroke-linecap="round"/>
+</g>
+</svg>
