@@ -1,5 +1,7 @@
 # CHAPTER 1 MANIFEST — Energy Causes Change
 
+> ⚠️ **SUPERSEDED (Phase 5).** This historical manifest predates the Phase 0A.1 reconciliation and reflects the retired Interactive-Science-Notebook-primary architecture. The **canonical** Chapter 1 package manifest is now `docs/chapter-01/CH1_PACKAGE_MANIFEST.md`. Content below is retained for provenance only.
+
 # Chapter Identity
 - **Chapter number:** 1
 - **Official title:** Energy Causes Change

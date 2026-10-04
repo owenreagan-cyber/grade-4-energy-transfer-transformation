@@ -265,7 +265,7 @@ def cover(doc):
     _run(bp, "TEACHER PLAYBOOK", size=10, bold=True, color=WHITE)
 
     _para(doc, "", after=30)
-    callout(doc, "SCOPE", "Phase 2 foundation. Chapters 2–7 spreads and special sections are PLANNED placeholders pending Phases 3–4. Chapter 1 is fully prototyped. No student curriculum artifact was modified.", accent_hex="#1F2A5A")
+    callout(doc, "SCOPE", "Phase 5 — Chapter 1 supporting-resource ecosystem complete. Guided Notes + Slideshow are FINAL (Phases 3–4); practice/application, chapter quiz, absent-recovery, and FLEX Energy Detectives are retained; study-guide contribution + assessment trace are recorded. Chapters 2–7 spreads and special sections remain PLANNED placeholders pending later phases.", accent_hex="#1F2A5A")
     _para(doc, "", after=10)
     callout(doc, "AUTHORITY", "Authoritative curriculum = CKSci Student Reader + Teacher Guide. This playbook documents the final system; it does not drive curriculum decisions.", accent_hex="#1F2A5A")
 
@@ -367,6 +367,8 @@ def resource_map(doc):
             ["Guided Notes (Ch1–7)", "Student", "CORE", "No (formative)", "Ch1 AVAILABLE/FINAL · Ch2–7 PLANNED", "Ch1 AVAILABLE · Ch2–7 PLANNED"],
             ["Science Journal prompts", "Student", "CORE", "No", "AVAILABLE", "—"],
             ["Chapter practice/application", "Student", "CORE", "No (practice)", "AVAILABLE", "AVAILABLE"],
+            ["Chapter quiz (Ch1)", "Student", "CORE", "Formative (graded)", "Ch1 AVAILABLE (9-item)", "AVAILABLE"],
+            ["Energy Detectives (Ch1)", "Student", "OPTIONAL/FLEX", "No", "AVAILABLE (reclassified)", "AVAILABLE"],
             ["Ramp It Up 2.0", "Student (lab)", "CORE", "Formative", "ADAPT — PLANNED", "PLANNED"],
             ["Pom-Pom Launcher", "Student (build)", "REQUIRED BUILD", "Formative", "PLANNED (net-new)", "PLANNED"],
             ["Study guide", "Student", "CORE", "No (practice)", "AVAILABLE", "AVAILABLE"],
@@ -562,6 +564,27 @@ def chapter1_slide_map(doc):
         [Inches(1.9), Inches(1.1), Inches(4.0)], size=9, first_bold=True)
     _para(doc, "Reader cues on-slide: V1/N1 pp. 1–2 · N2 p. 3 · V2/N3 pp. 4–5 · N4 pp. 1–6 · BQ p. 1. Timing: two 30-min blocks (Block 1 = slides 1–12 · Block 2 = slides 13–33) + review slides 34–45 as a third short block or Friday FLEX.", size=9, italic=True, color=INK_SOFT, after=8)
 
+def chapter1_support_index(doc):
+    c = CHAPTERS[1]
+    section_heading(doc, "Chapter 1 — Supporting Resource Index (Phase 5)", color=C(c["primary"]))
+    callout(doc, "PRINCIPLE", "Lean ecosystem: every resource has a distinct instructional job; nothing merely repeats the Guided Notes. Guided Notes (primary) + Science Journal (secondary) + a separate worksheet only for a distinct apply task.", accent_hex=c["primary"])
+    _para(doc, "", after=10)
+    data_table(doc, ["Resource", "Canonical file", "Required", "Graded", "When used", "Key / absent"],
+        [
+            ["Guided Notes (3 pp)", "01-ch1-energy-causes-change-guided-notes", "REQUIRED", "Not graded", "Blocks 1–2 (notes write)", "key AVAILABLE"],
+            ["Slideshow (45 slides)", "01-ch1-energy-causes-change-slides.pptx", "REQUIRED", "\u2014", "Blocks 1–2 + review", "\u2014 (CHECK slides reveal)"],
+            ["Practice / application", "01-ch1-energy-causes-change-practice.docx", "REQUIRED", "Not graded (practice)", "Block 2 application", "key AVAILABLE"],
+            ["Chapter quiz (9-item)", "01-ch1-energy-causes-change-quiz.docx", "REQUIRED", "Formative (graded)", "End of chapter", "key + blueprint AVAILABLE"],
+            ["Science Journal", "MASTER_CURRICULUM_MAP.md (2 prompts)", "OPTIONAL/FLEX", "Not graded", "Daily, secondary role", "\u2014 (reflective)"],
+            ["Absent / makeup", "student/recovery/01-ch1-absent-student-recovery.md", "REQUIRED (support)", "Not graded", "After absence", "self-contained"],
+            ["Energy Detectives", "01-ch1-energy-detectives-student.docx", "OPTIONAL/FLEX", "Not graded", "Friday FLEX", "key AVAILABLE"],
+            ["Friday FLEX", "student/01-ch1-friday-flex.md", "OPTIONAL/FLEX", "Not graded", "Friday", "\u2014"],
+            ["Study-guide contribution", "docs/chapter-01/CH1_STUDY_GUIDE_CONTRIBUTION.md", "REFERENCE", "\u2014", "Unit assembly", "\u2014"],
+            ["Assessment trace", "docs/chapter-01/CH1_ASSESSMENT_TRACE.md", "REFERENCE", "\u2014", "Unit assembly", "\u2014"],
+        ],
+        [Inches(1.35), Inches(1.9), Inches(0.95), Inches(0.95), Inches(1.05), Inches(0.8)], size=9, first_bold=True)
+    callout(doc, "LEAN", "No new student handout or teacher key was created in Phase 5. The practice page is a distinct APPLY task (evidence judgment, not note recopy), so it is kept. Science Journal is already covered by two daily prompts. Energy Detectives is reclassified OPTIONAL/FLEX.", accent_hex=c["primary"])
+
 def answer_key_architecture(doc):
     section_heading(doc, "Answer-Key Architecture")
     sub_heading(doc, "How keys are built")
@@ -580,6 +603,7 @@ def answer_key_architecture(doc):
             ["Ch1 practice key", "01-ch1-energy-causes-change-practice-key", "AVAILABLE"],
             ["Ch1 quiz key", "01-ch1-energy-causes-change-quiz-key", "AVAILABLE"],
             ["Ch1 guided-notes key", "01-ch1-energy-causes-change-guided-notes-key", "AVAILABLE (FINAL · 3 pp)"],
+            ["Ch1 Energy Detectives key", "01-ch1-energy-detectives-key", "AVAILABLE (OPTIONAL/FLEX)"],
             ["Ramp It Up 2.0 key", "03-ch3-ramp-it-up (ADAPT)", "PLANNED / NOT YET GENERATED (update existing)"],
             ["Pom-Pom Launcher key", "net-new build", "PLANNED / NOT YET GENERATED"],
             ["Study guide key", "unit1 study guide", "AVAILABLE"],
@@ -598,7 +622,7 @@ def special_sections(doc):
             ["Unit 1 assessment administration", "SKELETON · locked 25Q/50pt", "production/quizzes/07-unit-final-assessment.docx"],
             ["Answer-key index", "RENDERED", "see Answer-Key Architecture"],
             ["FLEX / enrichment / catch-up", "SKELETON · points to framework", "docs/planning/FRIDAY_FLEX_FRAMEWORK.md"],
-            ["Absent / makeup support", "SKELETON · points to per-chapter recovery", "curriculum/chapter-0N/student/recovery/"],
+            ["Absent / makeup support", "Ch1 AVAILABLE · Ch2–7 SKELETON", "curriculum/chapter-0N/student/recovery/"],
             ["Media index", "SKELETON · Ch1–2 staged · Ch3–7 scripts-only", "docs/planning/WHOLE_UNIT_MEDIA_STAGING.md"],
         ],
         [Inches(2.0), Inches(2.2), Inches(2.8)], size=9, first_bold=True)
@@ -633,6 +657,7 @@ def build():
     chapter1_spread(doc)
     chapter1_demo_guide(doc); _page_break(doc)
     chapter1_slide_map(doc); _page_break(doc)
+    chapter1_support_index(doc); _page_break(doc)
     answer_key_architecture(doc); _page_break(doc)
     special_sections(doc); _page_break(doc)
     chapter_placeholders(doc)

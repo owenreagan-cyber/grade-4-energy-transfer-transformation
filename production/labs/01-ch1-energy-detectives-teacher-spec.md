@@ -1,10 +1,10 @@
 # Lab Teacher Spec — Energy Detectives (Scavenger Hunt)
 
-- **Lab #:** Chapter 1 core investigation (Lab 1 of the 8-lab backbone)
+- **Lab #:** Chapter 1 optional scavenger-hunt activity (formerly Lab 1 of the 8-lab backbone; RECLASSIFIED Phase 5)
 - **Title:** Energy Detectives
-- **Chapter/week:** Chapter 1 · Week 1
-- **Tag:** CORE
-- **Big Question:** Where can we find evidence of energy causing change?
+- **Chapter/week:** Chapter 1 · Week 1 (Friday FLEX)
+- **Tag:** OPTIONAL/FLEX
+- **Big Question:** Where can we observe evidence of energy causing change?
 - **Concept:** energy is the ability to cause change; a change is evidence of energy
 - **Time:** ~25–30 min (investigation + debrief)
 - **Prep:** low

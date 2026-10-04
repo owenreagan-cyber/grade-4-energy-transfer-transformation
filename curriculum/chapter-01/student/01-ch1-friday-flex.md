@@ -16,7 +16,7 @@
 | Concepts reinforced | energy causes change, evidence |
 
 **Options:**
-- Finish the Energy Detectives scavenger hunt (Tuesday's AP 1.1 page).
+- Finish the Energy Detectives scavenger hunt (Friday FLEX page).
 - Absent-student recovery (see `student/recovery/01-ch1-absent-student-recovery.md`).
 - Notes correction — complete missing guided-notes sections with teacher support.
 

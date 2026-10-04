@@ -21,4 +21,4 @@
 - No collisions or engineering design.
 
 ## Total
-~16 points (scored to a class-appropriate denominator; adjust per school grading policy — see OPEN_QUESTIONS).
+16 points (scored to a class-appropriate denominator; raw score + percentage — see OPEN_QUESTIONS).

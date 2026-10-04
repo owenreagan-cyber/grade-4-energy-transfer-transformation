@@ -10,6 +10,7 @@
 | Chapter slideshow (per chapter) | Teacher | Ch1–7 | CORE | — | `production/slides/01-ch1-energy-causes-change-slides.pptx` | Ch1 **AVAILABLE/FINAL** (45 slides + PDF + 45 PNG previews) · Ch2–7 PLANNED (rebuild) | Not required (answers revealed on CHECK slides) | Chapter spreads · §Ch1 Slideshow Map |
 | Science Journal prompts | Student | Daily (distributed in map) | CORE | Not graded | `production/final-8.5-week/MASTER_CURRICULUM_MAP.md` (JOURNAL prompts) | AVAILABLE | Not required | Chapter spreads |
 | Chapter practice / application | Student | Ch1–7 | CORE | Not graded (practice) | `production/worksheets/` | AVAILABLE (KEEP; relabel Ch5 mass/weight §C as OPTIONAL/EXT) | AVAILABLE (`production/answer-keys/`) | Chapter spreads |
+| Chapter quiz (per chapter) | Student | Ch1–7 | CORE | **GRADED** (formative) | `production/quizzes/` | Ch1 AVAILABLE (9-item · key + blueprint) · Ch2–7 as produced | AVAILABLE (`production/answer-keys/`) | Chapter spreads · Assessment plan |
 | Ramp It Up 2.0 | Student (lab) | Ch3 · Week 2 (2-day) | CORE (flagship investigation) | Graded (formative) | `production/labs/03-ch3-ramp-it-up-teacher-spec.md` | ADAPT — PLANNED (calibration · roles · actual height · Design-Your-Ramp) | PLANNED (update) | Ramp It Up 2.0 guide |
 | Pom-Pom Launcher | Student (build) | End of unit (Week 4) | REQUIRED BUILD | Formative (not major grade) | net-new (ADAPTED from colleague) | PLANNED | PLANNED | Pom-Pom Launcher guide |
 | Study guide | Student | Ch7 / review (Week 4) | CORE | Not graded (practice) | `production/review/` | AVAILABLE (aligned to 25Q) | AVAILABLE | Review plan |
@@ -18,7 +19,8 @@
 | Answer keys | Teacher | All | CORE | — | `production/answer-keys/` | AVAILABLE (existing) / PLANNED (for rebuilt resources) | — (keys themselves) | Answer-key index |
 | Teacher demos (7) | Teacher | Ch1–7 | CORE | — | `curriculum/chapter-0N/teacher/0N-chN-teacher-notes.md` (content) | AVAILABLE (content) / PLANNED (consolidated demo guide) | Not required | Demo guides |
 | FLEX resources | Student/Teacher | Fridays | OPTIONAL/FLEX | Not graded | `curriculum/chapter-0N/student/0N-chN-friday-flex.md` | AVAILABLE | Not required | FLEX / enrichment |
-| Absent-student recovery | Student/Teacher | Per chapter | CORE (support) | Not graded | `curriculum/chapter-0N/student/recovery/` | AVAILABLE | Not required | Absent / makeup |
+| Absent-student recovery | Student/Teacher | Per chapter | CORE (support) | Not graded | `curriculum/chapter-0N/student/recovery/` | AVAILABLE (Ch1 recovery guide present) | Not required | Absent / makeup |
+| Energy Detectives (Ch1) | Student | Ch1 · Friday FLEX | OPTIONAL/FLEX | Not graded | `production/worksheets/01-ch1-energy-detectives-student.docx` + key + teacher spec | AVAILABLE (RECLASSIFIED from CORE → OPTIONAL/FLEX, Phase 5) | AVAILABLE (`production/answer-keys/01-ch1-energy-detectives-key.md`) | FLEX / enrichment |
 | Media (video/scripts) | Teacher | Ch1–2 (staged) · Ch3–7 (scripts) | OPTIONAL/FLEX | — | `production/media/scripts/` · `docs/planning/WHOLE_UNIT_MEDIA_STAGING.md` | PARTIAL (Ch1–2 staged · Ch3–7 scripts-only) | Not required | Media index |
 | Retired INB / legacy notes | — | — | NOT REQUIRED | — | `production/student-notebook/` · `production/student-notes/01,02` | RETIRED / superseded (archive) | — | Not referenced |
 
@@ -30,3 +32,15 @@
 | PLANNED | 4 | Guided Notes Ch2–7 (rebuild) · Slides Ch2–7 (rebuild) · Ramp It Up 2.0 (ADAPT) · Pom-Pom Launcher (net-new) |
 | PARTIAL | 1 | media (Ch1–2 staged · Ch3–7 scripts-only) |
 | NOT REQUIRED / RETIRED | 1 | INB + legacy `student-notes/01,02` |
+
+---
+
+## Chapter 1 Phase 5 support records
+
+| Record | Path | Status |
+|---|---|---|
+| Package manifest | `docs/chapter-01/CH1_PACKAGE_MANIFEST.md` | AVAILABLE (Phase 5 — canonical; supersedes `curriculum/chapter-01/CHAPTER_MANIFEST.md`) |
+| Study-guide contribution | `docs/chapter-01/CH1_STUDY_GUIDE_CONTRIBUTION.md` | AVAILABLE (Phase 5) |
+| Assessment trace | `docs/chapter-01/CH1_ASSESSMENT_TRACE.md` | AVAILABLE (Phase 5 — 6 items / 12 pts, direct coverage) |
+
+> Chapter 1 practice page is **KEEP** (application task, not note recopy). Chapter 1 Science Journal is served by the two daily prompts already in `MASTER_CURRICULUM_MAP.md`. Chapter 1 absent/makeup is served by the existing recovery guide. No new student handout or new teacher key was created in Phase 5.

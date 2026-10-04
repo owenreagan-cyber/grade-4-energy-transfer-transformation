@@ -17,7 +17,7 @@
 
 ## Student-Friendly Learning Targets
 - I can tell how energy causes a change.
-- I can find evidence of energy by looking for changes.
+- I can observe changes that show evidence of energy.
 - I can name forms of energy (motion, sound, light, heat, electrical energy).
 - I can explain that an object can have stored energy even when it is not moving.
 

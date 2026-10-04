@@ -2,8 +2,21 @@
 
 > Recovers the essential idea without recreating a whole investigation. Wording uses "Our class observed…" so absent students do not claim observations they did not make.
 
+## Big Question (exact wording)
+**Where can we observe evidence of energy causing change?**
+
 ## What you missed (the big idea)
 **Energy is the ability to cause change. A change is evidence that energy is present.** Energy comes in different forms (motion, sound, light, heat, electrical energy), and an object can have **stored energy** even when it is not moving.
+
+## What to complete in your Guided Notes
+Complete these sections of `01-ch1-energy-causes-change-guided-notes` (3 pages), in order:
+- **BQ** — "My first thinking" (top) + "BQ · NOW I THINK" (bottom).
+- **V1** — energy · change (Reader p. 1): fill `change` · `different`.
+- **V2** — stored energy (Reader p. 4): fill `later`.
+- **N1** — Energy Causes Change: fill `cause` · `change` · `evidence`; copy the ENERGY → CHANGE → EVIDENCE model.
+- **N2** — Energy Occurs in Different Forms: one example per form (motion · sound · light · heat · electrical energy).
+- **N3** — Objects Can Store Energy: fill `position`; copy the STORED ENERGY → RELEASE → CHANGE model.
+- **N4** — Recognizing Evidence: draw a BEFORE / AFTER change and answer "What changed?"
 
 ## Step 1 — Read (5 min)
 Read Student Reader Chapter 1 "Energy Causes Change" (printed pp. 1–6). Focus on:

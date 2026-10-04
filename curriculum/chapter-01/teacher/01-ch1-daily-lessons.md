@@ -17,7 +17,7 @@
 **AP/source anchor:** L1 opening; AP 1.1 previewed.
 
 ## TUESDAY — Energy Detectives / Scavenger Hunt (Option B: lab day)
-**Primary question:** Where can we find evidence of energy causing change?
+**Primary question:** Where can we observe evidence of energy causing change?
 
 1. **Question / prediction (5 min):** Revisit Big Question. "You are going to be Energy Detectives. What change will you look for first?"
 2. **Safety / setup (5 min):** Explain the scavenger hunt; distribute AP 1.1 (ADAPTED student page `01-ch1-energy-detectives-student.docx`).

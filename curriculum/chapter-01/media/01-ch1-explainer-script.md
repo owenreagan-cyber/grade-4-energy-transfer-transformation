@@ -14,7 +14,7 @@
 ## 0:20–0:45 — BIG QUESTION
 > *Visual: the words appear, one per line.*
 
-"Our big question this week is: **Where can we find evidence of energy causing change?** First we need to know what energy is. Here is the whole idea in one sentence: **Energy is the ability to cause change.**"
+"Our big question this week is: **Where can we observe evidence of energy causing change?** First we need to know what energy is. Here is the whole idea in one sentence: **Energy is the ability to cause change.**"
 
 ## 0:45–1:15 — EXAMPLE 1 (motion)
 > *Visual: a rolling ball knocks over a small block.*
