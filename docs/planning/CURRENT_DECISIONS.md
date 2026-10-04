@@ -2,6 +2,8 @@
 
 > Phase 3 state. Full registers: `docs/planning/PHASE_1_DECISIONS.md` and `docs/planning/PHASE_3_DECISIONS.md`; this file is the quick-reference summary.
 
+> **⚠️ PHASE 0A.1 RECONCILIATION (2026-10-03):** **Guided Notes are PRIMARY** (current standard: `docs/standards/GUIDED_NOTES_STANDARD.md`); **Science Journal is SECONDARY**; the Interactive Science Notebook-primary architecture is **RETIRED**. **Unit 1 final assessment = 25 questions / 50 points** (see `docs/standards/ASSESSMENT_LAYOUT_STANDARD.md`). Historical Phase 4.5 / Phase 9 entries below are retained for provenance only and no longer govern.
+
 ## Phase 3 additions (Chapter 1 prototype)
 - **Slide density** → one core idea per slide; ≤3 short bullets on direction/lab slides; prediction-before-reveal for demos.
 - **Writing space** → ruled answer lines; ≥2 lines for explain prompts.
@@ -15,13 +17,16 @@
 - **Lab spec** → adds "setup constants" (identical-object control) + troubleshooting table.
 - Chapter 2 released; consistency verified (see `docs/reviews/PHASE_4_SYSTEM_CONSISTENCY.md`).
 
-## Phase 4.5 additions (Interactive Science Notebook)
-- **Primary student-note system** → Basic Interactive Science Notebook (supersedes the earlier "flat guided-notes-only" direction; `docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`).
-- **Drawing/modeling** is now an intentional core feature; vocabulary = short fill-in + draw + label.
-- **Interactive elements are selective** → ~1 meaningful feature per chapter; every feature has a low-motor alternative.
-- **Slides model notebook work** → NOTEBOOK/WRITE/DRAW/REVEAL cue slides (`docs/planning/SLIDE_TO_NOTEBOOK_MODELING_STANDARD.md`).
-- **Chapters 1–2 retrofitted**; guided notes remain OPTIONAL (historical).
-- Notebook system validated (see `docs/reviews/PHASE_4_5_NOTEBOOK_SYSTEM_VALIDATION.md`).
+## Phase 4.5 additions (Interactive Science Notebook) — RETIRED / HISTORICAL
+
+> ⚠️ **RETIRED (Phase 0A.1).** The INB-primary architecture below is historical only. **Guided Notes are PRIMARY** (`docs/standards/GUIDED_NOTES_STANDARD.md`); **Science Journal is SECONDARY**.
+
+- ~~**Primary student-note system → Basic Interactive Science Notebook**~~ → **RETIRED** (superseded; see `docs/standards/GUIDED_NOTES_STANDARD.md`).
+- **Drawing/modeling** as an intentional core feature → retained within Guided Notes (draw/label/model).
+- **Interactive elements are selective** → historical INB rule (retired with the INB system).
+- **Slides model notebook work** → superseded by the notes-mirror rule (`docs/standards/SLIDESHOW_LOGIC_LOCKDOWN.md`).
+- ~~**Chapters 1–2 retrofitted; guided notes remain OPTIONAL (historical)**~~ → Guided Notes are **PRIMARY**, not OPTIONAL.
+- Notebook system validated (historical; see `docs/reviews/PHASE_4_5_NOTEBOOK_SYSTEM_VALIDATION.md`).
 
 ## Phase 5 additions (Chapter 3)
 - **Chapter 3 boundary** → same-object speed↔energy relationship only; mass/collision/transfer/transformation/engineering deferred to Ch.4–7.
@@ -92,12 +97,12 @@
 
 ## Phase 9 additions (Chapter 7 + Unit Final)
 - **Chapter 7 is the Unit Review lesson** (TG pp. 94–98), not a separately numbered lesson — no new Core Vocabulary.
-- **Original written final** = 26 items / 50 pts, ADAPTED from the official 50-pt Unit Assessment blueprint (pp. 129–136) — re-authored, not copied. Core Vocabulary deck allowed.
+- **Original written final** = 25 questions / 50 points, ADAPTED from the official 50-pt Unit Assessment blueprint (pp. 129–136) — re-authored, not copied. Core Vocabulary deck allowed.
 - **Engineering cycle locked:** PROBLEM → DESIGN → TEST → EVIDENCE → IMPROVE.
 - **Edison framing locked:** improved (did NOT invent) the bulb; Latimer collaborator; "ten thousand ways" quoted only as the Reader phrases it; no lone-genius myth.
 - **Unit concept map** = ENERGY center + 7 branches (change · motion · speed · transfer · collisions · transformation · engineering).
 - **Assessment balance (by points):** core 26% · data/diagram 30% · application 26% · engineering 18% (written/diagram items weighted higher than MC, matching official philosophy).
-- **Final timing:** 26 items ≈ 30–45 min; splits Wed/Thu at 30-min periods (documented).
+- **Final timing:** 25 questions ≈ 30–45 min; splits Wed/Thu at 30-min periods (documented).
 - **Media:** Ch.7 = scripts only (5); videos PENDING/UNSTAGED. Whole-unit staging → Phase 10.
 - **14 QA gates** run; all PASS. Unit instructionally complete; media staging not complete.
 - Evidence ≠ proof reaffirmed across all final-assessment + student-facing language ("supports/shows").

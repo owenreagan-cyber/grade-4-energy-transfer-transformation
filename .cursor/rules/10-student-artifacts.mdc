@@ -1,0 +1,16 @@
+---
+description: Student artifact production rules (guided notes, worksheets, labs, quizzes, tests, study guides, keys).
+globs:
+  - "production/**"
+  - "curriculum/**"
+alwaysApply: false
+---
+# 10 — Student Artifacts
+
+Applies when creating/editing notes, worksheets, labs, quizzes, tests, study guides, or keys.
+
+- Obey `docs/standards/GUIDED_NOTES_STANDARD.md`, `docs/standards/STUDENT_HANDOUT_STANDARD.md`, `docs/standards/ASSESSMENT_LAYOUT_STANDARD.md`.
+- Guided Notes = primary student artifact; Science Journal = secondary.
+- Generous Grade 4 writing space, printability, grayscale quality, no answer leakage on student pages.
+- All scored work = raw score + percentage. Keys live in the teacher bundle only.
+- Label provenance (`SOURCE`/`ADAPTED`/`CUSTOM`/`EXTENSION`) and priority (`CORE`/`FLEX`/`EXTENSION`).

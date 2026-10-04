@@ -1,6 +1,6 @@
 # INTERACTIVE SCIENCE NOTEBOOK STANDARD
 
-> The project's student-notebook system, effective Phase 4.5 onward. Supersedes the flat guided-notes-only direction in `STUDENT_NOTES_STANDARD.md`.
+> ⚠️ **RETIRED / HISTORICAL (Phase 0A.1).** The Interactive Science Notebook-primary architecture is retired. **Guided Notes are PRIMARY; Science Journal is SECONDARY.** Current authoritative standard: `docs/standards/GUIDED_NOTES_STANDARD.md`. This file is retained for historical reference only — do not use it to author new student artifacts.
 
 ## SYSTEM NAME
 **Student Interactive Science Notebook**

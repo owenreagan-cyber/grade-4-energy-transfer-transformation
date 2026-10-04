@@ -16,7 +16,7 @@
 ## Unit-level
 | Artifact | Status |
 |---|---|
-| Final Assessment (original, 26 items / 50 pts) | RELEASED |
+| Final Assessment (original, 25 questions / 50 pts) | RELEASED |
 | Unit Synthesis Review | RELEASED |
 | Engineering Performance Task (Ch.6 capstone) | RELEASED |
 | Final Teacher Package (map · supply · index · printing · playback) | RELEASED |

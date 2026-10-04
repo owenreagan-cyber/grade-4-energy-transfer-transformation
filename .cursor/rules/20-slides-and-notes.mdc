@@ -1,0 +1,17 @@
+---
+description: Slideshow and guided notes rules — notes-first, exact BQ/V/N mirror.
+globs:
+  - "production/slides/**"
+  - "production/premium-notes/**"
+  - "production/student-notes/**"
+alwaysApply: false
+---
+# 20 — Slides & Notes
+
+Applies when creating/editing presentations or guided notes.
+
+- **Notes-first:** design Guided Notes before the slideshow.
+- Obey `docs/standards/SLIDESHOW_STANDARD.md`, `docs/standards/SLIDESHOW_LOGIC_LOCKDOWN.md`, `docs/standards/GUIDED_NOTES_STANDARD.md`.
+- BQ/V/N anchors on slides must mirror student notes exactly.
+- No hidden required note answers on unrelated slides.
+- Slides may be richer than notes but stay extremely easy to follow; premium visual quality.

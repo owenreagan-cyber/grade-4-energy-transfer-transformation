@@ -1,0 +1,19 @@
+# Phase 0B.1 — minimal reproducible Python toolchain for tools/ scripts.
+# Direct third-party imports only, verified 2026-10-03 against tools/*.py.
+# Reproduce: python3.14 -m venv .venv && .venv/bin/pip install -r requirements.txt
+
+# Slide generation (build_*_slides.py, audit_typography_regression.py, embed_infographics.py)
+python-pptx==1.0.2
+
+# Notes / worksheets / labs / quizzes / assessments / keys (gn_design.py, ch4_common.py, build_*)
+python-docx==1.2.0
+
+# Raster diagram generation + visual QA (PIL.Image / ImageDraw / ImageFont)
+Pillow==12.3.0
+
+# Markdown -> HTML rendering (md_to_pdf.py)
+Markdown==3.11
+
+# Transitive dependency of BOTH python-pptx and python-docx (XML serialization);
+# pinned explicitly because its version affects DOCX/PPTX output fidelity.
+lxml==6.1.3

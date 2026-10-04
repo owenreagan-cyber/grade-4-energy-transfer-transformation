@@ -1,0 +1,12 @@
+---
+description: QA and release rules — no complete claim without validation; no silent edits; no commit/push.
+alwaysApply: true
+---
+# 30 — QA & Release
+
+Always applicable.
+
+- No "complete/final/ready/released" claim without required validation (see `docs/planning/QA_GATES.md`).
+- Automated QA preferred; record results in `qa/reports/`.
+- Reviewer agents must not silently edit the artifact being certified; switch to fix mode explicitly.
+- No commit or push unless explicitly requested.
