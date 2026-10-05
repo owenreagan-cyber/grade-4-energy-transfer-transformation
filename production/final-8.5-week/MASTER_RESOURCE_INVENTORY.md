@@ -40,7 +40,7 @@
 | U2 Ch8 | `production/premium-notes/unit-02/unit-02-ch8-geothermal-energy-guided-notes.docx` + `.pdf` | 2 |
 | U2 Ch9 | `production/premium-notes/unit-02/unit-02-ch9-energy-resource-innovations-guided-notes.docx` + `.pdf` | 2 |
 
-> Notes: Unit 1 keys are embedded in the notes themselves; Unit 2 notes carry built-in keys. **Retired** parallel copies: `production/student-notes/01-ch1…docx`, `02-ch2…docx` (superseded by `premium-notes`).
+> Notes: Ch1 and Ch2 keys are separate `…guided-notes-key` files; other Unit 1 keys are embedded in the notes; Unit 2 notes carry built-in keys. **Retired** parallel copies: `production/student-notes/01-ch1…docx`, `02-ch2…docx` (superseded by `premium-notes`).
 
 ## 3. Presentations (PROJECT · PPTX)
 

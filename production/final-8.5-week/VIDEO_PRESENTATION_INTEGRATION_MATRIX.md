@@ -24,7 +24,7 @@
 | The Invisible Boss of Change | 1 | Ch1 | Wk 1 Mon | 2:50 | CORE (staged) | OPTIONAL EXTERNAL | Raw source UNSTAGED (not reviewed/trimmed as classroom cut). |
 | The Energy Detective | 1 | Ch1 | Wk 1 Mon | 6:45 | CORE (staged) | OPTIONAL EXTERNAL | Same — UNSTAGED raw. |
 | Stored Energy | 1 | Ch1 | Wk 1 Tue | 4:37 | CORE (staged) | OPTIONAL EXTERNAL | Same — UNSTAGED raw. |
-| Energy Detectives Briefing | 1 | Ch1 | Wk 1 Thu | 7:53 | SUPPORT | OPTIONAL EXTERNAL | Same — UNSTAGED raw. |
+| Energy Detectives Briefing | 1 | Ch1 | Wk 1 Fri (optional) | 7:53 | SUPPORT | OPTIONAL EXTERNAL | Same — UNSTAGED raw. |
 | Chapter 1 Science Notebook | 1 | Ch1 | notebook | 8:26 | SUPPORT | **NOT NEEDED** | Retired INB walkthrough. |
 | How Scientists Spot Invisible Energy | 1 | Ch1 | bell-ringer | 1:16 | FLEX | OPTIONAL EXTERNAL | UNSTAGED raw short. |
 | Why Still Objects Secretly Have Energy | 1 | Ch1 | bell-ringer | 1:16 | FLEX | OPTIONAL EXTERNAL | UNSTAGED raw short. |

@@ -70,7 +70,7 @@
 - **Content authorities** = CKSci Student Reader + Teacher Guide (13 lessons across 7 chapters).
 - **Canonical Reader** = `Science 4 - Energy Transfer - Student Book.pdf`; personal copy retained as backup.
 - **7-chapter backbone** — exact Reader titles; never invent/substitute chapters. **Reader chapter ≠ TG lesson.**
-- **Friday = FLEX** (RECOVER / PRACTICE / EXTEND; nonessential to Monday).
+- **Friday = FLEX** (RECOVER / PRACTICE / EXTEND; nonessential to Monday). *Superseded in scope by the 2026-10-04 Friday policy below: Friday may also hold scored quizzes/tests, review and synthesis; it is never first exposure to essential core content.*
 - **Transfer vs transformation** distinction is core (transfer = moves; transformation = changes form; BOTH allowed).
 - **Grade-4 terminology** — Core Vocabulary (14 terms) + Language of Instruction; **not** required: kinetic, potential, radiant, mechanical, compression wave, inertia.
 - **Speed-energy** = same object at different speeds (no mass+speed confound).
@@ -106,3 +106,9 @@
 - **Media:** Ch.7 = scripts only (5); videos PENDING/UNSTAGED. Whole-unit staging → Phase 10.
 - **14 QA gates** run; all PASS. Unit instructionally complete; media staging not complete.
 - Evidence ≠ proof reaffirmed across all final-assessment + student-facing language ("supports/shows").
+
+## Friday policy (DECIDED · owner · 2026-10-04) — supersedes the Phase 6.1 open question
+Friday is not reserved for "FLEX only." Friday may be used for: catch-up · review · completion of previously taught work · BQ reflection/synthesis · scored quizzes/tests · makeup work · optional FLEX/enrichment.
+Friday must NOT be the first instructional exposure to essential new core content. Therefore: required Chapter 1 science concepts are taught by Thursday (for Ch1, Mon–Tue); Friday may contain the Ch1 graded quiz; Friday may finish reflection/synthesis that depends on content already taught.
+- **Effect on Ch1:** Session 3 (N4 recognition, CHECK YOUR THINKING, BQ NOW I THINK, quiz) is **compliant** — each Friday slide is traceable to a concept first taught in Session 1 or 2 (`tools/ch1_pacing.py::FRIDAY_DEPENDS`, gated by `check_plan()`). The earlier fallback (moving N4 or the quiz) is withdrawn.
+- **Standing rule for every chapter:** a Friday slot may not introduce new vocabulary, models, or required note content; `check_plan()`-style traceability is required where Friday carries notes (propagation spec G16).

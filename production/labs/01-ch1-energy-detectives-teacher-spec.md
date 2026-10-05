@@ -2,8 +2,8 @@
 
 - **Lab #:** Chapter 1 optional scavenger-hunt activity (formerly Lab 1 of the 8-lab backbone; RECLASSIFIED Phase 5)
 - **Title:** Energy Detectives
-- **Chapter/week:** Chapter 1 · Week 1 (Friday FLEX)
-- **Tag:** OPTIONAL/FLEX
+- **Chapter/week:** Chapter 1 · Week 1 — use after the Friday quiz, on a review day, or on a later FLEX day (never inside Sessions 1–3)
+- **Tag:** OPTIONAL · ungraded · no points (look-fors only: `production/answer-keys/01-ch1-energy-detectives-key.md`)
 - **Big Question:** Where can we observe evidence of energy causing change?
 - **Concept:** energy is the ability to cause change; a change is evidence of energy
 - **Time:** ~25–30 min (investigation + debrief)
@@ -34,8 +34,9 @@
 ## Procedure
 1. Model one example as a class (e.g., light bulb: off→on).
 2. Students find **three** classroom examples of change.
-3. For each: record Object/System, Before, After, Observable Change, Evidence of Energy, Possible Energy Form.
+3. For each: record Object/System, Before, After, Observable Change, Energy Form.
 4. Write one question they still have.
+5. Optional Part C: flashlight/battery demo (battery shown inside the device) — prediction, observation, explanation.
 
 ## Expected pattern
 - Students record real, observable changes (dark→light, still→moving, quiet→noisy) and connect each to an energy form.

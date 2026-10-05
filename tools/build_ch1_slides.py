@@ -8,6 +8,7 @@ Then: soffice --headless --convert-to pdf  (see render step)
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ch1_pacing as PACE   # SINGLE authoritative Ch1 timing source (Phase 6.1 / F1)
 
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
@@ -43,11 +44,11 @@ T_HEAD   = 32   # notes section heading
 T_BODY   = 30   # instructional body
 T_BODY_S = 28   # body (denser lines)
 T_OPT    = 28   # MCQ options
-T_DEF    = 26   # vocab definition on card
-T_KICK   = 20   # kicker / subtitle
+T_DEF    = 28   # vocab definition on card
+T_KICK   = 24   # kicker / subtitle / Reader-page instruction
 T_PAGE   = 16   # Reader page refs
 T_TAB    = 12   # chapter tab / chrome
-T_HUD    = 18   # HUD bubble text
+T_HUD    = 24   # HUD bubble text (action word students must read)
 
 CHAPTER_TAB = "CHAPTER 1 · ENERGY CAUSES CHANGE"
 
@@ -55,6 +56,10 @@ CHAPTER_TAB = "CHAPTER 1 · ENERGY CAUSES CHANGE"
 prs = Presentation()
 prs.slide_width = Inches(13.333)
 prs.slide_height = Inches(7.5)
+# Widescreen metadata (F14): python-pptx's default template stamps type="screen4x3" on a 16:9 deck.
+_sz = prs.part._element.find('{http://schemas.openxmlformats.org/presentationml/2006/main}sldSz')
+if _sz is not None and 'type' in _sz.attrib:
+    del _sz.attrib['type']
 BLANK = prs.slide_layouts[6]
 
 SLIDE_NO = [0]  # mutable counter
@@ -144,7 +149,7 @@ def chapter_tab(s, x=0.55, y=0.40, w=3.55, h=0.44):
     run(p, CHAPTER_TAB, size=T_TAB, color=WHITE, bold=True)
     return sp
 
-def mode_badge(s, mode, x=12.55, y=0.40, w=0.55, h=0.44, fill=PRIMARY, color=WHITE):
+def mode_badge(s, mode, x=12.5, y=0.36, w=0.6, h=0.52, fill=PRIMARY, color=WHITE):
     sp = rect(s, x, y, w, h, fill, rounded=True)
     tf = sp.text_frame; tf.word_wrap = False; tf.vertical_anchor = MSO_ANCHOR.MIDDLE
     p = tf.paragraphs[0]; p.alignment = PP_ALIGN.CENTER
@@ -152,14 +157,14 @@ def mode_badge(s, mode, x=12.55, y=0.40, w=0.55, h=0.44, fill=PRIMARY, color=WHI
     return sp
 
 HUD_W = {  # 18pt bold Avenir widths + 0.34 padding, right-aligned to 12.5 (clear of mode badge)
-    "TURN & TALK": 2.00, "OBSERVE": 1.56, "PREDICT": 1.44, "EVIDENCE": 1.62,
-    "WRITE": 1.15, "CHECK": 1.23, "RECITE": 1.26, "TRACE": 1.20, "DRAW": 1.10,
-    "EXPLAIN": 1.42, "VOTE": 1.02, "WATCH": 1.24, "DATA": 1.12, "ENGINEER": 1.64,
+    "TURN & TALK": 2.75, "OBSERVE": 2.15, "PREDICT": 2.0, "EVIDENCE": 2.25,
+    "WRITE": 1.6, "CHECK": 1.7, "RECITE": 1.75, "TRACE": 1.65, "DRAW": 1.5,
+    "EXPLAIN": 1.95, "VOTE": 1.4, "WATCH": 1.7, "DATA": 1.55, "ENGINEER": 2.25,
 }
-def hud_bubble(s, text_label, x=None, y=0.40, h=0.44):
-    w = HUD_W.get(text_label, 1.6)
+def hud_bubble(s, text_label, x=None, y=0.36, h=0.52):
+    w = HUD_W.get(text_label, 2.2)
     if x is None:
-        x = 12.5 - w
+        x = 12.4 - w
     sp = rect(s, x, y, w, h, ACCENT, rounded=True)
     tf = sp.text_frame; tf.word_wrap = False; tf.vertical_anchor = MSO_ANCHOR.MIDDLE
     tf.margin_left = Inches(0.08); tf.margin_right = Inches(0.08)
@@ -221,9 +226,9 @@ def before_after(s, x=0.75, y=2.5, w=5.6, h=2.6, left="BEFORE", right="AFTER", l
     for idx, (lab, hint) in enumerate([(left, left_hint), (right, right_hint)]):
         cx = x + idx * (bw + gap)
         rect(s, cx, y, bw, h, PAPER, line_color=PRIMARY, line_w=1.25, rounded=True)
-        text(s, cx + 0.2, y + 0.15, bw - 0.4, 0.4, lab, size=24, color=ACCENT, bold=True, align=PP_ALIGN.CENTER)
+        text(s, cx + 0.2, y + 0.15, bw - 0.4, 0.5, lab, size=28, color=ACCENT, bold=True, align=PP_ALIGN.CENTER)
         if hint:
-            text(s, cx + 0.2, y + 0.62, bw - 0.4, h - 0.8, hint, size=T_BODY_S, color=INK, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+            text(s, cx + 0.2, y + 0.75, bw - 0.4, h - 0.9, hint, size=T_BODY_S, color=INK, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
 
 # ---------------------------------------------------------------- vocab card
 def vocab_card(s, x, y, w, h, term, definition, page, visual=None):
@@ -232,12 +237,12 @@ def vocab_card(s, x, y, w, h, term, definition, page, visual=None):
     # navy top band
     rect(s, x, y, w, 0.16, PRIMARY)
     # TEACH pill (top-right)
-    pill = rect(s, x + w - 1.15, y + 0.5, 0.9, 0.4, NAVY_TINT, rounded=True)
+    pill = rect(s, x + w - 1.85, y + 0.42, 1.6, 0.5, NAVY_TINT, rounded=True)
     tf = pill.text_frame; tf.word_wrap = False; tf.vertical_anchor = MSO_ANCHOR.MIDDLE
     p = tf.paragraphs[0]; p.alignment = PP_ALIGN.CENTER
-    run(p, "TEACH", size=14, color=PRIMARY, bold=True)
+    run(p, "TEACH", size=24, color=PRIMARY, bold=True)
     # label
-    text(s, x + 0.35, y + 0.42, w - 1.7, 0.4, "VOCABULARY", size=18, color=NEUTRAL, bold=True, caps=True)
+    text(s, x + 0.35, y + 0.42, w - 2.3, 0.4, "VOCABULARY", size=24, color=NEUTRAL, bold=True, caps=True)
     # huge term
     text(s, x + 0.35, y + 0.78, w - 0.7, 1.05, term, size=54, color=PRIMARY, bold=True, anchor=MSO_ANCHOR.MIDDLE)
     # definition
@@ -257,11 +262,11 @@ def card_visual_chain(panel_words):
         cx = x + 0.15
         cy = y + h / 2 - 0.28
         for i, word in enumerate(panel_words):
-            sp = rect(s, cx, cy, cw, 0.56, PRIMARY if i == 0 else NEUTRAL, rounded=True)
+            sp = rect(s, cx, cy, cw, 0.62, PRIMARY if i == 0 else NEUTRAL, rounded=True)
             tf = sp.text_frame; tf.word_wrap = True; tf.vertical_anchor = MSO_ANCHOR.MIDDLE
             tf.margin_left = Inches(0.05); tf.margin_right = Inches(0.05)
             p = tf.paragraphs[0]; p.alignment = PP_ALIGN.CENTER
-            run(p, word, size=15, color=WHITE, bold=True)
+            run(p, word, size=24, color=WHITE, bold=True)
             if i < n - 1:
                 ar = s.shapes.add_shape(MSO_SHAPE.RIGHT_ARROW, Inches(cx + cw + 0.02),
                                         Inches(cy + 0.14), Inches(0.46), Inches(0.28))
@@ -279,8 +284,25 @@ def notes_heading(s, code, title_text, reader_ref):
 def write_line(s, x, y, w, color=INK_SOFT):
     rect(s, x, y, w, 0.035, color)
 
+def _plan_line(n):
+    info = PACE.S[n]
+    mins = ("%g" % info["minutes"])
+    if info["session"] == 0:
+        return "PLAN OPTIONAL · end-of-chapter review (review day / Friday FLEX only; never inside a required block) · %s min" % mins
+    sess = PACE.SESSIONS[info["session"]]
+    tag = "REQUIRED" if info["status"] == "REQ" else "OPTIONAL - skip freely"
+    extra = ""
+    if n == PACE.REENTRY_SLIDE:
+        extra = " · RE-ENTRY: Sessions 2 and 3 also open on this slide (re-read the Big Question; ask 'What evidence have we collected so far?') - %g / %g min" % (
+            PACE.REENTRY_MIN[2], PACE.REENTRY_MIN[3])
+    return "PLAN Session %d (%s) · %s · %s min%s" % (info["session"], sess["day"], tag, mins, extra)
+
 def set_note(slide, lines):
-    slide.notes_slide.notes_text_frame.text = "\n".join(lines)
+    n = SLIDE_NO[0]
+    out = [ln for ln in lines if not ln.startswith("TIME ")]
+    out.insert(1, "TIME %g min" % PACE.S[n]["minutes"])
+    out.insert(2, _plan_line(n))
+    slide.notes_slide.notes_text_frame.text = "\n".join(out)
 
 # ================================================================================
 # SLIDE 1 — TITLE
@@ -293,14 +315,16 @@ tf.margin_left = Inches(0.15); tf.margin_right = Inches(0.15)
 p = tf.paragraphs[0]; p.alignment = PP_ALIGN.CENTER
 run(p, "CHAPTER 1 · GRADE 4 · WEEK 1", size=14, color=WHITE, bold=True)
 text(s, 0.9, 1.75, 11.5, 1.0, "Energy Causes Change", size=T_MAJOR, color=WHITE, bold=True)
-text(s, 0.9, 2.85, 11.5, 0.5, "Discovery / Evidence  ·  Where do we see energy at work?", size=T_KICK, color=RGBColor(0xD8, 0xDC, 0xE4))
+text(s, 0.9, 2.75, 11.5, 0.5, "Discovery / Evidence", size=T_KICK, color=RGBColor(0xD8, 0xDC, 0xE4), bold=True)
+text(s, 0.9, 3.25, 11.9, 0.6, "Where can we observe evidence of energy causing change?", size=28, color=WHITE, italic=True)
 # small model teaser
-model_strip(s, ["ENERGY", "CHANGE", "EVIDENCE"], x=0.9, y=4.2, w=7.5, box_h=0.7, gap=0.45, size=22)
-text(s, 0.9, 5.9, 11.5, 0.5, "Unit 1 · Energy Transfer & Transformation", size=T_KICK, color=RGBColor(0xD8, 0xDC, 0xE4), italic=True)
+model_strip(s, ["ENERGY", "CHANGE", "?"], x=0.9, y=4.3, w=8.4, box_h=0.75, gap=0.45, size=24, fills=[PRIMARY, NEUTRAL, ACCENT])  # 6.1C L-C: open last chip - EVIDENCE is revealed at N1
+text(s, 0.9, 5.95, 11.5, 0.5, "Unit 1 · Energy Transfer & Transformation", size=T_KICK, color=RGBColor(0xD8, 0xDC, 0xE4), italic=True)
 slide_number(s)
 set_note(s, ["MODE Title · orient", "TIME 2 min", "STUDENT RESOURCE Guided Notes (not yet open)",
              "ASK What do you think energy does?", "LISTEN FOR words like move, change, power",
-             "NEXT Flip the lights as you open the Big Question."])
+             "NEXT Flip the lights as you open the Big Question.",
+             "SESSIONS Mon: slides 1-3, 6-16 (optional 4-5) · Tue: slides 2, 17, 19-27 (18 is OPTIONAL) · Fri: slides 2 then 28-31, 33 (optional 32), then the quiz. Slides 34-45 = optional review."])
 
 # ================================================================================
 # SLIDE 2 — BIG QUESTION (intro)
@@ -319,7 +343,7 @@ text(s, 0.55, 4.9, 11.7, 0.6, "Think: What is ONE change you have seen happen?",
 slide_number(s)
 set_note(s, ["MODE BQ · introduce", "TIME 3 min", "STUDENT RESOURCE Guided Notes p.1 (BQ box)",
              "ASK What change have you seen happen today?", "LISTEN FOR any observable change (light, sound, movement)",
-             "REVEAL Do not answer the BQ yet — we collect evidence first.", "NEXT My first thinking."])
+             "REVEAL Do not answer the BQ yet — we collect evidence first.", "NEXT Session 1: My first thinking (slide 3) · Session 2: Forms of energy (slide 17) · Session 3: Recognizing evidence (slide 28)."])
 
 # ================================================================================
 # SLIDE 3 — BQ · MY FIRST THINKING (notes mirror)
@@ -346,7 +370,7 @@ text(s, 0.55, 1.02, 11.7, 0.7, "What changed?", size=T_TITLE, color=PRIMARY, bol
 text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 1 — you walk into a dark room and flip a switch.", size=T_KICK, color=INK_SOFT, italic=True)
 before_after(s, x=0.75, y=2.5, w=7.4, h=2.6,
              left="DARK room", right="BRIGHT room",
-             left_hint="quiet · hard to see", right_hint="light fills the room")
+             left_hint="hard to see", right_hint="light fills the room")
 text(s, 8.7, 2.5, 3.8, 2.6, "Something became different.\nThat is a change.", size=T_BODY, color=INK, bold=True, anchor=MSO_ANCHOR.MIDDLE)
 slide_number(s)
 set_note(s, ["MODE Demo · observe", "TIME 3 min", "STUDENT RESOURCE Reader p.1",
@@ -414,7 +438,7 @@ before_after(s, x=0.75, y=2.4, w=7.4, h=3.0,
              left="BEFORE", right="AFTER",
              left_hint="dull tip · quiet", right_hint="shorter · sharper · humming")
 rect(s, 8.7, 2.4, 3.8, 3.0, GOLD_TINT, line_color=ACCENT, line_w=0.75, rounded=True)
-text(s, 8.95, 2.6, 3.3, 0.5, "CHANGES", size=20, color=NEUTRAL, bold=True, caps=True)
+text(s, 8.95, 2.6, 3.3, 0.5, "CHANGES", size=24, color=NEUTRAL, bold=True, caps=True)
 text(s, 8.95, 3.2, 3.3, 2.0, "• the tip is sharper\n• the pencil is shorter\n• it makes a sound", size=T_BODY_S, color=INK)
 slide_number(s)
 set_note(s, ["MODE Demo · observe", "TIME 3 min", "STUDENT RESOURCE none",
@@ -425,16 +449,17 @@ set_note(s, ["MODE Demo · observe", "TIME 3 min", "STUDENT RESOURCE none",
 # SLIDE 9 — DEMO: evidence
 # ================================================================================
 s = new_slide(SURFACE)
-chapter_tab(s); mode_badge(s, "D"); hud_bubble(s, "EVIDENCE")
+chapter_tab(s); mode_badge(s, "D"); hud_bubble(s, "EXPLAIN")
 text(s, 0.55, 1.02, 11.7, 0.7, "How do we know energy was involved?", size=T_TITLE, color=PRIMARY, bold=True)
 text(s, 0.55, 1.75, 11.7, 0.4, "Energy can be invisible. We look for the change.", size=T_KICK, color=INK_SOFT, italic=True)
-model_strip(s, ["ENERGY", "CHANGE", "EVIDENCE"], x=0.75, y=2.7, w=11.8, box_h=1.0, gap=0.5, size=28)
+model_strip(s, ["ENERGY", "CHANGE", "?"], x=0.75, y=2.7, w=11.8, box_h=1.0, gap=0.5, size=28, fills=[PRIMARY, NEUTRAL, ACCENT])
 text(s, 0.55, 4.3, 11.7, 1.4,
-     "The pencil got shorter and sharper and made a sound.\nThose changes are evidence that energy was involved.",
+     "The pencil got shorter and sharper and made a sound.\nThose changes are clues that energy was involved.",
      size=T_BODY, color=INK, align=PP_ALIGN.CENTER)
 slide_number(s)
 set_note(s, ["MODE Demo · evidence", "TIME 3 min", "STUDENT RESOURCE Reader p.2 (Change Is Evidence of Energy)",
-             "ASK How do we know energy was here if we can't see it?", "LISTEN FOR 'we saw the change'",
+             "ASK How do we know energy was here if we can't see it?", "LISTEN FOR 'we saw the change' / 'clues'",
+             "REVEAL The word EVIDENCE is introduced from the Reader on slide 14 - do not name it here; the '?' box stays open.",
              "MISCONCEPTION We see the change, not the energy itself.", "NEXT Vocabulary: energy + change."])
 
 # ================================================================================
@@ -500,7 +525,7 @@ set_note(s, ["MODE Notes · V1 reveal", "TIME 1 min", "STUDENT RESOURCE Guided N
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "R"); hud_bubble(s, "RECITE")
 text(s, 0.55, 1.02, 11.7, 0.7, "What is energy?", size=T_TITLE, color=PRIMARY, bold=True)
-text(s, 0.55, 1.75, 11.7, 0.4, "Reader pp. 1–2", size=T_KICK, color=INK_SOFT, italic=True)
+text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 1", size=T_KICK, color=INK_SOFT, italic=True)
 rect(s, 0.75, 2.5, 11.8, 2.2, PRIMARY, rounded=True)
 text(s, 1.2, 2.9, 10.9, 1.4, "Energy is the ability to cause change.", size=38, color=WHITE, bold=True,
      align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
@@ -511,20 +536,23 @@ set_note(s, ["MODE Read · concept", "TIME 3 min", "STUDENT RESOURCE Reader p.1"
              "REVEAL Energy is the ability to cause change.", "NEXT Change is evidence."])
 
 # ================================================================================
-# SLIDE 14 — N1 MODEL: ENERGY → CHANGE → EVIDENCE
+# SLIDE 14 — N1 READ + DISCUSS: seashore (model's last box withheld until the N1 reveal)
 # ================================================================================
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "R"); hud_bubble(s, "TRACE")
-text(s, 0.55, 1.02, 11.7, 0.7, "Change is evidence of energy", size=T_TITLE, color=PRIMARY, bold=True)
+text(s, 0.55, 1.02, 11.7, 0.7, "Look at the seashore", size=T_TITLE, color=PRIMARY, bold=True)
 text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 2 — the seashore changes all around us.", size=T_KICK, color=INK_SOFT, italic=True)
-model_strip(s, ["ENERGY", "CHANGE", "EVIDENCE"], x=0.75, y=2.7, w=11.8, box_h=1.1, gap=0.5, size=30)
-text(s, 0.75, 4.3, 11.8, 1.6,
-     "When you see a change — water moving, sand shifting, sound —\nyou are seeing evidence of energy.",
+model_strip(s, ["ENERGY", "CHANGE", "?"], x=0.75, y=2.6, w=11.8, box_h=1.1, gap=0.5, size=30, fills=[PRIMARY, NEUTRAL, ACCENT])
+text(s, 0.75, 4.15, 11.8, 1.9,
+     "Read Reader p. 2.\nWaves move. Sand shifts. Water makes sound.\nWhat are these changes a clue about?",
      size=T_BODY, color=INK, align=PP_ALIGN.CENTER)
 slide_number(s)
 set_note(s, ["MODE Read · model", "TIME 3 min", "STUDENT RESOURCE Reader p.2",
-             "ASK Trace the arrow: energy causes a change, the change is evidence.",
-             "LISTEN FOR students using 'evidence' not 'proof'", "NEXT Record N1 on notes."])
+             "ASK What changes can you find at the seashore? What are those changes a clue about?",
+             "LISTEN FOR 'evidence' / 'a clue' / 'energy is there'",
+             "LANGUAGE The Reader says 'evidence, or proof.' Teach and use the word EVIDENCE (it is in the Big Question). If a student says 'proof', accept it and restate: 'Yes - we say evidence.'",
+             "REVEAL Keep the third box as '?' - students name it on the next slide's notes, then slide 16 completes the model.",
+             "NEXT Record N1 on notes."])
 
 # ================================================================================
 # SLIDE 15 — N1 NOTES (write)
@@ -532,19 +560,15 @@ set_note(s, ["MODE Read · model", "TIME 3 min", "STUDENT RESOURCE Reader p.2",
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "WRITE")
 notes_heading(s, "N1", "Energy Causes Change", "Guided Notes · Reader pp. 1–2")
-rich(s, 1.5, 2.35, 11.0, 0.8, [
-    [("Energy has the ability to ", {}), (blank_str(6), {"underline": True, "color": INK}), ("  ", {}),
-     (blank_str(8), {"underline": True, "color": INK}), (" .", {})],
+text(s, 1.5, 2.45, 11.0, 0.7, "Energy has the ability to cause change.", size=T_BODY, color=INK, bold=True)
+rich(s, 1.5, 3.55, 11.0, 1.4, [
+    [("When you see a change, you are seeing ", {}), (blank_str(9), {"underline": True, "color": INK}), (" of energy.", {})],
 ])
-text(s, 1.5, 3.25, 11.0, 0.5, "When you see a change, you are seeing evidence of energy.", size=T_BODY_S, color=INK, italic=True)
-model_strip(s, ["ENERGY", "CHANGE", "EVIDENCE"], x=1.5, y=4.0, w=8.0, box_h=0.7, gap=0.4, size=20)
-rich(s, 1.5, 5.1, 11.0, 0.8, [
-    [("A change is ", {}), (blank_str(9), {"underline": True, "color": INK}), (" that energy is involved.", {})],
-])
+text(s, 1.5, 5.3, 11.0, 0.5, "Write the missing word in the sentence. Leave the last box of your model empty for now.", size=T_BODY_S, color=INK_SOFT, italic=True)
 slide_number(s)
-set_note(s, ["MODE Notes · N1 anchor", "TIME 4 min", "STUDENT RESOURCE Guided Notes N1 (Reader pp.1–2)",
-             "ASK Fill in the three blanks.", "LISTEN FOR cause · change · evidence",
-             "REVEAL Reveal after writing.", "NEXT Check answers."])
+set_note(s, ["MODE Notes · N1 anchor", "TIME 2 min", "STUDENT RESOURCE Guided Notes N1 (Reader pp.1–2)",
+             "ASK Fill in the one blank in the sentence. The last box of the model on the notes page is empty on purpose - do not fill it yet.", "LISTEN FOR evidence",
+             "REVEAL Reveal after writing.", "NEXT Check answer."])
 
 # ================================================================================
 # SLIDE 16 — N1 NOTES (check/reveal)
@@ -552,19 +576,15 @@ set_note(s, ["MODE Notes · N1 anchor", "TIME 4 min", "STUDENT RESOURCE Guided N
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "CHECK")
 notes_heading(s, "N1", "Energy Causes Change", "Guided Notes · Reader pp. 1–2")
-rich(s, 1.5, 2.35, 11.0, 0.8, [
-    [("Energy has the ability to ", {}), ("cause", {"bold": True, "color": ACCENT}), ("  ", {}),
-     ("change", {"bold": True, "color": ACCENT}), (" .", {})],
+text(s, 1.5, 2.3, 11.0, 0.7, "Energy has the ability to cause change.", size=T_BODY, color=INK, bold=True)
+rich(s, 1.5, 3.15, 11.0, 1.0, [
+    [("When you see a change, you are seeing ", {}), ("evidence", {"bold": True, "color": ACCENT}), (" of energy.", {})],
 ])
-text(s, 1.5, 3.25, 11.0, 0.5, "When you see a change, you are seeing evidence of energy.", size=T_BODY_S, color=INK, italic=True)
-model_strip(s, ["ENERGY", "CHANGE", "EVIDENCE"], x=1.5, y=4.0, w=8.0, box_h=0.7, gap=0.4, size=20)
-rich(s, 1.5, 5.1, 11.0, 0.8, [
-    [("A change is ", {}), ("evidence", {"bold": True, "color": ACCENT}), (" that energy is involved.", {})],
-])
-text(s, 1.5, 6.05, 11.0, 0.4, "cause · change · evidence", size=T_BODY_S, color=INK_SOFT, italic=True)
+model_strip(s, ["ENERGY", "CHANGE", "EVIDENCE"], x=1.5, y=4.5, w=10.0, box_h=0.9, gap=0.45, size=28)
+text(s, 1.5, 5.75, 11.0, 0.5, "Now write the same word in the last box of your model.", size=T_BODY_S, color=INK_SOFT, italic=True)
 slide_number(s)
 set_note(s, ["MODE Notes · N1 reveal", "TIME 1 min", "STUDENT RESOURCE Guided Notes N1",
-             "REVEAL cause · change · evidence", "NEXT Forms of energy (N2)."])
+             "REVEAL evidence (accept 'proof' once, then restate 'evidence'). Students check their sentence, then copy the word into the empty last box of the model on the notes page.", "NEXT Close Session 1. Session 2 opens on slide 2 (the Big Question)."])
 
 # ================================================================================
 # SLIDE 17 — N2 CONCEPT: energy has forms
@@ -582,13 +602,14 @@ for i, f in enumerate(forms):
     tf = sp.text_frame; tf.word_wrap = True; tf.vertical_anchor = MSO_ANCHOR.MIDDLE
     tf.margin_left = Inches(0.08); tf.margin_right = Inches(0.08)
     p = tf.paragraphs[0]; p.alignment = PP_ALIGN.CENTER
-    run(p, f, size=20, color=WHITE, bold=True)
-text(s, 0.55, 4.4, 11.7, 1.4,
-     "The carousel spins (motion), plays music (sound), shines bright bulbs\n(light), warms those bulbs (heat), and plugs in (electrical energy).",
+    run(p, f, size=24, color=WHITE, bold=True)
+text(s, 0.55, 4.3, 11.7, 1.9,
+     "On the carousel, the horses spin and move up and down.\nThat is motion.\nFind the other forms in the Reader.",
      size=T_BODY_S, color=INK, align=PP_ALIGN.CENTER)
 slide_number(s)
 set_note(s, ["MODE Read · forms", "TIME 4 min", "STUDENT RESOURCE Reader p.3",
              "ASK What forms of energy do you see or hear on a carousel?", "LISTEN FOR motion, sound, light, heat, electrical",
+             "REVEAL Model ONLY the motion example. Do not supply examples for the other four forms - students write their own on slide 19.",
              "NEXT Record examples on notes (N2)."])
 
 # ================================================================================
@@ -600,11 +621,11 @@ text(s, 0.55, 1.02, 11.7, 0.7, "Clap three times", size=T_TITLE, color=PRIMARY, 
 text(s, 0.55, 1.75, 11.7, 0.4, "What forms of energy do you observe?", size=T_KICK, color=INK_SOFT, italic=True)
 rect(s, 1.5, 2.5, 10.3, 3.2, PAPER, line_color=PRIMARY, line_w=1.25, rounded=True)
 text(s, 1.8, 2.85, 9.7, 0.5, "When you clap…", size=T_HEAD, color=PRIMARY, bold=True)
-text(s, 1.8, 3.6, 9.7, 1.7, "motion  —  your hands move\nsound  —  you hear a clap\nheat  —  your hands may feel warm", size=T_BODY, color=INK)
+text(s, 1.8, 3.6, 9.7, 1.7, "What do you SEE?\nWhat do you HEAR?\nWhat do you FEEL in your hands?", size=T_BODY, color=INK)
 slide_number(s)
 set_note(s, ["MODE Check · forms", "TIME 2 min", "STUDENT RESOURCE Reader p.3",
              "ASK What forms of energy can you observe when you clap?",
-             "LISTEN FOR motion, sound, and maybe heat", "NEXT Record N2 table."])
+             "LISTEN FOR motion, sound, and maybe heat (students name them - not shown on the slide)", "NEXT Record N2 table."])
 
 # ================================================================================
 # SLIDE 19 — N2 NOTES (table)
@@ -612,25 +633,27 @@ set_note(s, ["MODE Check · forms", "TIME 2 min", "STUDENT RESOURCE Reader p.3",
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "WRITE")
 notes_heading(s, "N2", "Energy Occurs in Different Forms", "Guided Notes · Reader p. 3")
-text(s, 1.5, 2.3, 11.0, 0.5, "Write or draw one example that shows a change for each form.", size=T_BODY_S, color=INK, italic=True)
+text(s, 1.5, 2.3, 11.0, 0.5, "Write one example that shows a change for each form.", size=T_BODY_S, color=INK, italic=True)
 # table header
 hx, hy, hw, hh = 1.5, 2.95, 3.4, 0.6
 ex, ew = hx + hw + 0.15, 11.0 - hw - 0.15
 rect(s, hx, hy, hw, hh, PRIMARY, rounded=False)
-text(s, hx+0.15, hy+0.12, hw-0.3, 0.4, "FORM", size=20, color=WHITE, bold=True)
+text(s, hx+0.15, hy+0.1, hw-0.3, 0.4, "FORM", size=24, color=WHITE, bold=True)
 rect(s, ex, hy, ew, hh, PRIMARY, rounded=False)
-text(s, ex+0.15, hy+0.12, ew-0.3, 0.4, "ONE EXAMPLE THAT SHOWS A CHANGE", size=20, color=WHITE, bold=True)
+text(s, ex+0.15, hy+0.12, ew-0.3, 0.4, "ONE EXAMPLE THAT SHOWS A CHANGE", size=22, color=WHITE, bold=True)
 rows = ["motion", "sound", "light", "heat", "electrical energy"]
 ry = hy + hh
 for i, rname in enumerate(rows):
     rh = 0.62
     cy = ry + i*rh
     rect(s, hx, cy, hw, rh, PAPER, line_color=RULE, line_w=0.75)
-    text(s, hx+0.15, cy+0.13, hw-0.3, 0.4, rname, size=20, color=PRIMARY, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+    text(s, hx+0.15, cy+0.08, hw-0.3, 0.45, rname, size=24, color=PRIMARY, bold=True, anchor=MSO_ANCHOR.MIDDLE)
     rect(s, ex, cy, ew, rh, PAPER, line_color=RULE, line_w=0.75)
 slide_number(s)
 set_note(s, ["MODE Notes · N2 anchor", "TIME 5 min", "STUDENT RESOURCE Guided Notes N2 (Reader p.3)",
-             "ASK Write or draw one example per form.", "LISTEN FOR carousel examples or clap examples",
+             "ASK Write one example per form. Then turn & talk: share two examples with a partner and add one new idea from your partner.",
+             "LISTEN FOR carousel examples, clap examples, home/school examples - accept any real example that shows a change",
+             "REVEAL There is no answer slide for N2. Circulate; use student examples as the check.",
              "NEXT Stored energy (V2)."])
 
 # ================================================================================
@@ -646,7 +669,7 @@ vocab_card(s, 3.0, 2.25, 7.3, 4.5, "stored energy",
            visual=card_visual_chain(["STILL", "LATER", "CHANGE"]))
 slide_number(s)
 set_note(s, ["MODE Vocabulary · TEACH", "TIME 3 min", "STUDENT RESOURCE Guided Notes V2 (Reader p.4)",
-             "ASK Does a battery have energy if it is sitting still?", "LISTEN FOR 'yes — it can cause change later'",
+             "ASK What does the word 'later' tell us about when the change can happen? (Save examples for slide 23.)", "LISTEN FOR 'not right now - after'",
              "REVEAL stored energy = ability to cause change at a later time.", "NEXT Record V2."])
 
 # ================================================================================
@@ -685,15 +708,16 @@ set_note(s, ["MODE Notes · V2 reveal", "TIME 1 min", "STUDENT RESOURCE Guided N
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "R"); hud_bubble(s, "PREDICT")
 text(s, 0.55, 1.02, 11.7, 0.7, "Does a still battery have energy?", size=T_TITLE, color=PRIMARY, bold=True)
-text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 4 — a battery sits still and shows no change… yet.", size=T_KICK, color=INK_SOFT, italic=True)
+text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 4 — think about a battery inside a flashlight.", size=T_KICK, color=INK_SOFT, italic=True)
 rect(s, 1.5, 2.6, 10.3, 3.0, PAPER, line_color=PRIMARY, line_w=1.25, rounded=True)
-text(s, 1.8, 2.95, 9.7, 0.5, "A battery sitting still shows no change — yet.", size=T_BODY, color=INK, bold=True)
-text(s, 1.8, 3.75, 9.7, 1.4,
-     "Inside a battery, chemicals store energy.\nWhen it goes in a flashlight, the stored energy is released.",
+text(s, 1.8, 2.95, 9.7, 1.1, "A battery sits still in a flashlight that is switched off.", size=T_BODY, color=INK, bold=True)
+text(s, 1.8, 4.15, 9.7, 1.2,
+     "Yes or no? Make a prediction.\nTell your partner why.",
      size=T_BODY_S, color=INK)
 slide_number(s)
 set_note(s, ["MODE Read · predict", "TIME 3 min", "STUDENT RESOURCE Reader p.4",
-             "ASK Does a still battery have energy?", "LISTEN FOR 'yes, stored energy'",
+             "ASK Does a still battery have energy? Take yes/no predictions and reasons - do not confirm yet.", "LISTEN FOR 'yes' / 'no' with a reason; accept any prediction",
+             "REVEAL After students predict, read the battery paragraph on Reader p. 4 aloud: the chemicals inside a battery store energy. The screen stays a question; slide 25 shows the Reader fact.",
              "MISCONCEPTION Only moving objects have energy → pair moving + stored.", "NEXT Position."])
 
 # ================================================================================
@@ -702,11 +726,11 @@ set_note(s, ["MODE Read · predict", "TIME 3 min", "STUDENT RESOURCE Reader p.4"
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "R")
 text(s, 0.55, 1.02, 11.7, 0.7, "The stored energy of position", size=T_TITLE, color=PRIMARY, bold=True)
-text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 5 — an object held up can fall and cause a change.", size=T_KICK, color=INK_SOFT, italic=True)
+text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 5 — an object held up can cause a change later.", size=T_KICK, color=INK_SOFT, italic=True)
 rect(s, 1.5, 2.5, 10.3, 3.0, GOLD_TINT, line_color=ACCENT, line_w=0.75, rounded=True)
-text(s, 1.8, 2.85, 9.7, 0.5, "Raised apple → let go → it falls", size=T_HEAD, color=PRIMARY, bold=True)
+text(s, 1.8, 2.85, 9.7, 0.5, "Raised apple → let go → ?", size=T_HEAD, color=PRIMARY, bold=True)
 text(s, 1.8, 3.6, 9.7, 1.4,
-     "An apple held above the ground has stored energy\nbecause of its position. Let it go and it will fall.",
+     "An apple held above the ground has stored energy\nbecause of its position. Imagine you let go. What will happen?",
      size=T_BODY_S, color=INK)
 slide_number(s)
 set_note(s, ["MODE Read · position", "TIME 3 min", "STUDENT RESOURCE Reader p.5",
@@ -719,12 +743,14 @@ set_note(s, ["MODE Read · position", "TIME 3 min", "STUDENT RESOURCE Reader p.5
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "R"); hud_bubble(s, "TRACE")
 text(s, 0.55, 1.02, 11.7, 0.7, "Stored energy can cause a change later", size=T_TITLE, color=PRIMARY, bold=True)
+text(s, 0.55, 1.75, 11.7, 0.4, "Reader p. 4 — back to our battery: the chemicals inside it store energy.", size=T_KICK, color=INK_SOFT, italic=True)
 model_strip(s, ["STORED ENERGY", "RELEASE", "CHANGE"], x=0.75, y=2.7, w=11.8, box_h=1.1, gap=0.5, size=28)
 text(s, 0.75, 4.3, 11.8, 1.6,
-     "Stretch a rubber band — it now stores energy.\nLet it go — it moves and makes a sound: the change.",
+     "Stretch a rubber band — it now stores energy.\nLet it go. What change will you see and hear?",
      size=T_BODY, color=INK, align=PP_ALIGN.CENTER)
 slide_number(s)
 set_note(s, ["MODE Read · model", "TIME 2 min", "STUDENT RESOURCE Reader p.4",
+             "REVEAL (closes the slide 23 prediction) The Reader says chemicals inside a battery store energy - so yes, a still battery has energy. Do not say what the flashlight does yet: students write that in the N3 table.",
              "ASK Trace: stored → release → change.", "LISTEN FOR rubber band SNAP example",
              "NEXT Record N3 on notes."])
 
@@ -734,23 +760,23 @@ set_note(s, ["MODE Read · model", "TIME 2 min", "STUDENT RESOURCE Reader p.4",
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "WRITE")
 notes_heading(s, "N3", "Objects Can Store Energy", "Guided Notes · Reader pp. 4–5")
-model_strip(s, ["STORED ENERGY", "RELEASE", "CHANGE"], x=1.5, y=2.15, w=8.0, box_h=0.55, gap=0.4, size=18)
+model_strip(s, ["STORED ENERGY", "RELEASE", "CHANGE"], x=1.0, y=2.1, w=10.5, box_h=0.65, gap=0.4, size=24)
 # table
-hx, hy, hw, hh = 1.5, 2.85, 4.2, 0.5
-ex, ew = hx + hw + 0.15, 11.0 - hw - 0.15
+hx, hy, hw, hh = 1.0, 2.95, 4.8, 0.5
+ex, ew = hx + hw + 0.15, 11.5 - hw - 0.15
 rect(s, hx, hy, hw, hh, PRIMARY)
-text(s, hx+0.12, hy+0.08, hw-0.24, 0.35, "EXAMPLE", size=18, color=WHITE, bold=True)
+text(s, hx+0.12, hy+0.07, hw-0.24, 0.35, "EXAMPLE", size=22, color=WHITE, bold=True)
 rect(s, ex, hy, ew, hh, PRIMARY)
-text(s, ex+0.12, hy+0.08, ew-0.24, 0.35, "WHAT CHANGE COULD HAPPEN LATER?", size=18, color=WHITE, bold=True)
+text(s, ex+0.12, hy+0.07, ew-0.24, 0.35, "WHAT CHANGE COULD HAPPEN LATER?", size=20, color=WHITE, bold=True)
 rows = ["battery (in a flashlight)", "stretched rubber band", "raised object (apple)"]
 ry = hy + hh
 for i, rname in enumerate(rows):
-    rh = 0.55
+    rh = 0.58
     cy = ry + i*rh
     rect(s, hx, cy, hw, rh, PAPER, line_color=RULE, line_w=0.75)
-    text(s, hx+0.12, cy+0.13, hw-0.24, 0.4, rname, size=18, color=PRIMARY, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+    text(s, hx+0.12, cy+0.06, hw-0.24, 0.45, rname, size=24, color=PRIMARY, bold=True, anchor=MSO_ANCHOR.MIDDLE)
     rect(s, ex, cy, ew, rh, PAPER, line_color=RULE, line_w=0.75)
-rich(s, 1.5, 5.2, 11.0, 0.7, [
+rich(s, 1.0, 5.4, 11.5, 0.7, [
     [("Objects also have stored energy because of their ", {"size": T_BODY_S}),
      (blank_str(8), {"underline": True, "color": INK, "size": T_BODY_S}), (" .", {"size": T_BODY_S})],
 ])
@@ -765,29 +791,31 @@ set_note(s, ["MODE Notes · N3 anchor", "TIME 5 min", "STUDENT RESOURCE Guided N
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "CHECK")
 notes_heading(s, "N3", "Objects Can Store Energy", "Guided Notes · Reader pp. 4–5")
-model_strip(s, ["STORED ENERGY", "RELEASE", "CHANGE"], x=1.5, y=2.15, w=8.0, box_h=0.55, gap=0.4, size=18)
-hx, hy, hw, hh = 1.5, 2.85, 4.2, 0.5
-ex, ew = hx + hw + 0.15, 11.0 - hw - 0.15
+model_strip(s, ["STORED ENERGY", "RELEASE", "CHANGE"], x=1.0, y=2.1, w=10.5, box_h=0.65, gap=0.4, size=24)
+hx, hy, hw, hh = 1.0, 2.95, 4.8, 0.5
+ex, ew = hx + hw + 0.15, 11.5 - hw - 0.15
 rect(s, hx, hy, hw, hh, PRIMARY)
-text(s, hx+0.12, hy+0.08, hw-0.24, 0.35, "EXAMPLE", size=18, color=WHITE, bold=True)
+text(s, hx+0.12, hy+0.07, hw-0.24, 0.35, "EXAMPLE", size=22, color=WHITE, bold=True)
 rect(s, ex, hy, ew, hh, PRIMARY)
-text(s, ex+0.12, hy+0.08, ew-0.24, 0.35, "WHAT CHANGE COULD HAPPEN LATER?", size=18, color=WHITE, bold=True)
+text(s, ex+0.12, hy+0.07, ew-0.24, 0.35, "WHAT CHANGE COULD HAPPEN LATER?", size=20, color=WHITE, bold=True)
 rows = ["battery (in a flashlight)", "stretched rubber band", "raised object (apple)"]
 ry = hy + hh
 for i, rname in enumerate(rows):
-    rh = 0.55
+    rh = 0.58
     cy = ry + i*rh
     rect(s, hx, cy, hw, rh, PAPER, line_color=RULE, line_w=0.75)
-    text(s, hx+0.12, cy+0.13, hw-0.24, 0.4, rname, size=18, color=PRIMARY, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+    text(s, hx+0.12, cy+0.06, hw-0.24, 0.45, rname, size=24, color=PRIMARY, bold=True, anchor=MSO_ANCHOR.MIDDLE)
     rect(s, ex, cy, ew, rh, PAPER, line_color=RULE, line_w=0.75)
-rich(s, 1.5, 5.2, 11.0, 0.7, [
+    text(s, ex+0.12, cy+0.06, ew-0.24, 0.45, ["the flashlight lights up", "it snaps and makes a sound", "it falls down"][i],
+         size=28, color=NEUTRAL, italic=True, anchor=MSO_ANCHOR.MIDDLE)
+rich(s, 1.0, 5.4, 11.5, 0.7, [
     [("Objects also have stored energy because of their ", {"size": T_BODY_S}),
      ("position", {"bold": True, "color": ACCENT, "size": T_BODY_S}), (" .", {"size": T_BODY_S})],
 ])
-text(s, 1.5, 6.15, 11.0, 0.4, "position", size=T_BODY_S, color=INK_SOFT, italic=True)
+text(s, 1.5, 6.3, 11.0, 0.5, "position  ·  Sample answers shown - yours may differ.", size=T_BODY_S, color=INK_SOFT, italic=True)
 slide_number(s)
 set_note(s, ["MODE Notes · N3 reveal", "TIME 1 min", "STUDENT RESOURCE Guided Notes N3",
-             "REVEAL position", "NEXT Recognizing evidence (N4)."])
+             "REVEAL position. Table cells show SAMPLE answers only - accept any reasonable later change.", "NEXT Close Session 2. Session 3 opens on slide 2 (the Big Question), then N4."])
 
 # ================================================================================
 # SLIDE 28 — N4 CONCEPT: recognizing evidence
@@ -795,30 +823,31 @@ set_note(s, ["MODE Notes · N3 reveal", "TIME 1 min", "STUDENT RESOURCE Guided N
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "R"); hud_bubble(s, "EVIDENCE")
 text(s, 0.55, 1.02, 11.7, 0.7, "Recognizing evidence", size=T_TITLE, color=PRIMARY, bold=True)
-text(s, 0.55, 1.75, 11.7, 0.4, "Reader pp. 1–6 — we see the change, not the energy.", size=T_KICK, color=INK_SOFT, italic=True)
+text(s, 0.55, 1.75, 11.7, 0.4, "Reader pp. 1–5 — think about the clues we can see, hear, or feel.", size=T_KICK, color=INK_SOFT, italic=True)
 rect(s, 0.75, 2.5, 11.8, 2.6, PRIMARY, rounded=True)
 text(s, 1.2, 2.85, 10.9, 1.9,
-     "Energy can be invisible.\nWe recognize energy by the change we observe.",
+     "Energy can be invisible.\nWhat clues could show that energy is at work?",
      size=T_BODY, color=WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-text(s, 0.75, 5.4, 11.8, 0.7, "Evidence = the change you see, hear, or feel.", size=T_BODY_S, color=INK, align=PP_ALIGN.CENTER, italic=True)
+text(s, 0.75, 5.4, 11.8, 0.7, "Think of a change you have seen. What did you see, hear, or feel?", size=T_BODY_S, color=INK, align=PP_ALIGN.CENTER, italic=True)
 slide_number(s)
-set_note(s, ["MODE Read · evidence", "TIME 2 min", "STUDENT RESOURCE Reader pp.1–6",
-             "ASK How do we know energy is involved when we can't see it?", "LISTEN FOR 'we see the change'",
-             "MISCONCEPTION Evidence, not proof.", "NEXT Draw before/after (N4)."])
+set_note(s, ["MODE Read · evidence", "TIME 2 min", "STUDENT RESOURCE Reader pp.1–5",
+             "ASK What clues could show that energy is at work? (Do not give the CHECK YOUR THINKING answer yet.)", "LISTEN FOR movement, sound, light, heat, something different",
+             "LANGUAGE Say evidence (not proof).",
+             "FRIDAY CLOCK The quiz is handed out NO LATER THAN MINUTE 12. Priority: N4 draw > BQ NOW I THINK > CHECK YOUR THINKING. Minute 6: N4 should be done.", "NEXT Draw before/after (N4)."])
 
 # ================================================================================
 # SLIDE 29 — N4 NOTES (before/after draw)
 # ================================================================================
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "DRAW")
-notes_heading(s, "N4", "Recognizing Evidence", "Guided Notes · Reader pp. 1–6")
+notes_heading(s, "N4", "Recognizing Evidence", "Guided Notes · Reader pp. 1–5")
 text(s, 1.5, 2.25, 11.0, 1.0, "Draw a change you observed. Show what it looked like BEFORE and AFTER.", size=T_BODY_S, color=INK, italic=True)
 before_after(s, x=1.5, y=3.3, w=8.0, h=1.9, left="BEFORE", right="AFTER", left_hint="draw", right_hint="draw")
-rich(s, 1.5, 5.4, 11.0, 0.5, [
-    [("What changed?  ", {"bold": True}), (blank_str(16), {"underline": True, "color": INK})],
-])
+text(s, 1.5, 5.45, 11.0, 0.5, "What changed?", size=T_BODY_S, color=INK, bold=True)
+write_line(s, 1.5, 6.15, 10.5)
+write_line(s, 1.5, 6.65, 10.5)
 slide_number(s)
-set_note(s, ["MODE Notes · N4 anchor", "TIME 4 min", "STUDENT RESOURCE Guided Notes N4 (Reader pp.1–6)",
+set_note(s, ["MODE Notes · N4 anchor", "TIME 4 min", "STUDENT RESOURCE Guided Notes N4 (Reader pp.1–5)",
              "ASK Draw one change before and after; write what changed.",
              "LISTEN FOR clear before/after pairs", "NEXT Check your thinking."])
 
@@ -827,17 +856,18 @@ set_note(s, ["MODE Notes · N4 anchor", "TIME 4 min", "STUDENT RESOURCE Guided N
 # ================================================================================
 s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "WRITE")
-notes_heading(s, "N4", "Check Your Thinking", "Guided Notes · Reader pp. 1–6")
+notes_heading(s, "N4", "Check Your Thinking", "Guided Notes · Reader pp. 1–5")
 rect(s, 1.5, 2.4, 11.0, 1.7, GOLD_TINT, line_color=ACCENT, line_w=0.75, rounded=True)
-text(s, 1.8, 2.55, 10.4, 0.45, "CHECK YOUR THINKING", size=22, color=NEUTRAL, bold=True, caps=True)
+text(s, 1.8, 2.55, 10.4, 0.45, "CHECK YOUR THINKING", size=24, color=NEUTRAL, bold=True, caps=True)
 text(s, 1.8, 3.05, 10.4, 1.05, "How do we know energy is involved if we cannot see energy itself?", size=T_BODY, color=INK, bold=True)
 text(s, 1.5, 4.35, 11.0, 0.5, "Start with: “We know because we see …”", size=T_BODY, color=INK, italic=True)
 write_line(s, 1.5, 5.15, 10.5)
 write_line(s, 1.5, 5.85, 10.5)
 slide_number(s)
 set_note(s, ["MODE Notes · Check Your Thinking", "TIME 3 min", "STUDENT RESOURCE Guided Notes N4",
+             "FRIDAY CLOCK Past minute 6 when you reach this slide? SKIP slides 30-31 (CHECK YOUR THINKING goes home / catch-up) and go straight to slide 33.",
              "ASK Complete the sentence starter.", "LISTEN FOR 'a change, like a ball starting to move'",
-             "NEXT Reveal a sample response."])
+             "REVEAL Do not show slide 31 until most students have written.", "NEXT Reveal a sample response."])
 
 # ================================================================================
 # SLIDE 31 — CHECK YOUR THINKING (sample + classify)
@@ -846,7 +876,7 @@ s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "C"); hud_bubble(s, "CHECK")
 text(s, 0.55, 1.02, 11.7, 0.7, "We know because we see a change", size=T_TITLE, color=PRIMARY, bold=True)
 rect(s, 1.5, 2.4, 10.3, 2.2, GOLD_TINT, line_color=ACCENT, line_w=0.75, rounded=True)
-text(s, 1.8, 2.6, 9.7, 0.5, "SAMPLE", size=18, color=NEUTRAL, bold=True, caps=True)
+text(s, 1.8, 2.6, 9.7, 0.5, "SAMPLE", size=24, color=NEUTRAL, bold=True, caps=True)
 text(s, 1.8, 3.15, 9.7, 1.3,
      "“We know because we see a change — like a ball starting to move or a light turning on.”",
      size=T_BODY_S, color=INK, italic=True)
@@ -871,11 +901,11 @@ for i, (txt, is_yes) in enumerate(opts):
     cy = y + i * 1.25
     rect(s, 1.5, cy, 10.3, 1.0, PAPER, line_color=PRIMARY, line_w=1.25, rounded=True)
     text(s, 1.8, cy + 0.22, 9.7, 0.6, txt, size=T_BODY, color=INK, anchor=MSO_ANCHOR.MIDDLE)
-text(s, 0.55, 6.4, 11.7, 0.5, "Look for a change — that is the evidence of energy.", size=T_BODY_S, color=INK_SOFT, align=PP_ALIGN.CENTER, italic=True)
+text(s, 0.55, 6.4, 11.7, 0.5, "Pick one. Tell your partner why.", size=T_BODY_S, color=INK_SOFT, align=PP_ALIGN.CENTER, italic=True)
 slide_number(s)
 set_note(s, ["MODE Apply · evidence", "TIME 3 min", "STUDENT RESOURCE none",
              "ASK Which one shows a change (energy at work)?", "LISTEN FOR 'the toy car'",
-             "REVEAL The toy car starts to roll — a change.", "NEXT Return to the Big Question."])
+             "REVEAL The toy car starts to roll — a change. Then say aloud: 'Look for a change — that is the evidence of energy.' (Spoken after the vote; it is not on the question slide.)", "NEXT Return to the Big Question."])
 
 # ================================================================================
 # SLIDE 33 — BQ · NOW I THINK (return)
@@ -884,7 +914,7 @@ s = new_slide(SURFACE)
 chapter_tab(s); mode_badge(s, "N"); hud_bubble(s, "WRITE")
 notes_heading(s, "BQ", "BQ · Now I Think", "Guided Notes p. 3")
 rect(s, 1.5, 2.3, 11.0, 1.75, PRIMARY, rounded=True)
-text(s, 1.8, 2.45, 10.4, 0.4, "BIG QUESTION", size=18, color=ACCENT, bold=True, caps=True)
+text(s, 1.8, 2.45, 10.4, 0.45, "BIG QUESTION", size=24, color=ACCENT, bold=True, caps=True)
 text(s, 1.8, 2.9, 10.4, 1.05, "Where can we observe evidence of energy causing change?", size=T_BODY, color=WHITE, bold=True)
 text(s, 1.5, 4.3, 11.0, 0.5, "Now I think…", size=T_BODY, color=INK, bold=True)
 write_line(s, 1.5, 5.0, 10.5)
@@ -892,37 +922,38 @@ write_line(s, 1.5, 5.7, 10.5)
 write_line(s, 1.5, 6.4, 10.5)
 slide_number(s)
 set_note(s, ["MODE Notes · BQ return", "TIME 3 min", "STUDENT RESOURCE Guided Notes p.3",
+             "FRIDAY CLOCK Start this slide by minute 9.5; if you are later, do NOT start it before the quiz - students write it after handing in the quiz or at home / in catch-up. The quiz is handed out by minute 12.",
              "ASK Answer the Big Question now.", "LISTEN FOR any change named as evidence",
-             "NEXT End-of-chapter review."])
+             "NEXT Friday quiz (Session 3). Optional end-of-chapter review slides 34-45 are for a review day or FLEX only."])
 
 # ================================================================================
 # END-OF-CHAPTER REVIEW (4–6 MCQ, question state + answer state)
 # ================================================================================
 REVIEW = [
     {"q": "Energy is best described as —",
-     "opts": ["the ability to cause change", "a visible glow", "something only batteries have", "a kind of fuel"],
-     "correct": 0, "type": "concept",
+     "opts": ["a visible glow", "something only batteries have", "the ability to cause change", "a kind of fuel"],
+     "correct": 2, "type": "concept",
      "explain": "Energy is the ability to cause change (Reader p. 1)."},
     {"q": "A pencil is dull, then you sharpen it. What change do you observe?",
-     "opts": ["It gets longer", "It gets shorter and sharper", "It changes color", "It disappears"],
-     "correct": 1, "type": "visual",
+     "opts": ["It gets shorter and sharper", "It gets longer", "It changes color", "It disappears"],
+     "correct": 0, "type": "visual",
      "explain": "The pencil becomes shorter and sharper — a change."},
     {"q": "Which object has stored energy that can cause a change LATER?",
-     "opts": ["A ball already rolling", "A toy already moving", "A stretched rubber band", "A flashlight already on"],
-     "correct": 2, "type": "scenario",
+     "opts": ["A ball already rolling", "A toy already moving", "A flashlight already on", "A stretched rubber band"],
+     "correct": 3, "type": "scenario",
      "explain": "The rubber band stores energy; it changes when released."},
-    {"q": "A carousel spins and plays music. Which two forms of energy do you observe?",
-     "opts": ["motion and silence", "sound and stillness", "only light", "motion and sound"],
-     "correct": 3, "type": "comparison",
+    {"q": "A carousel spins and plays music. Which two forms of energy come from the spinning and the music?",
+     "opts": ["only light", "motion and sound", "motion and silence", "sound and stillness"],
+     "correct": 1, "type": "comparison",
      "explain": "The spinning is motion; the music is sound (Reader p. 3)."},
     {"q": "How do we know energy is involved if we cannot see it?",
-     "opts": ["Energy can always be seen", "We observe a change happen", "We guess without evidence", "Nothing can change"],
-     "correct": 1, "type": "concept",
+     "opts": ["We observe a change happen", "Energy can always be seen", "We guess without evidence", "Nothing can change"],
+     "correct": 0, "type": "concept",
      "explain": "We see a change — like movement — as evidence."},
     {"q": "A battery sits still in a flashlight. Does it have energy?",
      "opts": ["No — still objects have no energy", "Only when it is moving", "Yes — stored energy that can cause change later", "Only when the flashlight is on"],
      "correct": 2, "type": "scenario",
-     "explain": "A battery stores energy; it changes when released."},
+     "explain": "A battery stores energy. It can cause a change later."},
 ]
 
 def review_question(slide_q, num, item):
@@ -953,7 +984,7 @@ def review_answer(slide_a, num, item):
         text(slide_a, 1.25, cy + 0.13, 0.6, 0.5, letters[i], size=T_OPT, color=ACCENT, bold=True, anchor=MSO_ANCHOR.MIDDLE)
         text(slide_a, 1.95, cy + 0.11, 10.1, 0.54, opt, size=T_OPT, color=INK, bold=is_correct, anchor=MSO_ANCHOR.MIDDLE)
     rect(slide_a, 0.55, 6.35, 12.23, 0.72, MIST, line_color=RULE, line_w=1.0, rounded=True)
-    text(slide_a, 0.8, 6.47, 11.7, 0.5, item["explain"], size=T_BODY_S, color=INK, anchor=MSO_ANCHOR.MIDDLE)
+    text(slide_a, 0.8, 6.47, 11.2, 0.5, item["explain"], size=T_BODY_S, color=INK, anchor=MSO_ANCHOR.MIDDLE)
     slide_number(slide_a)
 
 for idx, item in enumerate(REVIEW, 1):

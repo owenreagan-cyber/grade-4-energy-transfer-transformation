@@ -31,7 +31,7 @@ BQ_EXACT = "Where can we observe evidence of energy causing change?"
 V_GROUPS = ["V1", "V2"]
 N_SECTIONS = ["N1", "N2", "N3", "N4"]
 VOCAB_ANSWERS = ["change", "different", "later"]
-CONCEPT_ANSWERS = ["cause", "change", "evidence", "position"]
+CONCEPT_ANSWERS = ["evidence", "position"]   # v1.1: N1 has ONE blank (evidence); N3 position
 KEY_SAMPLE_MARKERS = ["Sample:", "Accept any"]
 
 BANNED = [
@@ -188,6 +188,154 @@ def gate_key_no_unanswered_blanks(key_doc):
     content_blanks = [round(w, 2) for w in unders if w < 1.9]
     return ("PASS" if not content_blanks else "FAIL", f"unfilled content blanks in key: {content_blanks or 'none'}")
 
+EXPECTED_RULED_LINE_GROUPS = [2, 2, 3, 3]   # first thinking · What changed? · CHECK · BQ NOW I THINK
+EXPECTED_CONTENT_BLANKS = 5                 # V1 x2 · N1 x1 · V2 x1 · N3 x1
+
+def ruled_line_groups(doc):
+    """Writing-line groups = single-column tables whose cells are empty and carry a bottom border."""
+    groups = []
+    for t in doc.tables:
+        if len(t.columns) != 1:
+            continue
+        ok = True
+        for row in t.rows:
+            c = row.cells[0]
+            if c.text.strip():
+                ok = False; break
+            b = c._tc.find(qn("w:tcPr"))
+            bd = b.find(qn("w:tcBorders")) if b is not None else None
+            if bd is None or bd.find(qn("w:bottom")) is None:
+                ok = False; break
+        if ok:
+            groups.append(len(t.rows))
+    return groups
+
+def gate_ruled_lines(doc, expected=None):
+    expected = expected or EXPECTED_RULED_LINE_GROUPS
+    g = ruled_line_groups(doc)
+    merged = [p for p in iter_paragraphs(doc)
+              if p._p.pPr is not None and p._p.pPr.find(qn("w:pBdr")) is not None and not p.text.strip()]
+    ok = g == expected and not merged
+    return ("PASS" if ok else "FAIL", f"ruled-line row groups {g} (expect {expected}); empty bordered paragraphs (merge bug): {len(merged)}")
+
+def gate_blank_budget(doc):
+    n = len(underline_blank_runs(doc))
+    # Name line is one extra underlined run (>=1.9in)
+    content = [w for w, _ in underline_blank_runs(doc) if w < 1.9]
+    return ("PASS" if len(content) == EXPECTED_CONTENT_BLANKS else "FAIL", f"content blanks {len(content)} (expect {EXPECTED_CONTENT_BLANKS}; v1.0 had 7)")
+
+def ordered_text(doc):
+    """Document-order text (paragraphs and tables interleaved)."""
+    out = []
+    for el in doc.element.body.iterchildren():
+        out.append("".join(x.text or "" for x in el.iter(qn("w:t"))))
+    return "\n".join(out)
+
+def _n1_segment(doc):
+    t = ordered_text(doc)
+    a, b = t.find("N1   ENERGY CAUSES"), t.find("N2   ENERGY OCCURS")
+    return t[a:b]
+
+def _n1_chain_cells(doc):
+    """Return the text of the 5 cells of the N1 model chain (ENERGY -> CHANGE -> last box), or None."""
+    for t in doc.tables:
+        if len(t.rows) == 1 and len(t.columns) == 5:
+            cells = [c.text.strip() for c in t.rows[0].cells]
+            if cells[0] == "ENERGY":
+                return cells
+    return None
+
+def gate_n1_redundancy(doc, is_key=False):
+    seg = _n1_segment(doc)
+    bad = [x for x in ("A change is", "Energy has the ability to _") if x in seg]
+    one = "_" in seg and len(re.findall(r"_{4,}", seg)) == 1
+    cells = _n1_chain_cells(doc)
+    chain_ok = cells is not None and cells[0] == "ENERGY" and cells[2] == "CHANGE"
+    if is_key:
+        # teacher key keeps the FULL model and the answer in the sentence
+        ok = (not bad) and chain_ok and cells[4] == "EVIDENCE" and "evidence" in seg
+        note = "key N1: full model %s; answer in sentence" % (cells,)
+    else:
+        # M1 (Phase 6.1B): the student page must NOT print the answer to its own blank -> no 'evidence' anywhere in N1,
+        # and the model's last box is an EMPTY write-in box
+        ok = (not bad) and one and chain_ok and cells[4] == "" and "evidence" not in seg.lower()
+        note = "N1 redundant text %s; single blank: %s; model %s; 'evidence' printed on page: %s" % (
+            bad or "none", one, cells, "evidence" in seg.lower())
+    return ("PASS" if ok else "FAIL", note)
+
+def gate_n4_reader_range(doc):
+    """L1 (Phase 6.1B): N4 cites core pp. 1-5 (p. 6 is a teacher-facing forward preview)."""
+    t = ordered_text(doc)
+    seg = t[t.find("N4   RECOGNIZING"):]
+    ok = "Reader pp. 1\u20135" in seg and "1\u20136" not in t and "pp. 1-6" not in t
+    return ("PASS" if ok else "FAIL", "N4 cites 'Reader pp. 1\u20135'; no 'pp. 1\u20136' anywhere on the page")
+
+def gate_first_thinking_rules(pdf_path):
+    """L2 (Phase 6.1B): rendered check - TWO separated writing rules under 'My first thinking' (the 2nd must not touch V1)."""
+    import tempfile, glob
+    from PIL import Image
+    tmp = tempfile.mkdtemp(prefix="ft_")
+    subprocess.run(["pdftoppm", "-png", "-r", "100", "-f", "1", "-l", "1", pdf_path, os.path.join(tmp, "p")], check=True)
+    img = Image.open(glob.glob(os.path.join(tmp, "p*.png"))[0]).convert("L"); px = img.load(); w, h = img.size
+    bb = subprocess.run(["pdftotext", "-bbox", "-f", "1", "-l", "1", pdf_path, "-"], capture_output=True, text=True).stdout
+    def ymin(word, nth=0):
+        ys = [float(m.group(1)) for m in re.finditer(r'yMin="([\d.]+)"[^>]*>' + re.escape(word) + '<', bb)]
+        return ys[nth] if len(ys) > nth else None
+    y_lab = ymin("thinking"); y_v1 = ymin("V1")
+    if y_lab is None or y_v1 is None:
+        return ("FAIL", "could not locate 'My first thinking' / 'V1' in the rendered PDF")
+    rows = [y for y in range(h) if sum(1 for x in range(w) if px[x, y] < 160) > w * 0.6]
+    groups = []
+    for y in rows:
+        if groups and y - groups[-1][-1] <= 2: groups[-1].append(y)
+        else: groups.append([y])
+    rules = [g for g in groups if y_lab * 100 / 72 + 8 < g[0] < y_v1 * 100 / 72]
+    gap_pt = (y_v1 - (rules[-1][-1] * 72 / 100)) if rules else -1
+    spacing = [round((rules[i + 1][0] - rules[i][0]) * 72 / 100, 1) for i in range(len(rules) - 1)]
+    ok = len(rules) == 2 and gap_pt >= 12 and spacing and spacing[0] >= 24
+    return ("PASS" if ok else "FAIL", "rendered rules under 'My first thinking': %d (expect 2) · rule pitch %s pt (>=24) · gap rule2->V1 %.1f pt (>=12)" % (len(rules), spacing, gap_pt))
+
+def gate_page2_row_rules(pdf_path):
+    """L-A (Phase 6.1C): rendered check - on notes page 2 every N2 form row and N3 example row has its OWN writing rule
+    directly under its label (<= 8 pt below the label's text bottom) and the previous rule is clearly above the label
+    (>= 10 pt above its text top), so no rule can be mistaken for the next row's."""
+    import tempfile, glob
+    from PIL import Image
+    tmp = tempfile.mkdtemp(prefix="p2r_")
+    subprocess.run(["pdftoppm", "-png", "-r", "144", "-f", "2", "-l", "2", pdf_path, os.path.join(tmp, "p")], check=True)
+    img = Image.open(glob.glob(os.path.join(tmp, "p*.png"))[0]).convert("L"); px = img.load(); w, h = img.size
+    S = 2.0
+    x0, x1 = int(330 * S), int(560 * S)
+    ys = [y for y in range(h) if sum(1 for x in range(x0, x1, 2) if px[x, y] < 110) > 0.9 * ((x1 - x0) / 2)]
+    groups = []
+    for y in ys:
+        if groups and y - groups[-1][-1] <= 2: groups[-1].append(y)
+        else: groups.append([y])
+    rules = [sum(g) / len(g) / S for g in groups]
+    bb = subprocess.run(["pdftotext", "-bbox", "-f", "2", "-l", "2", pdf_path, "-"], capture_output=True, text=True).stdout
+    bad, rows = [], 0
+    for lab in ("motion", "sound", "light", "heat", "electrical", "battery", "stretched", "raised"):
+        m = re.search(r'yMin="([\d.]+)" xMax="[\d.]+" yMax="([\d.]+)">' + lab + "<", bb)
+        if not m:
+            bad.append(lab + ": label not found"); continue
+        ymin, ymax = float(m.group(1)), float(m.group(2)); rows += 1
+        below = [r for r in rules if r >= ymin + 5]; above = [r for r in rules if r < ymin]
+        if not below or not above:
+            bad.append(lab + ": rule not found"); continue
+        d_own, d_prev = below[0] - ymax, ymin - above[-1]
+        if d_own > 8 or d_prev < 10:
+            bad.append("%s (own rule %.1f pt below text, previous rule %.1f pt above)" % (lab, d_own, d_prev))
+    return ("PASS" if not bad and rows == 8 else "FAIL", "page-2 rows checked: %d/8 · misaligned: %s" % (rows, bad or "none"))
+
+def gate_n2_write_prompt(doc):
+    t = full_text(doc)
+    return ("PASS" if "Write one example that shows a change for each form." in t and "Write or draw" not in t else "FAIL",
+            "N2 prompt says Write (cells are single ruled rows)")
+
+REPORT_OVERRIDE = None
+if "--report" in sys.argv:
+    REPORT_OVERRIDE = os.path.join(ROOT, sys.argv[sys.argv.index("--report") + 1])
+
 def main():
     s_doc = Document(STUDENT + ".docx")
     k_doc = Document(KEY + ".docx")
@@ -217,6 +365,18 @@ def main():
     add("PDF page count = 3", ("PASS" if s_pages == 3 else "FAIL", f"student={s_pages}"))
     add("PDF US Letter size", ("PASS" if (abs(s_size[0] - 612) < 2 and abs(s_size[1] - 792) < 2) else "FAIL",
         f"student {s_size} (expect 612x792)"))
+    add("Ruled writing lines (table rows, no merge bug)", gate_ruled_lines(s_doc))
+    add("Content blank budget (<= v1.0)", gate_blank_budget(s_doc))
+    add("N1 redundancy removed + model box open (M1)", gate_n1_redundancy(s_doc))
+    add("N4 cites Reader pp. 1\u20135 (L1)", gate_n4_reader_range(s_doc))
+    add("My first thinking: 2 usable rendered rules (L2)", gate_first_thinking_rules(STUDENT + ".pdf"))
+    add("Student page 2: each writing rule belongs to its own row (L-A)", gate_page2_row_rules(STUDENT + ".pdf"))
+    add("Key page 2: each writing rule belongs to its own row (L-A)", gate_page2_row_rules(KEY + ".pdf"))
+    add("N2 prompt wording", gate_n2_write_prompt(s_doc))
+    # key: the sample answer for "What changed?" takes the place of one ruled line (keeps the key at 3 pages)
+    add("Key ruled lines parity", gate_ruled_lines(k_doc, [2, 1, 3, 3]))
+    add("Key N1 keeps full model (M1)", gate_n1_redundancy(k_doc, is_key=True))
+    add("Key N4 cites Reader pp. 1\u20135 (L1)", gate_n4_reader_range(k_doc))
     add("All blanks answered in key", gate_answers_in_key(k_doc))
     add("No unanswered blanks in key", gate_key_no_unanswered_blanks(k_doc))
 
@@ -234,9 +394,9 @@ def main():
     print(f"OVERALL: {overall}")
 
     os.makedirs(REPORT_DIR, exist_ok=True)
-    out = os.path.join(REPORT_DIR, "PHASE_3_CH1_GUIDED_NOTES_QA.md")
+    out = REPORT_OVERRIDE or os.path.join(REPORT_DIR, "PHASE_3_CH1_GUIDED_NOTES_QA.md")
     with open(out, "w") as f:
-        f.write("# Phase 3 — Chapter 1 Guided Notes Automated QA\n\n")
+        f.write("# Chapter 1 Guided Notes Automated QA\n\nGenerated by tools/qa_ch1_guided_notes.py (v1.1 gates).\n\n")
         f.write(f"Overall: **{overall}**\n\n")
         for name, (s, note), _ in gates:
             f.write(f"- [{s}] {name} — {note}\n")

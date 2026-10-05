@@ -5,16 +5,16 @@
 ---
 
 ## WEEK 1 — Chapter 1: Energy Causes Change
-**Essential question:** Where can we observe evidence of energy causing change? · What are some forms of energy?
-**Reader:** pp. 1–6 · **TG:** Lessons 1–2 · **Deck:** 25 slides · **Notebook:** 3 inserts (Energy · Energy Model · Stored Energy)
+**Essential question:** Where can we observe evidence of energy causing change?
+**Reader:** pp. 1–6 · **TG:** Lessons 1–2 · **Deck:** 45 slides (required path per session) · **Authority:** `docs/chapter-01/CH1_PACING_PLAN.md` (three sessions Mon · Tue · Fri)
 
-| Day | Objective | Reader | Lab/activity | Notebook | Slides | Media | Assessment | Timing |
-|---|---|---|---|---|---|---|---|---|
-| Mon | Energy = ability to cause change; change = evidence | pp.1–2 | Pencil sharpener demo | Insert 1 | 1–8 | Invisible Boss (CORE) + Energy Detective (CORE) | oral exit | 45 min |
-| Tue | Scavenger hunt: find changes + evidence | — | Energy Detectives lab (AP 1.1) | — | 9 + cue | Energy Detectives Briefing (SUPPORT) | lab page | 45 min |
-| Wed | Forms of energy | p.3 | Flashlight / cup drum / warm water demos | Insert 2 | 10–16 | Stored Energy (CORE) | thumbs check | 45 min |
-| Thu | Stored energy | pp.4–5 | Battery-in-flashlight + raised book | Insert 3 | 17–22 | Why Still Objects short (FLEX) | exit | 45 min |
-| Fri | Flex (recover/practice/extend) | — | — | finish inserts | — | Chapter 1 Review (SUPPORT) | — | flex |
+| Session | Day | Objective | Reader | Notes page | Slides | Assessment | Timing |
+|---|---|---|---|---|---|---|---|
+| 1 | Mon | Energy = ability to cause change; change = evidence | pp.1–2 | p.1 (BQ · V1 · N1) | 1–3, 6–16 | oral exit ticket | 24.5 min + 5.5 buffer |
+| 2 | Tue | Five forms; stored energy | pp.3–5 | p.2 (N2 · V2 · N3) | 2, 17, 19–27 | — | 24.5 min + 5.5 buffer |
+| 3 | Fri | Recognize evidence (N4); Chapter 1 quiz | pp.1–5 | p.3 (N4) | 2, 28–31, 33 + quiz | Quiz 9 items · 16 pts · raw score + % | 25 min (quiz by minute 12; fallback N4 > BQ > CHECK) |
+
+Optional: Energy Detectives (ungraded), Friday FLEX options, review game slides 34–45.
 
 ---
 
@@ -131,7 +131,7 @@
 ---
 
 ## Cross-unit notes
-- **Friday = FLEX always** (recover / practice / extend; no new essential standard).
+- **Friday policy:** catch-up, review, completion of taught work, BQ reflection/synthesis, scored quizzes, makeup and optional FLEX — never first exposure to essential new core content (`AGENTS.md`).
 - **Media load:** 0–1 CORE video per lesson (see `WHOLE_UNIT_MEDIA_STAGING.md`).
 - **Final assessment splits Wed/Thu at 30-min periods** (documented in `PHASE_9_CLASSROOM_SIMULATION.md`).
 - **Absent pathways** live in `curriculum/chapter-0N/student/recovery/`.

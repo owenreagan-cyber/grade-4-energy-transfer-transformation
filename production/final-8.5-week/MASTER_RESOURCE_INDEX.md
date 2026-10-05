@@ -10,13 +10,13 @@
 
 | Day | Unit/Ch | Type | Resource | Media | Tier |
 |---|---|---|---|---|---|
-| Mon | U1 Ch1 | MAP | `curriculum/chapter-01/teacher/01-ch1-energy-causes-change-teacher-map.md` | none | CORE |
+| Mon | U1 Ch1 | MAP | `docs/chapter-01/CH1_PACKAGE_MANIFEST.md` (current Ch1 package map; the old teacher map is SUPERSEDED) | none | CORE |
 | Mon | U1 Ch1 | GN | `production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx` | — | CORE |
-| Mon | U1 Ch1 | SL | `production/slides/01-ch1-energy-causes-change-slides.pptx` S1–S9 | none | CORE |
-| Tue | U1 Ch1 | GN/SL | `01-ch1` p.2 · `01-ch1` S12–S23 · Reader pp.3–6 | none | CORE |
+| Mon | U1 Ch1 | SL | `production/slides/01-ch1-energy-causes-change-slides.pptx` S1–3, S6–16 (S4–5 optional) | none | CORE |
+| Tue | U1 Ch1 | GN/SL | `01-ch1` p.2 · `01-ch1` S2, S17, S19–27 (S18 optional) · Reader pp.3–5 | none | CORE |
 | Wed | U1 Ch2 | MAP/GN/SL | `02-ch2` p.1 · `02-ch2` S1–S13 · Reader pp.7–9 | none | CORE |
 | Thu | U1 Ch1–2 | LAB | `production/worksheets/02-ch2-moving-marbles-student.docx` + `production/labs/02-ch2-moving-marbles-teacher-spec.md` + `production/answer-keys/02-ch2-moving-marbles-key.md` | none | CORE |
-| Fri | U1 Ch1–2 | FLEX | `production/friday-flex/FRIDAY_FLEX_BANK.md` (Energy Charades · Detectives catch-up) | — | FLEX |
+| Fri | U1 Ch1 | QUIZ + FLEX | `01-ch1` p.3 · `01-ch1` S2, S28–31, S33 · Ch1 quiz (16 pts) · then `production/friday-flex/FRIDAY_FLEX_BANK.md` (Charades · optional Detectives) | — | QUIZ / FLEX |
 
 ## WEEK 2 — Unit 1 Ch3
 

@@ -8,10 +8,10 @@
 |---|---|---|---|---|---|---|
 | 1 | 1 | Slides | `production/releases/chapter-01/01-ch1-energy-causes-change-slides.pptx` | RELEASED | T | project |
 | 1 | 1 | Guided notes | `production/releases/chapter-01/01-ch1-energy-causes-change-guided-notes.pdf` | RELEASED | S | print |
-| 1 | 1 | Lab: Energy Detectives | `production/releases/chapter-01/01-ch1-energy-detectives-student.pdf` | RELEASED | S | print |
+| 1 | 1 | Energy Detectives (optional, ungraded) | `production/releases/chapter-01/01-ch1-energy-detectives-student.pdf` | RELEASED (v1.1 FROZEN) | S | print |
 | 1 | 1 | Practice | `production/releases/chapter-01/01-ch1-energy-causes-change-practice.pdf` | RELEASED | S | print |
-| 1 | 1 | Notebook (3 inserts) | `production/releases/chapter-01/01-ch1-interactive-science-notebook.pdf` | RELEASED | S | print |
-| 1 | 1 | Quiz + key | `.../01-ch1-energy-causes-change-quiz.pdf` + `-teacher-key.pdf` | RELEASED | S/T | print |
+| 1 | 1 | Notebook (3 inserts) | RETIRED in Phase 6.1 — moved to `production/archive/retired/chapter-01-release-v1.0/` (Guided Notes are primary) | RETIRED | — | — |
+| 1 | 1 | Quiz (9 items · 16 pts) + keys | `.../01-ch1-energy-causes-change-quiz.pdf` + `-teacher-key.pdf` + `-guided-notes-key.pdf` | RELEASED (v1.1 FROZEN) | S/T | print |
 | 1 | 1 | Friday Flex | `production/releases/chapter-01/01-ch1-friday-flex.pdf` | RELEASED | S | print |
 | 2 | 2 | Slides | `production/releases/chapter-02/02-ch2-moving-objects-have-energy-slides.pptx` | RELEASED | T | project |
 | 2 | 2 | Guided notes | `.../02-ch2-moving-objects-have-energy-guided-notes.pdf` | RELEASED | S | print |

@@ -9,4 +9,8 @@ Always applicable.
 - No "complete/final/ready/released" claim without required validation (see `docs/planning/QA_GATES.md`).
 - Automated QA preferred; record results in `qa/reports/`.
 - Reviewer agents must not silently edit the artifact being certified; switch to fix mode explicitly.
+- Every phase follows `docs/agent-workflows/PHASE_PIPELINE.md`: BUILD → deterministic QA → internal specialist review → visual QA → phase artifact inventory → external Grok adversarial audit → verified remediation → final QA → freeze → commit.
+- **No phase is considered complete until every created/modified/affected artifact is accounted for by the external audit.**
+- Visual QA (PASS/WARN/FAIL per artifact, rendered + deterministic) is required on every affected student/teacher/projected artifact.
+- Release packages must pass `tools/qa_release_parity.py`; retired architectures are excluded from release packages.
 - No commit or push unless explicitly requested.

@@ -29,13 +29,15 @@
 
 ## Week 1 — Chapters 1–2
 
+> **Chapter 1 timing authority (Phase 6.1):** `docs/chapter-01/CH1_PACING_PLAN.md` (generated from `tools/ch1_pacing.py`). Ch1 is three sessions (Mon · Tue · Fri); Friday carries consolidation and the graded quiz only — no new core content. Ch2 keeps Wed/Thu. Any other Ch1 timing language is superseded.
+
 | Day | Date | Chapter / activity | Reader pp. | Guided Notes | Slides | Demo / activity | Collect / grade | Materials | FLEX |
 |---|---|---|---|---|---|---|---|---|---|
-| Mon | 10/12 | Ch1 — Energy Causes Change (Block 1: Observe & Name) | 1–2 | Section: Key Words · Model It · Draw/Label | PLANNED — Phase 4 | Electric Pencil Sharpener DEMO (predict → observe) | exit ticket (not graded) | electric sharpener + pencil | — |
-| Tue | 10/13 | Ch1 (Block 2: Forms & Stored) | 3–5 | Forms table · Stored examples · Evidence table | PLANNED — Phase 4 | Flashlight + cup/balloon/salt demos | exit ticket (not graded) | flashlight + D-cell · cup/balloon/salt | — |
+| Mon | 10/12 | Ch1 Session 1 — Observe & Name (24.5 min) | 1–2 | Notes p. 1: BQ · V1 · N1 | AVAILABLE — slides 1–3, 6–16 | Electric Pencil Sharpener DEMO (predict → observe) | notes (not graded) | electric sharpener + pencil | — |
+| Tue | 10/13 | Ch1 Session 2 — Forms & Stored Energy (24.5 min) | 3–5 | Notes p. 2: N2 · V2 · N3 | AVAILABLE — slides 2, 17, 19–27 (18 OPTIONAL) | Rubber-band stretch (optional, 30 s) | notes (not graded) | optional rubber band | — |
 | Wed | 10/14 | Ch2 — Moving Objects Have Energy (Block 1) | 7–9 | Key Words · Model It · Draw/Label | PLANNED — Phase 4 | Marble Collision DEMO | exit ticket (not graded) | identical marbles + target cup | — |
 | Thu | 10/15 | Ch2 (Block 2) | 10–12 | Before/After · Example/Non-example · Check | PLANNED — Phase 4 | — | exit ticket (not graded) | — | — |
-| Fri | 10/16 | FLEX | — | — | — | Energy Detectives (FLEX) · Moving Marbles (FLEX) | not graded | — | RECOVER / PRACTICE / EXTEND |
+| Fri | 10/16 | Ch1 Session 3 — Recognize, Reflect & QUIZ (25 min; consolidation + assessment, no new vocabulary) | 1–5 | Notes p. 3: N4 · CHECK · BQ now | AVAILABLE — slides 2, 28–31, 33 (quiz handed out by minute 12; fallback: N4 > BQ > CHECK) | Chapter 1 quiz (9 items · 16 pts · raw + %) | QUIZ — GRADED | — | After the quiz / spare time: RECOVER (notes catch-up) · PRACTICE (practice page) · EXTEND (Energy Detectives, optional) |
 
 ## Week 2 — Chapter 3 + Ramp It Up 2.0
 
@@ -73,5 +75,5 @@
 
 1. **Week 4 density.** Ch6 (a two-week chapter in the original 9-week plan) is compressed to 2 blocks; Ch7 to 1 block; Pom-Pom build + review + assessment share Thu/Fri. This is feasible only if (a) Ch6 keeps the *compact* in-unit engineering cycle (not the full capstone — see RD-4), and (b) review is streamlined (study guide = take-home + in-class game).
 2. **Assessment timing.** The 25Q/50pt final is ~30–45 min (documented: splits at 30-min periods). If it does not fit Friday 11/6, split across Thu/Fri; Friday FLEX buffer is the safety valve. It is a scored summative, not "new core content," so Friday placement is acceptable under the FLEX rule.
-3. **30-min feasibility.** The restructuring audit (§Q) flags that the day-level 30-min timing check is a **pilot item** — re-verify Block 1/Block 2 fits after Ch1 notes/slides rebuild, and again when Ramp It Up 2.0 and Pom-Pom Launcher are finalized.
+3. **30-min feasibility.** The restructuring audit (§Q) flags that the day-level 30-min timing check is a **pilot item** — Ch1 is now verified (see `docs/chapter-01/CH1_PACING_PLAN.md` and `qa/reports/PHASE_6_1_CH1_CLASSROOM_TIME_SIMULATION.md`); re-verify again when Ramp It Up 2.0 and Pom-Pom Launcher are finalized.
 4. **No day stacks two long videos** (per `PHASE_10_LESSON_LOAD_AUDIT.md`). Media for Ch3–7 is scripts-only and does not block this calendar.

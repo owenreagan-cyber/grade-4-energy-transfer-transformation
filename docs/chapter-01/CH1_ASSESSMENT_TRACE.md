@@ -7,6 +7,7 @@
 ## Summary
 
 - **Chapter 1 contributes 6 items / 12 points** of the locked 25-question / 50-point final.
+- This is separate from the **Chapter 1 quiz** (9 items / 16 points, Fri Session 3, raw score + percent; see `production/quizzes/01-ch1-energy-causes-change-quiz-blueprint.md`). Do not conflate them. Phase 6.1 corrected the quiz blueprint's Reader references (Q3 → pp. 1–3, Q7 → p. 5).
 - Coverage is **direct** (each item maps to a Chapter 1 note anchor AND Reader pp. 1–6).
 - No item depends on advanced terminology (kinetic/potential/mechanical/radiant/compression-wave/inertia) or on later-chapter content.
 
@@ -18,7 +19,7 @@
 | Q8 | Matching | energy | Ch1 p. 1 | V1 (p. 1) · N1 | V1 10–12 · N1 13–16 | Eligible (matching) | Direct |
 | Q9 | MC | energy = ability to cause change | Ch1 p. 1 | V1 (p. 1) · N1 | V1 10–12 · N1 13–16 | Eligible (MC) | Direct |
 | Q11 | MC | stored energy (battery in flashlight) | Ch1 p. 4 | V2 (p. 2) · N3 | V2 20–22 · N3 23–27 | Eligible (MC) | Direct |
-| Q16 | MC | change as evidence | Ch1 pp. 1–3 | N1 Model It · N4 | N1 13–16 · N4 28–31 | Eligible (MC) | Direct |
+| Q16 | MC | change as evidence | Ch1 pp. 1–3 | N1 · N4 | N1 13–16 · N4 28–31 | Eligible (MC) | Direct |
 | Q18 | MC | stored energy (stretched rubber band) | Ch1 pp. 4–5 | V2 (p. 2) · N3 | V2 20–22 · N3 23–27 | Eligible (MC) | Direct |
 
 ## Answer-sequence consistency (from locked blueprint)

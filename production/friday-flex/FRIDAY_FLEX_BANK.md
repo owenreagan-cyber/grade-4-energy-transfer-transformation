@@ -11,7 +11,8 @@
 
 | Label | Option | Timing | Materials | Grouping | Teacher prep | Collect/grade? | Journal? | Key? |
 |---|---|---|---|---|---|---|---|---|
-| RECOVER | Energy Detectives catch-up (finish before/after + evidence) | STANDARD | Ch1 guided notes, pencils | pairs | pull students who missed evidence table | collect, spot-check | yes (before/after) | — |
+| RECOVER | Ch1 catch-up: finish notes pp.1–3 or retake the Ch1 quiz window (Ch1 quiz is given in Session 3, Friday) | STANDARD | Ch1 guided notes, pencils | pairs | pull students who missed N4 | collect, spot-check | yes (before/after) | — |
+| EXTEND (optional) | Energy Detectives scavenger hunt (`01-ch1-energy-detectives-student`; ungraded) | STANDARD | Detectives page, pencils | groups | none | no | optional | yes |
 | PRACTICE | Energy Charades | FULL FLEX | word cards (motion, sound, light, heat, electrical, stored) | whole class / teams | print card set | no | optional: log one charade | yes |
 | EXTEND | Journal drawing: one energy change I saw this week | QUICK | science journal, crayons | solo | none | no | yes | — |
 

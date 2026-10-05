@@ -8,7 +8,7 @@ Always applicable.
 
 - Respect root `AGENTS.md`. This repository is the canonical source of truth.
 - Authoritative curriculum = CKSci Student Reader + Teacher Guide. Never override, rename, or alter in place.
-- Grade 4 · 30-minute blocks · Friday = FLEX only · conservative-school content constraints.
+- Grade 4 · 30-minute blocks · Friday policy (see `AGENTS.md`: catch-up/review/synthesis/quizzes/makeup/FLEX allowed, never first exposure to essential core content) · conservative-school content constraints.
 - No invented chapter titles; no advanced required vocabulary (kinetic/potential/mechanical/radiant/compression-wave/inertia).
 - No commit or push unless explicitly requested. No Git remote.
 - Roles + branching: see `docs/agent-workflows/BRANCH_AND_WORKTREE_POLICY.md`.

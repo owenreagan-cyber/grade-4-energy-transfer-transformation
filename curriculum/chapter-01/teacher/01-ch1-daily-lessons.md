@@ -1,5 +1,7 @@
 # Week 1 Daily Lessons — Chapter 1: Energy Causes Change
 
+> ⚠️ **SUPERSEDED / HISTORICAL (Phase 6.1).** This pre-canonical staging file is retained for provenance only. It may contain legacy timing (Block 1/2, 40–45 min), legacy demos (cup/balloon/salt), or retired artifacts. The authoritative Chapter 1 package is `docs/chapter-01/CH1_PACKAGE_MANIFEST.md`; timing is `docs/chapter-01/CH1_PACING_PLAN.md`.
+
 > Working sequence. Options map to `docs/planning/DAILY_LESSON_ARCHITECTURE.md`. Times assume a 40–45 min period (see classroom simulation for 30-min notes).
 
 ## MONDAY — Energy Causes Change (Option A: concept day)

@@ -15,17 +15,17 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 ### Mon — Energy causes change
 - **Unit/Ch:** U1 · Ch1 · **BQ:** Where can we observe evidence of energy causing change?
 - **Essential:** energy = ability to cause change; change is our evidence. (No advanced forms terms.)
-- **GN:** `01-ch1` p.1 · **Slides:** `01-ch1` S1–S9 · **Reader:** pp.1–2 · **Act:** none (launch)
+- **GN:** `01-ch1` p.1 · **Slides:** `01-ch1` S1–3, S6–16 · **Reader:** pp.1–2 · **Act:** sharpener demo
 - **J:** draw one change you saw today. **FC:** exit ticket — name one change + its evidence.
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** send `01-ch1` p.1 + slide handout; do the journal drawing.
 
 ### Tue — Stored energy / forms / evidence
-- **Unit/Ch:** U1 · Ch1 · **BQ:** What are some forms of energy? What is stored energy?
+- **Unit/Ch:** U1 · Ch1 · **BQ:** Where can we observe evidence of energy causing change?
 - **Essential:** forms (motion, light, sound, heat, electrical); stored energy can cause change later.
-- **GN:** `01-ch1` p.2 · **Slides:** `01-ch1` S12–S23 · **Reader:** pp.3–6 · **Act:** forms-of-energy sort (FLEX)
+- **GN:** `01-ch1` p.2 · **Slides:** `01-ch1` S2, S17, S19–27 (S18 optional) · **Reader:** pp.3–5 · **Act:** N2 five-forms write
 - **J:** one stored-energy example. **FC:** stored-energy table check.
-- **Materials:** printed sort cards (FLEX) · **Prep:** cut cards · **Cleanup:** collect cards · **Type:** CORE · **Time:** 25–30
+- **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `01-ch1` p.2.
 
 ### Wed — Moving objects have energy
@@ -36,17 +36,17 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `02-ch2` p.1.
 
-### Thu — Energy Detectives / Moving Marbles mini-investigation
-- **Unit/Ch:** U1 · Ch1–2 · **BQ:** What evidence shows a moving object has energy?
+### Thu — Moving Marbles mini-investigation (Ch2)
+- **Unit/Ch:** U1 · Ch2 · **BQ:** What evidence shows a moving object has energy?
 - **Essential:** moving marble transfers energy to a cup (change = evidence). Same-marble comparisons only.
 - **GN:** `02-ch2` p.2 · **Slides:** `02-ch2` S14–S24 · **Reader:** pp.10–12 · **Act:** Moving Marbles mini-lab
 - **J:** before/after drawing. **FC:** observation table.
 - **Materials:** marbles, cups, meter stick · **Prep:** set stations · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
 - **Absent:** partner data + `02-ch2` p.2.
 
-### Fri — RECOVER / PRACTICE / EXTEND
-- **Act:** Energy Charades (FULL FLEX) · journal drawing (QUICK) · Detectives catch-up (STANDARD)
-- **Type:** FLEX only — no new content. **Time:** 25–30 · **FC:** none graded · **Absent:** fine (see Friday Flex Bank).
+### Fri — Ch1 Session 3 (notes p.3 + Chapter 1 quiz), then FLEX
+- **Act:** `01-ch1` S2, S28–31, S33, then the quiz (16 pts, raw score + %; handed out by minute 12 — if time is lost: N4 > BQ > CHECK, CHECK finishes at home); leftover time = FLEX (Charades · journal drawing · optional Detectives)
+- **Type:** Ch1 Session 3 per `docs/chapter-01/CH1_PACING_PLAN.md`. **Time:** 25 · **FC:** quiz graded · **Absent:** make up the quiz the next FLEX window.
 
 ---
 

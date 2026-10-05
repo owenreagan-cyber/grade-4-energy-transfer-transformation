@@ -41,7 +41,7 @@
 > A student sees a light turn on and a fan begin to spin. How do we know energy was involved?
 > A. We can see energy itself moving · B. Energy is involved only when something makes a sound · C. The objects changed on their own without energy · **D. We observe the changes and use them as evidence**
 
-- Mirrors locked final-assessment item **Q16** (Reader pp. 1–3; notes p. 1 Model It).
+- Mirrors locked final-assessment item **Q16** (Reader pp. 1–3; notes p. 1 N1 + p. 3 N4).
 
 ## 7. "What to know" item
 

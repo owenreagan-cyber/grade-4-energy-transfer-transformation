@@ -1,5 +1,16 @@
 # SLIDE-TO-NOTEBOOK MODELING STANDARD
 
+> ⚠️ **SUPERSEDED / HISTORICAL (Phase 6.1D).**
+>
+> This document describes the **retired Interactive Science Notebook / glue-in workflow**.
+>
+> **For Chapter 1:**
+> - **Guided Notes are the PRIMARY structured student note/reference artifact.**
+> - **Science Journal is SECONDARY.**
+> - The notebook/glue-in model must **not** be used as the active Chapter 1 slide/notes architecture.
+>
+> Current authoritative standards: `docs/standards/GUIDED_NOTES_STANDARD.md` (notes) and `docs/standards/SLIDESHOW_LOGIC_LOCKDOWN.md` (slides mirror the notes' Big Question / Vocabulary / Notes anchors). The body below is retained as archival evidence only.
+
 > How slides support Interactive Science Notebook completion directly. Applies to all chapter slide decks (Ch.3+ from the start; Ch.1–2 retrofitted).
 
 ## Purpose

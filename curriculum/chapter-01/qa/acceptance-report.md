@@ -1,5 +1,7 @@
 # Final Acceptance Report — Chapter 1
 
+> ⚠️ **SUPERSEDED / HISTORICAL (Phase 6.1).** This pre-canonical staging file is retained for provenance only. It may contain legacy timing (Block 1/2, 40–45 min), legacy demos (cup/balloon/salt), or retired artifacts. The authoritative Chapter 1 package is `docs/chapter-01/CH1_PACKAGE_MANIFEST.md`; timing is `docs/chapter-01/CH1_PACING_PLAN.md`.
+
 > 8-gate QA. Any FAIL blocks release.
 
 | # | Gate | Result | Evidence |

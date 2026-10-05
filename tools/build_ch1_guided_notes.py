@@ -8,7 +8,7 @@ Outputs:
   production/premium-notes/01-ch1-energy-causes-change-guided-notes.{docx,pdf}
   production/premium-notes/01-ch1-energy-causes-change-guided-notes-key.{docx,pdf}
 
-Authoritative source: CKSci Student Reader Chapter 1 "Energy Causes Change" (Reader pp. 1-6).
+Authoritative source: CKSci Student Reader Chapter 1 "Energy Causes Change" (core pp. 1-5; p. 6 = forward preview, not in the notes).
 Run: .venv/bin/python tools/build_ch1_guided_notes.py
 """
 import os, sys
@@ -38,6 +38,7 @@ CH1_NEUTRAL = RGBColor(0x7A, 0x56, 0x20)   # muted amber-brown
 CH1_SURFACE = RGBColor(0xF5, 0xEE, 0xDC)   # cream
 
 PRIMARY_HEX = "1F2A5A"
+PAPER_HEX   = "FFFFFF"
 ACCENT_HEX  = "A67C16"
 NEUTRAL_HEX = "7A5620"
 SURFACE_HEX = "F5EEDC"
@@ -104,6 +105,9 @@ def _row_height(row, dxa, rule='atLeast'):
 def _vcenter(cell):
     cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
+def _vbottom(cell):
+    cell.vertical_alignment = WD_ALIGN_VERTICAL.BOTTOM
+
 def _run(p, text, size=BODY_SZ, bold=False, italic=False, color=INK, caps=False,
          underline=False, font=FONT):
     r = p.add_run(text.upper() if caps else text)
@@ -147,14 +151,23 @@ def _bottom_rule(p, sz=8, color=INK_HEX):
     bdr.append(b); pPr.append(bdr)
     return p
 
-def _writing_line(doc, size=BODY_SZ, gap_pt=28):
-    """One ruled handwriting line (bottom border) with exact line spacing."""
-    p = doc.add_paragraph()
-    _spacing(p, after=0, line_pt=gap_pt)
-    _bottom_rule(p, sz=8, color=INK_HEX)
-    # add a thin spacer run so the paragraph has height
-    _run(p, "", size=size)
-    return p
+def _writing_line(doc, size=BODY_SZ, gap_pt=28, n=1):
+    """n ruled handwriting lines as TABLE ROWS (Phase 6.1 / F6).
+
+    Adjacent bordered *paragraphs* are merged by Word/LibreOffice into one block (only the
+    last bottom rule is drawn), which silently removed writing lines. Table rows each keep
+    their own bottom border, so every line renders.
+    """
+    t = doc.add_table(rows=n, cols=1)
+    _no_borders(t)
+    for r in t.rows:
+        c = r.cells[0]; c.width = FULL_W
+        _margins(c, top=0, left=0, bottom=0, right=0)
+        _border(c, bottom=dict(sz=8, color=INK_HEX))
+        pp = c.paragraphs[0]; _spacing(pp, 0, 0, line_pt=2)
+        _run(pp, "", size=2)
+        _row_height(r, int(gap_pt * 20), rule='exact')
+    return t
 
 # ---------------------------------------------------------------- fill-in blanks
 def _blank_run(p, answer, width_in, size=BODY_SZ, is_key=False):
@@ -237,7 +250,9 @@ def _panel(doc, lead, text, lead_color=CH1_NEUTRAL, fill_hex=SURFACE_HEX, size=B
     _run(p, text, size=size, color=INK)
     return t
 
-def _model_chain(doc, words, size=14, fill_hex=PRIMARY_HEX, arrow_color=CH1_ACCENT):
+def _model_chain(doc, words, size=14, fill_hex=PRIMARY_HEX, arrow_color=CH1_ACCENT, open_last=False, row_dxa=440):
+    """Arrow chain. open_last=True prints the LAST box as an empty write-in box (white, navy outline) so the
+    model does not hand students the answer to the sentence blank above it (Phase 6.1B / M1)."""
     n = len(words); cols = n * 2 - 1
     box_w = Inches(1.9); arr_w = Inches(0.55)
     t = doc.add_table(rows=1, cols=cols)
@@ -248,11 +263,17 @@ def _model_chain(doc, words, size=14, fill_hex=PRIMARY_HEX, arrow_color=CH1_ACCE
         _margins(c, top=40, left=6, bottom=40, right=6); _vcenter(c)
         p = c.paragraphs[0]; p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         if idx % 2 == 0:
-            _shade(c, fill_hex)
-            _run(p, words[idx // 2], size=size, bold=True, color=WHITE)
+            if open_last and idx == cols - 1:
+                _shade(c, PAPER_HEX)
+                _border(c, top=dict(sz=14, color=PRIMARY_HEX), left=dict(sz=14, color=PRIMARY_HEX),
+                        bottom=dict(sz=14, color=PRIMARY_HEX), right=dict(sz=14, color=PRIMARY_HEX))
+                _run(p, "", size=size)          # empty on purpose: students write the word after the check
+            else:
+                _shade(c, fill_hex)
+                _run(p, words[idx // 2], size=size, bold=True, color=WHITE)
         else:
             _run(p, "\u2192", size=size + 2, bold=True, color=arrow_color)
-        _row_height(t.rows[0], 440, rule='exact')
+        _row_height(t.rows[0], row_dxa, rule='exact')
     return t
 
 # ---------------------------------------------------------------- header / BQ / vocab
@@ -285,8 +306,9 @@ def big_question(doc, is_key=False, sample=None):
     _para(doc, "My first thinking", size=PROMPT_SZ, bold=True, color=CH1_PRIMARY, after=4)
     if is_key and sample:
         _para(doc, sample, size=CAPTION_SZ, italic=True, color=INK_SOFT, after=4)
-    _writing_line(doc, size=PROMPT_SZ, gap_pt=28)
-    _writing_line(doc, size=PROMPT_SZ, gap_pt=28)
+    _writing_line(doc, size=PROMPT_SZ, gap_pt=28, n=2)
+    # Phase 6.1B / L2: air below the 2nd rule - without it the lower rule touched the V1 heading and read as ONE usable line.
+    _para(doc, "", after=4, line_pt=(6 if is_key else 14))
 
 def vocab_v1(doc, is_key=False):
     _section_head(doc, "V1", "Vocabulary \u2014 Energy & Change", color=CH1_PRIMARY)
@@ -302,19 +324,23 @@ def vocab_v2(doc, is_key=False):
 
 # ---------------------------------------------------------------- core notes
 def note_n1(doc, is_key=False):
+    """N1 (v1.1): ONE retrieval blank (the sentence). 'cause change' is already retrieved in V1; the old
+    caption + third blank restated the same sentence (F5).
+    Phase 6.1B / M1: the model's last box is OPEN on the student page (it used to print EVIDENCE, answering the
+    sentence blank directly above it). After the check, students write the checked word in the box so the finished
+    page is a complete study model. The teacher key prints the full model."""
     _section_head(doc, "N1", "Energy Causes Change", color=CH1_PRIMARY)
     _page_ref(doc, "Reader pp. 1\u20132")
-    _fill_line(doc, "Energy has the ability to", [("cause", 0.9), ("change", 1.4)], ".",
-               is_key=is_key, lead_bold=True)
-    _caption(doc, "When you see a change, you are seeing evidence of energy.", after=6)
-    _model_chain(doc, ["ENERGY", "CHANGE", "EVIDENCE"])
-    _para(doc, "", after=4)
-    _fill_line(doc, "A change is", [("evidence", 1.5)], "that energy is involved.", is_key=is_key)
+    _para(doc, "Energy has the ability to cause change.", size=BODY_SZ, bold=True, color=INK,
+          after=2, line_pt=24)
+    _fill_line(doc, "When you see a change, you are seeing", [("evidence", 1.5)], "of energy.",
+               is_key=is_key, after=8)
+    _model_chain(doc, ["ENERGY", "CHANGE", "EVIDENCE"], open_last=not is_key, row_dxa=(440 if is_key else 620))
 
 def note_n2(doc, is_key=False, samples=None):
     _section_head(doc, "N2", "Energy Occurs in Different Forms", color=CH1_PRIMARY)
     _page_ref(doc, "Reader p. 3")
-    _caption(doc, "Write or draw one example that shows a change for each form.", after=6)
+    _caption(doc, "Write one example that shows a change for each form.", after=6)
     forms = ["motion", "sound", "light", "heat", "electrical energy"]
     t = doc.add_table(rows=1 + len(forms), cols=2)
     _no_borders(t)
@@ -331,14 +357,18 @@ def note_n2(doc, is_key=False, samples=None):
     _row_height(t.rows[0], 420, rule='exact')
     for i, f in enumerate(forms):
         c0, c1 = t.cell(i + 1, 0), t.cell(i + 1, 1)
-        _margins(c0, top=40, left=80, bottom=40, right=80)
-        _margins(c1, top=40, left=80, bottom=40, right=80)
-        _vcenter(c0); _vcenter(c1)
+        # Phase 6.1C (L-A): label and writing rule share one baseline (both bottom-aligned) and the label
+        # cell carries a light hairline, so every rule visibly belongs to the label on its own row.
+        _margins(c0, top=40, left=80, bottom=20, right=80)
+        _margins(c1, top=40, left=80, bottom=20, right=80)
+        _vbottom(c0); _vbottom(c1)
         _run(c0.paragraphs[0], f, size=BODY_SZ, bold=True, color=CH1_PRIMARY)
+        _spacing(c0.paragraphs[0], before=0, after=0); _spacing(c1.paragraphs[0], before=0, after=0)
+        _border(c0, bottom=dict(sz=6, color="9AA0B4"))
         _border(c1, bottom=dict(sz=8, color=INK_HEX))
         if is_key and samples and f in samples:
             _run(c1.paragraphs[0], samples[f], size=CAPTION_SZ, italic=True, color=INK_SOFT)
-        _row_height(t.rows[i + 1], 680, rule='atLeast')
+        _row_height(t.rows[i + 1], 700, rule='atLeast')
     return t
 
 def note_n3(doc, is_key=False, samples=None):
@@ -361,21 +391,23 @@ def note_n3(doc, is_key=False, samples=None):
     _row_height(t.rows[0], 420, rule='exact')
     for i, ex in enumerate(examples):
         c0, c1 = t.cell(i + 1, 0), t.cell(i + 1, 1)
-        _margins(c0, top=40, left=80, bottom=40, right=80)
-        _margins(c1, top=40, left=80, bottom=40, right=80)
-        _vcenter(c0); _vcenter(c1)
+        _margins(c0, top=40, left=80, bottom=20, right=80)
+        _margins(c1, top=40, left=80, bottom=20, right=80)
+        _vbottom(c0); _vbottom(c1)
         _run(c0.paragraphs[0], ex, size=BODY_SZ, bold=True, color=INK)
+        _spacing(c0.paragraphs[0], before=0, after=0); _spacing(c1.paragraphs[0], before=0, after=0)
+        _border(c0, bottom=dict(sz=6, color="9AA0B4"))
         _border(c1, bottom=dict(sz=8, color=INK_HEX))
         if is_key and samples and ex in samples:
             _run(c1.paragraphs[0], samples[ex], size=CAPTION_SZ, italic=True, color=INK_SOFT)
-        _row_height(t.rows[i + 1], 680, rule='atLeast')
+        _row_height(t.rows[i + 1], 700, rule='atLeast')
     _para(doc, "", after=4)
     _fill_line(doc, "Objects also have stored energy because of their",
                [("position", 1.4)], ".", is_key=is_key)
 
-def note_n4(doc, is_key=False, sample=None):
+def note_n4(doc, is_key=False, sample=None, sample_change=None, sample_ba=None):
     _section_head(doc, "N4", "Recognizing Evidence", color=CH1_PRIMARY)
-    _page_ref(doc, "Reader pp. 1\u20136")
+    _page_ref(doc, "Reader pp. 1\u20135")
     _caption(doc, "Draw a change you observed. Show what it looked like BEFORE and AFTER.", after=6)
     t = doc.add_table(rows=1, cols=2)
     _no_borders(t)
@@ -387,10 +419,15 @@ def note_n4(doc, is_key=False, sample=None):
             _border(c, **{edge: dict(sz=8, color=PRIMARY_HEX)})
         p = c.paragraphs[0]; p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         _run(p, lab, size=14, bold=True, color=CH1_ACCENT, caps=True)
-        _row_height(t.rows[0], 2000, rule='exact')
+        if is_key and sample_ba:
+            p2 = c.add_paragraph(); _spacing(p2, 4, 0)
+            _run(p2, sample_ba[idx], size=CAPTION_SZ, italic=True, color=INK_SOFT)
+        _row_height(t.rows[0], 1300 if is_key else 2400, rule='exact')
     _para(doc, "", after=4)
     _para(doc, "What changed?", size=BODY_SZ, bold=True, color=INK, after=4)
-    _writing_line(doc, size=BODY_SZ, gap_pt=28)
+    if is_key and sample_change:
+        _para(doc, sample_change, size=CAPTION_SZ, italic=True, color=INK_SOFT, after=2)
+    _writing_line(doc, size=BODY_SZ, gap_pt=28, n=1 if (is_key and sample_change) else 2)
     _para(doc, "", after=6)
     # CHECK YOUR THINKING
     _section_head(doc, "CHECK", "Your Thinking", color=CH1_PRIMARY, size=14)
@@ -399,8 +436,7 @@ def note_n4(doc, is_key=False, sample=None):
     _caption(doc, "Start with: \u201cWe know because we see \u2026\u201d", after=4)
     if is_key and sample:
         _para(doc, sample, size=CAPTION_SZ, italic=True, color=INK_SOFT, after=4)
-    _writing_line(doc, size=PROMPT_SZ, gap_pt=28)
-    _writing_line(doc, size=PROMPT_SZ, gap_pt=28)
+    _writing_line(doc, size=PROMPT_SZ, gap_pt=28, n=3)
 
 def bq_return(doc, is_key=False, sample=None):
     _band(doc, "BQ \u00b7 NOW I THINK   Where can we observe evidence of energy causing change?",
@@ -408,8 +444,7 @@ def bq_return(doc, is_key=False, sample=None):
     _para(doc, "", after=4)
     if is_key and sample:
         _para(doc, sample, size=CAPTION_SZ, italic=True, color=INK_SOFT, after=4)
-    for _ in range(3):
-        _writing_line(doc, size=PROMPT_SZ, gap_pt=28)
+    _writing_line(doc, size=PROMPT_SZ, gap_pt=28, n=3)
 
 def _footer(doc, label):
     footer = doc.sections[0].footer
@@ -434,6 +469,14 @@ def new_doc():
     st.font.name = FONT; st.font.size = Pt(BODY_SZ); st.font.color.rgb = INK
     return doc
 
+def _seal(doc):
+    """Trailing paragraph after the last table is forced to 1pt so it can never spill a blank page."""
+    p = doc.add_paragraph()
+    _spacing(p, 0, 0, line_pt=1)
+    r = p.add_run(""); r.font.size = Pt(1)
+    pPr = p._p.get_or_add_pPr()
+    rPr = OxmlElement('w:rPr'); sz = OxmlElement('w:sz'); sz.set(qn('w:val'), '2'); rPr.append(sz); pPr.append(rPr)
+
 def _page_break(doc):
     doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
 
@@ -451,6 +494,7 @@ def build_student():
     note_n3(doc, is_key=False)
     note_n4(doc, is_key=False)
     bq_return(doc, is_key=False)
+    _seal(doc)
     out = os.path.join(OUT_DIR, "01-ch1-energy-causes-change-guided-notes.docx")
     doc.save(out)
     return out
@@ -464,6 +508,12 @@ def build_key():
     _spacing(p, 0, 6, line_pt=16)
     _run(p, "KEY  ", size=CAPTION_SZ, bold=True, color=CH1_NEUTRAL, caps=True)
     _run(p, "Bold brown = exact answer \u00b7 Italic gray = sample / acceptable response.",
+         size=CAPTION_SZ, italic=True, color=INK_SOFT)
+    p = doc.add_paragraph()
+    _spacing(p, 0, 6, line_pt=14)
+    _run(p, "LANGUAGE NOTE  ", size=CAPTION_SZ, bold=True, color=CH1_NEUTRAL, caps=True)
+    _run(p, "The Reader says \u201cevidence, or proof.\u201d Teach and use the word evidence (it is in the Big Question). "
+            "If a student writes proof in the N1 blank, accept it and restate: \u201cYes \u2014 we say evidence.\u201d",
          size=CAPTION_SZ, italic=True, color=INK_SOFT)
     big_question(doc, is_key=True,
                  sample="Sample: \u201cA pencil gets shorter and sharper.\u201d (Accept any observed change.)")
@@ -485,11 +535,14 @@ def build_key():
         "raised object (apple)": "it falls down",
     })
     note_n4(doc, is_key=True,
+            sample_ba=("Sample: a dull pencil, long, rounded tip", "Sample: shorter pencil, sharp tip, shavings"),
+            sample_change="Sample: \u201cThe pencil got shorter and sharper.\u201d (Accept any observed change.)",
             sample="Sample: \u201cWe know because we see a change, like a ball starting to move or a light turning on.\u201d "
                    "(Accept any response connecting a change to evidence of energy.)")
     bq_return(doc, is_key=True,
-              sample="Sample: \u201cWe observe evidence of energy causing change everywhere \u2014 things move, make sound, "
-                     "light up, heat up, or change shape.\u201d (Accept any response naming a change as evidence.)")
+              sample="Sample: \u201cWe see evidence of energy when things move, make sound, light up, heat up, "
+                     "or change shape.\u201d (Accept any change named as evidence.)")
+    _seal(doc)
     out = os.path.join(OUT_DIR, "01-ch1-energy-causes-change-guided-notes-key.docx")
     doc.save(out)
     return out

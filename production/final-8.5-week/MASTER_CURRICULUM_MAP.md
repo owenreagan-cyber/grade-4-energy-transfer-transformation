@@ -1,7 +1,7 @@
 # MASTER CURRICULUM MAP — Final 8.5-Week Track
 
 > **Authoritative whole-course navigation.** One entry per instructional day, using ACTUAL released file paths.
-> 20 students · 5 groups of 4 · ~30-min daily blocks · Thursday = action/lab · Friday = FLEX (recover/practice/extend).
+> 20 students · 5 groups of 4 · ~30-min daily blocks · Thursday = action/lab · Friday = catch-up/review/synthesis/quiz/makeup/optional FLEX (never first exposure to essential core content).
 > Unit 1 = Energy Transfer & Transformation (Wk 1–4). Unit 2 = Using Natural Resources for Energy (Wk 5–8.5).
 > **Legend:** BQ = Big Question · GN = Guided Notes · SL = Slides (PPTX) · RD = Reader pages · VID = video · LAB/ACT = lab/activity · J = Science Journal · FC = formative check · ABS = absent recovery · KEY = answer key.
 > **Status:** RELEASED · OPTIONAL · FLEX · PENDING · GAP. **Format:** PRINT / PROJECT / DIGITAL / TEACHER ONLY / MEDIA.
@@ -12,7 +12,7 @@
 
 | Week | Unit | Chapters | Anchor days | Flagship / assessment |
 |---|---|---|---|---|
-| 1 | U1 | Ch1–2 | Mon launch · Thu Moving Marbles | — |
+| 1 | U1 | Ch1–2 | Mon–Tue Ch1 · Thu Moving Marbles · Fri Ch1 quiz (Session 3) | — |
 | 2 | U1 | Ch3 | Tue ramp build · Thu Ramp It Up! | FLAGSHIP LAB 1 |
 | 3 | U1 | Ch4–5 | Thu Crash Lab | — |
 | 4 | U1 | Ch6–7 | Thu engineering application | Unit 1 assessment (Fri) |
@@ -26,29 +26,31 @@
 
 # Week 1 — Unit 1 Ch1–2 (Energy Causes Change · Moving Objects Have Energy)
 
+> Ch1 timing authority: `docs/chapter-01/CH1_PACING_PLAN.md` (three sessions Mon · Tue · Fri). Ch1 lines below follow it; legacy S-ranges/Block language are superseded.
+
 | Day | Topic | Notes | Slides | Media | Activity | Status |
 |---|---|---|---|---|---|---|
-| Mon | Energy causes change | `01-ch1` p.1 | `01-ch1` S1–S9 | none embedded | launch | RELEASED |
-| Tue | Stored energy / forms | `01-ch1` p.2 | `01-ch1` S12–S23 | none embedded | forms sort (FLEX) | RELEASED |
+| Mon | Energy causes change (Ch1 Session 1) | `01-ch1` p.1 | `01-ch1` S1–3, S6–16 | none embedded | sharpener demo | RELEASED |
+| Tue | Forms & stored energy (Ch1 Session 2) | `01-ch1` p.2 | `01-ch1` S2, S17, S19–27 (S18 optional) | none embedded | write 5 forms examples | RELEASED |
 | Wed | Moving objects have energy | `02-ch2` p.1 | `02-ch2` S1–S13 | none embedded | — | RELEASED |
 | Thu | Moving Marbles investigation | `02-ch2` p.2 | `02-ch2` S14–S24 | none embedded | Moving Marbles mini-lab | RELEASED |
-| Fri | RECOVER / PRACTICE / EXTEND | — | — | — | Energy Charades + catch-up | FLEX |
+| Fri | Ch1 Session 3: recognize evidence + Chapter 1 QUIZ (9 items · 16 pts) | `01-ch1` p.3 | `01-ch1` S2, S28–31, S33 | none embedded | quiz · then catch-up / optional Energy Detectives | QUIZ (graded) |
 
 ## Monday — Energy causes change
 - **Unit/Ch:** U1 · Ch1 · **BQ:** Where can we observe evidence of energy causing change? · **Objective:** energy = ability to cause change; change is our evidence (no advanced forms terms).
-- **GN:** `production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx` p.1 (PRINT) — key embedded in notes.
-- **SLIDES:** `production/slides/01-ch1-energy-causes-change-slides.pptx` S1–S9 (PROJECT).
+- **GN:** `production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx` p.1 (PRINT); teacher key = separate `…guided-notes-key.pdf`.
+- **SLIDES:** `production/slides/01-ch1-energy-causes-change-slides.pptx` S1–3, S6–16 (PROJECT; S4–5 optional).
 - **READER:** `assets/authoritative/student-reader/chapters/Chapter_1_Energy_Causes_Change.pdf` pp.1–2 (CORE READ-ALOUD).
 - **VIDEO:** none (external optional `The_Invisible_Boss_of_Change.mp4` / `The_Energy_Detective.mp4` UNSTAGED — not embedded).
 - **JOURNAL:** draw one change you saw today. **FC:** exit ticket — name one change + its evidence (oral).
 - **FRIDAY FLEX:** Week 1 row in `production/friday-flex/FRIDAY_FLEX_BANK.md`. **ENRICHMENT:** optional mass comparison not applicable.
 - **ABSENT:** send `01-ch1` p.1 + slide handout; do journal drawing.
-- **TEACHER:** `production/final-8.5-week/WEEK1_2_TEACHER_QUICKSTART.md` · `TEACHER_PREP_GUIDE.md` · `curriculum/chapter-01/teacher/01-ch1-daily-lessons.md` + `01-ch1-energy-causes-change-teacher-map.md`.
+- **TEACHER:** `production/final-8.5-week/WEEK1_2_TEACHER_QUICKSTART.md` · `TEACHER_PREP_GUIDE.md` · `docs/chapter-01/CH1_PACKAGE_MANIFEST.md` + the Playbook Ch1 spread (the older `01-ch1-daily-lessons.md` and teacher map are SUPERSEDED/historical).
 - **STATUS:** RELEASED.
 
 ## Tuesday — Stored energy / forms / evidence
-- **Unit/Ch:** U1 · Ch1 · **BQ:** What are some forms of energy? What is stored energy? · **Objective:** forms (motion, light, sound, heat, electrical); stored energy can cause change later.
-- **GN:** `01-ch1` p.2. **SLIDES:** `01-ch1` S12–S23. **READER:** pp.3–6 (CORE READ-ALOUD). **ACT:** forms-of-energy sort (FLEX).
+- **Unit/Ch:** U1 · Ch1 · **BQ:** Where can we observe evidence of energy causing change? · **Objective:** forms (motion, light, sound, heat, electrical); stored energy can cause change later.
+- **GN:** `01-ch1` p.2. **SLIDES:** `01-ch1` S2, S17, S19–S27 (S18 optional). **READER:** pp.3–5 (p. 6 = forward preview). **ACT:** N2 five-forms write.
 - **JOURNAL:** one stored-energy example. **FC:** stored-energy table check. **ABSENT:** `01-ch1` p.2. **STATUS:** RELEASED.
 
 ## Wednesday — Moving objects have energy
@@ -56,14 +58,14 @@
 - **GN:** `production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx` p.1. **SLIDES:** `production/slides/02-ch2-moving-objects-have-energy-slides.pptx` S1–S13. **READER:** `Chapter_2_Moving_Objects_Have_Energy.pdf` pp.7–9.
 - **JOURNAL:** predict — will a moving marble move a cup? **FC:** fill-in "energy of motion." **ABSENT:** `02-ch2` p.1. **STATUS:** RELEASED.
 
-## Thursday — Energy Detectives / Moving Marbles mini-investigation
-- **Unit/Ch:** U1 · Ch1–2 · **BQ:** What evidence shows a moving object has energy? · **Objective:** moving marble transfers energy to a cup (change = evidence); same-marble comparisons only.
+## Thursday — Moving Marbles mini-investigation (Ch2)
+- **Unit/Ch:** U1 · Ch2 · **BQ:** What evidence shows a moving object has energy? · **Objective:** moving marble transfers energy to a cup (change = evidence); same-marble comparisons only.
 - **GN:** `02-ch2` p.2. **SLIDES:** `02-ch2` S14–S24. **READER:** pp.10–12.
 - **ACTIVITY:** `production/worksheets/02-ch2-moving-marbles-student.docx` (PRINT) + `production/labs/02-ch2-moving-marbles-teacher-spec.md` (TEACHER ONLY) + `production/answer-keys/02-ch2-moving-marbles-key.md` (KEY).
 - **JOURNAL:** before/after drawing. **FC:** observation table. **ABSENT:** partner data + `02-ch2` p.2. **STATUS:** RELEASED.
 
-## Friday — RECOVER / PRACTICE / EXTEND
-- **FLEX only (no new content):** Energy Charades (FULL FLEX) · journal drawing (QUICK) · Detectives catch-up (STANDARD). See `production/friday-flex/FRIDAY_FLEX_BANK.md`. **STATUS:** FLEX.
+## Friday — Ch1 Session 3, then FLEX
+- **Ch1 Session 3 (25 min, `docs/chapter-01/CH1_PACING_PLAN.md`):** notes p.3 N4 recognition, then the Chapter 1 quiz (16 pts, raw score + %). The quiz is handed out by minute 12; if time is lost, priority is N4 > BQ NOW I THINK > CHECK (CHECK may finish at home / catch-up). Remaining time and Week-1 catch-up: FLEX options in `production/friday-flex/FRIDAY_FLEX_BANK.md` (Detectives optional, ungraded). **STATUS:** QUIZ (graded) + FLEX.
 
 ---
 

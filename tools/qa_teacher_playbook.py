@@ -56,7 +56,8 @@ def _runs_in(doc):
         yield from p.runs
 
 def check_font_floors(doc):
-    mins = [r.font.size.pt for r in _runs_in(doc) if r.font.size]
+    # text-free runs (the 1pt page-break carrier paragraph, Phase 6.1) are not readable text
+    mins = [r.font.size.pt for r in _runs_in(doc) if r.font.size and r.text.strip()]
     if not mins:
         return ("FAIL", "no sized runs found")
     lo = min(mins)
@@ -160,7 +161,69 @@ def check_pdf():
     return ("PASS" if ok_size and footer_ok else "WARN",
             f"size={ok_size} ({size[0].strip() if size else '?'}); {pages[0].strip() if pages else '?'}; footer_pages={txt.count('Unit 1 Teacher Playbook')}")
 
+STALE_CH1 = ["(prototype)", "Model It", "Draw/Label", "Block 1 \u2014 Observe", "Block 2 \u2014 Forms", "Lesson blocks (Block",
+             "cup/balloon/salt", "letters shuffled", "Flashlight + salt", "PLANNED placeholders until Phases 3"]
+
+def _blob(doc):
+    b = "\n".join(p.text for p in doc.paragraphs)
+    for t in doc.tables:
+        for row in t.rows:
+            for c in row.cells:
+                b += "\n" + c.text
+    return b
+
+def _ordered_lines(doc):
+    from docx.table import Table
+    from docx.text.paragraph import Paragraph
+    out = []
+    for el in doc.element.body.iterchildren():
+        if el.tag.endswith("}p"):
+            out.append(Paragraph(el, doc).text)
+        elif el.tag.endswith("}tbl"):
+            for row in Table(el, doc).rows:
+                out.append(" | ".join(c.text for c in row.cells))
+    return out
+
+def _ch1_scope(doc):
+    """Ch1 text only: Mon/Tue/Fri-wk1 pacing rows + everything from the Ch1 spread to the Ch2 spread."""
+    lines = _ordered_lines(doc)
+    keep, on = [], False
+    for ln in lines:
+        if ln.startswith(("Mon 10/12", "Tue 10/13", "Fri 10/16")):
+            keep.append(ln)
+        if "Chapter 1 \u2014 Teacher Spread" in ln:
+            on = True
+        if on and "Chapter 2 \u2014 Teacher Spread" in ln:
+            on = False
+        if on:
+            keep.append(ln)
+    return "\n".join(keep)
+
+def check_ch1_pacing_sync(doc):
+    """Phase 6.1: Playbook Ch1 timing must match tools/ch1_pacing.py (one authoritative plan)."""
+    import ch1_pacing as P
+    blob = _blob(doc)
+    scope = _ch1_scope(doc)
+    stale = sorted({t for t in STALE_CH1 if t in scope})
+    need = ["Chapter 1 Pacing Plan", "Session 1", "Session 2", "Session 3", "9 items", "16 pts"]
+    missing = [n for n in need if n not in blob]
+    sess = [P.session_required_minutes(i) for i in (1, 2, 3)]
+    ok = not stale and not missing and all(m <= 25.0 for m in sess)
+    return ("PASS" if ok else "FAIL", f"stale Ch1 tokens: {stale or 'none'} · missing: {missing or 'none'} · session minutes {sess}")
+
+def check_no_repo_paths(doc, _doc_texts=None):
+    """6.1C / L-D: Unit-level + Chapter 1 teacher-facing text must use classroom names, not repo paths.
+    Out of scope until their own phases: Chapter 2-7 rows and the Ch3-7 SKELETON appendix register."""
+    import re
+    rx = re.compile(r"(docs/|curriculum/|production/|qa/|tools/|student/recovery|\bCH\d_[A-Z_]+|[\w-]+\.md\b)")
+    later = re.compile(r"chapter-0[2-7N]|\bch[2-7]\b|\bCH[2-7]_|-ch[2-7]-|ch[2-7]-|/03-|/07-|FRIDAY_FLEX_FRAMEWORK|WHOLE_UNIT|production/review|MASTER_CURRICULUM_MAP|SKELETON|Chapter [2-7]\b|Ch[2-7]\b", re.I)
+    texts = _doc_texts if _doc_texts is not None else [c.text for t in doc.tables for r in t.rows for c in r.cells] + [p.text for p in doc.paragraphs]
+    hits = sorted({m.group(0) for t in texts if not later.search(t) for m in rx.finditer(t)})
+    return ("PASS" if not hits else "FAIL", f"Ch1/unit-level repo paths in teacher text: {hits or 'none'}")
+
 def main():
+    import argparse
+    ap = argparse.ArgumentParser(); ap.add_argument("--report", default=None); args = ap.parse_args()
     doc = Document(DOCX)
     gates = [
         ("page-size (US Letter)", check_docx_page_size(doc)),
@@ -171,6 +234,8 @@ def main():
         ("no banned/stale language", check_banned_text(doc)),
         ("required assessment terms", check_required_terms(doc)),
         ("PDF render (size + footer)", check_pdf()),
+        ("Ch1 pacing sync / stale-language (6.1)", check_ch1_pacing_sync(doc)),
+        ("Ch1/unit-level pages: no raw repo paths (6.1C L-D)", check_no_repo_paths(doc)),
     ]
     print("=" * 70)
     print("UNIT 1 TEACHER PLAYBOOK — QA GATES (Phase 2)")
@@ -185,12 +250,13 @@ def main():
     print("=" * 70)
     print(f"OVERALL: {status}")
     os.makedirs(REPORT_DIR, exist_ok=True)
-    with open(os.path.join(REPORT_DIR, "PHASE_2_PLAYBOOK_QA.md"), "w") as f:
+    rep = args.report or os.path.join(REPORT_DIR, "PHASE_2_PLAYBOOK_QA.md")
+    with open(rep, "w") as f:
         f.write("# Phase 2 — Teacher Playbook Automated QA\n\n")
         f.write(f"Overall: **{status}**\n\n")
         for name, (s, note) in gates:
             f.write(f"- [{s}] {name} — {note}\n")
-    print(f"report: {os.path.join(REPORT_DIR, 'PHASE_2_PLAYBOOK_QA.md')}")
+    print(f"report: {rep}")
 
 if __name__ == "__main__":
     main()

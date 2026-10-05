@@ -134,7 +134,12 @@ def _para(doc, text="", size=11, bold=False, italic=False, color=INK, before=0, 
     return p
 
 def _page_break(doc):
-    doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
+    """1pt, zero-spacing break paragraph so a full page never spills it onto a blank page (Phase 6.1)."""
+    p = doc.add_paragraph()
+    pf = p.paragraph_format
+    pf.space_before = Pt(0); pf.space_after = Pt(0); pf.line_spacing = Pt(1)
+    r = p.add_run(); r.font.size = Pt(1)
+    r.add_break(WD_BREAK.PAGE)
 
 def _add_footer(doc):
     footer = doc.sections[0].footer
@@ -289,15 +294,15 @@ def unit_at_a_glance(doc):
 
 def pacing(doc):
     section_heading(doc, "Dated Pacing Calendar — Weeks 1–4")
-    _para(doc, "30-minute blocks · M–Th core + Friday FLEX. Slides/notes are PLANNED placeholders until Phases 3–4 land.", size=9.5, italic=True, color=INK_SOFT, after=20)
+    _para(doc, "30-minute blocks · M–Th core + Friday FLEX. Chapter 1 follows the Chapter 1 Pacing Plan (the one authoritative Ch1 timing system: Mon · Tue · Fri). Rows for Chapters 2–7 keep their own block labels until their own phases.", size=9.5, italic=True, color=INK_SOFT, after=20)
 
     weeks = [
         ("WEEK 1 · 10/12–10/16 · Chapters 1–2", [
-            ["Mon 10/12", "Ch1 Block 1 — Observe & Name", "1–2", "Key Words · Model It · Draw/Label", "Sharpener DEMO", "exit ticket"],
-            ["Tue 10/13", "Ch1 Block 2 — Forms & Stored", "3–5", "Forms · Stored · Evidence table", "Flashlight + salt demos", "exit ticket"],
+            ["Mon 10/12", "Ch1 Session 1 — Observe & Name (24.5 min)", "1–2", "Notes p. 1: BQ · V1 · N1", "Sharpener DEMO", "notes (not graded)"],
+            ["Tue 10/13", "Ch1 Session 2 — Forms & Stored Energy (24.5 min)", "3–5", "Notes p. 2: N2 · V2 · N3", "Rubber-band stretch (optional)", "notes (not graded)"],
             ["Wed 10/14", "Ch2 Block 1", "7–9", "Key Words · Model It · Draw/Label", "Marble Collision DEMO", "exit ticket"],
             ["Thu 10/15", "Ch2 Block 2", "10–12", "Before/After · Example/Non-example", "—", "exit ticket"],
-            ["Fri 10/16", "FLEX — RECOVER/PRACTICE/EXTEND", "—", "—", "Energy Detectives · Moving Marbles (FLEX)", "not graded"],
+            ["Fri 10/16", "Ch1 Session 3 — Recognize, Reflect & QUIZ (25 min) · FLEX-day consolidation, no new vocabulary", "1–5", "Notes p. 3: N4 · CHECK · BQ now", "Chapter 1 quiz (9 items)", "QUIZ — GRADED (16 pts)"],
         ]),
         ("WEEK 2 · 10/19–10/23 · Chapter 3 + Ramp It Up 2.0", [
             ["Mon 10/19", "Ch3 Block 1", "13–14", "Key Words · Model It", "Ramp + Target Preview DEMO", "exit ticket"],
@@ -327,7 +332,7 @@ def pacing(doc):
                    rows, [Inches(0.7), Inches(2.3), Inches(0.5), Inches(1.55), Inches(1.3), Inches(0.65)], size=9, first_bold=True)
         _para(doc, "", after=20)
 
-    callout(doc, "PACING FLAG", "Week 4 compresses Ch6 (2 blocks) + Ch7 (1 block) + Pom-Pom build + review + assessment into 5 days. Feasible only with the compact in-unit engineering cycle (RD-4) and a streamlined review. The 25Q/50pt final is ~30–45 min and may split Thu/Fri. See docs/playbook/UNIT1_PACING_CALENDAR.md.", accent_hex="#A62626", fill_hex="#F7EFE2")
+    callout(doc, "PACING FLAG", "Week 4 compresses Ch6 (2 blocks) + Ch7 (1 block) + Pom-Pom build + review + assessment into 5 days. Feasible only with the compact in-unit engineering cycle (RD-4) and a streamlined review. The 25Q/50pt final is ~30–45 min and may split Thu/Fri. See the Unit 1 Pacing Calendar.", accent_hex="#A62626", fill_hex="#F7EFE2")
 
 def how_to_use_this_unit(doc):
     section_heading(doc, "How to Use This Unit")
@@ -368,7 +373,7 @@ def resource_map(doc):
             ["Science Journal prompts", "Student", "CORE", "No", "AVAILABLE", "—"],
             ["Chapter practice/application", "Student", "CORE", "No (practice)", "AVAILABLE", "AVAILABLE"],
             ["Chapter quiz (Ch1)", "Student", "CORE", "Formative (graded)", "Ch1 AVAILABLE (9-item)", "AVAILABLE"],
-            ["Energy Detectives (Ch1)", "Student", "OPTIONAL/FLEX", "No", "AVAILABLE (reclassified)", "AVAILABLE"],
+            ["Energy Detectives (Ch1)", "Student", "OPTIONAL", "No (no points)", "AVAILABLE", "look-fors"],
             ["Ramp It Up 2.0", "Student (lab)", "CORE", "Formative", "ADAPT — PLANNED", "PLANNED"],
             ["Pom-Pom Launcher", "Student (build)", "REQUIRED BUILD", "Formative", "PLANNED (net-new)", "PLANNED"],
             ["Study guide", "Student", "CORE", "No (practice)", "AVAILABLE", "AVAILABLE"],
@@ -380,7 +385,7 @@ def resource_map(doc):
             ["Media", "Teacher", "OPTIONAL/FLEX", "—", "PARTIAL (Ch1–2 staged · Ch3–7 scripts)", "—"],
         ],
         [Inches(1.55), Inches(1.05), Inches(0.85), Inches(0.95), Inches(1.85), Inches(0.75)], size=9, first_bold=True)
-    _para(doc, "Full matrix with master locations: docs/playbook/UNIT1_RESOURCE_MAP.md", size=9, italic=True, color=INK_SOFT, after=20)
+    _para(doc, "Full matrix: Unit 1 Resource Map", size=8.5, italic=True, color=INK_SOFT, after=0)
 
 def assessment_grading(doc):
     section_heading(doc, "Assessment & Grading Plan")
@@ -482,7 +487,7 @@ def spread_template(doc):
 
 def chapter1_spread(doc):
     c = CHAPTERS[1]
-    section_heading(doc, "Chapter 1 — Teacher Spread (prototype)", color=C(c["primary"]))
+    section_heading(doc, "Chapter 1 — Teacher Spread", color=C(c["primary"]))
     chapter_tab(doc, 1, c["title"], c["primary"])
     _para(doc, "", after=10)
 
@@ -490,16 +495,16 @@ def chapter1_spread(doc):
     title_band(doc, "LEFT PAGE — TEACH IT", color_hex=c["primary"], size=12)
     data_table(doc, ["Field", "Content"],
         [
-            ["Big Question", "Where can we observe evidence of energy causing change? (TG Lesson 2 adds \u201cWhat are some forms of energy?\u201d \u2192 addressed by N2 on the notes)"],
-            ["Reader pages", "Printed 1–6 · PDF 7–12 (core instruction pp. 1–5; p. 6 = forward preview \u201cEnergy Can Move and Change\u201d)"],
-            ["Approximate time", "Two 30-min blocks (Block 1 \u201cObserve & Name\u201d · Block 2 \u201cForms & Stored\u201d)"],
-            ["Student resources", "Guided Notes — AVAILABLE/FINAL (01-ch1-energy-causes-change-guided-notes, 3 pp) · practice — AVAILABLE · Energy Detectives (FLEX) — AVAILABLE"],
-            ["Vocabulary / V-groups", "V1: energy · change (Reader p. 1) · V2: stored energy (Reader p. 4). evidence + position = Language of Instruction (no Reader page) → concept blanks in N1/N3."],
-            ["N-anchor map", "N1 Energy Causes Change (ENERGY→CHANGE→EVIDENCE) · N2 Energy Occurs in Different Forms (5-form table) · N3 Objects Can Store Energy (STORED→RELEASE→CHANGE + examples + position) · N4 Recognizing Evidence (BEFORE/AFTER + CHECK YOUR THINKING) · BQ · NOW I THINK"],
-            ["Lesson blocks (Block 1)", "BQ → sharpener DEMO → discuss change → vocab cards (energy, change) → read pp. 1–2 → MODEL IT + DRAW/LABEL → exit"],
-            ["Lesson blocks (Block 2)", "recall → read p. 3 (forms) → vocab card (stored) → read pp. 4–5 → FORMS + STORED + evidence table → application → return to BQ"],
-            ["What to project", "01-ch1-energy-causes-change-slides.pptx — FINAL (45 slides, 16:9) · BQ 2/3/33 · V1 10–12 · V2 20–22 · N1 13–16 · N2 17–19 · N3 23–27 · N4 28–31 · demo 4, 6–9 · review 34–45 · Reader pp. 1–6"],
-            ["What students do", "Predict → observe → fill Key Words → complete ENERGY→CHANGE→EVIDENCE model → draw before/after → record evidence → answer Big Question"],
+            ["Big Question", "Where can we observe evidence of energy causing change? (TG L2 \u201cforms\u201d question \u2192 N2)"],
+            ["Reader pages", "Printed pp. 1–6 (PDF 7–12) · core pp. 1–5 · p. 6 = forward preview"],
+            ["Approximate time", "3 sessions: Mon 24.5 · Tue 24.5 · Fri 25 min (incl. 13-min quiz). Authority: Chapter 1 Pacing Plan"],
+            ["Student resources", "Guided Notes (3 pp, FINAL) · quiz (9 items, 16 pts) · practice (ungraded) · Energy Detectives (optional, ungraded)"],
+            ["Vocabulary / V-groups", "V1 energy · change (p. 1) · V2 stored energy (p. 4). evidence + position = language of instruction → blanks in N1/N3."],
+            ["N-anchor map", "N1 Energy Causes Change · N2 Different Forms · N3 Objects Can Store Energy · N4 Recognizing Evidence (+ CHECK YOUR THINKING) · BQ · NOW I THINK"],
+            ["Session 1 · Mon (slides 1–3, 6–16)", "BQ + first thinking → sharpener DEMO → changes are clues → V1 cards + write → Reader p. 2 → N1 write + reveal. Notes p. 1."],
+            ["Session 2 · Tue (slides 2, 17, 19–27)", "Slide 18 OPTIONAL. BQ re-entry → forms (p. 3) → N2 write 5 examples → V2 card + write → still battery → position → N3 write + reveal. Notes p. 2."],
+            ["Session 3 · Fri (slides 2, 28–31, 33 + quiz)", "BQ re-entry → N4 draw BEFORE/AFTER → CHECK YOUR THINKING → BQ NOW I THINK → QUIZ (min 12–25). Notes p. 3. No new vocabulary. Quiz by minute 12 (see If short)."],
+            ["What to project", "01-ch1-energy-causes-change-slides.pptx — FINAL (45 slides, 16:9) · BQ 2/3/33 · V1 10–12 · V2 20–22 · N1 13–16 · N2 17, 19 · N3 23–27 · N4 28–31 · demo 6–9 · optional 4–5, 18, 32, 34–45"],
         ],
         [Inches(1.6), Inches(5.4)], size=9, first_bold=True)
     _page_break(doc)
@@ -508,18 +513,18 @@ def chapter1_spread(doc):
     title_band(doc, "RIGHT PAGE — TEACHER SUPPORT", color_hex=c["primary"], size=12)
     data_table(doc, ["Field", "Content"],
         [
-            ["Demo / activity", "Electric Pencil Sharpener (live DEMO). Flashlight + cup/balloon/salt as secondary demos."],
-            ["Materials", "Electric sharpener + unsharpened pencil · flashlight + D-cell · cup + balloon + salt"],
-            ["Setup", "Sharpener on stable surface · balloon drumhead pre-stretched · flashlight checked"],
+            ["Demo / activity", "Electric Pencil Sharpener (live DEMO, slides 6–9). Optional: stretch a rubber band (slide 25, 30 s). There is no salt/balloon demo in Chapter 1 (that is Chapter 4)."],
+            ["Materials", "Electric sharpener + unsharpened pencil · optional rubber band · (optional Energy Detectives: flashlight + battery)"],
+            ["Setup", "Sharpener on a stable, visible surface · dull pencil ready"],
             ["Teacher moves", "Ask \u201cWhat changed?\u201d before naming energy · record every change · build model on the board"],
             ["Ask", "\u201cWhat changed?\u201d \u201cWhat makes it happen?\u201d \u201cHow is the change evidence of energy?\u201d"],
             ["Listen For", "\u201cpencil got shorter/sharper\u201d \u201cit made noise\u201d — evidence, not \u201cI saw the energy\u201d"],
             ["Misconception / fix", "\u201cOnly moving objects have energy\u201d → pair moving + stored examples. \u201cEnergy is a visible substance\u201d → we see the change, not the energy."],
-            ["Do-not-overteach", "Do not introduce transfer/transformation or kinetic/potential. Keep p. 6 as a forward preview only."],
-            ["If short on time", "Cut the cup/balloon/salt demo · move Energy Detectives to Friday FLEX."],
-            ["Collect / grade", "Exit ticket (formative) · notes completion (not graded). Scored chapter item: Chapter 1 quiz (9-item, end of chapter)."],
-            ["Absent / makeup", "Absent-student recovery guide — curriculum/chapter-01/student/recovery/01-ch1-absent-student-recovery.md"],
-            ["What comes next", "Chapter 2 — Moving Objects Have Energy (marble collision demo)."],
+            ["Do-not-overteach", "Do not introduce transfer/transformation or kinetic/potential. Keep p. 6 a forward preview. Reader says \u201cevidence, or proof\u201d: teach EVIDENCE; accept \u201cproof\u201d once, restate \u201cevidence.\u201d"],
+            ["If short on time", "Real cuts in the Chapter 1 Pacing Plan (skip slides 4–5, 13, 18; hard stop at minute 24). Friday: quiz by minute 12 (N4 > BQ > CHECK). Never shorten the quiz."],
+            ["Collect / grade", "Notes: not graded · Quiz Fri (9 items · 16 pts · raw + %) · open/closed note = teacher choice · practice = ungraded take-home"],
+            ["Absent / makeup", "Chapter 1 Absent-Student Recovery guide"],
+            ["What comes next", "Chapter 2 (Wed 10/14) — marble collision demo."],
         ],
         [Inches(1.6), Inches(5.4)], size=9, first_bold=True)
     _page_break(doc)
@@ -536,8 +541,8 @@ def chapter1_demo_guide(doc):
             ["Do This", "1) Show the dull pencil. 2) Ask students to predict what will change. 3) Sharpen the pencil. 4) Have students name every change (shorter, sharper, noise)."],
             ["Ask", "\u201cWhat changed?\u201d \u201cWhat did you notice with your eyes? with your ears?\u201d \u201cWhat made the change happen?\u201d"],
             ["Listen For", "\u201cThe pencil got shorter and sharper.\u201d \u201cThe sharpener made noise.\u201d Evidence language, not \u201cI saw energy.\u201d"],
-            ["Connect", "Each change is evidence of energy. Energy = the ability to cause change (Reader p. 1). Build ENERGY → CHANGE → EVIDENCE on the board."],
-            ["Do Not Overteach", "Do not claim the tip warms up as student-observed heat (TG \u201cKnow the Science 1\u201d — optional, teacher-observed only). No \u201cmechanical/electrical energy\u201d required terms."],
+            ["Connect", "Each change is evidence of energy. Energy = the ability to cause change (Reader p. 1). Build ENERGY → CHANGE → EVIDENCE on the board (students write the checked word in the open last box of their notes N1 model)."],
+            ["Do Not Overteach", "Do not claim the tip warms up as student-observed heat (TG \u201cKnow the Science 1\u201d — optional, teacher-observed only). Do not require \u201cmechanical energy.\u201d (\u201cElectrical energy\u201d is one of the five Reader forms taught in N2 — students may name it, but it is not needed to explain the sharpener.)"],
             ["If Students Ask", "\u201cWhere does the energy come from?\u201d → \u201cIt comes through the cord/battery \u2014 we\u2019ll learn more about that later.\u201d Keep it a preview."],
             ["If Short on Time", "Skip the side-by-side comparison · use a single sharpen. Fall back to \u201cflip the light switch\u201d as a backup change."],
         ],
@@ -546,44 +551,43 @@ def chapter1_demo_guide(doc):
 def chapter1_slide_map(doc):
     c = CHAPTERS[1]
     section_heading(doc, "Chapter 1 — Slideshow Map (FINAL)", color=C(c["primary"]))
-    callout(doc, "FILE", "production/slides/01-ch1-energy-causes-change-slides.pptx — 45 slides (16:9). Rendered PDF + 45 PNG previews alongside. Speaker notes on every slide (MODE · TIME · ASK · LISTEN FOR · REVEAL · NEXT).", accent_hex=c["primary"])
+    callout(doc, "DECK", "45 slides (16:9). Speaker notes: MODE · TIME · PLAN · ASK · LISTEN FOR · REVEAL · NEXT.", accent_hex=c["primary"])
     _para(doc, "", after=10)
     data_table(doc, ["Anchor", "Slides", "What happens on screen"],
         [
             ["BQ", "2 · 3 · 33", "2 = Big Question banner + TURN & TALK · 3 = My first thinking (write) · 33 = BQ · NOW I THINK (return, write)"],
             ["V1 (energy · change)", "10–12", "10 = two vocab cards · 11 = notes write · 12 = notes reveal (change · different)"],
             ["V2 (stored energy)", "20–22", "20 = one large vocab card · 21 = notes write · 22 = notes reveal (later)"],
-            ["N1 Energy Causes Change", "13–16", "13 = definition · 14 = ENERGY → CHANGE → EVIDENCE model · 15 = write · 16 = reveal (cause · change · evidence)"],
-            ["N2 Energy Occurs in Different Forms", "17–19", "17 = five forms · 18 = clap check · 19 = 5-row form/example table"],
-            ["N3 Objects Can Store Energy", "23–27", "23 = still-battery predict · 24 = position · 25 = STORED → RELEASE → CHANGE model · 26 = write · 27 = reveal (position)"],
-            ["N4 Recognizing Evidence", "28–31", "28 = evidence concept · 29 = BEFORE/AFTER draw · 30 = CHECK YOUR THINKING write · 31 = sample + classify"],
-            ["Phenomenon / demo", "4 · 6–9", "4 = light-switch change · 6 = observe dull pencil · 7 = predict · 8 = before/after · 9 = change = evidence"],
+            ["N1 Energy Causes Change", "13–16", "13 = definition · 14 = seashore + ENERGY → CHANGE → ? · 15 = write · 16 = reveal + full model (copy word into open box)"],
+            ["N2 Energy Occurs in Different Forms", "17–19", "17 = five forms · 18 = clap check (optional) · 19 = write 5 examples"],
+            ["N3 Objects Can Store Energy", "23–27", "23 = battery PREDICT · 24 = position · 25 = STORED → RELEASE → CHANGE · 26 = write · 27 = reveal + samples"],
+            ["N4 Recognizing Evidence", "28–31", "28 = clues · 29 = BEFORE/AFTER draw · 30 = CHECK write · 31 = sample reveal"],
+            ["Phenomenon / demo", "4 · 6–9", "4–5 optional hook · 6 = observe · 7 = predict · 8 = before/after · 9 = changes are clues"],
             ["Application / evidence", "32", "Which change shows energy at work? (choose the change)"],
-            ["End-of-chapter review", "34–45", "6 multiple-choice (A/B/C/D) — question state then answer state; letters shuffled A/B/C/D/B/C"],
+            ["End-of-chapter review", "34–45", "Optional: 6 MC (A/B/C/D); correct letters C·A·D·B·A·C"],
         ],
         [Inches(1.9), Inches(1.1), Inches(4.0)], size=9, first_bold=True)
-    _para(doc, "Reader cues on-slide: V1/N1 pp. 1–2 · N2 p. 3 · V2/N3 pp. 4–5 · N4 pp. 1–6 · BQ p. 1. Timing: two 30-min blocks (Block 1 = slides 1–12 · Block 2 = slides 13–33) + review slides 34–45 as a third short block or Friday FLEX.", size=9, italic=True, color=INK_SOFT, after=8)
+    _para(doc, "Reader cues on-slide: V1/N1 pp. 1–2 · N2 p. 3 · V2/N3 pp. 4–5 · N4 pp. 1–5 · BQ p. 1. Timing: Chapter 1 Pacing Plan (S2 = 2, 17, 19–27; 18 optional).", size=9, italic=True, color=INK_SOFT, after=8)
 
 def chapter1_support_index(doc):
     c = CHAPTERS[1]
-    section_heading(doc, "Chapter 1 — Supporting Resource Index (Phase 5)", color=C(c["primary"]))
-    callout(doc, "PRINCIPLE", "Lean ecosystem: every resource has a distinct instructional job; nothing merely repeats the Guided Notes. Guided Notes (primary) + Science Journal (secondary) + a separate worksheet only for a distinct apply task.", accent_hex=c["primary"])
+    section_heading(doc, "Chapter 1 — Supporting Resource Index", color=C(c["primary"]))
+    callout(doc, "PRINCIPLE", "Lean ecosystem: every resource has one distinct job; nothing repeats the Guided Notes.", accent_hex=c["primary"])
     _para(doc, "", after=10)
     data_table(doc, ["Resource", "Canonical file", "Required", "Graded", "When used", "Key / absent"],
         [
-            ["Guided Notes (3 pp)", "01-ch1-energy-causes-change-guided-notes", "REQUIRED", "Not graded", "Blocks 1–2 (notes write)", "key AVAILABLE"],
-            ["Slideshow (45 slides)", "01-ch1-energy-causes-change-slides.pptx", "REQUIRED", "\u2014", "Blocks 1–2 + review", "\u2014 (CHECK slides reveal)"],
-            ["Practice / application", "01-ch1-energy-causes-change-practice.docx", "REQUIRED", "Not graded (practice)", "Block 2 application", "key AVAILABLE"],
-            ["Chapter quiz (9-item)", "01-ch1-energy-causes-change-quiz.docx", "REQUIRED", "Formative (graded)", "End of chapter", "key + blueprint AVAILABLE"],
-            ["Science Journal", "MASTER_CURRICULUM_MAP.md (2 prompts)", "OPTIONAL/FLEX", "Not graded", "Daily, secondary role", "\u2014 (reflective)"],
-            ["Absent / makeup", "student/recovery/01-ch1-absent-student-recovery.md", "REQUIRED (support)", "Not graded", "After absence", "self-contained"],
-            ["Energy Detectives", "01-ch1-energy-detectives-student.docx", "OPTIONAL/FLEX", "Not graded", "Friday FLEX", "key AVAILABLE"],
-            ["Friday FLEX", "student/01-ch1-friday-flex.md", "OPTIONAL/FLEX", "Not graded", "Friday", "\u2014"],
-            ["Study-guide contribution", "docs/chapter-01/CH1_STUDY_GUIDE_CONTRIBUTION.md", "REFERENCE", "\u2014", "Unit assembly", "\u2014"],
-            ["Assessment trace", "docs/chapter-01/CH1_ASSESSMENT_TRACE.md", "REFERENCE", "\u2014", "Unit assembly", "\u2014"],
+            ["Guided Notes (3 pp)", "01-ch1-energy-causes-change-guided-notes", "REQUIRED", "Not graded", "Sessions 1–3 (notes write)", "key AVAILABLE"],
+            ["Slideshow (45 slides)", "01-ch1-energy-causes-change-slides.pptx", "REQUIRED", "\u2014", "Sessions 1–3 + optional review", "\u2014 (CHECK slides reveal)"],
+            ["Practice / application", "01-ch1-energy-causes-change-practice.docx", "RECOMMENDED", "Not graded (practice)", "Take-home after Session 2", "key AVAILABLE"],
+            ["Chapter quiz (9 items · 16 pts)", "01-ch1-energy-causes-change-quiz.docx", "REQUIRED", "GRADED (raw + %)", "Fri · Session 3 · min 12–25", "key + blueprint AVAILABLE"],
+            ["Science Journal", "Chapter 1 Science Journal prompts", "OPTIONAL/FLEX", "Not graded", "Daily, secondary role", "\u2014 (reflective)"],
+            ["Absent / makeup", "Chapter 1 Absent-Student Recovery", "REQUIRED (support)", "Not graded", "After absence", "self-contained"],
+            ["Energy Detectives", "01-ch1-energy-detectives-student.docx", "OPTIONAL", "Not graded (no points)", "After the quiz / later FLEX", "look-fors AVAILABLE"],
+            ["Friday FLEX bank", "Chapter 1 Friday FLEX", "OPTIONAL/FLEX", "Not graded", "FLEX days after the quiz", "\u2014"],
+            ["Study guide + assessment trace", "Chapter 1 Study Guide + Assessment Trace", "REFERENCE", "\u2014", "Unit assembly", "\u2014"],
         ],
         [Inches(1.35), Inches(1.9), Inches(0.95), Inches(0.95), Inches(1.05), Inches(0.8)], size=9, first_bold=True)
-    callout(doc, "LEAN", "No new student handout or teacher key was created in Phase 5. The practice page is a distinct APPLY task (evidence judgment, not note recopy), so it is kept. Science Journal is already covered by two daily prompts. Energy Detectives is reclassified OPTIONAL/FLEX.", accent_hex=c["primary"])
+    callout(doc, "LEAN", "Practice = ungraded take-home (distinct APPLY task). Science Journal = two daily prompts. Energy Detectives = optional, no points. Pacing: Chapter 1 Pacing Plan.", accent_hex=c["primary"])
 
 def answer_key_architecture(doc):
     section_heading(doc, "Answer-Key Architecture")

@@ -1,0 +1,112 @@
+{
+  "chapter": 1,
+  "version": "1.1",
+  "status": "FROZEN",
+  "builder": "tools/build_ch1_release.py",
+  "files": [
+    {
+      "name": "01-ch1-energy-causes-change-guided-notes.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/premium-notes/01-ch1-energy-causes-change-guided-notes.pdf"
+      ],
+      "source_sha256": [
+        "8fc5e40063f31f5fd3639fb73ae8e93c8e974c2024ea8f19bb3a46762f1c4702"
+      ],
+      "sha256": "8fc5e40063f31f5fd3639fb73ae8e93c8e974c2024ea8f19bb3a46762f1c4702"
+    },
+    {
+      "name": "01-ch1-energy-causes-change-guided-notes-key.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/premium-notes/01-ch1-energy-causes-change-guided-notes-key.pdf"
+      ],
+      "source_sha256": [
+        "909fbbbd2d76cd4cab90ec91fdd9e8f92750771324553f4f82e32d5bc63ca462"
+      ],
+      "sha256": "909fbbbd2d76cd4cab90ec91fdd9e8f92750771324553f4f82e32d5bc63ca462"
+    },
+    {
+      "name": "01-ch1-energy-causes-change-slides.pptx",
+      "kind": "copy",
+      "sources": [
+        "production/slides/01-ch1-energy-causes-change-slides.pptx"
+      ],
+      "source_sha256": [
+        "5278f96c7dfab4f4b6809a3677f714c566c212e7c74af3d03f502abb77f022f7"
+      ],
+      "sha256": "5278f96c7dfab4f4b6809a3677f714c566c212e7c74af3d03f502abb77f022f7"
+    },
+    {
+      "name": "01-ch1-energy-causes-change-slides.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/slides/01-ch1-energy-causes-change-slides.pdf"
+      ],
+      "source_sha256": [
+        "4ce8ce22a6e664f106a33efb4c585b601d5697cc6acaa56c45bb46db02355f34"
+      ],
+      "sha256": "4ce8ce22a6e664f106a33efb4c585b601d5697cc6acaa56c45bb46db02355f34"
+    },
+    {
+      "name": "01-ch1-energy-causes-change-practice.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/worksheets/01-ch1-energy-causes-change-practice.pdf"
+      ],
+      "source_sha256": [
+        "86fa932222276183ce0eb75dee0061aab171835c1d7f207219b4401f2f8c993f"
+      ],
+      "sha256": "86fa932222276183ce0eb75dee0061aab171835c1d7f207219b4401f2f8c993f"
+    },
+    {
+      "name": "01-ch1-energy-causes-change-quiz.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/quizzes/01-ch1-energy-causes-change-quiz.pdf"
+      ],
+      "source_sha256": [
+        "dc4a51df57c37e4bbccc13c10e6ad2a19fb8b48214b7d8d80ba864159b46d6d3"
+      ],
+      "sha256": "dc4a51df57c37e4bbccc13c10e6ad2a19fb8b48214b7d8d80ba864159b46d6d3"
+    },
+    {
+      "name": "01-ch1-energy-detectives-student.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/worksheets/01-ch1-energy-detectives-student.pdf"
+      ],
+      "source_sha256": [
+        "3e1239c44ae87f0e16151bd20e41b2fe6ca30b7b52ba5c4f14630075322cd437"
+      ],
+      "sha256": "3e1239c44ae87f0e16151bd20e41b2fe6ca30b7b52ba5c4f14630075322cd437"
+    },
+    {
+      "name": "01-ch1-energy-causes-change-teacher-key.pdf",
+      "kind": "derived",
+      "sources": [
+        "production/answer-keys/01-ch1-energy-causes-change-quiz-key.md",
+        "production/answer-keys/01-ch1-energy-causes-change-practice-key.md",
+        "production/answer-keys/01-ch1-energy-detectives-key.md"
+      ],
+      "source_sha256": [
+        "e80ebd1775b4140a7c1214a86759c9041b2a005b923b55d01bb1b128ef59796b",
+        "4f9ae2da83dad6f5db55c08a7e2c323657a06b85c834e66714b35570665de53a",
+        "71bd09b1a4da803370da0643c09d8df9f4028eb433d9cbd39f0128a71c92e8f1"
+      ],
+      "sha256": "5a47ac85f4a4642655e3847e83d10c011e4e570a1e1b600153d9604c05627d0f"
+    },
+    {
+      "name": "01-ch1-friday-flex.pdf",
+      "kind": "derived",
+      "sources": [
+        "curriculum/chapter-01/student/01-ch1-friday-flex.md"
+      ],
+      "source_sha256": [
+        "14431662f514a5e7de5183971c4c622ac123026ea140983574c1572f7a592a51"
+      ],
+      "sha256": "6636b4907e20555a5ce250de6269623fb0a9eade6dbe0eb8c469bf49aac3553b"
+    }
+  ],
+  "retired_to": "production/archive/retired/chapter-01-release-v1.0/"
+}

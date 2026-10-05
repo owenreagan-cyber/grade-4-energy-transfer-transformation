@@ -1,0 +1,338 @@
+[
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "| P11 | Interactive Science Notebook | `production/student-notebook/chapter-01/01-ch1-interactive-notebook.docx` | `production/archive/retired/chapter-01-release-v1.0/01-ch1-interactive-science-notebook.pdf` | RETIRED (Phase 6.1) | ADAPTED |",
+    "normalized": "p11 interactive science notebook production student notebook chapter 01 01 ch1 interactive notebook docx production archive retired chapter 01 release v1 0 01 ch1 interactive science notebook pdf retired phase 6 1 adapted",
+    "sha256": "f2c3d6804203567bf9ff45936a0395f11db030960f11e9a89f4d1b8d1c3f4982",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "Ch1 Interactive Science Notebook register row is RETIRED (Phase 6.1); release path points at the retired archive."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "**Phase 6.1:** the Interactive Science Notebook (P11) is RETIRED from the Ch1 release (moved to `production/archive/retired/chapter-01-release-v1.0/`)",
+    "normalized": "phase 6 1: the interactive science notebook p11 is retired from the ch1 release moved to production archive retired chapter 01 release v1 0",
+    "sha256": "ee799001e0bcfe25ed5406d3f1b384cb8fc55824c698d1f89d06baec3df37389",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "Explicitly states the Ch1 Interactive Science Notebook (P11) is RETIRED and archived."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "- The former Interactive Science Notebook / glue-in architecture is **RETIRED for Chapter 1** (P11, archived) and must not be propagated as the primary note system",
+    "normalized": "the former interactive science notebook glue in architecture is retired for chapter 1 p11 archived and must not be propagated as the primary note system",
+    "sha256": "266dc76693e8b02b124e89ea6a956cc27c24889c9f7b0c78b4986554f84518a3",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "Declares the former notebook/glue-in architecture RETIRED for Chapter 1 and forbidden from being propagated as primary."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "Its standards (`docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`, `docs/planning/SLIDE_TO_NOTEBOOK_MODELING_STANDARD.md`) and templates (`production/templates/student-notebook/`) are historical only",
+    "normalized": "its standards docs planning interactive_science_notebook_standard md docs planning slide_to_notebook_modeling_standard md and templates production templates student notebook are historical only",
+    "sha256": "ffb1ddaacdcf6c4f62c0f2b20d5c4d0597afadca77b7b1a77ec6b0d2ec93d40e",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Notebook standards/templates named as historical-only (archival)."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "- Chapter 2–7 notebook rows in this register are legacy entries pending their own phases",
+    "normalized": "chapter 2 7 notebook rows in this register are legacy entries pending their own phases",
+    "sha256": "e933d8f3b2eb820af107580c634d9ce5e742c39203a6016a7b3c7547745e83b5",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Ch2–7 notebook register rows are legacy entries pending their own phases; they do not change Ch1 architecture."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "the Interactive Science Notebook-primary architecture is **RETIRED**",
+    "normalized": "the interactive science notebook primary architecture is retired",
+    "sha256": "ef7f3b6c3466fcb9603f776dad2f9abfffb699c243356495636f55900da371c9",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "The INB-primary architecture is RETIRED."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "## Phase 4.5 additions (Interactive Science Notebook) — RETIRED / HISTORICAL",
+    "normalized": "phase 4 5 additions interactive science notebook retired historical",
+    "sha256": "c1dd529fb7adfbabeb94d827edc464dad4c5c7cb83c9b57e58f6a8575b8c3768",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Phase 4.5 INB section header marked RETIRED / HISTORICAL."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "> ⚠️ **RETIRED (Phase 0A.1).** The INB-primary architecture below is historical only",
+    "normalized": "retired phase 0a 1 the inb primary architecture below is historical only",
+    "sha256": "e2cb0313a4f0a6d11302bd27713caafe888f9d5ad89ed0db69c7d0c9aab41a37",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "INB-primary architecture below is historical only (RETIRED)."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "- ~~**Primary student-note system → Basic Interactive Science Notebook**~~ → **RETIRED** (superseded",
+    "normalized": "primary student note system basic interactive science notebook retired superseded",
+    "sha256": "27505c905f5a209a4188b92a584d483608cc6ac44bfd2c055db74277655dad7a",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "Struck-through historical INB decision, marked RETIRED (superseded)."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "- **Interactive elements are selective** → historical INB rule (retired with the INB system)",
+    "normalized": "interactive elements are selective historical inb rule retired with the inb system",
+    "sha256": "8cd0f46f63aedf81cd6c6ce1891d2666f494e11e17027643611781f3c590ce14",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Historical INB rule, retired with the INB system."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "- **Slides model notebook work** → superseded by the notes-mirror rule (`docs/standards/SLIDESHOW_LOGIC_LOCKDOWN.md`)",
+    "normalized": "slides model notebook work superseded by the notes mirror rule docs standards slideshow_logic_lockdown md",
+    "sha256": "3699db4dd6287543d59b72484059174f697685b735d35bf6fb11d1f1d2141f4c",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Notebook-work slide modeling superseded by the notes-mirror rule."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "- Notebook system validated (historical",
+    "normalized": "notebook system validated historical",
+    "sha256": "e09c3632c050f4a572ad82e0304b3799388fd5887d52ddfc1a8cc9bd0f2696a5",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Notebook-system validation recorded as historical."
+  },
+  {
+    "file": "docs/standards/GUIDED_NOTES_STANDARD.md",
+    "clause": "> Note on provenance: `docs/planning/STUDENT_NOTES_STANDARD.md` was marked SUPERSEDED at Phase 4.5 (INB)",
+    "normalized": "note on provenance: docs planning student_notes_standard md was marked superseded at phase 4 5 inb",
+    "sha256": "ffe578745720adeaec81144d1d604fef2b5eaa532b7b62ade3b690723c929a20",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "The INB-era STUDENT_NOTES_STANDARD was marked SUPERSEDED."
+  },
+  {
+    "file": "docs/standards/GUIDED_NOTES_STANDARD.md",
+    "clause": "The newest restructuring audit **re-establishes premium guided notes as primary** and retires the INB",
+    "normalized": "the newest restructuring audit re establishes premium guided notes as primary and retires the inb",
+    "sha256": "3c883d4c7939be98a7992397b9b09a4945c3197b1facebf5a63538543b33e7e7",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "Re-establishes premium Guided Notes as primary and retires the INB."
+  },
+  {
+    "file": "docs/standards/UNIT1_PRODUCT_STANDARD.md",
+    "clause": "- Retired: Interactive Science Notebook (INB) and legacy `student-notes/` are archived/superseded by premium guided notes",
+    "normalized": "retired: interactive science notebook inb and legacy student notes are archived superseded by premium guided notes",
+    "sha256": "1b45c4adc6901d49295bd0a9a3665c2342857901ec66e802b5d8d8db468388b2",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "INB and legacy student-notes are retired, archived/superseded by premium Guided Notes."
+  },
+  {
+    "file": "docs/chapter-01/CH1_GOLD_STANDARD_PROPAGATION_SPEC.md",
+    "clause": "| G11 | **Retired architectures are excluded from release packages** (e.g., the Interactive Science Notebook) and archived with a README",
+    "normalized": "g11 retired architectures are excluded from release packages e g the interactive science notebook and archived with a readme",
+    "sha256": "b382a83bfc2f92d1c58e586513b48a54b18bd3840e21ec06a5d91439e3ada7f3",
+    "classification": "NOTEBOOK_RETIRED",
+    "rationale": "G11: retired architectures (e.g., the Interactive Science Notebook) excluded from releases and archived."
+  },
+  {
+    "file": "AGENTS.md",
+    "clause": "- **Guided Notes** are the primary student content/reference artifact, designed **before** the matching slideshow",
+    "normalized": "guided notes are the primary student content reference artifact designed before the matching slideshow",
+    "sha256": "ac52c0cc12c8153a6f8955fdbf50d416c0b0facc38e95d61c16267ff17794118",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Current AGENTS.md statement: Guided Notes are the primary student content/reference artifact."
+  },
+  {
+    "file": "AGENTS.md",
+    "clause": "- **Science Journal** is secondary: reflection, drawing, evidence, and extension",
+    "normalized": "science journal is secondary: reflection drawing evidence and extension",
+    "sha256": "ef39add5bb407fe9f089fcbcc0015733874c4c7be2330a8827e29dac72ede54d",
+    "classification": "JOURNAL_SECONDARY",
+    "rationale": "Current AGENTS.md statement: Science Journal is secondary to Guided Notes."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "> Controlled comparison of INB vs full-size Guided Notes",
+    "normalized": "controlled comparison of inb vs full size guided notes",
+    "sha256": "62a9f9fecb52587b5150489660c5c8902d96cc45abed725d7c6e453a4f7d7720",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Phase 11 comparison-only clause. It names INB and Guided Notes and assigns no role. The next sentence says the prototypes do not replace released Chapter 1 artifacts."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "| P15 | Legacy Guided Notes (\"WHAT WE NOTICE\" architecture) | `production/student-notes/01-ch1-energy-causes-change-guided-notes.docx` | — | RETIRED / SUPERSEDED (Phase 6.1B) → superseded by P3 (`production/premium-notes/`) | ADAPTED |",
+    "normalized": "p15 legacy guided notes what we notice architecture production student notes 01 ch1 energy causes change guided notes docx retired superseded phase 6 1b superseded by p3 production premium notes adapted",
+    "sha256": "4c788fe40f1844c3c1de4d5b85d821c4c620c6e1d0a256c88069d1e10f8e1221",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Legacy WHAT WE NOTICE Guided Notes row is RETIRED / SUPERSEDED by premium P3. It does not demote current Guided Notes."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "Guided Notes are the primary student artifact",
+    "normalized": "guided notes are the primary student artifact",
+    "sha256": "2dd0ae6f4578e2824aaaae16cbf284d2c12eaa2b4b01c689b7b27e5de93bff37",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Chapter 1 lifecycle sentence: Guided Notes are the primary student artifact."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "- **Guided Notes are the PRIMARY structured student-note/reference artifact** (current standard: `docs/standards/GUIDED_NOTES_STANDARD.md`",
+    "normalized": "guided notes are the primary structured student note reference artifact current standard: docs standards guided_notes_standard md",
+    "sha256": "2168453147e7a5ae35cbb8922db891f2f0de20ebaab3167408495d45db7f5a36",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Student Note Architecture section: Guided Notes are the primary structured student-note/reference artifact."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "- **Science Journal is SECONDARY** — predictions, phenomena, sketches, reflections, evidence, concept maps, engineering sketches, and optional creative/FLEX work",
+    "normalized": "science journal is secondary predictions phenomena sketches reflections evidence concept maps engineering sketches and optional creative flex work",
+    "sha256": "5c3a1c5ce25b1d48912046b0383eb7bb1ba4ab9435afab9d1a41e4e0627bf666",
+    "classification": "JOURNAL_SECONDARY",
+    "rationale": "Student Note Architecture section: Science Journal is secondary. Optional here modifies FLEX work, not Guided Notes."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "> **⚠️ PHASE 0A.1 RECONCILIATION (2026-10-03):** **Guided Notes are PRIMARY** (current standard: `docs/standards/GUIDED_NOTES_STANDARD.md`)",
+    "normalized": "phase 0a 1 reconciliation 2026 10 03 : guided notes are primary current standard: docs standards guided_notes_standard md",
+    "sha256": "2483e828a8b62779ab0338a0d65a6492c594cc68fff42c2860ad0a5ba9dd6ba8",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Phase 0A.1 reconciliation: Guided Notes are PRIMARY."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "**Science Journal is SECONDARY**",
+    "normalized": "science journal is secondary",
+    "sha256": "29e5739a06c43e2aa6fdf8459a162df32afa47277647c1573be3644db1df6b9a",
+    "classification": "JOURNAL_SECONDARY",
+    "rationale": "Both occurrences of this clause (reconciliation banner and Phase 4.5 retired banner) state Science Journal is SECONDARY."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "**Guided Notes are PRIMARY** (`docs/standards/GUIDED_NOTES_STANDARD.md`)",
+    "normalized": "guided notes are primary docs standards guided_notes_standard md",
+    "sha256": "22202d668d1c7d32c9349fa5d8cc885c127a38aefaa8e652e9b3a708b47ace48",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Phase 4.5 retired-banner clause: Guided Notes are PRIMARY."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "guided notes remain OPTIONAL (historical)**~~ → Guided Notes are **PRIMARY**, not OPTIONAL",
+    "normalized": "guided notes remain optional historical guided notes are primary not optional",
+    "sha256": "d6ce6f72d59a07b74b543c079cebbad8980b426643e9c1064c9bd9644e6719a8",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Struck-through historical 'guided notes remain OPTIONAL' is corrected in the same clause: Guided Notes are PRIMARY, not OPTIONAL."
+  },
+  {
+    "file": "docs/standards/GUIDED_NOTES_STANDARD.md",
+    "clause": "> Primary student content/reference artifact",
+    "normalized": "primary student content reference artifact",
+    "sha256": "42abde49027bb9a58c46c469890d46ba91459102854c07df5772fc906d4f258d",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Leading banner of the Guided Notes standard: primary student content/reference artifact. The document is that standard, so the name is not repeated in the banner."
+  },
+  {
+    "file": "docs/standards/UNIT1_PRODUCT_STANDARD.md",
+    "clause": "- **Guided Notes** = primary student content/reference artifact",
+    "normalized": "guided notes = primary student content reference artifact",
+    "sha256": "a828525b9a0f2cd68b3a0e24b5ddc492e586481585d93b88a444bd3bdda1fa88",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Unit 1 artifact hierarchy: Guided Notes = primary student content/reference artifact."
+  },
+  {
+    "file": "docs/standards/UNIT1_PRODUCT_STANDARD.md",
+    "clause": "- **Science Journal** = secondary (reflection, drawing, evidence, extension)",
+    "normalized": "science journal = secondary reflection drawing evidence extension",
+    "sha256": "21fc5ac6ae0238710ef68f019ba6b182306c9423ccbdf42595fe8820cb7f931f",
+    "classification": "JOURNAL_SECONDARY",
+    "rationale": "Unit 1 artifact hierarchy: Science Journal = secondary."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "| C1 | INB comparison prototype (master + PDF) | `production/comparisons/chapter-01-notes/inb/01-ch1-inb-comparison-master.docx` + `.pdf` | QA | ADAPTED/CUSTOM |",
+    "normalized": "c1 inb comparison prototype master pdf production comparisons chapter 01 notes inb 01 ch1 inb comparison master docx pdf qa adapted custom",
+    "sha256": "54eaa71aab0e881e590216897ae78724eaa891734e01ed0b3173003de39be510",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Phase 11 INB comparison prototype. Comparison-only; it does not assign the Chapter 1 note system."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "| C2 | Guided Notes comparison prototype (master + PDF) | `production/comparisons/chapter-01-notes/guided-notes/01-ch1-guided-notes-comparison-master.docx` + `.pdf` | QA | ADAPTED/CUSTOM |",
+    "normalized": "c2 guided notes comparison prototype master pdf production comparisons chapter 01 notes guided notes 01 ch1 guided notes comparison master docx pdf qa adapted custom",
+    "sha256": "df55aca7cf4c20b7b4c01b95b09b80d5056c2dac3b4d300c7485c481fc3cc3ea",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Phase 11 Guided Notes comparison prototype. Comparison-only; it does not change the Chapter 1 hierarchy."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "| P3 | Guided Notes (student + teacher key) | `production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx` + `…-guided-notes-key.docx` | `production/releases/chapter-01/` (PDFs) | RELEASED (v1.1 FROZEN) | ADAPTED |",
+    "normalized": "p3 guided notes student teacher key production premium notes 01 ch1 energy causes change guided notes docx guided notes key docx production releases chapter 01 pdfs released v1 1 frozen adapted",
+    "sha256": "a95c1facabf35d87d1eeefd4bb2953808665cdce0c37e9423ee5b96283589288",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Chapter 1 register row for the released Guided Notes masters (student + key). This is the primary artifact's file row."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "Notebook retrofit complete (Phase 4.5)",
+    "normalized": "notebook retrofit complete phase 4 5",
+    "sha256": "345e3cfd116072038e9ac59d9f88463198b8e069a0492f73041c5c8833d3f737",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Chapter 2 status blurb. Records that the Chapter 2 notebook retrofit finished in Phase 4.5. It does not assign the Chapter 1 note system."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "| U2-D | Premium guided notes Ch1–9 (DOCX+PDF) | `production/premium-notes/unit-02/` | RELEASED | ADAPTED |",
+    "normalized": "u2 d premium guided notes ch1 9 docx pdf production premium notes unit 02 released adapted",
+    "sha256": "264e3e85d1bb08a8e377ec37629c50136cf70574606a3c64b44e9e2fac12d49d",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Unit 2 inventory row for that unit's premium guided notes. Outside the Chapter 1 hierarchy decision."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "- **Drawing/modeling** as an intentional core feature → retained within Guided Notes (draw/label/model)",
+    "normalized": "drawing modeling as an intentional core feature retained within guided notes draw label model",
+    "sha256": "6900e309f29fade9c304b2f9a4e5c086fd9c8a226d6c603d8dd769e4fa010152",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Drawing and modeling stay inside Guided Notes. The clause keeps that work in the primary artifact."
+  },
+  {
+    "file": "docs/planning/CURRENT_DECISIONS.md",
+    "clause": "- **Notebook insert count is flexible** → 5 inserts for a two-week chapter (not forced to 3)",
+    "normalized": "notebook insert count is flexible 5 inserts for a two week chapter not forced to 3",
+    "sha256": "a1ab5653c74a0bc418dcc82d486554c0b398d8b6cacd5af03108112c5f8075f7",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Chapter 4 insert-count note. It sets how many inserts that later chapter used. It does not make the notebook the Chapter 1 note system."
+  },
+  {
+    "file": "docs/standards/GUIDED_NOTES_STANDARD.md",
+    "clause": "# GUIDED NOTES STANDARD",
+    "normalized": "guided notes standard",
+    "sha256": "6b6b432c0ab724fdc76e092abe277c0914213be2f9c5b8bad67c4f180c03734f",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Title of the standard that governs the primary student artifact."
+  },
+  {
+    "file": "docs/chapter-01/CH1_GOLD_STANDARD_PROPAGATION_SPEC.md",
+    "clause": "| **Notes before slides.** Guided Notes are authored and finalized before the matching slideshow is built",
+    "normalized": "notes before slides guided notes are authored and finalized before the matching slideshow is built",
+    "sha256": "aa5fa1d596891a7eb9c25575b3ec568927ce76a19046714981aace6b0d4c7972",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Propagation rule: Guided Notes are authored before slides. Sequencing for the primary artifact."
+  },
+  {
+    "file": "docs/chapter-01/CH1_GOLD_STANDARD_PROPAGATION_SPEC.md",
+    "clause": "GUIDED NOTES",
+    "normalized": "guided notes",
+    "sha256": "838887d8bf0df8813601dbc987e650168ad7d0dfc948839a769b168f1ebd20dc",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "Section heading B of the propagation spec. It names the Guided Notes section."
+  },
+  {
+    "file": "docs/chapter-01/CH1_GOLD_STANDARD_PROPAGATION_SPEC.md",
+    "clause": "| Guided Notes conformance (BQ/V/N, blanks, parity, printability, grayscale) | INHERIT EXACTLY |",
+    "normalized": "guided notes conformance bq v n blanks parity printability grayscale inherit exactly",
+    "sha256": "6722d0736dba49bb9ebe7863c3ba1ba9ee0f652f0ac3440874fb2d77cbc00dbe",
+    "classification": "GUIDED_NOTES_PRIMARY",
+    "rationale": "QA gate that checks Guided Notes conformance. It does not assign a different note system."
+  },
+  {
+    "file": "production/PRODUCTION_MANIFEST.md",
+    "clause": "| C3 | Teaching-comparison slide set | `production/comparisons/chapter-01-notes/01-ch1-note-system-teaching-comparison.pptx` | QA | CUSTOM |",
+    "normalized": "c3 teaching comparison slide set production comparisons chapter 01 notes 01 ch1 note system teaching comparison pptx qa custom",
+    "sha256": "a844fdc642abaa6f6aa49832150cd50afbbdefba852fc637b098f8460fa854df",
+    "classification": "HISTORICAL_REFERENCE",
+    "rationale": "Phase 11 teaching-comparison slide path. The filename contains note-system because the deck compares note formats. It does not assign a Chapter 1 note system."
+  }
+]

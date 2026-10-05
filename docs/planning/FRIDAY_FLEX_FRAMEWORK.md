@@ -1,6 +1,6 @@
 # FRIDAY FLEX FRAMEWORK
 
-> Friday = **Flex Science Friday**. Never introduces essential new core content. Always optional/flexible.
+> Friday policy (owner decision, 2026-10-04; `AGENTS.md`): Friday may hold catch-up, review, completion of previously taught work, BQ reflection/synthesis, scored quizzes/tests, makeup work, and optional FLEX/enrichment. It is **never the first instructional exposure** to essential new core content. The FLEX options below are the optional/flexible part of Friday and remain optional.
 
 ## Three broad modes
 

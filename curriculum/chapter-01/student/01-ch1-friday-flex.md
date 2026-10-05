@@ -1,6 +1,8 @@
 # Chapter 1 Friday Flex
 
-> Three tracks. **No Friday activity is required for Week 2's new core instruction.** Low-prep, quick reset.
+> **Schedule note:** On Friday the FLEX day carries Chapter 1 Session 3 (consolidation + the graded quiz) — see `docs/chapter-01/CH1_PACING_PLAN.md`. Use the options below **after the quiz**, on a later FLEX day, or on a review day. Nothing here is graded.
+
+> Four options (Recover · Practice · Practice/Extend · Extend). **No Friday activity is required for Week 2's new core instruction.** Low-prep, quick reset.
 
 ---
 
@@ -16,8 +18,8 @@
 | Concepts reinforced | energy causes change, evidence |
 
 **Options:**
-- Finish the Energy Detectives scavenger hunt (Friday FLEX page).
-- Absent-student recovery (see `student/recovery/01-ch1-absent-student-recovery.md`).
+- Energy Detectives scavenger hunt (optional, ungraded; no points).
+- Use the Chapter 1 absent-student recovery page.
 - Notes correction — complete missing guided-notes sections with teacher support.
 
 ---
@@ -32,6 +34,8 @@
 | Printable | yes (cards) |
 | Reusable | yes (laminate optional) |
 | Concepts reinforced | forms of energy, change, evidence |
+
+**Cards (teacher-made — no printable card file exists; write each line on an index card):** flipping a light switch · ringing a bell · pushing a toy car · warming hands near a heater · a bouncing ball · a flashlight turning on · a clapping sound · a stretched rubber band let go.
 
 **Teacher rules:**
 1. A student draws (or is given) an energy/change scenario card (e.g., "flipping a light switch," "ringing a bell," "pushing a toy car," "warming hands near a heater").
@@ -52,6 +56,8 @@
 | Reusable | yes |
 | Concepts reinforced | evidence of energy, forms of energy |
 
+**Cards (teacher-made):** ball rolling · bulb glowing · ice melting · bell ringing · battery in a toy. Write each on an index card; write the five form headings on a sheet.
+
 **Activity:** Students sort scenario cards ("ball rolling," "bulb glowing," "ice melting," "bell ringing," "battery in a toy") under form headings (motion, sound, light, heat, electrical energy) and identify the observable change for each.
 
 ---
@@ -66,6 +72,8 @@
 | Printable | yes |
 | Reusable | yes |
 | Concepts reinforced | evidence → energy inference |
+
+**Clue strips (teacher-made):** (1) "The room got brighter. The fan started spinning." (2) "The pencil got shorter and made a noise." (3) "The rubber band flew across the desk and made a snap."
 
 **Activity:** Give a short mystery ("The room got brighter. The fan started spinning. What energy is at work?"). Students use the ENERGY → CHANGE → EVIDENCE model to solve and explain.
 

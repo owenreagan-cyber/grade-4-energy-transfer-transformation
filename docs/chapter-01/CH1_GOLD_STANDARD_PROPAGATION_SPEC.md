@@ -56,10 +56,10 @@ Companions:
 | Rule | Class |
 |---|---|
 | **Anchor synchronization.** BQ/V/N slide anchors mirror the notes' BQ/V/N exactly (same wording, same grouping). | INHERIT EXACTLY |
-| **HUD use.** Temporary HUD action bubbles (MODE · TIME · ASK · LISTEN FOR · REVEAL · NEXT) are visually distinct from permanent BQ/V/N navigation. | INHERIT EXACTLY |
+| **HUD use.** Temporary HUD action bubbles (MODE · TIME · PLAN · ASK · LISTEN FOR · REVEAL · NEXT) are visually distinct from permanent BQ/V/N navigation. | INHERIT EXACTLY |
 | **Visual-density rules.** No content crowding; each slide carries one teaching job; projector-readable at the back of the room. | INHERIT EXACTLY |
 | **Reader integration.** Reader cues are printed on-slide; note-writing slides are visibly anchored; non-anchor slides never hide required note answers. | INHERIT EXACTLY |
-| **Review-slide architecture.** End-of-chapter review = question state → answer state, multiple choice (A/B/C/D), letters shuffled. | INHERIT EXACTLY |
+| **Review-slide architecture.** End-of-chapter review = question state → answer state, multiple choice (A/B/C/D); correct letters not patterned (no ascending/descending run, no triple repeat, ≤ 2 per letter, all four used — gate-checked). Optional: never inside a required block. | INHERIT EXACTLY |
 | **Demo choreography.** Predict → observe → before/after → change = evidence. | INHERIT EXACTLY |
 | **BQ return.** A "NOW I THINK" return-to-BQ write slide closes the chapter. | INHERIT EXACTLY |
 | **No advanced unsupported vocabulary** on any slide. | INHERIT EXACTLY |
@@ -116,3 +116,32 @@ Required gates before any chapter is declared complete (mirrors `docs/planning/Q
 | Independent final certification (read-only reviewer) | INHERIT EXACTLY |
 
 All gates must PASS before freeze. WARN is permitted only if explicitly non-blocking and unsuitable for correction within the chapter.
+
+---
+
+## G. PHASE 6.1 AMENDMENTS — rules generalized from the external audit (INHERIT EXACTLY unless noted)
+
+Added after the external adversarial audit of Chapter 1 v1.0. Chapter 1 v1.0 history is preserved in `CH1_GOLD_STANDARD_FREEZE.md`.
+
+| # | Rule | Evidence in Ch1 |
+|---|---|---|
+| G1 | **One authoritative chapter pacing plan.** A single data module (`tools/chN_pacing.py`) feeds slide speaker notes, the generated `CHN_PACING_PLAN.md`, the Playbook, the unit calendar, the master curriculum map, the manifest and QA. Competing timing systems are removed. | `tools/ch1_pacing.py`, `CH1_PACING_PLAN.md` |
+| G2 | **Realistic time model.** 30-min block, 20 students, 3–5 min lost to transitions → plan ≤ 25 required minutes per session; every session lists real buffer. | 24.5 / 24.5 / 25.0 min |
+| G3 | **Never schedule a day to start on a reveal slide.** Re-entry sessions open on the BQ slide. | `REENTRY_SLIDE = 2` |
+| G4 | **Every required notes page gets a named slot** (day + minutes + slide range). | Notes p.1 Mon · p.2 Tue · p.3 Fri |
+| G5 | **Every scored artifact gets a named slot** (day, minutes, note policy). | Quiz: Fri Session 3, min 12–25 |
+| G6 | **"If short on time" lists real cuts only** — each cut names a slide/task that exists in the canonical deck. | `IF_SHORT` |
+| G7 | **Explicit teacher-key answers.** Keys state the exact expected response (YES/NO/YES; exact MC option), acceptable alternatives, and point split — never "see rationale". Key parity is checked blank-for-blank. | quiz key items 7, 9 |
+| G8 | **Standard score line on all scored work:** `Score: ____ / [raw max]   ____ %` (raw score + percentage). | quiz |
+| G9 | **Open-response tables are not pre-answered.** Teach → write → reveal; open tables never carry answers before the write slide. | N2, N4, slides 17–19, 28–31 |
+| G10 | **Canonical/release parity.** The release package is built from the canonical masters, hash-verified (`tools/qa_release_parity.py`); no stale or mixed-vintage files. | `production/releases/chapter-01/RELEASE_MANIFEST.json` |
+| G11 | **Retired architectures are excluded from release packages** (e.g., the Interactive Science Notebook) and archived with a README. | `production/archive/retired/…` |
+| G12 | **Visual QA is required** on every affected student/teacher/projected artifact: rendered inspection **plus** deterministic checks; PASS/WARN/FAIL with file, page, issue, severity, fix. | `tools/qa_visual_pdf.py` |
+| G13 | **External adversarial audit is required** before freeze; findings are independently verified, never assumed. | `docs/reviews/EXTERNAL_GROK_CH1_ADVERSARIAL_AUDIT_RESPONSE.md` |
+| G14 | **Full phase artifact inventory is required**; every created/modified/affected artifact must be accounted for by the external audit. | `qa/reports/PHASE_6_1_ARTIFACT_INVENTORY.md` |
+| G15 | **Language policy for source-quirk words.** Where the Reader uses a synonym the project avoids on slides (e.g., "evidence, or proof"), the teacher guidance names the word to teach, and slide-visible text is gate-checked. | N1/V text, Playbook language note |
+| G16 | **Friday policy (owner, 2026-10-04):** Friday may hold catch-up, review, completion of taught work, BQ reflection/synthesis, scored quizzes/tests, makeup, optional FLEX — never the first exposure to essential new core content. Any chapter that puts notes on Friday must map every Friday slide to a concept first taught Mon–Thu (machine-checked traceability). | Ch1 Session 3 |
+| G17 | **Optional resources carry no points** and are labeled OPTIONAL with look-fors, not scores. | Energy Detectives |
+| G18 | **Every referenced physical card/material is either a real file or written inline** (no phantom printables). | Friday FLEX bank |
+| G19 | **Slide metadata:** widescreen (16:9) with no `screen4x3` type attribute; every instructional label ≥ the projector tier, decorative chrome exempt. | `qa_release_parity`, `qa_ch1_slides` |
+

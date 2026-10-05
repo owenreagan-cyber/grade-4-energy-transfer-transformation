@@ -5,6 +5,8 @@
 ## Status vocabulary
 `PLANNED` · `DRAFT` · `QA` · `ACCEPTED` · `RELEASED`
 
+End-of-life states (never canonical, never listed as current): `RETIRED` · `SUPERSEDED` (always with the superseding path and the phase that retired it).
+
 ## Phase 11 — Chapter 1 Note-Format Study (comparison artifacts)
 
 > Controlled comparison of INB vs full-size Guided Notes. Prototypes are comparison-only — they do NOT replace released Chapter 1 artifacts.
@@ -20,19 +22,23 @@
 
 | ID | Artifact | Master path | Release path | Status | Provenance |
 |---|---|---|---|---|---|
-| P1 | Teacher Chapter Map | `curriculum/chapter-01/teacher/01-ch1-energy-causes-change-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
+| P1 | Teacher package reference (Ch1) | `docs/chapter-01/CH1_PACKAGE_MANIFEST.md` + Teacher Playbook Ch1 spread (`production/teacher-playbook/unit1-teacher-playbook.docx`) | `production/teacher-playbook/unit1-teacher-playbook.pdf` | RELEASED (v1.1 FROZEN; Playbook binary ships with the Ch2 commit) | SOURCE/ADAPTED |
 | P2 | Slide Deck | `production/slides/01-ch1-energy-causes-change-slides.pptx` | `production/releases/chapter-01/` | RELEASED | ADAPTED |
-| P3 | Guided Notes | `production/student-notes/01-ch1-energy-causes-change-guided-notes.docx` | `production/releases/chapter-01/` | RELEASED | ADAPTED |
-| P4 | Core Investigation / Lab Student Page | `production/labs/01-ch1-energy-detectives-teacher-spec.md` + `production/worksheets/01-ch1-energy-detectives-student.docx` | `production/releases/chapter-01/` | RELEASED | ADAPTED |
+| P3 | Guided Notes (student + teacher key) | `production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx` + `…-guided-notes-key.docx` | `production/releases/chapter-01/` (PDFs) | RELEASED (v1.1 FROZEN) | ADAPTED |
+| P4 | Energy Detectives (OPTIONAL · ungraded · no points) | `production/labs/01-ch1-energy-detectives-teacher-spec.md` + `production/worksheets/01-ch1-energy-detectives-student.docx` | `production/releases/chapter-01/` | RELEASED | ADAPTED |
 | P5 | Practice Worksheet | `production/worksheets/01-ch1-energy-causes-change-practice.docx` | `production/releases/chapter-01/` | RELEASED | ADAPTED |
 | P6 | Friday Flex | `curriculum/chapter-01/student/01-ch1-friday-flex.md` | `production/releases/chapter-01/` | RELEASED | CUSTOM |
 | P7 | Chapter Quiz | `production/quizzes/01-ch1-energy-causes-change-quiz.docx` | `production/releases/chapter-01/` | RELEASED | ADAPTED |
-| P8 | Teacher Keys | `production/answer-keys/01-ch1-*-key.md` | `production/releases/chapter-01/` | RELEASED | SOURCE/ADAPTED |
+| P8 | Teacher Keys (quiz · practice · Detectives; notes key = P3) | `production/answer-keys/01-ch1-*-key.md` | `production/releases/chapter-01/` (combined teacher-key PDF) | RELEASED | SOURCE/ADAPTED |
 | P9 | Media Plan | `curriculum/chapter-01/media/01-ch1-media-plan.md` + `01-ch1-explainer-script.md` | — | RELEASED | CUSTOM |
 | P10 | QA Package | `curriculum/chapter-01/qa/` | — | RELEASED | CUSTOM |
-| P11 | Interactive Science Notebook | `production/student-notebook/chapter-01/01-ch1-interactive-notebook.docx` | `production/releases/chapter-01/01-ch1-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
+| P11 | Interactive Science Notebook | `production/student-notebook/chapter-01/01-ch1-interactive-notebook.docx` | `production/archive/retired/chapter-01-release-v1.0/01-ch1-interactive-science-notebook.pdf` | RETIRED (Phase 6.1) | ADAPTED |
+| P12 | Pacing plan (the ONE Ch1 timing system) | `docs/chapter-01/CH1_PACING_PLAN.md` (generated from `tools/ch1_pacing.py`) | — | RELEASED (includes the Friday fallback) | CUSTOM |
+| P13 | Release package manifest | `production/releases/chapter-01/RELEASE_MANIFEST.json` (built by `tools/build_ch1_release.py`; verified by `tools/qa_release_parity.py --chapter 1`) | `production/releases/chapter-01/` | RELEASED (v1.1 FROZEN) | CUSTOM |
+| P14 | Teacher Chapter Map (pre-canonical staging file) | `curriculum/chapter-01/teacher/01-ch1-energy-causes-change-teacher-map.md` | — | RETIRED / SUPERSEDED (Phase 6.1B) → superseded by P1 + P12 | SOURCE/ADAPTED |
+| P15 | Legacy Guided Notes ("WHAT WE NOTICE" architecture) | `production/student-notes/01-ch1-energy-causes-change-guided-notes.docx` | — | RETIRED / SUPERSEDED (Phase 6.1B) → superseded by P3 (`production/premium-notes/`) | ADAPTED |
 
-> Chapter 1 is complete (Phase 3). Notebook retrofit complete (Phase 4.5).
+> **Chapter 1 lifecycle:** v1.0 FROZEN (history preserved) · v1.1 `STATUS = FROZEN` (external decision APPROVE PROPAGATION, 2026-10-05; record: `docs/chapter-01/CH1_GOLD_STANDARD_FREEZE.md`). P14 and P15 are historical/retired and must never be cited as canonical or current. Chapter 1 is complete (Phase 3). **Phase 6.1:** the Interactive Science Notebook (P11) is RETIRED from the Ch1 release (moved to `production/archive/retired/chapter-01-release-v1.0/`); the release package is built by `tools/build_ch1_release.py` and verified by `tools/qa_release_parity.py --chapter 1`. Guided Notes are the primary student artifact. **Playbook (P1):** the Playbook binary is one combined file that also holds Chapter 2 pages, so it ships with the Ch2 commit; until then the committed Playbook binary is the v1.0 build and Ch1 timing is governed by P12.
 
 ## Chapter 2 — Moving Objects Have Energy
 
@@ -154,12 +160,11 @@
 
 > Chapter 7 + unit final complete (Phase 9). Original written final ADAPTED from the official 50-pt Unit Assessment blueprint. Media PENDING/UNSTAGED (Phase 10).
 
-## Notebook System (Phase 4.5)
-- Primary student-note system: **Interactive Science Notebook** (supersedes flat guided-notes-only).
-- Standard: `docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`.
-- Slide modeling: `docs/planning/SLIDE_TO_NOTEBOOK_MODELING_STANDARD.md`.
-- Templates: `production/templates/student-notebook/`.
-- Old guided-notes PDFs remain OPTIONAL (historical).
+## Student Note Architecture (current)
+- **Guided Notes are the PRIMARY structured student-note/reference artifact** (current standard: `docs/standards/GUIDED_NOTES_STANDARD.md`; decision record: `docs/planning/CURRENT_DECISIONS.md`).
+- **Science Journal is SECONDARY** — predictions, phenomena, sketches, reflections, evidence, concept maps, engineering sketches, and optional creative/FLEX work.
+- The former Interactive Science Notebook / glue-in architecture is **RETIRED for Chapter 1** (P11, archived) and must not be propagated as the primary note system. Its standards (`docs/planning/INTERACTIVE_SCIENCE_NOTEBOOK_STANDARD.md`, `docs/planning/SLIDE_TO_NOTEBOOK_MODELING_STANDARD.md`) and templates (`production/templates/student-notebook/`) are historical only.
+- Chapter 2–7 notebook rows in this register are legacy entries pending their own phases; they do not change the architecture above.
 
 ## Phase 13B — Unit 2 "Using Natural Resources for Energy" + Final 8.5-Week Package
 
