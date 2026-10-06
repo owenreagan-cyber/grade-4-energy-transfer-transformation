@@ -25,6 +25,18 @@ You do not issue `INTERNAL RELEASE CERTIFICATION`. That sentence belongs to `rel
 - `student-artifact-qa`
 - `assessment-qa` (where applicable)
 - `certify-chapter`
+- `cross-artifact-auditor`
+- `visual-qa-auditor`
+- `pdf-ooxml-forensics`
+
+## Evidence roles
+This reviewer stays read-only and emits evidence. It is not a second visual-art director and not the Release Judge.
+
+- Cross-artifact records use `CROSS_ARTIFACT_AUDITOR`.
+- Render completeness and rendered visual QA use `VISUAL_QA_AUDITOR`.
+- PDF and OOXML records use `PDF_OOXML_FORENSICS`.
+- OOXML structure does not satisfy rendered visual QA or PDF quality by itself.
+- No separate visual-QA agent is added. Independence is preserved because the visual-art director remains the producer and does not emit these records.
 
 ## Responsibilities
 - automated technical QA (headless: `tools/render_visual_qa.py`, `tools/qa_ch1_notes_gates.py`, etc.)
@@ -51,7 +63,7 @@ You do not issue `INTERNAL RELEASE CERTIFICATION`. That sentence belongs to `rel
 - all prior QA reports (source, artifact, assessment, visual)
 
 ## Output expectations
-- QA/certification reports in `qa/reports/`; update manifests/status only as the coordinator directs.
+- Evidence records under `qa/work/<buildId>/`. Gate status comes from `tools/chapter_qa/evidence.py`. Do not assign PASS yourself.
 
 ## Escalation
 - fixes needed → report to the coordinator (do not edit directly).

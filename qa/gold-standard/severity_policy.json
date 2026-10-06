@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "findings": {
+    "missing_required_render": {"severity": "BLOCKING", "failsGate": true},
+    "corrupt_pdf": {"severity": "BLOCKING", "failsGate": true},
+    "missing_release_artifact": {"severity": "BLOCKING", "failsGate": true},
+    "text_clipped": {"severity": "HIGH", "failsGate": true, "lostInstructionalContent": "BLOCKING"},
+    "mid_word_split": {"severity": "HIGH", "failsGate": true},
+    "writing_space_too_small": {"severity": "HIGH", "failsGate": true},
+    "blank_too_small": {"severity": "HIGH", "failsGate": true},
+    "font_too_small": {"severity": "HIGH", "failsGate": true},
+    "low_effective_dpi_essential": {"severity": "HIGH", "failsGate": true},
+    "low_effective_dpi": {"severity": "MEDIUM", "failsGate": false},
+    "low_contrast": {"severity": "HIGH", "failsGate": true},
+    "minor_spacing": {"severity": "LOW", "failsGate": false},
+    "stale_human_status": {"severity": "MEDIUM", "failsGate": true},
+    "hidden_slide": {"severity": "BLOCKING", "failsGate": true},
+    "broken_relationship": {"severity": "BLOCKING", "failsGate": true},
+    "corrupt_xml": {"severity": "BLOCKING", "failsGate": true},
+    "speaker_note_mismatch": {"severity": "HIGH", "failsGate": true},
+    "unsupported_addition": {"severity": "HIGH", "failsGate": true},
+    "generated_agreement": {"severity": "BLOCKING", "failsGate": true},
+    "answer_mismatch": {"severity": "HIGH", "failsGate": true},
+    "unexpected_external_link": {"severity": "MEDIUM", "failsGate": false},
+    "font_not_embedded": {"severity": "MEDIUM", "failsGate": false},
+    "image_only_page": {"severity": "INFO", "failsGate": false}
+  }
+}

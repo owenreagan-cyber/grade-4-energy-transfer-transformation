@@ -20,4 +20,12 @@ Future hooks must call the tested functions below. They must not reimplement cer
 - A hook must not treat an empty input set as a pass.
 - Enable a hook only after the function it calls already has a failing test for the case the hook is meant to catch.
 
-No hook in this phase can block a commit. Frozen-chapter protection during Phase A is the non-regression run plus the rule, not a live hook.
+Phase B adds evidence producers a later hook can call. Hooks stay disabled until those producers and the Phase C adversary both pass.
+
+| Later hook | Calls | Stop condition |
+|---|---|---|
+| Render completeness | `tools/chapter_qa/render_completeness.py` | Expected and observed render counts differ, or the render command failed. |
+| PDF and OOXML | `tools/qa_pdf_quality.py`, `tools/qa_ooxml.py` | Corrupt PDF, broken package, or essential imagery below the configured DPI. |
+| Status authority | `tools/qa_status_authority.py` | Current human-facing text contradicts the authoritative lifecycle status. |
+
+No hook in this phase can block a commit. Frozen-chapter protection remains the non-regression run plus the rule, not a live hook.

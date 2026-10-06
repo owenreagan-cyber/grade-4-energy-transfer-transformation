@@ -18,15 +18,20 @@ Existing reusable workflows already live in `.cursor/skills/`. They are Markdown
 
 `certify-chapter` collects gate evidence and stops before manifests or a release status. Chapter Factory release certification is `tools/chapter_qa/release_judge.py`. Binding that skill to the judge stays deferred so this phase does not create a second certification procedure.
 
-## Not added
+## Phase B
 
-| Candidate | Decision | Why |
+Evidence producers now exist, so four thin skills were added under `.cursor/skills/`. Each one calls a script and forbids assigning PASS. No second skill tree was created. No visual-QA agent was added: `qa-certification-reviewer` emits render, visual, PDF, and OOXML evidence in read-only mode. `visual-art-director` stays the producer and does not certify visual QA.
+
+| Skill | Decision | Why |
 |---|---|---|
-| Visual-detector skill | DEFER | The detector suite is out of scope. A skill with no detector would only restate `VISUAL_QA_AUDITOR`. |
-| Provenance skill | DEFER | `provenance-auditor` plus `identity.py` is enough until a clean-room rebuild engine exists. |
-| Adversary skill | DEFER | `qa-adversary` is the workflow. A mutation runner is out of scope. |
-| Release-judge skill | UNNEEDED | The judge is a tested Python function. An agent prompt already points at it. |
-| Parallel `.agents/skills` copies | UNNEEDED | They would duplicate `.cursor/skills/` and `.cursor/agents/`. |
+| `source-scholar` | IMPLEMENT | Emits source and curriculum evidence. `source-fidelity-check` remains the older prose workflow. |
+| `cross-artifact-auditor` | IMPLEMENT | Compares artifact classes and refuses source-authority claims. |
+| `visual-qa-auditor` | IMPLEMENT | Runs render completeness and rendered inspection. |
+| `pdf-ooxml-forensics` | IMPLEMENT | Runs PDF tools and OOXML structure. |
+| Adversary skill | DEFER | Full mutation architecture is Phase C. |
+| Provenance skill | DEFER | Clean-room rebuild is still later. |
+| Release-judge skill | UNNEEDED | The judge remains a tested function. |
+| Parallel `.agents/skills` copies | UNNEEDED | Skills stay in `.cursor/skills/`. |
 
 ## Rule
 

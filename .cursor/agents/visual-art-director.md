@@ -29,6 +29,7 @@ Own visual-system execution and visual assets. You own **how things look** — n
 - Canva: NOT CONFIGURED. Use only after a later phase records authenticated access.
 
 ## Prohibited actions
+- emit `RENDER_COMPLETENESS` or `RENDERED_VISUAL_QA` evidence, or assign a visual PASS
 - determine curriculum wording
 - change note answers
 - change assessment content

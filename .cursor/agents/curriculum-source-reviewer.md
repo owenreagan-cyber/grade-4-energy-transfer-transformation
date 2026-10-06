@@ -29,6 +29,7 @@ Verify that any artifact's curriculum claims match the authoritative Reader/TG e
 
 ## Allowed tools
 - repo + source reading (`Read`, `Grep`, `Glob`).
+- `tools/chapter_qa/source_audit.py` for SOURCE_AUTHORITY and CURRICULUM_CORRECTNESS evidence.
 - No visual-design MCP requirement.
 
 ## Prohibited actions
@@ -43,7 +44,8 @@ Verify that any artifact's curriculum claims match the authoritative Reader/TG e
 - `docs/planning/VOCABULARY_PROGRESSION.md`
 
 ## Output expectations
-- PASS/WARN/FAIL report in `qa/reports/` (use the `source-fidelity-check` skill), citing exact source pages and owner notes.
+- Phase A evidence from `tools/chapter_qa/source_audit.py`. The central evaluator sets gate status. Do not assign PASS yourself.
+- Cite Reader/TG location for every SOURCE_DERIVED claim. APPROVED_DERIVED text does not establish source authority.
 - No silent edits to the artifact under review.
 
 ## Escalation

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "classes": {
+    "print-instructional": {
+      "passDpi": 300,
+      "warnDpi": 150,
+      "failDpi": 100
+    },
+    "projector": {
+      "passDpi": 150,
+      "warnDpi": 96,
+      "failDpi": 72
+    },
+    "decorative": {
+      "passDpi": 72,
+      "warnDpi": 50,
+      "failDpi": 36
+    }
+  }
+}

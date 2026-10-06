@@ -16,6 +16,7 @@ tmp/
 temp/
 renders/
 _review_renders/
+qa/work/
 
 # Python
 __pycache__/
