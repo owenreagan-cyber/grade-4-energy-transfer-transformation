@@ -23,7 +23,11 @@ RETIRED_PATTERNS = [r"interactive-science-notebook", r"-inb[-.]", r"-v1\.0\.", r
 STALE_TOKENS = {
     1: ["Model It", "Draw/Label", "Block 1", "Block 2", "cup/balloon/salt", "Interactive Science Notebook",
         "kinetic", "potential energy", "mechanical energy", "radiant", "inertia", "compression wave"],
+    2: ["Model It", "Draw/Label", "Block 1", "Block 2", "Interactive Science Notebook",
+        "kinetic energy", "potential energy", "mechanical energy", "momentum", "inertia",
+        "transfers energy"],
 }
+QUIZ_POINTS = {1: 16, 2: 12}
 # Phase 6.1B / L3: classroom-facing PDFs must not leak repo paths, internal phase labels or retired note architecture
 LEAK_PATTERNS = [
     (r"\b[\w./-]+\.md\b", "markdown repo path"),
@@ -53,9 +57,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--chapter", type=int, required=True)
     ap.add_argument("--report", default=None)
+    ap.add_argument("--root", default=None)
+    ap.add_argument("--release-dir", default=None)
+    ap.add_argument("--hash-csv", default=None)
     a = ap.parse_args()
+    global REPO
+    if a.root:
+        REPO = os.path.abspath(a.root)
     n = a.chapter
-    rel = os.path.join(REPO, "production", "releases", "chapter-%02d" % n)
+    rel = os.path.abspath(a.release_dir) if a.release_dir else os.path.join(REPO, "production", "releases", "chapter-%02d" % n)
     mp = os.path.join(rel, "RELEASE_MANIFEST.json")
     gates = []
 
@@ -111,7 +121,10 @@ def main():
             sz = re.search(r"Page size:\s+([\d.]+) x ([\d.]+)", info)
             if sz and not f["name"].endswith(LANDSCAPE_OK):
                 w, h = float(sz.group(1)), float(sz.group(2))
-                if not (abs(w - 612) < 2 and abs(h - 792) < 2):
+                portrait = abs(w - 612) < 2 and abs(h - 792) < 2
+                # Chapter 2 Moving Marbles is an optional letter-landscape page. Chapter 1 has no landscape handout.
+                letter_landscape = n == 2 and "marbles" in f["name"] and abs(w - 792) < 2 and abs(h - 612) < 2
+                if not (portrait or letter_landscape):
                     badsize.append("%s %.0fx%.0f" % (f["name"], w, h))
     gate("release PDFs: stale/banned language", not stale, "hits: %s" % (stale or "none"))
     leaks = {}
@@ -126,11 +139,13 @@ def main():
     gate("release PDFs: no repo paths / phase labels / retired architecture", not leaks, "leaks: %s" % (leaks or "none"))
     q = [f for f in present if "quiz" in f["name"] and f["name"].endswith(".pdf") and "key" not in f["name"]]
     qbad = []
+    pts = QUIZ_POINTS.get(n)
     for f in q:
         t = pdf_text(os.path.join(rel, f["name"]))
-        if not (re.search(r"/\s*16\b", t) and "%" in t):
+        if pts is None or not (re.search(r"/\s*%d\b" % pts, t) and "%" in t):
             qbad.append(f["name"])
-    gate("quiz PDF: current score layout (raw /16 + %)", not qbad, "missing score layout: %s" % (qbad or "none"))
+    gate("quiz PDF: current score layout (raw /%s + %%)" % (pts if pts is not None else "?"),
+         not qbad, "missing score layout: %s" % (qbad or "none"))
     # 6.1C / L-B: FLEX continuation pages must not open with a headless table
     fx = [f for f in present if "friday-flex" in f["name"] and f["name"].endswith(".pdf")]
     fxbad = []
@@ -159,7 +174,7 @@ def main():
         gate("PPTX widescreen metadata", True, "; ".join(pp) or "no pptx")
 
     # final-delivery CSV
-    csvp = os.path.join(REPO, "production", "final-delivery", "RELEASE_HASH_MANIFEST.csv")
+    csvp = os.path.abspath(a.hash_csv) if a.hash_csv else os.path.join(REPO, "production", "final-delivery", "RELEASE_HASH_MANIFEST.csv")
     mism = []
     if os.path.exists(csvp):
         prefix = "%02d-ch%d" % (n, n)
@@ -172,6 +187,20 @@ def main():
     rd = man.get("retired_to")
     gate("retired v1.0 files archived", bool(rd) and os.path.isdir(os.path.join(REPO, rd)) and
          len([x for x in os.listdir(os.path.join(REPO, rd)) if x.endswith(".pdf")]) >= 1, rd or "no retired_to")
+    if n == 2:
+        sys.path.insert(0, os.path.join(REPO, "tools"))
+        import qa_ch2_semantic as sem
+        if a.release_dir:
+            fails = sem.check(REPO, include_release=False) + sem.release_fails(REPO, os.path.abspath(a.release_dir))
+        else:
+            fails = sem.check(REPO)
+        gate("live semantic QA (independent of this manifest)", not fails,
+             fails[0].split("\n")[0] if fails else "sync, leakage, pacing, Friday, inventory")
+        names = set(os.listdir(rel))
+        missing = [name for name in sem.REQUIRED_RELEASE if name not in names]
+        extra = sorted(names - sem.ALLOWED_RELEASE)
+        gate("exact release set", not missing and not extra,
+             "missing: %s · extra: %s" % (missing or "none", extra or "none"))
     return finish(gates, a)
 
 

@@ -2,7 +2,7 @@
 
 > At-a-glance daily plan for the first two weeks. Use with `ENERGY_AND_NATURAL_RESOURCES_MASTER_PACING.md`,
 > `PRINTING_GUIDE.md`, and `TEACHER_PREP_GUIDE.md`. 20 students · 5 groups of 4 · ~30-min blocks.
-> **Print once Sunday:** `01-ch1` (3 pp) · `02-ch2` (2 pp) · `03-ch3` (3 pp) · Moving Marbles (2 pp) ·
+> **Print once Sunday:** `01-ch1` (3 pp) · `02-ch2` (3 pp) · `03-ch3` (3 pp) · Moving Marbles only if you will use the optional enrichment ·
 > Ramp It Up (3 pp) · Fast & Curious (Fri). 20 copies each.
 
 ---
@@ -28,25 +28,24 @@
 - **Stop if short:** skip slide 18; hard stop at minute 24.
 - **Absent:** send GN p.2.
 
-### Wed — Moving objects have energy
-- **Open:** `02-ch2` deck (slides S1–S13).
-- **Print:** `02-ch2` GN p.1.
-- **Gather:** projector.
-- **Teach:** marble hook → prediction → Big Question → motion → energy of motion.
-- **Students write:** GN p.1 (motion + energy-of-motion fill-ins, model).
-- **Exit:** "energy of motion" fill-in.
-- **Stop if short:** drop S12–S13 (notes cues) to Thursday.
-- **Absent:** send GN p.1.
+### Wed — Motion and cause (Ch2 Session 1 · 24 min)
+> Authority: `docs/chapter-02/CH2_PACING_PLAN.md`.
+- **Open:** `02-ch2` deck (slides 1–16).
+- **Print:** Guided Notes pp. 1–2 (students stop after the V2 line).
+- **Gather:** two identical marbles and a short track or guarded flat surface.
+- **Teach:** Big Question → first thinking → marble collision (observe · predict · roll) → change is evidence → V1 motion → N1 → V2 energy of motion.
+- **Students write:** notes p. 1 (BQ, V1, N1) and the V2 line at the top of p. 2. Stop before the N2 model.
+- **Stop if short:** merge the observe and predict into 90 seconds. If V2 has not started by minute 22, teach the card and finish the blank at the start of Thursday.
+- **Absent:** send notes p. 1.
 
-### Thu — Moving Marbles investigation
-- **Open:** `02-ch2` deck (slides S14–S24).
-- **Print:** Moving Marbles student sheet (2 pp).
-- **Gather:** identical marbles, cups, flat lane/tray, ruler (optional).
-- **Teach:** launch → setup → predict → 3 trials → record → debrief (observation vs inference).
-- **Students write:** observation/evidence table (keep writing light during hands-on).
-- **Exit:** "the target's change is evidence the marble had energy."
-- **Stop if short:** skip S22–S23 (examples/non-example).
-- **Absent:** partner data + GN p.2.
+### Thu — Energy of motion, use, and quiz (Ch2 Session 2 · 24 min)
+- **Open:** `02-ch2` deck (slide 2 re-entry, then slides 17–25 and 27; **slide 26 OPTIONAL**).
+- **Print:** notes p. 3 (page 2 was printed Wednesday) + the Chapter 2 quiz (8 items · 12 pts).
+- **Gather:** the same two marbles if you want one reminder roll. No cups, no ruler, no second investigation.
+- **Teach:** N2 model and BEFORE/AFTER draw → hammer, pendulum, wind → CHECK → BQ now → quiz.
+- **Quiz:** in students' hands at **minute 12**. All 12 minutes stay in the block (hand out, work, collect). If the opening runs long, shorten only the N3 read-aloud and the CHECK sample. Do not skip N2, N3, CHECK, or the Big Question.
+- **Absent:** send notes pp. 2–3 and the quiz when the student returns.
+- **Not today:** Moving Marbles. That page is optional enrichment after the quiz, and it is not Friday (Friday is Chapter 1).
 
 ### Fri — Ch1 Session 3: Recognize, Reflect & QUIZ (25 min; consolidation, no new vocabulary)
 - **Open:** `01-ch1` deck (slide 2 re-entry, then slides 28–31, 33).
@@ -116,8 +115,8 @@
 |---|---|---|---|
 | W1 Mon | 01-ch1 S1–3, S6–16 | GN 01 p.1 | sharpener + pencil |
 | W1 Tue | 01-ch1 S2, S17, S19–27 (S18 optional) | GN 01 p.2 | optional rubber band |
-| W1 Wed | 02-ch2 S1–S13 | GN 02 p.1 | projector |
-| W1 Thu | 02-ch2 S14–S24 | Moving Marbles (2 pp) | marbles, cups, lane |
+| W1 Wed | 02-ch2 S1–S16 | GN 02 p.1 and the V2 line on p.2 | two identical marbles |
+| W1 Thu | 02-ch2 S2, S17–25, S27 + Chapter 2 QUIZ (8 items · 12 pts) | GN 02 pp. 2–3 + quiz | pencils |
 | W1 Fri | 01-ch1 S2, S28–31, S33 + Chapter 1 QUIZ (9 items · 16 pts) | GN 01 p.3 + quiz | pencils |
 | W2 Mon | 03-ch3 S1–S9 | GN 03 p.1 | projector |
 | W2 Tue | 03-ch3 S10–S14 | GN 03 p.2 | ramps, balls, cups |

@@ -1,3 +1,5 @@
+> ⚠️ **SUPERSEDED — Phase 7 (2026-10-04).** This file is retired. Canonical supply/prep is in `production/teacher-playbook/unit1-teacher-playbook.docx` + `docs/playbook/UNIT1_PACING_CALENDAR.md`. Chapter 2 is taught in **Week 1** (Wed 10/14 · Thu 10/15); Moving Marbles is **Friday FLEX**, not Tuesday. The day-of-week claims below are stale.
+
 # Chapter 2 Supply & Prep Guide
 
 > Class size / group count unresolved. Use **PER GROUP OF 4** and **CLASS TOTAL = GROUP_COUNT × amount**. Do not invent class totals.

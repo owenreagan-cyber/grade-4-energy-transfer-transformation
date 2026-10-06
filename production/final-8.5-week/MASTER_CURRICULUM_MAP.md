@@ -12,7 +12,7 @@
 
 | Week | Unit | Chapters | Anchor days | Flagship / assessment |
 |---|---|---|---|---|
-| 1 | U1 | Ch1–2 | Mon–Tue Ch1 · Thu Moving Marbles · Fri Ch1 quiz (Session 3) | — |
+| 1 | U1 | Ch1–2 | Mon–Tue Ch1 · Wed–Thu Ch2 · Fri Ch1 quiz (Session 3) | — |
 | 2 | U1 | Ch3 | Tue ramp build · Thu Ramp It Up! | FLAGSHIP LAB 1 |
 | 3 | U1 | Ch4–5 | Thu Crash Lab | — |
 | 4 | U1 | Ch6–7 | Thu engineering application | Unit 1 assessment (Fri) |
@@ -32,8 +32,8 @@
 |---|---|---|---|---|---|---|
 | Mon | Energy causes change (Ch1 Session 1) | `01-ch1` p.1 | `01-ch1` S1–3, S6–16 | none embedded | sharpener demo | RELEASED |
 | Tue | Forms & stored energy (Ch1 Session 2) | `01-ch1` p.2 | `01-ch1` S2, S17, S19–27 (S18 optional) | none embedded | write 5 forms examples | RELEASED |
-| Wed | Moving objects have energy | `02-ch2` p.1 | `02-ch2` S1–S13 | none embedded | — | RELEASED |
-| Thu | Moving Marbles investigation | `02-ch2` p.2 | `02-ch2` S14–S24 | none embedded | Moving Marbles mini-lab | RELEASED |
+| Wed | Moving objects have energy (Ch2 Session 1) | `02-ch2` p.1 + V2 line | `02-ch2` S1–S16 | none embedded | Marble Collision demo | FROZEN (v1.0) |
+| Thu | Ch2 Session 2 + quiz | `02-ch2` pp. 2–3 | `02-ch2` S2, S17–S25, S27 | none | Chapter 2 quiz. Moving Marbles is optional after the quiz | FROZEN (v1.0) |
 | Fri | Ch1 Session 3: recognize evidence + Chapter 1 QUIZ (9 items · 16 pts) | `01-ch1` p.3 | `01-ch1` S2, S28–31, S33 | none embedded | quiz · then catch-up / optional Energy Detectives | QUIZ (graded) |
 
 ## Monday — Energy causes change
@@ -53,16 +53,15 @@
 - **GN:** `01-ch1` p.2. **SLIDES:** `01-ch1` S2, S17, S19–S27 (S18 optional). **READER:** pp.3–5 (p. 6 = forward preview). **ACT:** N2 five-forms write.
 - **JOURNAL:** one stored-energy example. **FC:** stored-energy table check. **ABSENT:** `01-ch1` p.2. **STATUS:** RELEASED.
 
-## Wednesday — Moving objects have energy
-- **Unit/Ch:** U1 · Ch2 · **BQ:** How are energy, change, and movement of objects related? · **Objective:** all moving objects have energy of motion; a moving object can cause change.
-- **GN:** `production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx` p.1. **SLIDES:** `production/slides/02-ch2-moving-objects-have-energy-slides.pptx` S1–S13. **READER:** `Chapter_2_Moving_Objects_Have_Energy.pdf` pp.7–9.
-- **JOURNAL:** predict — will a moving marble move a cup? **FC:** fill-in "energy of motion." **ABSENT:** `02-ch2` p.1. **STATUS:** RELEASED.
+## Wednesday — Moving objects have energy (Ch2 Session 1 · 24 min)
+- **Unit/Ch:** U1 · Ch2 · **BQ:** How are energy, change, and movement of objects related? · **Objective:** a moving object can cause a change; motion; energy of motion. Authority: `docs/chapter-02/CH2_PACING_PLAN.md`.
+- **GN:** Chapter 2 Guided Notes p. 1 (BQ · V1 · N1) and the V2 line at the top of p. 2. Stop before N2. **SLIDES:** S1–S16. **READER:** pp. 7–9.
+- **DEMO:** Marble Collision (two identical marbles). Not a speed lab. **JOURNAL:** sketch the marbles before they touch. **ABSENT:** notes p. 1. **STATUS:** FROZEN (v1.0).
 
-## Thursday — Moving Marbles mini-investigation (Ch2)
-- **Unit/Ch:** U1 · Ch2 · **BQ:** What evidence shows a moving object has energy? · **Objective:** moving marble transfers energy to a cup (change = evidence); same-marble comparisons only.
-- **GN:** `02-ch2` p.2. **SLIDES:** `02-ch2` S14–S24. **READER:** pp.10–12.
-- **ACTIVITY:** `production/worksheets/02-ch2-moving-marbles-student.docx` (PRINT) + `production/labs/02-ch2-moving-marbles-teacher-spec.md` (TEACHER ONLY) + `production/answer-keys/02-ch2-moving-marbles-key.md` (KEY).
-- **JOURNAL:** before/after drawing. **FC:** observation table. **ABSENT:** partner data + `02-ch2` p.2. **STATUS:** RELEASED.
+## Thursday — Energy of motion, useful changes, and quiz (Ch2 Session 2 · 24 min)
+- **Unit/Ch:** U1 · Ch2 · **BQ:** How are energy, change, and movement of objects related? · **Objective:** moving objects have energy of motion; hammer, pendulum, and wind each cause a useful change. Quiz in students' hands at minute 12.
+- **GN:** notes pp. 2–3 (N2 · N3 · CHECK · BQ now). **SLIDES:** S2, S17–S25, S27 (S26 optional). **READER:** pp. 9–12.
+- **QUIZ:** 8 items · 12 pts · raw score + %. **JOURNAL:** one useful change from the Reader. Moving Marbles is optional after the quiz, not this lesson. **ABSENT:** notes pp. 2–3 + the quiz when they return. **STATUS:** FROZEN (v1.0).
 
 ## Friday — Ch1 Session 3, then FLEX
 - **Ch1 Session 3 (25 min, `docs/chapter-01/CH1_PACING_PLAN.md`):** notes p.3 N4 recognition, then the Chapter 1 quiz (16 pts, raw score + %). The quiz is handed out by minute 12; if time is lost, priority is N4 > BQ NOW I THINK > CHECK (CHECK may finish at home / catch-up). Remaining time and Week-1 catch-up: FLEX options in `production/friday-flex/FRIDAY_FLEX_BANK.md` (Detectives optional, ungraded). **STATUS:** QUIZ (graded) + FLEX.

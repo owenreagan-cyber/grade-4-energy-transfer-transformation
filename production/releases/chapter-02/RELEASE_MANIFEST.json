@@ -1,0 +1,125 @@
+{
+  "chapter": 2,
+  "version": "1.0",
+  "status": "FROZEN",
+  "builder": "tools/build_ch2_release.py",
+  "files": [
+    {
+      "name": "02-ch2-moving-objects-have-energy-guided-notes.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.pdf"
+      ],
+      "source_sha256": [
+        "4205b1df3a053979ce4fb14145ba2d864ac0da12c6a46caa8f56daf732ffb9c9"
+      ],
+      "sha256": "4205b1df3a053979ce4fb14145ba2d864ac0da12c6a46caa8f56daf732ffb9c9"
+    },
+    {
+      "name": "02-ch2-moving-objects-have-energy-guided-notes-key.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes-key.pdf"
+      ],
+      "source_sha256": [
+        "4db7f27de3e76fc44f73aa936c3fd63b0fd52497e6cc692138dc993bac253f0e"
+      ],
+      "sha256": "4db7f27de3e76fc44f73aa936c3fd63b0fd52497e6cc692138dc993bac253f0e"
+    },
+    {
+      "name": "02-ch2-moving-objects-have-energy-slides.pptx",
+      "kind": "copy",
+      "sources": [
+        "production/slides/02-ch2-moving-objects-have-energy-slides.pptx"
+      ],
+      "source_sha256": [
+        "8a29faf3f55a0f23cb3937a01e8e013b6203dc31768b747abae7dc4a16aeba17"
+      ],
+      "sha256": "8a29faf3f55a0f23cb3937a01e8e013b6203dc31768b747abae7dc4a16aeba17"
+    },
+    {
+      "name": "02-ch2-moving-objects-have-energy-slides.pdf",
+      "kind": "copy",
+      "sources": [
+        "production/slides/02-ch2-moving-objects-have-energy-slides.pdf"
+      ],
+      "source_sha256": [
+        "885327756b245cee1d80d9ca3b3c58fcb8e8930fdc216b3989898d2c77ca16de"
+      ],
+      "sha256": "885327756b245cee1d80d9ca3b3c58fcb8e8930fdc216b3989898d2c77ca16de"
+    },
+    {
+      "name": "02-ch2-moving-objects-have-energy-practice.pdf",
+      "kind": "derived",
+      "sources": [
+        "production/worksheets/02-ch2-moving-objects-have-energy-practice.docx"
+      ],
+      "source_sha256": [
+        "ae49af28c65b5db6fd74c6a31eccb33b9e99a7f2523effad1de22a89d577d6aa"
+      ],
+      "sha256": "d7790274397289da06ba3a5fbb7bce9c39cf3243cb482ffecf16a4699446cf38"
+    },
+    {
+      "name": "02-ch2-moving-objects-have-energy-quiz.pdf",
+      "kind": "derived",
+      "sources": [
+        "production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx"
+      ],
+      "source_sha256": [
+        "3f2c36c4fae68bac15984990f4a4fe52e16108c2a29b888ec42c5e15afa77bf6"
+      ],
+      "sha256": "cfe4edf7249b6203f08f6a5d501db76b119229b2fd57c389ae59df1371eed0d5"
+    },
+    {
+      "name": "02-ch2-moving-marbles-student.pdf",
+      "kind": "derived",
+      "sources": [
+        "production/worksheets/02-ch2-moving-marbles-student.docx"
+      ],
+      "source_sha256": [
+        "dfa76857e5ba21784f8afaa4ce5b21fae345829f5fed5481872e3889e1fd8df8"
+      ],
+      "sha256": "edb60f9ef5e0cb8b189e0def3edaa90d89618a814e7e6e065ab4fb27272eda92"
+    },
+    {
+      "name": "02-ch2-friday-flex.pdf",
+      "kind": "derived",
+      "sources": [
+        "production/worksheets/02-ch2-friday-flex.docx"
+      ],
+      "source_sha256": [
+        "6e69325e1470beea8bf38ae4dcebbb6d84a1248405ff91dfc7b465833c16f42c"
+      ],
+      "sha256": "22d5794a0b3fa6f312c3b096db4efe853702dc83bad6d234700343b67c77c485"
+    },
+    {
+      "name": "02-ch2-absent-student-recovery.pdf",
+      "kind": "derived",
+      "sources": [
+        "production/worksheets/02-ch2-absent-student-recovery.docx"
+      ],
+      "source_sha256": [
+        "ce78447e9b51d0650f52db54c35ee3f84fea92f7f340e0daae9b754480227493"
+      ],
+      "sha256": "c9d7378be18076866deed6e4abcb79be5bdfd5bc9aa64f7d33e65afde386b357"
+    },
+    {
+      "name": "02-ch2-moving-objects-have-energy-teacher-key.pdf",
+      "kind": "derived",
+      "sources": [
+        "production/answer-keys/02-ch2-moving-objects-have-energy-quiz-key.md",
+        "production/answer-keys/02-ch2-moving-objects-have-energy-practice-key.md",
+        "production/answer-keys/02-ch2-moving-marbles-key.md",
+        "production/answer-keys/02-ch2-friday-flex-key.md"
+      ],
+      "source_sha256": [
+        "4d4037b8842466d9f5d1408cb61c63897af8e394d25902501408332c89d2f8cd",
+        "30a5a172a03c0a7038da489961683579cd5e99f3c7d53a18ba0578247d4fa0f5",
+        "14be14b8dfa9012281cb43f0657cab3987a4fc5c795b05ab68bb4ab02371dc2b",
+        "487040075ae8fc557f72b4d33378c25ba84ded8239d4df145459457abc37d771"
+      ],
+      "sha256": "541d37a59af591a191ce7de56025e1b01d5652bf4deaf762f8dc33fd4e4d2eeb"
+    }
+  ],
+  "retired_to": "production/archive/retired/chapter-02-pre-7.1/"
+}

@@ -21,10 +21,10 @@
 
 | Filename | Lesson/day | Tier | Runtime | Orientation | Discussion after? | Replaces or supplements? | Offline path |
 |---|---|---|---|---|---|---|---|
-| `Things_on_the_Move.mp4` | W2 Mon (if time) | SUPPORT | 7:21 | landscape | Yes | supplements hook | `assets/supplemental/media/chapter-02/` |
-| `Moving_Objects_Have_Energy.mp4` | W2 Mon/Wed | CORE | 4:50 | landscape | Yes | supplements instruction | `assets/supplemental/media/chapter-02/` |
-| `Marble_Collisions__Investigating_Motion_Energy.mp4` | W2 Tue lab | CORE | 5:59 | landscape | brief | **replaces part of** Moving Marbles directions | `assets/supplemental/media/chapter-02/` |
-| `Chapter_2_Interactive_Notebook.mp4` | W2 notebook | SUPPORT | 6:42 | landscape | optional | supplements (skip if teacher models live) | `assets/supplemental/media/chapter-02/` |
+| `Things_on_the_Move.mp4` | W1 Wed, if time | SUPPORT | 7:21 | landscape | Yes | optional support for Session 1 | `assets/supplemental/media/chapter-02/` |
+| `Moving_Objects_Have_Energy.mp4` | W1 Wed | SUPPORT | 4:50 | landscape | Yes | optional support for Session 1 | `assets/supplemental/media/chapter-02/` |
+| `Marble_Collisions__Investigating_Motion_Energy.mp4` | W1 Wed demo | SUPPORT | 5:59 | landscape | brief | Wednesday Session 1 demo support. Moving Marbles itself is optional after the quiz | `assets/supplemental/media/chapter-02/` |
+| `Chapter_2_Interactive_Notebook.mp4` | retired | RETIRED | 6:42 | landscape | no | Notebook is retired. Do not use. | `assets/supplemental/media/chapter-02/` |
 
 **Pause points:** Moving Objects Have Energy — pause after "moving object causes change" to collect student examples. Marble Collisions — pause after setup to confirm identical-marble control.
 **Load rule:** do NOT show `Things_on_the_Move` and `Moving_Objects_Have_Energy` in full in the same lesson.

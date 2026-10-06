@@ -1,5 +1,7 @@
 # Slideshow Outline — Chapter 2: Moving Objects Have Energy
 
+> **SUPERSEDED — DO NOT USE.** Replaced by Phase 7.4 Chapter 2 gold-standard sources: `tools/build_ch2_slides.py` and `production/slides/02-ch2-moving-objects-have-energy-slides.pptx`.
+
 > **Source package for NotebookLM.** 16:9 · order matches `production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx`.
 >
 > **Typography:** major title 50 pt · slide title 42 pt · student text 32 pt · diagram labels 28 pt.

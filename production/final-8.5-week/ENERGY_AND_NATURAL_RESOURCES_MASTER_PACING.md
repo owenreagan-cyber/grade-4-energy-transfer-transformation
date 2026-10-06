@@ -28,21 +28,20 @@ Legend for per-day rows: **BQ** = Big Question · **GN** = Guided Notes · **Sli
 - **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
 - **Absent:** `01-ch1` p.2.
 
-### Wed — Moving objects have energy
+### Wed — Moving objects have energy (Ch2 Session 1 · 24 min)
 - **Unit/Ch:** U1 · Ch2 · **BQ:** How are energy, change, and movement of objects related?
-- **Essential:** all moving objects have energy of motion; a moving object can cause change.
-- **GN:** `02-ch2` p.1 · **Slides:** `02-ch2` S1–S13 · **Reader:** pp.7–9 · **Act:** none
-- **J:** predict — will a moving marble move a cup? **FC:** fill-in "energy of motion."
-- **Materials:** projector · **Prep:** queue deck · **Cleanup:** none · **Type:** CORE · **Time:** 25–30
-- **Absent:** `02-ch2` p.1.
+- **Essential:** motion; a moving object can cause a change; energy of motion.
+- **GN:** notes p. 1 and the V2 line · **Slides:** 1–16 · **Reader:** pp. 7–9 · **Act:** Marble Collision demo
+- **J:** sketch the marbles before they touch. **Materials:** two identical marbles · **Type:** CORE
+- **Absent:** notes p. 1.
 
-### Thu — Moving Marbles mini-investigation (Ch2)
-- **Unit/Ch:** U1 · Ch2 · **BQ:** What evidence shows a moving object has energy?
-- **Essential:** moving marble transfers energy to a cup (change = evidence). Same-marble comparisons only.
-- **GN:** `02-ch2` p.2 · **Slides:** `02-ch2` S14–S24 · **Reader:** pp.10–12 · **Act:** Moving Marbles mini-lab
-- **J:** before/after drawing. **FC:** observation table.
-- **Materials:** marbles, cups, meter stick · **Prep:** set stations · **Cleanup:** collect · **Type:** CORE · **Time:** 25–30
-- **Absent:** partner data + `02-ch2` p.2.
+### Thu — Energy of motion and quiz (Ch2 Session 2 · 24 min)
+- **Unit/Ch:** U1 · Ch2 · **BQ:** How are energy, change, and movement of objects related?
+- **Essential:** moving objects have energy of motion; hammer, pendulum, and wind cause a useful change. Quiz in hands at minute 12.
+- **GN:** notes pp. 2–3 · **Slides:** 2, 17–25, 27 · **Reader:** pp. 9–12 · **Act:** Chapter 2 quiz (8 items · 12 pts)
+- **Moving Marbles:** optional after the quiz. Not this lesson and not Friday.
+- **Materials:** quiz copies · **Type:** CORE
+- **Absent:** notes pp. 2–3 and the quiz when the student returns.
 
 ### Fri — Ch1 Session 3 (notes p.3 + Chapter 1 quiz), then FLEX
 - **Act:** `01-ch1` S2, S28–31, S33, then the quiz (16 pts, raw score + %; handed out by minute 12 — if time is lost: N4 > BQ > CHECK, CHECK finishes at home); leftover time = FLEX (Charades · journal drawing · optional Detectives)

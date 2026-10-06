@@ -18,17 +18,17 @@ Optional: Energy Detectives (ungraded), Friday FLEX options, review game slides 
 
 ---
 
-## WEEK 2 — Chapter 2: Moving Objects Have Energy
+## Chapter 2 — Moving Objects Have Energy (calendar Week 1 · Wed 10/14 · Thu 10/15)
 **Essential question:** How are energy, change, and movement of objects related?
-**Reader:** pp. 7–12 · **TG:** Lesson 3 · **Deck:** 24 slides · **Notebook:** 3 inserts
+**Reader:** pp. 7–12 · **TG:** Lesson 3 · **Deck:** 37 slides · **Notes:** Guided Notes, 3 pages
+**Authority:** `docs/chapter-02/CH2_PACING_PLAN.md`. This chapter is not a separate Week 2. Calendar Week 2 is Chapter 3. Friday 10/16 is Chapter 1.
 
-| Day | Objective | Reader | Lab/activity | Notebook | Slides | Media | Assessment | Timing |
-|---|---|---|---|---|---|---|---|---|
-| Mon | A moving object has energy of motion | pp.7–8 | Marble bump demo | Insert 1 | 1–8 | Moving Objects Have Energy (CORE) | exit | 45 min |
-| Tue | Moving Marbles investigation | — | Moving Marbles (identical-marble control) | — | lab slide | Marble Collisions preview (CORE) | lab page | 45 min |
-| Wed | Reader + energy of motion | pp.9–12 | — | Insert 2 | reader slides | Things on the Move (SUPPORT, if time) | notes | 45 min |
-| Thu | Apply + model + synthesize | — | unfamiliar examples | Insert 3 | model slides | Chapter 2 Notebook (SUPPORT) | exit | 45 min |
-| Fri | Flex | — | — | finish inserts | — | — | — | flex |
+| Session | Day | Objective | Reader | Notes | Slides | Assessment | Timing |
+|---|---|---|---|---|---|---|---|
+| 1 | Wed 10/14 | Motion; a moving object can cause a change; energy of motion | pp. 7–9 | p. 1 (BQ · V1 · N1) and V2 at the top of p. 2 | 1–16 | notes, not graded | 24 min + 6 buffer |
+| 2 | Thu 10/15 | Energy of motion causes a change; three useful changes; quiz | pp. 9–12 | pp. 2–3 (N2 · N3 · CHECK · BQ) | 2, 17–25, 27 + quiz | Quiz 8 items · 12 pts · raw + % | 24 min (quiz in hands at minute 12; full 12 minutes) |
+
+Optional after the quiz: Moving Marbles, review slides 28–37. Not Week 1 Friday.
 
 ---
 

@@ -1,9 +1,9 @@
 # Lab Teacher Spec — Moving Marbles
 
-- **Lab #:** Chapter 2 core investigation (Lab 2 of the 8-lab backbone)
+- **Lab #:** Chapter 2 optional investigation (formerly Lab 2 of the 8-lab backbone; RECLASSIFIED Phase 7)
 - **Title:** Moving Marbles
-- **Chapter/week:** Chapter 2 · Week 1 (Thu)
-- **Tag:** CORE
+- **Chapter/week:** Chapter 2 · optional enrichment after the Thursday quiz (not Week 1 Friday)
+- **Tag:** OPTIONAL/FLEX
 - **Question:** How does a moving marble provide evidence that it has energy?
 - **Concept:** a moving object has energy of motion because it can cause change
 - **Time:** ~25–30 min (setup + trials + debrief)
@@ -66,10 +66,11 @@
 - What was moving before contact?
 - What changed after contact?
 - How does the target's change provide evidence that the moving marble had energy?
-- Is "the marble had energy" an observation or an inference?
+- The change is the evidence that the moving marble had energy.
 
 ## Absent recovery
 - `curriculum/chapter-02/student/recovery/02-ch2-absent-student-recovery.md`
 
 ## Source/provenance
 - **ADAPTED** from AP 3.1 (On the Move) + TG L3 marble demonstration. The old draft lab's speed/marble-type variation was **dropped** (those are Ch.3/Ch.5 variables).
+- **Reclassified:** OPTIONAL — the core concept is taught live on Wednesday in the Marble Collision demonstration, so this page is an optional extension after the Thursday quiz. It is not Thursday's lesson and it is not Week 1 Friday (that day is Chapter 1).

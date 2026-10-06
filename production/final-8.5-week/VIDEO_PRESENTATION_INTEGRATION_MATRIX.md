@@ -30,8 +30,8 @@
 | Why Still Objects Secretly Have Energy | 1 | Ch1 | bell-ringer | 1:16 | FLEX | OPTIONAL EXTERNAL | UNSTAGED raw short. |
 | Chapter 1 Review | 1 | Ch1 | Wk 1 Fri | 7:17 | SUPPORT/FLEX | OPTIONAL EXTERNAL | UNSTAGED raw; absent-recovery use only. |
 | Things on the Move | 1 | Ch2 | Wk 1 Wed | 7:21 | SUPPORT | OPTIONAL EXTERNAL | UNSTAGED raw. |
-| Moving Objects Have Energy | 1 | Ch2 | Wk 1 Wed | 4:50 | CORE (staged) | OPTIONAL EXTERNAL | UNSTAGED raw. |
-| Marble Collisions: Investigating Motion Energy | 1 | Ch2 | Wk 1 Thu | 5:59 | CORE (staged) | OPTIONAL EXTERNAL | UNSTAGED raw. |
+| Moving Objects Have Energy | 1 | Ch2 | Wk 1 Wed | 4:50 | SUPPORT / optional | OPTIONAL EXTERNAL | Session 1 is already full. This video is support, not core. |
+| Marble Collisions: Investigating Motion Energy | 1 | Ch2 | Wk 1 Wed Session 1 | 5:59 | SUPPORT | OPTIONAL EXTERNAL | Demo support only. Moving Marbles is optional after the quiz. |
 | Chapter 2 Interactive Notebook | 1 | Ch2 | notebook | 6:42 | SUPPORT | **NOT NEEDED** | Retired INB walkthrough. |
 | Ch3–7 slots (scripts only) | 1 | Ch3–7 | various | ≤5:00 target | CORE/SUPPORT/FLEX | **PENDING VIDEO** | No binary; scripts only (`curriculum/chapter-0X/media/*-script.md`). |
 

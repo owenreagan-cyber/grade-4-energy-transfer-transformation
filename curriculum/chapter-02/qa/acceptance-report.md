@@ -1,3 +1,5 @@
+> ⚠️ **SUPERSEDED — Phase 7 (2026-10-04).** This file is retired. Chapter 2 was rebuilt in Phase 7 (37-slide deck, 3-page guided notes, Week 1 pacing). Current QA: `qa/reports/PHASE_7_CH2_*` + `docs/chapter-02/CH2_GOLD_STANDARD_FREEZE.md`. The "22 slides" / Week 2 / RELEASED-status claims below are stale.
+
 # Final Acceptance Report — Chapter 2
 
 > 8-gate QA. Any FAIL blocks release.

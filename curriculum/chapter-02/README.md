@@ -1,3 +1,5 @@
+> ⚠️ **SUPERSEDED — Phase 7 (2026-10-04).** This file is retired. Canonical Chapter 2 record: `docs/chapter-02/CH2_PACKAGE_MANIFEST.md` + `docs/chapter-02/CH2_SOURCE_MAP.md`. Canonical artifacts: `production/premium-notes/`, `production/slides/`, `production/teacher-playbook/`. Chapter 2 is taught in **Week 1** (Wed 10/14 · Thu 10/15) per `docs/playbook/UNIT1_PACING_CALENDAR.md`. Schedule, slide-count, and RELEASED-status claims below are stale.
+
 # Chapter 02 — Moving Objects Have Energy
 
 ## Identity

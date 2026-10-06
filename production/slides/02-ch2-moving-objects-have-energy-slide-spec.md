@@ -1,5 +1,7 @@
 # Slide Deck Spec — Chapter 2: Moving Objects Have Energy
 
+> **SUPERSEDED — DO NOT USE.** Replaced by Phase 7.4 Chapter 2 gold-standard sources: `tools/build_ch2_slides.py` and `production/slides/02-ch2-moving-objects-have-energy-slides.pptx`.
+
 - **Deck role:** TEACHING (with clearly-marked lab slides)
 - **Aligned Big Question:** How are energy, change, and movement of objects related?
 - **Total slides:** 24 (22 instructional + 2 notes cue slides)

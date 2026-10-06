@@ -14,8 +14,8 @@
 | Mon | U1 Ch1 | GN | `production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx` | — | CORE |
 | Mon | U1 Ch1 | SL | `production/slides/01-ch1-energy-causes-change-slides.pptx` S1–3, S6–16 (S4–5 optional) | none | CORE |
 | Tue | U1 Ch1 | GN/SL | `01-ch1` p.2 · `01-ch1` S2, S17, S19–27 (S18 optional) · Reader pp.3–5 | none | CORE |
-| Wed | U1 Ch2 | MAP/GN/SL | `02-ch2` p.1 · `02-ch2` S1–S13 · Reader pp.7–9 | none | CORE |
-| Thu | U1 Ch1–2 | LAB | `production/worksheets/02-ch2-moving-marbles-student.docx` + `production/labs/02-ch2-moving-marbles-teacher-spec.md` + `production/answer-keys/02-ch2-moving-marbles-key.md` | none | CORE |
+| Wed | U1 Ch2 | GN/SL | Chapter 2 notes p. 1 and the V2 line · slides 1–16 · Reader pp. 7–9 | none | CORE |
+| Thu | U1 Ch2 | GN/SL + QUIZ | Chapter 2 notes pp. 2–3 · slides 2, 17–25, 27 · quiz at minute 12. Moving Marbles is optional after the quiz, not this lesson | none | CORE |
 | Fri | U1 Ch1 | QUIZ + FLEX | `01-ch1` p.3 · `01-ch1` S2, S28–31, S33 · Ch1 quiz (16 pts) · then `production/friday-flex/FRIDAY_FLEX_BANK.md` (Charades · optional Detectives) | — | QUIZ / FLEX |
 
 ## WEEK 2 — Unit 1 Ch3

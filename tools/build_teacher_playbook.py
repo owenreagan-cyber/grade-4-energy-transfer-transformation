@@ -270,7 +270,7 @@ def cover(doc):
     _run(bp, "TEACHER PLAYBOOK", size=10, bold=True, color=WHITE)
 
     _para(doc, "", after=30)
-    callout(doc, "SCOPE", "Phase 5 — Chapter 1 supporting-resource ecosystem complete. Guided Notes + Slideshow are FINAL (Phases 3–4); practice/application, chapter quiz, absent-recovery, and FLEX Energy Detectives are retained; study-guide contribution + assessment trace are recorded. Chapters 2–7 spreads and special sections remain PLANNED placeholders pending later phases.", accent_hex="#1F2A5A")
+    callout(doc, "SCOPE", "Chapters 1–2 are classroom-ready: guided notes, slideshow, practice/application, chapter quiz, absent-student recovery and FLEX options are included for each. Chapters 3–7 spreads and special sections are placeholders in this edition.", accent_hex="#0F5A5C")
     _para(doc, "", after=10)
     callout(doc, "AUTHORITY", "Authoritative curriculum = CKSci Student Reader + Teacher Guide. This playbook documents the final system; it does not drive curriculum decisions.", accent_hex="#1F2A5A")
 
@@ -294,18 +294,18 @@ def unit_at_a_glance(doc):
 
 def pacing(doc):
     section_heading(doc, "Dated Pacing Calendar — Weeks 1–4")
-    _para(doc, "30-minute blocks · M–Th core + Friday FLEX. Chapter 1 follows the Chapter 1 Pacing Plan (the one authoritative Ch1 timing system: Mon · Tue · Fri). Rows for Chapters 2–7 keep their own block labels until their own phases.", size=9.5, italic=True, color=INK_SOFT, after=20)
+    _para(doc, "30-minute blocks · M–Th core + Friday FLEX. Chapter 1 follows the Chapter 1 Pacing Plan (Mon · Tue · Fri). Chapter 2 follows the Chapter 2 Pacing Plan (Wed · Thu). Rows for Chapters 3–7 keep their own block labels until their own phases.", size=9.5, italic=True, color=INK_SOFT, after=20)
 
     weeks = [
         ("WEEK 1 · 10/12–10/16 · Chapters 1–2", [
             ["Mon 10/12", "Ch1 Session 1 — Observe & Name (24.5 min)", "1–2", "Notes p. 1: BQ · V1 · N1", "Sharpener DEMO", "notes (not graded)"],
             ["Tue 10/13", "Ch1 Session 2 — Forms & Stored Energy (24.5 min)", "3–5", "Notes p. 2: N2 · V2 · N3", "Rubber-band stretch (optional)", "notes (not graded)"],
-            ["Wed 10/14", "Ch2 Block 1", "7–9", "Key Words · Model It · Draw/Label", "Marble Collision DEMO", "exit ticket"],
-            ["Thu 10/15", "Ch2 Block 2", "10–12", "Before/After · Example/Non-example", "—", "exit ticket"],
+            ["Wed 10/14", "Ch2 Session 1 — Motion and Cause (24 min)", "7–9", "Notes p. 1: BQ · V1 · N1, then V2", "Marble Collision DEMO", "notes (not graded)"],
+            ["Thu 10/15", "Ch2 Session 2 — Energy of Motion, Use & Quiz (24 min)", "9–12", "Notes p. 2–3: N2 · N3 · CHECK · BQ now", "Chapter 2 quiz (8 items, in hands at minute 12)", "QUIZ — GRADED (12 pts)"],
             ["Fri 10/16", "Ch1 Session 3 — Recognize, Reflect & QUIZ (25 min) · FLEX-day consolidation, no new vocabulary", "1–5", "Notes p. 3: N4 · CHECK · BQ now", "Chapter 1 quiz (9 items)", "QUIZ — GRADED (16 pts)"],
         ]),
         ("WEEK 2 · 10/19–10/23 · Chapter 3 + Ramp It Up 2.0", [
-            ["Mon 10/19", "Ch3 Block 1", "13–14", "Key Words · Model It", "Ramp + Target Preview DEMO", "exit ticket"],
+            ["Mon 10/19", "Ch3 placeholder — speed relationship", "13–14", "Key words · same-object speed", "Ramp + Target Preview DEMO", "exit ticket"],
             ["Tue 10/20", "Ramp It Up 2.0 — Day 1", "13–14", "Data table (lab)", "LAB: calibration · 3 heights × 3 trials · cm", "lab sheet (formative)"],
             ["Wed 10/21", "Ramp It Up 2.0 — Day 2", "13–14", "Graph: Ramp Height vs Avg Cup Displacement", "LAB: averages · graph · Design-Your-Ramp", "lab + graph (formative)"],
             ["Thu 10/22", "Ch3 synthesis", "15–16", "Conclusion · Fair Test", "evidence-based conclusion", "exit ticket"],
@@ -363,16 +363,16 @@ def how_slides_notes_work(doc):
             ["Notes navigation (permanent)", "BQ / V1 / V2 / N1 / N2 / N3 / N4 — distinct from temporary HUD action bubbles."],
         ],
         [Inches(1.6), Inches(5.4)], size=9.5, first_bold=True)
-    callout(doc, "STATUS", "Chapter 1 Guided Notes are FINAL (AVAILABLE). Chapters 2–7 notes and all slide decks are being rebuilt in Phases 3–4 (add per-section Reader page refs, chapter badge, full-screen vocab cards, canonical slide sequence). Chapter 1 spread references are real; Chapters 2–7 spread references remain PLANNED placeholders until then.", accent_hex="#1F2A5A")
+    callout(doc, "STATUS", "Chapter 1 Guided Notes and slideshow are FINAL. Chapter 2 is a Phase 7.3 remediation candidate and is not frozen. Chapters 3–7 notes and slide decks are still placeholders.", accent_hex="#0F5A5C")
 
 def resource_map(doc):
     section_heading(doc, "Resource Map")
     data_table(doc, ["Resource", "Audience", "Required", "Graded", "Status", "Teacher key"],
         [
-            ["Guided Notes (Ch1–7)", "Student", "CORE", "No (formative)", "Ch1 AVAILABLE/FINAL · Ch2–7 PLANNED", "Ch1 AVAILABLE · Ch2–7 PLANNED"],
+            ["Guided Notes (Ch1–7)", "Student", "CORE", "No (formative)", "Ch1 FINAL · Ch2 candidate · Ch3–7 PLANNED", "Ch1 AVAILABLE · Ch2 candidate · Ch3–7 PLANNED"],
             ["Science Journal prompts", "Student", "CORE", "No", "AVAILABLE", "—"],
             ["Chapter practice/application", "Student", "CORE", "No (practice)", "AVAILABLE", "AVAILABLE"],
-            ["Chapter quiz (Ch1)", "Student", "CORE", "Formative (graded)", "Ch1 AVAILABLE (9-item)", "AVAILABLE"],
+            ["Chapter quiz (Ch1–2)", "Student", "CORE", "GRADED (raw + %)", "Ch1 (9) · Ch2 (8) AVAILABLE", "AVAILABLE"],
             ["Energy Detectives (Ch1)", "Student", "OPTIONAL", "No (no points)", "AVAILABLE", "look-fors"],
             ["Ramp It Up 2.0", "Student (lab)", "CORE", "Formative", "ADAPT — PLANNED", "PLANNED"],
             ["Pom-Pom Launcher", "Student (build)", "REQUIRED BUILD", "Formative", "PLANNED (net-new)", "PLANNED"],
@@ -411,7 +411,7 @@ def materials(doc):
         [
             ["Reusable classroom", "Plastic ramp (or ruler + books) · toy car · plastic target cup · identical glass marbles · meter stick/ruler · shallow sand tray · thermometer · low-voltage battery circuit (LED/bulb/buzzer/motor) · flashlight · stopwatch/timer"],
             ["Consumables", "Index cards (vocab deck) · masking tape · craft kit (string, bells, cups, cardboard, rubber bands — latex-free) · warm water (heat demo) · sand"],
-            ["Chapter demos", "Electric pencil sharpener + pencil (Ch1) · marbles + cup (Ch2) · ramp + marble + cup (Ch3) · cup/balloon/salt + flashlight + warm water + thermometer + AA/AAA circuit (Ch4) · toy car + cup (Ch5) · wind-up timer (Ch6) · flashlight (Ch7)"],
+            ["Chapter demos", "Electric pencil sharpener + pencil (Ch1) · two identical marbles (Ch2) · ramp + marble + cup (Ch3) · cup/balloon/salt + flashlight + warm water + thermometer + AA/AAA circuit (Ch4) · toy car + cup (Ch5) · wind-up timer (Ch6) · flashlight (Ch7)"],
             ["Ramp It Up 2.0", "Standardized track (28×6 in, 1-in rails) · 3 identical books · same marble · lightweight target cup · printed 0–50 cm strip · ruler + tape · role cards (Launcher / Target Manager / Measurer / Recorder)"],
             ["Pom-Pom Launcher", "Craft kit: cardboard tube, rubber bands (latex-free option), pom-poms, tape · safety note: pieces to adult if band breaks"],
             ["Optional / FLEX", "Newton's cradle (teacher demo only) · solar cell (optional) · Energy Detectives scavenger hunt items · Drop It supplies"],
@@ -607,6 +607,10 @@ def answer_key_architecture(doc):
             ["Ch1 practice key", "01-ch1-energy-causes-change-practice-key", "AVAILABLE"],
             ["Ch1 quiz key", "01-ch1-energy-causes-change-quiz-key", "AVAILABLE"],
             ["Ch1 guided-notes key", "01-ch1-energy-causes-change-guided-notes-key", "AVAILABLE (FINAL · 3 pp)"],
+            ["Ch2 guided-notes key", "Chapter 2 Guided Notes key", "AVAILABLE (candidate · 3 pp)"],
+            ["Ch2 quiz key", "Chapter 2 quiz key", "AVAILABLE (candidate · 12 pts)"],
+            ["Ch2 practice key", "Chapter 2 practice key", "AVAILABLE (ungraded)"],
+            ["Ch2 Moving Marbles key", "Moving Marbles key", "AVAILABLE (optional, after the quiz)"],
             ["Ch1 Energy Detectives key", "01-ch1-energy-detectives-key", "AVAILABLE (OPTIONAL/FLEX)"],
             ["Ramp It Up 2.0 key", "03-ch3-ramp-it-up (ADAPT)", "PLANNED / NOT YET GENERATED (update existing)"],
             ["Pom-Pom Launcher key", "net-new build", "PLANNED / NOT YET GENERATED"],
@@ -626,15 +630,15 @@ def special_sections(doc):
             ["Unit 1 assessment administration", "SKELETON · locked 25Q/50pt", "production/quizzes/07-unit-final-assessment.docx"],
             ["Answer-key index", "RENDERED", "see Answer-Key Architecture"],
             ["FLEX / enrichment / catch-up", "SKELETON · points to framework", "docs/planning/FRIDAY_FLEX_FRAMEWORK.md"],
-            ["Absent / makeup support", "Ch1 AVAILABLE · Ch2–7 SKELETON", "curriculum/chapter-0N/student/recovery/"],
+            ["Absent / makeup support", "Ch1–2 AVAILABLE · Ch3–7 SKELETON", "curriculum/chapter-0N/student/recovery/"],
             ["Media index", "SKELETON · Ch1–2 staged · Ch3–7 scripts-only", "docs/planning/WHOLE_UNIT_MEDIA_STAGING.md"],
         ],
         [Inches(2.0), Inches(2.2), Inches(2.8)], size=9, first_bold=True)
 
 def chapter_placeholders(doc):
-    section_heading(doc, "Chapters 2–7 — Spread Placeholders")
-    _para(doc, "Each chapter will use the reusable spread template (LEFT Teach It / RIGHT Teacher Support). Populated in later phases.", size=9.5, italic=True, color=INK_SOFT, after=20)
-    for n in range(2, 8):
+    section_heading(doc, "Chapters 3–7 — Spread Placeholders")
+    _para(doc, "Chapter 2 is already in this playbook. These rows are placeholders for later chapters only.", size=9.5, italic=True, color=INK_SOFT, after=20)
+    for n in range(3, 8):
         c = CHAPTERS[n]
         chapter_tab(doc, n, c["title"], c["primary"])
         _para(doc, "", after=4)
@@ -642,6 +646,109 @@ def chapter_placeholders(doc):
             [[(" · ".join(c["bq"]))[:200], c["reader"], c["demo"], ", ".join(c["vocab"])]],
             [Inches(2.9), Inches(0.75), Inches(1.55), Inches(1.8)], size=9, first_bold=False)
         _para(doc, "", after=14)
+
+def chapter2_spread(doc):
+    c = CHAPTERS[2]
+    section_heading(doc, "Chapter 2 — Teacher Spread", color=C(c["primary"]))
+    chapter_tab(doc, 2, c["title"], c["primary"])
+    _para(doc, "", after=10)
+
+    # LEFT — TEACH IT
+    title_band(doc, "LEFT PAGE — TEACH IT", color_hex=c["primary"], size=12)
+    data_table(doc, ["Field", "Content"],
+        [
+            ["Big Question", "How are energy, change, and movement of objects related? (TG Lesson 3)"],
+            ["Reader pages", "Printed 7–12 · PDF 13–18 (motion p.7 · moving objects cause changes p.8 · energy of motion p.9 · people use the energy of motion pp.10–12)"],
+            ["Approximate time", "Two sessions: Wed 24 min · Thu 24 min (quiz in hands at minute 12, full 12 minutes). Authority: Chapter 2 Pacing Plan. Friday 10/16 is Chapter 1."],
+            ["Student resources", "Guided Notes (3 pp) · quiz (8 items, 12 pts) · practice (ungraded take-home) · Moving Marbles (optional, after the quiz)"],
+            ["Vocabulary / V-groups", "V1: motion (Reader p. 7) · V2: energy of motion (Reader p. 9). evidence + position = Language of Instruction (no Reader page) → concept blanks in N1/N2."],
+            ["N-anchor map", "N1 Moving Objects Can Cause Changes (Reader p.8) · N2 Moving Objects Have Energy (MOVING OBJECT → CHANGE → EVIDENCE + Marble Collision OBSERVE box) · N3 People Use the Energy of Motion (hammer/pendulum/wind table) · CHECK Your Thinking · BQ · NOW I THINK"],
+            ["Session 1 · Wed (slides 1–16)", "BQ, marble DEMO, V1, N1, then V2. Notes p. 1 and the V2 line. Stop before N2."],
+            ["Session 2 · Thu (slides 2, 17–25, 27 + quiz)", "30-second marble recall, then N2 draw, N3, CHECK, BQ, then the quiz at minute 12. Slide 26 is optional. Notes pp. 2–3."],
+            ["What to project", "Slideshow. Session 1 = 1–16. Session 2 = 2, 17–25, 27. Optional: 26, 28–37."],
+        ],
+        [Inches(1.6), Inches(5.4)], size=9, first_bold=True)
+    _page_break(doc)
+
+    # RIGHT — TEACHER SUPPORT
+    title_band(doc, "RIGHT PAGE — TEACHER SUPPORT", color_hex=c["primary"], size=12)
+    data_table(doc, ["Field", "Content"],
+        [
+            ["Demo / activity", "Marble Collision (live demo on Wednesday). Moving Marbles is an optional extension after Thursday's quiz. It is not Friday."],
+            ["Materials", "Two identical marbles · a smooth track/groove (or flat surface with a low guard)"],
+            ["Setup", "Place the target marble still on the smooth track; keep a second marble to roll into it."],
+            ["Teacher moves", "Observe → predict → collide → ask \u201cWhat changed?\u201d → build the model on the board"],
+            ["Ask", "\u201cWhat changed?\u201d \u201cHow do we know the moving marble had energy?\u201d \u201cWhat did the target marble do?\u201d"],
+            ["Listen For", "\u201cthe target marble moved\u201d \u201cit changed from still to moving\u201d — change language, not \u201cI saw the energy\u201d"],
+            ["Misconception / fix", "\u201cOnly moving objects have energy\u201d → pair with Chapter 1 stored energy. We do not see the energy. The change is the evidence."],
+            ["Do-not-overteach", "Do not introduce speed/fast-slow (Ch3) or transfer/transformation (Ch4–6). Do not drift into full collision-transfer (Ch5). Keep the demo to change = evidence."],
+            ["If short on time", "Real cuts are in the Chapter 2 Pacing Plan. Quiz stays 12 minutes and starts at minute 12. Shorten only the N3 read-aloud and the CHECK sample. Do not send notes home. Moving Marbles is after the quiz."],
+            ["Collect / grade", "Notes: not graded · Quiz Thu (8 items · 12 pts · raw + %) · open/closed note = teacher choice · practice = ungraded take-home"],
+            ["Absent / makeup", "Chapter 2 Absent-Student Recovery guide"],
+            ["What comes next", "Chapter 3 — Energy and Speed Are Related (ramp + target preview)."],
+        ],
+        [Inches(1.6), Inches(5.4)], size=9, first_bold=True)
+    _page_break(doc)
+
+def chapter2_demo_guide(doc):
+    c = CHAPTERS[2]
+    section_heading(doc, "Chapter 2 Demo Guide — Marble Collision", color=C(c["primary"]))
+    callout(doc, "LIVE", "Live demo is preferred. Purpose: show that a moving object has energy and can cause a change — nothing more (no transfer/transformation depth).", accent_hex=c["primary"])
+    _para(doc, "", after=10)
+    data_table(doc, ["Section", "Guidance"],
+        [
+            ["Materials", "Two identical marbles · smooth track/groove or a flat surface with a low guard"],
+            ["Set Up", "Target marble resting still on the track. Rolling marble held a short distance away, ready to roll."],
+            ["Do This", "1) Show the still target marble. 2) Predict what will happen. 3) Roll the moving marble into it. 4) Name every change (the target marble moves)."],
+            ["Ask", "\u201cWhat changed?\u201d \u201cWhat did the target marble do?\u201d \u201cHow do we know the moving marble had energy?\u201d"],
+            ["Listen For", "\u201cthe target marble moved\u201d \u201cit changed from still to moving\u201d — the change is the evidence"],
+            ["Connect", "The target marble changed from still to moving. That change is evidence that the moving marble had energy of motion (Reader p. 9). Build MOVING OBJECT → CHANGE → EVIDENCE on the board."],
+            ["Do Not Overteach", "Do not measure distance/speed (Ch3) · do not say the energy \u201ctransferred\u201d (Ch4–5) · do not call it kinetic energy."],
+            ["If Students Ask", "\u201cWhere did the energy go?\u201d → \u201cThat\u2019s a great question for a later chapter.\u201d Keep it a preview."],
+            ["If Short on Time", "Use slide 7 (evidence) as the whole-demo summary. One roll is the demonstration."],
+        ],
+        [Inches(1.5), Inches(5.5)], size=9, first_bold=True)
+
+def chapter2_slide_map(doc):
+    c = CHAPTERS[2]
+    section_heading(doc, "Chapter 2 — Slideshow Map", color=C(c["primary"]))
+    callout(doc, "DECK", "37 slides (16:9). Speaker notes: MODE · TIME · PLAN · ASK · LISTEN FOR · REVEAL · NEXT.", accent_hex=c["primary"])
+    _para(doc, "", after=10)
+    data_table(doc, ["Anchor", "Slides", "What happens on screen"],
+        [
+            ["BQ", "2 · 3 · 27", "2 = Big Question banner + TURN & TALK · 3 = My first thinking (write) · 27 = BQ · NOW I THINK (return, write)"],
+            ["V1 (motion)", "8–10", "8 = one large vocab card · 9 = notes write · 10 = notes reveal (position)"],
+            ["V2 (energy of motion)", "14–16", "14 = one large vocab card · 15 = notes write · 16 = notes reveal (moving)"],
+            ["N1 Moving Objects Can Cause Changes", "11–13", "11 = concept + caption · 12 = write · 13 = reveal (change · outside)"],
+            ["N2 Moving Objects Have Energy", "17–20", "17 = MOVING OBJECT → CHANGE → EVIDENCE model · 18 = notes write · 19 = OBSERVE before/after draw · 20 = reveal (motion)"],
+            ["N3 People Use the Energy of Motion", "21–23", "21 = three examples · 22 = notes table write · 23 = reveal (hammer → nail · pendulum → clock gears · wind → blades)"],
+            ["CHECK Your Thinking", "24–25", "24 = write (how do we know a moving object has energy?) · 25 = sample response"],
+            ["Phenomenon / demo", "4–7", "4 = observe still target · 5 = predict · 6 = before/after · 7 = change = evidence"],
+            ["Application / evidence", "26", "Which change shows the energy of motion? (choose the change)"],
+            ["End-of-chapter review", "28–37", "5 multiple-choice (A/B/C/D) — question state then answer state; letters shuffled B/B/C/D/A"],
+        ],
+        [Inches(1.9), Inches(1.1), Inches(4.0)], size=9, first_bold=True)
+    _para(doc, "Reader cues on-slide: V1 p. 7 · N1 p. 8 · V2/N2 p. 9 · N3 pp. 10–12 · CHECK pp. 7–12 · BQ p. 7. Timing: Chapter 2 Pacing Plan (Session 1 = slides 1–16; Session 2 = 2, 17–25, 27; 26 and 28–37 optional).", size=9, italic=True, color=INK_SOFT, after=8)
+
+def chapter2_support_index(doc):
+    c = CHAPTERS[2]
+    section_heading(doc, "Chapter 2 — Supporting Resource Index", color=C(c["primary"]))
+    callout(doc, "PRINCIPLE", "Lean ecosystem: every resource has a distinct job. Keys: Chapter 2 Guided Notes key, quiz key, practice key, and the ungraded Moving Marbles feedback key. Practice asks students to identify the mover, the change, and the evidence.", accent_hex=c["primary"])
+    _para(doc, "", after=10)
+    data_table(doc, ["Resource", "Canonical file", "Required", "Graded", "When used", "Key / absent"],
+        [
+            ["Guided Notes (3 pp)", "Chapter 2 Guided Notes", "REQUIRED", "Not graded", "Sessions 1–2", "key AVAILABLE"],
+            ["Slideshow (37 slides)", "Chapter 2 slideshow", "REQUIRED", "\u2014", "Sessions 1–2 + optional review", "\u2014 (CHECK slides reveal)"],
+            ["Practice / application", "Chapter 2 practice page", "RECOMMENDED", "Not graded", "Take-home after Session 1", "key AVAILABLE"],
+            ["Chapter quiz (8 items · 12 pts)", "Chapter 2 quiz", "REQUIRED", "GRADED (raw + %)", "Thu · in hands at minute 12 · window 12–24", "quiz key AVAILABLE"],
+            ["Science Journal", "Chapter 2 Science Journal prompts", "OPTIONAL/FLEX", "Not graded", "Daily, secondary role", "\u2014 (reflective)"],
+            ["Absent / makeup", "Chapter 2 Absent-Student Recovery", "REQUIRED (support)", "Not graded", "After absence", "self-contained"],
+            ["Moving Marbles", "Moving Marbles student page", "OPTIONAL", "Not graded", "After the quiz, not Week 1 Friday", "look-fors AVAILABLE"],
+            ["Friday FLEX bank", "Chapter 2 Friday FLEX", "OPTIONAL/FLEX", "Not graded", "After the quiz, not Week 1 Friday", "\u2014"],
+            ["Study guide + assessment trace", "Chapter 2 Study Guide + Assessment Trace", "REFERENCE", "\u2014", "Unit assembly", "\u2014"],
+        ],
+        [Inches(1.35), Inches(1.9), Inches(0.95), Inches(0.95), Inches(1.05), Inches(0.8)], size=9, first_bold=True)
+    callout(doc, "LEAN", "Practice = ungraded take-home (identify the mover, the change, and the evidence). Moving Marbles is optional because the marble collision is already taught live. Science Journal is the daily reflection only. Pacing: Chapter 2 Pacing Plan.", accent_hex=c["primary"])
 
 # ================================================================ build
 def build():
@@ -662,7 +769,11 @@ def build():
     chapter1_demo_guide(doc); _page_break(doc)
     chapter1_slide_map(doc); _page_break(doc)
     chapter1_support_index(doc); _page_break(doc)
-    answer_key_architecture(doc); _page_break(doc)
+    chapter2_spread(doc)
+    chapter2_demo_guide(doc); _page_break(doc)
+    chapter2_slide_map(doc)
+    chapter2_support_index(doc); _page_break(doc)
+    answer_key_architecture(doc)
     special_sections(doc); _page_break(doc)
     chapter_placeholders(doc)
 

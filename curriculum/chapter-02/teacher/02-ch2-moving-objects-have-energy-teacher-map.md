@@ -1,3 +1,5 @@
+> ⚠️ **SUPERSEDED — Phase 7 (2026-10-04).** This file is retired. Canonical teacher-facing pacing is in `production/teacher-playbook/unit1-teacher-playbook.docx` + `docs/playbook/UNIT1_PACING_CALENDAR.md`. Chapter 2 is taught in **Week 1** (Wed 10/14 · Thu 10/15) — the "Week 2" and day-of-week claims below are stale.
+
 # Teacher Chapter Map — Chapter 2: Moving Objects Have Energy
 
 - **Official chapter:** 2 — Moving Objects Have Energy
@@ -56,7 +58,7 @@ How are energy, change, and movement of objects related?
 | Fri | Flex | Recover / Practice / Extend | nonessential |
 
 ## Friday Flex
-- RECOVER · PRACTICE (Motion Evidence Sort, Observation vs Inference) · EXTEND (Motion Mystery Files, tabletop target challenge)
+- RECOVER · PRACTICE (motion evidence card sort) · EXTEND (Motion Mystery Files, tabletop target challenge)
 
 ## Lab / Core Investigation
 - Moving Marbles — see `production/labs/02-ch2-moving-marbles-teacher-spec.md`

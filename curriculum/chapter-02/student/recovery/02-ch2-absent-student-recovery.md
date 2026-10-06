@@ -1,49 +1,38 @@
 # Chapter 2 Absent-Student Recovery
 
-> Recovers the essential idea without recreating the investigation. Uses "Our class observed…" so absent students do not claim first-person observations.
+> **SUPERSEDED.** The canonical recovery page is `production/worksheets/02-ch2-absent-student-recovery.docx`. Do not maintain a second current recovery source here.
 
-## What you missed (the big idea)
-**A moving object has energy of motion because it can cause change.** When a moving object bumps something else and that thing changes position, the change is evidence that the moving object had energy.
+A student who missed Wednesday or Thursday can finish the chapter from the Reader and this page. Do not invent classmate results, and do not wait for a classmate to retell the demonstration.
 
-## Step 1 — Read (5 min)
-Read Student Reader Chapter 2 "Moving Objects Have Energy" (printed pp. 7–12). Focus on:
-- What is motion? (p. 7)
-- How do moving objects cause changes? (p. 8)
-- What is energy of motion? (p. 9)
-- How do people use the energy of motion? (pp. 10–12)
+## The big idea
+A moving object has energy of motion because it can cause a change. The change is the evidence. We do not see the energy itself.
 
-## Step 2 — Review the setup (diagram)
-```
-[ moving marble ]  ----->   [ target marble (still) ]
+## Read
+Student Reader, Moving Objects Have Energy, printed pages 7–12.
 
-   BEFORE: one marble is rolling, the other is still.
-   AFTER:  the moving marble bumps the target, and the target moves.
-```
+- Motion is an object changing position (p. 7).
+- A moving object can cause a change. Some objects start their own motion. A ball does not (p. 8).
+- Energy of motion is the energy an object has while it is moving (p. 9).
+- A hammer, a pendulum, and the wind each cause a useful change (pp. 10–12).
 
-## Step 3 — Use the class data (below)
-Our class ran the Moving Marbles investigation. Here is what we observed:
+## The marble demonstration
+You can read this, or roll one marble into a still marble at home. One roll is enough.
 
-| Trial | What moved before? | What changed after contact? | How did the target change? |
-|---|---|---|---|
-| 1 | the rolled marble | the target marble started moving | it changed position (still → moving) |
-| 2 | the rolled marble | the target marble slid forward | it moved away from the contact point |
-| 3 | the rolled marble | the target marble moved again | it changed position each time |
+- BEFORE: one marble is still. Another marble is rolling toward it.
+- AFTER: the still marble starts to move.
 
-## Step 4 — Answer (short)
-1. What does **motion** mean? (Write the sentence.)
-2. In the table above, what was the **moving object**, and what was the **change** it caused?
-3. What is the **evidence** that the moving marble had energy of motion?
-4. Is "the marble had energy" an **observation** or an **inference**? Explain.
+That change is the evidence that the moving marble had energy of motion.
 
-## Step 5 — The essential model (copy into your notes)
-```
-MOVING OBJECT → CAUSES A CHANGE → EVIDENCE OF ENERGY
-```
-A moving object has energy of motion. When it causes a change, that change is evidence of its energy.
+## Write
+1. What is motion?
+2. What is energy of motion?
+3. In the marble demonstration, what changed?
+4. How do we know the moving marble had energy? Start with “We know because…”
+5. Name the change caused by a swinging hammer, a swinging pendulum, or the wind.
 
----
+## Notes to finish
+Finish Guided Notes N1–N3 and CHECK.
 
-## Teacher note
-- Accept any reasonable, source-aligned wording in Step 4.
-- Do not require the absent student to redo the marble trials.
-- This recovery page covers the same essential understanding as the live lessons.
+## Teacher
+Quiz makeup: complete within 2 school days.
+Moving Marbles: optional.

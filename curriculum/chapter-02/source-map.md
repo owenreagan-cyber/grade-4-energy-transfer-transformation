@@ -1,3 +1,5 @@
+> ⚠️ **SUPERSEDED — Phase 7 (2026-10-04).** This file is retired. Canonical Chapter 2 record: `docs/chapter-02/CH2_SOURCE_MAP.md` (Phase 7) + `docs/chapter-02/CH2_PACKAGE_MANIFEST.md`. Chapter 2 is taught in **Week 1** (Wed 10/14 · Thu 10/15) per `docs/playbook/UNIT1_PACING_CALENDAR.md`.
+
 # CHAPTER 2 SOURCE MAP
 
 > Direct source inspection record. Distinguishes AUTHORITATIVE / SUPPLEMENTAL / DRAFT IDEA — never silently merged.

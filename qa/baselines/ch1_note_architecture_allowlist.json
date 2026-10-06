@@ -265,14 +265,6 @@
   },
   {
     "file": "production/PRODUCTION_MANIFEST.md",
-    "clause": "Notebook retrofit complete (Phase 4.5)",
-    "normalized": "notebook retrofit complete phase 4 5",
-    "sha256": "345e3cfd116072038e9ac59d9f88463198b8e069a0492f73041c5c8833d3f737",
-    "classification": "HISTORICAL_REFERENCE",
-    "rationale": "Chapter 2 status blurb. Records that the Chapter 2 notebook retrofit finished in Phase 4.5. It does not assign the Chapter 1 note system."
-  },
-  {
-    "file": "production/PRODUCTION_MANIFEST.md",
     "clause": "| U2-D | Premium guided notes Ch1–9 (DOCX+PDF) | `production/premium-notes/unit-02/` | RELEASED | ADAPTED |",
     "normalized": "u2 d premium guided notes ch1 9 docx pdf production premium notes unit 02 released adapted",
     "sha256": "264e3e85d1bb08a8e377ec37629c50136cf70574606a3c64b44e9e2fac12d49d",

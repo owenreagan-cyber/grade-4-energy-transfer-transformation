@@ -1,5 +1,7 @@
 # NINE-WEEK SCOPE & SEQUENCE
 
+> **SUPERSEDED.** This planning draft is not the current schedule. Authoritative schedule: `docs/playbook/UNIT1_PACING_CALENDAR.md`. Chapter 2 is Week 1 Wednesday and Thursday. Moving Marbles is optional after the quiz, not a Week 2 core lab.
+
 > Working course structure. Each week lists chapter, TG lessons, Reader pages (printed), Big Questions, core concepts, vocabulary, lab/activity focus, assessment checkpoint, and Friday Flex options. Markings: **[CORE]** = essential; **[FLEX]** = optional/nonessential; **[EXT]** = extension/enrichment.
 
 ## Week 1 — Chapter 1: Energy Causes Change
@@ -12,7 +14,7 @@
 - **Checkpoint:** exit tickets; notebook check; observation of AP 1.1.
 - **Friday Flex:** catch-up · "Odd One Out" forms-of-energy · energy scavenger hunt extension.
 
-## Week 2 — Chapter 2: Moving Objects Have Energy
+## Week 2 — historical draft only. Chapter 2 is taught in Week 1 (see the pacing calendar). Moving Objects Have Energy
 - **TG lessons:** L3 Moving Objects Have Energy
 - **Reader pages:** 7–12 · **AP:** 3.1
 - **Big Question:** *How are energy, change, and movement of objects related?*

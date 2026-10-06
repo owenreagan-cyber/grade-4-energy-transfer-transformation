@@ -38,25 +38,29 @@ End-of-life states (never canonical, never listed as current): `RETIRED` · `SUP
 | P14 | Teacher Chapter Map (pre-canonical staging file) | `curriculum/chapter-01/teacher/01-ch1-energy-causes-change-teacher-map.md` | — | RETIRED / SUPERSEDED (Phase 6.1B) → superseded by P1 + P12 | SOURCE/ADAPTED |
 | P15 | Legacy Guided Notes ("WHAT WE NOTICE" architecture) | `production/student-notes/01-ch1-energy-causes-change-guided-notes.docx` | — | RETIRED / SUPERSEDED (Phase 6.1B) → superseded by P3 (`production/premium-notes/`) | ADAPTED |
 
-> **Chapter 1 lifecycle:** v1.0 FROZEN (history preserved) · v1.1 `STATUS = FROZEN` (external decision APPROVE PROPAGATION, 2026-10-05; record: `docs/chapter-01/CH1_GOLD_STANDARD_FREEZE.md`). P14 and P15 are historical/retired and must never be cited as canonical or current. Chapter 1 is complete (Phase 3). **Phase 6.1:** the Interactive Science Notebook (P11) is RETIRED from the Ch1 release (moved to `production/archive/retired/chapter-01-release-v1.0/`); the release package is built by `tools/build_ch1_release.py` and verified by `tools/qa_release_parity.py --chapter 1`. Guided Notes are the primary student artifact. **Playbook (P1):** the Playbook binary is one combined file that also holds Chapter 2 pages, so it ships with the Ch2 commit; until then the committed Playbook binary is the v1.0 build and Ch1 timing is governed by P12.
+> **Chapter 1 lifecycle:** v1.0 FROZEN (history preserved) · v1.1 `STATUS = FROZEN` (external decision APPROVE PROPAGATION, 2026-10-05; record: `docs/chapter-01/CH1_GOLD_STANDARD_FREEZE.md`). P14 and P15 are historical/retired and must never be cited as canonical or current. Chapter 1 is complete (Phase 3). **Phase 6.1:** the Interactive Science Notebook (P11) is RETIRED from the Ch1 release (moved to `production/archive/retired/chapter-01-release-v1.0/`); the release package is built by `tools/build_ch1_release.py` and verified by `tools/qa_release_parity.py --chapter 1`. Guided Notes are the primary student artifact. **Playbook (P1):** the Playbook binary is one combined file that also holds Chapter 2 pages, so it ships with the Chapter 2 v1.0 freeze. Chapter 1 timing is governed by P12.
 
 ## Chapter 2 — Moving Objects Have Energy
 
 | ID | Artifact | Master path | Release path | Status | Provenance |
 |---|---|---|---|---|---|
-| P1 | Teacher Chapter Map | `curriculum/chapter-02/teacher/02-ch2-moving-objects-have-energy-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
-| P2 | Slide Deck | `production/slides/02-ch2-moving-objects-have-energy-slides.pptx` | `production/releases/chapter-02/` | RELEASED | ADAPTED |
-| P3 | Guided Notes | `production/student-notes/02-ch2-moving-objects-have-energy-guided-notes.docx` | `production/releases/chapter-02/` | RELEASED | ADAPTED |
-| P4 | Moving Marbles Investigation | `production/labs/02-ch2-moving-marbles-teacher-spec.md` + `production/worksheets/02-ch2-moving-marbles-student.docx` | `production/releases/chapter-02/` | RELEASED | ADAPTED |
-| P5 | Practice Worksheet | `production/worksheets/02-ch2-moving-objects-have-energy-practice.docx` | `production/releases/chapter-02/` | RELEASED | ADAPTED |
-| P6 | Friday Flex | `curriculum/chapter-02/student/02-ch2-friday-flex.md` | `production/releases/chapter-02/` | RELEASED | CUSTOM |
-| P7 | Chapter Quiz | `production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx` | `production/releases/chapter-02/` | RELEASED | ADAPTED |
-| P8 | Teacher Keys | `production/answer-keys/02-ch2-*-key.md` | `production/releases/chapter-02/` | RELEASED | SOURCE/ADAPTED |
-| P9 | Media Plan | `curriculum/chapter-02/media/02-ch2-media-plan.md` + `02-ch2-explainer-script.md` | — | RELEASED | CUSTOM |
-| P10 | QA Package | `curriculum/chapter-02/qa/` | — | RELEASED | CUSTOM |
-| P11 | Interactive Science Notebook | `production/student-notebook/chapter-02/02-ch2-interactive-notebook.docx` | `production/releases/chapter-02/02-ch2-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
+| P1 | Teacher package reference (Ch2) | `docs/chapter-02/CH2_PACKAGE_MANIFEST.md` + Teacher Playbook Ch2 spread | `production/teacher-playbook/unit1-teacher-playbook.pdf` | FROZEN (v1.0) | SOURCE/ADAPTED |
+| P2 | Slide Deck | `production/slides/02-ch2-moving-objects-have-energy-slides.pptx` | `production/releases/chapter-02/` | FROZEN (v1.0) | ADAPTED |
+| P3 | Guided Notes (student + teacher key) | `production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx` + `…-guided-notes-key.docx` | `production/releases/chapter-02/` (PDFs) | FROZEN (v1.0) | ADAPTED |
+| P4 | Moving Marbles (OPTIONAL · ungraded) | `production/labs/02-ch2-moving-marbles-teacher-spec.md` + `production/worksheets/02-ch2-moving-marbles-student.docx` | `production/releases/chapter-02/` | OPTIONAL | ADAPTED |
+| P5 | Practice Worksheet | `production/worksheets/02-ch2-moving-objects-have-energy-practice.docx` | `production/releases/chapter-02/` | FROZEN (v1.0) | ADAPTED |
+| P6 | Friday Flex (after the quiz; not Week 1 Friday) | `curriculum/chapter-02/student/02-ch2-friday-flex.md` | `production/releases/chapter-02/` | OPTIONAL | CUSTOM |
+| P7 | Chapter Quiz | `production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx` | `production/releases/chapter-02/` | FROZEN (v1.0) | ADAPTED |
+| P8 | Teacher Keys (quiz · practice · Moving Marbles; notes key = P3) | `production/answer-keys/02-ch2-*-key.md` | `production/releases/chapter-02/` (combined teacher-key PDF) | FROZEN (v1.0) | SOURCE/ADAPTED |
+| P9 | Media Plan | `curriculum/chapter-02/media/02-ch2-media-plan.md` + `02-ch2-explainer-script.md` | — | AVAILABLE | CUSTOM |
+| P10 | QA Package | `curriculum/chapter-02/qa/` | — | AVAILABLE | CUSTOM |
+| P11 | Interactive Science Notebook | retired pre-canonical notebook PDF | `production/archive/retired/chapter-02-pre-7.1/` | RETIRED / SUPERSEDED (Phase 7.1) → superseded by P3 | ADAPTED |
+| P12 | Pacing plan (the ONE Ch2 timing system) | `docs/chapter-02/CH2_PACING_PLAN.md` (generated from `tools/ch2_pacing.py`) | — | FROZEN (v1.0) | CUSTOM |
+| P13 | Release package manifest | `production/releases/chapter-02/RELEASE_MANIFEST.json` (built by `tools/build_ch2_release.py`; verified by `tools/qa_release_parity.py --chapter 2`) | `production/releases/chapter-02/` | FROZEN (v1.0) | CUSTOM |
+| P14 | Teacher Chapter Map (pre-canonical staging file) | `curriculum/chapter-02/teacher/02-ch2-moving-objects-have-energy-teacher-map.md` | — | RETIRED / SUPERSEDED (Phase 7) → superseded by P1 + P12 | SOURCE/ADAPTED |
+| P15 | Absent-student recovery | `production/worksheets/02-ch2-absent-student-recovery.docx` | `production/releases/chapter-02/02-ch2-absent-student-recovery.pdf` | FROZEN (v1.0) | Teacher: finish N1–N3 and CHECK; quiz makeup within 2 school days; Moving Marbles optional. |
 
-> Chapter 2 is complete (Phase 4). Notebook retrofit complete (Phase 4.5).
+> **Chapter 2 lifecycle:** `UNIT1_CH2_GOLD_STANDARD_VERSION = 1.0`, `STATUS = FROZEN` (external decision APPROVE PROPAGATION, 2026-10-06; record: `docs/chapter-02/CH2_GOLD_STANDARD_FREEZE.md`). Guided Notes are the primary student artifact. The Interactive Science Notebook (P11) is RETIRED from the Chapter 2 release. P14 is historical and must not be cited as current. Timing is P12 (Wed 10/14 · Thu 10/15). Friday 10/16 is Chapter 1.
 
 ## Chapter 3 — Energy and Speed Are Related
 

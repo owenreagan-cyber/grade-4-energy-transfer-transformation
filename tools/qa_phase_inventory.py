@@ -9,7 +9,7 @@ Exit 0 = every in-scope changed path accounted for.
 import glob, argparse, fnmatch, itertools, os, re, subprocess, sys
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-# Default exclusions for the Phase 6.1 (Chapter 1) run: other chapters / concurrent phases.
+# Chapter 1 inventories exclude other chapters. Chapter 2 phase inventories include Chapter 2.
 DEFAULT_EXCLUDES = [
     r"(^|/)(0[2-9])-ch[2-9]", r"chapter-0[2-9]", r"CH[2-9]_", r"PHASE_7_", r"ch[2-9]-(notes|slides)", r"_ch[2-9]_", r"build_ch[2-9]",
     r"qa_ch[2-9]",
@@ -65,7 +65,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("inventory"); ap.add_argument("--exclude", action="append", default=None); ap.add_argument("--report")
     a = ap.parse_args()
-    ex = [re.compile(x) for x in (a.exclude if a.exclude is not None else DEFAULT_EXCLUDES)]
+    if a.exclude is not None:
+        patterns = a.exclude
+    elif "PHASE_7" in os.path.basename(a.inventory) or "CH2" in os.path.basename(a.inventory):
+        patterns = []
+    else:
+        patterns = DEFAULT_EXCLUDES
+    ex = [re.compile(x) for x in patterns]
     pats = inventory_patterns(os.path.join(REPO, a.inventory))
     inscope, excluded, missing = [], [], []
     for p in changed_paths():

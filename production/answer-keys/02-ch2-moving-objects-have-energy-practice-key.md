@@ -21,7 +21,7 @@
 | Wind spins the blades | the blades rotate (still → spinning) |
 | The cart bumps the box | the box slides forward |
 
-## Part C — Evidence (which observation shows the moving object had energy?)
+## Part C — Evidence (which change shows the moving object had energy?)
 
 | Observation | Evidence? | Why |
 |---|---|---|

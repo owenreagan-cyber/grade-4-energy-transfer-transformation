@@ -211,6 +211,32 @@ def check_ch1_pacing_sync(doc):
     ok = not stale and not missing and all(m <= 25.0 for m in sess)
     return ("PASS" if ok else "FAIL", f"stale Ch1 tokens: {stale or 'none'} · missing: {missing or 'none'} · session minutes {sess}")
 
+def check_ch2_pacing_sync(doc):
+    """Chapter 2 teacher text must match tools/ch2_pacing.py and drop legacy row language."""
+    import re
+    import ch2_pacing as P
+    lines = _ordered_lines(doc)
+    keep, on = [], False
+    for ln in lines:
+        if ln.startswith(("Wed 10/14", "Thu 10/15")):
+            keep.append(ln)
+        if "Chapter 2 \u2014 Teacher Spread" in ln:
+            on = True
+        if on and "Answer-Key Architecture" in ln:
+            on = False
+        if on:
+            keep.append(ln)
+    scope = "\n".join(keep)
+    stale = [t for t in ("Model It", "Draw/Label", "Block 1", "Block 2", "Key Words") if t in scope]
+    paths = re.findall(r"(docs/|curriculum/|production/|student/recovery|[\w./-]+\.md\b)", scope)
+    need = ["Chapter 2 Pacing Plan", "24 min", "12 pts", "minute 12"]
+    missing = [n for n in need if n not in scope and n not in _blob(doc)]
+    # minutes themselves live in the pacing module; the spread must name the plan
+    sess = [P.session_required_minutes(i) for i in (1, 2)]
+    ok = not stale and not paths and not missing and all(m <= 25.0 for m in sess) and not P.check_plan()
+    return ("PASS" if ok else "FAIL",
+            "stale: %s · paths: %s · missing: %s · minutes %s" % (stale or "none", paths or "none", missing or "none", sess))
+
 def check_no_repo_paths(doc, _doc_texts=None):
     """6.1C / L-D: Unit-level + Chapter 1 teacher-facing text must use classroom names, not repo paths.
     Out of scope until their own phases: Chapter 2-7 rows and the Ch3-7 SKELETON appendix register."""
@@ -223,7 +249,13 @@ def check_no_repo_paths(doc, _doc_texts=None):
 
 def main():
     import argparse
-    ap = argparse.ArgumentParser(); ap.add_argument("--report", default=None); args = ap.parse_args()
+    global ROOT, DOCX, PDF, REPORT_DIR
+    ap = argparse.ArgumentParser(); ap.add_argument("--report", default=None); ap.add_argument("--root", default=None); args = ap.parse_args()
+    if args.root:
+        ROOT = os.path.abspath(args.root)
+        DOCX = os.path.join(ROOT, "production", "teacher-playbook", "unit1-teacher-playbook.docx")
+        PDF = os.path.join(ROOT, "production", "teacher-playbook", "unit1-teacher-playbook.pdf")
+        REPORT_DIR = os.path.join(ROOT, "qa", "reports")
     doc = Document(DOCX)
     gates = [
         ("page-size (US Letter)", check_docx_page_size(doc)),
@@ -236,6 +268,7 @@ def main():
         ("PDF render (size + footer)", check_pdf()),
         ("Ch1 pacing sync / stale-language (6.1)", check_ch1_pacing_sync(doc)),
         ("Ch1/unit-level pages: no raw repo paths (6.1C L-D)", check_no_repo_paths(doc)),
+        ("Ch2 pacing sync / no legacy rows", check_ch2_pacing_sync(doc)),
     ]
     print("=" * 70)
     print("UNIT 1 TEACHER PLAYBOOK — QA GATES (Phase 2)")
@@ -257,6 +290,8 @@ def main():
         for name, (s, note) in gates:
             f.write(f"- [{s}] {name} — {note}\n")
     print(f"report: {rep}")
+    if status == "FAIL":
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

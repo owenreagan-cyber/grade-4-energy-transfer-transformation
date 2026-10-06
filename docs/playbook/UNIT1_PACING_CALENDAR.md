@@ -29,14 +29,14 @@
 
 ## Week 1 — Chapters 1–2
 
-> **Chapter 1 timing authority (Phase 6.1):** `docs/chapter-01/CH1_PACING_PLAN.md` (generated from `tools/ch1_pacing.py`). Ch1 is three sessions (Mon · Tue · Fri); Friday carries consolidation and the graded quiz only — no new core content. Ch2 keeps Wed/Thu. Any other Ch1 timing language is superseded.
+> **Chapter 1 timing authority:** `docs/chapter-01/CH1_PACING_PLAN.md`. Ch1 is three sessions (Mon · Tue · Fri). **Chapter 2 timing authority:** `docs/chapter-02/CH2_PACING_PLAN.md`. Ch2 is two sessions (Wed · Thu) and does not use Friday. Friday 10/16 is the Chapter 1 quiz.
 
 | Day | Date | Chapter / activity | Reader pp. | Guided Notes | Slides | Demo / activity | Collect / grade | Materials | FLEX |
 |---|---|---|---|---|---|---|---|---|---|
 | Mon | 10/12 | Ch1 Session 1 — Observe & Name (24.5 min) | 1–2 | Notes p. 1: BQ · V1 · N1 | AVAILABLE — slides 1–3, 6–16 | Electric Pencil Sharpener DEMO (predict → observe) | notes (not graded) | electric sharpener + pencil | — |
 | Tue | 10/13 | Ch1 Session 2 — Forms & Stored Energy (24.5 min) | 3–5 | Notes p. 2: N2 · V2 · N3 | AVAILABLE — slides 2, 17, 19–27 (18 OPTIONAL) | Rubber-band stretch (optional, 30 s) | notes (not graded) | optional rubber band | — |
-| Wed | 10/14 | Ch2 — Moving Objects Have Energy (Block 1) | 7–9 | Key Words · Model It · Draw/Label | PLANNED — Phase 4 | Marble Collision DEMO | exit ticket (not graded) | identical marbles + target cup | — |
-| Thu | 10/15 | Ch2 (Block 2) | 10–12 | Before/After · Example/Non-example · Check | PLANNED — Phase 4 | — | exit ticket (not graded) | — | — |
+| Wed | 10/14 | Ch2 Session 1 — Motion and Cause (24 min) | 7–9 | Notes p. 1: BQ · V1 · N1, then V2 at the top of p. 2 | AVAILABLE — slides 1–16 | Marble Collision DEMO | notes (not graded) | two identical marbles + a short track | — |
+| Thu | 10/15 | Ch2 Session 2 — Energy of Motion, Use & Quiz (24 min; quiz in hands at minute 12) | 9–12 | Notes p. 2–3: N2 · N3 · CHECK · BQ now | AVAILABLE — slides 2, 17–25, 27 (26 OPTIONAL) | Chapter 2 quiz (8 items · 12 pts · raw + %) | QUIZ — GRADED | quiz copies | — |
 | Fri | 10/16 | Ch1 Session 3 — Recognize, Reflect & QUIZ (25 min; consolidation + assessment, no new vocabulary) | 1–5 | Notes p. 3: N4 · CHECK · BQ now | AVAILABLE — slides 2, 28–31, 33 (quiz handed out by minute 12; fallback: N4 > BQ > CHECK) | Chapter 1 quiz (9 items · 16 pts · raw + %) | QUIZ — GRADED | — | After the quiz / spare time: RECOVER (notes catch-up) · PRACTICE (practice page) · EXTEND (Energy Detectives, optional) |
 
 ## Week 2 — Chapter 3 + Ramp It Up 2.0

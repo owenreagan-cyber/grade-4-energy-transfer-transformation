@@ -1,6 +1,6 @@
 FILE,UNIT,CATEGORY,LOCAL PATH,SHA-256,SIZE,STATUS
 01-ch1-energy-causes-change-slides.pptx,UNIT 1,SLIDES,production/slides/01-ch1-energy-causes-change-slides.pptx,5278f96c7dfab4f4b6809a3677f714c566c212e7c74af3d03f502abb77f022f7,171502,ACTIVE
-02-ch2-moving-objects-have-energy-slides.pptx,UNIT 1,SLIDES,production/slides/02-ch2-moving-objects-have-energy-slides.pptx,d6ec23ef781f021f0c790a6430803e0e81eaefc0643c54cb883eebc3d62fc57b,60188,ACTIVE
+02-ch2-moving-objects-have-energy-slides.pptx,UNIT 1,SLIDES,production/slides/02-ch2-moving-objects-have-energy-slides.pptx,8a29faf3f55a0f23cb3937a01e8e013b6203dc31768b747abae7dc4a16aeba17,144456,ACTIVE
 03-ch3-energy-speed-slides.pptx,UNIT 1,SLIDES,production/slides/03-ch3-energy-speed-slides.pptx,97feea0822349174914368d1a2f44b94f6185fa6f04881b94a02edc4ac39a2b9,4909224,ACTIVE
 04-ch4-energy-transfer-slides.pptx,UNIT 1,SLIDES,production/slides/04-ch4-energy-transfer-slides.pptx,6d0b7aa1b25c530250eba76c7c9606bf6c763226756b88e1bca842da13a42c6f,268990,ACTIVE
 05-ch5-collisions-slides.pptx,UNIT 1,SLIDES,production/slides/05-ch5-collisions-slides.pptx,59c58d0cdd02a614655b0b902b80fbb394e795f216c5bba64a91e3c62c8ef77b,219364,ACTIVE
@@ -8,8 +8,8 @@ FILE,UNIT,CATEGORY,LOCAL PATH,SHA-256,SIZE,STATUS
 07-ch7-edison-unit-synthesis-slides.pptx,UNIT 1,SLIDES,production/slides/07-ch7-edison-unit-synthesis-slides.pptx,d481061e25b0a22f445d18d06af51196501e2489868dcb77792ea9296fb9cf6b,6843155,ACTIVE
 01-ch1-energy-causes-change-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx,c501ca5be423205f7022c87d60f9f598d91ef55dc24439d655439055a08413cb,39907,ACTIVE
 01-ch1-energy-causes-change-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/01-ch1-energy-causes-change-guided-notes.pdf,8fc5e40063f31f5fd3639fb73ae8e93c8e974c2024ea8f19bb3a46762f1c4702,83638,ACTIVE
-02-ch2-moving-objects-have-energy-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx,2ecba801a45bc02e75ceebca77732040aee9604105d2f6e6259bbdb24804b3c0,38539,ACTIVE
-02-ch2-moving-objects-have-energy-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.pdf,248ad21b387f6de8f8ef4062adc690ae989158200e3d2748ae5058e4ef0e9f8a,60542,ACTIVE
+02-ch2-moving-objects-have-energy-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx,a3a4dfd3b0474694d15325d1b657cc645097970175ef2aa5665941c32fcaddce,39545,ACTIVE
+02-ch2-moving-objects-have-energy-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.pdf,4205b1df3a053979ce4fb14145ba2d864ac0da12c6a46caa8f56daf732ffb9c9,76422,ACTIVE
 03-ch3-energy-speed-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/03-ch3-energy-speed-guided-notes.docx,c9863d4aa4771a6316771c2cfbdb7fbde566a60d049bbdc70261d88b4c70b170,38865,ACTIVE
 03-ch3-energy-speed-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/03-ch3-energy-speed-guided-notes.pdf,155ad1ccb6c38bf777f39799ccf8102c04b281d7bd9fa15ef1422757ffc9e48c,68405,ACTIVE
 04-ch4-energy-transfer-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/04-ch4-energy-transfer-guided-notes.docx,1dd4f8f3031beaa5faae8f3dede607deaa5e46969482f7c995196b01fd3c74b4,39140,ACTIVE
@@ -25,7 +25,7 @@ unit1-transfer-vs-transformation.png,UNIT 1,INFOGRAPHICS,production/infographics
 unit1-engineering-design-cycle.png,UNIT 1,INFOGRAPHICS,production/infographics/unit1-engineering-design-cycle.png,696b416f26d0728cc79109f15e99a6623143484d89750aa651d516f69801f88c,323736,ACTIVE
 unit1-collision-energy-transfer.png,UNIT 1,INFOGRAPHICS,production/infographics/unit1-collision-energy-transfer.png,27243c59658ed1b369f60c8a4139c179021fdd0dbeec89a612271d4b2c8acaed,157023,ACTIVE
 01-ch1-energy-causes-change-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/01-ch1-energy-causes-change-practice.docx,9c5ec51c029b2f3ad4158dbf11c10a97161ba56b15dce0077739e14345b749fe,39317,ACTIVE
-02-ch2-moving-objects-have-energy-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/02-ch2-moving-objects-have-energy-practice.docx,266a919e103f0494c842df6d0a44bbdccaec691a9db7e01270783c8577e4bb33,37607,ACTIVE
+02-ch2-moving-objects-have-energy-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/02-ch2-moving-objects-have-energy-practice.docx,ae49af28c65b5db6fd74c6a31eccb33b9e99a7f2523effad1de22a89d577d6aa,38868,ACTIVE
 03-ch3-energy-speed-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/03-ch3-energy-speed-practice.docx,bdaab5faa81cab6eeda6db9f9da6405c1a5effc231ddda029d7091220b697fc1,37956,ACTIVE
 04-ch4-energy-transfer-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/04-ch4-energy-transfer-practice.docx,69e3b7370c2cbee6f0a6255d2bad2e9a9387d957c1d49f199183719c7507fd71,37748,ACTIVE
 05-ch5-collisions-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/05-ch5-collisions-practice.docx,e207e0d820da9a7f1d89d15b7822360e720e759fa2ffecaff46439b9844ef499,37419,ACTIVE
@@ -33,7 +33,7 @@ unit1-collision-energy-transfer.png,UNIT 1,INFOGRAPHICS,production/infographics/
 07-energy-big-questions.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/07-energy-big-questions.docx,efcb5765a90bafdf3794dc8362ec10f07dfd546311a292fb816e41efdeab4402,37267,ACTIVE
 07-unit-synthesis-review.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/07-unit-synthesis-review.docx,642b9573e80a4f17dac12457ebf9a03ca15aea4ec23279acad2bdc9dd40bb459,38911,ACTIVE
 01-ch1-energy-detectives-student.docx,UNIT 1,LABS,production/worksheets/01-ch1-energy-detectives-student.docx,28d877a882a356e4595ae6c73ea28e1bccb56a1afc097953382c5c0d633514c5,38898,ACTIVE
-02-ch2-moving-marbles-student.docx,UNIT 1,LABS,production/worksheets/02-ch2-moving-marbles-student.docx,31653408c70c99f4d5c9c935ff7bf978bf51c198f30b2cf666f70e4e2890cafc,37611,ACTIVE
+02-ch2-moving-marbles-student.docx,UNIT 1,LABS,production/worksheets/02-ch2-moving-marbles-student.docx,dfa76857e5ba21784f8afaa4ce5b21fae345829f5fed5481872e3889e1fd8df8,38586,ACTIVE
 03-ch3-ramp-it-up-student.docx,UNIT 1,LABS,production/worksheets/03-ch3-ramp-it-up-student.docx,c6e580ceef6f2f29026c273b27c389458cff7725ce078494b58db67a386efdef,37989,ACTIVE
 03-ch3-drop-it-student.docx,UNIT 1,LABS,production/worksheets/03-ch3-drop-it-student.docx,dc694e47824506071bf10ce1752e1e59559831e2b0b63ae3d605a5c444c2f310,37670,ACTIVE
 05-ch5-crash-lab-student.docx,UNIT 1,LABS,production/worksheets/05-ch5-crash-lab-student.docx,3e209a98c8e9c1cf4726b4fa8b983590adf25e03e41d1bf8d683b4af7c5036cc,37920,ACTIVE
@@ -47,7 +47,7 @@ ramp-it-up-setup-guide.pdf,UNIT 1,LABS,production/lab-setup-guides/ramp-it-up-se
 crash-lab-setup-guide.docx,UNIT 1,LABS,production/lab-setup-guides/crash-lab-setup-guide.docx,da9372f9b6dc815953bdfe355b16d67fc45847113f03134d8a1f12f70e34e35b,134953,TEACHER ONLY
 crash-lab-setup-guide.pdf,UNIT 1,LABS,production/lab-setup-guides/crash-lab-setup-guide.pdf,a738a94c87eb23b5e2cd8cc4921d73726315338f79e0c942f320dfc1b9ffb30c,127523,TEACHER ONLY
 01-ch1-energy-causes-change-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/01-ch1-energy-causes-change-quiz.docx,207d2ce9522ab53f9c5a91bc5a5a598342a5cf97b35ecf2d5703d0c6bf378304,39446,ACTIVE
-02-ch2-moving-objects-have-energy-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx,a485a26db80a55c69089c75bb05878a3d7474885471a9fa6aaa77b3e946b598d,37590,ACTIVE
+02-ch2-moving-objects-have-energy-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx,3f2c36c4fae68bac15984990f4a4fe52e16108c2a29b888ec42c5e15afa77bf6,39212,ACTIVE
 03-ch3-energy-speed-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/03-ch3-energy-speed-quiz.docx,cf62ef5961e65737d772c2b6999c83860bbddc10f7545fa147fcea2a22c70058,38099,ACTIVE
 04-ch4-energy-transfer-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/04-ch4-energy-transfer-quiz.docx,7d56d90ee93836aec5b4c3f8b8c8a69431881ccde7881f92b35b2cabc2bafcd1,38092,ACTIVE
 05-ch5-collisions-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/05-ch5-collisions-quiz.docx,f3f22187f116f697f9a461026614105b3cfb290fd83cd7e4725a106882f20c7f,38036,ACTIVE
@@ -130,3 +130,13 @@ unit2-review-game-cards.docx,UNIT 2,REVIEW GAME,production/review/unit-02/unit2-
 fossil-fuel-formation-classroom-cut.mp4,UNIT 2,MEDIA,assets/supplemental/media/unit-02/chapter-02/fossil-fuel-formation-classroom-cut.mp4,1f255f6e0c0fda2540753c085a4fe8b2905706858e35ed7c9730046f9dc8f7f8,9068796,ACTIVE
 turbine-generator-classroom-cut.mp4,UNIT 2,MEDIA,assets/supplemental/media/unit-02/chapter-03/turbine-generator-classroom-cut.mp4,649fbc83e7d9ad50d3b833ea00144c94f88119f61c555922bfd059d0babdb149,9315091,ACTIVE
 wind-hydro-power-classroom-cut.mp4,UNIT 2,MEDIA,assets/supplemental/media/unit-02/chapter-05/wind-hydro-power-classroom-cut.mp4,0d4ec2bd866c531574333291c5c09fea54c78d76920c42ac2195b0a321864dbd,3742861,ACTIVE
+02-ch2-moving-objects-have-energy-guided-notes.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-objects-have-energy-guided-notes.pdf,4205b1df3a053979ce4fb14145ba2d864ac0da12c6a46caa8f56daf732ffb9c9,76422,ACTIVE
+02-ch2-moving-objects-have-energy-guided-notes-key.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-objects-have-energy-guided-notes-key.pdf,4db7f27de3e76fc44f73aa936c3fd63b0fd52497e6cc692138dc993bac253f0e,78911,ACTIVE
+02-ch2-moving-objects-have-energy-slides.pptx,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-objects-have-energy-slides.pptx,8a29faf3f55a0f23cb3937a01e8e013b6203dc31768b747abae7dc4a16aeba17,144456,ACTIVE
+02-ch2-moving-objects-have-energy-slides.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-objects-have-energy-slides.pdf,885327756b245cee1d80d9ca3b3c58fcb8e8930fdc216b3989898d2c77ca16de,632610,ACTIVE
+02-ch2-moving-objects-have-energy-quiz.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-objects-have-energy-quiz.pdf,cfe4edf7249b6203f08f6a5d501db76b119229b2fd57c389ae59df1371eed0d5,64886,ACTIVE
+02-ch2-moving-objects-have-energy-practice.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-objects-have-energy-practice.pdf,d7790274397289da06ba3a5fbb7bce9c39cf3243cb482ffecf16a4699446cf38,60120,ACTIVE
+02-ch2-moving-objects-have-energy-teacher-key.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-objects-have-energy-teacher-key.pdf,541d37a59af591a191ce7de56025e1b01d5652bf4deaf762f8dc33fd4e4d2eeb,145601,ACTIVE
+02-ch2-friday-flex.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-friday-flex.pdf,22d5794a0b3fa6f312c3b096db4efe853702dc83bad6d234700343b67c77c485,57681,ACTIVE
+02-ch2-absent-student-recovery.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-absent-student-recovery.pdf,c9d7378be18076866deed6e4abcb79be5bdfd5bc9aa64f7d33e65afde386b357,50194,ACTIVE
+02-ch2-moving-marbles-student.pdf,UNIT 1,RELEASE,production/releases/chapter-02/02-ch2-moving-marbles-student.pdf,edb60f9ef5e0cb8b189e0def3edaa90d89618a814e7e6e065ab4fb27272eda92,44658,ACTIVE

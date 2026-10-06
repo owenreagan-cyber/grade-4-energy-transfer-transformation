@@ -13,13 +13,13 @@
 | 1 | 1 | Notebook (3 inserts) | RETIRED in Phase 6.1 — moved to `production/archive/retired/chapter-01-release-v1.0/` (Guided Notes are primary) | RETIRED | — | — |
 | 1 | 1 | Quiz (9 items · 16 pts) + keys | `.../01-ch1-energy-causes-change-quiz.pdf` + `-teacher-key.pdf` + `-guided-notes-key.pdf` | RELEASED (v1.1 FROZEN) | S/T | print |
 | 1 | 1 | Friday Flex | `production/releases/chapter-01/01-ch1-friday-flex.pdf` | RELEASED | S | print |
-| 2 | 2 | Slides | `production/releases/chapter-02/02-ch2-moving-objects-have-energy-slides.pptx` | RELEASED | T | project |
-| 2 | 2 | Guided notes | `.../02-ch2-moving-objects-have-energy-guided-notes.pdf` | RELEASED | S | print |
-| 2 | 2 | Lab: Moving Marbles | `.../02-ch2-moving-marbles-student.pdf` | RELEASED | S | print |
-| 2 | 2 | Practice | `.../02-ch2-moving-objects-have-energy-practice.pdf` | RELEASED | S | print |
-| 2 | 2 | Notebook (3 inserts) | `.../02-ch2-interactive-science-notebook.pdf` | RELEASED | S | print |
-| 2 | 2 | Quiz + key | `.../02-ch2-moving-objects-have-energy-quiz.pdf` + `-teacher-key.pdf` | RELEASED | S/T | print |
-| 2 | 2 | Friday Flex | `.../02-ch2-friday-flex.pdf` | RELEASED | S | print |
+| 1 (Wed–Thu) | 2 | Slides | `production/releases/chapter-02/02-ch2-moving-objects-have-energy-slides.pptx` | FROZEN (v1.0) | T | project |
+| 1 (Wed–Thu) | 2 | Guided notes | `production/releases/chapter-02/02-ch2-moving-objects-have-energy-guided-notes.pdf` | FROZEN (v1.0) | S | print |
+| 1 (Wed–Thu) | 2 | Moving Marbles (optional, ungraded) | `production/releases/chapter-02/02-ch2-moving-marbles-student.pdf` | OPTIONAL | S | print |
+| 1 (Wed–Thu) | 2 | Practice | `production/releases/chapter-02/02-ch2-moving-objects-have-energy-practice.pdf` | FROZEN (v1.0) | S | print |
+| 1 (Wed–Thu) | 2 | Notebook | RETIRED — Guided Notes are primary. Old file moved to `production/archive/retired/chapter-02-pre-7.1/` | RETIRED | — | — |
+| 1 (Wed–Thu) | 2 | Quiz (8 items · 12 pts) + keys | `production/releases/chapter-02/02-ch2-moving-objects-have-energy-quiz.pdf` + teacher-key + notes key | FROZEN (v1.0) | S/T | print |
+| 1 (Wed–Thu) | 2 | Friday Flex (after the quiz; not Week 1 Friday) | `production/releases/chapter-02/02-ch2-friday-flex.pdf` | OPTIONAL | S | print |
 | 3 | 3 | Slides | `production/releases/chapter-03/03-ch3-energy-speed-slides.pptx` | RELEASED | T | project |
 | 3 | 3 | Lab: Ramp It Up! + Drop It | `.../03-ch3-ramp-it-up-student.pdf` + `03-ch3-drop-it-student.pdf` | RELEASED | S | print |
 | 3 | 3 | Practice | `.../03-ch3-energy-speed-practice.pdf` | RELEASED | S | print |

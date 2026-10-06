@@ -20,7 +20,7 @@ from PIL import Image
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 MIN_FAIL_PT = 6.0     # word-box height (~5pt font)
 MIN_WARN_PT = 8.4     # word-box height (~7pt font)
-SIZES = {"letter": (612, 792), "key": (612, 792), "slide": (960, 540)}
+SIZES = {"letter": (612, 792), "key": (612, 792), "slide": (960, 540), "landscape": (792, 612)}
 
 
 def classify(pdf, kind):

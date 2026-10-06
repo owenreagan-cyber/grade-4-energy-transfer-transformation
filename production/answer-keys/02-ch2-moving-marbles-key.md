@@ -1,20 +1,24 @@
-# Answer Key — Moving Marbles
+# Moving Marbles — Teacher Feedback Key
 
-- **Artifact:** `production/worksheets/02-ch2-moving-marbles-student.docx`
-- **Source alignment:** AP 3.1 (On the Move); Reader Ch.2 pp. 7–12; TG L3.
+**NOT GRADED — FEEDBACK ONLY.** The student page has no points. Do not score this extension.
 
-| Item | Correct/expected response | Acceptable alternatives | Reasoning | Common misconception | Scoring note | What NOT to penalize |
-|---|---|---|---|---|---|---|
-| PREDICT | a guess (target will move / stay) | any prediction | prediction = testable guess | wrong prediction = failure | 1 pt | a "wrong" prediction |
-| BEFORE | one marble rolling, target still | drawing/description of still target | states initial state | — | 1 pt | arrow style |
-| TEST table — "What moved before?" | the rolled marble | "the moving marble" | identifies the mover | — | 1 pt | — |
-| TEST — "What changed after contact?" | the target started moving | "target slid/moved" | names the change | — | 1 pt | — |
-| TEST — "How did the target change?" | changed position (still → moving) | "it moved from here to there" | position changed = motion | "the marble had energy" (that's inference, not change) | 1 pt | — |
-| TEST — "Evidence the moving marble had energy" | the target changed position | "the target moved after being hit" | change = evidence of energy | energy is visible | 2 pts | informal phrasing |
-| MODEL (before/after) | two frames: still target → moved target, with arrows | any correct before/after | model shows cause→effect | — | 2 pts | artistic quality |
-| EXPLAIN (claim + evidence) | "The moving marble had energy of motion because it caused the target to change position." | any claim + observed change | change is evidence | only moving objects have energy (inverse) | 2 pts | full CER not required |
+The page is an optional after-quiz activity. It is not Friday work and it is not Thursday’s lesson.
 
-## Notes
-- Measurement (target distance in cm) is OPTIONAL evidence — do not require exact displacement for the concept.
-- A wrong prediction is NOT penalized if observation/explanation are correct.
-- Do not award "the marble was fast" as evidence (that's Ch.3).
+## What to look for
+
+| Student area | A strong response | Acceptable variation |
+|---|---|---|
+| Predict | The still marble will start to move | Any prediction. A wrong guess is fine. |
+| Trial | 1, 2, and 3, same setup | Three rolls, or fewer if time ran out |
+| What moved before? | The rolled marble | “the moving marble” |
+| What changed after? | The target marble started to move | “it slid” or “it changed position” |
+| Evidence | The change is evidence that the moving marble had energy | Any wording that uses the change as the evidence |
+| BEFORE | Target marble still; the other marble rolling toward it | A sketch or a sentence |
+| AFTER | Target marble moving | A sketch or a sentence |
+| Explain | The moving marble had energy of motion. The change is the evidence. | Informal wording |
+
+## Do not
+
+- Do not measure distance or speed in Chapter 2.
+- Accept any wording that uses the change as evidence.
+- Do not treat a wrong prediction as a mistake if the student names the change.

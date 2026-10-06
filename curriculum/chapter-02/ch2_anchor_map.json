@@ -1,0 +1,178 @@
+{
+  "order": ["BQ", "V1", "N1", "V2", "N2", "N3", "CHECK", "BQ_RETURN"],
+  "anchors": {
+    "BQ": {
+      "code": "BQ",
+      "title": "Big Question",
+      "lines": ["How are energy, change, and movement of objects related?"],
+      "notes_lines": [
+        "How are energy, change, and movement of objects related?",
+        "My first thinking"
+      ],
+      "write_lines": [
+        "How are energy, change, and movement of objects related?",
+        "My first thinking",
+        "Write 1–2 quick ideas. No wrong answer yet."
+      ],
+      "answers": [],
+      "write_slide": 3,
+      "reveal_slide": null,
+      "diagram": []
+    },
+    "V1": {
+      "code": "V1",
+      "title": "Vocabulary — Motion",
+      "lines": ["motion — the process of an object changing ____."],
+      "notes_lines": ["motion — the process of an object changing ____."],
+      "write_lines": [
+        "motion — the process of an object changing ____.",
+        "Write the missing word in the blank."
+      ],
+      "reveal_lines": ["motion — the process of an object changing position."],
+      "answers": ["position"],
+      "write_slide": 9,
+      "reveal_slide": 10,
+      "diagram": []
+    },
+    "N1": {
+      "code": "N1",
+      "title": "Moving Objects Can Cause Changes",
+      "write_title": "Write the Missing Words",
+      "reveal_labels": ["change · outside"],
+      "lines": [
+        "A moving object can cause a ____.",
+        "Players cause their own motion. A ball does not. Something else puts the ball into motion.",
+        "Some objects cause their own motion. Other objects are put into motion by ____ motion."
+      ],
+      "notes_lines": [
+        "A moving object can cause a ____.",
+        "Players cause their own motion. A ball does not. Something else puts the ball into motion.",
+        "Some objects cause their own motion. Other objects are put into motion by ____ motion."
+      ],
+      "write_lines": [
+        "A moving object can cause a ____.",
+        "Players cause their own motion. A ball does not. Something else puts the ball into motion.",
+        "Some objects cause their own motion. Other objects are put into motion by ____ motion."
+      ],
+      "reveal_lines": [
+        "A moving object can cause a change.",
+        "Players cause their own motion. A ball does not. Something else puts the ball into motion.",
+        "Some objects cause their own motion. Other objects are put into motion by outside motion."
+      ],
+      "answers": ["change", "outside"],
+      "write_slide": 12,
+      "reveal_slide": 13,
+      "diagram": [],
+      "banned_before_reveal": [
+        "a moving object can cause a change",
+        "a moving object can cause change",
+        "moving objects can cause a change",
+        "moving objects can cause change"
+      ]
+    },
+    "V2": {
+      "code": "V2",
+      "title": "Vocabulary — Energy of Motion",
+      "lines": ["energy of motion — the energy an object possesses while it is ____."],
+      "notes_lines": ["energy of motion — the energy an object possesses while it is ____."],
+      "write_lines": [
+        "energy of motion — the energy an object possesses while it is ____.",
+        "Write the missing word in the blank."
+      ],
+      "reveal_lines": ["energy of motion — the energy an object possesses while it is moving."],
+      "answers": ["moving"],
+      "write_slide": 15,
+      "reveal_slide": 16,
+      "diagram": []
+    },
+    "N2": {
+      "code": "N2",
+      "title": "Moving Objects Have Energy",
+      "lines": [
+        "All moving objects have energy of ____.",
+        "Energy is the ability to cause change. A moving object causes change, so it has energy."
+      ],
+      "notes_lines": [
+        "All moving objects have energy of ____.",
+        "Energy is the ability to cause change. A moving object causes change, so it has energy.",
+        "OBSERVE Marble collision — one moving marble rolls into a target marble.",
+        "What changed?"
+      ],
+      "write_lines": [
+        "All moving objects have energy of ____.",
+        "Energy is the ability to cause change. A moving object causes change, so it has energy."
+      ],
+      "reveal_lines": [
+        "All moving objects have energy of motion.",
+        "Energy is the ability to cause change. A moving object causes change, so it has energy.",
+        "\"The target marble changed from sitting still to moving.\""
+      ],
+      "answers": ["motion"],
+      "write_slide": 18,
+      "reveal_slide": 20,
+      "diagram": ["MOVING OBJECT", "CHANGE", "EVIDENCE"],
+      "diagram_slide": 17
+    },
+    "N3": {
+      "code": "N3",
+      "title": "People Use the Energy of Motion",
+      "lines": ["hammer (swinging)", "pendulum (swinging)", "wind (moving air)"],
+      "notes_lines": [
+        "Write or draw the change each moving object causes.",
+        "hammer (swinging)",
+        "pendulum (swinging)",
+        "wind (moving air)"
+      ],
+      "write_lines": [
+        "Write or draw the change each moving object causes.",
+        "hammer (swinging)",
+        "pendulum (swinging)",
+        "wind (moving air)"
+      ],
+      "reveal_lines": [
+        "hammer (swinging)",
+        "drives a nail into the wood",
+        "pendulum (swinging)",
+        "turns the clock gears",
+        "wind (moving air)",
+        "spins the turbine blades"
+      ],
+      "leak_terms": ["nail", "gears", "blades"],
+      "answers": [],
+      "write_slide": 22,
+      "reveal_slide": 23,
+      "diagram": ["MOVING OBJECT", "WHAT CHANGE DOES IT CAUSE?"]
+    },
+    "CHECK": {
+      "code": "CHECK",
+      "title": "Check Your Thinking",
+      "lines": ["How do we know a moving object has energy?"],
+      "notes_lines": [
+        "How do we know a moving object has energy?",
+        "Start with: \"We know because the moving object causes …\""
+      ],
+      "write_lines": [
+        "How do we know a moving object has energy?",
+        "Start with: \"We know because the moving object causes …\""
+      ],
+      "answers": [],
+      "write_slide": 24,
+      "reveal_slide": 25,
+      "diagram": []
+    },
+    "BQ_RETURN": {
+      "code": "BQ",
+      "title": "BQ · Now I Think",
+      "lines": ["How are energy, change, and movement of objects related?"],
+      "notes_lines": ["How are energy, change, and movement of objects related?"],
+      "write_lines": [
+        "How are energy, change, and movement of objects related?",
+        "Now I think…"
+      ],
+      "answers": [],
+      "write_slide": 27,
+      "reveal_slide": null,
+      "diagram": []
+    }
+  }
+}

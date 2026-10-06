@@ -1,3 +1,5 @@
+> ⚠️ **SUPERSEDED — Phase 7 (2026-10-04).** This file is retired. Canonical teacher-facing pacing is in `production/teacher-playbook/unit1-teacher-playbook.docx` + `docs/playbook/UNIT1_PACING_CALENDAR.md`. Chapter 2 is taught in **Week 1** (Wed 10/14 · Thu 10/15); Moving Marbles is **Friday FLEX**, not Tuesday. The day-of-week claims below are stale.
+
 # Week 2 Daily Lessons — Chapter 2: Moving Objects Have Energy
 
 > Working sequence. Options map to `docs/planning/DAILY_LESSON_ARCHITECTURE.md`. Times assume 40–45 min (see classroom simulation for 30-min notes).
@@ -38,6 +40,6 @@
 
 ## FRIDAY — Flex Science Friday (nonessential)
 - **RECOVER:** finish Moving Marbles · absent recovery · notes correction.
-- **PRACTICE:** Motion Evidence Sort · Observation vs Inference · "What Changed?" cards.
+- **PRACTICE:** Motion evidence card sort. Match the object, the change, and the evidence.
 - **EXTEND:** Motion Mystery Files · safe tabletop target challenge.
 - No Chapter 3 speed content. See `curriculum/chapter-02/student/02-ch2-friday-flex.md`.
