@@ -1,0 +1,23 @@
+---
+description: Authoritative chapter release lifecycle states and legal transitions.
+alwaysApply: true
+---
+# 70 — Release Lifecycle
+
+Always applicable. The machine table is `tools/chapter_qa/lifecycle.py`. Narrative: `docs/gold-standard/RELEASE_LIFECYCLE.md`.
+
+Authoritative states, exactly:
+
+- `BUILD_IN_PROGRESS`
+- `BUILT_UNCERTIFIED`
+- `INTERNAL_AUDIT_PENDING`
+- `INTERNAL_AUDIT_FAILED`
+- `INTERNALLY_CERTIFIED`
+- `EXTERNAL_AUDIT_PENDING`
+- `EXTERNAL_AUDIT_REJECTED`
+- `APPROVED_FOR_FREEZE`
+- `FROZEN`
+
+A lifecycle state is not a gate status. Do not treat `PASS` as a lifecycle state.
+
+`BUILT_UNCERTIFIED` must not transition to `FROZEN`. The only legal entry to `FROZEN` is from `APPROVED_FOR_FREEZE`.

@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grade4-energy.local/gold-standard/evidence.schema.json",
+  "title": "Chapter Factory gate evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "evidenceId",
+    "gateId",
+    "gateVersion",
+    "buildId",
+    "candidatePath",
+    "candidateHash",
+    "auditorRole",
+    "status",
+    "performed",
+    "mandatory",
+    "releaseBlocking",
+    "startedAt",
+    "completedAt",
+    "expectedInputs",
+    "observedInputs",
+    "inputHashes",
+    "toolVersions",
+    "thingBeingCertified",
+    "independentEvidenceSource",
+    "findings",
+    "evidencePaths",
+    "sourceFreezeId",
+    "sourceHash",
+    "candidateFreezeId",
+    "failureReason",
+    "notVerifiedReason",
+    "invalidationReasons",
+    "execution",
+    "inventory"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "evidenceId": {"type": "string", "minLength": 1},
+    "gateId": {"type": "string", "minLength": 1},
+    "gateVersion": {"type": "string", "minLength": 1},
+    "buildId": {"type": "string", "minLength": 1},
+    "candidatePath": {"type": "string", "minLength": 1},
+    "candidateHash": {"type": "string", "minLength": 1},
+    "auditorRole": {
+      "enum": [
+        "SOURCE_SCHOLAR",
+        "BUILDER",
+        "CURRICULUM_AUDITOR",
+        "CROSS_ARTIFACT_AUDITOR",
+        "VISUAL_QA_AUDITOR",
+        "PDF_OOXML_FORENSICS",
+        "PROVENANCE_AUDITOR",
+        "QA_ADVERSARY",
+        "RELEASE_JUDGE"
+      ]
+    },
+    "status": {"enum": ["PASS", "FAIL", "NOT_VERIFIED"]},
+    "performed": {"type": "boolean"},
+    "mandatory": {"type": "boolean"},
+    "releaseBlocking": {"type": "boolean"},
+    "startedAt": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
+    "completedAt": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
+    "expectedInputs": {"type": "array", "items": {"type": "string"}},
+    "observedInputs": {"type": "array", "items": {"type": "string"}},
+    "inputHashes": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "minLength": 1}},
+    "toolVersions": {"type": "object", "additionalProperties": {"type": "string"}},
+    "thingBeingCertified": {"type": "string"},
+    "independentEvidenceSource": {"type": "string"},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "code", "message"],
+        "properties": {
+          "severity": {"enum": ["BLOCKING", "HIGH", "MEDIUM", "LOW", "INFO"]},
+          "code": {"type": "string", "minLength": 1},
+          "message": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "evidencePaths": {"type": "array", "items": {"type": "string"}},
+    "sourceFreezeId": {"type": "string"},
+    "sourceHash": {"type": "string", "minLength": 1},
+    "candidateFreezeId": {"type": "string"},
+    "failureReason": {"type": ["string", "null"]},
+    "notVerifiedReason": {"type": ["string", "null"]},
+    "invalidationReasons": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "SOURCE_CHANGED",
+          "CANDIDATE_CHANGED",
+          "FREEZE_CHANGED",
+          "EXPECTED_INVENTORY_CHANGED",
+          "AUDITOR_VERSION_CHANGED",
+          "GATE_VERSION_CHANGED",
+          "TOOL_VERSION_CHANGED",
+          "DEPENDENCY_CHANGED"
+        ]
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "succeeded",
+        "detectorException",
+        "requiredInputsPresent",
+        "missingRender",
+        "missingEvidence",
+        "stale",
+        "gateSpecificFailure",
+        "unavailableEvidence"
+      ],
+      "properties": {
+        "succeeded": {"type": "boolean"},
+        "detectorException": {"type": "boolean"},
+        "requiredInputsPresent": {"type": "boolean"},
+        "missingRender": {"type": "boolean"},
+        "missingEvidence": {"type": "boolean"},
+        "stale": {"type": "boolean"},
+        "gateSpecificFailure": {"type": "boolean"},
+        "unavailableEvidence": {"type": "boolean"}
+      }
+    },
+    "inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "expected", "observed"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "expected": {"type": ["integer", "null"]},
+          "observed": {"type": ["integer", "null"]},
+          "explicitEmptyAllowed": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

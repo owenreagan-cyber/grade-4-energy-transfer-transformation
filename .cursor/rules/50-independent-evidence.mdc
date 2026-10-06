@@ -1,0 +1,25 @@
+---
+description: Every certification gate must cite evidence that is materially distinct from the thing being certified.
+alwaysApply: true
+---
+# 50 — Independent Evidence
+
+Always applicable.
+
+Every gate record declares:
+
+- `thingBeingCertified`
+- `independentEvidenceSource`
+
+Independent evidence must be materially distinct from the thing being certified.
+
+Reject self-validation, including:
+
+- a source model checked only against the same source model
+- a ledger checked only against the same ledger
+- a mutable working-tree golden checked only against the same mutable golden
+- a newly generated freeze checked only against the same newly generated freeze
+
+When a gate requires independent evidence, builder-only evidence cannot satisfy it.
+
+`docs/gold-standard/CERTIFICATION_LANGUAGE.md` and `tools/chapter_qa/` are the machine contract.

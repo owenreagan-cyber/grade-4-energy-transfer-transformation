@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "1.0",
+  "gates": [
+    {
+      "gateId": "SOURCE_AUTHORITY",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "SOURCE_SCHOLAR",
+      "dependencies": [],
+      "applicability": "always"
+    },
+    {
+      "gateId": "CHAPTER_SPEC",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CURRICULUM_AUDITOR",
+      "dependencies": ["SOURCE_AUTHORITY"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "CURRICULUM_CORRECTNESS",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CURRICULUM_AUDITOR",
+      "dependencies": ["SOURCE_AUTHORITY", "CHAPTER_SPEC"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "NOTES_STRUCTURE",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CROSS_ARTIFACT_AUDITOR",
+      "dependencies": ["CHAPTER_SPEC"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "SLIDES_STRUCTURE",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CROSS_ARTIFACT_AUDITOR",
+      "dependencies": ["CHAPTER_SPEC"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "NOTES_SLIDES_SYNC",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CROSS_ARTIFACT_AUDITOR",
+      "dependencies": ["NOTES_STRUCTURE", "SLIDES_STRUCTURE"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "ANSWER_LEAKAGE",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CURRICULUM_AUDITOR",
+      "dependencies": ["NOTES_STRUCTURE", "SLIDES_STRUCTURE"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "ASSESSMENT_ALIGNMENT",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CURRICULUM_AUDITOR",
+      "dependencies": ["CURRICULUM_CORRECTNESS"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "SCHEDULE_POLICY",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CURRICULUM_AUDITOR",
+      "dependencies": ["CHAPTER_SPEC"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "PLAYBOOK_ALIGNMENT",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CROSS_ARTIFACT_AUDITOR",
+      "dependencies": ["CHAPTER_SPEC"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "RENDER_COMPLETENESS",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "VISUAL_QA_AUDITOR",
+      "dependencies": ["NOTES_STRUCTURE", "SLIDES_STRUCTURE"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "RENDERED_VISUAL_QA",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "VISUAL_QA_AUDITOR",
+      "dependencies": ["RENDER_COMPLETENESS"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "PDF_QUALITY",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PDF_OOXML_FORENSICS",
+      "dependencies": ["RENDER_COMPLETENESS"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "FRESH_EXPORT",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PDF_OOXML_FORENSICS",
+      "dependencies": ["PDF_QUALITY"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "RETIRED_CONTENT",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": [],
+      "applicability": "always"
+    },
+    {
+      "gateId": "INVENTORY",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CROSS_ARTIFACT_AUDITOR",
+      "dependencies": [],
+      "applicability": "always"
+    },
+    {
+      "gateId": "RELEASE_EXACT_SET",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": ["INVENTORY"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "RELEASE_PARITY",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": ["RELEASE_EXACT_SET", "FRESH_EXPORT"],
+      "applicability": "always"
+    },
+    {
+      "gateId": "STATUS_AUTHORITY",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CROSS_ARTIFACT_AUDITOR",
+      "dependencies": [],
+      "applicability": "always"
+    },
+    {
+      "gateId": "ADVERSARIAL_QA",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "QA_ADVERSARY",
+      "dependencies": [],
+      "applicability": "always"
+    },
+    {
+      "gateId": "PRIOR_FROZEN_NONREGRESSION",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": [],
+      "applicability": "always"
+    },
+    {
+      "gateId": "POST_FREEZE_GOLDEN",
+      "gateVersion": "1.0",
+      "mandatory": false,
+      "releaseBlocking": false,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": true,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": ["PRIOR_FROZEN_NONREGRESSION"],
+      "applicability": "when_configured"
+    }
+  ]
+}

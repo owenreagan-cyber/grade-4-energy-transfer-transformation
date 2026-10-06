@@ -1,0 +1,13 @@
+---
+description: Frozen chapter classroom bytes stay immutable unless the owner reopens them.
+alwaysApply: true
+---
+# 80 — Frozen Chapter Protection
+
+Always applicable.
+
+Frozen Chapter 1 (`UNIT1_CH1_GOLD_STANDARD_VERSION` 1.1) and Chapter 2 (`UNIT1_CH2_GOLD_STANDARD_VERSION` 1.0) classroom bytes must not change without explicit owner-authorized reopening.
+
+Unchanged frozen artifacts are checked with hashes, immutable freeze identity, release parity, and narrow non-regression. Do not repeat a full re-audit of unchanged frozen bytes.
+
+Chapter Factory work must not modify those classroom artifacts while they remain frozen.

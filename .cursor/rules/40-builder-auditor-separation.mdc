@@ -1,0 +1,16 @@
+---
+description: Builder, auditor, adversary, and release-judge authority boundaries.
+alwaysApply: true
+---
+# 40 — Builder / Auditor Separation
+
+Always applicable. Extends rules 00 and 30. Does not replace them.
+
+- **BUILDER** may edit, build, run tests, and report mechanical results.
+- **BUILDER** may not independently certify release readiness.
+- **Auditors** are read-only on the canonical artifact under review. They write evidence and reports only.
+- **QA adversary** may mutate an isolated throwaway copy only. It must not repair canonical files and has no release authority.
+- **Release Judge** consumes evidence only. It has no edit, build, fix, promote, or freeze authority.
+- Only the Release Judge may issue `INTERNAL RELEASE CERTIFICATION: PASS` or `INTERNAL RELEASE CERTIFICATION: FAIL`.
+- The visual-art director produces design. That role is not the visual QA certifier.
+- A cross-artifact review report is gate evidence. It is not release certification.

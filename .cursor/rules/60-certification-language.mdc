@@ -1,0 +1,27 @@
+---
+description: Exact Chapter Factory gate statuses, finding severities, and certification verbs.
+alwaysApply: true
+---
+# 60 — Certification Language
+
+Always applicable for Chapter Factory gates. Rule 30 still governs legacy artifact reports.
+
+Machine gate status is exactly one of:
+
+- `PASS`
+- `FAIL`
+- `NOT_VERIFIED`
+
+Do not use `PASS_WITH_WARNINGS`, `MOSTLY_PASS`, `PARTIAL`, `CLEAN`, `READY`, or `OK` as a gate status.
+
+Finding severity is exactly one of: `BLOCKING`, `HIGH`, `MEDIUM`, `LOW`, `INFO`.
+
+A warning is a finding. It is not a gate status.
+
+`PASS` means the gate contract is fully satisfied. `performed: false` cannot be `PASS`. Missing required inputs, missing renders, missing slides, parser crashes, and failed tool execution are `FAIL`, not `NOT_VERIFIED`.
+
+`NOT_VERIFIED` is allowed only when that gate's definition sets `allowedNotVerified` and the record cites unavailable evidence.
+
+Lifecycle state is not a gate status. Release Judge status is exactly `PASS` or `FAIL`.
+
+Meanings of performed, inspected, rendered, observed, flagged, verified, certified, approved, and frozen: `docs/gold-standard/CERTIFICATION_LANGUAGE.md`.

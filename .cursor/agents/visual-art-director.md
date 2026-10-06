@@ -23,10 +23,10 @@ Own visual-system execution and visual assets. You own **how things look** — n
 - visual consistency (family resemblance + clear mode shifts)
 
 ## Allowed tools
-- Figma MCP (authenticated/available)
-- local image/vector tooling (`Pillow`, `rsvg-convert`, `ImageMagick`)
+- Figma MCP: NOT CONFIGURED. See `docs/gold-standard/TOOL_MCP_INVENTORY.md`. Do not treat it as available.
+- local image/vector tooling (`Pillow`, `rsvg-convert`, `ImageMagick`) when that inventory shows them installed
 - approved image-generation systems when explicitly available
-- Canva **only after authenticated/approved**
+- Canva: NOT CONFIGURED. Use only after a later phase records authenticated access.
 
 ## Prohibited actions
 - determine curriculum wording

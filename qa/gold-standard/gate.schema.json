@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grade4-energy.local/gold-standard/gate.schema.json",
+  "title": "Chapter Factory gate definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "gateId",
+    "gateVersion",
+    "mandatory",
+    "releaseBlocking",
+    "requiresIndependentEvidence",
+    "allowedNotVerified",
+    "expectedEvidenceRole",
+    "dependencies",
+    "applicability"
+  ],
+  "properties": {
+    "gateId": {"type": "string", "minLength": 1},
+    "gateVersion": {"type": "string", "minLength": 1},
+    "mandatory": {"type": "boolean"},
+    "releaseBlocking": {"type": "boolean"},
+    "requiresIndependentEvidence": {"type": "boolean"},
+    "allowedNotVerified": {"type": "boolean"},
+    "expectedEvidenceRole": {
+      "enum": [
+        "SOURCE_SCHOLAR",
+        "BUILDER",
+        "CURRICULUM_AUDITOR",
+        "CROSS_ARTIFACT_AUDITOR",
+        "VISUAL_QA_AUDITOR",
+        "PDF_OOXML_FORENSICS",
+        "PROVENANCE_AUDITOR",
+        "QA_ADVERSARY",
+        "RELEASE_JUDGE"
+      ]
+    },
+    "dependencies": {"type": "array", "items": {"type": "string"}},
+    "applicability": {"enum": ["always", "when_configured"]}
+  }
+}
