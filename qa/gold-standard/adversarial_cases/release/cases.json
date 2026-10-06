@@ -1,0 +1,138 @@
+[
+  {
+    "caseId": "REL01",
+    "family": "release",
+    "description": "REL01 via rel_delete",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_EXACT_SET",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "rel_delete",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "REL02",
+    "family": "release",
+    "description": "REL02 via rel_extra",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_EXACT_SET",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "rel_extra",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "REL03",
+    "family": "release",
+    "description": "REL03 via rel_retired",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RETIRED_CONTENT",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "rel_retired",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "REL04",
+    "family": "release",
+    "description": "REL04 via rel_manifest",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_PARITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "rel_manifest",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "REL05",
+    "family": "release",
+    "description": "REL05 via rel_artifact",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_PARITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "rel_artifact",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "REL06",
+    "family": "release",
+    "description": "REL06 via rel_launder",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_PARITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "rel_launder",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "REL07",
+    "family": "release",
+    "description": "REL07 via rel_status",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "STATUS_AUTHORITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "rel_status",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-RELEASE",
+    "family": "release",
+    "description": "C-RELEASE via rel_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_EXACT_SET",
+    "expectedStatus": "PASS",
+    "mutationMethod": "rel_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

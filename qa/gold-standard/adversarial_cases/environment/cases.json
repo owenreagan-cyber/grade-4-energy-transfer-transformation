@@ -1,0 +1,87 @@
+[
+  {
+    "caseId": "E01",
+    "family": "environment",
+    "description": "E01 via env_missing_tool",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "CLEAN_ROOM_REPRODUCTION",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "env_missing_tool",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "E02",
+    "family": "environment",
+    "description": "E02 via env_version",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PROVENANCE_INTEGRITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "env_version",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "E03",
+    "family": "environment",
+    "description": "E03 via env_absent",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PROVENANCE_INTEGRITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "env_absent",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "E04",
+    "family": "environment",
+    "description": "E04 via env_undeclared",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PROVENANCE_INTEGRITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "env_undeclared",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "E05",
+    "family": "environment",
+    "description": "E05 via env_locale",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PROVENANCE_INTEGRITY",
+    "expectedStatus": "NOT_APPLICABLE",
+    "mutationMethod": "env_locale",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "NOT_APPLICABLE"
+  }
+]

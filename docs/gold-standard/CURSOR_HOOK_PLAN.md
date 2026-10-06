@@ -20,7 +20,7 @@ Future hooks must call the tested functions below. They must not reimplement cer
 - A hook must not treat an empty input set as a pass.
 - Enable a hook only after the function it calls already has a failing test for the case the hook is meant to catch.
 
-Phase B adds evidence producers a later hook can call. Hooks stay disabled until those producers and the Phase C adversary both pass.
+Phase B adds evidence producers a later hook can call. Phase C exercises those producers with mutations, provenance closure, and Release Judge attacks. Hooks stay disabled. Enabling them is a later step, after this logic has stayed green.
 
 | Later hook | Calls | Stop condition |
 |---|---|---|

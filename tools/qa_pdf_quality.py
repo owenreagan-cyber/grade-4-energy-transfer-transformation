@@ -138,6 +138,7 @@ def collect_pdf_tools(path):
     info = _run(["pdfinfo", path])
     fonts = _run(["pdffonts", path])
     images = _run(["pdfimages", "-list", path])
+    raw = open(path, "rb").read()
     return {
         "qpdf": qpdf,
         "pdfinfo": _pdfinfo(info["stdout"]) if info["code"] == 0 else {"error": info["stderr"], "pageCount": None, "pageSizes": []},
@@ -145,6 +146,7 @@ def collect_pdf_tools(path):
         "images": _pdfimages(images["stdout"]) if images["code"] == 0 else [],
         "toolFailure": any(item.get("missing_tool") for item in (qpdf, info, fonts, images)),
         "qpdfCode": qpdf["code"],
+        "hasText": b"Tj" in raw or b"TJ" in raw,
     }
 
 
@@ -188,8 +190,9 @@ def assess_pdf(path, expectations, tool_output=None, policy=None):
             if classified["finding"]:
                 findings.append(classified["finding"])
                 fails = fails or classified["finding"]["failsGate"]
-    if expectations.get("textRequired") and not output.get("hasText", True) and output.get("images"):
-        add("image_only_page", "page has images and no text")
+    if expectations.get("textRequired") and output.get("hasText") is False:
+        add("missing_release_artifact", "required text is absent")
+        add("image_only_page", "page has no text")
     placements = expectations.get("placements") or []
     for placement in placements:
         dpi_x, dpi_y = effective_dpi(

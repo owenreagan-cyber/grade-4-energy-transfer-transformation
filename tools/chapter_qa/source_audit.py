@@ -30,7 +30,8 @@ def derivation(claim: dict) -> str:
     approved = _norm(claim.get("approvedText") or "")
     if source_text and candidate_text and candidate_text == source_text:
         return "SOURCE_DERIVED"
-    if approved and candidate_text and candidate_text == approved:
+    approval = (claim.get("approvalId") or "").strip()
+    if approved and candidate_text and candidate_text == approved and approval and approval not in (source_id, candidate_id):
         return "APPROVED_DERIVED"
     return "UNRESOLVED"
 

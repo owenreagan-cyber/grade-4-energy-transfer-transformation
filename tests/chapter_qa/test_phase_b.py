@@ -77,7 +77,7 @@ class SourceTests(unittest.TestCase):
         }
         self.assertEqual(derivation(claim), "SOURCE_DERIVED")
         self.assertEqual(derivation({**claim, "sourceId": "same", "candidateId": "same"}), "UNRESOLVED")
-        approved = {**claim, "sourceText": "", "approvedText": claim["candidateText"]}
+        approved = {**claim, "sourceText": "", "approvedText": claim["candidateText"], "approvalId": "owner-decision-9"}
         self.assertEqual(derivation(approved), "APPROVED_DERIVED")
 
     def test_generated_agreement_cannot_pass_source_authority(self):
@@ -133,6 +133,7 @@ class SourceTests(unittest.TestCase):
             "sourceLocation": "approved decision",
             "sourceId": "decision-1",
             "candidateId": "notes-1",
+            "approvalId": "owner-decision-9",
         }], build_identity(), "CURRICULUM_CORRECTNESS", path, auditor_role="CURRICULUM_AUDITOR")
         self.assertEqual(result.status, "PASS")
 

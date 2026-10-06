@@ -1,0 +1,104 @@
+[
+  {
+    "caseId": "B01",
+    "family": "baseline",
+    "description": "B01 via launder_golden",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "POST_FREEZE_GOLDEN",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "launder_golden",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "B02",
+    "family": "baseline",
+    "description": "B02 via launder_hash",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "POST_FREEZE_GOLDEN",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "launder_hash",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "B03",
+    "family": "baseline",
+    "description": "B03 via repin_baseline",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "POST_FREEZE_GOLDEN",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "repin_baseline",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "B04",
+    "family": "baseline",
+    "description": "B04 via build_swap",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "build_swap",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "B05",
+    "family": "baseline",
+    "description": "B05 via stale_record",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "stale_record",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "B06",
+    "family": "baseline",
+    "description": "B06 via inventory_rewrite",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDER_COMPLETENESS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "inventory_rewrite",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

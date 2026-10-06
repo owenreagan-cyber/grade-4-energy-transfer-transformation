@@ -1,0 +1,121 @@
+[
+  {
+    "caseId": "O01",
+    "family": "ooxml",
+    "description": "O01 via ooxml_rel",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "OOXML_FORENSICS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "ooxml_rel",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "O02",
+    "family": "ooxml",
+    "description": "O02 via ooxml_target",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "OOXML_FORENSICS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "ooxml_target",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "O03",
+    "family": "ooxml",
+    "description": "O03 via ooxml_hidden",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "OOXML_FORENSICS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "ooxml_hidden",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "O04",
+    "family": "ooxml",
+    "description": "O04 via ooxml_xml",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "OOXML_FORENSICS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "ooxml_xml",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "O05",
+    "family": "ooxml",
+    "description": "O05 via ooxml_notes",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "OOXML_FORENSICS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "ooxml_notes",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "O06",
+    "family": "ooxml",
+    "description": "O06 via ooxml_external",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "OOXML_FORENSICS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "ooxml_external",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-OOXML",
+    "family": "ooxml",
+    "description": "C-OOXML via ooxml_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "OOXML_FORENSICS",
+    "expectedStatus": "PASS",
+    "mutationMethod": "ooxml_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

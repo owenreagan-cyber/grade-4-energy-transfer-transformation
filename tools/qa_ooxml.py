@@ -13,6 +13,7 @@ from xml.etree import ElementTree
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from chapter_qa.emit import seal
 from chapter_qa.severity import resolve_severity
 
 NS = {
@@ -137,6 +138,39 @@ def inspect_package(path, *, notes_required=False, allow_hidden=False):
         "summary": summary,
         "commandFailed": False,
     }
+
+
+def emit_ooxml_gate(path, identity, evidence_path, *, notes_required=False, allow_hidden=False, auditor_role="PDF_OOXML_FORENSICS"):
+    """Structural OOXML evidence for OOXML_FORENSICS. Not a PDF or visual pass."""
+    assessed = inspect_package(path, notes_required=notes_required, allow_hidden=allow_hidden)
+    findings = [{"severity": item["severity"], "code": item["code"], "message": item["message"]} for item in assessed["findings"]]
+    data = {
+        "evidenceId": "ooxml-gate",
+        "gateId": "OOXML_FORENSICS",
+        "auditorRole": auditor_role,
+        "performed": True,
+        "expectedInputs": ["package"],
+        "observedInputs": [] if assessed["failsGate"] or assessed["commandFailed"] else ["package"],
+        "thingBeingCertified": "candidate-package:%s" % identity.candidateHash,
+        "independentEvidenceSource": "ooxml-parts:%s" % identity.candidateHash,
+        "findings": findings,
+        "evidencePaths": [evidence_path],
+        "failureReason": None,
+        "notVerifiedReason": None,
+        "invalidationReasons": [],
+        "execution": {
+            "succeeded": not assessed["commandFailed"],
+            "detectorException": assessed["commandFailed"],
+            "requiredInputsPresent": not assessed["commandFailed"],
+            "missingRender": False,
+            "missingEvidence": assessed["commandFailed"],
+            "stale": False,
+            "gateSpecificFailure": assessed["failsGate"],
+            "unavailableEvidence": False,
+        },
+        "inventory": [{"name": "packageParts", "expected": 1, "observed": 0 if assessed["failsGate"] or assessed["commandFailed"] else 1}],
+    }
+    return seal(data, identity)
 
 
 def write_ooxml_observation(path, evidence_path, *, notes_required=False, allow_hidden=False):

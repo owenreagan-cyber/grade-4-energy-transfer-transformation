@@ -103,12 +103,19 @@ def emit_cross_evidence(left, right, identity, gate_id, evidence_path: str, *, d
     for side in (left, right):
         if side.get("artifactClass") not in ARTIFACT_CLASSES:
             raise ValueError("unknown artifact class %s" % side.get("artifactClass"))
+    same_bytes = left.get("contentHash") and left.get("contentHash") == right.get("contentHash")
     pair = frozenset({left.get("artifactClass"), right.get("artifactClass")})
     allowed = GATE_PAIRS[gate_id]
     pair_ok = pair in allowed if gate_id == "ASSESSMENT_ALIGNMENT" else pair == allowed
     diffs = compare(left, right, dimensions or GATE_DIMENSIONS[gate_id])
     findings = []
-    fails = not pair_ok
+    fails = not pair_ok or bool(same_bytes)
+    if same_bytes:
+        findings.append({
+            "severity": "BLOCKING",
+            "code": "same_artifact",
+            "message": "the two sides have the same content hash",
+        })
     if not pair_ok:
         findings.append({
             "severity": "HIGH",

@@ -28,8 +28,8 @@ Evidence producers now exist, so four thin skills were added under `.cursor/skil
 | `cross-artifact-auditor` | IMPLEMENT | Compares artifact classes and refuses source-authority claims. |
 | `visual-qa-auditor` | IMPLEMENT | Runs render completeness and rendered inspection. |
 | `pdf-ooxml-forensics` | IMPLEMENT | Runs PDF tools and OOXML structure. |
-| Adversary skill | DEFER | Full mutation architecture is Phase C. |
-| Provenance skill | DEFER | Clean-room rebuild is still later. |
+| `qa-adversary` | IMPLEMENT | Calls `tools/run_adversarial_qa.py` and cannot assign PASS. |
+| `provenance-auditor` | IMPLEMENT | Calls the closure and clean-room modules. |
 | Release-judge skill | UNNEEDED | The judge remains a tested function. |
 | Parallel `.agents/skills` copies | UNNEEDED | Skills stay in `.cursor/skills/`. |
 

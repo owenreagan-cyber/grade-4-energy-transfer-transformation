@@ -645,8 +645,11 @@ class ContractTests(unittest.TestCase):
         self.assertNotIn("37", raw)
         gates = load_gates()
         ids = [item.gateId for item in gates]
-        self.assertEqual(len(ids), 22)
+        self.assertEqual(len(ids), 26)
         self.assertIn("POST_FREEZE_GOLDEN", ids)
+        for extra in ("OOXML_FORENSICS", "SOURCE_CLOSURE", "CLEAN_ROOM_REPRODUCTION", "PROVENANCE_INTEGRITY"):
+            self.assertIn(extra, ids)
+            self.assertEqual(next(item.applicability for item in gates if item.gateId == extra), "when_configured")
         self.assertNotIn("POST_FREEZE_GOLDEN", [item.gateId for item in default_release_gates(gates)])
         post = next(item for item in gates if item.gateId == "POST_FREEZE_GOLDEN")
         self.assertFalse(post.mandatory)

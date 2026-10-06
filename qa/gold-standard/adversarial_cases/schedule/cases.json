@@ -1,0 +1,70 @@
+[
+  {
+    "caseId": "SC01",
+    "family": "schedule",
+    "description": "SC01 via friday_required",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "SCHEDULE_POLICY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "friday_required",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "SC02",
+    "family": "schedule",
+    "description": "SC02 via friday_date",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "SCHEDULE_POLICY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "friday_date",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "SC03",
+    "family": "schedule",
+    "description": "SC03 via friday_table",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "SCHEDULE_POLICY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "friday_table",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "SC04",
+    "family": "schedule",
+    "description": "SC04 via friday_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "SCHEDULE_POLICY",
+    "expectedStatus": "PASS",
+    "mutationMethod": "friday_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

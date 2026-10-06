@@ -242,6 +242,50 @@
       "expectedEvidenceRole": "PROVENANCE_AUDITOR",
       "dependencies": ["PRIOR_FROZEN_NONREGRESSION"],
       "applicability": "when_configured"
+    },
+    {
+      "gateId": "OOXML_FORENSICS",
+      "gateVersion": "1.0",
+      "mandatory": false,
+      "releaseBlocking": false,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PDF_OOXML_FORENSICS",
+      "dependencies": [],
+      "applicability": "when_configured"
+    },
+    {
+      "gateId": "SOURCE_CLOSURE",
+      "gateVersion": "1.0",
+      "mandatory": false,
+      "releaseBlocking": false,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": [],
+      "applicability": "when_configured"
+    },
+    {
+      "gateId": "CLEAN_ROOM_REPRODUCTION",
+      "gateVersion": "1.0",
+      "mandatory": false,
+      "releaseBlocking": false,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": ["SOURCE_CLOSURE"],
+      "applicability": "when_configured"
+    },
+    {
+      "gateId": "PROVENANCE_INTEGRITY",
+      "gateVersion": "1.0",
+      "mandatory": false,
+      "releaseBlocking": false,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "PROVENANCE_AUDITOR",
+      "dependencies": ["SOURCE_CLOSURE"],
+      "applicability": "when_configured"
     }
   ]
 }

@@ -1,0 +1,155 @@
+[
+  {
+    "caseId": "H01",
+    "family": "test-harness",
+    "description": "H01 via harness_import",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ADVERSARIAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_import",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "H02",
+    "family": "test-harness",
+    "description": "H02 via harness_skip",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ADVERSARIAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_skip",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "H03",
+    "family": "test-harness",
+    "description": "H03 via harness_empty",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDER_COMPLETENESS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_empty",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "H04",
+    "family": "test-harness",
+    "description": "H04 via harness_silent",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ADVERSARIAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_silent",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "H05",
+    "family": "test-harness",
+    "description": "H05 via harness_name",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "CURRICULUM_CORRECTNESS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_name",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "H06",
+    "family": "test-harness",
+    "description": "H06 via harness_truncate",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ADVERSARIAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_truncate",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "H07",
+    "family": "test-harness",
+    "description": "H07 via harness_severity",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ADVERSARIAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_severity",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "H08",
+    "family": "test-harness",
+    "description": "H08 via harness_status",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ADVERSARIAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "harness_status",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-HARNESS",
+    "family": "test-harness",
+    "description": "C-HARNESS via harness_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ADVERSARIAL_QA",
+    "expectedStatus": "PASS",
+    "mutationMethod": "harness_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

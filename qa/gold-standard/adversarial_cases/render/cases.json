@@ -1,0 +1,172 @@
+[
+  {
+    "caseId": "R01",
+    "family": "render",
+    "description": "R01 via render_delete",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDER_COMPLETENESS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "render_delete",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "R02",
+    "family": "render",
+    "description": "R02 via render_dup",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDER_COMPLETENESS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "render_dup",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "R03",
+    "family": "render",
+    "description": "R03 via render_sub",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDER_COMPLETENESS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "render_sub",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "R04",
+    "family": "render",
+    "description": "R04 via crop_off",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDERED_VISUAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "crop_off",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "R05",
+    "family": "render",
+    "description": "R05 via overlap",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDERED_VISUAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "overlap",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "R06",
+    "family": "render",
+    "description": "R06 via tiny_font",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDERED_VISUAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "tiny_font",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "R07",
+    "family": "render",
+    "description": "R07 via small_write",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDERED_VISUAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "small_write",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "R08",
+    "family": "render",
+    "description": "R08 via missing_crop",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDERED_VISUAL_QA",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "missing_crop",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-RENDER",
+    "family": "render",
+    "description": "C-RENDER via render_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDER_COMPLETENESS",
+    "expectedStatus": "PASS",
+    "mutationMethod": "render_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-VISUAL",
+    "family": "render",
+    "description": "C-VISUAL via visual_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RENDERED_VISUAL_QA",
+    "expectedStatus": "PASS",
+    "mutationMethod": "visual_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

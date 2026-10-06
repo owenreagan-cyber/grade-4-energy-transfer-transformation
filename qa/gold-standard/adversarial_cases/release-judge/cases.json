@@ -1,0 +1,155 @@
+[
+  {
+    "caseId": "RJ01",
+    "family": "release-judge",
+    "description": "RJ01 via judge_missing",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "judge_missing",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "RJ02",
+    "family": "release-judge",
+    "description": "RJ02 via build_swap",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "build_swap",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "RJ03",
+    "family": "release-judge",
+    "description": "RJ03 via stale_record",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "stale_record",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "RJ04",
+    "family": "release-judge",
+    "description": "RJ04 via judge_builder",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "judge_builder",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "RJ05",
+    "family": "release-judge",
+    "description": "RJ05 via judge_not_verified",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "judge_not_verified",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "RJ06",
+    "family": "release-judge",
+    "description": "RJ06 via judge_version",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "judge_version",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "RJ07",
+    "family": "release-judge",
+    "description": "RJ07 via judge_blocking",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "judge_blocking",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "RJ08",
+    "family": "release-judge",
+    "description": "RJ08 via judge_hash",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "judge_hash",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-JUDGE",
+    "family": "release-judge",
+    "description": "C-JUDGE via judge_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "RELEASE_JUDGE",
+    "expectedStatus": "PASS",
+    "mutationMethod": "judge_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "caseId": "L01",
+    "family": "leakage",
+    "description": "L01 via early_answer",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "early_answer",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "L02",
+    "family": "leakage",
+    "description": "L02 via prefill",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "prefill",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "L03",
+    "family": "leakage",
+    "description": "L03 via speaker_early",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "speaker_early",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "L04",
+    "family": "leakage",
+    "description": "L04 via key_split",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "key_split",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-LEAK",
+    "family": "leakage",
+    "description": "C-LEAK via assessment_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "PASS",
+    "mutationMethod": "assessment_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

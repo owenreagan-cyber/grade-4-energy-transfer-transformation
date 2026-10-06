@@ -1,0 +1,121 @@
+[
+  {
+    "caseId": "P01",
+    "family": "pdf",
+    "description": "P01 via pdf_corrupt",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PDF_QUALITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "pdf_corrupt",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "P02",
+    "family": "pdf",
+    "description": "P02 via pdf_size",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PDF_QUALITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "pdf_size",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "P03",
+    "family": "pdf",
+    "description": "P03 via pdf_low",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PDF_QUALITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "pdf_low",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "P04",
+    "family": "pdf",
+    "description": "P04 via pdf_keyswap",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PDF_QUALITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "pdf_keyswap",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "P05",
+    "family": "pdf",
+    "description": "P05 via pdf_stale",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PDF_QUALITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "pdf_stale",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "P06",
+    "family": "pdf",
+    "description": "P06 via pdf_image_only",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PDF_QUALITY",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "pdf_image_only",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-PDF",
+    "family": "pdf",
+    "description": "C-PDF via pdf_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "PDF_QUALITY",
+    "expectedStatus": "PASS",
+    "mutationMethod": "pdf_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

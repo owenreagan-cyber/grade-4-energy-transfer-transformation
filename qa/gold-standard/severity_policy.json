@@ -21,7 +21,7 @@
     "unsupported_addition": {"severity": "HIGH", "failsGate": true},
     "generated_agreement": {"severity": "BLOCKING", "failsGate": true},
     "answer_mismatch": {"severity": "HIGH", "failsGate": true},
-    "unexpected_external_link": {"severity": "MEDIUM", "failsGate": false},
+    "unexpected_external_link": {"severity": "HIGH", "failsGate": true},
     "font_not_embedded": {"severity": "MEDIUM", "failsGate": false},
     "image_only_page": {"severity": "INFO", "failsGate": false}
   }

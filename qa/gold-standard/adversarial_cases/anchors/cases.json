@@ -1,0 +1,121 @@
+[
+  {
+    "caseId": "S01",
+    "family": "anchors",
+    "description": "S01 via anchor_extra",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "anchor_extra",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "S02",
+    "family": "anchors",
+    "description": "S02 via slide_extra",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "slide_extra",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "S03",
+    "family": "anchors",
+    "description": "S03 via remove_blank",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "remove_blank",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "S04",
+    "family": "anchors",
+    "description": "S04 via reorder",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "reorder",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "S05",
+    "family": "anchors",
+    "description": "S05 via anchor_code",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "anchor_code",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "S06",
+    "family": "anchors",
+    "description": "S06 via speaker_line",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "speaker_line",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-ANCHOR",
+    "family": "anchors",
+    "description": "C-ANCHOR via anchor_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "NOTES_SLIDES_SYNC",
+    "expectedStatus": "PASS",
+    "mutationMethod": "anchor_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

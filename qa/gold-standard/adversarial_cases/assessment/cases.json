@@ -1,0 +1,104 @@
+[
+  {
+    "caseId": "A01",
+    "family": "assessment",
+    "description": "A01 via quiz_answer",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "quiz_answer",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "A02",
+    "family": "assessment",
+    "description": "A02 via bad_question",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "bad_question",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "A03",
+    "family": "assessment",
+    "description": "A03 via drop_score",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "drop_score",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "A04",
+    "family": "assessment",
+    "description": "A04 via key_disagree",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "key_disagree",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "A05",
+    "family": "assessment",
+    "description": "A05 via untaught",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "CURRICULUM_CORRECTNESS",
+    "expectedStatus": "FAIL",
+    "mutationMethod": "untaught",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": false,
+    "safety": "workspace-only",
+    "heldOutEligible": true,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  },
+  {
+    "caseId": "C-ASSESS",
+    "family": "assessment",
+    "description": "C-ASSESS via assessment_clean",
+    "historicalOrigin": "phase-c-catalog",
+    "targetGate": "ASSESSMENT_ALIGNMENT",
+    "expectedStatus": "PASS",
+    "mutationMethod": "assessment_clean",
+    "requiredInputs": [
+      "seed"
+    ],
+    "cleanControl": true,
+    "safety": "workspace-only",
+    "heldOutEligible": false,
+    "notes": "Attack text is generated from the seed at runtime.",
+    "implemented": "IMPLEMENTED"
+  }
+]

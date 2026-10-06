@@ -22,7 +22,8 @@ Attack the QA system itself. Show whether a gate can be satisfied by missing inp
 ## Allowed
 - read the canonical repo
 - mutate an isolated throwaway copy
-- write evidence of the attack and of what the gate did
+- write evidence under `qa/work/`
+- run `tools/run_adversarial_qa.py`
 
 ## Prohibited
 - repair canonical files
