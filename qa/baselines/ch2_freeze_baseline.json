@@ -1,6 +1,6 @@
 {
   "role": "Reviewed Chapter 2 identity. Post-freeze comparison uses freeze_commit via git, not these working-tree hashes.",
-  "freeze_commit": "PENDING",
+  "freeze_commit": "a491193ddf74598910247385a2f55a4458b8b55c",
   "maintenance": "After freeze, change protected text only by a reviewed commit that updates qa/baselines/ch2_golden_text.json and this file together. qa_ch2_golden.py --mode post-freeze reads the committed golden file. Editing both files in the working tree does not arm or satisfy post-freeze mode.",
   "hashes": {
     "qa/baselines/ch2_golden_text.json": "eac1b1a3d68eb18208fec5a255dbb87cae7f88750536c984ca33b0ba150437fc",
