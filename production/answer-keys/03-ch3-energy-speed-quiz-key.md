@@ -1,23 +1,15 @@
-# Answer Key — Chapter 3 Quiz
+# Chapter 3 Quiz Key
 
-- **Artifact:** `production/quizzes/03-ch3-energy-speed-quiz.docx`
-- **Source alignment:** Reader Ch.3 pp. 13–16; TG L4/L5; AP 4.1/4.2. PE 4-PS3-1.
+8 items · 12 points. Score: ______ / 12 = ______ %.
+FLEX. Friday 2026-10-23 or makeup within 2 school days. Not a first lesson.
 
-| Item | Correct/expected response | Acceptable alternatives | Reasoning | Common misconception | Scoring note | What NOT to penalize |
-|---|---|---|---|---|---|---|
-| 1 | a) a measurement of the distance an object travels over an amount of time | — | Reader p.13 | speed = "how fast" (colloquial) | 1 pt | — |
-| 2 | b) energy of motion | — | Reader p.9 (Ch.2) | energy of motion = "sound energy" | 1 pt | — |
-| 3 | b) the SAME ball moving slowly, then faster | — | TG L5 Know the Science (same-object comparison) | picking a mass comparison (a, d) | 1 pt | — |
-| 4 | greatest change = 3 books; the group measured the change (cup displacement), NOT the speed | correct height + "measured the change" | measured vs inferred | "we measured the speed" | 3 pts | informal phrasing |
-| 5 | taller bar at higher ramp → faster → greater change → greater energy of motion (same ball) | claim + change | graph interpretation | "the graph measured energy" | 2 pts | — |
-| 6 | M: cup moved 18 cm · ramp height 3 books; I: ball faster · faster ball more energy | correct classification (2 M, 2 I) | measured vs inferred | treating inference as measurement | 4 pts (1 each) | — |
-| 7 | hard throw = greater energy of motion; evidence = the hand moved back + sting (greater change) | claim + change | Reader p.14 | — | 2 pts | informal phrasing |
-| 8 | the ruler measured the change (displacement), not energy; energy is inferred | identifies the error | TG L4 Know the Standards | — | 2 pts | — |
-| 9 | c) greater | — | Reader p.14 | — | 1 pt | — |
-| 10 (BONUS) | keeping the object the same makes sure only speed changes (mass/type don't confound the comparison) | fair-test reasoning | TG L5 Know the Science | — | 1 pt bonus | — |
+1. (1) distance. Reader p. 13.
+2. (1) A. one ball at two speeds.
+3. (2) A greater change. Accept a farther cup move, a higher bounce, or a louder sound. No speed number.
+4. (2) Measured centimeters (ramp height and/or cup movement). Inferred the speed relationship.
+5. (1) ramp height. The ball stayed the same.
+6. (1) A. ramp height (cm) and average cup movement (cm).
+7. (2) A greater change, such as the cup or bucket moving farther.
+8. (2) For the same object, greater speed is related to greater energy of motion. A greater change is the evidence.
 
-## Out-of-scope confirmation
-- No mass comparison as central · no collisions · no transfer/transformation · no engineering · no kinetic/potential · no "we measured energy."
-
-## Total
-~18 points + 1 bonus (adjust denominator per school grading policy — see OPEN_QUESTIONS).
+Do not accept kinetic, potential, mechanical, or a speed in meters per second.

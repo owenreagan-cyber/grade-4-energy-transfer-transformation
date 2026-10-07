@@ -2,8 +2,8 @@
 
 - **Lab #:** Chapter 3 application investigation (Lab 3b)
 - **Title:** Drop It
-- **Chapter/week:** Chapter 3 · Week 3 (Day 4)
-- **Tag:** CORE (application)
+- **Chapter/week:** Chapter 3 · Week 2 · Friday 2026-10-23
+- **Tag:** FLEX (not a first lesson; Ramp It Up 2.0 is the only required investigation)
 - **Question:** How does changing the drop height affect the change caused by the same falling object?
 - **Big Question:** How are energy and speed related?
 - **Concept:** Same as Ramp It Up! 2.0 — for the SAME object, a greater drop height is associated with faster motion and greater energy of motion, shown by a greater observed change (crater width). Students measure the change, NOT speed or energy.

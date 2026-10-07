@@ -1,0 +1,499 @@
+{
+  "schema": "chapter-spec-1.0",
+  "chapter": 3,
+  "identityChapter": 3,
+  "title": "Energy and Speed Are Related",
+  "bigQuestion": "How are energy and speed related?",
+  "lifecycle": "BUILD_IN_PROGRESS",
+  "candidateFreezeId": "UNFROZEN",
+  "sourceRanges": [
+    "Reader printed pp. 13-16",
+    "Teacher Guide Lesson 4 Investigating Energy and Speed, printed p. 33",
+    "Teacher Guide Lesson 5 Energy and Speed Are Related, printed p. 39"
+  ],
+  "concepts": [
+    "Speed is a measurement of the distance an object travels over an amount of time.",
+    "Compare the same object at different speeds.",
+    "Greater speed of that object is related to greater energy of motion.",
+    "The evidence is a greater observed change.",
+    "Students are not required to quantitatively measure speed or energy.",
+    "Ramp It Up 2.0 measures ramp height and target movement in centimeters.",
+    "Speed and the energy relationship are inferred from the measured change."
+  ],
+  "exclusions": [
+    "kinetic",
+    "potential",
+    "mechanical",
+    "radiant",
+    "compression wave",
+    "inertia",
+    "comparing different masses",
+    "meters per second",
+    "a measured energy quantity",
+    "ramp height is a measurement of speed",
+    "a second ramp lab",
+    "Drop It as the first lesson on required Chapter 3 ideas",
+    "fake speed values"
+  ],
+  "vocabulary": [
+    {
+      "term": "speed",
+      "partOfSpeech": "n.",
+      "definition": "a measurement of the distance an object travels over an amount of time",
+      "readerPage": 13,
+      "status": "REQUIRED",
+      "newInChapter": true
+    }
+  ],
+  "revisitedVocabulary": ["energy", "change", "motion", "energy of motion"],
+  "visualTheme": {
+    "name": "Measurement / Data",
+    "paletteFile": "assets/visual-system/chapter-themes/ch3-palette.svg",
+    "cobalt": "#1B4FC2",
+    "chartreuse": "#5E8A18",
+    "charcoal": "#2B2F36",
+    "lightGray": "#E9EBEF",
+    "show": ["same-object speed comparison", "measured data", "a fair test", "the ramp investigation"],
+    "doNotDraw": ["fake speed values", "meters per second", "ramp height labeled as speed"]
+  },
+  "calendarResolution": {
+    "approvalId": "CHAPTER_03_PRODUCTION_PROMPT",
+    "datedAuthority": "docs/playbook/UNIT1_PACING_CALENDAR.md",
+    "statement": "Drop It stays on Friday 2026-10-23 as FLEX. Required Chapter 3 ideas are taught Monday 2026-10-19 through Thursday 2026-10-22. Friday is not the first lesson on those ideas.",
+    "teacherGuide": "Lesson 4 Day 1 is Ramp It Up (AP 4.1). Lesson 4 Day 2 is Drop It (AP 4.2).",
+    "resolution": "The dated calendar is the only calendar. Required Teacher Guide science is taught Monday through Thursday. Drop It is not moved onto a weekday, and it is not used as the first lesson on the required ideas."
+  },
+  "anchors": [
+    {
+      "code": "BQ",
+      "order": 1,
+      "status": "REQUIRED",
+      "title": "Big Question",
+      "readerPages": "13",
+      "sessionDate": "2026-10-19",
+      "notesPage": 1,
+      "lines": ["How are energy and speed related?"],
+      "answers": [],
+      "speakerNote": "Ask the question. Do not give the relationship yet."
+    },
+    {
+      "code": "V1",
+      "order": 2,
+      "status": "REQUIRED",
+      "title": "Vocabulary — Speed",
+      "readerPages": "13",
+      "sessionDate": "2026-10-19",
+      "notesPage": 1,
+      "lines": ["speed — a measurement of the ____ an object travels over an amount of time."],
+      "answers": ["distance"],
+      "blankPositions": ["the word after measurement of the"],
+      "speakerNote": "On the write slide, do not say the missing word. Reveal it only on the reveal slide."
+    },
+    {
+      "code": "N1",
+      "order": 3,
+      "status": "REQUIRED",
+      "title": "One Ball, Two Speeds",
+      "readerPages": "13-14",
+      "sessionDate": "2026-10-19",
+      "notesPage": 1,
+      "lines": [
+        "Compare the ____ ball at two speeds.",
+        "A bigger ____ is how we know the faster ball had more energy of motion."
+      ],
+      "answers": ["same", "change"],
+      "blankPositions": ["ball descriptor", "what we observe"],
+      "speakerNote": "Teach this before any measured Ramp It Up trial. Do not say the missing words on the write slide."
+    },
+    {
+      "code": "DEMO",
+      "order": 4,
+      "status": "REQUIRED",
+      "title": "Ramp and Target Preview",
+      "class": "demo",
+      "sessionDate": "2026-10-19",
+      "minutes": 4,
+      "materials": ["cardboard ramp", "2 books", "1 ball", "1 cup"],
+      "lines": ["Roll one ball from a lower setup and from a higher setup. Say which cup move was bigger. Do not measure. Do not say a speed number."],
+      "answers": [],
+      "speakerNote": "One ball. Two setups. Students name the bigger cup move. No centimeters and no speed number."
+    },
+    {
+      "code": "LAB",
+      "order": 5,
+      "status": "REQUIRED",
+      "title": "Ramp It Up 2.0",
+      "class": "lab",
+      "provenance": "ADAPTED",
+      "sourceActivity": "AP 4.1 Ramp It Up",
+      "sessionDates": ["2026-10-20", "2026-10-21"],
+      "materials": ["cardboard ramp", "3 books", "1 ball", "1 cup", "centimeter ruler"],
+      "protocolStatement": "Ramp It Up 2.0 uses one ball. Heights come from 1, 2, and 3 books. Measure the vertical ramp height in centimeters. Measure how far the target moves in centimeters. Run one calibration trial and do not record it. Record three trials at each height. That is nine measured trials. Graph ramp height in centimeters against average target movement in centimeters. Do not write a speed in meters per second. Ramp height is not a measurement of speed. The engineering challenge is to move the target as close as possible to 30 centimeters without going past.",
+      "answers": [],
+      "speakerNote": "Do not record the calibration trial. Nine measured trials. No speed number. Ramp height is not speed."
+    },
+    {
+      "code": "N2",
+      "order": 6,
+      "status": "REQUIRED",
+      "title": "What We Measured",
+      "readerPages": "13-14",
+      "sessionDate": "2026-10-20",
+      "notesPage": 2,
+      "lines": [
+        "We measure ramp ____ in centimeters.",
+        "We ____ the speed relationship from that change. We do not measure a speed number.",
+        "The one thing we change is ramp ____.",
+        "We keep the ____ ball."
+      ],
+      "answers": ["height", "infer", "height", "same"],
+      "blankPositions": ["what is measured", "how we reason", "the one change", "which ball"],
+      "speakerNote": "Students write before the reveal. Infer means we reason from the change."
+    },
+    {
+      "code": "GRAPH",
+      "order": 7,
+      "status": "REQUIRED",
+      "title": "Ramp Height and Average Movement",
+      "class": "lab",
+      "sessionDate": "2026-10-21",
+      "minutes": 8,
+      "lines": ["The graph axes are ramp height in centimeters and average target movement in centimeters."],
+      "answers": [],
+      "speakerNote": "Do not label either axis as speed. Do not write meters per second."
+    },
+    {
+      "code": "N3",
+      "order": 8,
+      "status": "REQUIRED",
+      "title": "Steeper Ramp",
+      "readerPages": "15",
+      "sessionDate": "2026-10-22",
+      "notesPage": 3,
+      "lines": ["From the steeper ramp, that ball made a ____ change."],
+      "answers": ["greater"],
+      "blankPositions": ["the size of the change"],
+      "speakerNote": "Reader page 15. One ball. Do not say the missing word on the write slide."
+    },
+    {
+      "code": "N4",
+      "order": 9,
+      "status": "REQUIRED",
+      "title": "The Bounce",
+      "readerPages": "16",
+      "sessionDate": "2026-10-22",
+      "notesPage": 3,
+      "lines": ["The faster ball bounced ____ than the slower ball."],
+      "answers": ["higher"],
+      "blankPositions": ["the bounce comparison"],
+      "speakerNote": "Reader page 16. A louder sound is also a bigger change. Do not say the missing word on the write slide."
+    },
+    {
+      "code": "CHECK",
+      "order": 10,
+      "status": "REQUIRED",
+      "title": "Your Thinking",
+      "sessionDate": "2026-10-22",
+      "notesPage": 3,
+      "lines": ["How are energy and speed related? Name the ball you kept and one change that was bigger."],
+      "answers": [],
+      "sampleAnswer": "That ball had more energy of motion when it caused a greater change. I did not measure a speed number.",
+      "speakerNote": "Open writing. Accept the same object, a greater change, and no speed number."
+    },
+    {
+      "code": "BQ_NOW",
+      "order": 11,
+      "status": "REQUIRED",
+      "title": "Big Question Now",
+      "sessionDate": "2026-10-22",
+      "notesPage": 3,
+      "lines": ["How are energy and speed related?"],
+      "answers": [],
+      "sampleAnswer": "For the same object, greater speed is related to greater energy of motion. A greater change is the evidence.",
+      "speakerNote": "Students answer after CHECK. This is not the Monday first-thinking slide."
+    },
+    {
+      "code": "DROP",
+      "order": 12,
+      "status": "FLEX",
+      "title": "Drop It",
+      "class": "lab",
+      "provenance": "SOURCE",
+      "sourceActivity": "AP 4.2 Drop It",
+      "sessionDate": "2026-10-23",
+      "firstExposure": false,
+      "lines": ["Optional Friday investigation. Drop the same ball from two heights into sand. Compare the craters. The required relationship was already taught."],
+      "answers": [],
+      "speakerNote": "FLEX only. Do not introduce the speed relationship here."
+    },
+    {
+      "code": "RECOVER",
+      "order": 13,
+      "status": "FLEX",
+      "title": "Friday Recovery",
+      "sessionDate": "2026-10-23",
+      "firstExposure": false,
+      "lines": ["Catch-up, review, finish notes, quiz or makeup, and optional enrichment."],
+      "answers": [],
+      "speakerNote": "Friday may assess or finish work already taught. It does not open a new required idea."
+    }
+  ],
+  "schedule": [
+    {"day": "2026-10-19", "token": "REQUIRED", "firstExposure": true, "negated": false, "representation": "Monday Reader pp. 13-14", "focus": "BQ V1 N1 DEMO"},
+    {"day": "2026-10-20", "token": "REQUIRED", "firstExposure": true, "negated": false, "representation": "Tuesday Ramp It Up 2.0 day 1", "focus": "LAB N2"},
+    {"day": "2026-10-21", "token": "REQUIRED", "firstExposure": true, "negated": false, "representation": "Wednesday graph and 30 cm challenge", "focus": "GRAPH LAB"},
+    {"day": "2026-10-22", "token": "REQUIRED", "firstExposure": true, "negated": false, "representation": "Thursday Reader pp. 15-16", "focus": "N3 N4 CHECK BQ_NOW"},
+    {"day": "2026-10-23", "token": "FLEX", "firstExposure": false, "negated": false, "representation": "Friday Drop It and recovery", "focus": "DROP RECOVER"}
+  ],
+  "sessions": [
+    {"id": 1, "date": "2026-10-19", "status": "REQUIRED", "readerPages": "13-14", "requiredMinutes": 23.5, "bufferMinutes": 6.5, "slideIds": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "S11", "S12", "S13"]},
+    {"id": 2, "date": "2026-10-20", "status": "REQUIRED", "readerPages": "13-14", "requiredMinutes": 24, "bufferMinutes": 6, "slideIds": ["S14", "S15", "S16", "S17", "S18", "S19", "S20", "S21"]},
+    {"id": 3, "date": "2026-10-21", "status": "REQUIRED", "readerPages": "13-14", "requiredMinutes": 24, "bufferMinutes": 6, "slideIds": ["S22", "S23", "S24", "S25", "S26", "S27", "S28"]},
+    {"id": 4, "date": "2026-10-22", "status": "REQUIRED", "readerPages": "15-16", "requiredMinutes": 20, "bufferMinutes": 10, "slideIds": ["S29", "S30", "S31", "S32", "S33", "S34", "S35", "S36", "S37", "S38", "S39"]},
+    {"id": 5, "date": "2026-10-23", "status": "FLEX", "readerPages": "", "requiredMinutes": 0, "bufferMinutes": 30, "slideIds": ["S40", "S41"]}
+  ],
+  "slides": [
+    {"id": "S01", "session": 1, "minutes": 1, "anchor": "BQ", "kind": "slide", "task": "Title", "reveals": [], "speakerNote": "Open the chapter. Do not answer the Big Question."},
+    {"id": "S02", "session": 1, "minutes": 2, "anchor": "BQ", "kind": "slide", "task": "Big Question turn and talk", "reveals": [], "speakerNote": "Read the question. Collect first ideas. Do not correct yet."},
+    {"id": "S03", "session": 1, "minutes": 2, "anchor": "BQ", "kind": "student", "task": "My first thinking write", "reveals": [], "writes": [], "speakerNote": "Students write one idea. There is no missing word."},
+    {"id": "S04", "session": 1, "minutes": 2, "anchor": "N1", "kind": "slide", "task": "One ball, gentle catch and hard catch", "reveals": [], "speakerNote": "Use one ball. Ask which catch did more to the hand. Do not say a speed number."},
+    {"id": "S05", "session": 1, "minutes": 2, "anchor": "V1", "kind": "slide", "task": "Speed card", "reveals": [], "speakerNote": "Show the blank. Do not say the missing word."},
+    {"id": "S06", "session": 1, "minutes": 2, "anchor": "V1", "kind": "student", "task": "V1 write", "reveals": [], "writes": ["distance"], "speakerNote": "Wait. The missing word stays off this slide."},
+    {"id": "S07", "session": 1, "minutes": 0.5, "anchor": "V1", "kind": "slide", "task": "V1 reveal", "reveals": ["distance"], "speakerNote": "The word is distance. Reader page 13."},
+    {"id": "S08", "session": 1, "minutes": 2, "anchor": "N1", "kind": "slide", "task": "One ball at two speeds", "reveals": [], "speakerNote": "One ball at two speeds. What you observe is the evidence. Do not fill the blanks."},
+    {"id": "S09", "session": 1, "minutes": 2.5, "anchor": "N1", "kind": "student", "task": "N1 write", "reveals": [], "writes": ["same", "change"], "speakerNote": "Students write both missing words."},
+    {"id": "S10", "session": 1, "minutes": 0.5, "anchor": "N1", "kind": "slide", "task": "N1 reveal", "reveals": ["same", "change"], "speakerNote": "The words are same and change."},
+    {"id": "S11", "session": 1, "minutes": 4, "anchor": "DEMO", "kind": "slide", "task": "Ramp and target preview", "reveals": [], "speakerNote": "Low setup, then a steeper setup. Students name the bigger cup move. No measurement."},
+    {"id": "S12", "session": 1, "minutes": 2, "anchor": "N2", "kind": "slide", "task": "What we will measure tomorrow", "reveals": [], "speakerNote": "Say we will measure the ramp and the cup movement in centimeters. Do not say the Tuesday missing words."},
+    {"id": "S13", "session": 1, "minutes": 1, "anchor": "BQ", "kind": "slide", "task": "Exit", "reveals": [], "speakerNote": "One sentence. No grade."},
+    {"id": "S14", "session": 2, "minutes": 1, "anchor": "BQ", "kind": "slide", "task": "Re-entry", "reveals": [], "speakerNote": "Reread the Big Question. Ask what evidence we already have."},
+    {"id": "S15", "session": 2, "minutes": 2, "anchor": "N2", "kind": "slide", "task": "Fair test", "reveals": [], "speakerNote": "Change one thing. Keep one ball. Do not say the missing words."},
+    {"id": "S16", "session": 2, "minutes": 2, "anchor": "N2", "kind": "student", "task": "N2 write", "reveals": [], "writes": ["height", "infer", "same"], "speakerNote": "Four blanks. Do not say the missing words."},
+    {"id": "S17", "session": 2, "minutes": 0.5, "anchor": "N2", "kind": "slide", "task": "N2 reveal", "reveals": ["height", "infer", "same"], "speakerNote": "The words are height, infer, and same."},
+    {"id": "S18", "session": 2, "minutes": 2, "anchor": "LAB", "kind": "slide", "task": "Calibration trial", "reveals": [], "speakerNote": "One unrecorded trial. Fix the setup. Then start recording."},
+    {"id": "S19", "session": 2, "minutes": 2, "anchor": "LAB", "kind": "slide", "task": "Measure three ramp heights", "reveals": [], "speakerNote": "Measure the vertical ramp height for 1, 2, and 3 books. Write centimeters."},
+    {"id": "S20", "session": 2, "minutes": 13, "anchor": "LAB", "kind": "slide", "task": "Nine measured trials", "reveals": [], "speakerNote": "Three trials at each height. Record how far the cup moves in centimeters."},
+    {"id": "S21", "session": 2, "minutes": 1.5, "anchor": "LAB", "kind": "slide", "task": "Close the data", "reveals": [], "speakerNote": "Stop. Leave averages and the graph for Wednesday."},
+    {"id": "S22", "session": 3, "minutes": 1, "anchor": "BQ", "kind": "slide", "task": "Re-entry", "reveals": [], "speakerNote": "Reread the Big Question."},
+    {"id": "S23", "session": 3, "minutes": 4, "anchor": "LAB", "kind": "slide", "task": "Averages", "reveals": [], "speakerNote": "Average the three cup measurements at each ramp height."},
+    {"id": "S24", "session": 3, "minutes": 2, "anchor": "GRAPH", "kind": "slide", "task": "Name the axes", "reveals": [], "speakerNote": "Ramp height in centimeters. Average cup movement in centimeters. Neither axis is speed."},
+    {"id": "S25", "session": 3, "minutes": 6, "anchor": "GRAPH", "kind": "student", "task": "Plot the graph", "reveals": [], "writes": [], "speakerNote": "Students plot their own averages. Do not supply fake points."},
+    {"id": "S26", "session": 3, "minutes": 2, "anchor": "LAB", "kind": "slide", "task": "30 centimeter challenge", "reveals": [], "speakerNote": "Move the cup as close as possible to 30 centimeters without going past."},
+    {"id": "S27", "session": 3, "minutes": 8, "anchor": "LAB", "kind": "slide", "task": "Challenge trials", "reveals": [], "speakerNote": "Students may change the ramp setup. They still use one ball. They still do not write a speed number."},
+    {"id": "S28", "session": 3, "minutes": 1, "anchor": "LAB", "kind": "slide", "task": "What we inferred", "reveals": [], "speakerNote": "Ask which height made the bigger change. Speed is inferred from that change."},
+    {"id": "S29", "session": 4, "minutes": 1, "anchor": "BQ", "kind": "slide", "task": "Re-entry", "reveals": [], "speakerNote": "Reread the Big Question before Reader pages 15 and 16."},
+    {"id": "S30", "session": 4, "minutes": 3, "anchor": "N3", "kind": "slide", "task": "Reader page 15", "reveals": [], "speakerNote": "Steeper ramp. One ball. The bucket or cup moves farther. Do not say the missing word."},
+    {"id": "S31", "session": 4, "minutes": 2, "anchor": "N3", "kind": "student", "task": "N3 write", "reveals": [], "writes": ["greater"], "speakerNote": "Students write the missing word."},
+    {"id": "S32", "session": 4, "minutes": 0.5, "anchor": "N3", "kind": "slide", "task": "N3 reveal", "reveals": ["greater"], "speakerNote": "The word is greater."},
+    {"id": "S33", "session": 4, "minutes": 3, "anchor": "N4", "kind": "slide", "task": "Reader page 16", "reveals": [], "speakerNote": "A soft bounce and a hard bounce. Ask which bounce was taller. Do not say the missing word."},
+    {"id": "S34", "session": 4, "minutes": 2, "anchor": "N4", "kind": "student", "task": "N4 write", "reveals": [], "writes": ["higher"], "speakerNote": "Students write the missing word."},
+    {"id": "S35", "session": 4, "minutes": 0.5, "anchor": "N4", "kind": "slide", "task": "N4 reveal", "reveals": ["higher"], "speakerNote": "The word is higher. A louder sound is also a greater change."},
+    {"id": "S36", "session": 4, "minutes": 3, "anchor": "CHECK", "kind": "student", "task": "CHECK write", "reveals": [], "writes": [], "speakerNote": "Open response. Do not show the sample yet."},
+    {"id": "S37", "session": 4, "minutes": 1, "anchor": "CHECK", "kind": "slide", "task": "CHECK sample", "reveals": [], "speakerNote": "Sample: that ball had more energy of motion when it caused a greater change."},
+    {"id": "S38", "session": 4, "minutes": 2, "anchor": "BQ_NOW", "kind": "student", "task": "Now I think", "reveals": [], "writes": [], "speakerNote": "Students answer the Big Question in their own words."},
+    {"id": "S39", "session": 4, "minutes": 2, "anchor": "BQ_NOW", "kind": "slide", "task": "Exit", "reveals": [], "speakerNote": "Ungraded exit. Look for the same object and a greater change."},
+    {"id": "S40", "session": 5, "minutes": 0, "anchor": "DROP", "kind": "slide", "status": "FLEX", "task": "Drop It optional", "reveals": [], "speakerNote": "Friday FLEX. The relationship is already taught. Same ball. Two drop heights. Compare craters. No new required idea."},
+    {"id": "S41", "session": 5, "minutes": 0, "anchor": "RECOVER", "kind": "slide", "status": "FLEX", "task": "Recovery, practice, quiz or makeup", "reveals": [], "speakerNote": "Finish notes, review, or give the quiz. The quiz is not a first lesson."}
+  ],
+  "notesExpectation": {
+    "pageCount": 3,
+    "anchors": ["BQ", "V1", "N1", "N2", "N3", "N4", "CHECK", "BQ_NOW"],
+    "vocabulary": ["speed"],
+    "blankCount": 9,
+    "answerKey": "03-ch3-energy-speed-guided-notes-key",
+    "forbidden": ["kinetic", "potential", "mechanical", "radiant", "inertia", "meters per second"],
+    "writingSpace": true,
+    "secondSystem": false
+  },
+  "slidesExpectation": {
+    "slideCount": 41,
+    "anchors": ["BQ", "N1", "V1", "DEMO", "N2", "LAB", "GRAPH", "N3", "N4", "CHECK", "BQ_NOW", "DROP", "RECOVER"],
+    "vocabulary": ["speed"],
+    "speakerNotes": ["BQ", "V1", "N1", "DEMO", "N2", "LAB", "GRAPH", "N3", "N4", "CHECK", "BQ_NOW", "DROP", "RECOVER"],
+    "planStatus": true,
+    "uncodedAnswer": false
+  },
+  "revealSequence": [
+    {"kind": "slide", "anchor": "S05", "reveals": [], "writes": []},
+    {"kind": "student", "anchor": "S06", "reveals": [], "writes": ["distance"], "prefilled": false},
+    {"kind": "slide", "anchor": "S07", "reveals": ["distance"], "writes": ["distance"]},
+    {"kind": "slide", "anchor": "S08", "reveals": [], "writes": []},
+    {"kind": "student", "anchor": "S09", "reveals": [], "writes": ["same", "change"], "prefilled": false},
+    {"kind": "slide", "anchor": "S10", "reveals": ["same", "change"], "writes": ["same", "change"]},
+    {"kind": "slide", "anchor": "S15", "reveals": [], "writes": []},
+    {"kind": "student", "anchor": "S16", "reveals": [], "writes": ["height", "infer"], "prefilled": false},
+    {"kind": "slide", "anchor": "S17", "reveals": ["height", "infer"], "writes": ["height", "infer"]},
+    {"kind": "slide", "anchor": "S30", "reveals": [], "writes": []},
+    {"kind": "student", "anchor": "S31", "reveals": [], "writes": ["greater"], "prefilled": false},
+    {"kind": "slide", "anchor": "S32", "reveals": ["greater"], "writes": ["greater"]},
+    {"kind": "slide", "anchor": "S33", "reveals": [], "writes": []},
+    {"kind": "student", "anchor": "S34", "reveals": [], "writes": ["higher"], "prefilled": false},
+    {"kind": "slide", "anchor": "S35", "reveals": ["higher"], "writes": ["higher"]}
+  ],
+  "assessment": {
+    "scope": "Students explain the relationship for the same object by using a greater observed change. They are not required to calculate a speed or an energy quantity.",
+    "quiz": {
+      "status": "FLEX",
+      "when": "Friday 2026-10-23 or makeup within 2 school days",
+      "firstExposure": false,
+      "items": 8,
+      "points": 12,
+      "scoreLine": "Score: ______ / 12 = ______ %",
+      "itemsPlan": [
+        {"id": "Q1", "points": 1, "anchor": "V1", "prompt": "Speed is a measurement of the ____ an object travels over an amount of time."},
+        {"id": "Q2", "points": 1, "anchor": "N1", "prompt": "Which comparison fits this chapter?"},
+        {"id": "Q3", "points": 2, "anchor": "N1", "prompt": "What is the evidence of greater energy of motion?"},
+        {"id": "Q4", "points": 2, "anchor": "N2", "prompt": "What did we measure, and what did we infer?"},
+        {"id": "Q5", "points": 1, "anchor": "N2", "prompt": "What was the one thing changed in Ramp It Up 2.0?"},
+        {"id": "Q6", "points": 1, "anchor": "GRAPH", "prompt": "Which pair of axis labels is allowed?"},
+        {"id": "Q7", "points": 2, "anchor": "N3", "prompt": "A steeper ramp and the same ball."},
+        {"id": "Q8", "points": 2, "anchor": "BQ_NOW", "prompt": "How are energy and speed related?"}
+      ]
+    },
+    "practice": {"status": "OPTIONAL", "graded": false, "role": "Apply the same-object rule to a new everyday example. Do not recopy the notes."}
+  },
+  "recovery": {
+    "status": "FLEX",
+    "path": "production/worksheets/03-ch3-absent-student-recovery.docx",
+    "requiredMakeup": "Finish Guided Notes BQ, V1, N1, N2, N3, N4, CHECK, and BQ_NOW. Use the Reader catch, ramp, and bounce examples. Do not invent centimeter measurements the student did not take.",
+    "labMakeup": "If the lab was missed, the student explains the relationship from the Reader. The teacher may show the class graph. The student does not copy fake personal data.",
+    "dropIt": "Drop It is not required makeup.",
+    "quizMakeup": "If a quiz was given, makeup is within 2 school days."
+  },
+  "playbook": {
+    "region": "docs/chapter-03/CH3_PLAYBOOK_REGION.md",
+    "frozenUnitPlaybook": "production/teacher-playbook/unit1-teacher-playbook.docx",
+    "rule": "Do not edit the frozen unit playbook. Chapter 3 teacher direction lives in the chapter region file."
+  },
+  "inventory": [
+    "docs/chapter-03/CH3_CHAPTER_SPEC.json",
+    "docs/chapter-03/CH3_PACING_PLAN.md",
+    "docs/chapter-03/CH3_PLAYBOOK_REGION.md",
+    "production/premium-notes/03-ch3-energy-speed-guided-notes.docx",
+    "production/premium-notes/03-ch3-energy-speed-guided-notes.pdf",
+    "production/premium-notes/03-ch3-energy-speed-guided-notes-key.docx",
+    "production/premium-notes/03-ch3-energy-speed-guided-notes-key.pdf",
+    "production/slides/03-ch3-energy-speed-slides.pptx",
+    "production/slides/03-ch3-energy-speed-slides.pdf",
+    "production/worksheets/03-ch3-energy-speed-practice.docx",
+    "production/answer-keys/03-ch3-energy-speed-practice-key.md",
+    "production/quizzes/03-ch3-energy-speed-quiz.docx",
+    "production/answer-keys/03-ch3-energy-speed-quiz-key.md",
+    "production/quizzes/03-ch3-energy-speed-quiz-blueprint.md",
+    "production/worksheets/03-ch3-ramp-it-up-student.docx",
+    "production/answer-keys/03-ch3-ramp-it-up-key.md",
+    "production/labs/03-ch3-ramp-it-up-teacher-spec.md",
+    "production/worksheets/03-ch3-absent-student-recovery.docx"
+  ],
+  "sourceClaims": [
+    {
+      "claimId": "bq",
+      "kind": "concept",
+      "candidateText": "How are energy and speed related?",
+      "sourceText": "How are energy and speed related?",
+      "sourceLocation": "Reader p. 13; Teacher Guide Lessons 4 and 5",
+      "sourceId": "ckSci-reader-ch3",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "speed-definition",
+      "kind": "vocabulary",
+      "candidateText": "a measurement of the distance an object travels over an amount of time",
+      "sourceText": "a measurement of the distance an object travels over an amount of time",
+      "sourceLocation": "Reader p. 13 vocabulary; Teacher Guide Lesson 4 Word Work",
+      "sourceId": "ckSci-reader-ch3",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "faster-ball",
+      "kind": "concept",
+      "candidateText": "The faster the ball is moving, the greater its motion energy.",
+      "sourceText": "The faster the ball is moving, the greater its motion energy.",
+      "sourceLocation": "Reader p. 14",
+      "sourceId": "ckSci-reader-ch3",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "same-ball-twice",
+      "kind": "concept",
+      "candidateText": "if the same ball is thrown twice, the one with the faster speed will have the greater energy.",
+      "sourceText": "if the same ball is thrown twice, the one with the faster speed will have the greater energy.",
+      "sourceLocation": "Reader p. 14",
+      "sourceId": "ckSci-reader-ch3",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "greater-change",
+      "kind": "concept",
+      "candidateText": "Greater change is evidence of greater energy.",
+      "sourceText": "Greater change is evidence of greater energy.",
+      "sourceLocation": "Reader p. 16",
+      "sourceId": "ckSci-reader-ch3",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "steeper-ramp",
+      "kind": "concept",
+      "candidateText": "Objects rolling downhill or down a ramp pick up more speed on steeper slopes.",
+      "sourceText": "Objects rolling downhill or down a ramp pick up more speed on steeper slopes.",
+      "sourceLocation": "Reader p. 15",
+      "sourceId": "ckSci-reader-ch3",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "bucket-change",
+      "kind": "concept",
+      "candidateText": "That means the motion energy of the ball was greater when the ball was moving faster.",
+      "sourceText": "That means the motion energy of the ball was greater when the ball was moving faster.",
+      "sourceLocation": "Reader p. 15",
+      "sourceId": "ckSci-reader-ch3",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "assessment-boundary",
+      "kind": "concept",
+      "candidateText": "students at this level are not required to quantitatively measure speed or energy.",
+      "sourceText": "students at this level are not required to quantitatively measure speed or energy.",
+      "sourceLocation": "Teacher Guide Lesson 5 Know the Standards, printed p. 42",
+      "sourceId": "ckSci-tg-l5",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "same-object-only",
+      "kind": "concept",
+      "candidateText": "make comparisons only between the same object moving at different speeds.",
+      "sourceText": "make comparisons only between the same object moving at different speeds.",
+      "sourceLocation": "Teacher Guide Lesson 5 Know the Science, printed p. 42",
+      "sourceId": "ckSci-tg-l5",
+      "candidateId": "ch3-chapter-spec"
+    }
+  ],
+  "approvedClaims": [
+    {
+      "claimId": "friday-drop-it",
+      "kind": "schedule",
+      "candidateText": "Drop It stays on Friday 2026-10-23 as FLEX. Required Chapter 3 ideas are taught Monday 2026-10-19 through Thursday 2026-10-22. Friday is not the first lesson on those ideas.",
+      "approvedText": "Drop It stays on Friday 2026-10-23 as FLEX. Required Chapter 3 ideas are taught Monday 2026-10-19 through Thursday 2026-10-22. Friday is not the first lesson on those ideas.",
+      "approvalId": "CHAPTER_03_PRODUCTION_PROMPT",
+      "sourceLocation": "docs/playbook/UNIT1_PACING_CALENDAR.md Week 2",
+      "candidateId": "ch3-chapter-spec"
+    },
+    {
+      "claimId": "ramp-it-up-2",
+      "kind": "lab",
+      "candidateText": "Ramp It Up 2.0 uses one ball. Heights come from 1, 2, and 3 books. Measure the vertical ramp height in centimeters. Measure how far the target moves in centimeters. Run one calibration trial and do not record it. Record three trials at each height. That is nine measured trials. Graph ramp height in centimeters against average target movement in centimeters. Do not write a speed in meters per second. Ramp height is not a measurement of speed. The engineering challenge is to move the target as close as possible to 30 centimeters without going past.",
+      "approvedText": "Ramp It Up 2.0 uses one ball. Heights come from 1, 2, and 3 books. Measure the vertical ramp height in centimeters. Measure how far the target moves in centimeters. Run one calibration trial and do not record it. Record three trials at each height. That is nine measured trials. Graph ramp height in centimeters against average target movement in centimeters. Do not write a speed in meters per second. Ramp height is not a measurement of speed. The engineering challenge is to move the target as close as possible to 30 centimeters without going past.",
+      "approvalId": "CHAPTER_03_PRODUCTION_PROMPT",
+      "sourceLocation": "docs/gold-standard/CHAPTER_03_PRODUCTION_PROMPT.md",
+      "candidateId": "ch3-chapter-spec"
+    }
+  ],
+  "exclusionClaims": [
+    {"claimId": "exclude-kinetic", "kind": "exclusion", "sourceText": "kinetic", "candidateText": "Speed is a measurement of the distance an object travels over an amount of time.", "sourceId": "ckSci-boundary", "candidateId": "ch3-chapter-spec"},
+    {"claimId": "exclude-potential", "kind": "exclusion", "sourceText": "potential", "candidateText": "Speed is a measurement of the distance an object travels over an amount of time.", "sourceId": "ckSci-boundary", "candidateId": "ch3-chapter-spec"},
+    {"claimId": "exclude-mechanical", "kind": "exclusion", "sourceText": "mechanical", "candidateText": "Speed is a measurement of the distance an object travels over an amount of time.", "sourceId": "ckSci-boundary", "candidateId": "ch3-chapter-spec"},
+    {"claimId": "exclude-radiant", "kind": "exclusion", "sourceText": "radiant", "candidateText": "Speed is a measurement of the distance an object travels over an amount of time.", "sourceId": "ckSci-boundary", "candidateId": "ch3-chapter-spec"},
+    {"claimId": "exclude-inertia", "kind": "exclusion", "sourceText": "inertia", "candidateText": "Speed is a measurement of the distance an object travels over an amount of time.", "sourceId": "ckSci-boundary", "candidateId": "ch3-chapter-spec"},
+    {"claimId": "exclude-mps", "kind": "exclusion", "sourceText": "meters per second", "candidateText": "Speed is a measurement of the distance an object travels over an amount of time.", "sourceId": "ckSci-boundary", "candidateId": "ch3-chapter-spec"}
+  ]
+}
