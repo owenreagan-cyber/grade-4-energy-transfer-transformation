@@ -11,6 +11,7 @@ from pathlib import Path
 from chapter_qa.evidence import evaluate, seal_valid
 from chapter_qa.identity import BuildIdentity, REPO_ROOT, recompute_mismatches
 from chapter_qa.invalidation import reasons_for_evidence
+from chapter_qa.producer_provenance import verify_provenance
 
 _OTHER_BUILD = frozenset({"BUILD_MISMATCH", "IDENTITY_MISMATCH", "HASH_MISMATCH"})
 
@@ -88,6 +89,12 @@ def judge(gates, evidence_records, requested: BuildIdentity, affected=None, *, r
         if not seal_valid(evidence):
             rejected_ids.append(evidence.evidenceId)
             blocking.append("SEAL_MISMATCH: %s" % evidence.gateId)
+            continue
+        provenance_errors = verify_provenance(evidence.gateId, evidence.toolVersions, REPO_ROOT)
+        if provenance_errors:
+            rejected_ids.append(evidence.evidenceId)
+            for code in provenance_errors:
+                blocking.append("%s: %s" % (code, evidence.gateId))
             continue
         extra = reasons_for_evidence(evidence, affected)
         if extra:

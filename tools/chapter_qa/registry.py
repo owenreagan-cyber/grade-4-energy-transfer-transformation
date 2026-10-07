@@ -161,3 +161,16 @@ def stamp(data: dict, gate_id: str) -> dict:
     versions["producerVersion"] = spec["version"]
     data["toolVersions"] = versions
     return data
+
+
+def stamp_provenance(data: dict, gate_id: str) -> dict:
+    """Add producer provenance (tracked/clean/source-hash) to toolVersions."""
+    from chapter_qa.producer_provenance import producer_provenance, provenance_toolversions
+
+    spec = PRODUCERS.get(gate_id)
+    if spec is None:
+        return data
+    versions = dict(data.get("toolVersions") or {})
+    versions.update(provenance_toolversions(producer_provenance(gate_id, spec["id"])))
+    data["toolVersions"] = versions
+    return data

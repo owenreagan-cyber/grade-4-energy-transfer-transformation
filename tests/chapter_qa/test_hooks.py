@@ -115,6 +115,8 @@ def record_for(gate, identity, **overrides):
         "inventory": [{"name": "pages", "expected": 3, "observed": 3}],
     }
     data.update(overrides)
+    from chapter_qa.registry import stamp_provenance
+    stamp_provenance(data, gate.gateId)
     data["seal"] = compute_evidence_seal(data)
     return data
 

@@ -114,6 +114,8 @@ def evidence_dict():
 def sealed_evidence(**overrides):
     data = evidence_dict()
     data.update(overrides)
+    from chapter_qa.registry import stamp_provenance
+    stamp_provenance(data, data["gateId"])
     data["seal"] = compute_evidence_seal(data)
     return data
 

@@ -121,13 +121,15 @@ def evidence_dict(**overrides):
         "inventory": [{"name": "notesPages", "expected": 3, "observed": 3}],
     }
     data.update(overrides)
-    from chapter_qa.registry import expected_producer
+    from chapter_qa.registry import expected_producer, stamp_provenance
     spec = expected_producer(data["gateId"])
     if spec and "toolVersions" not in overrides:
         versions = dict(data.get("toolVersions") or {})
         versions["producer"] = spec["id"]
         versions["producerVersion"] = spec["version"]
         data["toolVersions"] = versions
+    if spec:
+        stamp_provenance(data, data["gateId"])
     data["seal"] = compute_evidence_seal(data)
     return data
 

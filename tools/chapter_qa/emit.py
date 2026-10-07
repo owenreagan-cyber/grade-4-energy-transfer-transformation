@@ -42,10 +42,12 @@ def seal(data: dict, identity, gate=None, *, producer: bool = False) -> tuple[di
     payload.setdefault("completedAt", utc_now())
     payload.setdefault("toolVersions", {})
     if producer:
-        from chapter_qa.registry import expected_producer, stamp
+        from chapter_qa.registry import expected_producer, stamp, stamp_provenance
 
-        if expected_producer(gate.gateId if gate is not None else payload["gateId"]):
-            stamp(payload, gate.gateId if gate is not None else payload["gateId"])
+        gate_id = gate.gateId if gate is not None else payload["gateId"]
+        if expected_producer(gate_id):
+            stamp(payload, gate_id)
+            stamp_provenance(payload, gate_id)
     payload.setdefault("invalidationReasons", [])
     payload.setdefault("notVerifiedReason", None)
     payload.setdefault("failureReason", None)
