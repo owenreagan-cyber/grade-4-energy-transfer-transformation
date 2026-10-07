@@ -1,0 +1,27 @@
+{
+  "exampleOnly": true,
+  "active": false,
+  "doNotCopyTo": ".cursor/mcp.json",
+  "note": "Placeholder identifiers only. Tokens stay in the environment and are not written here.",
+  "servers": [
+    {
+      "name": "figma",
+      "class": "DESIGN_WRITE",
+      "configured": false,
+      "authEnvName": "FIGMA_TOKEN"
+    },
+    {
+      "name": "canva",
+      "class": "DESIGN_WRITE",
+      "configured": false,
+      "authEnvName": "CANVA_TOKEN"
+    },
+    {
+      "name": "github",
+      "class": "READ_ONLY_REVIEW",
+      "configured": false,
+      "decision": "DEFER",
+      "authEnvName": "GITHUB_TOKEN"
+    }
+  ]
+}

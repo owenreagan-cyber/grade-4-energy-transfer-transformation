@@ -3,7 +3,7 @@
   "gates": [
     {
       "gateId": "SOURCE_AUTHORITY",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -25,7 +25,7 @@
     },
     {
       "gateId": "CURRICULUM_CORRECTNESS",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -58,7 +58,7 @@
     },
     {
       "gateId": "NOTES_SLIDES_SYNC",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -80,7 +80,7 @@
     },
     {
       "gateId": "ASSESSMENT_ALIGNMENT",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -102,7 +102,7 @@
     },
     {
       "gateId": "PLAYBOOK_ALIGNMENT",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -113,7 +113,7 @@
     },
     {
       "gateId": "RENDER_COMPLETENESS",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -124,7 +124,7 @@
     },
     {
       "gateId": "RENDERED_VISUAL_QA",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -135,7 +135,7 @@
     },
     {
       "gateId": "PDF_QUALITY",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -179,7 +179,7 @@
     },
     {
       "gateId": "RELEASE_EXACT_SET",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -190,7 +190,7 @@
     },
     {
       "gateId": "RELEASE_PARITY",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -201,7 +201,7 @@
     },
     {
       "gateId": "STATUS_AUTHORITY",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,

@@ -47,6 +47,12 @@ Canva status: **NOT CONFIGURED**.
 
 The evidence schema is checked by `tools/chapter_qa/evidence.py`. This phase does not add the `jsonschema` package.
 
+## Phase C.1 redaction
+
+Inventories and reports record server names, classes, and environment-variable names. They do not record token values. `tools/hooks/redact.py` replaces assigned secrets, `github_pat_…` values, and `sk-…` values with `[REDACTED]` and leaves a bare name such as `FIGMA_TOKEN` in place.
+
+Governance, role rules, and the inactive example config are in `docs/gold-standard/MCP_GOVERNANCE.md` and `docs/gold-standard/mcp.example.json`. No project `.cursor/mcp.json` is added.
+
 ## Repo tools already in use
 
 Chapter certification scripts under `tools/qa_*.py`, release parity `tools/qa_release_parity.py`, and render support `tools/render_visual_qa.py`. The new shared contract is `tools/chapter_qa/`. It does not replace those chapter scripts.
