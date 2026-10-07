@@ -17,6 +17,7 @@ from chapter_qa.completeness import assess_completeness  # noqa: E402
 from chapter_qa.evidence import (  # noqa: E402
     GATE_STATUSES,
     REQUIRED_FIELDS,
+    compute_evidence_seal,
     evaluate,
     evidence_from_dict,
     is_self_evidence,
@@ -127,6 +128,7 @@ def evidence_dict(**overrides):
         versions["producer"] = spec["id"]
         versions["producerVersion"] = spec["version"]
         data["toolVersions"] = versions
+    data["seal"] = compute_evidence_seal(data)
     return data
 
 

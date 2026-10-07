@@ -1,10 +1,18 @@
-"""Build and freeze identity. Evidence from build A cannot certify build B."""
+"""Build and freeze identity. Evidence from build A cannot certify build B.
+
+Build identity binds the candidate to the actual classroom bytes. The Judge
+recomputes those hashes from disk; caller-supplied current hashes are not
+trusted. A committed mutation still fails because the bytes differ.
+"""
 
 from __future__ import annotations
 
 import hashlib
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
 def sha256_hex(data: bytes) -> str:
@@ -28,8 +36,26 @@ class BuildIdentity:
     sourceFreezeId: str
     sourceHash: str
     inputHashes: dict
+    # repo-relative path -> sha256 for every certification-relevant classroom
+    # and release file. The exact set comes from the candidate inventory; it is
+    # never hard-coded here. Empty means the build did not bind its bytes.
+    candidateFiles: dict = field(default_factory=dict)
 
     def canonical_payload(self) -> dict:
+        return {
+            "buildId": self.buildId,
+            "candidatePath": self.candidatePath,
+            "candidateFreezeId": self.candidateFreezeId,
+            "candidateHash": self.candidateHash,
+            "sourceFreezeId": self.sourceFreezeId,
+            "sourceHash": self.sourceHash,
+            "inputHashes": dict(sorted(self.inputHashes.items())),
+            "candidateFiles": dict(sorted(self.candidateFiles.items())),
+        }
+
+    def association_payload(self) -> dict:
+        """Shared fields an evidence record can reconstruct. candidateFiles is a
+        build-level binding verified from disk, not a per-record field."""
         return {
             "buildId": self.buildId,
             "candidatePath": self.candidatePath,
@@ -43,7 +69,7 @@ class BuildIdentity:
 
 def association_hash(identity: BuildIdentity) -> str:
     raw = json.dumps(
-        identity.canonical_payload(),
+        identity.association_payload(),
         sort_keys=True,
         separators=(",", ":"),
     ).encode("utf-8")
@@ -60,6 +86,33 @@ def identity_from_evidence(evidence) -> BuildIdentity:
         sourceHash=evidence.sourceHash or "",
         inputHashes=dict(evidence.inputHashes),
     )
+
+
+def recompute_mismatches(identity: BuildIdentity, root: Path | None = None) -> list[str]:
+    """Recompute classroom-file hashes from disk and report every mismatch.
+
+    Returns a list of human-readable mismatch descriptions. An empty list means
+    every bound file's current bytes match the recorded build identity. Missing
+    files are mismatches. This is the F-1/F-2 mechanism: staleness is a function
+    of current bytes, not of git cleanliness.
+    """
+    base = root or REPO_ROOT
+    mismatches = []
+    if not identity.candidateFiles:
+        return mismatches
+    for rel, recorded in sorted(identity.candidateFiles.items()):
+        text = str(rel or "").strip()
+        if not text or text.startswith("/") or ".." in Path(text).parts:
+            mismatches.append("%s: unsafe path" % text)
+            continue
+        target = base / text
+        if not target.is_file():
+            mismatches.append("%s: missing" % text)
+            continue
+        current = hash_file(str(target))
+        if not recorded or current != recorded:
+            mismatches.append("%s: hash mismatch (recorded %s, current %s)" % (text, recorded[:12], current[:12]))
+    return mismatches
 
 
 def _blank(value) -> bool:

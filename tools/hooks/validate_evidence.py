@@ -38,6 +38,11 @@ def identity_from_payload(data) -> BuildIdentity:
     hashes = data.get("inputHashes")
     if not isinstance(hashes, dict) or not hashes:
         raise ValueError("build identity inputHashes missing")
+    candidate_files = data.get("candidateFiles")
+    if candidate_files is None:
+        candidate_files = {}
+    if not isinstance(candidate_files, dict):
+        raise ValueError("build identity candidateFiles must be a map")
     return BuildIdentity(
         buildId=data["buildId"],
         candidatePath=data["candidatePath"],
@@ -46,6 +51,7 @@ def identity_from_payload(data) -> BuildIdentity:
         sourceFreezeId=data["sourceFreezeId"],
         sourceHash=data["sourceHash"],
         inputHashes=dict(hashes),
+        candidateFiles=dict(candidate_files),
     )
 
 

@@ -495,12 +495,20 @@ def run_method(case, seed, identity):
 
 
 def _judge_case(method, identity, evidence, attack):
-    from chapter_qa.evidence import evidence_from_dict
+    from chapter_qa.evidence import compute_evidence_seal, evidence_from_dict
+
+    def _reload(stored):
+        # Simulates an attacker who can re-seal (has the tracked producer): the
+        # mutation must then still be caught by the gate logic, not the seal.
+        stored = dict(stored)
+        stored["seal"] = compute_evidence_seal(stored)
+        return evidence_from_dict(stored)
+
     path = evidence
     if method == "judge_clean":
         stored, result = emit_status_evidence("FROZEN", [{"kind": "AUTHORITATIVE_STATUS", "surfaceId": "m", "text": "FROZEN"}], identity, path, auditor_role=ROLES["STATUS_AUTHORITY"])
         gate = gate_by_id(load_gates(), "STATUS_AUTHORITY")
-        judgment = judge([gate], [evidence_from_dict(stored)], identity)
+        judgment = judge([gate], [_reload(stored)], identity)
         return result.status, judgment.status
     if method == "judge_missing":
         gate = gate_by_id(load_gates(), "STATUS_AUTHORITY")
@@ -510,19 +518,19 @@ def _judge_case(method, identity, evidence, attack):
         other = make_identity("build-b")
         stored, result = emit_status_evidence("FROZEN", [{"kind": "AUTHORITATIVE_STATUS", "surfaceId": "m", "text": "FROZEN"}], other, path, auditor_role=ROLES["STATUS_AUTHORITY"])
         gate = gate_by_id(load_gates(), "STATUS_AUTHORITY")
-        judgment = judge([gate], [evidence_from_dict(stored)], identity)
+        judgment = judge([gate], [_reload(stored)], identity)
         return "FAIL", judgment.status
     if method == "stale_record":
         stored, result = emit_status_evidence("FROZEN", [{"kind": "AUTHORITATIVE_STATUS", "surfaceId": "m", "text": "FROZEN"}], identity, path, auditor_role=ROLES["STATUS_AUTHORITY"])
         stored["invalidationReasons"] = ["CANDIDATE_CHANGED"]
         stored["execution"]["stale"] = True
         gate = gate_by_id(load_gates(), "STATUS_AUTHORITY")
-        judgment = judge([gate], [evidence_from_dict(stored)], identity)
+        judgment = judge([gate], [_reload(stored)], identity)
         return "FAIL", judgment.status
     if method == "judge_builder":
         stored, result = emit_status_evidence("FROZEN", [{"kind": "AUTHORITATIVE_STATUS", "surfaceId": "m", "text": "FROZEN"}], identity, path, auditor_role="BUILDER")
         gate = gate_by_id(load_gates(), "STATUS_AUTHORITY")
-        judgment = judge([gate], [evidence_from_dict(stored)], identity)
+        judgment = judge([gate], [_reload(stored)], identity)
         return result.status, judgment.status
     if method == "judge_not_verified":
         data = {
@@ -541,7 +549,7 @@ def _judge_case(method, identity, evidence, attack):
         }
         stored, result = seal(data, identity)
         gate = replace(gate_by_id(load_gates(), "POST_FREEZE_GOLDEN"), mandatory=True, releaseBlocking=True)
-        judgment = judge([gate], [evidence_from_dict(stored)], identity)
+        judgment = judge([gate], [_reload(stored)], identity)
         return result.status, judgment.status
     if method == "judge_blocking":
         stored, result = emit_schedule_evidence([{"day": "Monday", "token": "OPTIONAL", "firstExposure": False}], identity, path, auditor_role=ROLES["SCHEDULE_POLICY"])
@@ -549,20 +557,20 @@ def _judge_case(method, identity, evidence, attack):
         stored["execution"]["gateSpecificFailure"] = True
         gate = replace(gate_by_id(load_gates(), "SCHEDULE_POLICY"), mandatory=False, releaseBlocking=False)
         from chapter_qa.evidence import evidence_from_dict as load_ev
-        judgment = judge([gate], [load_ev(stored)], identity)
+        judgment = judge([gate], [_reload(stored)], identity)
         return "FAIL", judgment.status
     if method == "judge_version":
         stored, result = emit_status_evidence("FROZEN", [{"kind": "AUTHORITATIVE_STATUS", "surfaceId": "m", "text": "FROZEN"}], identity, path, auditor_role=ROLES["STATUS_AUTHORITY"])
         stored["gateVersion"] = "9.9"
         gate = gate_by_id(load_gates(), "STATUS_AUTHORITY")
         from chapter_qa.evidence import evidence_from_dict as load_ev
-        judgment = judge([gate], [load_ev(stored)], identity)
+        judgment = judge([gate], [_reload(stored)], identity)
         return "FAIL", judgment.status
     if method == "judge_hash":
         other = replace(identity, candidateHash="f" * 64, inputHashes={"candidate": "f" * 64, "reader": "d" * 64})
         stored, result = emit_status_evidence("FROZEN", [{"kind": "AUTHORITATIVE_STATUS", "surfaceId": "m", "text": "FROZEN"}], identity, path, auditor_role=ROLES["STATUS_AUTHORITY"])
         gate = gate_by_id(load_gates(), "STATUS_AUTHORITY")
-        judgment = judge([gate], [evidence_from_dict(stored)], other)
+        judgment = judge([gate], [_reload(stored)], other)
         return "FAIL", judgment.status
     if method == "inventory_rewrite":
         items = [_render_item(1, "e" * 64, ROOT)]

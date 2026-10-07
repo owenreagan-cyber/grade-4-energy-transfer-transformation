@@ -7,6 +7,7 @@
   "required": [
     "schemaVersion",
     "evidenceId",
+    "seal",
     "gateId",
     "gateVersion",
     "buildId",
@@ -39,6 +40,7 @@
   "properties": {
     "schemaVersion": {"const": "1.0"},
     "evidenceId": {"type": "string", "minLength": 1},
+    "seal": {"type": "string", "minLength": 1},
     "gateId": {"type": "string", "minLength": 1},
     "gateVersion": {"type": "string", "minLength": 1},
     "buildId": {"type": "string", "minLength": 1},

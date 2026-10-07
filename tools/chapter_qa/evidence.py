@@ -1,10 +1,13 @@
 """Evidence contract and the single gate-status evaluator.
 
-Claimed status cannot upgrade a result. PASS is computed.
+Claimed status cannot upgrade a result. PASS is computed. A seal digest over
+the canonical payload makes a hand edit detectable.
 """
 
 from __future__ import annotations
 
+import hashlib
+import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -30,6 +33,7 @@ SELF_EVIDENCE_FAMILIES = (
 REQUIRED_FIELDS = (
     "schemaVersion",
     "evidenceId",
+    "seal",
     "gateId",
     "gateVersion",
     "buildId",
@@ -123,6 +127,7 @@ class ExecutionFacts:
 class EvidenceRecord:
     schemaVersion: str
     evidenceId: str
+    seal: str
     gateId: str
     gateVersion: str
     buildId: str
@@ -156,6 +161,7 @@ class EvidenceRecord:
         return {
             "schemaVersion": self.schemaVersion,
             "evidenceId": self.evidenceId,
+            "seal": self.seal,
             "gateId": self.gateId,
             "gateVersion": self.gateVersion,
             "buildId": self.buildId,
@@ -248,6 +254,49 @@ def missing_evidence_paths(paths, root: Path | None = None) -> bool:
     return False
 
 
+def _canonical_payload(data: dict) -> dict:
+    """Normalize a raw evidence dict to the same shape the record serializes to.
+
+    The only structural difference between a raw dict and ``EvidenceRecord.to_dict()``
+    is that inventory items gain ``explicitEmptyAllowed``. Normalize it here so the
+    seal computed at seal time and the seal recomputed by the Judge agree.
+    """
+    payload = {key: value for key, value in data.items() if key != "seal"}
+    inventory = payload.get("inventory")
+    if isinstance(inventory, list):
+        normalized = []
+        for item in inventory:
+            if isinstance(item, dict):
+                entry = dict(item)
+                entry.setdefault("explicitEmptyAllowed", False)
+                normalized.append(entry)
+            else:
+                normalized.append(item)
+        payload["inventory"] = normalized
+    return payload
+
+
+def compute_evidence_seal(data: dict) -> str:
+    """Digest over the canonical evidence payload, excluding the seal itself."""
+    raw = json.dumps(_canonical_payload(data), sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def seal_valid(record: "EvidenceRecord") -> bool:
+    """Recompute the seal from the record and compare. A hand edit breaks it."""
+    if not record.seal:
+        return False
+    return record.seal == compute_evidence_seal(record.to_dict())
+
+
+def _seal_error(data: dict) -> str | None:
+    if "seal" not in data or not isinstance(data["seal"], str) or not data["seal"].strip():
+        return "missing seal"
+    if data["seal"] != compute_evidence_seal(data):
+        return "seal mismatch"
+    return None
+
+
 def validate_evidence_dict(data: dict) -> list[str]:
     errors = []
     if not isinstance(data, dict):
@@ -264,6 +313,8 @@ def validate_evidence_dict(data: dict) -> list[str]:
         errors.append("schemaVersion")
     if not isinstance(data["evidenceId"], str) or not data["evidenceId"].strip():
         errors.append("evidenceId")
+    if not isinstance(data.get("seal"), str) or not data.get("seal", "").strip():
+        errors.append("seal")
     if data["status"] not in GATE_STATUSES:
         errors.append("status")
     if not _is_bool(data["performed"]):
@@ -343,10 +394,14 @@ def validate_evidence_dict(data: dict) -> list[str]:
     return errors
 
 
-def evidence_from_dict(data: dict) -> EvidenceRecord:
+def evidence_from_dict(data: dict, *, verify_seal: bool = True) -> EvidenceRecord:
     errors = validate_evidence_dict(data)
     if errors:
         raise ValueError("invalid evidence: %s" % ", ".join(errors))
+    if verify_seal:
+        seal_error = _seal_error(data)
+        if seal_error:
+            raise ValueError("invalid evidence seal: %s" % seal_error)
     execution = data["execution"]
     inventory = tuple(
         InventoryCount(
@@ -364,6 +419,7 @@ def evidence_from_dict(data: dict) -> EvidenceRecord:
     return EvidenceRecord(
         schemaVersion=data["schemaVersion"],
         evidenceId=data["evidenceId"],
+        seal=data["seal"],
         gateId=data["gateId"],
         gateVersion=data["gateVersion"],
         buildId=data["buildId"],

@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
 
-from chapter_qa.evidence import evaluate, evidence_from_dict  # noqa: E402
+from chapter_qa.evidence import compute_evidence_seal, evaluate, evidence_from_dict  # noqa: E402
 from chapter_qa.gates import gate_by_id, load_gates  # noqa: E402
 from chapter_qa.identity import BuildIdentity  # noqa: E402
 from hooks.final_release_gate import decide_stop, main as stop_main  # noqa: E402
@@ -109,6 +109,7 @@ def record_for(gate, identity, **overrides):
         "inventory": [{"name": "pages", "expected": 3, "observed": 3}],
     }
     data.update(overrides)
+    data["seal"] = compute_evidence_seal(data)
     return data
 
 
@@ -159,6 +160,8 @@ def passing_payload(identity=None):
     identity = identity or build()
     gates = load_gates()
     rows = [record_for(gate, identity) for gate in gates if gate.applicability == "always"]
+    from chapter_qa.identity import hash_file
+    bound = "qa/gold-standard/evidence.schema.json"
     return {
         "requestedAction": "chapter_ready",
         "evidenceDirectory": None,
@@ -170,6 +173,7 @@ def passing_payload(identity=None):
             "sourceFreezeId": identity.sourceFreezeId,
             "sourceHash": identity.sourceHash,
             "inputHashes": dict(identity.inputHashes),
+            "candidateFiles": {bound: hash_file(str(ROOT / bound))},
         },
         "evidence": rows,
     }

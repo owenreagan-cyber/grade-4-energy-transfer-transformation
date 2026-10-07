@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from chapter_qa.evidence import evaluate, evidence_from_dict
+from chapter_qa.evidence import compute_evidence_seal, evaluate, evidence_from_dict
 from chapter_qa.gates import gate_by_id, load_gates
 from chapter_qa.roles import ROLES
 
@@ -49,7 +49,8 @@ def seal(data: dict, identity, gate=None, *, producer: bool = False) -> tuple[di
     payload.setdefault("invalidationReasons", [])
     payload.setdefault("notVerifiedReason", None)
     payload.setdefault("failureReason", None)
-    record = evidence_from_dict(payload)
+    payload.setdefault("seal", "0" * 64)
+    record = evidence_from_dict(payload, verify_seal=False)
     result = evaluate(record, gate, identity)
     stored = record.to_dict()
     stored["status"] = result.status
@@ -59,4 +60,5 @@ def seal(data: dict, identity, gate=None, *, producer: bool = False) -> tuple[di
         stored["failureReason"] = None
     else:
         stored["failureReason"] = None
+    stored["seal"] = compute_evidence_seal(stored)
     return stored, result

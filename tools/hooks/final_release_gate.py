@@ -260,6 +260,8 @@ def decide_stop(payload, judge_fn=None, gates=None) -> dict:
         if not release_gates:
             return deny("no required gate definition")
         identity = identity_from_payload(payload.get("build"))
+        if action != "ordinary" and not identity.candidateFiles:
+            return deny("build does not bind classroom bytes (candidateFiles missing)")
         records = _load_records(payload, chosen)
         runner = release_judge if judge_fn is None else judge_fn
         result = runner(release_gates, records, identity, computed)

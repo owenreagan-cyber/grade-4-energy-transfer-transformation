@@ -6,9 +6,10 @@ This module does not edit, build, regenerate, repair, or freeze anything.
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
+from pathlib import Path
 
-from chapter_qa.evidence import evaluate
-from chapter_qa.identity import BuildIdentity
+from chapter_qa.evidence import evaluate, seal_valid
+from chapter_qa.identity import BuildIdentity, REPO_ROOT, recompute_mismatches
 from chapter_qa.invalidation import reasons_for_evidence
 
 _OTHER_BUILD = frozenset({"BUILD_MISMATCH", "IDENTITY_MISMATCH", "HASH_MISMATCH"})
@@ -52,7 +53,7 @@ class ReleaseJudgment:
         return CERTIFICATION_FAIL
 
 
-def judge(gates, evidence_records, requested: BuildIdentity, affected=None) -> ReleaseJudgment:
+def judge(gates, evidence_records, requested: BuildIdentity, affected=None, *, root: Path | None = None) -> ReleaseJudgment:
     """Decide release certification for one build.
 
     Gate definitions are authoritative for mandatory and releaseBlocking.
@@ -60,7 +61,10 @@ def judge(gates, evidence_records, requested: BuildIdentity, affected=None) -> R
 
     `affected` is the map from `invalidation.propagate`. When a gate is in
     that map, its evidence is stale even if the record was not stamped.
-    Omitting the map does not scan the worktree. A future hook must pass it.
+
+    The Judge recomputes current classroom-file hashes from disk (`root`) and
+    re-verifies every evidence seal. Caller-supplied current values are not
+    trusted; a committed mutation still fails because the bytes differ.
     """
     affected = affected or {}
     accepted_ids = []
@@ -68,6 +72,11 @@ def judge(gates, evidence_records, requested: BuildIdentity, affected=None) -> R
     blocking = []
     if not gates:
         blocking.append("NO_GATES")
+
+    base = root or REPO_ROOT
+    for mismatch in recompute_mismatches(requested, base):
+        blocking.append("CANDIDATE_BYTES_MISMATCH: %s" % mismatch)
+
     accepted_by_gate = {gate.gateId: [] for gate in gates}
     evaluations = {}
 
@@ -75,6 +84,10 @@ def judge(gates, evidence_records, requested: BuildIdentity, affected=None) -> R
         gate = next((item for item in gates if item.gateId == evidence.gateId), None)
         if gate is None:
             rejected_ids.append(evidence.evidenceId)
+            continue
+        if not seal_valid(evidence):
+            rejected_ids.append(evidence.evidenceId)
+            blocking.append("SEAL_MISMATCH: %s" % evidence.gateId)
             continue
         extra = reasons_for_evidence(evidence, affected)
         if extra:

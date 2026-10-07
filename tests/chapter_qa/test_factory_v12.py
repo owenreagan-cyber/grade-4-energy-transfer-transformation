@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
 
 from chapter_qa.adversary import make_identity  # noqa: E402
-from chapter_qa.evidence import evaluate, evidence_from_dict  # noqa: E402
+from chapter_qa.evidence import compute_evidence_seal, evaluate, evidence_from_dict  # noqa: E402
 from chapter_qa.gates import gate_by_id, load_gates  # noqa: E402
 from chapter_qa.pdf_fixture import write_pdf  # noqa: E402
 from chapter_qa.render_completeness import assess_renders, emit_render_evidence  # noqa: E402
@@ -82,7 +82,9 @@ class RenderIdentityTests(unittest.TestCase):
         stored, result = emit_render_evidence([row], [row], identity, row["renderPath"], auditor_role="VISUAL_QA_AUDITOR")
         self.assertEqual(result.status, "PASS")
         self.assertEqual(stored["gateVersion"], "1.2")
-        stale = evidence_from_dict(dict(stored, gateVersion="1.1", status="PASS"))
+        stale = dict(stored, gateVersion="1.1", status="PASS")
+        stale["seal"] = compute_evidence_seal(stale)
+        stale = evidence_from_dict(stale)
         rejected = evaluate(stale, gate, identity)
         self.assertEqual(rejected.status, "FAIL")
         self.assertIn("GATE_VERSION_MISMATCH", rejected.codes)
