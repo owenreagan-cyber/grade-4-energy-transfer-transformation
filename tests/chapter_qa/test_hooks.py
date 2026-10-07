@@ -454,6 +454,25 @@ class StopHookTests(unittest.TestCase):
             inline["evidenceDirectory"] = directory
             self.assertEqual(decide_stop(inline)["decision"], "DENY")
 
+    def test_internal_certification_requires_audit_pending_lifecycle(self):
+        identity = build()
+        payload = passing_payload(identity)
+        with evidence_dir() as directory:
+            base = write_packet(payload, directory)
+            base["requestedAction"] = "internally_certified"
+            # No lifecycle record -> deny.
+            self.assertEqual(decide_stop(base)["decision"], "DENY")
+            # BUILD_IN_PROGRESS -> deny.
+            early = write_packet(payload, directory, {"state": "BUILD_IN_PROGRESS", "buildId": identity.buildId})
+            early["requestedAction"] = "internally_certified"
+            early["lifecycleState"] = "BUILD_IN_PROGRESS"
+            self.assertEqual(decide_stop(early)["decision"], "DENY")
+            # INTERNAL_AUDIT_PENDING -> allow.
+            pending = write_packet(payload, directory, {"state": "INTERNAL_AUDIT_PENDING", "buildId": identity.buildId})
+            pending["requestedAction"] = "internally_certified"
+            pending["lifecycleState"] = "INTERNAL_AUDIT_PENDING"
+            self.assertEqual(decide_stop(pending)["decision"], "ALLOW", pending.get("reason"))
+
     def test_judge_pass_allows_internal_certification_only(self):
         identity = build()
         payload = passing_payload(identity)

@@ -322,6 +322,13 @@ def decide_stop(payload, judge_fn=None, gates=None) -> dict:
         return deny("release judge failed closed")
     if getattr(result, "status", None) != "PASS":
         return deny("release judge did not pass")
+    if action == "internally_certified":
+        try:
+            recorded = _read_lifecycle(payload, identity)
+        except Exception:
+            return deny("internal certification requires a lifecycle record")
+        if recorded.get("state") != "INTERNAL_AUDIT_PENDING":
+            return deny("internal certification requires an INTERNAL_AUDIT_PENDING lifecycle (not %s)" % recorded.get("state"))
     needs_lifecycle = action in {"ready_for_external_audit", "approved_for_freeze", "freeze_chapter"}
     if needs_lifecycle:
         try:
