@@ -24,7 +24,7 @@ text: Ramp It Up 2.0 uses one ball. Heights come from 1, 2, and 3 books. Measure
 
 ## N2
 status: REQUIRED
-text: We measure ramp ____ in centimeters. We ____ the speed relationship from that change. We do not measure a speed number. The one thing we change is ramp ____. We keep the ____ ball.
+text: We measure ramp ____ in centimeters. We measure how far the ____ moves in centimeters. We do not measure a speed number. The one thing we change is ramp ____. We keep the ____ ball. (TG Lesson 4 · Ramp It Up AP 4.1)
 
 ## GRAPH
 status: REQUIRED
@@ -32,7 +32,7 @@ text: The graph axes are ramp height in centimeters and average target movement 
 
 ## N3
 status: REQUIRED
-text: From the steeper ramp, that ball made a ____ change.
+text: Objects pick up more ____ on steeper ramps. From the steeper ramp, that ball made a ____ change. (Reader p. 15; cup movement is evidence of the greater change, not a speed measurement.)
 
 ## N4
 status: REQUIRED

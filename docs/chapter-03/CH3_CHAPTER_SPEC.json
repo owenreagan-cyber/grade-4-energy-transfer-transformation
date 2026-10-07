@@ -14,11 +14,12 @@
   "concepts": [
     "Speed is a measurement of the distance an object travels over an amount of time.",
     "Compare the same object at different speeds.",
+    "Objects pick up more speed on steeper ramps (Reader p. 15).",
     "Greater speed of that object is related to greater energy of motion.",
     "The evidence is a greater observed change.",
     "Students are not required to quantitatively measure speed or energy.",
     "Ramp It Up 2.0 measures ramp height and target movement in centimeters.",
-    "Speed and the energy relationship are inferred from the measured change."
+    "Cup movement is evidence of the greater change, not a speed measurement."
   ],
   "exclusions": [
     "kinetic",
@@ -137,18 +138,19 @@
       "order": 6,
       "status": "REQUIRED",
       "title": "What We Measured",
-      "readerPages": "13-14",
+      "readerPages": "TG Lesson 4",
       "sessionDate": "2026-10-20",
       "notesPage": 2,
       "lines": [
         "We measure ramp ____ in centimeters.",
-        "We ____ the speed relationship from that change. We do not measure a speed number.",
+        "We measure how far the ____ moves in centimeters.",
+        "We do not measure a speed number.",
         "The one thing we change is ramp ____.",
         "We keep the ____ ball."
       ],
-      "answers": ["height", "infer", "height", "same"],
-      "blankPositions": ["what is measured", "how we reason", "the one change", "which ball"],
-      "speakerNote": "Students write before the reveal. Infer means we reason from the change."
+      "answers": ["height", "cup", "height", "same"],
+      "blankPositions": ["what is measured", "what is measured", "the one change", "which ball"],
+      "speakerNote": "Ramp height and cup movement are measured in centimeters. Speed is not measured. Cite TG Lesson 4 Ramp It Up (AP 4.1), not Reader pp. 13-14."
     },
     {
       "code": "GRAPH",
@@ -170,10 +172,13 @@
       "readerPages": "15",
       "sessionDate": "2026-10-22",
       "notesPage": 3,
-      "lines": ["From the steeper ramp, that ball made a ____ change."],
-      "answers": ["greater"],
-      "blankPositions": ["the size of the change"],
-      "speakerNote": "Reader page 15. One ball. Do not say the missing word on the write slide."
+      "lines": [
+        "Objects pick up more ____ on steeper ramps.",
+        "From the steeper ramp, that ball made a ____ change."
+      ],
+      "answers": ["speed", "greater"],
+      "blankPositions": ["what increases on a steeper ramp", "the size of the change"],
+      "speakerNote": "Reader page 15. Teach the source fact first: objects pick up more speed on steeper ramps. Then the observation: the same ball made a greater change. Cup movement is evidence of the greater change, not a speed measurement."
     },
     {
       "code": "N4",
