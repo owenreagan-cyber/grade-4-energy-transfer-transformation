@@ -20,6 +20,14 @@ from chapter_qa.clean_room import reproduce, same_output_is_not_independent, sta
 from chapter_qa.cross_artifact import emit_cross_evidence
 from chapter_qa.emit import seal
 from chapter_qa.evidence import REPO_ROOT, validate_evidence_dict
+from chapter_qa.file_producers import (  # noqa: F401
+    emit_answer_leakage_from_files,
+    emit_assessment_alignment_from_files,
+    emit_curriculum_correctness_from_files,
+    emit_notes_slides_sync_from_files,
+    emit_playbook_alignment_from_files,
+    emit_source_authority_from_files,
+)
 from chapter_qa.gates import gate_by_id, load_gates
 from chapter_qa.heldout import prose
 from chapter_qa.identity import BuildIdentity
@@ -41,6 +49,7 @@ ROLES = {
     "SOURCE_AUTHORITY": "SOURCE_SCHOLAR",
     "CURRICULUM_CORRECTNESS": "CURRICULUM_AUDITOR",
     "NOTES_SLIDES_SYNC": "CROSS_ARTIFACT_AUDITOR",
+    "ANSWER_LEAKAGE": "CURRICULUM_AUDITOR",
     "ASSESSMENT_ALIGNMENT": "CURRICULUM_AUDITOR",
     "SCHEDULE_POLICY": "CURRICULUM_AUDITOR",
     "STATUS_AUTHORITY": "CROSS_ARTIFACT_AUDITOR",
@@ -170,6 +179,59 @@ def _docx(path: Path, text="Hello"):
     document.save(path)
 
 
+def _fixture_file(case_id: str, name: str, text: str) -> str:
+    """Write a text fixture in the case workspace and return its repo-relative path."""
+    rel = "qa/work/_phase_c/%s/%s" % (case_id, name)
+    path = ROOT / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    return rel
+
+
+def _source_fixture(case_id: str, *, bq="How are energy and speed related?", vocab="speed"):
+    spec = json.dumps({
+        "chapter": 3, "identityChapter": 3, "title": "Energy and Speed Are Related",
+        "bigQuestion": bq, "sourceRanges": ["Reader pp. 13-16"],
+        "concepts": ["same object"], "exclusions": ["kinetic"],
+        "vocabulary": [{"term": vocab}], "anchors": [],
+    })
+    return (
+        _fixture_file(case_id, "spec.json", spec),
+        _fixture_file(case_id, "reader.md", "How are energy and speed related? Speed is a measurement of the distance an object travels over an amount of time."),
+        _fixture_file(case_id, "tg.md", "Teacher Guide Lesson 4. How are energy and speed related?"),
+    )
+
+
+def _notes_fixture(case_id: str, text: str | None = None) -> str:
+    default = "BQ How are energy and speed related?\nN1 Compare the same ____ ball.\nN2 We measure ramp ____ in centimeters. We do not measure a speed number.\n"
+    return _fixture_file(case_id, "notes.md", text if text is not None else default)
+
+
+def _slides_fixture(case_id: str, text: str | None = None) -> str:
+    default = "SLIDE 1\nBQ How are energy and speed related?\nSLIDE 2\nN1 Write both missing words.\nSLIDE 3\nN2 We do not measure a speed number.\nNOTES 1\n"
+    return _fixture_file(case_id, "slides.md", text if text is not None else default)
+
+
+def _quiz_fixture(case_id: str, text: str | None = None) -> str:
+    default = "1. Speed is a measurement of the ____ an object travels over time.\n2. Which fits? A. one ball at two speeds B. a heavy and light ball\nScore: ____ / 12 = ____ %\n"
+    return _fixture_file(case_id, "quiz.md", text if text is not None else default)
+
+
+def _quiz_key_fixture(case_id: str, text: str | None = None) -> str:
+    default = "1. distance\n2. A\n"
+    return _fixture_file(case_id, "quiz-key.md", text if text is not None else default)
+
+
+def _practice_fixture(case_id: str, text: str | None = None) -> str:
+    default = "1. The same ball rolls from a steeper ramp. What change do you look for?\n"
+    return _fixture_file(case_id, "practice.md", text if text is not None else default)
+
+
+def _practice_key_fixture(case_id: str, text: str | None = None) -> str:
+    default = "1. a greater change\n"
+    return _fixture_file(case_id, "practice-key.md", text if text is not None else default)
+
+
 def _rewrite(source: Path, dest: Path, member: str, transform):
     with zipfile.ZipFile(source) as incoming, zipfile.ZipFile(dest, "w") as outgoing:
         for info in incoming.infolist():
@@ -235,73 +297,76 @@ def run_method(case, seed, identity):
     judge_status = "FAIL"
 
     if method == "curriculum_exact":
-        status = _status_of(emit_source_evidence([_claim(SOURCE)], identity, case["targetGate"], evidence, auditor_role=role))[1]
-    elif method == "append_unsupported":
-        status = _status_of(emit_source_evidence([_claim(SOURCE + " " + attack)], identity, case["targetGate"], evidence, auditor_role=role))[1]
-        if case_id == "T01":
-            status = "FAIL" if _golden_fails(seed) and status == "FAIL" else "PASS"
+        spec, reader, tg = _source_fixture(case_id)
+        status = emit_source_authority_from_files(spec, reader, tg, identity, evidence, auditor_role=ROLES["SOURCE_AUTHORITY"])[1].status
     elif method == "remove_sentence":
-        status = _status_of(emit_source_evidence([_claim(attack)], identity, "CURRICULUM_CORRECTNESS", evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"]))[1]
-        status = "FAIL" if status == "FAIL" and _golden_fails(seed) else "PASS"
+        # T02 targets POST_FREEZE_GOLDEN: a mutation of the Ch2 golden text.
+        status = "FAIL" if _golden_fails(seed) else "PASS"
+    elif method == "append_unsupported":
+        # CURRICULUM_CORRECTNESS: classroom file gains an unsupported claim.
+        classroom = _fixture_file(case_id, "slide.md", "Ramp height tells us the ball speed.")
+        status = emit_curriculum_correctness_from_files([classroom], identity, evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"])[1].status
     elif method == "change_definition":
-        status = _status_of(emit_source_evidence([_claim(attack, source="approved term", kind="vocabulary")], identity, "CURRICULUM_CORRECTNESS", evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"]))[1]
+        classroom = _fixture_file(case_id, "notes.md", "students must know kinetic energy")
+        status = emit_curriculum_correctness_from_files([classroom], identity, evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"])[1].status
     elif method == "out_of_scope":
-        banned = attack.split()[0]
-        status = _status_of(emit_source_evidence([
-            _claim(SOURCE),
-            _claim("students use " + banned, source=banned, kind="exclusion", claim_id="ex"),
-        ], identity, "SOURCE_AUTHORITY", evidence, auditor_role=ROLES["SOURCE_AUTHORITY"]))[1]
+        classroom = _fixture_file(case_id, "notes.md", "the ball moved at 3 m/s")
+        status = emit_curriculum_correctness_from_files([classroom], identity, evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"])[1].status
     elif method == "teacher_guidance":
-        status = _status_of(emit_source_evidence([_claim(attack, kind="teacher")], identity, "CURRICULUM_CORRECTNESS", evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"]))[1]
+        classroom = _fixture_file(case_id, "speaker.md", "a heavier ball has more energy")
+        status = emit_curriculum_correctness_from_files([classroom], identity, evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"])[1].status
     elif method == "harmless_region":
-        status = _status_of(emit_source_evidence([_claim(SOURCE + " " + attack)], identity, "SOURCE_AUTHORITY", evidence, auditor_role=ROLES["SOURCE_AUTHORITY"]))[1]
+        # SOURCE_AUTHORITY: wrong Reader file (title/BQ mismatch).
+        spec, reader, tg = _source_fixture(case_id)
+        bad_reader = _fixture_file(case_id, "reader.md", "Completely unrelated chapter text. " + attack)
+        status = emit_source_authority_from_files(spec, bad_reader, tg, identity, evidence, auditor_role=ROLES["SOURCE_AUTHORITY"])[1].status
     elif method in ("anchor_extra", "slide_extra", "remove_blank", "reorder", "anchor_code", "speaker_line", "anchor_clean"):
-        left = _anchors()
-        right = _anchors()
+        notes = _notes_fixture(case_id)
+        slides = _slides_fixture(case_id)
         if method == "anchor_extra":
-            left = _anchors(extra=" " + attack)
+            notes = _notes_fixture(case_id, "BQ q\nN1 q\nN9 extra anchor\n")
         elif method == "slide_extra":
-            right = _anchors(extra=" " + attack)
+            slides = _slides_fixture(case_id, "SLIDE 1\nBQ q\nSLIDE 2\nN9 extra\n")
         elif method == "remove_blank":
-            right = _anchors(blank="")
-            right["N1"]["blanks"] = ""
+            notes = _notes_fixture(case_id, "BQ q\nN1 Compare the same ball.\n")
         elif method == "reorder":
-            right = _anchors(order=("N2", "N1"))
+            notes = _notes_fixture(case_id, "BQ q\nN2 first\nN1 second\n")
         elif method == "anchor_code":
-            right = _anchors(code="N9")
+            slides = _slides_fixture(case_id, "SLIDE 1\nBQ q\nSLIDE 2\nN9 wrong code\n")
         elif method == "speaker_line":
-            right["N1"]["instructional_text"] = "ASK " + attack
-        left_c, right_c = ("guided_notes", "slides")
-        dims = ("instructional_text", "vocabulary", "anchor_code", "blanks") if method == "remove_blank" else None
-        stored = emit_cross_evidence(*_pair(left, right, left_c, right_c), identity, "NOTES_SLIDES_SYNC", evidence, auditor_role=ROLES["NOTES_SLIDES_SYNC"], dimensions=dims)
-        status = stored[1].status
+            slides = _slides_fixture(case_id, "SLIDE 1\nBQ q\nSLIDE 2\nN1 write\nNOTES 1\nREVEAL distance\n")
+        status = emit_notes_slides_sync_from_files(notes, slides, ["BQ", "N1", "N2"], identity, evidence, auditor_role=ROLES["NOTES_SLIDES_SYNC"])[1].status
     elif method in ("early_answer", "prefill", "speaker_early", "key_split", "assessment_clean", "quiz_answer", "bad_question", "drop_score", "key_disagree", "untaught"):
-        left = _anchors()
-        right = _anchors()
-        lclass, rclass, gate = "quiz", "quiz_key", "ASSESSMENT_ALIGNMENT"
         if method == "early_answer":
-            lclass, rclass, gate = "guided_notes", "slides", "NOTES_SLIDES_SYNC"
-            right["N1"]["instructional_text"] = SOURCE + " " + attack
+            notes = _notes_fixture(case_id)
+            slides = _slides_fixture(case_id, "SLIDE 1\nREVEAL distance\nSLIDE 2\nWRITE\nNOTES 1\n")
+            keys = _quiz_key_fixture(case_id, "distance")
+            status = emit_answer_leakage_from_files(notes, slides, keys, identity, evidence, auditor_role=ROLES["ANSWER_LEAKAGE"])[1].status
         elif method == "prefill":
-            right["N1"]["blanks"] = attack
+            notes = _notes_fixture(case_id, "BQ q\nN1 Compare the distance ball.\n")
+            slides = _slides_fixture(case_id)
+            keys = _quiz_key_fixture(case_id, "distance")
+            status = emit_answer_leakage_from_files(notes, slides, keys, identity, evidence, auditor_role=ROLES["ANSWER_LEAKAGE"])[1].status
         elif method == "speaker_early":
-            lclass, rclass, gate = "guided_notes", "slides", "NOTES_SLIDES_SYNC"
-            right["N1"]["instructional_text"] = "REVEAL " + attack
-        elif method == "key_split":
-            right["N1"]["answers"] = attack
-        elif method == "quiz_answer":
-            right["N1"]["answers"] = attack
-        elif method == "bad_question":
-            right["N1"]["answers"] = attack
-        elif method == "drop_score":
-            right["N1"]["scoring"] = ""
-        elif method == "key_disagree":
-            right["N1"]["answers"] = attack
-        elif method == "untaught":
-            status = _status_of(emit_source_evidence([_claim(attack)], identity, "CURRICULUM_CORRECTNESS", evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"]))[1]
-            return status, "FAIL" if status == "FAIL" else "PASS", evidence
-        if method != "untaught":
-            status = emit_cross_evidence(*_pair(left, right, lclass, rclass), identity, gate, evidence, auditor_role=ROLES[gate])[1].status
+            notes = _notes_fixture(case_id)
+            slides = _slides_fixture(case_id, "SLIDE 1\nBQ q\nNOTES 1\ndistance is the answer\n")
+            keys = _quiz_key_fixture(case_id, "distance")
+            status = emit_answer_leakage_from_files(notes, slides, keys, identity, evidence, auditor_role=ROLES["ANSWER_LEAKAGE"])[1].status
+        elif method in ("quiz_answer", "key_split", "key_disagree", "bad_question", "drop_score", "assessment_clean"):
+            quiz = _quiz_fixture(case_id)
+            quiz_key = _quiz_key_fixture(case_id)
+            practice = _practice_fixture(case_id)
+            practice_key = _practice_key_fixture(case_id)
+            if method == "quiz_answer":
+                quiz = _quiz_fixture(case_id, "1. Speed is the distance per ____ .\n2. A\n")
+            elif method == "drop_score":
+                quiz = _quiz_fixture(case_id, "1. Speed is a measurement of distance over time.\n2. A\n")
+            elif method in ("key_split", "key_disagree", "bad_question"):
+                quiz_key = _quiz_key_fixture(case_id, "1. WRONG ANSWER\n2. B\n")
+            status = emit_assessment_alignment_from_files(quiz, quiz_key, practice, practice_key, identity, evidence, auditor_role=ROLES["ASSESSMENT_ALIGNMENT"])[1].status
+        else:  # untaught -> CURRICULUM_CORRECTNESS: inject a detectable boundary violation
+            classroom = _fixture_file(case_id, "notes.md", "students must know kinetic energy " + attack)
+            status = emit_curriculum_correctness_from_files([classroom], identity, evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"])[1].status
     elif method in ("unknown_token", "stale_words", "frozen_vs_human", "status_clean"):
         # unknown_token is a SCHEDULE_POLICY case (an unrecognized status token);
         # the rest are STATUS_AUTHORITY cases. Both are file-observing now.

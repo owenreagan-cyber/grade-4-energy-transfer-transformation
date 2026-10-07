@@ -5,12 +5,12 @@ from __future__ import annotations
 # id is the provenance stamp written into toolVersions["producer"].
 PRODUCERS = {
     "SOURCE_AUTHORITY": {
-        "id": "chapter_qa.source_audit:emit_source_evidence",
+        "id": "chapter_qa.file_producers:emit_source_authority_from_files",
         "version": "1.0",
         "role": "SOURCE_SCHOLAR",
     },
     "CURRICULUM_CORRECTNESS": {
-        "id": "chapter_qa.source_audit:emit_source_evidence",
+        "id": "chapter_qa.file_producers:emit_curriculum_correctness_from_files",
         "version": "1.0",
         "role": "CURRICULUM_AUDITOR",
     },
@@ -30,17 +30,17 @@ PRODUCERS = {
         "role": "CROSS_ARTIFACT_AUDITOR",
     },
     "NOTES_SLIDES_SYNC": {
-        "id": "chapter_qa.cross_artifact:emit_cross_evidence",
+        "id": "chapter_qa.file_producers:emit_notes_slides_sync_from_files",
         "version": "1.0",
         "role": "CROSS_ARTIFACT_AUDITOR",
     },
     "ANSWER_LEAKAGE": {
-        "id": "chapter_qa.mandatory_producers:emit_answer_leakage",
+        "id": "chapter_qa.file_producers:emit_answer_leakage_from_files",
         "version": "1.0",
         "role": "CURRICULUM_AUDITOR",
     },
     "ASSESSMENT_ALIGNMENT": {
-        "id": "chapter_qa.cross_artifact:emit_cross_evidence",
+        "id": "chapter_qa.file_producers:emit_assessment_alignment_from_files",
         "version": "1.0",
         "role": "CURRICULUM_AUDITOR",
     },
@@ -50,7 +50,7 @@ PRODUCERS = {
         "role": "CURRICULUM_AUDITOR",
     },
     "PLAYBOOK_ALIGNMENT": {
-        "id": "chapter_qa.cross_artifact:emit_cross_evidence",
+        "id": "chapter_qa.file_producers:emit_playbook_alignment_from_files",
         "version": "1.0",
         "role": "CROSS_ARTIFACT_AUDITOR",
     },
@@ -70,7 +70,7 @@ PRODUCERS = {
         "role": "PDF_OOXML_FORENSICS",
     },
     "FRESH_EXPORT": {
-        "id": "chapter_qa.mandatory_producers:emit_fresh_export",
+        "id": "chapter_qa.file_producers:emit_fresh_export_from_files",
         "version": "1.0",
         "role": "PDF_OOXML_FORENSICS",
     },
@@ -125,21 +125,21 @@ def expected_producer(gate_id: str) -> dict | None:
 # the registered producer opens the actual artifact bytes and derives its own
 # observation. Caller may still supply policy/config/expected, never the result.
 PRODUCER_INDEPENDENCE = {
-    "SOURCE_AUTHORITY": {"observesFilesDirectly": False, "method": "caller claims"},
-    "CURRICULUM_CORRECTNESS": {"observesFilesDirectly": False, "method": "caller claims"},
+    "SOURCE_AUTHORITY": {"observesFilesDirectly": True, "method": "open Reader/TG/spec bytes"},
+    "CURRICULUM_CORRECTNESS": {"observesFilesDirectly": True, "method": "open classroom files + boundary families"},
     "CHAPTER_SPEC": {"observesFilesDirectly": True, "method": "open chapter-spec JSON"},
     "STUDENT_PROMPT_CLARITY": {"observesFilesDirectly": True, "method": "open student files + extract prompts"},
     "NOTES_STRUCTURE": {"observesFilesDirectly": True, "method": "open notes docx/pdf + derive anchors/blanks"},
     "SLIDES_STRUCTURE": {"observesFilesDirectly": True, "method": "open pptx + derive slides/anchors/notes"},
-    "NOTES_SLIDES_SYNC": {"observesFilesDirectly": False, "method": "caller anchor dicts"},
-    "ANSWER_LEAKAGE": {"observesFilesDirectly": False, "method": "caller reveal sequence"},
-    "ASSESSMENT_ALIGNMENT": {"observesFilesDirectly": False, "method": "caller dicts"},
+    "NOTES_SLIDES_SYNC": {"observesFilesDirectly": True, "method": "three-way notes/slides/spec text comparison"},
+    "ANSWER_LEAKAGE": {"observesFilesDirectly": True, "method": "open notes/slides/keys + reveal model"},
+    "ASSESSMENT_ALIGNMENT": {"observesFilesDirectly": True, "method": "open quiz/practice + keys + score lines"},
     "SCHEDULE_POLICY": {"observesFilesDirectly": True, "method": "parse pacing calendar file"},
-    "PLAYBOOK_ALIGNMENT": {"observesFilesDirectly": False, "method": "caller dicts"},
+    "PLAYBOOK_ALIGNMENT": {"observesFilesDirectly": True, "method": "open playbook region vs spec"},
     "RENDER_COMPLETENESS": {"observesFilesDirectly": True, "method": "open render files + hash"},
     "RENDERED_VISUAL_QA": {"observesFilesDirectly": True, "method": "open render images + ink"},
     "PDF_QUALITY": {"observesFilesDirectly": True, "method": "qpdf/pdfinfo/pdffonts/pdftotext"},
-    "FRESH_EXPORT": {"observesFilesDirectly": False, "method": "caller hashes"},
+    "FRESH_EXPORT": {"observesFilesDirectly": True, "method": "hash source + production, compare bytes"},
     "RETIRED_CONTENT": {"observesFilesDirectly": True, "method": "open files + scan vs baselines"},
     "INVENTORY": {"observesFilesDirectly": True, "method": "filesystem scan"},
     "RELEASE_EXACT_SET": {"observesFilesDirectly": True, "method": "open release dir + hash"},

@@ -3,7 +3,7 @@
   "gates": [
     {
       "gateId": "SOURCE_AUTHORITY",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -25,7 +25,7 @@
     },
     {
       "gateId": "CURRICULUM_CORRECTNESS",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -69,7 +69,7 @@
     },
     {
       "gateId": "NOTES_SLIDES_SYNC",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -80,7 +80,7 @@
     },
     {
       "gateId": "ANSWER_LEAKAGE",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -91,7 +91,7 @@
     },
     {
       "gateId": "ASSESSMENT_ALIGNMENT",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -113,7 +113,7 @@
     },
     {
       "gateId": "PLAYBOOK_ALIGNMENT",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -157,7 +157,7 @@
     },
     {
       "gateId": "FRESH_EXPORT",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
