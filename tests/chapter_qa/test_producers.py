@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import sys
 import tempfile
 import unittest
@@ -47,38 +48,44 @@ class ProducerTests(unittest.TestCase):
             self.assertIn(gate_id, PRODUCERS)
 
     def test_each_new_gate_fails_its_defect_and_passes_when_complete(self):
-        spec = {
+        work = ROOT / "qa" / "work" / "_producers"
+        work.mkdir(parents=True, exist_ok=True)
+
+        spec_path = work / "spec.json"
+        spec_path.write_text(json.dumps({
             "chapter": 2, "identityChapter": 2, "title": "Moving Objects Have Energy",
             "bigQuestion": "How can an object have energy?", "sourceRanges": ["Reader pp. 7-12"],
             "concepts": ["motion"], "exclusions": ["speed-energy"], "vocabulary": ["motion"],
             "anchors": [{"code": "BQ", "order": 1, "status": "REQUIRED"}, {"code": "N1", "order": 2, "status": "REQUIRED"}],
             "schedule": [{"day": "Wednesday"}], "inventory": ["notes"],
-        }
-        self.assertEqual(emit_chapter_spec(spec, self.identity, self.evidence)[1].status, "PASS")
-        broken = dict(spec)
-        broken["bigQuestion"] = ""
-        self.assertEqual(emit_chapter_spec(broken, self.identity, self.evidence)[1].status, "FAIL")
-        self.assertEqual(emit_chapter_spec({}, self.identity, self.evidence)[1].status, "FAIL")
+        }), encoding="utf-8")
+        rel_spec = spec_path.relative_to(ROOT).as_posix()
+        self.assertEqual(emit_chapter_spec(rel_spec, self.identity, self.evidence)[1].status, "PASS")
+        spec_path.write_text(json.dumps({
+            "chapter": 2, "identityChapter": 2, "title": "Moving Objects Have Energy",
+            "bigQuestion": "", "sourceRanges": ["Reader pp. 7-12"],
+            "concepts": ["motion"], "exclusions": ["speed-energy"], "vocabulary": ["motion"],
+            "anchors": [{"code": "BQ", "order": 1, "status": "REQUIRED"}],
+            "schedule": [{"day": "Wednesday"}], "inventory": ["notes"],
+        }), encoding="utf-8")
+        self.assertEqual(emit_chapter_spec(rel_spec, self.identity, self.evidence)[1].status, "FAIL")
 
-        notes = {
-            "pageCount": 3, "anchors": ["BQ", "N1"], "vocabulary": ["motion"], "blankCount": 2,
-            "answerKey": "key", "writingSpace": True, "forbidden": ["inertia"], "text": ["motion"],
-            "secondSystem": False, "candidateHash": "a" * 64,
-        }
-        self.assertEqual(emit_notes_structure(notes, notes, self.identity, self.evidence)[1].status, "PASS")
-        dup = dict(notes)
-        dup["anchors"] = ["BQ", "BQ"]
-        self.assertEqual(emit_notes_structure(notes, dup, self.identity, self.evidence)[1].status, "FAIL")
+        notes = work / "notes.md"
+        notes.write_text("BQ q\nN1 q\nmotion ____ ____", encoding="utf-8")
+        rel_notes = notes.relative_to(ROOT).as_posix()
+        notes_expected = {"anchors": ["BQ", "N1"], "blankCount": 2, "forbidden": ["inertia"],
+                          "answerKey": None, "vocabulary": ["motion"], "writingSpace": True}
+        self.assertEqual(emit_notes_structure(rel_notes, notes_expected, self.identity, self.evidence)[1].status, "PASS")
+        notes.write_text("BQ q\nmotion ____ ____", encoding="utf-8")
+        self.assertEqual(emit_notes_structure(rel_notes, notes_expected, self.identity, self.evidence)[1].status, "FAIL")
 
-        slides = {
-            "slideCount": 3, "anchors": ["BQ", "N1"], "vocabulary": ["motion"], "speakerNotes": ["N1"],
-            "planStatus": True, "uncodedAnswer": False, "candidateHash": "a" * 64,
-        }
-        self.assertEqual(emit_slides_structure(slides, slides, self.identity, self.evidence)[1].status, "PASS")
-        short = dict(slides)
-        short["anchors"] = ["BQ"]
-        short["slideCount"] = 1
-        self.assertEqual(emit_slides_structure(slides, short, self.identity, self.evidence)[1].status, "FAIL")
+        slides = work / "slides.md"
+        slides.write_text("SLIDE 1\nBQ q\nSLIDE 2\nN1 q\nNOTES 1\nN1", encoding="utf-8")
+        rel_slides = slides.relative_to(ROOT).as_posix()
+        slides_expected = {"slideCount": 2, "anchors": ["BQ", "N1"], "speakerNotes": ["N1"]}
+        self.assertEqual(emit_slides_structure(rel_slides, slides_expected, self.identity, self.evidence)[1].status, "PASS")
+        slides.write_text("SLIDE 1\nBQ q\nNOTES 1\nN1", encoding="utf-8")
+        self.assertEqual(emit_slides_structure(rel_slides, slides_expected, self.identity, self.evidence)[1].status, "FAIL")
 
         clean = [
             {"kind": "slide", "anchor": "N1", "reveals": [], "writes": []},
@@ -103,15 +110,21 @@ class ProducerTests(unittest.TestCase):
         self.assertEqual(emit_fresh_export([dict(pair, outputHash="old")], self.identity, self.evidence)[1].status, "FAIL")
         self.assertEqual(emit_fresh_export([], self.identity, self.evidence)[1].status, "FAIL")
 
-        files = [{"name": "live.pdf", "text": "energy", "perceptualHash": "live"}]
+        ret_dir = work / "retired"
+        ret_dir.mkdir(parents=True, exist_ok=True)
+        (ret_dir / "ok.txt").write_text("energy", encoding="utf-8")
         base = [{"token": "interactive science notebook", "perceptualHash": "retired"}]
-        self.assertEqual(emit_retired_content(files, base, self.identity, self.evidence)[1].status, "PASS")
-        renamed = [{"name": "notes.pdf", "text": "see the interactive science notebook", "perceptualHash": "retired"}]
-        self.assertEqual(emit_retired_content(renamed, base, self.identity, self.evidence)[1].status, "FAIL")
+        self.assertEqual(emit_retired_content(ret_dir.relative_to(ROOT).as_posix(), base, self.identity, self.evidence)[1].status, "PASS")
+        (ret_dir / "ok.txt").write_text("see the interactive science notebook", encoding="utf-8")
+        self.assertEqual(emit_retired_content(ret_dir.relative_to(ROOT).as_posix(), base, self.identity, self.evidence)[1].status, "FAIL")
 
-        self.assertEqual(emit_inventory(["notes", "slides"], ["notes", "slides"], self.identity, self.evidence)[1].status, "PASS")
-        self.assertEqual(emit_inventory(["notes", "slides"], ["notes"], self.identity, self.evidence)[1].status, "FAIL")
-        self.assertEqual(emit_inventory([], ["notes"], self.identity, self.evidence)[1].status, "FAIL")
+        inv_dir = work / "inventory"
+        inv_dir.mkdir(parents=True, exist_ok=True)
+        (inv_dir / "notes").write_text("x", encoding="utf-8")
+        (inv_dir / "slides").write_text("x", encoding="utf-8")
+        self.assertEqual(emit_inventory(["notes", "slides"], inv_dir.relative_to(ROOT).as_posix(), self.identity, self.evidence)[1].status, "PASS")
+        self.assertEqual(emit_inventory(["notes", "slides", "quiz"], inv_dir.relative_to(ROOT).as_posix(), self.identity, self.evidence)[1].status, "FAIL")
+        self.assertEqual(emit_inventory([], inv_dir.relative_to(ROOT).as_posix(), self.identity, self.evidence)[1].status, "FAIL")
 
         good = {
             "projectBad": 90, "projectBadGreen": 0, "heldOutBad": 12, "heldOutGreen": 0,

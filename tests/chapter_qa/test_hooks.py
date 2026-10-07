@@ -36,6 +36,12 @@ from hooks.validate_evidence import validate_record  # noqa: E402
 BUMPED = {
     "SOURCE_AUTHORITY",
     "CURRICULUM_CORRECTNESS",
+    "CHAPTER_SPEC",
+    "NOTES_STRUCTURE",
+    "SLIDES_STRUCTURE",
+    "INVENTORY",
+    "RETIRED_CONTENT",
+    "STUDENT_PROMPT_CLARITY",
     "NOTES_SLIDES_SYNC",
     "ASSESSMENT_ALIGNMENT",
     "PLAYBOOK_ALIGNMENT",

@@ -14,7 +14,7 @@
     },
     {
       "gateId": "CHAPTER_SPEC",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -36,7 +36,7 @@
     },
     {
       "gateId": "STUDENT_PROMPT_CLARITY",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -47,7 +47,7 @@
     },
     {
       "gateId": "NOTES_STRUCTURE",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -58,7 +58,7 @@
     },
     {
       "gateId": "SLIDES_STRUCTURE",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -168,7 +168,7 @@
     },
     {
       "gateId": "RETIRED_CONTENT",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -179,7 +179,7 @@
     },
     {
       "gateId": "INVENTORY",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,

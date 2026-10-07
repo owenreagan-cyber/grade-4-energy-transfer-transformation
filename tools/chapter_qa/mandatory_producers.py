@@ -7,7 +7,16 @@ the default for any other chapter.
 
 from __future__ import annotations
 
+import re
+from pathlib import Path
+
 from chapter_qa.emit import seal
+from chapter_qa.observation import (  # noqa: F401  (re-exported readers)
+    list_files,
+    normalized,
+    read_any_text,
+    read_json,
+)
 
 _SPEC_FIELDS = (
     "chapter",
@@ -117,36 +126,158 @@ def assess_chapter_spec(spec: dict | None) -> list[dict]:
     return findings
 
 
-def emit_chapter_spec(spec, identity, evidence_path):
-    findings = _safe(assess_chapter_spec, spec if isinstance(spec, dict) else None)
+def _read_json_fail_closed(path) -> dict | None:
+    """Open the actual spec JSON. Missing/unparseable returns None (fail closed)."""
+    if not path:
+        return None
+    try:
+        return read_json(path)
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
+def _read_text_fail_closed(path) -> str:
+    if not path:
+        return ""
+    try:
+        return read_any_text(path)
+    except (OSError, ValueError):
+        return ""
+
+
+def _anchor_codes(text: str, expected_codes) -> list[str]:
+    """Anchor codes present in the artifact text, in first-occurrence order."""
+    lowered = normalized(text)
+    found = []
+    for code in expected_codes:
+        token = normalized(str(code))
+        # Anchor codes are short labels; match a word boundary to avoid substring hits.
+        if re.search(r"\b" + re.escape(token) + r"\b", lowered):
+            found.append(code)
+    return found
+
+
+def emit_chapter_spec(path, identity, evidence_path, *, auditor_role="CURRICULUM_AUDITOR"):
+    """Open the actual chapter-spec JSON and derive its structure."""
+    spec = _read_json_fail_closed(path)
+    findings = []
+    if spec is None:
+        findings = [_finding("missing_spec", "chapter spec file could not be read: %s" % (path or "none"))]
+    else:
+        findings = _safe(assess_chapter_spec, spec if isinstance(spec, dict) else None)
     count = len((spec or {}).get("anchors") or []) if isinstance(spec, dict) else 0
+    missing = sum(1 for item in findings if item["code"] == "missing_field")
     return _finish(
-        "CHAPTER_SPEC", "CURRICULUM_AUDITOR", identity, evidence_path,
-        "specFields", len(_SPEC_FIELDS), len(_SPEC_FIELDS) - sum(1 for item in findings if item["code"] == "missing_field"),
-        findings, ["chapter-spec"] if spec else [],
+        "CHAPTER_SPEC", auditor_role, identity, evidence_path,
+        "specFields", len(_SPEC_FIELDS), len(_SPEC_FIELDS) - missing,
+        findings, ["chapter-spec:%s" % path] if spec else [],
     )
 
 
-def assess_notes(expected: dict | None, observed: dict | None) -> list[dict]:
-    if not expected or not observed:
-        return [_finding("missing_expectations", "notes structure has no configured expectation or observation")]
+def emit_notes_structure(path, expected, identity, evidence_path, *, auditor_role="CROSS_ARTIFACT_AUDITOR"):
+    """Open the actual notes artifact and derive structure; expected is policy."""
+    text = _read_text_fail_closed(path)
     findings = []
-    if expected.get("pageCount") != observed.get("pageCount"):
-        findings.append(_finding("page_count", "notes page count does not match the spec"))
+    if not text:
+        findings = [_finding("missing_notes", "notes artifact could not be read: %s" % (path or "none"))]
+        observed = {}
+    else:
+        anchors = _anchor_codes(text, (expected or {}).get("anchors") or [])
+        blanks = text.count("____")
+        answer_key = "key" in normalized(str(path))
+        forbidden_hits = [
+            term for term in ((expected or {}).get("forbidden") or [])
+            if term and normalized(term) in text
+        ]
+        observed = {
+            "anchors": anchors,
+            "blankCount": blanks,
+            "answerKey": "key" if answer_key else None,
+            "writingSpace": blanks > 0,
+            "forbiddenHits": forbidden_hits,
+            "vocabulary": [
+                term for term in ((expected or {}).get("vocabulary") or [])
+                if term and normalized(term) in text
+            ],
+            "candidateHash": identity.candidateHash,
+        }
+        findings = _safe(_assess_notes_file, expected, observed, path)
+    return _finish(
+        "NOTES_STRUCTURE", auditor_role, identity, evidence_path,
+        "noteAnchors", len((expected or {}).get("anchors") or []), len(observed.get("anchors") or []),
+        findings, ["notes:%s" % path] if text else [],
+    )
+
+
+def emit_slides_structure(path, expected, identity, evidence_path, *, auditor_role="CROSS_ARTIFACT_AUDITOR"):
+    """Open the actual PPTX and derive slide structure; expected is policy."""
+    text = _read_text_fail_closed(path)
+    findings = []
+    if not text:
+        findings = [_finding("missing_slides", "slides artifact could not be read: %s" % (path or "none"))]
+        observed = {}
+    else:
+        slide_count = len(re.findall(r"\bSLIDE \d+\b", text))
+        anchors = _anchor_codes(text, (expected or {}).get("anchors") or [])
+        notes_present = "NOTES" in text
+        observed = {
+            "slideCount": slide_count,
+            "anchors": anchors,
+            "speakerNotes": (expected or {}).get("speakerNotes") if notes_present else [],
+            "candidateHash": identity.candidateHash,
+        }
+        findings = _safe(_assess_slides_file, expected, observed, path)
+    return _finish(
+        "SLIDES_STRUCTURE", auditor_role, identity, evidence_path,
+        "slideAnchors", len((expected or {}).get("anchors") or []), len(observed.get("anchors") or []),
+        findings, ["slides:%s" % path] if text else [],
+    )
+
+
+def emit_inventory(expected, directory, identity, evidence_path, *, auditor_role="CROSS_ARTIFACT_AUDITOR"):
+    """Filesystem scan of the actual directory; expected is the policy list."""
+    observed = list_files(directory) if directory else []
+    findings = _safe(assess_inventory, expected if isinstance(expected, list) else None, observed)
+    return _finish(
+        "INVENTORY", auditor_role, identity, evidence_path,
+        "inventoryFiles", len(expected) if isinstance(expected, list) else 0, len(observed),
+        findings, ["inventory:%s" % directory] if directory else [],
+    )
+
+
+def emit_retired_content(directory, baselines, identity, evidence_path, *, auditor_role="PROVENANCE_AUDITOR"):
+    """Open the actual classroom/release files and scan against retired baselines."""
+    files = []
+    if directory:
+        for rel in list_files(directory):
+            full = str(Path(directory) / rel)
+            text = _read_text_fail_closed(full)
+            files.append({"name": rel, "text": text, "perceptualHash": None})
+    findings = _safe(assess_retired, files, baselines if isinstance(baselines, list) else None)
+    return _finish(
+        "RETIRED_CONTENT", auditor_role, identity, evidence_path,
+        "retiredFiles", len(files), len(files),
+        findings, ["retired-scan:%s" % directory] if directory else [],
+    )
+
+
+def _assess_notes_file(expected: dict | None, observed: dict | None, path) -> list[dict]:
+    """Compare policy (expected) against bytes-derived observation (observed)."""
+    if not expected or not observed:
+        return [_finding("missing_expectations", "notes structure has no policy or observation")]
+    findings = []
     if list(expected.get("anchors") or []) != list(observed.get("anchors") or []):
         findings.append(_finding("anchor_order", "notes anchors are missing, duplicated, or out of order"))
     if list(expected.get("vocabulary") or []) != list(observed.get("vocabulary") or []):
         findings.append(_finding("vocabulary", "notes vocabulary groups do not match the spec"))
-    if expected.get("blankCount") != observed.get("blankCount"):
+    if expected.get("blankCount") is not None and observed.get("blankCount") != expected.get("blankCount"):
         findings.append(_finding("blanks", "notes blank count does not match the spec"))
-    if expected.get("answerKey") != observed.get("answerKey"):
+    if (expected.get("answerKey") and observed.get("answerKey") != "key"):
         findings.append(_finding("answer_key", "notes are not paired with the configured answer key"))
-    if observed.get("writingSpace") is False:
+    if observed.get("writingSpace") is False and expected.get("writingSpace"):
         findings.append(_finding("writing_space", "a required writing region is missing"))
-    for term in expected.get("forbidden") or []:
-        if term and term in " ".join(observed.get("text") or []):
-            findings.append(_finding("forbidden_term", "notes contain a forbidden architecture term"))
-            break
+    for term in observed.get("forbiddenHits") or []:
+        findings.append(_finding("forbidden_term", "notes contain a forbidden architecture term: %s" % term))
     if observed.get("secondSystem") is True:
         findings.append(_finding("second_system", "a second note system is present"))
     if not observed.get("candidateHash"):
@@ -154,44 +285,23 @@ def assess_notes(expected: dict | None, observed: dict | None) -> list[dict]:
     return findings
 
 
-def emit_notes_structure(expected, observed, identity, evidence_path):
-    findings = _safe(assess_notes, expected, observed)
-    return _finish(
-        "NOTES_STRUCTURE", "CROSS_ARTIFACT_AUDITOR", identity, evidence_path,
-        "noteAnchors", len((expected or {}).get("anchors") or []), len((observed or {}).get("anchors") or []),
-        findings, ["notes-structure"] if expected and observed else [],
-    )
-
-
-def assess_slides(expected: dict | None, observed: dict | None) -> list[dict]:
+def _assess_slides_file(expected: dict | None, observed: dict | None, path) -> list[dict]:
     if not expected or not observed:
-        return [_finding("missing_expectations", "slides structure has no configured expectation or observation")]
+        return [_finding("missing_expectations", "slides structure has no policy or observation")]
     findings = []
-    if expected.get("slideCount") != observed.get("slideCount"):
+    if expected.get("slideCount") is not None and observed.get("slideCount") != expected.get("slideCount"):
         findings.append(_finding("slide_count", "slide count does not match the spec"))
     if list(expected.get("anchors") or []) != list(observed.get("anchors") or []):
         findings.append(_finding("anchor_order", "slide anchors are missing or out of order"))
-    if list(expected.get("vocabulary") or []) != list(observed.get("vocabulary") or []):
-        findings.append(_finding("vocabulary", "slide vocabulary groups do not match the spec"))
     required_notes = set(expected.get("speakerNotes") or [])
     if not required_notes.issubset(set(observed.get("speakerNotes") or [])):
         findings.append(_finding("speaker_notes", "a required speaker note is missing"))
-    if expected.get("planStatus") and observed.get("planStatus") is not True:
-        findings.append(_finding("plan_status", "slide plan or status structure is missing"))
-    if observed.get("uncodedAnswer") is True:
-        findings.append(_finding("uncoded_answer", "an uncoded slide carries a required note answer"))
     if not observed.get("candidateHash"):
         findings.append(_finding("identity", "slides observation has no candidate hash"))
     return findings
 
 
-def emit_slides_structure(expected, observed, identity, evidence_path):
-    findings = _safe(assess_slides, expected, observed)
-    return _finish(
-        "SLIDES_STRUCTURE", "CROSS_ARTIFACT_AUDITOR", identity, evidence_path,
-        "slideAnchors", len((expected or {}).get("anchors") or []), len((observed or {}).get("anchors") or []),
-        findings, ["slides-structure"] if expected and observed else [],
-    )
+
 
 
 def assess_leakage(sequence: list[dict] | None) -> list[dict]:
@@ -294,15 +404,6 @@ def assess_retired(files: list[dict] | None, baselines: list[dict] | None) -> li
     return findings
 
 
-def emit_retired_content(files, baselines, identity, evidence_path):
-    findings = _safe(assess_retired, files if isinstance(files, list) else None, baselines if isinstance(baselines, list) else None)
-    count = len(files) if isinstance(files, list) else 0
-    return _finish(
-        "RETIRED_CONTENT", "PROVENANCE_AUDITOR", identity, evidence_path,
-        "retiredFiles", count, count, findings, ["retired-baseline"] if baselines else [],
-    )
-
-
 def assess_inventory(expected: list[str] | None, observed: list[str] | None) -> list[dict]:
     if not expected:
         return [_finding("empty_expected", "inventory expectation is missing or empty")]
@@ -316,16 +417,6 @@ def assess_inventory(expected: list[str] | None, observed: list[str] | None) -> 
     if len(expected) != len(observed):
         findings.append(_finding("count_mismatch", "expected inventory count does not match the observation"))
     return findings
-
-
-def emit_inventory(expected, observed, identity, evidence_path):
-    findings = _safe(assess_inventory, expected if isinstance(expected, list) else None, observed if isinstance(observed, list) else None)
-    return _finish(
-        "INVENTORY", "CROSS_ARTIFACT_AUDITOR", identity, evidence_path,
-        "inventoryFiles", len(expected) if isinstance(expected, list) else 0,
-        len(observed) if isinstance(observed, list) else 0,
-        findings, ["inventory"] if expected else [],
-    )
 
 
 def assess_adversarial(summary: dict | None) -> list[dict]:

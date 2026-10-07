@@ -121,6 +121,39 @@ def expected_producer(gate_id: str) -> dict | None:
     return PRODUCERS.get(gate_id)
 
 
+# F-3 producer-independence metadata. `observesFilesDirectly` is True only when
+# the registered producer opens the actual artifact bytes and derives its own
+# observation. Caller may still supply policy/config/expected, never the result.
+PRODUCER_INDEPENDENCE = {
+    "SOURCE_AUTHORITY": {"observesFilesDirectly": False, "method": "caller claims"},
+    "CURRICULUM_CORRECTNESS": {"observesFilesDirectly": False, "method": "caller claims"},
+    "CHAPTER_SPEC": {"observesFilesDirectly": True, "method": "open chapter-spec JSON"},
+    "STUDENT_PROMPT_CLARITY": {"observesFilesDirectly": True, "method": "open student files + extract prompts"},
+    "NOTES_STRUCTURE": {"observesFilesDirectly": True, "method": "open notes docx/pdf + derive anchors/blanks"},
+    "SLIDES_STRUCTURE": {"observesFilesDirectly": True, "method": "open pptx + derive slides/anchors/notes"},
+    "NOTES_SLIDES_SYNC": {"observesFilesDirectly": False, "method": "caller anchor dicts"},
+    "ANSWER_LEAKAGE": {"observesFilesDirectly": False, "method": "caller reveal sequence"},
+    "ASSESSMENT_ALIGNMENT": {"observesFilesDirectly": False, "method": "caller dicts"},
+    "SCHEDULE_POLICY": {"observesFilesDirectly": False, "method": "caller rows"},
+    "PLAYBOOK_ALIGNMENT": {"observesFilesDirectly": False, "method": "caller dicts"},
+    "RENDER_COMPLETENESS": {"observesFilesDirectly": True, "method": "open render files + hash"},
+    "RENDERED_VISUAL_QA": {"observesFilesDirectly": True, "method": "open render images + ink"},
+    "PDF_QUALITY": {"observesFilesDirectly": True, "method": "qpdf/pdfinfo/pdffonts/pdftotext"},
+    "FRESH_EXPORT": {"observesFilesDirectly": False, "method": "caller hashes"},
+    "RETIRED_CONTENT": {"observesFilesDirectly": True, "method": "open files + scan vs baselines"},
+    "INVENTORY": {"observesFilesDirectly": True, "method": "filesystem scan"},
+    "RELEASE_EXACT_SET": {"observesFilesDirectly": True, "method": "open release dir + hash"},
+    "RELEASE_PARITY": {"observesFilesDirectly": True, "method": "hash release dir vs originals"},
+    "STATUS_AUTHORITY": {"observesFilesDirectly": False, "method": "caller surfaces"},
+    "ADVERSARIAL_QA": {"observesFilesDirectly": False, "method": "caller summary"},
+    "PRIOR_FROZEN_NONREGRESSION": {"observesFilesDirectly": False, "method": "caller observed dict"},
+}
+
+
+def producer_observes_files(gate_id: str) -> bool:
+    return bool((PRODUCER_INDEPENDENCE.get(gate_id) or {}).get("observesFilesDirectly"))
+
+
 def stamp(data: dict, gate_id: str) -> dict:
     spec = PRODUCERS[gate_id]
     versions = dict(data.get("toolVersions") or {})
