@@ -35,6 +35,17 @@
       "applicability": "always"
     },
     {
+      "gateId": "STUDENT_PROMPT_CLARITY",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CURRICULUM_AUDITOR",
+      "dependencies": ["CHAPTER_SPEC"],
+      "applicability": "always"
+    },
+    {
       "gateId": "NOTES_STRUCTURE",
       "gateVersion": "1.0",
       "mandatory": true,

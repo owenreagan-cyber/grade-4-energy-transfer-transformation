@@ -182,7 +182,7 @@ def passing_payload(identity=None):
 class GateVersionAuditTests(unittest.TestCase):
     def test_bumped_gates_are_1_1_and_the_rest_stay_1_0(self):
         gates = load_gates()
-        self.assertEqual(len(gates), 26)
+        self.assertEqual(len(gates), 27)
         rebump = {"RENDER_COMPLETENESS", "RENDERED_VISUAL_QA", "PDF_QUALITY"}
         for gate in gates:
             if gate.gateId in rebump:

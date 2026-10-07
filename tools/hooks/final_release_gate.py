@@ -49,11 +49,16 @@ _PHRASES = (
     ("approved_for_freeze", "approved_for_freeze"),
     ("internally certified", "internally_certified"),
     ("internally_certified", "internally_certified"),
+    ("certified internally", "internally_certified"),
     ("ready for freeze", "freeze_chapter"),
     ("freeze chapter", "freeze_chapter"),
     ("chapter is ready", "chapter_ready"),
     ("chapter ready", "chapter_ready"),
     ("release ready", "release_ready"),
+    ("good to ship", "chapter_ready"),
+    ("ready to ship", "chapter_ready"),
+    ("signed off", "chapter_ready"),
+    ("sign off", "chapter_ready"),
     ("chapter is frozen", "freeze_chapter"),
     ("status is frozen", "freeze_chapter"),
     ("internal release certification", "chapter_ready"),
@@ -67,10 +72,33 @@ _PHRASES = (
     ("ready to freeze", "freeze_chapter"),
 )
 
+# Pipeline-specific terms are sensitive on their own; they rarely appear in
+# ordinary text. Everyday words (ready, approved, final, complete, gold,
+# freeze) are sensitive only in chapter/build/unit context.
+_CONTEXT_RE = re.compile(r"\b(chapters?|builds?|units?)\b")
+_PIPELINE_ACTIONS = (
+    (re.compile(r"\bcertif\w*"), "chapter_ready"),
+    (re.compile(r"\breleas\w*\b"), "release_ready"),
+    (re.compile(r"\bpropagat\w*"), "chapter_ready"),
+    (re.compile(r"\bship\w*\b"), "chapter_ready"),
+    (re.compile(r"\bsign(?:ed)? off\b"), "chapter_ready"),
+)
+_CONCEPT_ACTIONS = (
+    (re.compile(r"\bready\b"), "chapter_ready"),
+    (re.compile(r"\bapprov\w*"), "approved_for_freeze"),
+    (re.compile(r"\bfreez\w*"), "freeze_chapter"),
+    (re.compile(r"\bfinal\b"), "chapter_ready"),
+    (re.compile(r"\bgold\b"), "chapter_ready"),
+    (re.compile(r"\bcomplet\w*\b"), "chapter_ready"),
+)
+
 
 def _normalize_message(text: str) -> str:
     text = re.sub(r"[\u200b\u200c\u200d\ufeff]", "", text)
-    return re.sub(r"\s+", " ", text.lower()).strip()
+    text = text.lower()
+    text = re.sub(r"[-_\u2010\u2011\u2012\u2013\u2014]", " ", text)
+    text = re.sub(r"[^\w'\s]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def _negated(window: str) -> bool:
@@ -88,12 +116,34 @@ def _asserts_phrase(lowered: str, phrase: str) -> bool:
             return False
         window = lowered[max(0, at - 80):at]
         after = lowered[at + len(phrase):at + len(phrase) + 24]
-        if re.search(r"\b(fail|failed|failure)\b", after):
+        if re.search(r"\b(fail|failed|failure|errors?|issues?)\b", after):
             start = at + len(phrase)
             continue
         if not _negated(window):
             return True
         start = at + len(phrase)
+
+
+def _matches_patterns(lowered: str, patterns) -> str | None:
+    for pattern, action in patterns:
+        for match in pattern.finditer(lowered):
+            window = lowered[max(0, match.start() - 80):match.start()]
+            after = lowered[match.end():match.end() + 24]
+            if re.search(r"\b(fail|failed|failure|errors?|issues?)\b", after):
+                continue
+            if not _negated(window):
+                return action
+    return None
+
+
+def _concept_action(lowered: str) -> str | None:
+    """Pipeline terms are sensitive anywhere; everyday words need chapter/build/unit context."""
+    pipeline = _matches_patterns(lowered, _PIPELINE_ACTIONS)
+    if pipeline is not None:
+        return pipeline
+    if not _CONTEXT_RE.search(lowered):
+        return None
+    return _matches_patterns(lowered, _CONCEPT_ACTIONS)
 
 
 def message_asserts_certification(payload: dict) -> bool:
@@ -120,6 +170,9 @@ def classify_action(payload: dict) -> str:
     for phrase, name in _PHRASES:
         if _asserts_phrase(lowered, phrase):
             return name
+    concept = _concept_action(lowered)
+    if concept is not None:
+        return concept
     return "ordinary"
 
 

@@ -109,6 +109,11 @@ PRODUCERS = {
         "version": "1.0",
         "role": "PROVENANCE_AUDITOR",
     },
+    "STUDENT_PROMPT_CLARITY": {
+        "id": "chapter_qa.student_prompt:emit_student_prompt_evidence",
+        "version": "1.0",
+        "role": "CURRICULUM_AUDITOR",
+    },
 }
 
 

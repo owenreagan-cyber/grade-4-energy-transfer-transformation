@@ -658,7 +658,8 @@ class ContractTests(unittest.TestCase):
         self.assertNotIn("37", raw)
         gates = load_gates()
         ids = [item.gateId for item in gates]
-        self.assertEqual(len(ids), 26)
+        self.assertEqual(len(ids), 27)
+        self.assertIn("STUDENT_PROMPT_CLARITY", ids)
         self.assertIn("POST_FREEZE_GOLDEN", ids)
         for extra in ("OOXML_FORENSICS", "SOURCE_CLOSURE", "CLEAN_ROOM_REPRODUCTION", "PROVENANCE_INTEGRITY"):
             self.assertIn(extra, ids)
