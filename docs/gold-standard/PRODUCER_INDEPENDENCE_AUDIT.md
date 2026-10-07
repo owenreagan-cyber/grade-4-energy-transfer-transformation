@@ -61,24 +61,35 @@ through the normal entrypoint.
 Six producers rewired to open files: CHAPTER_SPEC, NOTES_STRUCTURE,
 SLIDES_STRUCTURE, INVENTORY, RETIRED_CONTENT, STUDENT_PROMPT_CLARITY.
 
-### Pass 2 (this pass)
-Four more producers rewired to file/tool observation:
+### Pass 2 (committed `dd3c9ca`)
+Four more producers rewired to file/tool observation: STATUS_AUTHORITY,
+SCHEDULE_POLICY, ADVERSARIAL_QA, PRIOR_FROZEN_NONREGRESSION.
 
-| gateId | state (before → after) | files opened / tools run | bad fixture → result |
+### Pass 3 — FINAL CLOSEOUT (committed `913364a`)
+The remaining seven producers rewired via the shared extraction layer
+(`text_extraction.py`) and `file_producers.py`:
+
+| gateId | state (before → after) | files opened | bad fixture → result |
 |---|---|---|---|
-| STATUS_AUTHORITY | CALLER_FED → INDEPENDENT | tracked status surfaces | premature FROZEN/RELEASED → FAIL |
-| SCHEDULE_POLICY | CALLER_FED → INDEPENDENT | pacing calendar file | Friday REQUIRED / unknown token → FAIL |
-| ADVERSARIAL_QA | CALLER_FED → INDEPENDENT | runner result JSON | escaped/aborted run → FAIL |
-| PRIOR_FROZEN_NONREGRESSION | CALLER_FED → INDEPENDENT | Ch1 guard + Ch2 golden tools | mutated frozen byte → FAIL |
+| SOURCE_AUTHORITY | CALLER_FED → INDEPENDENT | Reader + TG + spec bytes | wrong Reader → FAIL |
+| CURRICULUM_CORRECTNESS | CALLER_FED → INDEPENDENT | classroom files (boundary families) | ramp-is-speed / kinetic / m/s → FAIL |
+| NOTES_SLIDES_SYNC | TAUTOLOGICAL → INDEPENDENT | actual notes + actual slides + spec anchors (three-way) | notes/slides anchor or support-line removal → FAIL |
+| ANSWER_LEAKAGE | CALLER_FED → INDEPENDENT | notes + slides + keys (reveal model) | early reveal / speaker leak → FAIL |
+| ASSESSMENT_ALIGNMENT | TAUTOLOGICAL → INDEPENDENT | quiz + key + practice (score line, key parity) | key answer changed / score line removed → FAIL |
+| PLAYBOOK_ALIGNMENT | TAUTOLOGICAL → INDEPENDENT | playbook region + spec | missing protocol / Friday required → FAIL |
+| FRESH_EXPORT | CALLER_FED → INDEPENDENT | source + production bytes | self-export / empty production → FAIL |
 
-The adversary runner's status/schedule mutation cases now write actual files and
-invoke the file-observing producers (no fabricated observation dicts).
+## Final totals
 
-### Remaining (7)
-SOURCE_AUTHORITY, CURRICULUM_CORRECTNESS, NOTES_SLIDES_SYNC, ANSWER_LEAKAGE,
-ASSESSMENT_ALIGNMENT, PLAYBOOK_ALIGNMENT, FRESH_EXPORT. These remain caller-fed
-or tautological and are coupled to the anchor/claim data model; they need a
-deeper text-extraction three-way comparison plus a full rework of the adversary's
-anchor/leakage/assessment mutation cases.
+- Mandatory release-blocking artifact-observing gates: **17** (all)
+- `INDEPENDENT`: **17** — every mandatory producer opens the artifact bytes and
+  derives its own observation.
+- `CALLER_FED`: **0**.
+- `TAUTOLOGICAL`: **0**.
+- `PARTIALLY_INDEPENDENT`: **0**.
+- `NON_ARTIFACT_GATE` exceptions: **0**.
+
+F-3 PRODUCER INDEPENDENCE: **PASS**.
+
 
 

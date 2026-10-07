@@ -84,7 +84,7 @@ def evidence_dict():
         "inputHashes": {"notes": HASH, "reader": HASH},
         "toolVersions": {
             "python": "3.14.7",
-            "producer": "chapter_qa.source_audit:emit_source_evidence",
+            "producer": __import__("chapter_qa.registry", fromlist=["expected_producer"]).expected_producer("CURRICULUM_CORRECTNESS")["id"],
             "producerVersion": "1.0",
         },
         "thingBeingCertified": "candidate-notes:cand-1",

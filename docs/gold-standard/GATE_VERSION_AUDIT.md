@@ -33,5 +33,22 @@ Phase C.1. A version changes only when evidence accepted under the old contract 
 | RENDER_COMPLETENESS | A render hash is the PNG identity. It is not required to equal the spec candidate hash. The cited source hash and the render-file hash must match the record. | A 1.1 pass treated hash equality with the candidate as the render check and could not describe a real multi-file render. |
 | RENDERED_VISUAL_QA | Margin ink is content ink. A declared background bleed may reach the edge. Export-edge fringe and PDF boxes with no rendered ink are not content violations. | A 1.1 pass could treat every non-white margin pixel, including a full-bleed background, as the same failure. |
 | PDF_QUALITY | Text presence is `pdftotext`, not a raw `Tj`/`TJ` byte scan. A full-page background raster uses the decorative DPI class. | A 1.1 fail or pass could turn on whether a compressed content stream happened to contain those two bytes. |
+| SOURCE_AUTHORITY | Producer opens the actual Reader/TG/spec bytes and derives the Big Question, required vocabulary, and source-range presence. | A 1.1 pass was caller-fed (claim dicts); it did not observe the authoritative files. |
+| CURRICULUM_CORRECTNESS | Producer opens classroom files and detects boundary families (ramp-is-speed, fake m/s, advanced vocabulary, mass comparison). | A 1.1 pass was caller-fed; it could not detect a boundary violation in the artifact bytes. |
+| NOTES_SLIDES_SYNC | Producer performs a three-way comparison of actual notes vs actual slides vs spec anchors (presence + order + support lines). | A 1.1 pass compared two caller-supplied anchor dicts, so notes and slides could diverge silently. |
+| ASSESSMENT_ALIGNMENT | Producer opens quiz/key/practice and checks score lines, boundary families, and key/question parity. | A 1.1 pass compared caller dicts; a quiz/key mismatch could pass. |
+| PLAYBOOK_ALIGNMENT | Producer opens the playbook region and checks required protocol facts and Friday status. | A 1.1 pass compared caller dicts; a missing protocol could pass. |
+| STATUS_AUTHORITY | Producer opens tracked status surfaces from disk. | A 1.1 pass was caller-fed surface text. |
 
-New evidence is stamped with `gate.gateVersion` by `seal()`. A stored 1.0 or 1.1 record for a bumped gate fails closed.
+## Bumped to 1.1 (F-3 passes)
+
+| Gate | What changed | Why an earlier PASS cannot be reused |
+|---|---|---|
+| ANSWER_LEAKAGE | Producer opens notes/slides/keys and derives the write/reveal/speaker-leak model from bytes. | A 1.0 pass was a caller-supplied reveal sequence with `prefilled=false`. |
+| FRESH_EXPORT | Producer hashes source + production bytes and rejects self-export and empty production. | A 1.0 pass was caller-supplied hashes. |
+| SCHEDULE_POLICY | Producer parses the pacing calendar file for dates and status tokens. | A 1.0 pass was caller-supplied row dicts. |
+| PRIOR_FROZEN_NONREGRESSION | Producer runs the actual Ch1 guard and Ch2 golden tools. | A 1.0 pass was caller-supplied guard/parity dicts. |
+| CHAPTER_SPEC, NOTES_STRUCTURE, SLIDES_STRUCTURE, INVENTORY, RETIRED_CONTENT, STUDENT_PROMPT_CLARITY | Producer opens the artifact bytes and derives its own observation. | A 1.0 pass was caller-fed or tautological (`observed == expected`). |
+
+New evidence is stamped with `gate.gateVersion` by `seal()`. A stored older record for a bumped gate fails closed.
+
