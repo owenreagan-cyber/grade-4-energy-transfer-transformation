@@ -221,6 +221,8 @@ def _read_lifecycle(payload, identity) -> dict:
         raise ValueError("lifecycle record malformed")
     if data.get("buildId") != identity.buildId:
         raise ValueError("lifecycle build mismatch")
+    if data.get("candidateHash") and data["candidateHash"] != identity.candidateHash:
+        raise ValueError("external audit authority is for different candidate bytes")
     claimed = payload.get("lifecycleState")
     if claimed is not None and claimed != data.get("state"):
         raise ValueError("lifecycle mismatch")
