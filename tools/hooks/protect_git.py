@@ -268,36 +268,25 @@ def _stage_path(token: str) -> str | None:
 
 
 def _authorize_add(args: list[str], authorization: dict) -> dict:
-    """Allow git add only for an explicit, authorized path list."""
-    if authorization.get("workflowAuthorizesStaging") is not True:
-        return deny("git add requires staging authorization")
-    allowed = authorization.get("allowedPaths")
-    if not isinstance(allowed, list) or not allowed:
-        return deny("staging authorization needs an explicit path list")
-    if any(token.startswith("-") or token in {".", "*"} for token in args):
+    """Allow git add for explicit paths only. No broad staging, wildcards, or
+    traversal. Staging is not an authority-granting operation: frozen-byte
+    enforcement happens at commit time via the pre-commit hook, so an explicit
+    `git add` of a frozen file still cannot land a frozen mutation."""
+    if any(token.startswith("-") or token in {".", "*", "-A", "--all"} for token in args):
         return deny("git add flags and wildcards are not authorized")
     if not args:
         return deny("git add needs explicit paths")
-    allowed_norm = set()
-    for item in allowed:
-        if not isinstance(item, str):
-            return deny("staging authorization paths must be strings")
-        norm = _stage_path(item)
-        if norm is None:
-            return deny("staging authorization contains an unsafe path")
-        allowed_norm.add(norm)
     for token in args:
         norm = _stage_path(token)
         if norm is None:
             return deny("staging path is a wildcard or traversal")
-        if norm not in allowed_norm:
-            return deny("staging path is not authorized")
     return None
 
 
 def _authorize_commit(args: list[str], authorization: dict) -> dict:
-    if authorization.get("workflowAuthorizesCommit") is not True:
-        return deny("git commit requires workflow authorization")
+    # F-6: commit authority is NOT a self-grantable repo-file boolean. The real
+    # enforcement is the git pre-commit hook (frozen bytes). This shell gate only
+    # blocks the flags that would bypass that hook or rewrite history.
     banned = {"-a", "--all", "--amend", "--no-verify"}
     if any(token in banned or token.startswith("--amend=") for token in args):
         return deny("git commit cannot amend, skip hooks, or stage everything")
@@ -316,9 +305,9 @@ def _classify_verb(verb: str | None, authorization: dict) -> dict | None:
             return None
         return deny("git push requires owner authorization")
     if verb == "commit":
-        if authorization.get("workflowAuthorizesCommit") is True:
-            return None
-        return deny("git commit requires workflow authorization")
+        # Commit itself is not destructive; the pre-commit hook enforces frozen
+        # bytes. --no-verify/--amend are rejected by _authorize_commit above.
+        return None
     if verb in READ_ONLY:
         return None
     return deny("git command %s is not in the read-only allow list" % verb)
@@ -582,14 +571,12 @@ def _walk(command: str, authorization: dict, depth: int) -> dict | None:
 
 
 def _authorization_file() -> dict:
-    path = Path(__file__).resolve().parents[2] / "qa" / "work" / "git-authorization.json"
-    if not path.is_file():
-        return {}
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return {}
-    return data if isinstance(data, dict) else {}
+    # F-6: this repo-file is NOT a trust source for commit/freeze/push authority.
+    # The only key ever honored from an external context is ownerAuthorizesPush,
+    # and that must be host-injected (the `authorization` payload), never read
+    # from an agent-writable repo file. We return empty: a repo file cannot
+    # self-grant any authority.
+    return {}
 
 
 def decide_git(command, authorization=None, *, use_file: bool = False) -> dict:

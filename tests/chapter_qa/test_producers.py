@@ -144,24 +144,27 @@ class ProducerTests(unittest.TestCase):
 
 
 class StagingTests(unittest.TestCase):
-    def test_explicit_authorized_add_is_allowed_and_broad_add_is_denied(self):
-        auth = {"workflowAuthorizesStaging": True, "allowedPaths": ["docs/gold-standard/CURSOR_HOOK_PLAN.md"]}
-        self.assertEqual(decide_git("git add docs/gold-standard/CURSOR_HOOK_PLAN.md", auth)["decision"], "ALLOW")
-        self.assertEqual(decide_git("git add tools/hooks/protect_git.py", auth)["decision"], "DENY")
-        self.assertEqual(decide_git("git add .", auth)["decision"], "DENY")
-        self.assertEqual(decide_git("git add -A", auth)["decision"], "DENY")
-        self.assertEqual(decide_git("git add --all", auth)["decision"], "DENY")
-        self.assertEqual(decide_git("git add docs/../tools/hooks/protect_git.py", auth)["decision"], "DENY")
-        self.assertEqual(decide_git("git add ../docs/gold-standard/CURSOR_HOOK_PLAN.md", auth)["decision"], "DENY")
-        self.assertEqual(decide_git("git commit -a -m msg", {"workflowAuthorizesCommit": True})["decision"], "DENY")
-        self.assertEqual(decide_git("git commit --amend -m msg", {"workflowAuthorizesCommit": True})["decision"], "DENY")
-        self.assertEqual(decide_git("git add docs/gold-standard/CURSOR_HOOK_PLAN.md", {})["decision"], "DENY")
+    def test_explicit_add_is_allowed_and_broad_add_is_denied(self):
+        # F-6: staging is explicit-path-only. No allowlist file; the pre-commit
+        # hook enforces frozen bytes at commit time.
+        self.assertEqual(decide_git("git add docs/gold-standard/CURSOR_HOOK_PLAN.md")["decision"], "ALLOW")
+        self.assertEqual(decide_git("git add tools/hooks/protect_git.py")["decision"], "ALLOW")
+        self.assertEqual(decide_git("git add .")["decision"], "DENY")
+        self.assertEqual(decide_git("git add -A")["decision"], "DENY")
+        self.assertEqual(decide_git("git add --all")["decision"], "DENY")
+        self.assertEqual(decide_git("git add docs/../tools/hooks/protect_git.py")["decision"], "DENY")
+        self.assertEqual(decide_git("git add ../docs/gold-standard/CURSOR_HOOK_PLAN.md")["decision"], "DENY")
+        self.assertEqual(decide_git("git commit -a -m msg")["decision"], "DENY")
+        self.assertEqual(decide_git("git commit --amend -m msg")["decision"], "DENY")
 
-    def test_commit_and_push_stay_separately_authorized(self):
-        self.assertEqual(decide_git("git commit -m msg", {"workflowAuthorizesCommit": False})["decision"], "DENY")
-        self.assertEqual(decide_git("git commit -m msg", {"workflowAuthorizesCommit": True})["decision"], "ALLOW")
+    def test_commit_allowed_and_push_still_denied(self):
+        # Commit is allowed (frozen-byte enforcement is the pre-commit hook);
+        # push requires host-injected owner authorization.
+        self.assertEqual(decide_git("git commit -m msg")["decision"], "ALLOW")
+        self.assertEqual(decide_git("git commit --no-verify -m msg")["decision"], "DENY")
         self.assertEqual(decide_git("git push", {"workflowAuthorizesCommit": True})["decision"], "DENY")
-        self.assertEqual(decide_git("git reset --hard", {"workflowAuthorizesCommit": True, "workflowAuthorizesStaging": True})["decision"], "DENY")
+        self.assertEqual(decide_git("git push", {"ownerAuthorizesPush": True})["decision"], "ALLOW")
+        self.assertEqual(decide_git("git reset --hard")["decision"], "DENY")
 
 
 if __name__ == "__main__":

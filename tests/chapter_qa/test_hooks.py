@@ -256,11 +256,16 @@ class GitProtectionTests(unittest.TestCase):
         self.assertEqual(result["decision"], "DENY")
 
     def test_push_and_commit_require_real_booleans(self):
+        # F-6: commit is no longer gated by a self-grantable repo-file boolean.
+        # Commit proceeds to the pre-commit hook (frozen-byte enforcement). Push
+        # still requires host-injected owner authorization, never a file.
         self.assertEqual(decide_git("git push")["decision"], "DENY")
-        self.assertEqual(decide_git("git commit -m msg")["decision"], "DENY")
+        self.assertEqual(decide_git("git commit -m msg")["decision"], "ALLOW")
         self.assertEqual(decide_git("git push", {"ownerAuthorizesPush": "true"})["decision"], "DENY")
         self.assertEqual(decide_git("git push", {"ownerAuthorizesPush": True})["decision"], "ALLOW")
-        self.assertEqual(decide_git("git commit -m msg", {"workflowAuthorizesCommit": True})["decision"], "ALLOW")
+        self.assertEqual(decide_git("git commit -m msg")["decision"], "ALLOW")
+        self.assertEqual(decide_git("git commit --no-verify -m msg")["decision"], "DENY")
+        self.assertEqual(decide_git("git commit --amend -m msg")["decision"], "DENY")
 
     def test_chained_destructive_command_is_denied(self):
         result = decide_git("git status && git clean -fd")

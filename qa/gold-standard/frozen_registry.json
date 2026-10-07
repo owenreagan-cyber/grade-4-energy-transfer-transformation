@@ -1,0 +1,59 @@
+{
+  "chapters": {
+    "1": {
+      "freezeCommit": "279a9de",
+      "version": "1.1"
+    },
+    "2": {
+      "freezeCommit": "a491193ddf74598910247385a2f55a4458b8b55c",
+      "version": "1.0"
+    }
+  },
+  "description": "Frozen Unit 1 Chapter 1 and Chapter 2 classroom bytes plus the combined playbook. Path -> SHA-256.",
+  "files": {
+    "production/answer-keys/01-ch1-energy-causes-change-practice-key.md": "4f9ae2da83dad6f5db55c08a7e2c323657a06b85c834e66714b35570665de53a",
+    "production/answer-keys/01-ch1-energy-causes-change-quiz-key.md": "e80ebd1775b4140a7c1214a86759c9041b2a005b923b55d01bb1b128ef59796b",
+    "production/answer-keys/01-ch1-energy-detectives-key.md": "71bd09b1a4da803370da0643c09d8df9f4028eb433d9cbd39f0128a71c92e8f1",
+    "production/answer-keys/02-ch2-friday-flex-key.md": "487040075ae8fc557f72b4d33378c25ba84ded8239d4df145459457abc37d771",
+    "production/answer-keys/02-ch2-moving-marbles-key.md": "14be14b8dfa9012281cb43f0657cab3987a4fc5c795b05ab68bb4ab02371dc2b",
+    "production/answer-keys/02-ch2-moving-objects-have-energy-practice-key.md": "30a5a172a03c0a7038da489961683579cd5e99f3c7d53a18ba0578247d4fa0f5",
+    "production/answer-keys/02-ch2-moving-objects-have-energy-quiz-key.md": "4d4037b8842466d9f5d1408cb61c63897af8e394d25902501408332c89d2f8cd",
+    "production/labs/01-ch1-energy-detectives-teacher-spec.md": "83d7786662aa06336b768f0ce4771512a8038e3fd1603e0f637cee796889e886",
+    "production/labs/02-ch2-moving-marbles-teacher-spec.md": "8f101d88348c254d9b67e1698bc5739e9da6c650cdb1b27215d617277741bf38",
+    "production/premium-notes/01-ch1-energy-causes-change-guided-notes-key.docx": "a5172737719305d8f70e34866d2abfae16f6c9471d8a9fe82d48cde5a553ecc2",
+    "production/premium-notes/01-ch1-energy-causes-change-guided-notes-key.pdf": "909fbbbd2d76cd4cab90ec91fdd9e8f92750771324553f4f82e32d5bc63ca462",
+    "production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx": "c501ca5be423205f7022c87d60f9f598d91ef55dc24439d655439055a08413cb",
+    "production/premium-notes/01-ch1-energy-causes-change-guided-notes.pdf": "8fc5e40063f31f5fd3639fb73ae8e93c8e974c2024ea8f19bb3a46762f1c4702",
+    "production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes-key.docx": "0897a6c793b0e2ef3c889ca1a0dd07fb5e0ca258daa09ac5e52cfd1e2b97cf4b",
+    "production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes-key.pdf": "4db7f27de3e76fc44f73aa936c3fd63b0fd52497e6cc692138dc993bac253f0e",
+    "production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx": "a3a4dfd3b0474694d15325d1b657cc645097970175ef2aa5665941c32fcaddce",
+    "production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.pdf": "4205b1df3a053979ce4fb14145ba2d864ac0da12c6a46caa8f56daf732ffb9c9",
+    "production/quizzes/01-ch1-energy-causes-change-quiz-blueprint.md": "16265cda83d859e2210c43b05beff4c73648ec59146e987f1b603a41b76b1916",
+    "production/quizzes/01-ch1-energy-causes-change-quiz.docx": "207d2ce9522ab53f9c5a91bc5a5a598342a5cf97b35ecf2d5703d0c6bf378304",
+    "production/quizzes/01-ch1-energy-causes-change-quiz.pdf": "dc4a51df57c37e4bbccc13c10e6ad2a19fb8b48214b7d8d80ba864159b46d6d3",
+    "production/quizzes/02-ch2-moving-objects-have-energy-quiz-blueprint.md": "319830bc326fd3a5a80fcbb30d04354cf88bc5ad7cfe22330e553715dc479e96",
+    "production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx": "3f2c36c4fae68bac15984990f4a4fe52e16108c2a29b888ec42c5e15afa77bf6",
+    "production/quizzes/02-ch2-moving-objects-have-energy-quiz.pdf": "33f0ddf28a45f7453050db09df5fc957dbf715ae0544849ac9e0e257fdb4224e",
+    "production/slides/01-ch1-energy-causes-change-slide-spec.md": "b5171b34b263d77f0aef22c66df259124745e1a6e49d6a338f5756df92e2a6da",
+    "production/slides/01-ch1-energy-causes-change-slides.pdf": "4ce8ce22a6e664f106a33efb4c585b601d5697cc6acaa56c45bb46db02355f34",
+    "production/slides/01-ch1-energy-causes-change-slides.pptx": "5278f96c7dfab4f4b6809a3677f714c566c212e7c74af3d03f502abb77f022f7",
+    "production/slides/02-ch2-moving-objects-have-energy-slide-spec.md": "f679d46c899d020a0d8a6db835ebc318d11ffc205ed2492354ed764d0737256e",
+    "production/slides/02-ch2-moving-objects-have-energy-slides.pdf": "885327756b245cee1d80d9ca3b3c58fcb8e8930fdc216b3989898d2c77ca16de",
+    "production/slides/02-ch2-moving-objects-have-energy-slides.pptx": "8a29faf3f55a0f23cb3937a01e8e013b6203dc31768b747abae7dc4a16aeba17",
+    "production/teacher-playbook/unit1-teacher-playbook.docx": "1fca035ad7b2f10e7c0acfa087e536dad91abe473443556be0ad191b9b7d0f1c",
+    "production/teacher-playbook/unit1-teacher-playbook.pdf": "93f3fdbdf48381d6b38b33c3a317e382e3e3976835aec3290775903c86c842d8",
+    "production/worksheets/01-ch1-energy-causes-change-practice.docx": "9c5ec51c029b2f3ad4158dbf11c10a97161ba56b15dce0077739e14345b749fe",
+    "production/worksheets/01-ch1-energy-causes-change-practice.pdf": "86fa932222276183ce0eb75dee0061aab171835c1d7f207219b4401f2f8c993f",
+    "production/worksheets/01-ch1-energy-detectives-student.docx": "28d877a882a356e4595ae6c73ea28e1bccb56a1afc097953382c5c0d633514c5",
+    "production/worksheets/01-ch1-energy-detectives-student.pdf": "3e1239c44ae87f0e16151bd20e41b2fe6ca30b7b52ba5c4f14630075322cd437",
+    "production/worksheets/02-ch2-absent-student-recovery.docx": "ce78447e9b51d0650f52db54c35ee3f84fea92f7f340e0daae9b754480227493",
+    "production/worksheets/02-ch2-absent-student-recovery.pdf": "d6608da07fc154de16b4d45409de9bdd7b68586c031acfa42605c1e6f54f0b19",
+    "production/worksheets/02-ch2-friday-flex.docx": "6e69325e1470beea8bf38ae4dcebbb6d84a1248405ff91dfc7b465833c16f42c",
+    "production/worksheets/02-ch2-moving-marbles-student.docx": "dfa76857e5ba21784f8afaa4ce5b21fae345829f5fed5481872e3889e1fd8df8",
+    "production/worksheets/02-ch2-moving-marbles-student.pdf": "0ef2840b41fdbf2cebd7f0c57291cbdeec2efb036188d2ce0a8ea50906161bd5",
+    "production/worksheets/02-ch2-moving-objects-have-energy-practice.docx": "ae49af28c65b5db6fd74c6a31eccb33b9e99a7f2523effad1de22a89d577d6aa",
+    "production/worksheets/02-ch2-moving-objects-have-energy-practice.pdf": "5402694d34a5c6054204b1df57f37b74da7a4710231fb01aaa4515f713a6f46c"
+  },
+  "playbook": "production/teacher-playbook/unit1-teacher-playbook.docx",
+  "schemaVersion": "1.0"
+}
