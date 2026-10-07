@@ -6,7 +6,7 @@ FLEX. Friday 2026-10-23 or makeup within 2 school days. Not a first lesson.
 1. (1) distance. Reader p. 13.
 2. (1) A. one ball at two speeds.
 3. (2) A greater change. Accept a farther cup move, a higher bounce, or a louder sound. No speed number.
-4. (2) Measured centimeters (ramp height and/or cup movement). Inferred the speed relationship.
+4. (2) Ramp height in centimeters and cup movement in centimeters. Both are measured.
 5. (1) ramp height. The ball stayed the same.
 6. (1) A. ramp height (cm) and average cup movement (cm).
 7. (2) A greater change, such as the cup or bucket moving farther.

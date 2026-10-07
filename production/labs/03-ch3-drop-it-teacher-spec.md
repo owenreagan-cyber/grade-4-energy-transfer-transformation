@@ -65,7 +65,7 @@
 ## Debrief questions
 - Which height caused the greatest observable change?
 - Did we measure the ball's speed, or the crater it made? (the crater)
-- How does this evidence connect to energy of motion? (higher → faster → bigger crater → greater energy of motion, inferred)
+- How does this evidence connect to energy of motion? (higher → faster → bigger crater → greater energy of motion, shown by the bigger crater)
 
 ## Absent recovery
 - `curriculum/chapter-03/student/recovery/03-ch3-absent-student-recovery.md`.

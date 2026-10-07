@@ -20,11 +20,11 @@ text: Roll one ball from a lower setup and from a higher setup. Say which cup mo
 
 ## LAB
 status: REQUIRED
-text: Ramp It Up 2.0 uses one ball. Heights come from 1, 2, and 3 books. Measure the vertical ramp height in centimeters. Measure how far the target moves in centimeters. Run one calibration trial and do not record it. Record three trials at each height. That is nine measured trials. Graph ramp height in centimeters against average target movement in centimeters. Do not write a speed in meters per second. Ramp height is not a measurement of speed. The engineering challenge is to move the target as close as possible to 30 centimeters without going past. 
+text: Ramp It Up 2.0 uses one ball. Heights come from 1, 2, and 3 books. Measure the vertical ramp height in centimeters. Measure how far the target moves in centimeters. Run one calibration trial and do not record it. Record three trials at each height. That is nine measured trials. Graph ramp height in centimeters against average target movement in centimeters. Do not write a speed in meters per second. Ramp height is not a measurement of speed. The engineering challenge is to move the target as close as possible to 30 centimeters without going past.
 
 ## N2
 status: REQUIRED
-text: We measure ramp ____ in centimeters. We measure how far the ____ moves in centimeters. We do not measure a speed number. The one thing we change is ramp ____. We keep the ____ ball. (TG Lesson 4 · Ramp It Up AP 4.1)
+text: We measure ramp ____ in centimeters. We measure how far the ____ moves in centimeters. We do not measure a speed number. The one thing we change is ramp ____. We keep the ____ ball.
 
 ## GRAPH
 status: REQUIRED
@@ -32,7 +32,7 @@ text: The graph axes are ramp height in centimeters and average target movement 
 
 ## N3
 status: REQUIRED
-text: Objects pick up more ____ on steeper ramps. From the steeper ramp, that ball made a ____ change. (Reader p. 15; cup movement is evidence of the greater change, not a speed measurement.)
+text: Objects pick up more ____ on steeper ramps. From the steeper ramp, that ball made a ____ change.
 
 ## N4
 status: REQUIRED

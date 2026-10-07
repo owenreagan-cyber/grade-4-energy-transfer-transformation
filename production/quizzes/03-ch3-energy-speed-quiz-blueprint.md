@@ -8,7 +8,7 @@ Status: FLEX. It assesses ideas taught Monday 2026-10-19 through Thursday 2026-1
 | 1 | 1 | V1 | vocabulary in context |
 | 2 | 1 | N1 | same object |
 | 3 | 2 | N1 | evidence |
-| 4 | 2 | N2 | measured and inferred |
+| 4 | 2 | N2 | measured in centimeters |
 | 5 | 1 | N2 | fair test |
 | 6 | 1 | GRAPH | axis labels |
 | 7 | 2 | N3 | steeper ramp |

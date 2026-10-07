@@ -24,6 +24,24 @@ SOFT = RGBColor(0x4A, 0x52, 0x68)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 FONT = "Avenir Next"
 
+# Student-visible display labels for anchor chips. Internal codes (BQ_NOW, RECOVER)
+# are never rendered raw; the visible chip uses a clean label.
+DISPLAY_LABELS = {
+    "BQ": "BQ",
+    "V1": "V1",
+    "N1": "N1",
+    "N2": "N2",
+    "N3": "N3",
+    "N4": "N4",
+    "DEMO": "DEMO",
+    "LAB": "LAB",
+    "GRAPH": "GRAPH",
+    "CHECK": "CHECK",
+    "BQ_NOW": "BQ NOW",
+    "DROP": "DROP IT",
+    "RECOVER": "RECOVER",
+}
+
 # Student-visible lines. Reveal slides are the first place an answer word appears.
 BODY = {
     "S01": ["Energy and Speed Are Related", "How are energy and speed related?"],
@@ -41,8 +59,8 @@ BODY = {
     "S13": ["Exit. One sentence about one ball.", "Not graded."],
     "S14": ["How are energy and speed related?", "What have we already observed?"],
     "S15": ["A fair test changes one thing.", "Keep one ball."],
-    "S16": ["Write the missing words.", "We measure ramp ________ in centimeters.", "We ________ the speed relationship from that change.", "The one thing we change is ramp ________.", "We keep the ________ ball."],
-    "S17": ["We measure ramp height in centimeters.", "We infer the speed relationship from that change.", "The one thing we change is ramp height.", "We keep the same ball."],
+    "S16": ["Write the missing words.", "We measure ramp ________ in centimeters.", "We measure how far the ________ moves in centimeters.", "We do not measure a speed number.", "The one thing we change is ramp ________.", "We keep the ________ ball."],
+    "S17": ["We measure ramp height in centimeters.", "We measure how far the cup moves in centimeters.", "We do not measure a speed number.", "The one thing we change is ramp height.", "We keep the same ball."],
     "S18": ["Calibration trial.", "Roll the ball once.", "Do not record that roll."],
     "S19": ["Measure the vertical ramp for 1 book, 2 books, and 3 books.", "Write the centimeters."],
     "S20": ["Three recorded trials at each setup.", "Nine recorded trials.", "Write how far the cup moves, in centimeters."],
@@ -53,11 +71,11 @@ BODY = {
     "S25": ["Plot your three averages.", "Use your own measurements."],
     "S26": ["Challenge", "Move the cup as close as you can to 30 cm without going past."],
     "S27": ["You may change the ramp.", "Keep one ball.", "Do not write a speed number."],
-    "S28": ["Which setup made the bigger change?", "We inferred the speed relationship from that change."],
+    "S28": ["Which setup made the bigger change?", "The cup moved farther. That is a greater change."],
     "S29": ["Reader pages 15 and 16.", "How are energy and speed related?"],
-    "S30": ["A steeper ramp. One ball.", "Watch how far the cup or bucket moves."],
-    "S31": ["Write the missing word.", "From the steeper ramp, that ball made a ________ change."],
-    "S32": ["From the steeper ramp, that ball made a greater change."],
+    "S30": ["A steeper ramp. One ball.", "The Reader says objects pick up more speed on steeper ramps.", "Watch how far the cup or bucket moves."],
+    "S31": ["Write the missing words.", "Objects pick up more ________ on steeper ramps.", "From the steeper ramp, that ball made a ________ change."],
+    "S32": ["Objects pick up more speed on steeper ramps.", "From the steeper ramp, that ball made a greater change."],
     "S33": ["A soft bounce. A hard bounce.", "Which bounce went farther up?"],
     "S34": ["Write the missing word.", "The faster ball bounced ________ than the slower ball."],
     "S35": ["The faster ball bounced higher than the slower ball.", "A louder sound is also a bigger change."],
@@ -141,8 +159,8 @@ def build():
         else:
             tab = rect(slide, 0.6, 0.58, 5.3, 0.4, PRIMARY)
             write(tab, "CHAPTER 3  ·  ENERGY AND SPEED", 12, WHITE, True, PP_ALIGN.CENTER)
-            chip = rect(slide, 0.6, 1.15, 1.35, 0.46, ACCENT)
-            write(chip, row["anchor"], 18, WHITE, True, PP_ALIGN.CENTER)
+            chip = rect(slide, 0.6, 1.15, 1.5, 0.46, ACCENT)
+            write(chip, DISPLAY_LABELS.get(row["anchor"], row["anchor"]), 16, WHITE, True, PP_ALIGN.CENTER)
             textbox(slide, 2.1, 1.1, 8.2, 0.56, [titles.get(row["anchor"], row["task"])], 28, PRIMARY, True)
             status = row.get("status") or session["status"]
             badge = rect(slide, 11.0, 0.58, 1.7, 0.4, CHARCOAL if status == "FLEX" else ACCENT)
