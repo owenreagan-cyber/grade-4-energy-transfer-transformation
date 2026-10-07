@@ -459,6 +459,71 @@ def emit_adversarial_qa(summary, identity, evidence_path):
     )
 
 
+def _summary_from_report(report: dict) -> dict:
+    """Derive the adversarial summary from a machine result file, never from caller input."""
+    summary = report.get("summary") or {}
+    results = report.get("results") or []
+    expected_bad = sum(1 for row in results if row.get("expectedStatus") == "FAIL")
+    bad_green = sum(1 for row in results if row.get("expectedStatus") == "FAIL" and not row.get("caught"))
+    clean_red = sum(1 for row in results if row.get("expectedStatus") == "PASS" and not row.get("caught"))
+    return {
+        "runId": report.get("runId"),
+        "buildId": report.get("buildId"),
+        "runnerSourceHash": report.get("runnerSourceHash"),
+        "completed": bool(report.get("completed")) and "aborted" not in report,
+        "projectBad": summary.get("projectBad") if summary.get("projectBad") is not None else expected_bad,
+        "projectBadGreen": summary.get("projectBadGreen") if summary.get("projectBadGreen") is not None else bad_green,
+        "heldOutBad": summary.get("heldOutBad") or 0,
+        "heldOutGreen": summary.get("heldOutGreen") or 0,
+        "cleanControls": summary.get("clean") or 0,
+        "cleanRed": summary.get("cleanRed") if summary.get("cleanRed") is not None else clean_red,
+        "canonicalRepoTouched": summary.get("canonicalTouched") or 0,
+        "aborted": bool(report.get("aborted")),
+    }
+
+
+def emit_adversarial_qa_from_file(result_path, identity, evidence_path, *, auditor_role="QA_ADVERSARY"):
+    """File-observing ADVERSARIAL_QA: read the actual runner result JSON."""
+    from chapter_qa.observation import read_json
+
+    report = {}
+    if result_path:
+        try:
+            report = read_json(result_path)
+        except (OSError, ValueError, KeyError, TypeError):
+            report = {}
+    summary = _summary_from_report(report) if isinstance(report, dict) else {}
+    findings = _safe(assess_adversarial, summary)
+    count = int(summary.get("projectBad") or 0)
+    data = {
+        "evidenceId": "adversarial-qa",
+        "gateId": "ADVERSARIAL_QA",
+        "auditorRole": auditor_role,
+        "performed": bool(report),
+        "expectedInputs": ["adversarial-report:%s" % result_path] if report else [],
+        "observedInputs": ["adversarial-report:%s" % result_path] if report and not findings else [],
+        "thingBeingCertified": "candidate-adversarial:%s" % identity.candidateHash,
+        "independentEvidenceSource": "adversarial-runner-result:%s" % (summary.get("runId") or "none"),
+        "findings": findings,
+        "evidencePaths": [evidence_path],
+        "failureReason": None,
+        "notVerifiedReason": None,
+        "invalidationReasons": [],
+        "execution": {
+            "succeeded": bool(report),
+            "detectorException": False,
+            "requiredInputsPresent": bool(report),
+            "missingRender": False,
+            "missingEvidence": not bool(report),
+            "stale": False,
+            "gateSpecificFailure": bool(findings),
+            "unavailableEvidence": False,
+        },
+        "inventory": [{"name": "mutations", "expected": count, "observed": count}],
+    }
+    return seal(data, identity, producer=True)
+
+
 _FROZEN_KEYS = ("guard", "unreviewed", "stale", "parity", "churn")
 
 
@@ -488,3 +553,80 @@ def emit_prior_frozen(chapters, identity, evidence_path):
         "PRIOR_FROZEN_NONREGRESSION", "PROVENANCE_AUDITOR", identity, evidence_path,
         "frozenChapters", count, count, findings, ["frozen-chapters"] if chapters else [],
     )
+
+
+def run_frozen_nonregression() -> dict:
+    """Execute the actual Ch1/Ch2 frozen tools and derive observations from their output."""
+    observed = {}
+    try:
+        import qa_ch1_note_architecture as ch1
+
+        authority_rows, retired_hits, stale = ch1.analyze(ch1.load_allowlist())
+        unreviewed = sum(len(unrev) for _rel, _s, unrev, _ex in authority_rows)
+        ch1_ok = unreviewed == 0 and len(stale) == 0 and len(retired_hits) == 0
+        observed["1"] = {
+            "guard": "PASS" if ch1_ok else "FAIL",
+            "guardExpected": "PASS",
+            "unreviewed": unreviewed,
+            "stale": len(stale),
+            "parity": "PASS" if ch1_ok else "FAIL",
+            "parityExpected": "PASS",
+            "churn": 0 if ch1_ok else 1,
+        }
+    except Exception as exc:  # noqa: BLE001
+        observed["1"] = {"guard": "FAIL", "guardExpected": "PASS", "unreviewed": 1,
+                         "stale": 0, "parity": "FAIL", "parityExpected": "PASS",
+                         "churn": 1, "error": str(exc)}
+    try:
+        import qa_ch2_golden as ch2
+        from ch2_golden_collect import collect
+
+        expected, err = ch2.expected_golden("post-freeze", ch2.CANON)
+        if err:
+            observed["2"] = {"guard": "FAIL", "guardExpected": "PASS", "unreviewed": 0,
+                             "stale": 0, "parity": "FAIL", "parityExpected": "PASS",
+                             "churn": 1, "error": err}
+        else:
+            fails = ch2.compare(expected, collect(ch2.CANON))
+            observed["2"] = {"guard": "PASS" if not fails else "FAIL", "guardExpected": "PASS",
+                             "unreviewed": 0, "stale": 0,
+                             "parity": "PASS" if not fails else "FAIL", "parityExpected": "PASS",
+                             "churn": 0 if not fails else 1}
+    except Exception as exc:  # noqa: BLE001
+        observed["2"] = {"guard": "FAIL", "guardExpected": "PASS", "unreviewed": 0,
+                         "stale": 0, "parity": "FAIL", "parityExpected": "PASS",
+                         "churn": 1, "error": str(exc)}
+    return observed
+
+
+def emit_prior_frozen_from_tools(identity, evidence_path, *, auditor_role="PROVENANCE_AUDITOR"):
+    """File/tool-observing PRIOR_FROZEN_NONREGRESSION: run the actual frozen tools."""
+    observed = run_frozen_nonregression()
+    findings = _safe(assess_prior_frozen, observed)
+    data = {
+        "evidenceId": "prior-frozen-nonregression",
+        "gateId": "PRIOR_FROZEN_NONREGRESSION",
+        "auditorRole": auditor_role,
+        "performed": bool(observed),
+        "expectedInputs": ["frozen-ch1", "frozen-ch2"],
+        "observedInputs": [] if findings else ["frozen-ch1", "frozen-ch2"],
+        "thingBeingCertified": "candidate-frozen:%s" % identity.candidateHash,
+        "independentEvidenceSource": "frozen-tool-run:ch1-guard-ch2-golden",
+        "findings": findings,
+        "evidencePaths": [evidence_path],
+        "failureReason": None,
+        "notVerifiedReason": None,
+        "invalidationReasons": [],
+        "execution": {
+            "succeeded": bool(observed),
+            "detectorException": False,
+            "requiredInputsPresent": bool(observed),
+            "missingRender": False,
+            "missingEvidence": not bool(observed),
+            "stale": False,
+            "gateSpecificFailure": bool(findings),
+            "unavailableEvidence": False,
+        },
+        "inventory": [{"name": "frozenChapters", "expected": 2, "observed": len(observed)}],
+    }
+    return seal(data, identity, producer=True)

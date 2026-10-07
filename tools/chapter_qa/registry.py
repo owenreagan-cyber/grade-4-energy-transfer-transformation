@@ -45,7 +45,7 @@ PRODUCERS = {
         "role": "CURRICULUM_AUDITOR",
     },
     "SCHEDULE_POLICY": {
-        "id": "chapter_qa.schedule_policy:emit_schedule_evidence",
+        "id": "chapter_qa.schedule_policy:emit_schedule_evidence_from_file",
         "version": "1.0",
         "role": "CURRICULUM_AUDITOR",
     },
@@ -95,17 +95,17 @@ PRODUCERS = {
         "role": "PROVENANCE_AUDITOR",
     },
     "STATUS_AUTHORITY": {
-        "id": "qa_status_authority:emit_status_evidence",
+        "id": "qa_status_authority:emit_status_evidence_from_files",
         "version": "1.0",
         "role": "CROSS_ARTIFACT_AUDITOR",
     },
     "ADVERSARIAL_QA": {
-        "id": "chapter_qa.mandatory_producers:emit_adversarial_qa",
+        "id": "chapter_qa.mandatory_producers:emit_adversarial_qa_from_file",
         "version": "1.0",
         "role": "QA_ADVERSARY",
     },
     "PRIOR_FROZEN_NONREGRESSION": {
-        "id": "chapter_qa.mandatory_producers:emit_prior_frozen",
+        "id": "chapter_qa.mandatory_producers:emit_prior_frozen_from_tools",
         "version": "1.0",
         "role": "PROVENANCE_AUDITOR",
     },
@@ -134,7 +134,7 @@ PRODUCER_INDEPENDENCE = {
     "NOTES_SLIDES_SYNC": {"observesFilesDirectly": False, "method": "caller anchor dicts"},
     "ANSWER_LEAKAGE": {"observesFilesDirectly": False, "method": "caller reveal sequence"},
     "ASSESSMENT_ALIGNMENT": {"observesFilesDirectly": False, "method": "caller dicts"},
-    "SCHEDULE_POLICY": {"observesFilesDirectly": False, "method": "caller rows"},
+    "SCHEDULE_POLICY": {"observesFilesDirectly": True, "method": "parse pacing calendar file"},
     "PLAYBOOK_ALIGNMENT": {"observesFilesDirectly": False, "method": "caller dicts"},
     "RENDER_COMPLETENESS": {"observesFilesDirectly": True, "method": "open render files + hash"},
     "RENDERED_VISUAL_QA": {"observesFilesDirectly": True, "method": "open render images + ink"},
@@ -144,9 +144,9 @@ PRODUCER_INDEPENDENCE = {
     "INVENTORY": {"observesFilesDirectly": True, "method": "filesystem scan"},
     "RELEASE_EXACT_SET": {"observesFilesDirectly": True, "method": "open release dir + hash"},
     "RELEASE_PARITY": {"observesFilesDirectly": True, "method": "hash release dir vs originals"},
-    "STATUS_AUTHORITY": {"observesFilesDirectly": False, "method": "caller surfaces"},
-    "ADVERSARIAL_QA": {"observesFilesDirectly": False, "method": "caller summary"},
-    "PRIOR_FROZEN_NONREGRESSION": {"observesFilesDirectly": False, "method": "caller observed dict"},
+    "STATUS_AUTHORITY": {"observesFilesDirectly": True, "method": "open status surfaces from registry"},
+    "ADVERSARIAL_QA": {"observesFilesDirectly": True, "method": "read runner result JSON"},
+    "PRIOR_FROZEN_NONREGRESSION": {"observesFilesDirectly": True, "method": "run Ch1/Ch2 frozen tools"},
 }
 
 

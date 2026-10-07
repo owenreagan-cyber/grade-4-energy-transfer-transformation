@@ -50,6 +50,15 @@ BUMPED = {
     "PDF_QUALITY",
     "RELEASE_EXACT_SET",
     "RELEASE_PARITY",
+    "SCHEDULE_POLICY",
+    "ADVERSARIAL_QA",
+    "PRIOR_FROZEN_NONREGRESSION",
+}
+
+REBUMP = {
+    "RENDER_COMPLETENESS",
+    "RENDERED_VISUAL_QA",
+    "PDF_QUALITY",
     "STATUS_AUTHORITY",
 }
 
@@ -191,9 +200,8 @@ class GateVersionAuditTests(unittest.TestCase):
     def test_bumped_gates_are_1_1_and_the_rest_stay_1_0(self):
         gates = load_gates()
         self.assertEqual(len(gates), 27)
-        rebump = {"RENDER_COMPLETENESS", "RENDERED_VISUAL_QA", "PDF_QUALITY"}
         for gate in gates:
-            if gate.gateId in rebump:
+            if gate.gateId in REBUMP:
                 self.assertEqual(gate.gateVersion, "1.2", gate.gateId)
             elif gate.gateId in BUMPED:
                 self.assertEqual(gate.gateVersion, "1.1", gate.gateId)

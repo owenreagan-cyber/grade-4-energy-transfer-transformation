@@ -27,13 +27,13 @@ from chapter_qa.provenance import emit_closure_evidence
 from chapter_qa.release_judge import judge
 from chapter_qa.release_set import emit_release_evidence
 from chapter_qa.render_completeness import emit_render_evidence
-from chapter_qa.schedule_policy import emit_schedule_evidence
+from chapter_qa.schedule_policy import emit_schedule_evidence, emit_schedule_evidence_from_file
 from chapter_qa.source_audit import emit_source_evidence
 from chapter_qa.visual_qa import emit_visual_evidence, page_record
 from chapter_qa.pdf_fixture import write_pdf
 from qa_ooxml import emit_ooxml_gate
 from qa_pdf_quality import emit_pdf_evidence
-from qa_status_authority import emit_status_evidence
+from qa_status_authority import emit_status_evidence, emit_status_evidence_from_files
 
 ROOT = REPO_ROOT
 SOURCE = "Water can turn a wheel."
@@ -302,28 +302,47 @@ def run_method(case, seed, identity):
             return status, "FAIL" if status == "FAIL" else "PASS", evidence
         if method != "untaught":
             status = emit_cross_evidence(*_pair(left, right, lclass, rclass), identity, gate, evidence, auditor_role=ROLES[gate])[1].status
-    elif method in ("token_ok", "unknown_token", "stale_words", "frozen_vs_human", "status_clean"):
+    elif method in ("unknown_token", "stale_words", "frozen_vs_human", "status_clean"):
+        # unknown_token is a SCHEDULE_POLICY case (an unrecognized status token);
+        # the rest are STATUS_AUTHORITY cases. Both are file-observing now.
         if method == "unknown_token":
-            status = emit_schedule_evidence([{"day": "Monday", "token": attack.upper(), "firstExposure": False}], identity, evidence, auditor_role=ROLES["SCHEDULE_POLICY"])[1].status
-        elif method == "token_ok":
-            status = emit_schedule_evidence([{"day": "Monday", "token": "REQUIRED", "firstExposure": True, "negated": False}], identity, evidence, auditor_role=ROLES["SCHEDULE_POLICY"])[1].status
-        elif method == "status_clean":
-            status = emit_status_evidence("FROZEN", [{"kind": "AUTHORITATIVE_STATUS", "surfaceId": "manifest", "text": "FROZEN"}], identity, evidence, auditor_role=ROLES["STATUS_AUTHORITY"])[1].status
+            rel = "qa/work/_phase_c/%s/pacing.md" % case_id
+            path = ROOT / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("| Session | Date | Status |\n|---|---|---|\n| 1 | 2026-10-19 | %s |\n" % attack.upper(), encoding="utf-8")
+            status = emit_schedule_evidence_from_file(rel, identity, evidence, auditor_role=ROLES["SCHEDULE_POLICY"])[1].status
         else:
-            text = attack + " is not frozen" if method == "stale_words" else "Phase 7.3 remediation candidate"
-            if method == "frozen_vs_human":
-                text = attack + " remediation candidate"
-            status = emit_status_evidence("FROZEN", [{"kind": "HUMAN_FACING_STATUS", "surfaceId": "callout", "text": text}], identity, evidence, auditor_role=ROLES["STATUS_AUTHORITY"])[1].status
+            def _status_file(kind, text):
+                rel = "qa/work/_phase_c/%s/status.md" % case_id
+                path = ROOT / rel
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(text, encoding="utf-8")
+                return rel
+            if method == "status_clean":
+                surface = [{"surfaceId": "m", "kind": "AUTHORITATIVE_STATUS", "path": _status_file("AUTHORITATIVE_STATUS", "FROZEN")}]
+                status = emit_status_evidence_from_files("FROZEN", surface, identity, evidence, auditor_role=ROLES["STATUS_AUTHORITY"])[1].status
+            else:
+                text = attack + " is not frozen" if method == "stale_words" else "Phase 7.3 remediation candidate"
+                if method == "frozen_vs_human":
+                    text = attack + " remediation candidate"
+                surface = [{"surfaceId": "callout", "kind": "HUMAN_FACING_STATUS", "path": _status_file("HUMAN_FACING_STATUS", text)}]
+                status = emit_status_evidence_from_files("FROZEN", surface, identity, evidence, auditor_role=ROLES["STATUS_AUTHORITY"])[1].status
     elif method in ("friday_required", "friday_date", "friday_table", "friday_clean"):
+        def _pace_file(token, day):
+            rel = "qa/work/_phase_c/%s/pacing.md" % case_id
+            path = ROOT / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("| Session | Date | Status |\n|---|---|---|\n| 1 | %s | %s |\n" % (day, token), encoding="utf-8")
+            return rel
         if method == "friday_clean":
-            row = {"day": "Friday", "token": "FLEX", "firstExposure": False, "negated": True, "representation": "review"}
+            row_path = _pace_file("FLEX", "2026-10-23")
         elif method == "friday_date":
-            row = {"day": "2026-10-16", "token": "REQUIRED", "firstExposure": True, "representation": "date"}
+            row_path = _pace_file("REQUIRED", "2026-10-16")
         elif method == "friday_table":
-            row = {"day": "Friday", "token": "REQUIRED", "firstExposure": True, "representation": "table"}
+            row_path = _pace_file("REQUIRED", "Friday")
         else:
-            row = {"day": "Friday", "token": "REQUIRED", "firstExposure": True, "representation": "weekday"}
-        status = emit_schedule_evidence([row], identity, evidence, auditor_role=ROLES["SCHEDULE_POLICY"])[1].status
+            row_path = _pace_file("REQUIRED", "Friday")
+        status = emit_schedule_evidence_from_file(row_path, identity, evidence, auditor_role=ROLES["SCHEDULE_POLICY"])[1].status
     elif method.startswith("render_") or method in ("visual_clean", "crop_off", "overlap", "tiny_font", "small_write", "missing_crop"):
         items = [_render_item(1, "e" * 64, ROOT), _render_item(2, "f" * 64, ROOT), _render_item(3, "1" * 64, ROOT)]
         if method == "render_delete":

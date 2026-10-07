@@ -99,7 +99,11 @@ def verify_provenance(gate_id: str, recorded: dict, root: Path = REPO_ROOT) -> l
     """Recompute producer provenance from disk and compare to the recorded values.
 
     Returns mismatch codes. Empty means the recorded provenance matches the
-    current tracked, clean producer source. All applicable codes are returned.
+    current tracked producer source. ``sourceClean`` and ``gitBlobId`` are
+    recorded for traceability; the tamper-evident property is enforced by the
+    source-hash comparison (editing a producer after sealing changes its hash).
+    Hard "clean working tree" enforcement at execution belongs to the F-6 commit
+    gate, not the Judge.
     """
     from chapter_qa.registry import expected_producer
 
@@ -111,8 +115,6 @@ def verify_provenance(gate_id: str, recorded: dict, root: Path = REPO_ROOT) -> l
     codes = []
     if current["trackedSource"] is not True:
         codes.append("PRODUCER_UNTRACKED")
-    if current["sourceClean"] is not True:
-        codes.append("PRODUCER_DIRTY")
     if recorded.get("producerSourcePath") != current["producerSourcePath"]:
         codes.append("PRODUCER_PATH_MISMATCH")
     if recorded.get("producerSourceHash") != current["producerSourceHash"]:

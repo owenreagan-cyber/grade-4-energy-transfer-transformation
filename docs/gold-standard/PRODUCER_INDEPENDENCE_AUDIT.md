@@ -39,13 +39,15 @@ current independence state. Classifications:
 
 ## Summary
 
-- `INDEPENDENT`: PDF_QUALITY, RELEASE_EXACT_SET.
-- `PARTIALLY_INDEPENDENT`: RENDER_COMPLETENESS, RENDERED_VISUAL_QA, RELEASE_PARITY.
-- `CALLER_FED`: SOURCE_AUTHORITY, CURRICULUM_CORRECTNESS, STUDENT_PROMPT_CLARITY,
-  ANSWER_LEAKAGE, SCHEDULE_POLICY, FRESH_EXPORT, RETIRED_CONTENT, INVENTORY,
-  STATUS_AUTHORITY, ADVERSARIAL_QA, PRIOR_FROZEN_NONREGRESSION.
-- `TAUTOLOGICAL`: CHAPTER_SPEC, NOTES_STRUCTURE, SLIDES_STRUCTURE, NOTES_SLIDES_SYNC,
-  ASSESSMENT_ALIGNMENT, PLAYBOOK_ALIGNMENT.
+- `INDEPENDENT` (10): PDF_QUALITY, RELEASE_EXACT_SET, CHAPTER_SPEC,
+  NOTES_STRUCTURE, SLIDES_STRUCTURE, INVENTORY, RETIRED_CONTENT,
+  STUDENT_PROMPT_CLARITY, STATUS_AUTHORITY, SCHEDULE_POLICY, ADVERSARIAL_QA,
+  PRIOR_FROZEN_NONREGRESSION.
+- `PARTIALLY_INDEPENDENT` (3): RENDER_COMPLETENESS, RENDERED_VISUAL_QA,
+  RELEASE_PARITY.
+- `CALLER_FED` (4): SOURCE_AUTHORITY, CURRICULUM_CORRECTNESS, ANSWER_LEAKAGE,
+  FRESH_EXPORT.
+- `TAUTOLOGICAL` (3): NOTES_SLIDES_SYNC, ASSESSMENT_ALIGNMENT, PLAYBOOK_ALIGNMENT.
 
 This matrix is the worklist. Repairs proceed gate-by-gate; no gate is reclassified
 until its producer demonstrably opens the artifact and its negative self-test fails
@@ -53,26 +55,30 @@ through the normal entrypoint.
 
 ---
 
-## F-3 status update (this pass)
+## F-3 status update
 
-Six producers were rewired to open the actual artifact bytes and derive their own
-observation. Their negative self-tests fail through the normal entrypoint
-(`tests/chapter_qa/test_producer_independence.py`, 16 cases):
+### Pass 1 (committed `163061f`)
+Six producers rewired to open files: CHAPTER_SPEC, NOTES_STRUCTURE,
+SLIDES_STRUCTURE, INVENTORY, RETIRED_CONTENT, STUDENT_PROMPT_CLARITY.
 
-| gateId | state (before → after) | files opened | bad fixture → result |
+### Pass 2 (this pass)
+Four more producers rewired to file/tool observation:
+
+| gateId | state (before → after) | files opened / tools run | bad fixture → result |
 |---|---|---|---|
-| CHAPTER_SPEC | TAUTOLOGICAL → INDEPENDENT | chapter-spec JSON | empty bigQuestion → FAIL |
-| NOTES_STRUCTURE | TAUTOLOGICAL → INDEPENDENT | notes docx/pdf/text | anchor removed → FAIL |
-| SLIDES_STRUCTURE | TAUTOLOGICAL → INDEPENDENT | PPTX slides+notes | slide/anchor removed → FAIL |
-| INVENTORY | CALLER_FED → INDEPENDENT | filesystem scan | missing file → FAIL |
-| RETIRED_CONTENT | CALLER_FED → INDEPENDENT | classroom/release files | retired token → FAIL |
-| STUDENT_PROMPT_CLARITY | CALLER_FED → INDEPENDENT | student files (prompt extraction) | vague referent → FAIL |
+| STATUS_AUTHORITY | CALLER_FED → INDEPENDENT | tracked status surfaces | premature FROZEN/RELEASED → FAIL |
+| SCHEDULE_POLICY | CALLER_FED → INDEPENDENT | pacing calendar file | Friday REQUIRED / unknown token → FAIL |
+| ADVERSARIAL_QA | CALLER_FED → INDEPENDENT | runner result JSON | escaped/aborted run → FAIL |
+| PRIOR_FROZEN_NONREGRESSION | CALLER_FED → INDEPENDENT | Ch1 guard + Ch2 golden tools | mutated frozen byte → FAIL |
 
-Gate versions bumped to 1.1 for these six. The remaining producers
-(SOURCE_AUTHORITY, CURRICULUM_CORRECTNESS, NOTES_SLIDES_SYNC, ANSWER_LEAKAGE,
-ASSESSMENT_ALIGNMENT, SCHEDULE_POLICY, PLAYBOOK_ALIGNMENT, FRESH_EXPORT,
-STATUS_AUTHORITY, ADVERSARIAL_QA, PRIOR_FROZEN_NONREGRESSION) are still caller-fed
-or tautological; they are coupled to the adversarial mutation runner and are
-deferred to the F-8 (fail-on-abort) / F-4 (provenance) pass, which must rework the
-adversary's producer invocations.
+The adversary runner's status/schedule mutation cases now write actual files and
+invoke the file-observing producers (no fabricated observation dicts).
+
+### Remaining (7)
+SOURCE_AUTHORITY, CURRICULUM_CORRECTNESS, NOTES_SLIDES_SYNC, ANSWER_LEAKAGE,
+ASSESSMENT_ALIGNMENT, PLAYBOOK_ALIGNMENT, FRESH_EXPORT. These remain caller-fed
+or tautological and are coupled to the anchor/claim data model; they need a
+deeper text-extraction three-way comparison plus a full rework of the adversary's
+anchor/leakage/assessment mutation cases.
+
 

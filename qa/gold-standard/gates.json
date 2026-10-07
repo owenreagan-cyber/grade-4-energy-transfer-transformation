@@ -102,7 +102,7 @@
     },
     {
       "gateId": "SCHEDULE_POLICY",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -212,7 +212,7 @@
     },
     {
       "gateId": "STATUS_AUTHORITY",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -223,7 +223,7 @@
     },
     {
       "gateId": "ADVERSARIAL_QA",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -234,7 +234,7 @@
     },
     {
       "gateId": "PRIOR_FROZEN_NONREGRESSION",
-      "gateVersion": "1.0",
+      "gateVersion": "1.1",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,

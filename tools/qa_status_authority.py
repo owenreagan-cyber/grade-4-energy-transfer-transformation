@@ -104,3 +104,73 @@ def emit_status_evidence(authoritative, surfaces, identity, evidence_path, *, au
         data["observedInputs"] = []
         data["inventory"] = [{"name": "statusSurfaces", "expected": 0, "observed": 0}]
     return seal(data, identity, producer=True)
+
+
+def read_surfaces_from_files(surface_files: list[dict], root=None) -> list[dict]:
+    """Open actual status-surface files and derive their text from disk.
+
+    Each entry is ``{"surfaceId": str, "kind": SURFACE_CLASS, "path": relpath}``.
+    The producer reads the file bytes; it never trusts caller-supplied text.
+    """
+    from chapter_qa.observation import read_any_text
+    from chapter_qa.identity import REPO_ROOT as _ROOT
+
+    base = root or _ROOT
+    surfaces = []
+    for entry in surface_files or []:
+        if not isinstance(entry, dict):
+            continue
+        path = entry.get("path")
+        if not path:
+            continue
+        text = read_any_text(str(path), base)
+        surfaces.append({
+            "surfaceId": entry.get("surfaceId") or str(path),
+            "kind": entry.get("kind") or "HUMAN_FACING_STATUS",
+            "text": text,
+            "path": str(path),
+        })
+    return surfaces
+
+
+def emit_status_evidence_from_files(authoritative, surface_files, identity, evidence_path, *, auditor_role="CROSS_ARTIFACT_AUDITOR"):
+    """File-observing STATUS_AUTHORITY: open actual status surfaces from a registry."""
+    surfaces = read_surfaces_from_files(surface_files)
+    findings = find_conflicts(authoritative, surfaces)
+    fails = any(item["failsGate"] for item in findings)
+    labels = [surface["surfaceId"] for surface in surfaces]
+    data = {
+        "evidenceId": "status-authority",
+        "gateId": "STATUS_AUTHORITY",
+        "auditorRole": auditor_role,
+        "performed": bool(surfaces),
+        "expectedInputs": labels,
+        "observedInputs": labels if surfaces else [],
+        "thingBeingCertified": "candidate-status:%s" % identity.candidateHash,
+        "independentEvidenceSource": "authoritative-lifecycle:%s" % authoritative,
+        "findings": [{"severity": item["severity"], "code": item["code"], "message": item["message"]} for item in findings],
+        "evidencePaths": [evidence_path],
+        "failureReason": None,
+        "notVerifiedReason": None,
+        "invalidationReasons": [],
+        "execution": {
+            "succeeded": bool(surfaces),
+            "detectorException": False,
+            "requiredInputsPresent": bool(surfaces),
+            "missingRender": False,
+            "missingEvidence": not bool(surfaces),
+            "stale": False,
+            "gateSpecificFailure": fails,
+            "unavailableEvidence": False,
+        },
+        "inventory": [{
+            "name": "statusSurfaces",
+            "expected": len(surfaces),
+            "observed": len(surfaces),
+        }],
+    }
+    if not surfaces:
+        data["expectedInputs"] = []
+        data["observedInputs"] = []
+        data["inventory"] = [{"name": "statusSurfaces", "expected": 0, "observed": 0}]
+    return seal(data, identity, producer=True)
