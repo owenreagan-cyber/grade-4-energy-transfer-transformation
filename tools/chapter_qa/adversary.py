@@ -142,10 +142,12 @@ def _render_item(page, digest, folder: Path):
     rel = "qa/work/_phase_c/renders/page-%s-%s.png" % (page, digest[:8])
     path = ROOT / rel
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(b"\x89PNG\r\n" + digest.encode())
+    data = b"\x89PNG\r\n" + digest.encode()
+    path.write_bytes(data)
+    actual = hashlib.sha256(data).hexdigest()
     return {
         "artifactId": "slides", "artifactHash": "a" * 64, "pageOrSlide": page,
-        "renderPath": rel, "renderHash": digest, "navigation": False,
+        "renderPath": rel, "renderHash": actual, "navigation": False,
     }
 
 
@@ -348,7 +350,7 @@ def run_method(case, seed, identity):
             elif method == "small_write":
                 boxes = [_box(kind="writing", text="", h=0.1)]
             elif method == "missing_crop":
-                boxes = [_box(text="mov", w=0.6), _box(text="ing", x=1.6, w=0.6)]
+                boxes = [_box(text="mov", w=0.6), _box(text="ing", x=1.45, w=0.6)]
             status = emit_visual_evidence([_page(boxes, crops=crops)], identity, evidence, expected_count=1, auditor_role=ROLES["RENDERED_VISUAL_QA"])[1].status
     elif method.startswith("pdf_") or method == "pdf_clean":
         folder = ROOT / "qa" / "work" / "_phase_c" / case_id

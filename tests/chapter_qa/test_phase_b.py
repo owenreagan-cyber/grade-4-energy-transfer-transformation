@@ -38,14 +38,16 @@ def _render(artifact="slides", page=1, artifact_hash="a" * 64, render_hash="e" *
     relative = "qa/work/_phase_b/renders/%s-p%03d-%s.png" % (artifact, page, render_hash[:8])
     path = REPO / relative
     path.parent.mkdir(parents=True, exist_ok=True)
-    if not path.exists():
-        path.write_bytes(b"\x89PNG\r\n")
+    data = b"\x89PNG\r\n" + render_hash.encode()
+    path.write_bytes(data)
+    import hashlib
+    digest = hashlib.sha256(data).hexdigest()
     return {
         "artifactId": artifact,
         "artifactHash": artifact_hash,
         "pageOrSlide": page,
         "renderPath": relative,
-        "renderHash": render_hash,
+        "renderHash": digest,
         "navigation": False,
     }
 

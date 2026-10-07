@@ -113,7 +113,7 @@
     },
     {
       "gateId": "RENDER_COMPLETENESS",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -124,7 +124,7 @@
     },
     {
       "gateId": "RENDERED_VISUAL_QA",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,
@@ -135,7 +135,7 @@
     },
     {
       "gateId": "PDF_QUALITY",
-      "gateVersion": "1.1",
+      "gateVersion": "1.2",
       "mandatory": true,
       "releaseBlocking": true,
       "requiresIndependentEvidence": true,

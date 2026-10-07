@@ -179,11 +179,23 @@ class GateVersionAuditTests(unittest.TestCase):
     def test_bumped_gates_are_1_1_and_the_rest_stay_1_0(self):
         gates = load_gates()
         self.assertEqual(len(gates), 26)
+        rebump = {"RENDER_COMPLETENESS", "RENDERED_VISUAL_QA", "PDF_QUALITY"}
         for gate in gates:
-            if gate.gateId in BUMPED:
+            if gate.gateId in rebump:
+                self.assertEqual(gate.gateVersion, "1.2", gate.gateId)
+            elif gate.gateId in BUMPED:
                 self.assertEqual(gate.gateVersion, "1.1", gate.gateId)
             else:
                 self.assertEqual(gate.gateVersion, "1.0", gate.gateId)
+
+    def test_render_visual_and_pdf_reject_1_1_evidence(self):
+        identity = build()
+        for gate_id in ("RENDER_COMPLETENESS", "RENDERED_VISUAL_QA", "PDF_QUALITY"):
+            gate = gate_by_id(load_gates(), gate_id)
+            stale = evidence_from_dict(record_for(gate, identity, gateVersion="1.1", status="PASS"))
+            result = evaluate(stale, gate, identity)
+            self.assertEqual(result.status, "FAIL", gate_id)
+            self.assertIn("GATE_VERSION_MISMATCH", result.codes)
 
     def test_old_version_evidence_is_rejected(self):
         gate = gate_by_id(load_gates(), "SOURCE_AUTHORITY")

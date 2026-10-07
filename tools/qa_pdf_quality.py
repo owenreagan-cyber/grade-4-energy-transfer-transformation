@@ -119,7 +119,7 @@ def _pdfimages(text):
             parts = line.split()
             if len(parts) < 5:
                 continue
-            image = {"page": int(parts[0]), "width": int(parts[3]), "height": int(parts[4]), "raw": line}
+            image = {"page": int(parts[0]), "type": parts[2], "width": int(parts[3]), "height": int(parts[4]), "raw": line}
             if "x-ppi" in header:
                 columns = header.split()
                 values = line.split()
@@ -133,20 +133,30 @@ def _pdfimages(text):
     return images
 
 
+def _extract_text(path):
+    """Text presence comes from pdftotext. Content streams may be compressed."""
+    extracted = _run(["pdftotext", path, "-"])
+    if extracted.get("missing_tool") or extracted.get("code") not in (0,):
+        return extracted, ""
+    return extracted, extracted.get("stdout") or ""
+
+
 def collect_pdf_tools(path):
     qpdf = _run(["qpdf", "--check", path])
     info = _run(["pdfinfo", path])
     fonts = _run(["pdffonts", path])
     images = _run(["pdfimages", "-list", path])
-    raw = open(path, "rb").read()
+    extracted, text = _extract_text(path)
+    chars = len(re.sub(r"\s+", "", text))
     return {
         "qpdf": qpdf,
         "pdfinfo": _pdfinfo(info["stdout"]) if info["code"] == 0 else {"error": info["stderr"], "pageCount": None, "pageSizes": []},
         "fonts": _pdffonts(fonts["stdout"]) if fonts["code"] == 0 else [],
         "images": _pdfimages(images["stdout"]) if images["code"] == 0 else [],
-        "toolFailure": any(item.get("missing_tool") for item in (qpdf, info, fonts, images)),
+        "toolFailure": any(item.get("missing_tool") for item in (qpdf, info, fonts, images, extracted)),
         "qpdfCode": qpdf["code"],
-        "hasText": b"Tj" in raw or b"TJ" in raw,
+        "hasText": chars > 0,
+        "textChars": chars,
     }
 
 
@@ -181,11 +191,23 @@ def assess_pdf(path, expectations, tool_output=None, policy=None):
     for font in output.get("fonts") or []:
         if not font.get("embedded"):
             add("font_not_embedded", "font %s is not embedded" % font.get("name"))
+    page_area = None
+    if sizes:
+        page_area = (sizes[0][0] / 72.0) * (sizes[0][1] / 72.0)
     for image in output.get("images") or []:
-        if "xPpi" in image and "yPpi" in image:
+        if image.get("type") == "smask":
+            continue
+        if "xPpi" in image and "yPpi" in image and image["xPpi"] and image["yPpi"]:
+            image_class = expectations.get("imageClass", "print-instructional")
+            essential = expectations.get("essentialImage", False)
+            if page_area:
+                placed = (image["width"] / image["xPpi"]) * (image["height"] / image["yPpi"])
+                if placed / page_area >= 0.9:
+                    image_class = "decorative"
+                    essential = False
             classified = classify_dpi(
-                image["xPpi"], image["yPpi"], expectations.get("imageClass", "print-instructional"),
-                essential=expectations.get("essentialImage", False), policy=policy,
+                image["xPpi"], image["yPpi"], image_class,
+                essential=essential, policy=policy,
             )
             if classified["finding"]:
                 findings.append(classified["finding"])

@@ -26,4 +26,12 @@ Phase C.1. A version changes only when evidence accepted under the old contract 
 | CHAPTER_SPEC, NOTES_STRUCTURE, SLIDES_STRUCTURE, ANSWER_LEAKAGE, FRESH_EXPORT, RETIRED_CONTENT, INVENTORY, ADVERSARIAL_QA, PRIOR_FROZEN_NONREGRESSION | Implementation of the gate contract did not change in a way that would let an old PASS survive a stricter rule. |
 | POST_FREEZE_GOLDEN, OOXML_FORENSICS, SOURCE_CLOSURE, CLEAN_ROOM_REPRODUCTION, PROVENANCE_INTEGRITY | These are 1.0. The last four were added in Phase C. No prior version exists. |
 
-New evidence is stamped with `gate.gateVersion` by `seal()`. A stored 1.0 record for a bumped gate fails closed.
+## Bumped to 1.2
+
+| Gate | What changed | Why a 1.1 PASS cannot be reused |
+|---|---|---|
+| RENDER_COMPLETENESS | A render hash is the PNG identity. It is not required to equal the spec candidate hash. The cited source hash and the render-file hash must match the record. | A 1.1 pass treated hash equality with the candidate as the render check and could not describe a real multi-file render. |
+| RENDERED_VISUAL_QA | Margin ink is content ink. A declared background bleed may reach the edge. Export-edge fringe and PDF boxes with no rendered ink are not content violations. | A 1.1 pass could treat every non-white margin pixel, including a full-bleed background, as the same failure. |
+| PDF_QUALITY | Text presence is `pdftotext`, not a raw `Tj`/`TJ` byte scan. A full-page background raster uses the decorative DPI class. | A 1.1 fail or pass could turn on whether a compressed content stream happened to contain those two bytes. |
+
+New evidence is stamped with `gate.gateVersion` by `seal()`. A stored 1.0 or 1.1 record for a bumped gate fails closed.

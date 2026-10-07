@@ -9,6 +9,7 @@ from pathlib import Path
 
 from chapter_qa.emit import seal
 from chapter_qa.evidence import REPO_ROOT
+from chapter_qa.identity import hash_file
 from chapter_qa.severity import resolve_severity
 
 
@@ -25,7 +26,27 @@ def _render_path_ok(path: str) -> bool:
     return (REPO_ROOT / relative).is_file()
 
 
-def assess_renders(expected: list[dict], observed: list[dict], *, command_failed=False, output_empty=False, candidate_hash=None) -> dict:
+def _source_hash_matches(item: dict) -> bool:
+    """A cited source must hash to the recorded source hash. A render hash is separate."""
+    path_text = item.get("artifactPath")
+    if not path_text:
+        return True
+    path = Path(str(path_text))
+    if path.is_absolute() or ".." in path.parts:
+        return False
+    file_path = REPO_ROOT / path
+    if not file_path.is_file():
+        return False
+    return hash_file(str(file_path)) == item.get("artifactHash")
+
+
+def _render_bytes_match(item: dict) -> bool:
+    if not _render_path_ok(item.get("renderPath")):
+        return False
+    return hash_file(str(REPO_ROOT / item["renderPath"])) == item.get("renderHash")
+
+
+def assess_renders(expected: list[dict], observed: list[dict], *, command_failed=False, output_empty=False, candidate_hash=None, build_id=None) -> dict:
     findings = []
     fails = False
     instructional = [item for item in observed if not item.get("navigation")]
@@ -63,14 +84,24 @@ def assess_renders(expected: list[dict], observed: list[dict], *, command_failed
         found = seen.get(_key(item))
         if not found:
             continue
-        if candidate_hash is not None and item.get("artifactHash") != candidate_hash:
-            add("missing_required_render", "expected render %s page %s is not this candidate" % _key(item))
+        recorded_build = item.get("buildId") or found.get("buildId")
+        if build_id and recorded_build not in (None, "", build_id):
+            add("missing_required_render", "render %s page %s belongs to build %s" % (_key(item)[0], _key(item)[1], recorded_build))
         if found.get("artifactHash") != item.get("artifactHash"):
             add("missing_required_render", "render %s page %s came from a different artifact hash" % _key(item))
+        if item.get("renderHash") and found.get("renderHash") != item.get("renderHash"):
+            add("missing_required_render", "render %s page %s hash does not match the expected render" % _key(item))
+        if not _source_hash_matches(item) or not _source_hash_matches(found):
+            add("missing_required_render", "render %s page %s source hash does not match the cited file" % _key(item))
         if not found.get("renderPath") or not found.get("renderHash"):
             add("missing_required_render", "render %s page %s has no render identity" % _key(item))
         elif not _render_path_ok(found.get("renderPath")):
             add("missing_required_render", "render file %s is missing" % found.get("renderPath"))
+        elif not _render_bytes_match(found):
+            add("missing_required_render", "render %s page %s file does not match the recorded render hash" % _key(item))
+    # candidate_hash binds the evidence envelope in evaluate(). It is not required to equal a render hash.
+    if candidate_hash is not None and build_id is not None and not str(candidate_hash).strip():
+        add("missing_required_render", "candidate hash is blank")
     paths = [item.get("renderPath") for item in instructional]
     if len(paths) != len(set(paths)):
         add("missing_required_render", "render pages do not have distinct files")
@@ -87,7 +118,7 @@ def assess_renders(expected: list[dict], observed: list[dict], *, command_failed
 def emit_render_evidence(expected, observed, identity, evidence_path: str, *, command_failed=False, output_empty=False, auditor_role=None):
     assessed = assess_renders(
         expected, observed, command_failed=command_failed, output_empty=output_empty,
-        candidate_hash=identity.candidateHash,
+        candidate_hash=identity.candidateHash, build_id=identity.buildId,
     )
     instructional = [item for item in observed if not item.get("navigation")]
     render_hash = instructional[0].get("renderHash") if instructional else "none"

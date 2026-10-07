@@ -72,11 +72,15 @@ def headless_render(source: str, out_dir: str, *, dpi: int = DEFAULT_DPI, repo_r
     prefix = os.path.join(out_dir, _stem(source))
     subprocess.run(["pdftoppm", "-png", "-r", str(dpi), pdf_path, prefix], check=True, capture_output=True)
     renders = []
+    width = max(1, len(str(pages)))
     for index in range(1, pages + 1):
         produced = "%s-%d.png" % (prefix, index)
+        padded = "%s-%0*d.png" % (prefix, width, index)
         target = os.path.join(out_dir, planned_png_name(source, index, dpi))
         if os.path.exists(produced):
             os.replace(produced, target)
+        elif os.path.exists(padded):
+            os.replace(padded, target)
         if not os.path.exists(target):
             raise RuntimeError("missing render page %s" % index)
         renders.append({

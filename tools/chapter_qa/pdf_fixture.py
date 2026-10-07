@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 
-def write_pdf(path: Path, pages: list[tuple[int, int, bytes]]) -> None:
+def write_pdf(path: Path, pages: list[tuple[int, int, bytes]], compress: bool = False) -> None:
     objects = [b"<< /Type /Catalog /Pages 2 0 R >>"]
     kids = " ".join("%d 0 R" % (3 + index * 2) for index in range(len(pages)))
     objects.append(("<< /Type /Pages /Count %d /Kids [%s] >>" % (len(pages), kids)).encode())
@@ -18,7 +18,13 @@ def write_pdf(path: Path, pages: list[tuple[int, int, bytes]]) -> None:
             "/Resources << /Font << /F1 %d 0 R >> >> >>"
         ) % (width, height, content_id, font_id)
         objects.append(page.encode())
-        objects.append(b"<< /Length %d >>\nstream\n" % len(stream) + stream + b"\nendstream")
+        payload = stream
+        extra = b""
+        if compress:
+            import zlib
+            payload = zlib.compress(stream)
+            extra = b" /Filter /FlateDecode"
+        objects.append(b"<< /Length %d%s >>\nstream\n" % (len(payload), extra) + payload + b"\nendstream")
     objects.append(b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>")
     header = b"%PDF-1.4\n"
     body = header
