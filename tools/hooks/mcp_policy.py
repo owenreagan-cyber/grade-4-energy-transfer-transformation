@@ -7,6 +7,16 @@ Tool failure cannot become PASS.
 
 from __future__ import annotations
 
+import json
+import sys
+from pathlib import Path
+
+_TOOLS = Path(__file__).resolve().parents[1]
+if str(_TOOLS) not in sys.path:
+    sys.path.insert(0, str(_TOOLS))
+
+from hooks.decisions import allow, deny
+
 CLASSES = (
     "READ_ONLY_SOURCE",
     "READ_ONLY_REVIEW",
@@ -91,3 +101,59 @@ def same_design_state_may_certify(producer_role: str, auditor_role: str) -> bool
     if producer_role == "VISUAL_ART_DIRECTOR" and auditor_role == "VISUAL_QA_AUDITOR":
         return False
     return False
+
+
+def _server_key(name: str) -> str:
+    text = (name or "").strip().lower()
+    if "figma" in text:
+        return "figma"
+    if "canva" in text:
+        return "canva"
+    if "github" in text:
+        return "github"
+    return text
+
+
+def _writes(tool_name: str) -> bool:
+    text = (tool_name or "").lower()
+    return any(token in text for token in ("use_figma", "create", "update", "delete", "generate", "upload", "write"))
+
+
+def decide_mcp(payload) -> dict:
+    """beforeMCPExecution decision. Unknown servers and roles fail closed."""
+    if not isinstance(payload, dict):
+        return deny("malformed hook input")
+    server = _server_key(str(payload.get("mcp_server_name") or payload.get("server") or ""))
+    tool = str(payload.get("tool_name") or "")
+    role = str(payload.get("role") or payload.get("auditorRole") or "UNSPECIFIED")
+    if not server or not authorize_mcp(role, server):
+        return deny("%s cannot call %s" % (role, server or "unknown server"))
+    if _writes(tool) and not role_may_call(role, SERVERS[server]):
+        return deny("%s cannot write through %s" % (role, server))
+    if role == "RELEASE_JUDGE":
+        return deny("release judge cannot call an MCP")
+    return allow("%s may call %s" % (role, tool or server))
+
+
+def main(argv=None) -> int:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="MCP execution policy. Does not call a server.")
+    parser.add_argument("--dry-run", action="store_true", default=True)
+    parser.add_argument("--apply", action="store_true")
+    args = parser.parse_args(argv)
+    if args.apply:
+        sys.stdout.write(json.dumps(deny("hook activation does not grant MCP writes")))
+        return 2
+    try:
+        raw = sys.stdin.read()
+        payload = json.loads(raw) if raw.strip() else {}
+        result = decide_mcp(payload)
+    except Exception:
+        result = deny("MCP policy failed closed")
+    sys.stdout.write(json.dumps(result))
+    return 2 if result["decision"] == "DENY" else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

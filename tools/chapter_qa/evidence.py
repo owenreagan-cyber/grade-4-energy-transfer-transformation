@@ -426,6 +426,14 @@ def evaluate(evidence: EvidenceRecord, gate, requested: BuildIdentity) -> Evalua
         _add(codes, reasons, "GATE_VERSION_MISMATCH", "gate id or version does not match the definition")
     if evidence.auditorRole != gate.expectedEvidenceRole:
         _add(codes, reasons, "ROLE_MISMATCH", "auditor role does not match expectedEvidenceRole")
+    if gate.mandatory:
+        from chapter_qa.registry import expected_producer
+
+        spec = expected_producer(evidence.gateId)
+        recorded = evidence.toolVersions.get("producer")
+        recorded_version = evidence.toolVersions.get("producerVersion")
+        if spec is None or recorded != spec["id"] or recorded_version != spec["version"]:
+            _add(codes, reasons, "PRODUCER_UNREGISTERED", "mandatory evidence has no registered producer")
     # Independence applies to a performed result. An explicit unavailable
     # record has no evidence source to compare.
     if evidence.performed:

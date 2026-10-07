@@ -101,7 +101,11 @@ def evidence_dict(**overrides):
         "expectedInputs": ["reader", "candidate-notes"],
         "observedInputs": ["reader", "candidate-notes"],
         "inputHashes": dict(identity.inputHashes),
-        "toolVersions": {"python": "3.14.7"},
+        "toolVersions": {
+            "python": "3.14.7",
+            "producer": "chapter_qa.source_audit:emit_source_evidence",
+            "producerVersion": "1.0",
+        },
         "thingBeingCertified": "candidate-notes:cand-1",
         "independentEvidenceSource": "authoritative-reader:src-1",
         "findings": [],
@@ -116,6 +120,13 @@ def evidence_dict(**overrides):
         "inventory": [{"name": "notesPages", "expected": 3, "observed": 3}],
     }
     data.update(overrides)
+    from chapter_qa.registry import expected_producer
+    spec = expected_producer(data["gateId"])
+    if spec and "toolVersions" not in overrides:
+        versions = dict(data.get("toolVersions") or {})
+        versions["producer"] = spec["id"]
+        versions["producerVersion"] = spec["version"]
+        data["toolVersions"] = versions
     return data
 
 

@@ -81,7 +81,11 @@ def record_for(gate, identity, **overrides):
         "expectedInputs": ["reader"],
         "observedInputs": ["reader"],
         "inputHashes": dict(identity.inputHashes),
-        "toolVersions": {"python": "3.14.7"},
+        "toolVersions": {
+            "python": "3.14.7",
+            "producer": __import__("chapter_qa.registry", fromlist=["expected_producer"]).expected_producer(gate.gateId)["id"],
+            "producerVersion": "1.0",
+        },
         "thingBeingCertified": "candidate-packet",
         "independentEvidenceSource": "authoritative-reader",
         "findings": [],
@@ -119,6 +123,21 @@ def evidence_dir():
         shutil.rmtree(folder, ignore_errors=True)
 
 
+def isolated_git():
+    """A clean git repo so certification tests do not see this checkout's edits."""
+    folder = Path(tempfile.mkdtemp(prefix="hook-git-"))
+    subprocess.check_call(["git", "init"], cwd=folder, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    (folder / "README").write_text("clean\n", encoding="utf-8")
+    subprocess.check_call(["git", "add", "README"], cwd=folder, stdout=subprocess.DEVNULL)
+    subprocess.check_call(
+        ["git", "-c", "user.email=hook@example", "-c", "user.name=hook", "commit", "-m", "init"],
+        cwd=folder,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    return str(folder)
+
+
 def write_packet(payload, directory, lifecycle=None):
     folder = Path(directory)
     for old in folder.glob("*.json"):
@@ -128,6 +147,7 @@ def write_packet(payload, directory, lifecycle=None):
     body = {key: value for key, value in payload.items() if key != "evidence"}
     body["evidenceDirectory"] = str(folder)
     body.setdefault("editedPaths", [])
+    body.setdefault("workspace_roots", [isolated_git()])
     if lifecycle is not None:
         path = folder / "lifecycle.json"
         path.write_text(json.dumps(lifecycle), encoding="utf-8")
@@ -233,6 +253,8 @@ class GitProtectionTests(unittest.TestCase):
         self.assertEqual(decide_git("git.exe reset --hard")["decision"], "DENY")
         self.assertEqual(decide_git("git \\\nstatus")["decision"], "ALLOW")
         self.assertEqual(decide_git("perl -e 'system(\"git\".\" reset --hard\")'")["decision"], "DENY")
+        self.assertEqual(decide_git("printf 'git reset --hard' | sh")["decision"], "DENY")
+        self.assertEqual(decide_git("echo Z2l0 | base64 -D | sh")["decision"], "DENY")
         self.assertEqual(decide_git("git -c include.path=/tmp/extra.config diff")["decision"], "DENY")
         self.assertEqual(decide_git("export GIT_EXTERNAL_DIFF=echo; git diff")["decision"], "DENY")
         self.assertEqual(decide_git("echo <(git reset --hard)")["decision"], "DENY")
@@ -244,6 +266,14 @@ class GitProtectionTests(unittest.TestCase):
         self.assertEqual(decide_git("echo 'export git'")["decision"], "ALLOW")
         self.assertEqual(decide_stop({"message": "the build is certified"})["decision"], "DENY")
         self.assertEqual(decide_stop({"message": "why is this build certified"})["decision"], "DENY")
+        transcript = Path(tempfile.mkdtemp(prefix="hook-transcript-")) / "turn.jsonl"
+        transcript.write_text(json.dumps({"role": "assistant", "text": "chapter ready"}) + "\n", encoding="utf-8")
+        from_transcript = decide_stop({
+            "hook_event_name": "stop",
+            "status": "completed",
+            "transcript_path": str(transcript),
+        })
+        self.assertEqual(from_transcript["decision"], "DENY")
         self.assertEqual(decide_stop({"message": "I froze the chapter"})["decision"], "DENY")
         self.assertEqual(
             decide_git("python -c \"import os; os.system('git reset --hard')\"")["decision"],
@@ -447,11 +477,17 @@ class StopHookTests(unittest.TestCase):
             contradicted["requestedAction"] = "build_draft"
             contradicted["message"] = "chapter ready"
             self.assertEqual(decide_stop(contradicted)["decision"], "DENY")
-            stale_map = write_packet(payload, directory)
-            stale_map["editedPaths"] = ["assets/authoritative/reader.pdf"]
-            self.assertEqual(decide_stop(stale_map)["decision"], "DENY")
+            dirty = isolated_git()
+            notes = Path(dirty) / "production" / "premium-notes" / "02-ch2-guided-notes.docx"
+            notes.parent.mkdir(parents=True)
+            notes.write_text("changed\n", encoding="utf-8")
+            hidden = write_packet(payload, directory)
+            hidden["workspace_roots"] = [dirty]
+            hidden["editedPaths"] = []
+            self.assertEqual(decide_stop(hidden)["decision"], "DENY")
             lied = write_packet(payload, directory)
-            lied["editedPaths"] = ["production/premium-notes/02-ch2-guided-notes.docx"]
+            lied["workspace_roots"] = [dirty]
+            lied["editedPaths"] = []
             lied["affected"] = {}
             self.assertEqual(decide_stop(lied)["decision"], "DENY")
             closed = write_packet(payload, directory)
@@ -577,7 +613,14 @@ class McpPolicyTests(unittest.TestCase):
         text = json.dumps(example)
         self.assertNotIn("github_pat_", text)
         self.assertNotIn("sk-", text)
-        self.assertFalse((ROOT / ".cursor" / "hooks.json").exists())
+        hooks = json.loads((ROOT / ".cursor" / "hooks.json").read_text(encoding="utf-8"))
+        self.assertEqual(hooks["version"], 1)
+        commands = {name: row[0]["command"] for name, row in hooks["hooks"].items()}
+        self.assertIn("tools/hooks/protect_git.py", commands["beforeShellExecution"])
+        self.assertIn("tools/hooks/invalidate_evidence.py", commands["afterFileEdit"])
+        self.assertIn("tools/hooks/final_release_gate.py", commands["stop"])
+        self.assertIn("tools/hooks/mcp_policy.py", commands["beforeMCPExecution"])
+        self.assertTrue(hooks["hooks"]["stop"][0]["failClosed"])
         self.assertFalse((ROOT / ".cursor" / "mcp.json").exists())
 
     def test_governance_doc_states_the_independence_rule(self):

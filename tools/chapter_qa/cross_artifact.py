@@ -166,4 +166,4 @@ def emit_cross_evidence(left, right, identity, gate_id, evidence_path: str, *, d
     if not anchors:
         data["expectedInputs"] = []
         data["observedInputs"] = []
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

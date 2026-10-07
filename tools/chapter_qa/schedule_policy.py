@@ -76,4 +76,4 @@ def emit_schedule_evidence(rows, identity, evidence_path, *, auditor_role="CURRI
         data["expectedInputs"] = []
         data["observedInputs"] = []
         data["inventory"] = [{"name": "scheduleRows", "expected": 0, "observed": 0}]
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

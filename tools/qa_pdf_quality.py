@@ -265,4 +265,4 @@ def emit_pdf_evidence(path, identity, evidence_path, expectations, *, auditor_ro
     if expected_pages <= 0:
         data["expectedInputs"] = []
         data["observedInputs"] = []
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

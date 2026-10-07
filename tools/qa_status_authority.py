@@ -103,4 +103,4 @@ def emit_status_evidence(authoritative, surfaces, identity, evidence_path, *, au
         data["expectedInputs"] = []
         data["observedInputs"] = []
         data["inventory"] = [{"name": "statusSurfaces", "expected": 0, "observed": 0}]
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

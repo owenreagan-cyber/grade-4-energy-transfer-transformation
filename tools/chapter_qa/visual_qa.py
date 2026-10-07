@@ -309,4 +309,4 @@ def emit_visual_evidence(pages: list[dict], identity, evidence_path: str, *, exp
     if expected_count <= 0:
         data["expectedInputs"] = []
         data["observedInputs"] = []
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

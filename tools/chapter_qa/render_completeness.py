@@ -125,4 +125,4 @@ def emit_render_evidence(expected, observed, identity, evidence_path: str, *, co
     if not expected:
         data["expectedInputs"] = []
         data["observedInputs"] = []
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

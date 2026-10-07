@@ -1,6 +1,6 @@
 # Cursor Hook Plan
 
-Status: **not enabled**. Adapters exist and are dry-run only. `.cursor/hooks.json` is not created.
+Status: **enabled** in `.cursor/hooks.json`. The scripts call the Phase C.1 modules. Edited paths come from the Cursor `file_path` field and from `git diff`, not from a model-supplied `editedPaths` list.
 
 Future hooks must call the tested functions below. They must not reimplement certification rules in shell.
 

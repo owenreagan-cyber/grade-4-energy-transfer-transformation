@@ -28,6 +28,7 @@ from chapter_qa.lifecycle import legal_transition
 from chapter_qa.release_judge import judge as release_judge
 
 from hooks.decisions import allow, deny
+from hooks.edited_paths import resolve_edited_paths
 from hooks.invalidate_evidence import invalidate_edit
 from hooks.validate_evidence import identity_from_payload
 
@@ -50,6 +51,7 @@ _PHRASES = (
     ("internally_certified", "internally_certified"),
     ("ready for freeze", "freeze_chapter"),
     ("freeze chapter", "freeze_chapter"),
+    ("chapter is ready", "chapter_ready"),
     ("chapter ready", "chapter_ready"),
     ("release ready", "release_ready"),
     ("chapter is frozen", "freeze_chapter"),
@@ -172,10 +174,53 @@ def _read_lifecycle(payload, identity) -> dict:
     return data
 
 
+def _claim_text(payload: dict) -> str:
+    """Assistant text from the event, then the transcript, then the pending receipt."""
+    for key in ("message", "text"):
+        value = payload.get(key)
+        if isinstance(value, str) and value.strip():
+            return value
+    path = payload.get("transcript_path")
+    if isinstance(path, str) and path.strip() and Path(path).is_file():
+        last = ""
+        for line in Path(path).read_text(encoding="utf-8", errors="replace").splitlines():
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            role = str(row.get("role") or row.get("type") or "")
+            if "assistant" not in role:
+                continue
+            content = row.get("text") or row.get("message") or row.get("content") or ""
+            if isinstance(content, list):
+                content = " ".join(str(item.get("text", item)) if isinstance(item, dict) else str(item) for item in content)
+            last = str(content)
+        if last.strip():
+            return last
+    receipt = _WORK / "hook-state" / "pending-claim.txt"
+    if payload.get("hook_event_name") == "stop" and receipt.is_file():
+        return receipt.read_text(encoding="utf-8", errors="replace")
+    return ""
+
+
+def _remember_claim(text: str) -> None:
+    folder = _WORK / "hook-state"
+    folder.mkdir(parents=True, exist_ok=True)
+    (folder / "pending-claim.txt").write_text(text, encoding="utf-8")
+
+
 def decide_stop(payload, judge_fn=None, gates=None) -> dict:
     """ALLOW or DENY a final response. Certification failures deny."""
     if not isinstance(payload, dict):
         return deny("malformed hook input")
+    if not payload.get("message") and not payload.get("requestedAction"):
+        claim = _claim_text(payload)
+        if claim:
+            payload = dict(payload)
+            payload["message"] = claim
+    if payload.get("hook_event_name") == "afterAgentResponse" and isinstance(payload.get("text"), str):
+        if classify_action({"message": payload["text"]}) != "ordinary":
+            _remember_claim(payload["text"])
     action = classify_action(payload)
     if action == "malformed":
         return deny("malformed hook input")
@@ -189,10 +234,14 @@ def decide_stop(payload, judge_fn=None, gates=None) -> dict:
         return deny("invalidation failed closed")
     if payload.get("dependencyMissing") is True or judge_fn is False:
         return deny("enforcement dependency unavailable")
-    edited = payload.get("editedPaths")
-    if not isinstance(edited, list) or any(not isinstance(item, str) for item in edited):
-        return deny("edited paths missing")
-    invalidation = invalidate_edit({"paths": edited})
+    resolved = resolve_edited_paths(payload, _REPO)
+    if resolved["error"]:
+        return deny("edited path source unavailable")
+    invalidation = invalidate_edit({
+        "paths": resolved["paths"],
+        "previousGateVersions": payload.get("previousGateVersions"),
+        "currentGateVersions": payload.get("currentGateVersions"),
+    })
     if invalidation.get("failClosed") is True:
         return deny("invalidation failed closed")
     computed = invalidation.get("affected") or {}
@@ -254,6 +303,13 @@ def main(argv=None) -> int:
         raw = sys.stdin.read()
         payload = json.loads(raw) if raw.strip() else {}
         result = decide_stop(payload)
+        if (
+            isinstance(payload, dict)
+            and payload.get("hook_event_name") == "stop"
+            and result["decision"] == "DENY"
+            and int(payload.get("loop_count") or 0) == 0
+        ):
+            result["followup_message"] = "Certification claim denied. " + result["reason"]
     except Exception:
         result = deny("certification hook failed closed")
     sys.stdout.write(json.dumps(result))

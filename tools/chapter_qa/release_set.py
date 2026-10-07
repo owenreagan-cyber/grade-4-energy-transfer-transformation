@@ -84,4 +84,4 @@ def emit_release_evidence(expected, observed_dir, manifest, identity, evidence_p
     if not expected:
         data["expectedInputs"] = []
         data["observedInputs"] = []
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

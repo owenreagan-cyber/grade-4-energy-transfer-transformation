@@ -164,4 +164,4 @@ def emit_source_evidence(claims, identity, gate_id, evidence_path: str, *, audit
         data["expectedInputs"] = []
         data["observedInputs"] = []
         data["inventory"] = [{"name": "sourceClaims", "expected": 0, "observed": 0}]
-    return seal(data, identity)
+    return seal(data, identity, producer=True)

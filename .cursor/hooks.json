@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": ".venv/bin/python tools/hooks/protect_git.py",
+        "timeout": 10,
+        "failClosed": true
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".venv/bin/python tools/hooks/invalidate_evidence.py",
+        "timeout": 15,
+        "failClosed": false
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": ".venv/bin/python tools/hooks/final_release_gate.py",
+        "timeout": 20,
+        "failClosed": true
+      }
+    ],
+    "stop": [
+      {
+        "command": ".venv/bin/python tools/hooks/final_release_gate.py",
+        "timeout": 20,
+        "failClosed": true,
+        "loop_limit": 1
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": ".venv/bin/python tools/hooks/mcp_policy.py",
+        "timeout": 10,
+        "failClosed": true
+      }
+    ]
+  }
+}

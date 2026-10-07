@@ -10,10 +10,12 @@ This module is not registered in `.cursor/hooks.json`.
 
 from __future__ import annotations
 
+import io
 import json
 import re
 import shlex
 import sys
+import tokenize
 from pathlib import Path
 
 _TOOLS = Path(__file__).resolve().parents[1]
@@ -155,7 +157,9 @@ _DANGEROUS_CONFIG = (
 _OBFUSCATED = re.compile(
     r"""(?ix)(b64decode|base64\.(?:b64|decod)|\\[0-7]{3}|\\x[0-9a-fA-F]{2}|fromhex|['\"]git['\"]\s*\+|git['\"]\s*\+)"""
 )
-_EXEC_API = re.compile(r"(?i)\b(system|popen|exec\w*|subprocess|spawn|child_process|eval|Function)\b")
+_EXEC_API = re.compile(
+    r"(?i)\b(system|popen|exec\w*|subprocess|spawn\w*|posix_spawn|child_process|eval|Function)\b"
+)
 
 
 def _env_is_dangerous(name: str) -> bool:
@@ -233,6 +237,10 @@ def _git_invocation(argv: list[str], authorization: dict) -> dict | None:
             if sub in ("list", "show"):
                 return None
             return deny("destructive git command stash is not authorized")
+        if token == "add":
+            return _authorize_add(argv[index + 1:], authorization)
+        if token == "commit":
+            return _authorize_commit(argv[index + 1:], authorization)
         return _classify_verb(token, authorization)
     return deny("git invocation has no subcommand")
 
@@ -240,6 +248,60 @@ def _git_invocation(argv: list[str], authorization: dict) -> dict | None:
 def _verbs_in_script(script: str) -> list[str]:
     folded = script.replace('"', " ").replace("'", " ").replace("`", " ")
     return [match.group("verb").lower() for match in _GIT_CALL.finditer(folded)]
+
+
+def _stage_path(token: str) -> str | None:
+    """Return a repo-relative path, or None when the token is not a safe explicit path."""
+    raw = token.replace("\\", "/")
+    if not raw or raw.startswith("/") or raw.startswith("-") or "..." in raw or raw.endswith("/*"):
+        return None
+    parts = []
+    for part in raw.split("/"):
+        if part in ("", "."):
+            continue
+        if part == "..":
+            return None
+        parts.append(part)
+    if not parts:
+        return None
+    return "/".join(parts)
+
+
+def _authorize_add(args: list[str], authorization: dict) -> dict:
+    """Allow git add only for an explicit, authorized path list."""
+    if authorization.get("workflowAuthorizesStaging") is not True:
+        return deny("git add requires staging authorization")
+    allowed = authorization.get("allowedPaths")
+    if not isinstance(allowed, list) or not allowed:
+        return deny("staging authorization needs an explicit path list")
+    if any(token.startswith("-") or token in {".", "*"} for token in args):
+        return deny("git add flags and wildcards are not authorized")
+    if not args:
+        return deny("git add needs explicit paths")
+    allowed_norm = set()
+    for item in allowed:
+        if not isinstance(item, str):
+            return deny("staging authorization paths must be strings")
+        norm = _stage_path(item)
+        if norm is None:
+            return deny("staging authorization contains an unsafe path")
+        allowed_norm.add(norm)
+    for token in args:
+        norm = _stage_path(token)
+        if norm is None:
+            return deny("staging path is a wildcard or traversal")
+        if norm not in allowed_norm:
+            return deny("staging path is not authorized")
+    return None
+
+
+def _authorize_commit(args: list[str], authorization: dict) -> dict:
+    if authorization.get("workflowAuthorizesCommit") is not True:
+        return deny("git commit requires workflow authorization")
+    banned = {"-a", "--all", "--amend", "--no-verify"}
+    if any(token in banned or token.startswith("--amend=") for token in args):
+        return deny("git commit cannot amend, skip hooks, or stage everything")
+    return None
 
 
 def _classify_verb(verb: str | None, authorization: dict) -> dict | None:
@@ -334,7 +396,10 @@ def _code_without_strings(script: str) -> str:
 
 
 def _inline_decision(script: str, authorization: dict, depth: int) -> dict | None:
-    if _OBFUSCATED.search(script):
+    if _OBFUSCATED.search(script) or re.search(
+        r"(?i)(__dict__|getattr\s*\(|\[\s*['\"]exec|['\"]sys['\"]\s*\+|['\"]tem['\"]|['\"]Sync['\"])",
+        script,
+    ):
         return deny("obfuscated command is not authorized")
     for inner in _active_substitutions(script):
         if _OBFUSCATED.search(inner):
@@ -347,13 +412,48 @@ def _inline_decision(script: str, authorization: dict, depth: int) -> dict | Non
     return None
 
 
+def _script_runs_git(body: str) -> bool:
+    """True when a Python file executes git, not when it only mentions git."""
+    try:
+        tokens = list(tokenize.generate_tokens(io.StringIO(body).readline))
+    except tokenize.TokenError:
+        return True
+    calls = {
+        "system", "popen", "exec", "execSync", "spawn", "eval", "Function",
+        "Popen", "run", "check_call", "check_output",
+    }
+    obfuscated = False
+    called = False
+    for index, tok in enumerate(tokens):
+        if tok.type == tokenize.NAME and tok.string in {"fromhex", "b64decode", "chr"}:
+            obfuscated = True
+        if tok.type == tokenize.NAME and tok.string in calls:
+            called = True
+            window = tokens[index + 1:index + 10]
+            texts = []
+            for nxt in window:
+                if nxt.type == tokenize.STRING:
+                    texts.append(nxt.string)
+                elif nxt.type == tokenize.NAME:
+                    texts.append(nxt.string)
+            blob = " ".join(texts)
+            if re.search(
+                r"(?i)\bgit\b[\s'\"]*(?:reset|clean|stash|restore|checkout|switch|rebase|merge|pull|push|commit|filter-branch|filter-repo)\b",
+                blob,
+            ):
+                return True
+    return obfuscated and called
+
+
 def _file_decision(name: str, token: str, authorization: dict, depth: int) -> dict | None:
     body = _read_script(token)
     if body is None:
         return deny("script body is unavailable")
     if name in SHELLS or name in {"source", "."}:
         return _walk(body, authorization, depth + 1)
-    return _inline_decision(body, authorization, depth)
+    if _script_runs_git(body):
+        return deny("script executes git")
+    return None
 
 
 def _strip_comments(text: str) -> str:
@@ -481,11 +581,36 @@ def _walk(command: str, authorization: dict, depth: int) -> dict | None:
     return None
 
 
-def decide_git(command, authorization=None) -> dict:
+def _authorization_file() -> dict:
+    path = Path(__file__).resolve().parents[2] / "qa" / "work" / "git-authorization.json"
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def decide_git(command, authorization=None, *, use_file: bool = False) -> dict:
     """Return ALLOW or DENY for one shell command. Never runs the command."""
     if not isinstance(command, str) or not command.strip():
         return deny("malformed hook input")
+    if use_file and authorization is None:
+        authorization = _authorization_file()
     command = _strip_comments(command.replace("\\\r\n", " ").replace("\\\n", " "))
+    if re.search(r"\|\s*(?:(?:\S*/)?(?:sh|bash|zsh|dash)|env\s+(?:sh|bash|zsh|dash))\b", command):
+        return deny("piping into a shell is not authorized")
+    visible = re.sub(r"'[^']*'", " ", command)
+    if re.search(r"\breset\s+--hard\b|\bclean\s+-\w*f|\bcheckout\s+--\b", visible):
+        head = visible.strip()
+        if not re.match(r"(?i)^(echo|printf)\b", head) or "|" in visible or "$(" in visible:
+            return deny("destructive git command is not authorized")
+    if re.search(
+        r"(?i)(\bbase64\b|\balias\s|getattr\s*\(|\[.execSync.\]|\$\(\s*printf|\$\(\s*echo)",
+        command,
+    ) and re.search(r"(?i)\b(reset|clean|stash|restore|checkout|push|commit|sh|bash)\b", command):
+        return deny("wrapped destructive git command is not authorized")
     authorization = authorization if isinstance(authorization, dict) else {}
     found = _walk(command, authorization, 0)
     if found is not None:
@@ -497,8 +622,9 @@ def decide_payload(payload) -> dict:
     if not isinstance(payload, dict):
         return deny("malformed hook input")
     command = payload.get("command")
-    authorization = payload.get("authorization") if isinstance(payload.get("authorization"), dict) else {}
-    return decide_git(command, authorization)
+    if "authorization" in payload and isinstance(payload.get("authorization"), dict):
+        return decide_git(command, payload["authorization"])
+    return decide_git(command, use_file=True)
 
 
 def main(argv=None) -> int:

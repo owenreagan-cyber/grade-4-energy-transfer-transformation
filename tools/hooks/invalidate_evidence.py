@@ -251,7 +251,19 @@ def main(argv=None) -> int:
     try:
         raw = sys.stdin.read()
         payload = json.loads(raw) if raw.strip() else {}
-        result = invalidate_edit(payload)
+        if not isinstance(payload, dict):
+            result = warn("malformed edit input", affected={}, failClosed=True)
+        else:
+            from hooks.edited_paths import resolve_edited_paths
+
+            resolved = resolve_edited_paths(payload, _TOOLS.parent)
+            body = dict(payload)
+            body["paths"] = resolved["paths"]
+            result = invalidate_edit(body)
+            result["pathSource"] = resolved["source"]
+            result["callerHidEdits"] = resolved["callerHidEdits"]
+            if resolved["error"] and not resolved["paths"]:
+                result = warn("edited path source unavailable", affected={}, failClosed=True)
     except Exception:
         result = warn("invalidation failed closed", affected={}, failClosed=True)
     sys.stdout.write(json.dumps(result))
