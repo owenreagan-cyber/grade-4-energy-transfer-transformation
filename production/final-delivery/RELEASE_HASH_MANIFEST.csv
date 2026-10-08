@@ -1,7 +1,7 @@
 FILE,UNIT,CATEGORY,LOCAL PATH,SHA-256,SIZE,STATUS
 01-ch1-energy-causes-change-slides.pptx,UNIT 1,SLIDES,production/slides/01-ch1-energy-causes-change-slides.pptx,5278f96c7dfab4f4b6809a3677f714c566c212e7c74af3d03f502abb77f022f7,171502,ACTIVE
 02-ch2-moving-objects-have-energy-slides.pptx,UNIT 1,SLIDES,production/slides/02-ch2-moving-objects-have-energy-slides.pptx,8a29faf3f55a0f23cb3937a01e8e013b6203dc31768b747abae7dc4a16aeba17,144456,ACTIVE
-03-ch3-energy-speed-slides.pptx,UNIT 1,SLIDES,production/slides/03-ch3-energy-speed-slides.pptx,97feea0822349174914368d1a2f44b94f6185fa6f04881b94a02edc4ac39a2b9,4909224,ACTIVE
+03-ch3-energy-speed-slides.pptx,UNIT 1,SLIDES,production/slides/03-ch3-energy-speed-slides.pptx,14244884fd242f49d7cb6af5ab74e8ee5aa6df1059884df622f436f2070f1682,136874,ACTIVE
 04-ch4-energy-transfer-slides.pptx,UNIT 1,SLIDES,production/slides/04-ch4-energy-transfer-slides.pptx,6d0b7aa1b25c530250eba76c7c9606bf6c763226756b88e1bca842da13a42c6f,268990,ACTIVE
 05-ch5-collisions-slides.pptx,UNIT 1,SLIDES,production/slides/05-ch5-collisions-slides.pptx,59c58d0cdd02a614655b0b902b80fbb394e795f216c5bba64a91e3c62c8ef77b,219364,ACTIVE
 06-ch6-energy-transformations-slides.pptx,UNIT 1,SLIDES,production/slides/06-ch6-energy-transformations-slides.pptx,1e7ceba4161630fa6f69e84bf0f66ef61c28742e884e559a1805c81dc25a3514,408895,ACTIVE
@@ -10,8 +10,8 @@ FILE,UNIT,CATEGORY,LOCAL PATH,SHA-256,SIZE,STATUS
 01-ch1-energy-causes-change-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/01-ch1-energy-causes-change-guided-notes.pdf,8fc5e40063f31f5fd3639fb73ae8e93c8e974c2024ea8f19bb3a46762f1c4702,83638,ACTIVE
 02-ch2-moving-objects-have-energy-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.docx,a3a4dfd3b0474694d15325d1b657cc645097970175ef2aa5665941c32fcaddce,39545,ACTIVE
 02-ch2-moving-objects-have-energy-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/02-ch2-moving-objects-have-energy-guided-notes.pdf,4205b1df3a053979ce4fb14145ba2d864ac0da12c6a46caa8f56daf732ffb9c9,76422,ACTIVE
-03-ch3-energy-speed-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/03-ch3-energy-speed-guided-notes.docx,c9863d4aa4771a6316771c2cfbdb7fbde566a60d049bbdc70261d88b4c70b170,38865,ACTIVE
-03-ch3-energy-speed-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/03-ch3-energy-speed-guided-notes.pdf,155ad1ccb6c38bf777f39799ccf8102c04b281d7bd9fa15ef1422757ffc9e48c,68405,ACTIVE
+03-ch3-energy-speed-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/03-ch3-energy-speed-guided-notes.docx,8e14dc7acc27d15b95917d79636095b535d291530102ec1ea81490f283ee2c2d,39201,ACTIVE
+03-ch3-energy-speed-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/03-ch3-energy-speed-guided-notes.pdf,a8440a5bd629acefcfdb61322db91f844925f1e0843a28a91cfe2313c12f9f25,103693,ACTIVE
 04-ch4-energy-transfer-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/04-ch4-energy-transfer-guided-notes.docx,1dd4f8f3031beaa5faae8f3dede607deaa5e46969482f7c995196b01fd3c74b4,39140,ACTIVE
 04-ch4-energy-transfer-guided-notes.pdf,UNIT 1,GUIDED NOTES,production/premium-notes/04-ch4-energy-transfer-guided-notes.pdf,5b4277956e75ac8d45323cbc7b7d89a57af2b2b88598957266466550872f6c97,78356,ACTIVE
 05-ch5-collisions-transfer-energy-guided-notes.docx,UNIT 1,GUIDED NOTES,production/premium-notes/05-ch5-collisions-transfer-energy-guided-notes.docx,d784902c98bb478ede441e75de701cf988ca911340da434500f0f5763a59f958,38546,ACTIVE
@@ -26,7 +26,7 @@ unit1-engineering-design-cycle.png,UNIT 1,INFOGRAPHICS,production/infographics/u
 unit1-collision-energy-transfer.png,UNIT 1,INFOGRAPHICS,production/infographics/unit1-collision-energy-transfer.png,27243c59658ed1b369f60c8a4139c179021fdd0dbeec89a612271d4b2c8acaed,157023,ACTIVE
 01-ch1-energy-causes-change-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/01-ch1-energy-causes-change-practice.docx,9c5ec51c029b2f3ad4158dbf11c10a97161ba56b15dce0077739e14345b749fe,39317,ACTIVE
 02-ch2-moving-objects-have-energy-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/02-ch2-moving-objects-have-energy-practice.docx,ae49af28c65b5db6fd74c6a31eccb33b9e99a7f2523effad1de22a89d577d6aa,38868,ACTIVE
-03-ch3-energy-speed-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/03-ch3-energy-speed-practice.docx,bdaab5faa81cab6eeda6db9f9da6405c1a5effc231ddda029d7091220b697fc1,37956,ACTIVE
+03-ch3-energy-speed-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/03-ch3-energy-speed-practice.docx,25ce11c0937b10dae063927e84d222fb2b0d3f889dd3c1ca413b13ef4f7c1ec1,37100,ACTIVE
 04-ch4-energy-transfer-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/04-ch4-energy-transfer-practice.docx,69e3b7370c2cbee6f0a6255d2bad2e9a9387d957c1d49f199183719c7507fd71,37748,ACTIVE
 05-ch5-collisions-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/05-ch5-collisions-practice.docx,e207e0d820da9a7f1d89d15b7822360e720e759fa2ffecaff46439b9844ef499,37419,ACTIVE
 06-ch6-energy-transformations-practice.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/06-ch6-energy-transformations-practice.docx,12590a58bc3c41b973bf8a4ec45068dd8d6717ec5ea5163cb5f9e0b67d97cd3e,37730,ACTIVE
@@ -34,7 +34,7 @@ unit1-collision-energy-transfer.png,UNIT 1,INFOGRAPHICS,production/infographics/
 07-unit-synthesis-review.docx,UNIT 1,STUDENT RESOURCES,production/worksheets/07-unit-synthesis-review.docx,642b9573e80a4f17dac12457ebf9a03ca15aea4ec23279acad2bdc9dd40bb459,38911,ACTIVE
 01-ch1-energy-detectives-student.docx,UNIT 1,LABS,production/worksheets/01-ch1-energy-detectives-student.docx,28d877a882a356e4595ae6c73ea28e1bccb56a1afc097953382c5c0d633514c5,38898,ACTIVE
 02-ch2-moving-marbles-student.docx,UNIT 1,LABS,production/worksheets/02-ch2-moving-marbles-student.docx,dfa76857e5ba21784f8afaa4ce5b21fae345829f5fed5481872e3889e1fd8df8,38586,ACTIVE
-03-ch3-ramp-it-up-student.docx,UNIT 1,LABS,production/worksheets/03-ch3-ramp-it-up-student.docx,c6e580ceef6f2f29026c273b27c389458cff7725ce078494b58db67a386efdef,37989,ACTIVE
+03-ch3-ramp-it-up-student.docx,UNIT 1,LABS,production/worksheets/03-ch3-ramp-it-up-student.docx,0b183eb81ea6fd5d3c613733604fe8e864ecb2000d6f8b3127a55f2a48ba8786,38128,ACTIVE
 03-ch3-drop-it-student.docx,UNIT 1,LABS,production/worksheets/03-ch3-drop-it-student.docx,dc694e47824506071bf10ce1752e1e59559831e2b0b63ae3d605a5c444c2f310,37670,ACTIVE
 05-ch5-crash-lab-student.docx,UNIT 1,LABS,production/worksheets/05-ch5-crash-lab-student.docx,3e209a98c8e9c1cf4726b4fa8b983590adf25e03e41d1bf8d683b4af7c5036cc,37920,ACTIVE
 04-ch4-heat-transfer-student.docx,UNIT 1,LABS,production/worksheets/04-ch4-heat-transfer-student.docx,956b8c2248c8e371bf4f8f47ddab7d40bec52f9ee5374a2b9c68c1fa7979cd3e,37511,ACTIVE
@@ -48,7 +48,7 @@ crash-lab-setup-guide.docx,UNIT 1,LABS,production/lab-setup-guides/crash-lab-set
 crash-lab-setup-guide.pdf,UNIT 1,LABS,production/lab-setup-guides/crash-lab-setup-guide.pdf,a738a94c87eb23b5e2cd8cc4921d73726315338f79e0c942f320dfc1b9ffb30c,127523,TEACHER ONLY
 01-ch1-energy-causes-change-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/01-ch1-energy-causes-change-quiz.docx,207d2ce9522ab53f9c5a91bc5a5a598342a5cf97b35ecf2d5703d0c6bf378304,39446,ACTIVE
 02-ch2-moving-objects-have-energy-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/02-ch2-moving-objects-have-energy-quiz.docx,3f2c36c4fae68bac15984990f4a4fe52e16108c2a29b888ec42c5e15afa77bf6,39212,ACTIVE
-03-ch3-energy-speed-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/03-ch3-energy-speed-quiz.docx,cf62ef5961e65737d772c2b6999c83860bbddc10f7545fa147fcea2a22c70058,38099,ACTIVE
+03-ch3-energy-speed-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/03-ch3-energy-speed-quiz.docx,a01e50f886eea84c6728518d67aa72ba3290a3ecf7967ebdfb967eeaf7bbb87d,37241,ACTIVE
 04-ch4-energy-transfer-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/04-ch4-energy-transfer-quiz.docx,7d56d90ee93836aec5b4c3f8b8c8a69431881ccde7881f92b35b2cabc2bafcd1,38092,ACTIVE
 05-ch5-collisions-quiz.docx,UNIT 1,ASSESSMENTS,production/quizzes/05-ch5-collisions-quiz.docx,f3f22187f116f697f9a461026614105b3cfb290fd83cd7e4725a106882f20c7f,38036,ACTIVE
 06-ch6-concept-checkpoint.docx,UNIT 1,ASSESSMENTS,production/quizzes/06-ch6-concept-checkpoint.docx,e9c5ff1a9400ee076bd9a2861f0e81747a55850d5f4f5ddf9ef55123fa426639,37650,ACTIVE

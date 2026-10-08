@@ -44,6 +44,10 @@ Every current deliverable is produced into `production/releases/chapter-03/`
 by the tracked release builder `tools/build_ch3_release.py`. Guided Notes are
 the primary student reference artifact. The Science Journal remains secondary.
 
+The tracked PDFs beside the editable Guided Notes and slide masters are
+**DEVELOPMENT_ONLY** working previews. They do not compete with the
+builder-produced PDFs in the active release directory.
+
 ## Current sources and provenance
 
 - **SOURCE:** Reader Chapter 3; Teacher Guide Lessons 4–5; AP 4.1 and AP 4.2.

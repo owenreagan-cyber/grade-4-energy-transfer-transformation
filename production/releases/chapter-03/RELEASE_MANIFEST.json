@@ -1,20 +1,432 @@
 {
+  "schema": "chapter-release-manifest-2.0",
   "chapter": 3,
+  "chapterTitle": "Energy and Speed Are Related",
   "version": "1.3",
   "status": "BUILT_UNCERTIFIED",
-  "builder": "manual remediation (no tracked ch3 release builder yet)",
-  "slideCount": 41,
+  "buildId": "ch3-rebuild-v13-2026-10-07",
+  "candidateSpec": "docs/chapter-03/CH3_CHAPTER_SPEC.json",
+  "candidateHash": "d76dafca35132352b750416ab068a3945928f9c7365d610fc7bb60dc86d9f2ed",
+  "builder": "tools/build_ch3_release.py",
+  "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
   "files": [
-    {"name": "03-ch3-energy-speed-slides.pptx", "kind": "CURRENT", "source": "production/slides/03-ch3-energy-speed-slides.pptx", "note": "41-slide deck"},
-    {"name": "03-ch3-energy-speed-practice.pdf", "kind": "CURRENT", "source": "production/worksheets/03-ch3-energy-speed-practice.docx"},
-    {"name": "03-ch3-energy-speed-quiz.pdf", "kind": "CURRENT", "source": "production/quizzes/03-ch3-energy-speed-quiz.docx"},
-    {"name": "03-ch3-ramp-it-up-student.pdf", "kind": "CURRENT", "source": "production/worksheets/03-ch3-ramp-it-up-student.docx"},
-    {"name": "03-ch3-drop-it-student.pdf", "kind": "CURRENT", "source": "production/worksheets/03-ch3-drop-it-student.docx", "note": "Friday FLEX"},
-    {"name": "03-ch3-friday-flex.pdf", "kind": "CURRENT", "note": "Friday FLEX"},
-    {"name": "03-ch3-energy-speed-teacher-key.pdf", "kind": "CURRENT", "note": "derived teacher key; regenerate with release builder"}
+    {
+      "name": "03-ch3-energy-speed-guided-notes.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/premium-notes/03-ch3-energy-speed-guided-notes.docx",
+      "master": "production/premium-notes/03-ch3-energy-speed-guided-notes.docx",
+      "sources": [
+        "production/premium-notes/03-ch3-energy-speed-guided-notes.docx"
+      ],
+      "sourceSHA256": [
+        "8e14dc7acc27d15b95917d79636095b535d291530102ec1ea81490f283ee2c2d"
+      ],
+      "source_sha256": [
+        "8e14dc7acc27d15b95917d79636095b535d291530102ec1ea81490f283ee2c2d"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "d665faa0b7841cce8a3da72ae551b872bbb7f2794d6e68130f881d0765fd3912"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_guided_notes.py",
+      "upstreamBuilderSourceHash": "d73c573e595227987b7898dff8a8b0e23926c2dc6a6ec33236c52fd97f58f182",
+      "output": "production/releases/chapter-03/03-ch3-energy-speed-guided-notes.pdf",
+      "artifactType": "GUIDED_NOTES",
+      "studentOrTeacher": "student",
+      "pagesOrSlides": 3,
+      "rawSHA256": "d5ee6379cdf3d819c40cefe4cf0921e57918c87d48ade98ef29ff98b0b1bb291",
+      "sha256": "d5ee6379cdf3d819c40cefe4cf0921e57918c87d48ade98ef29ff98b0b1bb291",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-energy-speed-guided-notes-key.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/premium-notes/03-ch3-energy-speed-guided-notes-key.docx",
+      "master": "production/premium-notes/03-ch3-energy-speed-guided-notes-key.docx",
+      "sources": [
+        "production/premium-notes/03-ch3-energy-speed-guided-notes-key.docx"
+      ],
+      "sourceSHA256": [
+        "8866340f270df76cc47c17c9ccdac890b9fa914dfe2f61e55d1eacc3475ddf13"
+      ],
+      "source_sha256": [
+        "8866340f270df76cc47c17c9ccdac890b9fa914dfe2f61e55d1eacc3475ddf13"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "79222dc918fa2e423062b6ef707e14948f40289171dd8c8bfe3528aac4563c90"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_guided_notes.py",
+      "upstreamBuilderSourceHash": "d73c573e595227987b7898dff8a8b0e23926c2dc6a6ec33236c52fd97f58f182",
+      "output": "production/releases/chapter-03/03-ch3-energy-speed-guided-notes-key.pdf",
+      "artifactType": "GUIDED_NOTES_KEY",
+      "studentOrTeacher": "teacher",
+      "pagesOrSlides": 3,
+      "rawSHA256": "7478abe41b7208257c3cdaf2889217af23dc5b6bcfebcc02380b3ae8190c1bf6",
+      "sha256": "7478abe41b7208257c3cdaf2889217af23dc5b6bcfebcc02380b3ae8190c1bf6",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-energy-speed-slides.pptx",
+      "classification": "CURRENT",
+      "kind": "copy",
+      "source": "production/slides/03-ch3-energy-speed-slides.pptx",
+      "master": "production/slides/03-ch3-energy-speed-slides.pptx",
+      "sources": [
+        "production/slides/03-ch3-energy-speed-slides.pptx"
+      ],
+      "sourceSHA256": [
+        "14244884fd242f49d7cb6af5ab74e8ee5aa6df1059884df622f436f2070f1682"
+      ],
+      "source_sha256": [
+        "14244884fd242f49d7cb6af5ab74e8ee5aa6df1059884df622f436f2070f1682"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "cf5884531ad007877ad48d6d51ba2c6ca32f61353f9fb96091299fdc4bdc178e"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_slides.py",
+      "upstreamBuilderSourceHash": "bb3ff9c0e3c471f630b54c58588cb9048e4fea5c16cdbb46fa0f6eb3705e4888",
+      "output": "production/releases/chapter-03/03-ch3-energy-speed-slides.pptx",
+      "artifactType": "SLIDE_DECK",
+      "studentOrTeacher": "teacher",
+      "pagesOrSlides": 41,
+      "rawSHA256": "14244884fd242f49d7cb6af5ab74e8ee5aa6df1059884df622f436f2070f1682",
+      "sha256": "14244884fd242f49d7cb6af5ab74e8ee5aa6df1059884df622f436f2070f1682",
+      "canonicalOOXMLHash": "cf5884531ad007877ad48d6d51ba2c6ca32f61353f9fb96091299fdc4bdc178e",
+      "freshnessMethod": "copy",
+      "status": "CURRENT",
+      "captureRequired": false,
+      "captureReason": "The editable PPTX is current, but its builder-produced slide PDF is the native-view certification surface."
+    },
+    {
+      "name": "03-ch3-energy-speed-slides.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/slides/03-ch3-energy-speed-slides.pptx",
+      "master": "production/slides/03-ch3-energy-speed-slides.pptx",
+      "sources": [
+        "production/slides/03-ch3-energy-speed-slides.pptx"
+      ],
+      "sourceSHA256": [
+        "14244884fd242f49d7cb6af5ab74e8ee5aa6df1059884df622f436f2070f1682"
+      ],
+      "source_sha256": [
+        "14244884fd242f49d7cb6af5ab74e8ee5aa6df1059884df622f436f2070f1682"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "cf5884531ad007877ad48d6d51ba2c6ca32f61353f9fb96091299fdc4bdc178e"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_slides.py",
+      "upstreamBuilderSourceHash": "bb3ff9c0e3c471f630b54c58588cb9048e4fea5c16cdbb46fa0f6eb3705e4888",
+      "output": "production/releases/chapter-03/03-ch3-energy-speed-slides.pdf",
+      "artifactType": "SLIDE_PDF",
+      "studentOrTeacher": "teacher",
+      "pagesOrSlides": 41,
+      "rawSHA256": "ee63bc335ce2f7de3e7d9a1e4323ff896c09a878dbcd550ef2dfc5feb0a83225",
+      "sha256": "ee63bc335ce2f7de3e7d9a1e4323ff896c09a878dbcd550ef2dfc5feb0a83225",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-ramp-it-up-student.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/worksheets/03-ch3-ramp-it-up-student.docx",
+      "master": "production/worksheets/03-ch3-ramp-it-up-student.docx",
+      "sources": [
+        "production/worksheets/03-ch3-ramp-it-up-student.docx"
+      ],
+      "sourceSHA256": [
+        "0b183eb81ea6fd5d3c613733604fe8e864ecb2000d6f8b3127a55f2a48ba8786"
+      ],
+      "source_sha256": [
+        "0b183eb81ea6fd5d3c613733604fe8e864ecb2000d6f8b3127a55f2a48ba8786"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "962cdc94882ef761adcfad37b5e4e6d5389188f2195c51521fc75e8a2ae35932"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_handouts.py",
+      "upstreamBuilderSourceHash": "2af62e444e4676656f3a39fb6c057971cf63d86b47e2aa25bc7ca10cd669578b",
+      "output": "production/releases/chapter-03/03-ch3-ramp-it-up-student.pdf",
+      "artifactType": "LAB",
+      "studentOrTeacher": "student",
+      "pagesOrSlides": 3,
+      "rawSHA256": "f318d026ad781b70fd98bd78dc4e629fb8f298d8f7fa9813d381187c8666e36c",
+      "sha256": "f318d026ad781b70fd98bd78dc4e629fb8f298d8f7fa9813d381187c8666e36c",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-energy-speed-practice.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/worksheets/03-ch3-energy-speed-practice.docx",
+      "master": "production/worksheets/03-ch3-energy-speed-practice.docx",
+      "sources": [
+        "production/worksheets/03-ch3-energy-speed-practice.docx"
+      ],
+      "sourceSHA256": [
+        "25ce11c0937b10dae063927e84d222fb2b0d3f889dd3c1ca413b13ef4f7c1ec1"
+      ],
+      "source_sha256": [
+        "25ce11c0937b10dae063927e84d222fb2b0d3f889dd3c1ca413b13ef4f7c1ec1"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "c5240ff1043f9bd9d499508cd0b78fc027c6a766b269d898ba657dfaf67edf95"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_handouts.py",
+      "upstreamBuilderSourceHash": "2af62e444e4676656f3a39fb6c057971cf63d86b47e2aa25bc7ca10cd669578b",
+      "output": "production/releases/chapter-03/03-ch3-energy-speed-practice.pdf",
+      "artifactType": "PRACTICE",
+      "studentOrTeacher": "student",
+      "pagesOrSlides": 1,
+      "rawSHA256": "508fdcc221c6e353976de258db5514eb4799c1b6d362dfc4ff2d86d754a8e4c6",
+      "sha256": "508fdcc221c6e353976de258db5514eb4799c1b6d362dfc4ff2d86d754a8e4c6",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-energy-speed-quiz.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/quizzes/03-ch3-energy-speed-quiz.docx",
+      "master": "production/quizzes/03-ch3-energy-speed-quiz.docx",
+      "sources": [
+        "production/quizzes/03-ch3-energy-speed-quiz.docx"
+      ],
+      "sourceSHA256": [
+        "a01e50f886eea84c6728518d67aa72ba3290a3ecf7967ebdfb967eeaf7bbb87d"
+      ],
+      "source_sha256": [
+        "a01e50f886eea84c6728518d67aa72ba3290a3ecf7967ebdfb967eeaf7bbb87d"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "8ebb0044469aa872e3f461da457e86708cecefe4cfacbd5fa3abe764f10a4062"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_handouts.py",
+      "upstreamBuilderSourceHash": "2af62e444e4676656f3a39fb6c057971cf63d86b47e2aa25bc7ca10cd669578b",
+      "output": "production/releases/chapter-03/03-ch3-energy-speed-quiz.pdf",
+      "artifactType": "QUIZ",
+      "studentOrTeacher": "student",
+      "pagesOrSlides": 1,
+      "rawSHA256": "29cb3a05a4c477d00a4f3749bd179ccd85be41b2e13f991017eb5ff8728ca473",
+      "sha256": "29cb3a05a4c477d00a4f3749bd179ccd85be41b2e13f991017eb5ff8728ca473",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-absent-student-recovery.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/worksheets/03-ch3-absent-student-recovery.docx",
+      "master": "production/worksheets/03-ch3-absent-student-recovery.docx",
+      "sources": [
+        "production/worksheets/03-ch3-absent-student-recovery.docx"
+      ],
+      "sourceSHA256": [
+        "b3a05e4a47d1757ae85ff625fc7754ca1800f73feeccaf55443c11a157a8b387"
+      ],
+      "source_sha256": [
+        "b3a05e4a47d1757ae85ff625fc7754ca1800f73feeccaf55443c11a157a8b387"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "81810c84f7bc650efb61b478c8be01be6e76bf9008a6bd2f8685baaacd854e99"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": "tools/build_ch3_handouts.py",
+      "upstreamBuilderSourceHash": "2af62e444e4676656f3a39fb6c057971cf63d86b47e2aa25bc7ca10cd669578b",
+      "output": "production/releases/chapter-03/03-ch3-absent-student-recovery.pdf",
+      "artifactType": "RECOVERY",
+      "studentOrTeacher": "student",
+      "pagesOrSlides": 1,
+      "rawSHA256": "fc34330989f40deb90c64e7aaa58c43e9de3c700ebd65d9796a5866b482e934d",
+      "sha256": "fc34330989f40deb90c64e7aaa58c43e9de3c700ebd65d9796a5866b482e934d",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-drop-it-student.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/worksheets/03-ch3-drop-it-student.docx",
+      "master": "production/worksheets/03-ch3-drop-it-student.docx",
+      "sources": [
+        "production/worksheets/03-ch3-drop-it-student.docx"
+      ],
+      "sourceSHA256": [
+        "dc694e47824506071bf10ce1752e1e59559831e2b0b63ae3d605a5c444c2f310"
+      ],
+      "source_sha256": [
+        "dc694e47824506071bf10ce1752e1e59559831e2b0b63ae3d605a5c444c2f310"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        "f90e75ca8fc1c7187413c71934c3c3eea5ae0bbed9202ff0b8b3165eb68737c7"
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": null,
+      "upstreamBuilderSourceHash": null,
+      "output": "production/releases/chapter-03/03-ch3-drop-it-student.pdf",
+      "artifactType": "FLEX_LAB",
+      "studentOrTeacher": "student",
+      "pagesOrSlides": 1,
+      "rawSHA256": "8d7fada20f6dc06cf39417a3cbd7b918ea0f4b28ab98beeb214b128d409c7684",
+      "sha256": "8d7fada20f6dc06cf39417a3cbd7b918ea0f4b28ab98beeb214b128d409c7684",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "isolated-libreoffice",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-friday-flex.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "curriculum/chapter-03/student/03-ch3-friday-flex.md",
+      "master": "curriculum/chapter-03/student/03-ch3-friday-flex.md",
+      "sources": [
+        "curriculum/chapter-03/student/03-ch3-friday-flex.md"
+      ],
+      "sourceSHA256": [
+        "cd2b0a1c2c0d2617618652014e58201d2efa38e93a38e630131a777db7e42d41"
+      ],
+      "source_sha256": [
+        "cd2b0a1c2c0d2617618652014e58201d2efa38e93a38e630131a777db7e42d41"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        null
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": null,
+      "upstreamBuilderSourceHash": null,
+      "output": "production/releases/chapter-03/03-ch3-friday-flex.pdf",
+      "artifactType": "FRIDAY_FLEX",
+      "studentOrTeacher": "student",
+      "pagesOrSlides": 6,
+      "rawSHA256": "e526cf0c3aa4529ca03311032972c76fe9be160fbd0e3b29f742c5f65840664b",
+      "sha256": "e526cf0c3aa4529ca03311032972c76fe9be160fbd0e3b29f742c5f65840664b",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "markdown",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    },
+    {
+      "name": "03-ch3-energy-speed-teacher-key.pdf",
+      "classification": "CURRENT",
+      "kind": "derived",
+      "source": "production/answer-keys/03-ch3-ramp-it-up-key.md",
+      "master": "production/answer-keys/03-ch3-ramp-it-up-key.md",
+      "sources": [
+        "production/answer-keys/03-ch3-ramp-it-up-key.md",
+        "production/answer-keys/03-ch3-drop-it-key.md",
+        "production/answer-keys/03-ch3-energy-speed-practice-key.md",
+        "production/answer-keys/03-ch3-energy-speed-quiz-key.md"
+      ],
+      "sourceSHA256": [
+        "0b2572db41ea9fc1a44e9a0e0d917d553f2ede7e062a57805dadebe5618e550f",
+        "01f34af15ba2f27e4776fb8b45dca5f9870ccfb462fc1dbd606690a7015463a0",
+        "eff61a34fde378cf92b079e40048c9495f67305a6392caef0505ba82a4005d7a",
+        "8a397895acac5c02faccdf2d17756c75a2b016118747b724dfce95e7f9159074"
+      ],
+      "source_sha256": [
+        "0b2572db41ea9fc1a44e9a0e0d917d553f2ede7e062a57805dadebe5618e550f",
+        "01f34af15ba2f27e4776fb8b45dca5f9870ccfb462fc1dbd606690a7015463a0",
+        "eff61a34fde378cf92b079e40048c9495f67305a6392caef0505ba82a4005d7a",
+        "8a397895acac5c02faccdf2d17756c75a2b016118747b724dfce95e7f9159074"
+      ],
+      "sourceCanonicalOOXMLHashes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "builder": "tools/build_ch3_release.py",
+      "builderSourceHash": "673795508aa390c66a8d09c4ebeca3856369596b4f36b88c36eae378261439f7",
+      "upstreamBuilder": null,
+      "upstreamBuilderSourceHash": null,
+      "output": "production/releases/chapter-03/03-ch3-energy-speed-teacher-key.pdf",
+      "artifactType": "TEACHER_KEY",
+      "studentOrTeacher": "teacher",
+      "pagesOrSlides": 3,
+      "rawSHA256": "80e09e0fd2e5eb3fd79f50497bd6f21bd9b85cd6ae4c2031a540af70b1c82745",
+      "sha256": "80e09e0fd2e5eb3fd79f50497bd6f21bd9b85cd6ae4c2031a540af70b1c82745",
+      "canonicalOOXMLHash": null,
+      "freshnessMethod": "markdown",
+      "status": "CURRENT",
+      "captureRequired": true,
+      "captureReason": "Native-view certification surface."
+    }
   ],
-  "retired": [
-    {"name": "03-ch3-interactive-science-notebook.pdf", "kind": "RETIRED", "movedTo": "production/archive/retired/chapter-03-pre-v1.3/03-ch3-interactive-science-notebook.pdf"},
-    {"name": "03-ch3-energy-speed-slides-28.pptx", "kind": "HISTORICAL", "movedTo": "production/archive/retired/chapter-03-pre-v1.3/03-ch3-energy-speed-slides-28.pptx", "note": "pre-v1.3 28-slide deck"}
-  ]
+  "nonCurrent": [
+    {
+      "name": "03-ch3-interactive-science-notebook.pdf",
+      "classification": "RETIRED",
+      "location": "production/archive/retired/chapter-03-pre-v1.3/03-ch3-interactive-science-notebook.pdf",
+      "status": "NOT_ACTIVE"
+    },
+    {
+      "name": "03-ch3-energy-speed-slides-28.pptx",
+      "classification": "HISTORICAL",
+      "location": "production/archive/retired/chapter-03-pre-v1.3/03-ch3-energy-speed-slides-28.pptx",
+      "status": "NOT_ACTIVE"
+    }
+  ],
+  "developmentOnly": [
+    {
+      "path": "production/premium-notes/03-ch3-energy-speed-guided-notes.pdf",
+      "classification": "DEVELOPMENT_ONLY",
+      "note": "Working preview beside the editable master; the builder-produced release PDF is CURRENT."
+    },
+    {
+      "path": "production/premium-notes/03-ch3-energy-speed-guided-notes-key.pdf",
+      "classification": "DEVELOPMENT_ONLY",
+      "note": "Working preview beside the editable master; the builder-produced release PDF is CURRENT."
+    },
+    {
+      "path": "production/slides/03-ch3-energy-speed-slides.pdf",
+      "classification": "DEVELOPMENT_ONLY",
+      "note": "Working preview beside the editable deck; the builder-produced release slide PDF is CURRENT."
+    }
+  ],
+  "retired_to": "production/archive/retired/chapter-03-pre-v1.3/"
 }

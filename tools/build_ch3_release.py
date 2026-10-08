@@ -495,7 +495,7 @@ def refresh_final_delivery_hashes() -> int:
         row[5] = str(target.stat().st_size)
         changed += 1
     with csv_path.open("w", newline="", encoding="utf-8") as handle:
-        csv.writer(handle).writerows(rows)
+        csv.writer(handle, lineterminator="\n").writerows(rows)
     return changed
 
 
