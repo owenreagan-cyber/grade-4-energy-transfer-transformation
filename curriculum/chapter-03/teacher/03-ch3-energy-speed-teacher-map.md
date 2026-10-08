@@ -69,7 +69,7 @@ How are energy and speed related?
 - **Drop It** — `production/labs/03-ch3-drop-it-teacher-spec.md`
 
 ## Assessment
-- Daily exit tickets · notebook check · AP 4.1/4.2 review · Chapter 3 quiz (8–10 items, 10–15 min)
+- Daily exit tickets · guided-notes check · AP 4.1/4.2 review · Chapter 3 quiz (8 items / 12 points, 10–15 min)
 
 ## Materials
 - identical balls · ramps (cardboard) · books/blocks (3 heights) · lightweight cups · meter sticks/rulers · tape markers · sand trays + sand · index cards (vocabulary deck)
@@ -89,8 +89,9 @@ How are energy and speed related?
 ## Media
 - Cinematic overview · explainer · lab preview · short "Same Object. Different Speed." — see `curriculum/chapter-03/media/03-ch3-media-plan.md`
 
-## Notebook
-- `production/student-notebook/chapter-03/03-ch3-interactive-notebook.docx` (3 inserts; 1 interactive flap)
+## Student reference
+- `production/premium-notes/03-ch3-energy-speed-guided-notes.docx` (3 pages; primary student reference)
+- The former interactive notebook is retired and is not part of the active Chapter 3 release.
 
 ## Provenance
 - AP/Reader/TG → **SOURCE** · measurement/graphing upgrade → **ADAPTED** · new scaffolds → **CUSTOM** · enrichment → **EXTENSION**

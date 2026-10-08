@@ -10,7 +10,7 @@
 3. **Notice / wonder (5 min):** Collect "I notice… I wonder…" (the faster ball moved the target farther).
 4. **Introduce speed (8 min):** **speed = a measurement of the distance an object travels over an amount of time.** Revisit **energy of motion** (a moving object has it). Do NOT give the final conclusion yet.
 5. **Model the relationship as a question (8 min):** "For the SAME ball, does faster motion mean more energy of motion? How could we find out?" (We can't see energy — we look at the change it causes.)
-6. **Notebook cue — speed (5 min):** complete ISN Insert 1 vocab (speed fill-in + draw same ball slow/fast).
+6. **Guided Notes cue — speed (5 min):** complete V1 and N1 (speed fill-in + same-ball comparison).
 7. **Exit (3 min):** "What does speed measure?" + "What is one thing we could measure to see how much change a moving object causes?"
 
 ## TUESDAY — Ramp It Up! 2.0 (Option B: lab day)
@@ -28,7 +28,7 @@
 2. **Averages (8 min):** calculate average cup displacement for each ramp height (developmentally appropriate; calculator OK).
 3. **Graph (12 min):** Title "Ramp Height vs. Average Cup Displacement." X-axis = ramp height (books); Y-axis = average cup displacement (cm). Plot 3 points; connect/observe the pattern.
 4. **Reader Ch.3 (10 min):** Read pp. 13–16. Pause: p.13 (speed = distance over time) · p.14 (greater speed → greater change) · p.15 (steeper ramp → faster → bucket farther) · p.16 (higher bounce/louder sound = greater change).
-5. **Measured vs inferred (5 min):** MEASURED = ramp height + cup displacement. INFERRED = relative speed + the speed↔energy relationship. Notebook Insert 2.
+5. **Measured vs inferred (5 min):** MEASURED = ramp height + cup displacement. INFERRED = relative speed + the speed↔energy relationship. Complete N2 and N3 in the Guided Notes.
 6. **Exit (3 min):** "What did our graph show?" (higher ramp → farther cup) "What does that suggest about speed and energy of motion?"
 
 ## THURSDAY — Drop It! + Application (Option B→A)
@@ -37,11 +37,11 @@
 3. **Fair test / setup (5 min):** SAME ball, SAME sand tray, fixed heights (30 cm, 60 cm, optional 90 cm). WE MEASURE crater width (cm). Depth qualitative only.
 4. **Test / record (12 min):** repeated trials where practical; record crater width.
 5. **Compare (5 min):** "Which height caused the greatest change?" Connect: higher → faster → bigger crater → greater energy of motion (inferred).
-6. **Synthesis + notebook (8 min):** complete ISN Insert 2 evidence + Insert 3 misconception flap (Did we directly measure speed or energy? NO — we measured the change and inferred the relationship).
+6. **Synthesis + Guided Notes (8 min):** complete N4, CHECK, and BQ NOW. Ask: Did we directly measure speed or energy? No—we measured the change and inferred the relationship.
 7. **Exit (3 min):** "How does this evidence connect to energy of motion?"
 
 ## FRIDAY — Flex Science Friday (nonessential)
-- **RECOVER:** finish graph · complete Drop It evidence · notebook catch-up · absent recovery.
+- **RECOVER:** finish graph · complete Drop It evidence · Guided Notes catch-up · absent recovery.
 - **PRACTICE:** Fast & Curious (data/escape) · Graph Error Detective · Same Object / Different Object sort · Claim + Evidence matching.
 - **EXTEND:** real-world same-object motion analysis (verified clips only).
 - No new essential standard. See `curriculum/chapter-03/student/03-ch3-friday-flex.md`.

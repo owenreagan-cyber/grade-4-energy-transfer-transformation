@@ -66,20 +66,26 @@ End-of-life states (never canonical, never listed as current): `RETIRED` · `SUP
 
 | ID | Artifact | Master path | Release path | Status | Provenance |
 |---|---|---|---|---|---|
-| P1 | Teacher Chapter Map | `curriculum/chapter-03/teacher/03-ch3-energy-speed-teacher-map.md` | — | RELEASED | SOURCE/ADAPTED |
-| P2 | Slide Deck | `production/slides/03-ch3-energy-speed-slides.pptx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
-| P3 | Interactive Science Notebook | `production/student-notebook/chapter-03/03-ch3-interactive-notebook.docx` | `production/releases/chapter-03/03-ch3-interactive-science-notebook.pdf` | RELEASED | ADAPTED |
-| P4 | Ramp It Up! 2.0 Investigation | `production/labs/03-ch3-ramp-it-up-teacher-spec.md` + `production/worksheets/03-ch3-ramp-it-up-student.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
-| P5 | Drop It Investigation | `production/labs/03-ch3-drop-it-teacher-spec.md` + `production/worksheets/03-ch3-drop-it-student.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
-| P6 | Practice Worksheet | `production/worksheets/03-ch3-energy-speed-practice.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
-| P7 | Friday Flex | `curriculum/chapter-03/student/03-ch3-friday-flex.md` | `production/releases/chapter-03/` | RELEASED | CUSTOM |
-| P8 | Chapter Quiz | `production/quizzes/03-ch3-energy-speed-quiz.docx` | `production/releases/chapter-03/` | RELEASED | ADAPTED |
-| P9 | Teacher Keys | `production/answer-keys/03-ch3-*-key.md` | `production/releases/chapter-03/` | RELEASED | SOURCE/ADAPTED |
-| P10 | Media Plan + Scripts | `curriculum/chapter-03/media/` (plan + 4 scripts) | — | RELEASED | CUSTOM |
-| P11 | Absent-Student Recovery | `curriculum/chapter-03/student/recovery/03-ch3-absent-student-recovery.md` | — | RELEASED | SOURCE/ADAPTED |
-| P12 | QA Package (10 gates) | `curriculum/chapter-03/qa/` | — | RELEASED | CUSTOM |
+| P1 | Teacher Chapter Map | `curriculum/chapter-03/teacher/03-ch3-energy-speed-teacher-map.md` | — | CURRENT / BUILT_UNCERTIFIED | SOURCE/ADAPTED |
+| P2 | Slide Deck (41 slides; PPTX + PDF) | `production/slides/03-ch3-energy-speed-slides.pptx` | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | ADAPTED |
+| P3 | Guided Notes + Key | `production/premium-notes/03-ch3-energy-speed-guided-notes{,-key}.docx` | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | SOURCE/ADAPTED |
+| P4 | Ramp It Up! 2.0 Investigation | `production/labs/03-ch3-ramp-it-up-teacher-spec.md` + `production/worksheets/03-ch3-ramp-it-up-student.docx` | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | ADAPTED |
+| P5 | Drop It Investigation (Friday FLEX) | `production/labs/03-ch3-drop-it-teacher-spec.md` + `production/worksheets/03-ch3-drop-it-student.docx` | `production/releases/chapter-03/` | CURRENT / OPTIONAL | ADAPTED |
+| P6 | Practice Worksheet | `production/worksheets/03-ch3-energy-speed-practice.docx` | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | ADAPTED |
+| P7 | Friday Flex | `curriculum/chapter-03/student/03-ch3-friday-flex.md` | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | CUSTOM |
+| P8 | Chapter Quiz | `production/quizzes/03-ch3-energy-speed-quiz.docx` | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | ADAPTED |
+| P9 | Teacher Keys | `production/answer-keys/03-ch3-*-key.md` | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | SOURCE/ADAPTED |
+| P10 | Media Plan + Scripts | `curriculum/chapter-03/media/` (plan + 4 scripts) | — | AVAILABLE / NOT RELEASE PACKAGE | CUSTOM |
+| P11 | Absent-Student Recovery | `production/worksheets/03-ch3-absent-student-recovery.docx` | `production/releases/chapter-03/03-ch3-absent-student-recovery.pdf` | CURRENT / BUILT_UNCERTIFIED | SOURCE/ADAPTED |
+| P12 | QA Package (pre-v1.3 reports historical; v1.3 certification pending) | `curriculum/chapter-03/qa/` | — | HISTORICAL / NOT CURRENT CERTIFICATION | CUSTOM |
+| P13 | Release package authority | `production/releases/chapter-03/RELEASE_MANIFEST.json` (built by `tools/build_ch3_release.py`) | `production/releases/chapter-03/` | CURRENT / BUILT_UNCERTIFIED | CUSTOM |
+| P14 | Interactive Science Notebook | preserved pre-v1.3 artifact | `production/archive/retired/chapter-03-pre-v1.3/` | RETIRED / NOT ACTIVE | ADAPTED |
+| P15 | 28-slide deck | preserved pre-v1.3 artifact | `production/archive/retired/chapter-03-pre-v1.3/03-ch3-energy-speed-slides-28.pptx` | HISTORICAL / NOT ACTIVE | ADAPTED |
 
-> Chapter 3 is complete (Phase 5). Chapters 4–7 will be added in Phase 6+.
+> **Chapter 3 lifecycle:** v1.3 is `BUILT_UNCERTIFIED`. The release manifest is
+> the single current artifact authority. Guided Notes are primary. The
+> interactive notebook is retired, the 28-slide deck is historical, and the
+> current deck has 41 slides. No certification, freeze, push, or tag is implied.
 
 ## Chapter 4 — Energy Transfer (Weeks 4–5, two-week chapter)
 

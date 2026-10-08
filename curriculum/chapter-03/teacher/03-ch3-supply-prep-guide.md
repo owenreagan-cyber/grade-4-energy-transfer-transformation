@@ -47,7 +47,7 @@
 ## Teacher prep
 - Monday: ready one ball + target; prepare vocabulary deck.
 - Tuesday: assemble ramp + 3-height book sets per group; mark tape start points; print student pages.
-- Wednesday: print graph paper/notebook insert; have Readers ready.
+- Wednesday: have Ramp It Up graph pages and Readers ready.
 - Thursday: set up sand trays; mark fixed-height guides (30/60/90 cm); print student pages.
 
 ## Cleanup

@@ -8,7 +8,7 @@
 | Field | Value |
 |---|---|
 | Time | flexible |
-| Materials | unfinished Ramp graph, Drop It page, notebook inserts |
+| Materials | unfinished Ramp graph, Drop It page, Guided Notes |
 | Teacher prep | none |
 | Student independence | independent/guided |
 | Printable | as needed |
@@ -18,8 +18,8 @@
 **Options:**
 - Finish the Ramp It Up! graph (Ramp Height vs. Average Cup Displacement).
 - Complete the Drop It evidence/explanation.
-- Notebook catch-up (Inserts 1–3).
-- Absent-student recovery (`student/recovery/03-ch3-absent-student-recovery.md`).
+- Guided Notes catch-up (V1 and N1–N4, CHECK, and BQ NOW).
+- Absent-student recovery page.
 
 ---
 
