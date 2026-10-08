@@ -133,6 +133,7 @@ def cache_key(artifact_id: str, artifact_sha: str, device_slug: str, os_version:
 
 
 def _select_artifacts(artifacts, artifact_sel, slides_spec):
+    artifacts = [a for a in artifacts if a.get("captureRequired", True)]
     if artifact_sel:
         matches = [a for a in artifacts if a["artifactId"] == artifact_sel]
         if len(matches) != 1:
@@ -181,8 +182,10 @@ def resolve_plan(mode: str, artifacts, cache_entries, device, artifact_sel=None,
     device_slug = device.get("slug", DEVICE_SLUG)
     os_version = device.get("os", "")
 
+    capture_artifacts = [a for a in artifacts if a.get("captureRequired", True)]
+
     if mode == MODE_FULL:
-        for a in artifacts:
+        for a in capture_artifacts:
             capture.append({
                 "artifactId": a["artifactId"],
                 "pages": None,
@@ -190,7 +193,7 @@ def resolve_plan(mode: str, artifacts, cache_entries, device, artifact_sel=None,
             })
     elif mode == MODE_PREVIEW:
         try:
-            selected = _select_artifacts(artifacts, artifact_sel, slides_spec)
+            selected = _select_artifacts(capture_artifacts, artifact_sel, slides_spec)
             for a in selected:
                 pages = _pages_for_preview(a, pages_spec, slides_spec)
                 capture.append({
@@ -201,7 +204,7 @@ def resolve_plan(mode: str, artifacts, cache_entries, device, artifact_sel=None,
         except ValueError as e:
             errors.append(str(e))
     elif mode == MODE_CHANGED_ONLY:
-        for a in artifacts:
+        for a in capture_artifacts:
             current = a.get("currentSHA256", a["artifactSHA256"])
             key = cache_key(
                 a["artifactId"], current,

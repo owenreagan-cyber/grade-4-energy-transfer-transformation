@@ -108,6 +108,21 @@ class FullModeTests(unittest.TestCase):
         self.assertTrue(all(i["pages"] is None for i in plan["capture"]))
         self.assertEqual(plan["cached"], [])
 
+    def test_excludes_artifact_with_explicit_capture_policy(self):
+        artifacts = _artifacts() + [{
+            "artifactId": "ch3-slides-deck",
+            "artifactType": "SLIDE_DECK",
+            "artifactSHA256": HASH_C,
+            "currentSHA256": HASH_C,
+            "expectedPages": 41,
+            "orientation": "landscape",
+            "viewMode": "fit-page",
+            "captureRequired": False,
+            "chapter": 3,
+        }]
+        plan = resolve_plan(MODE_FULL, artifacts, {}, DEVICE)
+        self.assertNotIn("ch3-slides-deck", [item["artifactId"] for item in plan["capture"]])
+
 
 class ChangedOnlyModeTests(unittest.TestCase):
     def _entry(self, artifact, device=DEVICE):

@@ -26,8 +26,10 @@ STALE_TOKENS = {
     2: ["Model It", "Draw/Label", "Block 1", "Block 2", "Interactive Science Notebook",
         "kinetic energy", "potential energy", "mechanical energy", "momentum", "inertia",
         "transfers energy"],
+    3: ["Interactive Science Notebook", "ISN Insert", "kinetic energy", "potential energy",
+        "mechanical energy", "momentum", "velocity", "joule"],
 }
-QUIZ_POINTS = {1: 16, 2: 12}
+QUIZ_POINTS = {1: 16, 2: 12, 3: 12}
 # Phase 6.1B / L3: classroom-facing PDFs must not leak repo paths, internal phase labels or retired note architecture
 LEAK_PATTERNS = [
     (r"\b[\w./-]+\.md\b", "markdown repo path"),

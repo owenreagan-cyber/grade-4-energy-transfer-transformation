@@ -90,6 +90,10 @@ BODY = {
 prs = Presentation()
 prs.slide_width = Inches(13.333)
 prs.slide_height = Inches(7.5)
+# python-pptx preserves the template's legacy screen4x3 type token even after
+# setting 16:9 dimensions. Keep the package metadata truthful for projection
+# QA and downstream consumers.
+prs._element.sldSz.set("type", "screen16x9")
 BLANK = prs.slide_layouts[6]
 
 
