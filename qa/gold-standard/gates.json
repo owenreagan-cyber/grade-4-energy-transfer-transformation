@@ -297,6 +297,17 @@
       "expectedEvidenceRole": "PROVENANCE_AUDITOR",
       "dependencies": ["SOURCE_CLOSURE"],
       "applicability": "when_configured"
+    },
+    {
+      "gateId": "LAB_STRUCTURE",
+      "gateVersion": "1.0",
+      "mandatory": true,
+      "releaseBlocking": true,
+      "requiresIndependentEvidence": true,
+      "allowedNotVerified": false,
+      "expectedEvidenceRole": "CURRICULUM_AUDITOR",
+      "dependencies": ["CHAPTER_SPEC"],
+      "applicability": "always"
     }
   ]
 }

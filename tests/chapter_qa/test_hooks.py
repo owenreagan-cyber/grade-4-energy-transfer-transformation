@@ -198,7 +198,7 @@ def passing_payload(identity=None):
 class GateVersionAuditTests(unittest.TestCase):
     def test_bumped_gates_are_1_1_and_the_rest_stay_1_0(self):
         gates = load_gates()
-        self.assertEqual(len(gates), 27)
+        self.assertEqual(len(gates), 28)
         for gate in gates:
             if gate.gateId in REBUMP:
                 self.assertEqual(gate.gateVersion, "1.2", gate.gateId)

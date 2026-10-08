@@ -5,6 +5,7 @@ Structural evidence does not satisfy rendered visual QA.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import sys
@@ -27,6 +28,28 @@ NS = {
 def _finding(code, message, context=None):
     decision = resolve_severity(code, context)
     return {"severity": decision["severity"], "code": code, "message": message, "failsGate": decision["failsGate"]}
+
+
+def canonical_oo_xml_hash(path) -> str:
+    """Canonical OOXML identity, independent of ZIP container metadata.
+
+    Raw DOCX/PPTX bytes change when ZIP timestamps/compression/ordering change,
+    even though the decompressed parts are identical. This hash opens the ZIP,
+    sorts member paths, and digests each member's path plus its exact uncompressed
+    bytes — preserving all actual XML/media content while ignoring nondeterministic
+    container metadata. Frozen-byte enforcement still uses raw SHA-256; this is
+    for reproducibility equivalence only.
+    """
+    digest = hashlib.sha256()
+    with zipfile.ZipFile(path) as package:
+        for name in sorted(package.namelist()):
+            data = package.read(name)
+            encoded = name.encode("utf-8")
+            digest.update(len(encoded).to_bytes(4, "big"))
+            digest.update(encoded)
+            digest.update(len(data).to_bytes(8, "big"))
+            digest.update(data)
+    return digest.hexdigest()
 
 
 def inspect_package(path, *, notes_required=False, allow_hidden=False):

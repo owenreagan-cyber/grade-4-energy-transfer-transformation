@@ -34,8 +34,10 @@ def _sha256(path: str) -> str:
 
 
 def _stem(path: str) -> str:
-    name = os.path.splitext(os.path.basename(path))[0].lower()
-    cleaned = re.sub(r"[^a-z0-9]+", "-", name).strip("-")
+    # Include the source extension so a DOCX and a PDF with the same basename
+    # cannot collide in a shared output directory (no basename-only identity).
+    name = os.path.basename(path).lower()
+    cleaned = re.sub(r"[^a-z0-9.]+", "-", name).replace(".", "-").strip("-")
     return cleaned or "artifact"
 
 

@@ -181,15 +181,50 @@ class PlaybookAlignmentTests(unittest.TestCase):
 
 
 class FreshExportTests(unittest.TestCase):
+    def _docx(self, name, text):
+        from docx import Document
+        document = Document()
+        document.add_paragraph(text)
+        p = WORK / name
+        p.parent.mkdir(parents=True, exist_ok=True)
+        document.save(str(p))
+        return p.relative_to(ROOT).as_posix()
+
+    def _export(self, src_rel, out_name):
+        import shutil
+        import subprocess
+        import tempfile
+        src = ROOT / src_rel
+        WORK.mkdir(parents=True, exist_ok=True)
+        prof = tempfile.mkdtemp(prefix="lo_test_")
+        try:
+            subprocess.run(
+                ["soffice", "--headless", "--norestore",
+                 "-env:UserInstallation=file://" + prof,
+                 "--convert-to", "pdf", "--outdir", str(WORK), str(src)],
+                check=True, capture_output=True, text=True, timeout=300,
+            )
+        finally:
+            shutil.rmtree(prof, ignore_errors=True)
+        produced = WORK / (src.stem + ".pdf")
+        target = WORK / out_name
+        if produced.exists() and produced != target:
+            shutil.move(str(produced), str(target))
+        return target.relative_to(ROOT).as_posix()
+
     def test_good(self):
-        from chapter_qa.pdf_fixture import write_pdf
-        src = _w("fe-src.txt", "source text for the export")
-        prod_path = WORK / "fe-prod.pdf"
-        prod_path.parent.mkdir(parents=True, exist_ok=True)
-        write_pdf(prod_path, [(612, 792, b"BT /F1 24 Tf 72 100 Td (Exported) Tj ET")])
-        prod = prod_path.relative_to(ROOT).as_posix()
+        src = self._docx("fe-good.docx", "source text for the export")
+        prod = self._export(src, "fe-good-prod.pdf")
         st = emit_fresh_export_from_files(src, prod, "qa/work/_f3final/export", identity(), _e())[1].status
         self.assertEqual(st, "PASS")
+
+    def test_stale(self):
+        src = self._docx("fe-stale.docx", "first master text")
+        prod = self._export(src, "fe-stale-prod.pdf")
+        # Mutate the master; the tracked PDF is now stale and must FAIL.
+        src2 = self._docx("fe-stale.docx", "changed master text")
+        st = emit_fresh_export_from_files(src2, prod, "qa/work/_f3final/export", identity(), _e())[1].status
+        self.assertEqual(st, "FAIL")
 
     def test_self_export(self):
         src = _w("fe-src2.txt", "identical")

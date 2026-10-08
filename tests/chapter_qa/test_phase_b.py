@@ -584,8 +584,10 @@ class JudgeIntegrationTests(unittest.TestCase):
 
 class RenderPipelineTests(unittest.TestCase):
     def test_names_are_deterministic_and_production_is_protected(self):
-        self.assertEqual(planned_png_name("My Notes.docx", 1, 300), "my-notes-p001-300dpi.png")
-        self.assertEqual(planned_png_name("My Notes.docx", 1, 600), "my-notes-p001-600dpi.png")
+        self.assertEqual(planned_png_name("My Notes.docx", 1, 300), "my-notes-docx-p001-300dpi.png")
+        self.assertEqual(planned_png_name("My Notes.docx", 1, 600), "my-notes-docx-p001-600dpi.png")
+        # A DOCX and a PDF with the same basename must not collide.
+        self.assertNotEqual(planned_png_name("My Notes.docx", 1, 300), planned_png_name("My Notes.pdf", 1, 300))
         with self.assertRaises(ValueError):
             guard_output_directory(str(REPO / "production" / "releases"), str(REPO))
         sheet = mark_contact_sheet("qa/work/_phase_b/contact.png")

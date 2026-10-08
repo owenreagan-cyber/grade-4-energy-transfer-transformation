@@ -482,6 +482,40 @@ def _summary_from_report(report: dict) -> dict:
     }
 
 
+_REPORT_BINDING_FIELDS = (
+    "runId", "buildId", "candidateHash", "runnerSourceHash",
+    "completed", "seed", "startedAt", "finishedAt", "summary",
+)
+_GENERIC_BUILD_IDS = {"phase-c-build", "", "none"}
+
+
+def _report_binding_findings(report: dict) -> list[dict]:
+    """The report must bind to a specific build/candidate, not a placeholder."""
+    findings = []
+    if not isinstance(report, dict) or not report:
+        return findings
+    for field in _REPORT_BINDING_FIELDS:
+        value = report.get(field)
+        if field == "summary":
+            if not isinstance(value, dict) or not value:
+                findings.append(_finding("unbound_report", "adversarial report is missing a summary"))
+            continue
+        if field == "completed":
+            if value is not True:
+                findings.append(_finding("unbound_report", "adversarial report did not complete"))
+            continue
+        if value is None or (isinstance(value, str) and not value.strip()):
+            findings.append(_finding("unbound_report", "adversarial report is missing %s" % field))
+    build_id = str(report.get("buildId") or "").strip()
+    if build_id in _GENERIC_BUILD_IDS:
+        findings.append(_finding("unbound_build", "adversarial report uses the generic placeholder buildId %r" % build_id))
+    if not str(report.get("candidateHash") or "").strip():
+        findings.append(_finding("unbound_candidate", "adversarial report has no candidateHash"))
+    if not str(report.get("runnerSourceHash") or "").strip():
+        findings.append(_finding("unbound_runner", "adversarial report has no runnerSourceHash"))
+    return findings
+
+
 def emit_adversarial_qa_from_file(result_path, identity, evidence_path, *, auditor_role="QA_ADVERSARY"):
     """File-observing ADVERSARIAL_QA: read the actual runner result JSON."""
     from chapter_qa.observation import read_json
@@ -494,6 +528,8 @@ def emit_adversarial_qa_from_file(result_path, identity, evidence_path, *, audit
             report = {}
     summary = _summary_from_report(report) if isinstance(report, dict) else {}
     findings = _safe(assess_adversarial, summary)
+    if isinstance(report, dict) and report:
+        findings = findings + _report_binding_findings(report)
     count = int(summary.get("projectBad") or 0)
     data = {
         "evidenceId": "adversarial-qa",

@@ -537,6 +537,13 @@ class ReleaseJudgeTests(unittest.TestCase):
         self.assertEqual(result.certification, CERTIFICATION_PASS)
         self.assertIn("ev-1", result.acceptedEvidenceIds)
 
+    def test_duplicate_accepted_evidence_for_same_gate_fails(self):
+        first = evidence(evidenceId="ev-a")
+        second = evidence(evidenceId="ev-b")
+        result = judge([gate()], [first, second], build())
+        self.assertEqual(result.status, "FAIL")
+        self.assertTrue(any(item.startswith("DUPLICATE_EVIDENCE:") for item in result.blockingReasons))
+
     def test_build_a_evidence_does_not_certify_build_b(self):
         result = judge([gate()], [evidence()], build("build-B", HASH_B, HASH_B))
         self.assertEqual(result.status, "FAIL")
@@ -660,8 +667,9 @@ class ContractTests(unittest.TestCase):
         self.assertNotIn("37", raw)
         gates = load_gates()
         ids = [item.gateId for item in gates]
-        self.assertEqual(len(ids), 27)
+        self.assertEqual(len(ids), 28)
         self.assertIn("STUDENT_PROMPT_CLARITY", ids)
+        self.assertIn("LAB_STRUCTURE", ids)
         self.assertIn("POST_FREEZE_GOLDEN", ids)
         for extra in ("OOXML_FORENSICS", "SOURCE_CLOSURE", "CLEAN_ROOM_REPRODUCTION", "PROVENANCE_INTEGRITY"):
             self.assertIn(extra, ids)

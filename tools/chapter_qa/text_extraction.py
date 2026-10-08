@@ -255,6 +255,19 @@ RAMP_IS_SPEED = re.compile(
     r"\b(ramp\s+height|height)\b[^.]{0,40}\b(is|equals|tells|shows|measures|means)\b[^.]{0,40}\b(speed)\b",
     re.I,
 )
+_NEGATION = re.compile(r"\b(not|never|no)\b|n['\u2019]?t\b", re.I)
+
+
+def _ramp_claim_is_negated(span: str) -> bool:
+    """True when the matched ramp claim negates speed (a correct statement).
+
+    "Ramp height is not a speed." is the required correct idea, not a boundary
+    violation. Only a positive claim ("ramp height IS speed") is prohibited.
+    """
+    m = re.search(r"\b(is|equals|tells|shows|measures|means)\b(.*?)\b(speed)\b", span, re.I)
+    if not m:
+        return False
+    return bool(_NEGATION.search(m.group(2)))
 ADVANCED_VOCAB = re.compile(r"\b(kinetic|potential|mechanical|inertia|radiant|compression\s*wave)\b", re.I)
 MASS_COMPARISON = re.compile(
     r"\b(heavier|lighter|more\s+massive|less\s+massive|different\s+(ball|object|mass))\b[^.]{0,60}\b(more|greater|energy)\b",
@@ -272,6 +285,9 @@ def family_hits(text: str) -> dict[str, list[str]]:
         ("mass_comparison", MASS_COMPARISON),
     ):
         matches = [m.group(0) for m in pattern.finditer(text)]
+        if name == "ramp_is_speed":
+            # Correct negation ("ramp height is not speed") is not a violation.
+            matches = [m for m in matches if not _ramp_claim_is_negated(m)]
         if matches:
             hits[name] = matches
     return hits

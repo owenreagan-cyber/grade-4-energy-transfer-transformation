@@ -32,6 +32,40 @@ CANDIDATE_LANGUAGE = re.compile(
     re.I,
 )
 
+# Release-status claims a human-facing surface may make. A claim that outranks
+# the authoritative lifecycle state is stale and must not stay green.
+_RELEASE_CLAIM = re.compile(r"\b(CERTIFIED|APPROVED|RELEASED|FROZEN)\b", re.I)
+_NEGATION = re.compile(r"\b(not|never|no|n't)\b", re.I)
+
+_CLAIM_LEVEL = {
+    "CERTIFIED": 3,
+    "APPROVED": 4,
+    "RELEASED": 5,
+    "FROZEN": 5,
+}
+_LIFECYCLE_LEVEL = {
+    "BUILD_IN_PROGRESS": 0,
+    "BUILT_UNCERTIFIED": 1,
+    "INTERNAL_AUDIT_PENDING": 2,
+    "INTERNAL_AUDIT_FAILED": 1,
+    "INTERNALLY_CERTIFIED": 3,
+    "EXTERNAL_AUDIT_PENDING": 3,
+    "EXTERNAL_AUDIT_REJECTED": 1,
+    "APPROVED_FOR_FREEZE": 4,
+    "FROZEN": 5,
+}
+
+
+def _max_release_claim(text: str) -> int:
+    """Highest positive (non-negated) release claim present in the surface text."""
+    level = 0
+    for match in _RELEASE_CLAIM.finditer(text):
+        before = text[:match.start()]
+        if _NEGATION.search(before[-20:]):
+            continue
+        level = max(level, _CLAIM_LEVEL[match.group(1).upper()])
+    return level
+
 
 def find_conflicts(authoritative: str, surfaces: list[dict]) -> list[dict]:
     if authoritative not in STATES and authoritative not in ("",):
@@ -54,14 +88,28 @@ def find_conflicts(authoritative: str, surfaces: list[dict]) -> list[dict]:
                 "message": "authoritative surface %s says %s" % (surface.get("surfaceId"), text),
                 "failsGate": True,
             })
-        if kind in ("HUMAN_FACING_STATUS", "BUILD_LABEL") and authoritative == "FROZEN" and CANDIDATE_LANGUAGE.search(text):
-            decision = resolve_severity("stale_human_status", {"before_freeze": False})
-            findings.append({
-                "severity": decision["severity"],
-                "code": "stale_human_status",
-                "message": "current surface %s still describes a candidate: %s" % (surface.get("surfaceId"), text.strip()[:180]),
-                "failsGate": decision["failsGate"],
-            })
+        if kind in ("HUMAN_FACING_STATUS", "BUILD_LABEL"):
+            if authoritative == "FROZEN" and CANDIDATE_LANGUAGE.search(text):
+                decision = resolve_severity("stale_human_status", {"before_freeze": False})
+                findings.append({
+                    "severity": decision["severity"],
+                    "code": "stale_human_status",
+                    "message": "current surface %s still describes a candidate: %s" % (surface.get("surfaceId"), text.strip()[:180]),
+                    "failsGate": decision["failsGate"],
+                })
+            # A release claim (RELEASED/CERTIFIED/APPROVED/FROZEN) must not
+            # outrank the authoritative lifecycle. Human-facing surfaces cannot
+            # outrank lifecycle authority.
+            auth_level = _LIFECYCLE_LEVEL.get(authoritative, 0)
+            claim_level = _max_release_claim(text)
+            if claim_level > auth_level:
+                decision = resolve_severity("stale_status_claim")
+                findings.append({
+                    "severity": decision["severity"],
+                    "code": "stale_status_claim",
+                    "message": "current surface %s claims a release status the lifecycle does not support: %s" % (surface.get("surfaceId"), text.strip()[:180]),
+                    "failsGate": decision["failsGate"],
+                })
     return findings
 
 

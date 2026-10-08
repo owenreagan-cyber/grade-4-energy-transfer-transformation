@@ -54,7 +54,7 @@ class PhaseCTests(unittest.TestCase):
         self.assertGreater(summary["projectBadCaught"], 0)
         self.assertGreater(summary["heldOutCaught"], 0)
         self.assertEqual(canonical_fingerprint(), before)
-        self.assertEqual(len(held_out_cases(20261006)), 12)
+        self.assertEqual(len(held_out_cases(20261006)), 16)
 
     def test_one_case_records_the_result_contract(self):
         case = next(row for row in cases() if row["caseId"] == "P01")

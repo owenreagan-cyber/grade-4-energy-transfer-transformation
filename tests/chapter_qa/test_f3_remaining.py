@@ -60,6 +60,18 @@ class StatusAuthorityFileTests(unittest.TestCase):
         status = emit_status_evidence_from_files("BUILD_IN_PROGRESS", files, identity(), _evidence())[1].status
         self.assertEqual(status, "FAIL")
 
+    def test_human_facing_stale_released_claim_fails(self):
+        path = _write("status-human-released.md", "Chapter 3 is RELEASED.")
+        files = [{"surfaceId": "callout", "kind": "HUMAN_FACING_STATUS", "path": path}]
+        status = emit_status_evidence_from_files("BUILD_IN_PROGRESS", files, identity(), _evidence())[1].status
+        self.assertEqual(status, "FAIL")
+
+    def test_human_facing_negated_claim_is_clean(self):
+        path = _write("status-human-clean.md", "Chapter 3 is in progress. Not released.")
+        files = [{"surfaceId": "callout", "kind": "HUMAN_FACING_STATUS", "path": path}]
+        status = emit_status_evidence_from_files("BUILD_IN_PROGRESS", files, identity(), _evidence())[1].status
+        self.assertEqual(status, "PASS")
+
 
 class SchedulePolicyFileTests(unittest.TestCase):
     def _table(self, friday_token):
@@ -81,7 +93,10 @@ class SchedulePolicyFileTests(unittest.TestCase):
 class AdversarialQaFileTests(unittest.TestCase):
     def _report(self, bad_green, clean_red=0):
         return {
-            "runId": "r1", "buildId": "b", "completed": True,
+            "runId": "r1", "buildId": "ch3-rebuild-v13-2026-10-07",
+            "candidateHash": "a" * 64, "runnerSourceHash": "b" * 64,
+            "completed": True, "seed": 20261006,
+            "startedAt": "2026-10-07T00:00:00Z", "finishedAt": "2026-10-07T00:01:00Z",
             "summary": {"projectBad": 10, "projectBadGreen": bad_green,
                         "heldOutBad": 5, "heldOutGreen": 0, "clean": 5,
                         "cleanRed": clean_red, "canonicalTouched": 0},
@@ -101,6 +116,18 @@ class AdversarialQaFileTests(unittest.TestCase):
         report["aborted"] = True
         report["completed"] = False
         path = _write("adv-abort.json", json.dumps(report))
+        self.assertEqual(emit_adversarial_qa_from_file(path, identity(), _evidence())[1].status, "FAIL")
+
+    def test_generic_build_id_fails(self):
+        report = self._report(0)
+        report["buildId"] = "phase-c-build"
+        path = _write("adv-generic.json", json.dumps(report))
+        self.assertEqual(emit_adversarial_qa_from_file(path, identity(), _evidence())[1].status, "FAIL")
+
+    def test_missing_candidate_hash_fails(self):
+        report = self._report(0)
+        del report["candidateHash"]
+        path = _write("adv-nocand.json", json.dumps(report))
         self.assertEqual(emit_adversarial_qa_from_file(path, identity(), _evidence())[1].status, "FAIL")
 
 

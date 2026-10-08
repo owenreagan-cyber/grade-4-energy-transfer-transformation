@@ -30,7 +30,9 @@ PROMPT_CLASSES = (
 _VAGUE_REFERENT = (
     re.compile(r"\bthat change\b", re.I),
     re.compile(r"\bthese results\b", re.I),
-    re.compile(r"\bwhat happened\b", re.I),
+    # "what happened" is vague only when it lacks a local explicit referent;
+    # "What happened to the average cup movement?" names its referent.
+    re.compile(r"\bwhat happened\b(?!\s+to\b)", re.I),
     re.compile(r"\bthe relationship\b", re.I),
     re.compile(r"\binfer the\b", re.I),
     re.compile(r"\bwhat does this show\b", re.I),

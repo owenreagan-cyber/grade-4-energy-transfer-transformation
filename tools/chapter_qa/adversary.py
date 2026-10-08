@@ -24,6 +24,7 @@ from chapter_qa.file_producers import (  # noqa: F401
     emit_answer_leakage_from_files,
     emit_assessment_alignment_from_files,
     emit_curriculum_correctness_from_files,
+    emit_lab_structure_from_files,
     emit_notes_slides_sync_from_files,
     emit_playbook_alignment_from_files,
     emit_source_authority_from_files,
@@ -53,6 +54,7 @@ ROLES = {
     "ASSESSMENT_ALIGNMENT": "CURRICULUM_AUDITOR",
     "SCHEDULE_POLICY": "CURRICULUM_AUDITOR",
     "STATUS_AUTHORITY": "CROSS_ARTIFACT_AUDITOR",
+    "LAB_STRUCTURE": "CURRICULUM_AUDITOR",
     "RENDER_COMPLETENESS": "VISUAL_QA_AUDITOR",
     "RENDERED_VISUAL_QA": "VISUAL_QA_AUDITOR",
     "PDF_QUALITY": "PDF_OOXML_FORENSICS",
@@ -67,12 +69,12 @@ ROLES = {
 }
 
 
-def make_identity(build_id="phase-c-build"):
+def make_identity(build_id="phase-c-build", candidate_hash=None):
     return BuildIdentity(
         buildId=build_id,
         candidatePath="candidate/phase-c",
         candidateFreezeId="cand-freeze",
-        candidateHash="a" * 64,
+        candidateHash=candidate_hash or "a" * 64,
         sourceFreezeId="src-freeze",
         sourceHash="b" * 64,
         inputHashes={"candidate": "c" * 64, "reader": "d" * 64},
@@ -367,6 +369,34 @@ def run_method(case, seed, identity):
         else:  # untaught -> CURRICULUM_CORRECTNESS: inject a detectable boundary violation
             classroom = _fixture_file(case_id, "notes.md", "students must know kinetic energy " + attack)
             status = emit_curriculum_correctness_from_files([classroom], identity, evidence, auditor_role=ROLES["CURRICULUM_CORRECTNESS"])[1].status
+    elif method.startswith("lab_"):
+        from docx import Document
+        folder = ROOT / "qa" / "work" / "_phase_c" / case_id
+        folder.mkdir(parents=True, exist_ok=True)
+        document = Document()
+        document.add_paragraph("One ball. Same ramp. Same release. Same cup. Let go.")
+        document.add_paragraph("Three trials at each height. Nine measured trials.")
+        document.add_paragraph("CONNECT TO SPEED")
+        document.add_paragraph("CONNECT TO ENERGY")
+        if method == "lab_different_object":
+            document.add_paragraph("Use a different ball for each height.")
+        headers = ["Condition", "Ramp height", "Trial 1", "Trial 2", "Trial 3"]
+        if method != "lab_missing_average":
+            headers.append("Average")
+        table = document.add_table(rows=2, cols=len(headers))
+        for i, header in enumerate(headers):
+            table.rows[0].cells[i].text = header
+        if method != "lab_missing_graph":
+            document.add_table(rows=5, cols=5)
+        path = folder / "lab.docx"
+        document.save(str(path))
+        rel = path.relative_to(ROOT).as_posix()
+        status = emit_lab_structure_from_files(rel, identity, evidence, auditor_role=ROLES["LAB_STRUCTURE"])[1].status
+    elif method == "raw_code":
+        notes = _notes_fixture(case_id)
+        slides = _slides_fixture(case_id, "SLIDE 1\nBQ_NOW How are energy and speed related?\nSLIDE 2\nN1 write\nNOTES 1\n")
+        keys = _quiz_key_fixture(case_id, "distance")
+        status = emit_answer_leakage_from_files(notes, slides, keys, identity, evidence, auditor_role=ROLES["ANSWER_LEAKAGE"])[1].status
     elif method in ("unknown_token", "stale_words", "frozen_vs_human", "status_clean"):
         # unknown_token is a SCHEDULE_POLICY case (an unrecognized status token);
         # the rest are STATUS_AUTHORITY cases. Both are file-observing now.
@@ -819,8 +849,9 @@ def canonical_fingerprint() -> str:
     return completed.stdout
 
 
-def run_case(case: dict, seed: int, *, canonical_before: str | None = None) -> dict:
-    identity = make_identity()
+def run_case(case: dict, seed: int, *, canonical_before: str | None = None,
+             build_id: str = "phase-c-build", candidate_hash: str | None = None) -> dict:
+    identity = make_identity(build_id, candidate_hash)
     before = canonical_before if canonical_before is not None else canonical_fingerprint()
     original = hashlib.sha256(prose(seed, "original").encode()).hexdigest()
     status, judge_status, evidence = run_method(case, seed, identity)
@@ -840,6 +871,7 @@ def run_case(case: dict, seed: int, *, canonical_before: str | None = None) -> d
         "family": case["family"],
         "seed": seed,
         "buildId": identity.buildId,
+        "candidateHash": identity.candidateHash,
         "originalHash": original,
         "mutatedHash": mutated,
         "mutationTarget": case["mutationMethod"],
@@ -871,6 +903,10 @@ def held_out_cases(seed: int) -> list[dict]:
         ("HELD-REL", "release", "rel_extra", "RELEASE_EXACT_SET"),
         ("HELD-RET", "retired", "ret_rename", "RETIRED_CONTENT"),
         ("HELD-B", "baseline", "build_swap", "RELEASE_JUDGE"),
+        ("HELD-LAB-A", "lab", "lab_missing_average", "LAB_STRUCTURE"),
+        ("HELD-LAB-G", "lab", "lab_missing_graph", "LAB_STRUCTURE"),
+        ("HELD-LAB-D", "lab", "lab_different_object", "LAB_STRUCTURE"),
+        ("HELD-RAW", "leakage", "raw_code", "ANSWER_LEAKAGE"),
     ]
     cases = []
     for prefix, family, method, gate in templates:

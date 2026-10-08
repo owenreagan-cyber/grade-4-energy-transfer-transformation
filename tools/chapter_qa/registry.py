@@ -114,6 +114,11 @@ PRODUCERS = {
         "version": "1.0",
         "role": "CURRICULUM_AUDITOR",
     },
+    "LAB_STRUCTURE": {
+        "id": "chapter_qa.file_producers:emit_lab_structure_from_files",
+        "version": "1.0",
+        "role": "CURRICULUM_AUDITOR",
+    },
 }
 
 
@@ -147,6 +152,7 @@ PRODUCER_INDEPENDENCE = {
     "STATUS_AUTHORITY": {"observesFilesDirectly": True, "method": "open status surfaces from registry"},
     "ADVERSARIAL_QA": {"observesFilesDirectly": True, "method": "read runner result JSON"},
     "PRIOR_FROZEN_NONREGRESSION": {"observesFilesDirectly": True, "method": "run Ch1/Ch2 frozen tools"},
+    "LAB_STRUCTURE": {"observesFilesDirectly": True, "method": "open Ramp It Up DOCX + verify table/graph/fair-test/reasoning structure"},
 }
 
 

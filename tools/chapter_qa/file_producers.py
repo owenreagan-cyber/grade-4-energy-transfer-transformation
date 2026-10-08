@@ -15,7 +15,9 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 
 from chapter_qa.emit import seal
@@ -24,6 +26,7 @@ from chapter_qa.text_extraction import (
     anchor_codes_in_order,
     blank_count,
     docx_paragraphs,
+    docx_tables,
     extract_text,
     family_hits,
     normalize,
@@ -258,6 +261,11 @@ def _leakage_findings(notes_path, slides_path, keys_path) -> tuple[list, dict]:
                 if word and word in normalize(s["notes"]):
                     findings.append(_finding(_HIGH, "speaker_leak", "answer %r in speaker notes on slide %d" % (word, s["slide"])))
                     break
+    # Raw internal anchor codes must never appear in student-visible slide text.
+    for s in slides:
+        if re.search(r"\bBQ_NOW\b", s["text"], re.I):
+            findings.append(_finding(_BLOCKING, "raw_internal_code",
+                "raw internal anchor code BQ_NOW visible on slide %d" % s["slide"]))
     return findings, {"blanks": blanks, "slides": len(slides)}
 
 
@@ -375,7 +383,125 @@ def emit_playbook_alignment_from_files(playbook_path, spec_path, identity, evide
     )
 
 
+# --------------------------------------------------------------------------- LAB_STRUCTURE
+
+def _lab_structure_findings(lab_path: str) -> tuple[list, dict]:
+    """Open the Ramp It Up student lab and verify its required structure.
+
+    Detects (rather than searching for mutation strings) the defect classes:
+    missing measured trials, one trial per height, a missing Average column, a
+    missing graph grid, a removed fair-test control, and a different-object
+    substitution. The CONNECT TO SPEED / CONNECT TO ENERGY bridges must be
+    present and distinct.
+    """
+    findings = []
+    if not lab_path:
+        return [_finding(_BLOCKING, "missing_lab", "Ramp It Up lab path missing")], {}
+    text = "\n".join(docx_paragraphs(lab_path))
+    tables = docx_tables(lab_path)
+    if not text:
+        return [_finding(_BLOCKING, "missing_lab", "Ramp It Up lab could not be read")], {}
+    norm = normalize(text)
+
+    # Same-object fair test.
+    if "different ball" in norm or "different object" in norm:
+        findings.append(_finding(_BLOCKING, "different_object", "lab compares different balls or objects"))
+    if "one ball" not in norm and "same ball" not in norm:
+        findings.append(_finding(_BLOCKING, "missing_fair_test", "lab does not keep one ball"))
+
+    # Fair-test controls.
+    for control in ("same ramp", "same release", "same cup", "let go"):
+        if control not in norm:
+            findings.append(_finding(_BLOCKING, "missing_fair_test", "lab is missing fair-test control %r" % control))
+
+    # Nine measured trials.
+    if "three trials at each height" not in norm and "nine measured trials" not in norm:
+        findings.append(_finding(_BLOCKING, "missing_trials", "lab does not require three trials per height (nine measured trials)"))
+
+    # Data table: Average column and Trial 1/2/3 columns.
+    header_table = tables[0] if tables else []
+    headers = [normalize(cell) for row in header_table[:1] for cell in row]
+    joined = " ".join(headers)
+    if joined and "average" not in joined:
+        findings.append(_finding(_BLOCKING, "missing_average", "data table has no Average column"))
+    for trial in ("trial 1", "trial 2", "trial 3"):
+        if joined and trial not in joined:
+            findings.append(_finding(_BLOCKING, "missing_trial", "data table is missing %s" % trial))
+    if len(header_table) < 4:
+        findings.append(_finding(_BLOCKING, "missing_rows", "data table does not have rows for 1, 2, and 3 books"))
+
+    # Graph plotting grid: a second table with at least a handful of empty cells.
+    if len(tables) < 2 or not tables[1] or len(tables[1]) < 4:
+        findings.append(_finding(_BLOCKING, "missing_graph", "lab has no graph plotting grid"))
+
+    # Reasoning bridges must be distinct, not collapsed into ramp height = speed.
+    if "connect to speed" not in norm:
+        findings.append(_finding(_BLOCKING, "missing_connect_speed", "lab is missing the CONNECT TO SPEED step"))
+    if "connect to energy" not in norm:
+        findings.append(_finding(_BLOCKING, "missing_connect_energy", "lab is missing the CONNECT TO ENERGY step"))
+
+    return findings, {"tables": len(tables), "dataRows": len(header_table)}
+
+
+def emit_lab_structure_from_files(lab_path, identity, evidence_path, *, auditor_role="CURRICULUM_AUDITOR"):
+    findings, _obs = _lab_structure_findings(lab_path)
+    performed = bool(lab_path)
+    inputs = ["lab:%s" % lab_path] if performed else []
+    return _base(
+        "LAB_STRUCTURE", "lab-structure", identity, evidence_path, auditor_role,
+        performed, findings, inputs,
+        "candidate-lab:%s" % identity.candidateHash,
+        "ramp-it-up-docx-bytes",
+        "labTables", len(inputs), len(inputs),
+    )
+
+
 # --------------------------------------------------------------------------- FRESH_EXPORT
+
+def _deterministic_export_pdf(source_path: str, export_dir: str | None) -> str | None:
+    """Deterministically export a DOCX/PPTX master to PDF in isolated QA space.
+
+    Uses a fresh LibreOffice profile so only the master's content drives the
+    result. Returns the produced PDF path, or None when the export fails.
+    """
+    src = Path(REPO_ROOT / source_path)
+    if src.suffix.lower() not in (".docx", ".pptx"):
+        return None
+    out = Path(export_dir) if export_dir else Path(tempfile.mkdtemp(prefix="fresh_export_"))
+    out.mkdir(parents=True, exist_ok=True)
+    profile = tempfile.mkdtemp(prefix="lo_fresh_")
+    try:
+        completed = subprocess.run(
+            ["soffice", "--headless", "--norestore",
+             "-env:UserInstallation=file://" + profile,
+             "--convert-to", "pdf", "--outdir", str(out), str(src)],
+            capture_output=True, text=True, timeout=300, check=False,
+        )
+        if completed.returncode != 0:
+            return None
+        produced = out / (src.stem + ".pdf")
+        return str(produced) if produced.is_file() else None
+    except (OSError, subprocess.SubprocessError):
+        return None
+    finally:
+        shutil.rmtree(profile, ignore_errors=True)
+
+
+def _pdf_semantic_identity(path: str) -> dict:
+    """Page count plus normalized full text — the semantic identity of a PDF.
+
+    This is the "demonstrably derived from the current master" test: the tracked
+    PDF must match a deterministic fresh export of the current master in both
+    page count and normalized content. Timestamps and container bytes are ignored.
+    """
+    pages = [p for p in pdf_pages(path) if p.strip()]
+    norm = "\n".join(normalize(p) for p in pages)
+    return {
+        "pageCount": len(pages),
+        "text": norm,
+        "textHash": hashlib.sha256(norm.encode("utf-8")).hexdigest(),
+    }
+
 
 def _fresh_export_findings(source_path, production_path, export_dir) -> tuple[list, dict]:
     findings = []
@@ -390,16 +516,38 @@ def _fresh_export_findings(source_path, production_path, export_dir) -> tuple[li
         "sourceHash": hashlib.sha256(source_bytes).hexdigest(),
         "productionHash": hashlib.sha256(production_bytes).hexdigest(),
     }
-    # Isolated export (pdf of the source) is out of scope without the full render
-    # toolchain; we verify byte-level relationships that are independent of that:
-    # source vs production must not be identical, and production must be a PDF.
     if not str(production_path).lower().endswith(".pdf"):
         findings.append(_finding(_BLOCKING, "not_pdf", "production output is not a PDF"))
+        return findings, obs
     if source_bytes == production_bytes:
         findings.append(_finding(_BLOCKING, "self_export", "production PDF equals source bytes (no real export)"))
+        return findings, obs
     prod_text = pdf_text(production_path)
     if not prod_text.strip():
         findings.append(_finding(_BLOCKING, "empty_production", "production PDF has no text"))
+        return findings, obs
+
+    # A PDF passes only if it is demonstrably derived from the current master:
+    # deterministically export the master in isolated QA space and compare
+    # semantic identity (page count + normalized content). "Source differs and
+    # PDF has text" is not enough — a stale PDF still differs and still has text.
+    fresh_pdf = _deterministic_export_pdf(source_path, export_dir)
+    if fresh_pdf is None:
+        findings.append(_finding(_BLOCKING, "export_failed",
+            "could not deterministically export the master (source must be a .docx or .pptx)"))
+        return findings, obs
+    prod_identity = _pdf_semantic_identity(production_path)
+    fresh_identity = _pdf_semantic_identity(fresh_pdf)
+    obs["freshPageCount"] = fresh_identity["pageCount"]
+    obs["productionPageCount"] = prod_identity["pageCount"]
+    obs["freshTextHash"] = fresh_identity["textHash"]
+    obs["productionTextHash"] = prod_identity["textHash"]
+    if prod_identity["pageCount"] != fresh_identity["pageCount"]:
+        findings.append(_finding(_BLOCKING, "stale_export",
+            "production page count %s != fresh export %s" % (prod_identity["pageCount"], fresh_identity["pageCount"])))
+    if prod_identity["text"] != fresh_identity["text"]:
+        findings.append(_finding(_BLOCKING, "stale_export",
+            "production text does not match a fresh export of the current master"))
     return findings, obs
 
 

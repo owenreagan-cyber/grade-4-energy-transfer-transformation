@@ -118,6 +118,16 @@ def judge(gates, evidence_records, requested: BuildIdentity, affected=None, *, r
         rows = accepted_by_gate[gate.gateId]
         if gate.mandatory or gate.releaseBlocking:
             required += 1
+        if len(rows) > 1:
+            # Multiple active accepted evidence records for the same gate is a
+            # duplicate; the Judge fails closed rather than trusting filename
+            # dedup behavior. One active record per gate is authoritative.
+            if gate.mandatory or gate.releaseBlocking:
+                blocking.append("DUPLICATE_EVIDENCE: %s" % gate.gateId)
+            for dup in rows[1:]:
+                rejected_ids.append(dup.evidenceId)
+            rows = rows[:1]
+            accepted_by_gate[gate.gateId] = rows
         if not rows:
             missing += 1
             if gate.mandatory or gate.releaseBlocking:
