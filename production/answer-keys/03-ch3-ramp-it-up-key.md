@@ -8,7 +8,8 @@ Look for:
 - one unrecorded calibration roll
 - three recorded trials at each height (nine recorded trials)
 - an average column
-- a graph of ramp height (cm) against average cup movement (cm)
+- a graph of ramp height (cm) against average cup movement (cm) with a visible grid
+- the CONNECT TO SPEED and CONNECT TO ENERGY reasoning steps (not collapsed into ramp height = speed)
 - no speed number and no meters per second
 - the 30 cm challenge judged by closeness without going past
 

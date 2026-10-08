@@ -7,6 +7,8 @@ import json
 import os
 
 from docx import Document
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -32,13 +34,14 @@ def doc():
     return document
 
 
-def add(document, text, size=14, bold=False, color=INK, space=6):
+def add(document, text, size=14, bold=False, color=INK, space=6, italic=False):
     p = document.add_paragraph()
     p.paragraph_format.space_after = Pt(space)
     run = p.add_run(text)
     run.font.name = FONT
     run.font.size = Pt(size)
     run.bold = bold
+    run.italic = italic
     run.font.color.rgb = color
     return p
 
@@ -47,6 +50,19 @@ def save(document, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     document.save(path)
     print(path)
+
+
+def _table_borders(table, color="1A1D26", sz="6"):
+    """Visible, student-usable borders on every cell of a table."""
+    tblPr = table._tbl.tblPr
+    borders = OxmlElement("w:tblBorders")
+    for edge in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        node = OxmlElement("w:%s" % edge)
+        node.set(qn("w:val"), "single")
+        node.set(qn("w:sz"), sz)
+        node.set(qn("w:color"), color)
+        borders.append(node)
+    tblPr.append(borders)
 
 
 def practice():
@@ -61,9 +77,9 @@ def practice():
     add(document, "2. This chapter compares one ball at two speeds. Why would a different ball change the test?", bold=True)
     add(document, "________________________________________________________________")
     add(document, "________________________________________________________________")
-    add(document, "3. Name one thing you measured in centimeters, and one thing you figured out from that change.", bold=True)
+    add(document, "3. Name one thing you measured in centimeters. Then name the two setups you compared to see which gave the same ball more energy of motion.", bold=True)
     add(document, "Measured: ______________________________________________________")
-    add(document, "Figured out: ___________________________________________________")
+    add(document, "Compared: ______________________________________________________")
     save(document, os.path.join(ROOT, "production/worksheets/03-ch3-energy-speed-practice.docx"))
     key = """# Chapter 3 Practice Key
 
@@ -71,7 +87,7 @@ Not graded. OPTIONAL.
 
 1. The farther cup move is the evidence. Accept: a bigger change, or the cup moved farther. Do not accept a speed number.
 2. A different ball could be heavier or lighter, so the test would compare different objects instead of one object at two speeds.
-3. Measured: ramp height in centimeters, or how far the cup moved in centimeters. Figured out: which setup gave the same ball more speed, or more energy of motion.
+3. Measured: ramp height in centimeters, or how far the cup moved in centimeters. Compared: a lower setup and a steeper setup (for example, 1 book and 3 books) for the same ball.
 
 Reader pp. 13–16. Teacher Guide Lessons 4 and 5.
 """
@@ -105,14 +121,32 @@ def quiz():
 8 items · 12 points. Score: ______ / 12 = ______ %.
 FLEX. Friday 2026-10-23 or makeup within 2 school days. Not a first lesson.
 
-1. (1) distance. Reader p. 13.
-2. (1) A. one ball at two speeds.
-3. (2) A greater change. Accept a farther cup move, a higher bounce, or a louder sound. No speed number.
-4. (2) Ramp height in centimeters and cup movement in centimeters. Both are measured.
-5. (1) ramp height. The ball stayed the same.
-6. (1) A. ramp height (cm) and average cup movement (cm).
-7. (2) A greater change, such as the cup or bucket moving farther.
-8. (2) For the same object, greater speed is related to greater energy of motion. A greater change is the evidence.
+1. (1 point) distance. Reader p. 13.
+2. (1 point) A. one ball at two speeds.
+5. (1 point) ramp height. The ball stayed the same.
+6. (1 point) A. ramp height (cm) and average cup movement (cm).
+
+Scoring for the four 2-point items (3, 4, 7, 8):
+
+3. (2 points) What shows that the faster ball had more energy of motion?
+   2 = names a greater change (a farther cup move, a higher bounce, or a louder sound) with no speed number.
+   1 = names a change but not a greater one.
+   0 = incorrect, or gives a speed number.
+
+4. (2 points) In Ramp It Up 2.0, what did we measure in centimeters? Name both things.
+   2 = names both: ramp height in centimeters AND cup movement in centimeters.
+   1 = names only one of the two.
+   0 = neither, or gives a speed number.
+
+7. (2 points) The same ball rolls from a steeper ramp. What greater change do you look for?
+   2 = names a greater change for the same ball (the cup or bucket moving farther).
+   1 = names a change but not a greater one.
+   0 = incorrect.
+
+8. (2 points) How are energy and speed related?
+   2 = same object, and greater speed relates to greater energy of motion, with a greater change as the evidence.
+   1 = states the relationship for the same object but omits the evidence, or states evidence without the relationship.
+   0 = a mass-based comparison, a speed number, or no same object.
 
 Do not accept kinetic, potential, mechanical, or a speed in meters per second.
 """
@@ -157,13 +191,31 @@ def lab():
     add(document, "Roll once to calibrate. Do not record that roll. Then record three trials at each height. That is nine measured trials.")
     add(document, "Ramp height is not a speed. Do not write a speed number.")
     table = document.add_table(rows=4, cols=6)
-    headers = ["Ramp setup", "Ramp height (cm)", "Trial 1 (cm)", "Trial 2 (cm)", "Trial 3 (cm)", "Average (cm)"]
+    headers = ["Condition / books", "Actual ramp height (cm)", "Trial 1 cup movement (cm)", "Trial 2 cup movement (cm)", "Trial 3 cup movement (cm)", "Average cup movement (cm)"]
     for index, header in enumerate(headers):
-        table.rows[0].cells[index].text = header
+        cell = table.rows[0].cells[index]
+        cell.text = header
+        for run in cell.paragraphs[0].runs:
+            run.bold = True
     for index, books in enumerate(("1 book", "2 books", "3 books"), start=1):
         table.rows[index].cells[0].text = books
+    _table_borders(table)
     add(document, "")
-    add(document, "GRAPH: ramp height (cm) on the x-axis. Average cup movement (cm) on the y-axis. Do not label an axis as speed.", bold=True)
+    add(document, "GRAPH: Plot your three averages. Do not label an axis as speed.", bold=True)
+    add(document, "y-axis — Average cup movement (cm)", size=12, italic=True)
+    graph = document.add_table(rows=7, cols=6)
+    _table_borders(graph)
+    for row in graph.rows:
+        tr = row._tr
+        trPr = tr.get_or_add_trPr()
+        trHeight = OxmlElement("w:trHeight")
+        trHeight.set(qn("w:val"), str(480))
+        trHeight.set(qn("w:hRule"), "atLeast")
+        trPr.append(trHeight)
+        for cell in row.cells:
+            cell.paragraphs[0].text = ""
+    add(document, "")
+    add(document, "x-axis — Actual ramp height (cm)", size=12, italic=True)
     add(document, "Challenge: move the cup as close as you can to 30 cm without going past.")
     add(document, "My closest result: ________ cm. Did it go past 30 cm?  yes / no")
     add(document, "READ THE DATA: Which ramp height had the greatest average cup movement?", bold=True)
@@ -173,6 +225,8 @@ def lab():
     add(document, "NOTICE THE PATTERN: As ramp height increased, what happened to the average cup movement?", bold=True)
     add(document, "________________________________________________________________")
     add(document, "CONNECT TO SPEED: The Reader says objects pick up more speed on steeper ramps. Which setup gave the same ball more speed?", bold=True)
+    add(document, "________________________________________________________________")
+    add(document, "CONNECT TO ENERGY: The Reader says the faster the ball is moving, the greater its energy of motion. Which setup gave the same ball more energy of motion?", bold=True)
     add(document, "________________________________________________________________")
     add(document, "CLAIM: When the same object moves faster, it has __________ energy of motion.", bold=True)
     add(document, "EVIDENCE: Write TWO actual average cup-movement values from your table that support your claim.", bold=True)
@@ -193,7 +247,8 @@ Look for:
 - one unrecorded calibration roll
 - three recorded trials at each height (nine recorded trials)
 - an average column
-- a graph of ramp height (cm) against average cup movement (cm)
+- a graph of ramp height (cm) against average cup movement (cm) with a visible grid
+- the CONNECT TO SPEED and CONNECT TO ENERGY reasoning steps (not collapsed into ramp height = speed)
 - no speed number and no meters per second
 - the 30 cm challenge judged by closeness without going past
 

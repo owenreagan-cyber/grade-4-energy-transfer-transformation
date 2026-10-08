@@ -252,7 +252,11 @@ def _new_doc():
 
 def _page_ref(doc, pages):
     if pages:
-        _para(doc, "Reader p. " + pages, size=ATTR, italic=True, color=INK_SOFT, after=2)
+        if pages.lower().startswith("tg"):
+            label = "Teacher Guide " + pages[2:].lstrip(" :·")
+        else:
+            label = "Reader p. " + pages
+        _para(doc, label, size=ATTR, italic=True, color=INK_SOFT, after=2)
 
 
 def _anchor_map():

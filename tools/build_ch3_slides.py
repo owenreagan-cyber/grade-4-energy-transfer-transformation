@@ -55,7 +55,7 @@ BODY = {
     "S09": ["Write both missing words.", "Compare the ________ ball at two speeds.", "A bigger ________ is how we know the faster ball had more energy of motion."],
     "S10": ["Compare the same ball at two speeds.", "A bigger change is how we know the faster ball had more energy of motion."],
     "S11": ["Preview. One ball.", "Low setup, then a steeper setup.", "Which cup move was bigger?", "Do not measure. Do not write a speed number."],
-    "S12": ["Tomorrow we measure the ramp and how far the cup moves.", "We use centimeters.", "We do not write a speed number."],
+    "S12": ["Tomorrow we measure the ramp height and how far the target moves.", "We use centimeters.", "We do not write a speed number."],
     "S13": ["Exit. One sentence about one ball.", "Not graded."],
     "S14": ["How are energy and speed related?", "What have we already observed?"],
     "S15": ["A fair test changes one thing.", "Keep one ball."],
@@ -71,9 +71,9 @@ BODY = {
     "S25": ["Plot your three averages.", "Use your own measurements."],
     "S26": ["Challenge", "Move the cup as close as you can to 30 cm without going past."],
     "S27": ["You may change the ramp.", "Keep one ball.", "Do not write a speed number."],
-    "S28": ["Which setup made the bigger change?", "The cup moved farther. That is a greater change."],
+    "S28": ["Which setup moved the cup farther?", "A farther cup move is a bigger change."],
     "S29": ["Reader pages 15 and 16.", "How are energy and speed related?"],
-    "S30": ["A steeper ramp. One ball.", "The Reader says objects pick up more speed on steeper ramps.", "Watch how far the cup or bucket moves."],
+    "S30": ["A steeper ramp. One ball.", "The Reader tells us what happens when the same ball rolls down a steeper ramp.", "Watch how far the cup or bucket moves."],
     "S31": ["Write the missing words.", "Objects pick up more ________ on steeper ramps.", "From the steeper ramp, that ball made a ________ change."],
     "S32": ["Objects pick up more speed on steeper ramps.", "From the steeper ramp, that ball made a greater change."],
     "S33": ["A soft bounce. A hard bounce.", "Which bounce went farther up?"],
@@ -159,9 +159,12 @@ def build():
         else:
             tab = rect(slide, 0.6, 0.58, 5.3, 0.4, PRIMARY)
             write(tab, "CHAPTER 3  ·  ENERGY AND SPEED", 12, WHITE, True, PP_ALIGN.CENTER)
-            chip = rect(slide, 0.6, 1.15, 1.5, 0.46, ACCENT)
-            write(chip, DISPLAY_LABELS.get(row["anchor"], row["anchor"]), 16, WHITE, True, PP_ALIGN.CENTER)
-            textbox(slide, 2.1, 1.1, 8.2, 0.56, [titles.get(row["anchor"], row["task"])], 28, PRIMARY, True)
+            label = DISPLAY_LABELS.get(row["anchor"], row["anchor"])
+            chip_w = max(1.5, 0.20 * len(label) + 0.55)
+            chip = rect(slide, 0.6, 1.15, chip_w, 0.46, ACCENT)
+            chip.text_frame.word_wrap = False
+            write(chip, label, 16, WHITE, True, PP_ALIGN.CENTER)
+            textbox(slide, 0.75 + chip_w, 1.1, 10.1 - chip_w, 0.56, [titles.get(row["anchor"], row["task"])], 28, PRIMARY, True)
             status = row.get("status") or session["status"]
             badge = rect(slide, 11.0, 0.58, 1.7, 0.4, CHARCOAL if status == "FLEX" else ACCENT)
             write(badge, status, 14, WHITE, True, PP_ALIGN.CENTER)
