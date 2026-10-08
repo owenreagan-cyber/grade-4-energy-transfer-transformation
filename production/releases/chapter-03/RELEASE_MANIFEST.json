@@ -1,0 +1,20 @@
+{
+  "chapter": 3,
+  "version": "1.3",
+  "status": "BUILT_UNCERTIFIED",
+  "builder": "manual remediation (no tracked ch3 release builder yet)",
+  "slideCount": 41,
+  "files": [
+    {"name": "03-ch3-energy-speed-slides.pptx", "kind": "CURRENT", "source": "production/slides/03-ch3-energy-speed-slides.pptx", "note": "41-slide deck"},
+    {"name": "03-ch3-energy-speed-practice.pdf", "kind": "CURRENT", "source": "production/worksheets/03-ch3-energy-speed-practice.docx"},
+    {"name": "03-ch3-energy-speed-quiz.pdf", "kind": "CURRENT", "source": "production/quizzes/03-ch3-energy-speed-quiz.docx"},
+    {"name": "03-ch3-ramp-it-up-student.pdf", "kind": "CURRENT", "source": "production/worksheets/03-ch3-ramp-it-up-student.docx"},
+    {"name": "03-ch3-drop-it-student.pdf", "kind": "CURRENT", "source": "production/worksheets/03-ch3-drop-it-student.docx", "note": "Friday FLEX"},
+    {"name": "03-ch3-friday-flex.pdf", "kind": "CURRENT", "note": "Friday FLEX"},
+    {"name": "03-ch3-energy-speed-teacher-key.pdf", "kind": "CURRENT", "note": "derived teacher key; regenerate with release builder"}
+  ],
+  "retired": [
+    {"name": "03-ch3-interactive-science-notebook.pdf", "kind": "RETIRED", "movedTo": "production/archive/retired/chapter-03-pre-v1.3/03-ch3-interactive-science-notebook.pdf"},
+    {"name": "03-ch3-energy-speed-slides-28.pptx", "kind": "HISTORICAL", "movedTo": "production/archive/retired/chapter-03-pre-v1.3/03-ch3-energy-speed-slides-28.pptx", "note": "pre-v1.3 28-slide deck"}
+  ]
+}
