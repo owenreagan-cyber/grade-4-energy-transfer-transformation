@@ -42,7 +42,26 @@ READ_ONLY = frozenset({
     "shortlog",
     "name-rev",
     "merge-base",
+    "ls-remote",
 })
+
+# Read-only subcommands for verbs that default to fail-closed. These verbs are
+# NOT in READ_ONLY because they also carry mutating subcommands (`remote add`,
+# `branch -d`, `tag -d`). Only the listing/inspection forms below are allowed.
+REMOTE_READ_ONLY = frozenset({"-v", "--verbose", "get-url", "show", "get-head", "get-branches"})
+REMOTE_MUTATING = frozenset({"add", "set-url", "set-head", "remove", "rm", "rename", "prune", "update"})
+
+BRANCH_READ_ONLY = frozenset({
+    "-a", "--all", "-r", "--remotes", "--remote", "-l", "--list",
+    "-v", "-vv", "--verbose", "--show-current",
+})
+BRANCH_MUTATING = frozenset({
+    "-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C", "--copy",
+    "--edit-description", "--set-upstream-to", "-u", "--unset-upstream", "--track", "--no-track",
+})
+
+TAG_READ_ONLY = frozenset({"-l", "--list"})
+TAG_MUTATING = frozenset({"-d", "--delete", "-a", "-s", "-u", "-f", "--force", "--annotate", "--sign", "--edit"})
 
 ALWAYS_DENY = frozenset({
     "reset",
@@ -50,7 +69,6 @@ ALWAYS_DENY = frozenset({
     "stash",
     "restore",
     "checkout",
-    "switch",
     "rebase",
     "merge",
     "pull",
@@ -241,6 +259,8 @@ def _git_invocation(argv: list[str], authorization: dict) -> dict | None:
             return _authorize_add(argv[index + 1:], authorization)
         if token == "commit":
             return _authorize_commit(argv[index + 1:], authorization)
+        if token in ("remote", "branch", "tag", "switch"):
+            return _classify_subcommand_verb(token, argv[index + 1:])
         return _classify_verb(token, authorization)
     return deny("git invocation has no subcommand")
 
@@ -291,6 +311,54 @@ def _authorize_commit(args: list[str], authorization: dict) -> dict:
     if any(token in banned or token.startswith("--amend=") for token in args):
         return deny("git commit cannot amend, skip hooks, or stage everything")
     return None
+
+
+def _classify_subcommand_verb(verb: str, args: list[str]) -> dict | None:
+    """Allow read-only inspection and non-destructive branch/switch forms.
+
+    ``remote``/``branch``/``tag``/``switch`` are not in READ_ONLY because each
+    also carries mutating or destructive forms. Here we whitelist the listing
+    and non-destructive creation/switch forms, and deny destructive subcommands,
+    object mutation (``tag <name>``, ``tag -d``), and value-taking flags
+    (``--format``, ``--sort``, ``--contains``) so a positional argument can
+    never be misread as safe.
+    """
+    if verb == "remote":
+        for token in args:
+            if token in REMOTE_MUTATING:
+                return deny("git remote %s is not authorized" % token)
+        # No args (list), -v, get-url, show, get-head, get-branches are read-only.
+        return None
+    if verb == "branch":
+        for token in args:
+            if token in BRANCH_MUTATING:
+                return deny("git branch %s is not authorized" % token)
+        positionals = [t for t in args if not t.startswith("-")]
+        if not positionals:
+            # Listing form: only read-only flags (or no args) are permitted.
+            if all(token in BRANCH_READ_ONLY for token in args):
+                return None
+            return deny("git branch with an unknown flag is not authorized")
+        # Exactly one positional and no flags: create a new branch at HEAD.
+        if len(positionals) == 1 and not any(t.startswith("-") for t in args):
+            return None
+        return deny("git branch start-point or value-taking flag is not authorized")
+    if verb == "tag":
+        for token in args:
+            if token in TAG_MUTATING:
+                return deny("git tag %s is not authorized" % token)
+        if args and not all(token in TAG_READ_ONLY for token in args):
+            return deny("git tag creation or value-taking flag is not authorized")
+        return None
+    if verb == "switch":
+        if any(t.startswith("-") for t in args):
+            return deny("git switch flags are not authorized")
+        if len(args) == 1:
+            # `git switch <branch>` only moves HEAD to an existing branch; it
+            # never detaches (no --detach) and never discards changes.
+            return None
+        return deny("git switch requires exactly one branch name")
+    return deny("git command %s is not in the read-only allow list" % verb)
 
 
 def _classify_verb(verb: str | None, authorization: dict) -> dict | None:
@@ -401,12 +469,30 @@ def _inline_decision(script: str, authorization: dict, depth: int) -> dict | Non
     return None
 
 
+def _nonpython_runs_git(body: str) -> bool:
+    """Conservative fallback when the body is not valid Python.
+
+    A non-Python script (for example a JavaScript file handed to ``node``) cannot
+    be scanned with the Python tokenizer. The previous behaviour returned a
+    blanket deny on any ``TokenError``, which blocked every valid non-Python
+    script passed to an interpreter (for example the tracked
+    ``tools/render-pdf.js``) even though it executed no git at all. Instead we
+    approximate the Python scan: an obfuscated payload, or a shell-out API plus a
+    real git invocation anywhere in the body.
+    """
+    if _OBFUSCATED.search(body):
+        return True
+    if not _EXEC_API.search(_code_without_strings(body)):
+        return False
+    return bool(_GIT_CALL.search(body))
+
+
 def _script_runs_git(body: str) -> bool:
     """True when a Python file executes git, not when it only mentions git."""
     try:
         tokens = list(tokenize.generate_tokens(io.StringIO(body).readline))
     except tokenize.TokenError:
-        return True
+        return _nonpython_runs_git(body)
     calls = {
         "system", "popen", "exec", "execSync", "spawn", "eval", "Function",
         "Popen", "run", "check_call", "check_output",

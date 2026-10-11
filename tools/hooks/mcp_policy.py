@@ -37,6 +37,9 @@ ALLOWED = {
     "CROSS_ARTIFACT_AUDITOR": frozenset(),
     "PDF_OOXML_FORENSICS": frozenset(),
     "PROVENANCE_AUDITOR": frozenset({"READ_ONLY_REVIEW"}),
+    # Owner-authorized (2026-10-10): the un-roled integrator context may read
+    # sources (incl. Google Slides retrieval for QA). Read-only only.
+    "UNSPECIFIED": frozenset({"READ_ONLY_SOURCE"}),
 }
 
 WRITE_CLASSES = frozenset({"DESIGN_WRITE", "REPOSITORY_WRITE", "EXTERNAL_ACTION"})
@@ -46,6 +49,10 @@ WRITE_CLASSES = frozenset({"DESIGN_WRITE", "REPOSITORY_WRITE", "EXTERNAL_ACTION"
 SERVERS = {
     "figma": "DESIGN_WRITE",
     "canva": "DESIGN_WRITE",
+    # Google Slides QA (owner-authorized 2026-10-10): read-only retrieval of
+    # the live instructional deck via the Drive MCP. Read-only source class;
+    # write/copy/share tools remain gated by the caller's role.
+    "google-drive": "READ_ONLY_SOURCE",
 }
 
 
