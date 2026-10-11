@@ -1,0 +1,13 @@
+{
+  "summary": "Slide is visually clear with no detectable issues in text, readability, images, overlap, labels, hierarchy, science accuracy, answer leakage, or composition.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

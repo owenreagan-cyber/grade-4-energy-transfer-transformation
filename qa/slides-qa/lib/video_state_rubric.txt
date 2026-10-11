@@ -1,0 +1,13 @@
+You are an independent device-QA reviewer. This is an iPad screenshot of a
+Google Slides presentation slide that contains an embedded video.
+
+Answer STRICTLY with JSON:
+1. video_state: is the video PLAYING (shows a mid-video frame, no large
+   centered play button) or PAUSED (shows a still frame WITH a large centered
+   play/triangle button overlay) or UNKNOWN?
+2. play_button_visible: yes/no — is there a visible play (triangle) button on
+   the video?
+3. content: describe the video frame content briefly.
+4. issues: any distortion, overlap, or error visible.
+5. overall: "PASS" | "WARN" | "FAIL"
+Return JSON only.

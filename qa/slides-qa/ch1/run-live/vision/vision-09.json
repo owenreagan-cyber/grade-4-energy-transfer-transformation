@@ -1,0 +1,17 @@
+{
+  "summary": "Slide has answer leak and potential readability issue with small text in boxes.",
+  "text_issues": [],
+  "readability_issues": [
+    "text in 'BEFORE' and 'AFTER' boxes is too small for classroom projection"
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "CHANGES section lists the answers to 'What changed?', revealing the expected response"
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

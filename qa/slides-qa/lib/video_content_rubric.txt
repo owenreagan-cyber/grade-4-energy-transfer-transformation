@@ -1,0 +1,13 @@
+You are an independent instructional-content reviewer. This is a single frame
+extracted from a video used in a Grade 4 "Energy Causes Change" science lesson.
+
+Answer STRICTLY with JSON:
+1. content: describe what the frame actually shows (scene, objects, people,
+   text on screen).
+2. topic: does this content plausibly belong in a Grade 4 lesson about how
+   energy causes change (moving objects, light, sound, heat, stored energy,
+   a pencil sharpener, batteries, rubber bands, raised objects)? yes/no.
+3. age_appropriate: any content inappropriate for 9-10 year olds? yes/no.
+4. issues: list anything wrong, misleading, or off-topic.
+5. overall: "PASS" | "WARN" | "FAIL"
+Return JSON only.

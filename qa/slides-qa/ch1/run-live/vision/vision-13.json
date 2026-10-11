@@ -1,0 +1,17 @@
+{
+  "summary": "The slide presents vocabulary definitions with clear text hierarchy but has small text that may affect readability and reveals answers students should predict.",
+  "text_issues": [],
+  "readability_issues": [
+    "The text 'Guided Notes \u00b7 Reader p. 1' and 'change \u00b7 different' appears too small for classroom projection."
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide defines 'energy' and 'change', revealing the answers students should be predicting."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

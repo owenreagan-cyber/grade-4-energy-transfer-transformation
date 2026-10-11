@@ -1,0 +1,15 @@
+{
+  "summary": "Slide is visually clear with no major issues but has one readability concern with the 'Big Question' font size.",
+  "text_issues": [],
+  "readability_issues": [
+    "'Big Question' text appears too small for projection in a classroom setting"
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

@@ -1,0 +1,17 @@
+{
+  "summary": "Slide contains a sample answer that may reveal expected student response, with minor readability concerns for sample text.",
+  "text_issues": [],
+  "readability_issues": [
+    "Sample text in 'SAMPLE' box is too small for projection"
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "Sample answer provided in 'SAMPLE' box reveals expected response"
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

@@ -1,0 +1,15 @@
+{
+  "summary": "Slide is visually clear with no major issues for Grade 4 science presentation.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [
+    "Title is centered, body text is left-aligned, image is centered\u2014alignment inconsistent"
+  ],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

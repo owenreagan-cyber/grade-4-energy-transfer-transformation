@@ -1,0 +1,15 @@
+{
+  "summary": "Slide reveals the correct answer and explanation, which is inappropriate for a review question where students should predict.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide shows 'Review 6 \u2014 answer' and highlights the correct option (C) with a gold border, plus provides the explanation 'A battery stores energy. It can cause a change later.'"
+  ],
+  "composition_issues": [],
+  "overall": "FAIL"
+}

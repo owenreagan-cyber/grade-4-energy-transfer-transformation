@@ -1,0 +1,91 @@
+{
+  "01-chapter-opener": {
+    "title": "Chapter opener candidates",
+    "items": [
+      {"label": "Codex slide-01-opener.png (1672x941)", "path": "assets/ch1/candidate-v2/slide-01-opener.png"},
+      {"label": "candidate-a-clean-chapter-opener-v2.jpg (1920x1080)", "path": "source-intake/2026-10-09-chapter-1/images/candidate-a-clean-chapter-opener-v2.jpg"},
+      {"label": "candidate-a-lamp-lit-chapter-opener-final.jpg (1920x1080)", "path": "source-intake/2026-10-09-chapter-1/images/candidate-a-lamp-lit-chapter-opener-final.jpg"},
+      {"label": "science-chapter-opener.jpg (REJECT: baked title)", "path": "source-intake/2026-10-09-chapter-1/images/science-chapter-opener.jpg"}
+    ]
+  },
+  "02-dark-bright": {
+    "title": "Dark-to-bright phenomenon",
+    "items": [
+      {"label": "Codex slide-04-dark-bright.png (1672x941)", "path": "assets/ch1/candidate-v2/slide-04-dark-bright.png"},
+      {"label": "ch1-dark-bright-01.jpg (1920x1080)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-dark-bright-01.jpg"}
+    ]
+  },
+  "03-pencil-before-after": {
+    "title": "Pencil before/after evidence",
+    "items": [
+      {"label": "Codex slide-09-pencil-before-after.png (1942x809)", "path": "assets/ch1/candidate-v2/slide-09-pencil-before-after.png"},
+      {"label": "ch1-pencil-evidence-01.jpg (1920x1234)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-pencil-evidence-01.jpg"},
+      {"label": "slide-06-pencil-before.png (REJECT: single close-up)", "path": "assets/ch1/candidate-v2/slide-06-pencil-before.png"}
+    ]
+  },
+  "04-energy-vocab": {
+    "title": "Energy vocabulary hero",
+    "items": [
+      {"label": "Codex slide-10-energy.png (1448x1086)", "path": "assets/ch1/candidate-v2/slide-10-energy.png"},
+      {"label": "ch1-voc-energy-01-refined.jpg (1918x1233)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-voc-energy-01-refined.jpg"},
+      {"label": "ch1-voc-energy-01.jpg (1918x1233)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-voc-energy-01.jpg"}
+    ]
+  },
+  "05-change-vocab": {
+    "title": "Change vocabulary hero",
+    "items": [
+      {"label": "Codex slide-09 (pencil pair, reuse)", "path": "assets/ch1/candidate-v2/slide-09-pencil-before-after.png"},
+      {"label": "ch1-voc-change-01-refined.jpg (1920x1234)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-voc-change-01-refined.jpg"}
+    ]
+  },
+  "06-five-forms": {
+    "title": "Five forms of energy",
+    "items": [
+      {"label": "Codex slide-17-five-forms.png strip (2172x724)", "path": "assets/ch1/candidate-v2/slide-17-five-forms.png"},
+      {"label": "ch1-forms-motion-01.jpg", "path": "source-intake/2026-10-09-chapter-1/images/ch1-forms-motion-01.jpg"},
+      {"label": "ch1-forms-motion-03.jpg", "path": "source-intake/2026-10-09-chapter-1/images/ch1-forms-motion-03.jpg"},
+      {"label": "ch1-forms-light-01.jpg", "path": "source-intake/2026-10-09-chapter-1/images/ch1-forms-light-01.jpg"},
+      {"label": "ch1-forms-heat-01.jpg", "path": "source-intake/2026-10-09-chapter-1/images/ch1-forms-heat-01.jpg"},
+      {"label": "ch1-forms-sound-02.jpg", "path": "source-intake/2026-10-09-chapter-1/images/ch1-forms-sound-02.jpg"},
+      {"label": "ch1-forms-electrical-01.jpg", "path": "source-intake/2026-10-09-chapter-1/images/ch1-forms-electrical-01.jpg"},
+      {"label": "panel-08-forms-of-energy.png (legacy)", "path": "assets/ch1/panel-08-forms-of-energy.png"}
+    ]
+  },
+  "07-stored-hero": {
+    "title": "Stored-energy hero (rubber band)",
+    "items": [
+      {"label": "Codex slide-22-stored-energy.png (1448x1086)", "path": "assets/ch1/candidate-v2/slide-22-stored-energy.png"},
+      {"label": "ch1-voc-stored-energy-01.jpg (1920x1234)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-voc-stored-energy-01.jpg"},
+      {"label": "panel-05-rubber-band.png (legacy)", "path": "assets/ch1/panel-05-rubber-band.png"}
+    ]
+  },
+  "08-stored-examples": {
+    "title": "Battery / rubber band / raised apple",
+    "items": [
+      {"label": "Codex slide-25-stored-examples.png strip (2172x724)", "path": "assets/ch1/candidate-v2/slide-25-stored-examples.png"},
+      {"label": "ch1-stored-battery-01.jpg (1920x1440)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-stored-battery-01.jpg"},
+      {"label": "ch1-stored-raised-apple-01.jpg (1440x1920)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-stored-raised-apple-01.jpg"},
+      {"label": "panel-11-three-stored.png (legacy)", "path": "assets/ch1/panel-11-three-stored.png"}
+    ]
+  },
+  "09-evidence": {
+    "title": "Evidence 3-panel",
+    "items": [
+      {"label": "Codex slide-28-evidence.png (1942x809)", "path": "assets/ch1/candidate-v2/slide-28-evidence.png"},
+      {"label": "panel-07-change-cards.png (legacy)", "path": "assets/ch1/panel-07-change-cards.png"}
+    ]
+  },
+  "10-bq-reflection": {
+    "title": "BQ reflection / chapter close",
+    "items": [
+      {"label": "Codex slide-33-reflection.png (1672x941)", "path": "assets/ch1/candidate-v2/slide-33-reflection.png"},
+      {"label": "Codex slide-45-close.png (1672x941)", "path": "assets/ch1/candidate-v2/slide-45-close.png"}
+    ]
+  },
+  "11-model-ece": {
+    "title": "ENERGY-CHANGE-EVIDENCE model reference",
+    "items": [
+      {"label": "ch1-model-ece-01.jpg (1920x1080)", "path": "source-intake/2026-10-09-chapter-1/images/ch1-model-ece-01.jpg"}
+    ]
+  }
+}

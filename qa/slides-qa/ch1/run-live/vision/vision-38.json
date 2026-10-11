@@ -1,0 +1,16 @@
+{
+  "summary": "Slide reveals the answer for a review question, which is inappropriate for a student-predicting activity.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide displays 'Review 1 \u2014 answer' and the correct answer with explanation ('Energy is the ability to cause change (Reader p. 1).')",
+    "The selected option (C) is highlighted, revealing the answer before students can predict it."
+  ],
+  "composition_issues": [],
+  "overall": "FAIL"
+}

@@ -1,0 +1,15 @@
+You are an independent device-QA reviewer. This is an iPad screenshot. Determine
+EXACTLY which app is in the foreground.
+
+1. app: Is the foreground app the NATIVE Google Slides iOS app, or a web
+   browser (Safari/Chrome)? How can you tell — look for a browser address bar,
+   tab bar, "Back/Forward/Reload" controls, or a URL field. Native Google
+   Slides app has a blue/gray app chrome and a grid/list of files, NOT a URL
+   bar.
+2. content: what is shown (a file list/home screen, an editor with slide
+   thumbnails, or a presentation slide)?
+3. presentation: is any presentation named "Energy Causes Change" (or similar)
+   visible? Quote any file titles you see.
+4. issues: list any error messages, permission dialogs, or sign-in prompts.
+5. overall: "PASS" | "WARN" | "FAIL"
+Return JSON only.

@@ -1,0 +1,15 @@
+{
+  "summary": "The slide reveals the correct answer, which is problematic for a student-prediction activity.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide shows 'Review 4 \u2013 answer' and the explanation 'The spinning is motion; the music is sound (Reader p. 3).' which reveals the correct answer before students can predict it."
+  ],
+  "composition_issues": [],
+  "overall": "FAIL"
+}

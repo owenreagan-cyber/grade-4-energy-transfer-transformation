@@ -1,0 +1,15 @@
+{
+  "summary": "Slide has answer leak but no other major issues.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The answer box at the bottom reveals the correct answer: 'The pencil becomes shorter and sharper \u2014 a change.'"
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

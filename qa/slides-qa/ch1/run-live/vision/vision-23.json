@@ -1,0 +1,15 @@
+{
+  "summary": "Slide contains no text/image issues but reveals a definition that may be an answer leak for students.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide provides the definition of 'stored energy' ('energy that has the ability to cause change at a later time'), which is likely an answer students should be predicting or writing themselves in a guided activity."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

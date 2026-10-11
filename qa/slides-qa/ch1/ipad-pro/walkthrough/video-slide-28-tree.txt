@@ -1,0 +1,59 @@
+Attributes: Application, 0x10bb92940, pid: 5556, label: 'Slides'
+Element subtree:
+ →Application, 0x10bb92940, pid: 5556, label: 'Slides'
+    Window (Main), 0x10bb92e40, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x10bb90780, {{0.0, 0.0}, {1376.0, 1032.0}}
+        Other, 0x10bb93840, {{0.0, 0.0}, {1376.0, 1032.0}}
+          Other, 0x10bb91b80, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x10bb91e00, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x10bb908c0, {{0.0, 0.0}, {1376.0, 1032.0}}
+        Other, 0x10bb921c0, {{0.0, 0.0}, {1376.0, 1032.0}}
+          Other, 0x10bb90a00, {{0.0, 0.0}, {1376.0, 1032.0}}
+            Other, 0x10bb90c80, {{0.0, 0.0}, {1376.0, 1032.0}}
+              Other, 0x10bb90b40, {{0.0, 0.0}, {1376.0, 1032.0}}
+                Button, 0x10bb93480, {{0.0, 0.0}, {1376.0, 92.0}}, label: 'Show controls'
+                Other, 0x10bb90140, {{0.0, 0.0}, {1376.0, 1032.0}}
+                  WebView, 0x10bb90000, {{0.0, 0.0}, {1376.0, 1032.0}}
+                    WebView, 0x10bb90280, {{0.0, 0.0}, {1376.0, 1032.0}}
+                      WebView, 0x10bb93340, {{0.0, 0.0}, {1376.0, 1032.0}}
+                        Other, 0x10bb92a80, {{0.0, 0.0}, {1376.0, 1032.0}}
+                          Other, 0x10bb92bc0, {{0.0, 0.0}, {1376.0, 1032.0}}
+                            Other, 0x10bb92d00, {{0.0, 0.0}, {1376.0, 1032.0}}
+                              Other, 0x10bb92800, {{0.0, 0.0}, {1376.0, 1032.0}}, label: 'Copy of 01-ch1-energy-causes-change-premium-hybrid-v6-embedded-media copy - Google Slides', Focused
+                                Other, 0x10bb91540, {{0.0, 0.0}, {1376.0, 1032.0}}, Focused
+                                  Other, 0x10bb91a40, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                    Other, 0x10bb92440, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                      Other, 0x10bb91cc0, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                        Other, 0x10bb92300, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                          Image, 0x10bb91900, {{0.0, 128.0}, {1376.0, 775.0}}, label: 'Slide 28 of 48:', Focused
+                                          Other, 0x10bb92080, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                            Image, 0x10bb930c0, {{64.0, 160.0}, {1219.0, 87.0}}, label: 'WATCH & THINK — Still Objects Can Have Energy', Focused
+                                            Image, 0x10bb93d40, {{64.0, 265.0}, {1291.0, 79.0}}, label: 'Follow along: How can something that is not moving still cause a change later?', Focused
+                                          Other, 0x10bb93200, {{540.0, 365.0}, {296.0, 525.0}}, label: 'Chapter 1 - Why Still Objects Secretly Have Energy.mp4', Focused
+                                            Other, 0x10bb92f80, {{541.0, 365.0}, {295.0, 524.0}}, Focused
+                                              Other, 0x10bb93c00, {{541.0, 365.0}, {295.0, 524.0}}, label: 'Chapter 1 - Why Still Objects Secretly Have Energy.mp4', Focused
+                                                Other, 0x10bb93980, {{541.0, 365.0}, {295.0, 524.0}}, label: 'YouTube Video Player', Focused
+                                                  Other, 0x116cb2580, {{541.0, 365.0}, {295.0, 10.0}}, Focused
+                                                  Other, 0x10bb11e00, {{541.0, 365.0}, {295.0, 10.0}}, Focused
+                                                  Other, 0x10bb13c00, {{541.0, 365.0}, {295.0, 524.0}}, Focused
+                                                    Other, 0x10bb13ac0, {{541.0, 365.0}, {295.0, 524.0}}, Focused
+                                                    Button, 0x10bb13e80, {{658.0, 597.0}, {61.0, 60.0}}, label: 'Play', Focused
+                                                  Other, 0x10bb13980, {{541.0, 365.0}, {295.0, 10.0}}, Focused
+                      Other, 0x10bb11f40, {{1343.0, 30.0}, {30.0, 972.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x10bb11900, {{1370.0, 1000.0}, {3.0, 7.0}}
+                      Other, 0x10bb13d40, {{30.0, 999.0}, {1316.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x10bb13700, {{1346.0, 1026.0}, {7.0, 3.0}}
+                      Other, 0x1089f3840, {{1343.0, 30.0}, {30.0, 972.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x1089f35c0, {{1370.0, 1000.0}, {3.0, 7.0}}
+                      Other, 0x1089f3700, {{30.0, 999.0}, {1316.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x1089f3ac0, {{1346.0, 1026.0}, {7.0, 3.0}}
+    Window, 0x1089f3d40, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x1089f3480, {{0.0, 0.0}, {1376.0, 1032.0}}
+        Other, 0x1089f3c00, {{0.0, 0.0}, {1376.0, 1032.0}}
+Path to element:
+ →Application, 0x10bb92940, pid: 5556, label: 'Slides'
+Query chain:
+ →Find: Application 'com.google.Slides'
+  Output: {
+    Application, 0x1089f3340, pid: 5556, label: 'Slides'
+  }

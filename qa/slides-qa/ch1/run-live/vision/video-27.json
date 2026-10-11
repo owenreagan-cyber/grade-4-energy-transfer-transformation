@@ -1,0 +1,12 @@
+{
+  "video_frame": "a blank placeholder with red X lines (no play icon or thumbnail)",
+  "aspect": "landscape, correct",
+  "media_overlap": "no",
+  "answer_leak": "no",
+  "caption": "WATCH & THINK \u2014 Stored Energy",
+  "issues": [
+    "Grammatical error in question: 'that is still cause' should be 'that is still able to cause' or 'that is still causing'",
+    "Video frame is a red X placeholder without a play icon or thumbnail"
+  ],
+  "overall": "WARN"
+}

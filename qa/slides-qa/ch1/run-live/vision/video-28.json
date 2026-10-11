@@ -1,0 +1,9 @@
+{
+  "video_frame": "a real thumbnail/poster image of video content (a rectangle with a red X); no visible text on the video frame",
+  "aspect": "portrait (taller than wide); correct",
+  "media_overlap": "no",
+  "answer_leak": "no",
+  "caption": "WATCH & THINK \u2014 Still Objects Can Have Energy",
+  "issues": [],
+  "overall": "PASS"
+}

@@ -1,0 +1,15 @@
+{
+  "summary": "Slide has minor answer leak but otherwise meets instructional standards.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide states \"light fills the room\" as the change, revealing the answer to \"What changed?\"."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

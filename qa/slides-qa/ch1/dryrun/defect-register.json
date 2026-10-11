@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-10T18:27:44Z",
+  "defects": [
+    {
+      "slide": 0,
+      "slideId": "deck",
+      "category": "SLIDE_COUNT",
+      "severity": "BLOCKING",
+      "evidence": [],
+      "expected": "48",
+      "actual": "45",
+      "proposedRepair": "reconcile slide count with canonical deck",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    }
+  ]
+}

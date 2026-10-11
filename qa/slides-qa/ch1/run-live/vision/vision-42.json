@@ -1,0 +1,15 @@
+{
+  "summary": "Slide reveals the answer to the question, which is problematic for a formative assessment activity.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide is labeled 'Review 3 \u2013 answer' and provides the explanation 'The rubber band stores energy; it changes when released.' which reveals the correct answer."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

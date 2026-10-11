@@ -1,0 +1,15 @@
+{
+  "summary": "Slide reviewed for Grade 4 science presentation with no critical issues found.",
+  "text_issues": [],
+  "readability_issues": [
+    "The body text 'Read Reader p. 2. Waves move. Sand shifts. Water makes sound. What are these changes a clue about?' may be too small for projection in a classroom setting."
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

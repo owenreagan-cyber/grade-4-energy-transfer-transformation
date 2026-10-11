@@ -1,0 +1,15 @@
+{
+  "summary": "Slide is visually clear with no major issues but has one readability concern with small instruction text.",
+  "text_issues": [],
+  "readability_issues": [
+    "Instruction text 'Write 1-2 quick ideas. No wrong answer yet.' is too small for classroom projection."
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

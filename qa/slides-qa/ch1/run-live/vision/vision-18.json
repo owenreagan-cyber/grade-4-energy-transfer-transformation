@@ -1,0 +1,13 @@
+{
+  "summary": "All elements on the slide appear visually consistent, readable, and scientifically appropriate for a Grade 4 energy lesson with no detectable issues.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

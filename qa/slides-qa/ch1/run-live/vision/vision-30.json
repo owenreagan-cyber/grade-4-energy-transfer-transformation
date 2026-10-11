@@ -1,0 +1,15 @@
+{
+  "summary": "Slide shows answer examples for student predictions, which is a science education issue.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The 'WHAT CHANGE COULD HAPPEN LATER?' section displays specific answers (e.g., 'the flashlight lights up', 'it snaps and makes a sound', 'it falls down'), revealing responses students should predict independently."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

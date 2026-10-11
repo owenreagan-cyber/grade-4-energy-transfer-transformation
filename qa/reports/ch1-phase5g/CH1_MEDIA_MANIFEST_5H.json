@@ -1,0 +1,192 @@
+[
+ {
+  "name": "Energy_Causes_Change__The_Electric_Pencil_Sharpener.mp4",
+  "sha256": "ec61b59dd1aa844b0cf558b9d7f623cbbc4957d84ba05b80f375bcf32f41b671",
+  "bytes": 19342466,
+  "duration_s": 185.3,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Energy_Causes_Change__The_Energy_Detective.mp4",
+  "sha256": "21a290001b8b2a71c57ecc1f528186eff9c153565e5f2baeb69cab0dca5d14fe",
+  "bytes": 29076171,
+  "duration_s": 228.6,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Energy_Causes_Change.mp4",
+  "sha256": "514b434431ee34185241d17b1eceb879f4b6518a0fafcf6bc359ba8ce2df2a95",
+  "bytes": 36562945,
+  "duration_s": 403.3,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Energy_Detective.mp4",
+  "sha256": "45fb876643b64267fdb83ded20629889ab1e59e1ccd03a108ab147235a6ed910",
+  "bytes": 26989192,
+  "duration_s": 347.9,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Energy_Detectives.mp4",
+  "sha256": "e341dec3242ed232617f9b7b6c0ed5e3cd62db7dfc34b24b7f92eeb9bac807ce",
+  "bytes": 40516861,
+  "duration_s": 437.4,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Energy_Detectives_Briefing.mp4",
+  "sha256": "a018652d4262fd37d520dde8768a85fc5a19b27b858371ccee29906c00b4d028",
+  "bytes": 45073636,
+  "duration_s": 472.6,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "The_Energy_Detective-4.mp4",
+  "sha256": "1f0ab58a9b27f4e927a621253bc5db4add7288d992c7667ca119865ac717fde1",
+  "bytes": 31884045,
+  "duration_s": 355.0,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "The_Energy_Detective-3.mp4",
+  "sha256": "2bc2e5f21c9552ab1023ae1311d3730c33e5a6a41cd8d4689e4c1531c50c873b",
+  "bytes": 31581582,
+  "duration_s": 332.1,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "The_Energy_Detective-2.mp4",
+  "sha256": "647f10389edcfcfc5ed6e5d57c44984970ed0c39c64c4d7c1f2d4363a9724a37",
+  "bytes": 29282394,
+  "duration_s": 406.7,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "The_Energy_Detective.mp4",
+  "sha256": "4396afabfe42127b4e3fd83298ad38188a2857f8582e38d5b8216e3d52309403",
+  "bytes": 33677981,
+  "duration_s": 404.8,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Chapter_1_Review.mp4",
+  "sha256": "501b8e7e3450e9d664d827fd0c73bfc5b860044e21ee32212fcb22cb684dc8ef",
+  "bytes": 35702141,
+  "duration_s": 436.9,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Chapter_1_Science_Notebook.mp4",
+  "sha256": "90266f21fc1ab475713355c3413a82535521546913eca9a9258b5d4daeeac65a",
+  "bytes": 44257292,
+  "duration_s": 505.9,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "The_Invisible_Boss_of_Change.mp4",
+  "sha256": "9636469cbd32fcf174acb502c58bf7d568bcaadaa816b01e16e4127dc9fc4b91",
+  "bytes": 23019061,
+  "duration_s": 170.3,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "The_Unseen_Mover.mp4",
+  "sha256": "8e6a056b66600c4670a2a5fe9b3f458bac2f4c85e2165992799283ef73b2e583",
+  "bytes": 25880128,
+  "duration_s": 326.8,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "How_Change_Proves_Energy_Exists.mp4",
+  "sha256": "8d0880d707660f6a27c78a30444c8c3f8da54f07513da0694f1f87223183a904",
+  "bytes": 9081636,
+  "duration_s": 83.4,
+  "res": "720x1280",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "How_Physical_Change_Proves_Energy_Exists.mp4",
+  "sha256": "0d00e203ffa21846634410926296aba4cb1054644040bee4630bd83074c7292d",
+  "bytes": 10914391,
+  "duration_s": 78.8,
+  "res": "720x1280",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "How_Scientists_Spot_Invisible_Energy.mp4",
+  "sha256": "3b47afea3aaee36aba05dd276cec9c211242924c789be067bc518f43bccba914",
+  "bytes": 6183642,
+  "duration_s": 76.0,
+  "res": "720x1280",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "REJECTED"
+ },
+ {
+  "name": "Stored_Energy.mp4",
+  "sha256": "38381321a79e16ae602d1b9f16c5bab7975aea75d6560926a727052a9e78e674",
+  "bytes": 21733498,
+  "duration_s": 276.7,
+  "res": "1280x720",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "APPROVED_EMBEDDED"
+ },
+ {
+  "name": "Why_Still_Objects_Secretly_Have_Energy.mp4",
+  "sha256": "915d7389526bc6195d8aa89f33253a076dc9d467297864b39c1f78f23bc66821",
+  "bytes": 10426210,
+  "duration_s": 75.9,
+  "res": "720x1280",
+  "vcodec": "h264",
+  "acodec": "aac",
+  "verdict": "APPROVED_ALTERNATE"
+ }
+]

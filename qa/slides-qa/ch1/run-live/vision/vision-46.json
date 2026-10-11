@@ -1,0 +1,15 @@
+{
+  "summary": "Slide has answer leak but no other major issues.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide is labeled 'Review 5 \u2014 answer' and includes a box with the correct answer ('We see a change \u2014 like movement \u2014 as evidence.'), which reveals the answer students should be predicting."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

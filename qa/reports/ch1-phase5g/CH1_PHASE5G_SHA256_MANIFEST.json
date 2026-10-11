@@ -1,0 +1,26 @@
+{
+ "01-ch1-energy-causes-change-premium-hybrid-v5-media.pptx": {
+  "bytes": 16742372,
+  "sha256": "1f85244f69ba8cb5df1a2fff935b1a9f7da6d635745485c7fc13f7184ae730b0"
+ },
+ "01-ch1-energy-causes-change-premium-hybrid-v5-media.pdf": {
+  "bytes": 2828645,
+  "sha256": "6c54d7d2d7c2f12c8dfe11367a488d0b64989bf877d15119a400f62b4636f399"
+ },
+ "contact-sheet.png": {
+  "bytes": 1729581,
+  "sha256": "6fc516a021e3909c09239afe2e5f81d6357924be3309b5b6dd9b93585e0792e2"
+ },
+ "media/Stored_Energy.mp4": {
+  "bytes": 21733498,
+  "sha256": "38381321a79e16ae602d1b9f16c5bab7975aea75d6560926a727052a9e78e674"
+ },
+ "media/How_Scientists_Spot_Invisible_Energy.mp4": {
+  "bytes": 6183642,
+  "sha256": "3b47afea3aaee36aba05dd276cec9c211242924c789be067bc518f43bccba914"
+ },
+ "media/Why_Still_Objects_Secretly_Have_Energy.mp4": {
+  "bytes": 10426210,
+  "sha256": "915d7389526bc6195d8aa89f33253a076dc9d467297864b39c1f78f23bc66821"
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "summary": "Slide has no text clipping, image issues, or scientific inaccuracies but contains small text that may affect readability.",
+  "text_issues": [],
+  "readability_issues": [
+    "The text 'Look closely. What do you see? What do you hear?' appears smaller than the main content and may be hard to read from the back of a classroom."
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}
