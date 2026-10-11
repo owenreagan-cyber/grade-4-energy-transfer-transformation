@@ -19,6 +19,7 @@
 - No advanced terminology (mechanical energy, radiant, compression wave, etc.).
 - No glowing-energy / energy-as-visible-light misrepresentation.
 - Unstaged supplemental media is **never** a build dependency.
+- **External video (YouTube + trusted education orgs):** see `EXTERNAL_VIDEO_SOURCING_STANDARD.md` for the flexible duration tiers (15–60 s / 1–2 min / 3–5 min / >5 min justified), the media registry fields, the Google Slides media-slide template (intro + Find Out/Follow Along + embed + teacher note), and the DISCOVERED→IMPLEMENTED approval vocabulary.
 
 ## Virtual demo (optional, P3)
 - Photorealistic clip; correct apparatus (e.g., electric sharpener, not hand).

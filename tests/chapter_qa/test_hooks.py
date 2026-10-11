@@ -231,6 +231,58 @@ class GitProtectionTests(unittest.TestCase):
             result = decide_git(command)
             self.assertEqual(result["decision"], "ALLOW", command)
 
+    def test_read_only_remote_branch_tag_inspection_is_allowed(self):
+        for command in (
+            "git remote",
+            "git remote -v",
+            "git remote get-url origin",
+            "git remote show origin",
+            "git branch",
+            "git branch -a",
+            "git branch --list",
+            "git branch -v",
+            "git branch --show-current",
+            "git tag",
+            "git tag -l",
+            "git tag --list",
+            "git ls-remote origin",
+        ):
+            self.assertEqual(decide_git(command)["decision"], "ALLOW", command)
+
+    def test_non_destructive_branch_creation_and_switch_is_allowed(self):
+        for command in (
+            "git branch recovery/science-consolidation-2026-10",
+            "git switch recovery/science-consolidation-2026-10",
+            "git switch main",
+        ):
+            self.assertEqual(decide_git(command)["decision"], "ALLOW", command)
+
+    def test_mutating_remote_branch_tag_is_denied(self):
+        for command in (
+            "git remote add origin https://example.invalid/repo.git",
+            "git remote set-url origin https://example.invalid/repo.git",
+            "git remote remove origin",
+            "git remote rename origin upstream",
+            "git remote prune origin",
+            "git branch old-branch HEAD~2",
+            "git branch --format=%(refname)",
+            "git branch -d old-branch",
+            "git branch -D old-branch",
+            "git branch --delete old-branch",
+            "git branch -m new-name",
+            "git branch -c copy-name",
+            "git switch -c new-branch",
+            "git switch --detach",
+            "git switch -f existing",
+            "git switch --discard-changes",
+            "git checkout -b new-branch",
+            "git checkout -- file.txt",
+            "git tag v1.0",
+            "git tag -d v1.0",
+            "git tag --delete v1.0",
+        ):
+            self.assertEqual(decide_git(command)["decision"], "DENY", command)
+
     def test_unrelated_command_is_allowed(self):
         self.assertEqual(decide_git("python -m unittest tests/chapter_qa/test_hooks.py")["decision"], "ALLOW")
         self.assertEqual(decide_git("echo git reset --hard")["decision"], "ALLOW")

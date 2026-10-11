@@ -10,6 +10,8 @@
 - **Extension** — enrichment beyond core
 - **Absent-student recovery** — replay the investigation
 
+> **External video (YouTube + trusted education orgs):** sourcing, duration tiers, registry fields, Google Slides media-slide template, and approval vocabulary now live in `docs/standards/EXTERNAL_VIDEO_SOURCING_STANDARD.md`. Chapter 2 shortlist + integration plan: `docs/chapter-02/CH2_MEDIA_SHORTLIST_AND_INTEGRATION_PLAN.md`.
+
 ## Custom explainer target
 - **4–7 minutes**
 

@@ -5,6 +5,7 @@
 > Phase 5 — supporting-resource ecosystem complete. **Phase 6.1 / 6.1B (corrective maintenance — completed; v1.1 FROZEN 2026-10-05, external decision APPROVE PROPAGATION)** updated pacing (incl. the Friday fallback: quiz handed out by minute 12), notes (N1 model's last box open; N4 = Reader pp. 1–5), slides, recovery page, assessments, keys, Playbook and the release package; v1.0 certification history is preserved in `CH1_GOLD_STANDARD_FREEZE.md`.
 > **Timing authority:** `docs/chapter-01/CH1_PACING_PLAN.md` (Mon · Tue · Fri). No other timing system is valid.
 > **Release package:** `production/releases/chapter-01/` is regenerated from these canonical files and verified by `tools/qa_release_parity.py`.
+> **Registered approved intake (2026-10-10):** owner-approved `CH1_Guided_Notes_Student_v2.pdf` + `CH1_Guided_Notes_Teacher_Key_v2.pdf` are registered separately at `source-intake/2026-10-10-chapter-1-approved-notes/` (see `REGISTRATION.md`). They are **not** canonical and do **not** replace the frozen v1.1 Guided Notes below; promotion requires the Chapter 1 freeze-reopening workflow.
 
 ## A. Core Required
 
