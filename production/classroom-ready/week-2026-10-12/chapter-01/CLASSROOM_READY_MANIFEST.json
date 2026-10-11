@@ -1,0 +1,126 @@
+{
+  "release": "Chapter 1 Classroom Ready",
+  "week": "2026-10-12 through 2026-10-16",
+  "goldStandardVersion": "1.1",
+  "goldStandardStatus": "UNCHANGED",
+  "frozenSourceDirectory": "production/releases/chapter-01",
+  "files": [
+    {
+      "path": "01_TEACHER/Chapter_1_Teacher_Packet_Classroom_Ready.docx",
+      "bytes": 48235,
+      "sha256": "2270092f97e416e1bfd94fd45050e1f4b2cd06f62cd8127aa72709dc0a52e8ff"
+    },
+    {
+      "path": "01_TEACHER/Chapter_1_Teacher_Packet_Classroom_Ready.pdf",
+      "bytes": 406946,
+      "sha256": "2e496003b9d410afaa647bf8068a0764baff90b89ff05f5c3d85fbb2e355383b",
+      "pages": 12
+    },
+    {
+      "path": "01_TEACHER/Materials_and_Prep.docx",
+      "bytes": 38885,
+      "sha256": "76396da65f6e4e919fb85242e8c23399021fb4d90e09258807ddcedd0babf810"
+    },
+    {
+      "path": "01_TEACHER/Materials_and_Prep.pdf",
+      "bytes": 103962,
+      "sha256": "aa31e9272aa2f122eeb2d983a2fc7693eef4436ea54729b18134aa93d1714380",
+      "pages": 1
+    },
+    {
+      "path": "02_STUDENT_PRINT/Chapter_1_Check.pdf",
+      "bytes": 68319,
+      "sha256": "dc4a51df57c37e4bbccc13c10e6ad2a19fb8b48214b7d8d80ba864159b46d6d3",
+      "pages": 2
+    },
+    {
+      "path": "02_STUDENT_PRINT/Chapter_1_Guided_Notes.pdf",
+      "bytes": 83638,
+      "sha256": "8fc5e40063f31f5fd3639fb73ae8e93c8e974c2024ea8f19bb3a46762f1c4702",
+      "pages": 3
+    },
+    {
+      "path": "02_STUDENT_PRINT/Chapter_1_Practice.pdf",
+      "bytes": 65748,
+      "sha256": "86fa932222276183ce0eb75dee0061aab171835c1d7f207219b4401f2f8c993f",
+      "pages": 2
+    },
+    {
+      "path": "02_STUDENT_PRINT/Chapter_1_Student_Print_Packet.pdf",
+      "bytes": 131767,
+      "sha256": "7c2bcc1c52a95715021760ead0159a1a8cffe03048faf48a8e6e556df81c8321",
+      "pages": 7
+    },
+    {
+      "path": "03_SLIDES/Chapter_1_Slides.pdf",
+      "bytes": 817429,
+      "sha256": "4ce8ce22a6e664f106a33efb4c585b601d5697cc6acaa56c45bb46db02355f34",
+      "pages": 45
+    },
+    {
+      "path": "03_SLIDES/Chapter_1_Slides.pptx",
+      "bytes": 171502,
+      "sha256": "5278f96c7dfab4f4b6809a3677f714c566c212e7c74af3d03f502abb77f022f7"
+    },
+    {
+      "path": "04_EXTENSIONS/Energy_Detectives_Optional.pdf",
+      "bytes": 60622,
+      "sha256": "3e1239c44ae87f0e16151bd20e41b2fe6ca30b7b52ba5c4f14630075322cd437",
+      "pages": 2
+    },
+    {
+      "path": "05_OPTIONAL_MEDIA/MEDIA_GUIDE.md",
+      "bytes": 1161,
+      "sha256": "3c4fade8d8efc1a381e719e631c380c67d568c3b61b6415d5b58c839efe7d7f4"
+    },
+    {
+      "path": "06_KEYS/Check_Key.pdf",
+      "bytes": 4413,
+      "sha256": "56bd50052e707f48951bb4f4d34e029e829e6f313837e00e9281dfb6512a3594",
+      "pages": 2
+    },
+    {
+      "path": "06_KEYS/Energy_Detectives_Optional_Key.pdf",
+      "bytes": 3038,
+      "sha256": "63ba99a0713b86e54b0b1155e0c7ecfbeeb958cfa98d83063ba6dcc76b64c66e",
+      "pages": 1
+    },
+    {
+      "path": "06_KEYS/Guided_Notes_Key.pdf",
+      "bytes": 87048,
+      "sha256": "909fbbbd2d76cd4cab90ec91fdd9e8f92750771324553f4f82e32d5bc63ca462",
+      "pages": 3
+    },
+    {
+      "path": "06_KEYS/Practice_Key.pdf",
+      "bytes": 4428,
+      "sha256": "8dbc243310bd841495cb6f4726bee4d6dcf5ff7db0f09d06a92dbd9e32f9ef41",
+      "pages": 2
+    },
+    {
+      "path": "CHAPTER_1_CLASSROOM_READY_RELEASE_REPORT.md",
+      "bytes": 6600,
+      "sha256": "9f1614aaa7a888bd61287aebbba7d0f66f551b01d47bbdf45992d4488e807b30"
+    },
+    {
+      "path": "CLASSROOM_READY_IPAD_SPOT_CHECK.md",
+      "bytes": 1272,
+      "sha256": "d6eef18d53f89f7bb222b7c587ee4935c8a0238d21c877f259cdd4ef8d7d2a60"
+    },
+    {
+      "path": "CLASSROOM_READY_VISUAL_QA.md",
+      "bytes": 1867,
+      "sha256": "4407e4f293e24d683a6079f215c1f30b6f5cfaaeb0d4f7713f834338427b974e"
+    },
+    {
+      "path": "IPAD_PREVIEW_MANIFEST.json",
+      "bytes": 2903,
+      "sha256": "374211e069280ef1532da281f8fb2377282abffb50679643b9f6223d90e913da"
+    },
+    {
+      "path": "README_PRINT_FIRST.md",
+      "bytes": 1509,
+      "sha256": "8cfdb355c2db6989cb0ab91434b12e258410ac210af84f1a167458e6d3653742"
+    }
+  ]
+}
