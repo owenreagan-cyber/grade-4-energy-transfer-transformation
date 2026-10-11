@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Chapter 1 Worksheet — Energy Causes Change</title>
+<style>
+  @page { margin: 18mm; }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #14181d;
+    font-size: 11.5pt;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  h1 { font-size: 20pt; margin: 0 0 1.5mm 0; letter-spacing: 0.2px; }
+  h2 {
+    font-size: 13pt;
+    margin: 0 0 2.5mm 0;
+    padding: 1.6mm 0 1.6mm 3mm;
+    border-left: 4px solid #14181d;
+    background: #eef1f4;
+    page-break-after: avoid;
+  }
+
+  .subtitle { font-size: 11pt; color: #495057; margin: 0; }
+
+  /* ---------- header ---------- */
+  .doc-header {
+    border: 2px solid #14181d;
+    padding: 3.5mm 5mm;
+    margin-bottom: 4mm;
+    page-break-inside: avoid;
+  }
+  .doc-header .meta { font-size: 10.5pt; color: #495057; margin: 1.2mm 0 0 0; }
+
+  .namebar {
+    display: flex;
+    gap: 6mm;
+    margin-top: 3.5mm;
+    font-size: 10.5pt;
+  }
+  .namebar .field { display: flex; align-items: flex-end; flex: 1; }
+  .namebar .field.short { flex: 0 0 38mm; }
+  .namebar .label { font-weight: 700; white-space: nowrap; margin-right: 2mm; }
+  .namebar .blank { flex: 1; border-bottom: 1px solid #14181d; height: 6mm; }
+
+  /* ---------- directions / bands ---------- */
+  .directions {
+    border: 1px solid #6b747d;
+    background: #f6f7f9;
+    padding: 2.6mm 4mm;
+    margin-bottom: 4mm;
+    page-break-inside: avoid;
+  }
+  .directions .tag {
+    display: inline-block;
+    font-size: 8.5pt;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    border: 1.5px solid #14181d;
+    border-radius: 999px;
+    padding: 0.4mm 2.6mm;
+    margin-right: 2.5mm;
+    vertical-align: middle;
+  }
+  .directions ul { margin: 1.6mm 0 0 0; padding-left: 5mm; }
+  .directions li { margin-bottom: 0.6mm; }
+
+  .wordbank {
+    border: 1px solid #6b747d;
+    border-left: 4px solid #6b747d;
+    padding: 2.4mm 4mm;
+    margin-bottom: 4mm;
+    page-break-inside: avoid;
+  }
+  .wordbank .wb-title { font-weight: 800; font-size: 10pt; letter-spacing: 0.6px; margin-bottom: 1.4mm; }
+  .wordbank .terms { display: flex; flex-wrap: wrap; gap: 2.4mm 5mm; font-size: 11pt; }
+  .wordbank .term { border: 1px solid #14181d; border-radius: 999px; padding: 0.7mm 3mm; }
+
+  /* ---------- sections ---------- */
+  section {
+    margin-bottom: 7mm;
+    /* sections may flow to pack pages tightly; headings stay with their
+       content (h2 break-after: avoid) and tables/diagrams stay atomic. */
+  }
+
+  .item-note { font-size: 10pt; color: #495057; margin: 0 0 2.5mm 0; }
+  .stem { margin: 0 0 3mm 0; font-weight: 700; }
+
+  /* ---------- tables ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #14181d;
+    padding: 2mm 2.5mm;
+    text-align: left;
+    vertical-align: top;
+  }
+  thead th {
+    background: #d8dde2;
+    font-size: 10pt;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+  tbody td { height: 12.8mm; }
+  tbody tr { page-break-inside: avoid; }
+  td.scenario { width: 40%; font-weight: 600; }
+  td.pick { width: 22%; text-align: center; font-weight: 700; font-size: 10pt; line-height: 1.6; }
+  .idcol { width: 8mm; text-align: center; font-weight: 700; background: #f2f4f6; }
+
+  /* ---------- writing lines ---------- */
+  .lines { margin-top: 1mm; }
+  .lines .line { border-bottom: 1px solid #9aa3ad; height: 9.5mm; }
+  .lines.tight .line { height: 8.5mm; }
+
+  .framed-line { margin-bottom: 1.5mm; page-break-inside: avoid; }
+  .framed-line .frame { font-weight: 600; }
+
+  /* ---------- diagram boxes ---------- */
+  .diagram-box {
+    border: 2px dashed #5b6672;
+    border-radius: 4px;
+    height: 50mm;
+    margin: 2mm 0;
+    page-break-inside: avoid;
+    position: relative;
+  }
+  .diagram-box .hint {
+    position: absolute;
+    top: 2mm;
+    left: 3mm;
+    font-size: 9pt;
+    color: #7a828b;
+  }
+  .split { display: flex; gap: 5mm; page-break-inside: avoid; }
+  .split .half { flex: 1; }
+  .half .cap { text-align: center; font-weight: 700; font-size: 10pt; margin-bottom: 1.5mm; }
+
+  /* ---------- model chain ---------- */
+  .chain { display: flex; align-items: center; gap: 3mm; margin: 3mm 0; page-break-inside: avoid; }
+  .chain .box {
+    flex: 1;
+    border: 2px solid #14181d;
+    border-radius: 4px;
+    min-height: 23mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2mm;
+    text-align: center;
+  }
+  .chain .box .lbl { font-size: 9pt; letter-spacing: 0.8px; color: #495057; margin-bottom: 1mm; }
+  .chain .box .fill { font-size: 11pt; font-weight: 700; height: 8mm; width: 100%; border-bottom: 1px solid #9aa3ad; }
+  .chain .box.given { background: #eef1f4; }
+  .chain .arrow { font-size: 18pt; font-weight: 700; }
+
+  /* ---------- footer ---------- */
+  .provenance {
+    border-top: 1px solid #9aa3ad;
+    margin-top: 4mm;
+    padding-top: 2mm;
+    font-size: 8pt;
+    color: #6b747d;
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+
+<div class="doc-header">
+  <h1>Chapter 1 Worksheet — Energy Causes Change</h1>
+  <p class="subtitle">Big Question: Where can we observe evidence of energy causing change?</p>
+  <p class="meta">Grade 4 Science &nbsp;·&nbsp; CKSci Reader Ch. 1, pp. 1–5</p>
+  <div class="namebar">
+    <div class="field"><span class="label">Name:</span><span class="blank"></span></div>
+    <div class="field short"><span class="label">Date:</span><span class="blank"></span></div>
+  </div>
+</div>
+
+<div class="directions">
+  <span class="tag">DIRECTIONS</span>
+  <strong>We cannot see energy.</strong> We look for a <strong>change</strong>. A change is our <strong>evidence</strong>.
+  <ul>
+    <li>Read each one. Write your answer in the space or on the line.</li>
+    <li>Use the Word Bank if it helps. This page is practice — it is not scored.</li>
+  </ul>
+</div>
+
+<div class="wordbank">
+  <div class="wb-title">WORD BANK</div>
+  <div class="terms">
+    <span class="term">energy</span>
+    <span class="term">change</span>
+    <span class="term">evidence</span>
+    <span class="term">stored energy</span>
+    <span class="term">motion</span>
+    <span class="term">sound</span>
+    <span class="term">light</span>
+    <span class="term">heat</span>
+    <span class="term">electrical</span>
+  </div>
+</div>
+
+<section>
+  <h2>Part A · What changed?</h2>
+  <p class="item-note">Read each one. Write the <strong>change</strong> you would observe. Then name a <strong>form of energy</strong> that fits.</p>
+  <table>
+    <thead>
+      <tr>
+        <th class="idcol">#</th>
+        <th>What happened?</th>
+        <th>What changed? (write the change)</th>
+        <th>Form of energy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="idcol">1</td>
+        <td class="scenario">A light switch is flipped.</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">2</td>
+        <td class="scenario">A toy car is pushed.</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">3</td>
+        <td class="scenario">A bell is rung.</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">4</td>
+        <td class="scenario">An ice cube sits on a warm hand.</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">5</td>
+        <td class="scenario">A rubber band is stretched, then let go.</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Part B · Evidence, or not enough evidence?</h2>
+  <p class="item-note">Circle <strong>EVIDENCE</strong> if we saw a change. Circle <strong>NOT ENOUGH</strong> if no change was seen. Then tell <em>because</em>.</p>
+  <table>
+    <thead>
+      <tr>
+        <th class="idcol">#</th>
+        <th>Observation</th>
+        <th class="pick">Circle</th>
+        <th>Because…</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="idcol">1</td>
+        <td class="scenario">The fan blades started spinning when we plugged it in.</td>
+        <td class="pick">EVIDENCE<br>NOT ENOUGH</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">2</td>
+        <td class="scenario">The battery looks shiny.</td>
+        <td class="pick">EVIDENCE<br>NOT ENOUGH</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">3</td>
+        <td class="scenario">The room got brighter when the light came on.</td>
+        <td class="pick">EVIDENCE<br>NOT ENOUGH</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">4</td>
+        <td class="scenario">I think the motor is strong.</td>
+        <td class="pick">EVIDENCE<br>NOT ENOUGH</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Part C · Stored energy</h2>
+  <p class="item-note">Stored energy can cause a change <strong>later</strong>. For each one, circle <strong>YES</strong> or <strong>NO</strong>. Then say if the change is <strong>later</strong> or <strong>now</strong>.</p>
+  <table>
+    <thead>
+      <tr>
+        <th class="idcol">#</th>
+        <th>Example</th>
+        <th class="pick">Stored energy?</th>
+        <th>Change is later — or now?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="idcol">1</td>
+        <td class="scenario">A battery in a flashlight that is switched off.</td>
+        <td class="pick">YES / NO</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">2</td>
+        <td class="scenario">An apple held above the ground.</td>
+        <td class="pick">YES / NO</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">3</td>
+        <td class="scenario">A stretched rubber band.</td>
+        <td class="pick">YES / NO</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="idcol">4</td>
+        <td class="scenario">A toy car rolling across the floor.</td>
+        <td class="pick">YES / NO</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Part D · The model</h2>
+  <p class="stem">Fill in the missing box.</p>
+  <div class="chain">
+    <div class="box given"><span class="lbl">FIRST</span><span class="fill">ENERGY</span></div>
+    <div class="arrow">&rarr;</div>
+    <div class="box"><span class="lbl">THEN</span><span class="fill"></span></div>
+    <div class="arrow">&rarr;</div>
+    <div class="box given"><span class="lbl">THEN</span><span class="fill">EVIDENCE</span></div>
+  </div>
+
+  <p class="stem" style="margin-top:5mm;">Now the stored-energy chain. Fill in both empty boxes.</p>
+  <div class="chain">
+    <div class="box given"><span class="lbl">FIRST</span><span class="fill">STORED ENERGY</span></div>
+    <div class="arrow">&rarr;</div>
+    <div class="box"><span class="lbl">THEN</span><span class="fill"></span></div>
+    <div class="arrow">&rarr;</div>
+    <div class="box"><span class="lbl">THEN</span><span class="fill"></span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Part E · Draw the change</h2>
+  <p class="item-note">Think of one change you saw this week. Draw it <strong>before</strong> and <strong>after</strong>. Label your drawings.</p>
+  <div class="split">
+    <div class="half">
+      <p class="cap">BEFORE</p>
+      <div class="diagram-box"><span class="hint">label your picture</span></div>
+    </div>
+    <div class="half">
+      <p class="cap">AFTER</p>
+      <div class="diagram-box"><span class="hint">label your picture</span></div>
+    </div>
+  </div>
+  <p class="stem" style="margin-top:3mm;">What changed?</p>
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Part F · Explain it</h2>
+  <p class="item-note">Pick <strong>one</strong> change from Part A or Part E. Use the frames to explain how we know energy was at work.</p>
+
+  <p class="framed-line"><span class="frame">The change I picked is…</span></p>
+  <div class="lines tight"><div class="line"></div></div>
+
+  <p class="framed-line" style="margin-top:3mm;"><span class="frame">What changed was…</span></p>
+  <div class="lines tight"><div class="line"></div><div class="line"></div></div>
+
+  <p class="framed-line" style="margin-top:3mm;"><span class="frame">We know energy was at work because the change is…</span></p>
+  <div class="lines tight"><div class="line"></div><div class="line"></div></div>
+
+  <p class="item-note" style="margin-top:4mm;"><strong>Sentence helper:</strong> "Energy cannot be seen. But I saw ____ change, and a change is ____ of energy."</p>
+</section>
+
+<div class="provenance">
+  SOURCE: CKSci Reader Ch. 1 · TG Lessons 1–2 &nbsp;|&nbsp; ADAPTED: everyday scenarios &nbsp;|&nbsp; CUSTOM: word bank, scaffolds, frames
+  &nbsp;|&nbsp; PRIORITY: supplementary practice (ungraded) · not the canonical Chapter 1 practice page.
+</div>
+
+</body>
+</html>
