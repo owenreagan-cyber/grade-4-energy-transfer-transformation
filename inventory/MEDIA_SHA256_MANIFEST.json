@@ -1,0 +1,308 @@
+{
+  "description": "SHA-256 manifest of all standalone media binaries (video/audio). These are EXCLUDED from ordinary Git and require external storage.",
+  "file_count": 75,
+  "files": {
+    "assets/supplemental/media/chapter-01/Chapter_1_Review.mp4": {
+      "sha256": "501b8e7e3450e9d664d827fd0c73bfc5b860044e21ee32212fcb22cb684dc8ef",
+      "size_bytes": 35702141
+    },
+    "assets/supplemental/media/chapter-01/Chapter_1_Science_Notebook.mp4": {
+      "sha256": "90266f21fc1ab475713355c3413a82535521546913eca9a9258b5d4daeeac65a",
+      "size_bytes": 44257292
+    },
+    "assets/supplemental/media/chapter-01/Energy_Detectives_Briefing.mp4": {
+      "sha256": "a018652d4262fd37d520dde8768a85fc5a19b27b858371ccee29906c00b4d028",
+      "size_bytes": 45073636
+    },
+    "assets/supplemental/media/chapter-01/How_Scientists_Spot_Invisible_Energy.mp4": {
+      "sha256": "3b47afea3aaee36aba05dd276cec9c211242924c789be067bc518f43bccba914",
+      "size_bytes": 6183642
+    },
+    "assets/supplemental/media/chapter-01/Stored_Energy.mp4": {
+      "sha256": "38381321a79e16ae602d1b9f16c5bab7975aea75d6560926a727052a9e78e674",
+      "size_bytes": 21733498
+    },
+    "assets/supplemental/media/chapter-01/Teacher_sharpening_pencil_20261003180428.mp4": {
+      "sha256": "1882a1b44acc5fc64baf1b44e21e5eff67a756ffc07a8b1e40b75bc4421115df",
+      "size_bytes": 1637911
+    },
+    "assets/supplemental/media/chapter-01/The_Energy_Detective.mp4": {
+      "sha256": "4396afabfe42127b4e3fd83298ad38188a2857f8582e38d5b8216e3d52309403",
+      "size_bytes": 33677981
+    },
+    "assets/supplemental/media/chapter-01/The_Invisible_Boss_of_Change.mp4": {
+      "sha256": "9636469cbd32fcf174acb502c58bf7d568bcaadaa816b01e16e4127dc9fc4b91",
+      "size_bytes": 23019061
+    },
+    "assets/supplemental/media/chapter-01/Why_Still_Objects_Secretly_Have_Energy.mp4": {
+      "sha256": "915d7389526bc6195d8aa89f33253a076dc9d467297864b39c1f78f23bc66821",
+      "size_bytes": 10426210
+    },
+    "assets/supplemental/media/chapter-02/Ch_2__Motion_Energy_in_Action.mp4": {
+      "sha256": "352531cf0f018eb6c03476a0216334ca4b9137d45f5cfedcee3224a679a5d98b",
+      "size_bytes": 29369029
+    },
+    "assets/supplemental/media/chapter-02/Chapter_2_Interactive_Notebook.mp4": {
+      "sha256": "80ae44210d193f3372d1ebc0b8ba6783d4b37c90b306051f1c1dc955a776af59",
+      "size_bytes": 31431372
+    },
+    "assets/supplemental/media/chapter-02/How_Motion_Proves_Energy_Exists.mp4": {
+      "sha256": "b18c26dc6b20c4825e5393faf7aeda827f7e993875ab48f735ff8318be54250c",
+      "size_bytes": 7000619
+    },
+    "assets/supplemental/media/chapter-02/How_We_See_Invisible_Energy_of_Motion.mp4": {
+      "sha256": "1fb4b8cf8a566ff14d7415e74f4ab11f2f7ff12653e80f426a226814968d2f52",
+      "size_bytes": 4925260
+    },
+    "assets/supplemental/media/chapter-02/Marble_Collisions__Investigating_Motion_Energy.mp4": {
+      "sha256": "b3f7d670c89b2e2c264f6c566bee471b30e801b1d7fa1bfba03e96e87694f279",
+      "size_bytes": 31310758
+    },
+    "assets/supplemental/media/chapter-02/Moving_Objects_Have_Energy.mp4": {
+      "sha256": "2885858bf5ac83e28bf9b10acec894d1ed1cda4644cbce2967bd1c253aa83405",
+      "size_bytes": 20668556
+    },
+    "assets/supplemental/media/chapter-02/Things_on_the_Move.mp4": {
+      "sha256": "708483c50ad0c940ac5bb6965ca4406200cd901eb9a77c5231228e0f047951aa",
+      "size_bytes": 41874205
+    },
+    "assets/supplemental/media/chapter-03/Energy__Ramp_It_Up!.mp4": {
+      "sha256": "f0a9531129d6ee9135608bcd2efa2bde5d7a9e1d931a66b7a4583318831b6245",
+      "size_bytes": 33113237
+    },
+    "assets/supplemental/media/chapter-03/Energy___Speed_Are_Related.mp4": {
+      "sha256": "a5c83c50703839fb4bbfd7cc04417be8fdfc44b86fdb68af6df1aa1fe7b7839f",
+      "size_bytes": 32776547
+    },
+    "assets/supplemental/media/chapter-03/How_Speed_Changes_Energy_of_Motion.mp4": {
+      "sha256": "0c6ac9cf5c5311e74a3dcba198ec820a0cd423e6ce1bc935fbd75b4a713bded0",
+      "size_bytes": 8272376
+    },
+    "assets/supplemental/media/chapter-03/speed-and-energy-ramp-it-up-classroom-cut.mp4": {
+      "sha256": "e37776710249f75c1596d302060199c0b9e4a02b81106d02e954dca42f69c9c9",
+      "size_bytes": 4868741
+    },
+    "assets/supplemental/media/chapter-04/Energy_Transfer___Transformation_Masterclass.mp4": {
+      "sha256": "d5c98f3e25c1e530e7d1203686992deef086f04f78abbf5610b4eb32892e4997",
+      "size_bytes": 53038725
+    },
+    "assets/supplemental/media/chapter-04/How_Sound_Transfers_Energy.mp4": {
+      "sha256": "2db67ae1e1cbeac67cd31db20c4a5b47f2a82130a1076aa2f543e0044eaedfc2",
+      "size_bytes": 8728851
+    },
+    "assets/supplemental/media/chapter-04/The_Dancing_Salt_Mystery.mp4": {
+      "sha256": "214f207fe840e0c02b074b5cedd2440f71829fa8c51fded14fe27b888bd57d3c",
+      "size_bytes": 34599358
+    },
+    "assets/supplemental/media/chapter-04/Transfer_vs.mp4": {
+      "sha256": "589b0a1f899213a50383ffa004d290fb58647b4488c772cd26caa7c0aa2ae5fb",
+      "size_bytes": 34946112
+    },
+    "assets/supplemental/media/chapter-05/Collision_Dynamics___Mass_Effect.mp4": {
+      "sha256": "9771a967429d279b4e05daa15f50eaa0ed2d0ae55c815382ca04bb8e8afb66c5",
+      "size_bytes": 24851101
+    },
+    "assets/supplemental/media/chapter-05/How_Collisions_Transfer_Energy.mp4": {
+      "sha256": "b6b751558ca4bb16282a19a0fd95a7c5bf6690e39b5dbdced02a170de279ef3c",
+      "size_bytes": 9915802
+    },
+    "assets/supplemental/media/chapter-05/Investigating_Craters.mp4": {
+      "sha256": "01cceb96744ca85911c2b3eb0fcc47d0da764a2787c2c7c9ffb0df041b81be57",
+      "size_bytes": 45235362
+    },
+    "assets/supplemental/media/chapter-05/What_Happens_in_a_Collision_.mp4": {
+      "sha256": "d5bc601253e97227273020cf8eccb7e2ff7fb04196662fc66d064ff53433b001",
+      "size_bytes": 37259488
+    },
+    "assets/supplemental/media/chapter-06/Energy_Transformations.mp4": {
+      "sha256": "3cc7953be12d9a9f945d41a55990032d073a829ac607cc3c06b82338db014377",
+      "size_bytes": 42570978
+    },
+    "assets/supplemental/media/chapter-06/Engineering_a_Door_Alert.mp4": {
+      "sha256": "92a64327d9435e1bea3fab94008cb264b33aaa7fb903eb435bb874967dabbe83",
+      "size_bytes": 37557316
+    },
+    "assets/supplemental/media/chapter-06/How_a_Flashlight_Transforms_Energy.mp4": {
+      "sha256": "118947e7bc8d9b85bdf1faa979d62c3f79886efa88647729ba9c37be408076f4",
+      "size_bytes": 6325565
+    },
+    "assets/supplemental/media/chapter-06/Observing_Energy_Transformations_in_a_Timer.mp4": {
+      "sha256": "98697c44a177465af150c80d705834698f18085134b7bd5097a28b30975eda14",
+      "size_bytes": 6308440
+    },
+    "assets/supplemental/media/chapter-07/Edison_s_Light_Bulb.mp4": {
+      "sha256": "291062c5acbbbc3e55b01caf46ebb629196624514cb839ba152032b29f228c5b",
+      "size_bytes": 46381618
+    },
+    "assets/supplemental/media/chapter-07/The_Journey_of_Energy.mp4": {
+      "sha256": "ed3f5005f8143f58dc1abb77e38411b42e96d56ba4eb131bc834b2f9f8289895",
+      "size_bytes": 42506751
+    },
+    "assets/supplemental/media/chapter-07/journey-of-energy-unit1-recap-classroom-cut.mp4": {
+      "sha256": "8dc946665f0db32e164205821fe39ab09896d405de7433acbe39c8110a6f7664",
+      "size_bytes": 6778034
+    },
+    "assets/supplemental/media/unit-02/chapter-01/Energy_Causes_Change.mp4": {
+      "sha256": "514b434431ee34185241d17b1eceb879f4b6518a0fafcf6bc359ba8ce2df2a95",
+      "size_bytes": 36562945
+    },
+    "assets/supplemental/media/unit-02/chapter-01/The_Timescale_Tradeoff__Physics,_Economics,_and_the_Energy_Grid.mp4": {
+      "sha256": "e773c74ce51f5a07540e49e4bd7aeb292d5e0deb704a7b0bead4827720b6f517",
+      "size_bytes": 55406093
+    },
+    "assets/supplemental/media/unit-02/chapter-01/Where_Does_Energy_Come_From_.mp4": {
+      "sha256": "f49baa4eae364f03aec5207ac6318c0aa861880b337bc2a6f4e15f77e59877a1",
+      "size_bytes": 35694516
+    },
+    "assets/supplemental/media/unit-02/chapter-02/Fossil_Fuel_Formation.mp4": {
+      "sha256": "08d59d655194e10b68b46d45ec5ddd57e61af14d1192eee106ecf70c9ea80ac2",
+      "size_bytes": 45107778
+    },
+    "assets/supplemental/media/unit-02/chapter-02/fossil-fuel-formation-classroom-cut.mp4": {
+      "sha256": "1f255f6e0c0fda2540753c085a4fe8b2905706858e35ed7c9730046f9dc8f7f8",
+      "size_bytes": 9068796
+    },
+    "assets/supplemental/media/unit-02/chapter-03/Energy_Detectives.mp4": {
+      "sha256": "e341dec3242ed232617f9b7b6c0ed5e3cd62db7dfc34b24b7f92eeb9bac807ce",
+      "size_bytes": 40516861
+    },
+    "assets/supplemental/media/unit-02/chapter-03/Power_Plant_Energy_Transformations__Tracing_the_Grid.mp4": {
+      "sha256": "ce8f4052b50c5520625d9fe6f023c6a76e71656dc628b3f8e1b737bd08e2b020",
+      "size_bytes": 42974182
+    },
+    "assets/supplemental/media/unit-02/chapter-03/turbine-generator-classroom-cut.mp4": {
+      "sha256": "649fbc83e7d9ad50d3b833ea00144c94f88119f61c555922bfd059d0babdb149",
+      "size_bytes": 9315091
+    },
+    "assets/supplemental/media/unit-02/chapter-05/Wind___Hydro_Power.mp4": {
+      "sha256": "db03356e8b3aea0b4d2e70efee05e60e7a59e3d3aa0467c03378c72f86835ea5",
+      "size_bytes": 46136929
+    },
+    "assets/supplemental/media/unit-02/chapter-05/wind-hydro-power-classroom-cut.mp4": {
+      "sha256": "0d4ec2bd866c531574333291c5c09fea54c78d76920c42ac2195b0a321864dbd",
+      "size_bytes": 3742861
+    },
+    "assets/supplemental/media/unit-02/chapter-07/Solar___Geothermal_Energy.mp4": {
+      "sha256": "d1a173f325bbf94295b920e10beea36cce6166188337c7fdc2962eca93232901",
+      "size_bytes": 36972264
+    },
+    "assets/supplemental/media/unit-02/chapter-09/Energy_Innovations.mp4": {
+      "sha256": "43500449da73e621fa80073df91c81b691c40b2929b3d3bed4d30cc5ee3115b5",
+      "size_bytes": 34808180
+    },
+    "assets/supplemental/media/unit-02/chapter-09/Unit_2_Synthesis__Energy_Detective_Masterclass.mp4": {
+      "sha256": "8882d42e94c39d764825de41a63ad488f64da119135e3e7c70ce09efbb0add6c",
+      "size_bytes": 51885280
+    },
+    "production/candidates/chapter-01/ch1-premium-hybrid-v5-media/media/How_Scientists_Spot_Invisible_Energy.mp4": {
+      "sha256": "3b47afea3aaee36aba05dd276cec9c211242924c789be067bc518f43bccba914",
+      "size_bytes": 6183642
+    },
+    "production/candidates/chapter-01/ch1-premium-hybrid-v5-media/media/Stored_Energy.mp4": {
+      "sha256": "38381321a79e16ae602d1b9f16c5bab7975aea75d6560926a727052a9e78e674",
+      "size_bytes": 21733498
+    },
+    "production/candidates/chapter-01/ch1-premium-hybrid-v5-media/media/Why_Still_Objects_Secretly_Have_Energy.mp4": {
+      "sha256": "915d7389526bc6195d8aa89f33253a076dc9d467297864b39c1f78f23bc66821",
+      "size_bytes": 10426210
+    },
+    "production/candidates/chapter-02/02-ch2-moving-objects-have-energy-visual-candidate-v6-media/media/ch2-videoA-marble-collision.mp4": {
+      "sha256": "6558776acaf3c2d475e503e8c26b5798d2eddf4f620f87cd2bbd8e61c25d9d22",
+      "size_bytes": 1232439
+    },
+    "production/candidates/chapter-02/02-ch2-moving-objects-have-energy-visual-candidate-v6-media/media/ch2-videoB-motion-in-action.mp4": {
+      "sha256": "c9f880b1d8f76dd23f3326b89c4d105d1a0bb2892f07f54741f2d78ff60aa50f",
+      "size_bytes": 1356570
+    },
+    "production/candidates/chapter-02/02-ch2-moving-objects-have-energy-visual-candidate-v6-media/media/ch2-videoC-things-on-the-move.mp4": {
+      "sha256": "9000eb8d73beeffe9fe1b4766a98403811a2a329c7f92d59662ffed14f59c9a8",
+      "size_bytes": 1594366
+    },
+    "production/candidates/chapter-02/02-ch2-moving-objects-have-energy-visual-candidate-v6-media/media/source-marble-collision-full.mp4": {
+      "sha256": "b3f7d670c89b2e2c264f6c566bee471b30e801b1d7fa1bfba03e96e87694f279",
+      "size_bytes": 31310758
+    },
+    "production/candidates/chapter-02/02-ch2-moving-objects-have-energy-visual-candidate-v6-media/media/source-motion-in-action-full.mp4": {
+      "sha256": "352531cf0f018eb6c03476a0216334ca4b9137d45f5cfedcee3224a679a5d98b",
+      "size_bytes": 29369029
+    },
+    "production/candidates/chapter-02/02-ch2-moving-objects-have-energy-visual-candidate-v6-media/media/source-things-on-the-move-full.mp4": {
+      "sha256": "708483c50ad0c940ac5bb6965ca4406200cd901eb9a77c5231228e0f047951aa",
+      "size_bytes": 41874205
+    },
+    "source-intake/2026-10-09-chapter-1/media/Chapter_1_Review.mp4": {
+      "sha256": "501b8e7e3450e9d664d827fd0c73bfc5b860044e21ee32212fcb22cb684dc8ef",
+      "size_bytes": 35702141
+    },
+    "source-intake/2026-10-09-chapter-1/media/Chapter_1_Science_Notebook.mp4": {
+      "sha256": "90266f21fc1ab475713355c3413a82535521546913eca9a9258b5d4daeeac65a",
+      "size_bytes": 44257292
+    },
+    "source-intake/2026-10-09-chapter-1/media/Energy_Causes_Change.mp4": {
+      "sha256": "514b434431ee34185241d17b1eceb879f4b6518a0fafcf6bc359ba8ce2df2a95",
+      "size_bytes": 36562945
+    },
+    "source-intake/2026-10-09-chapter-1/media/Energy_Causes_Change__The_Electric_Pencil_Sharpener.mp4": {
+      "sha256": "ec61b59dd1aa844b0cf558b9d7f623cbbc4957d84ba05b80f375bcf32f41b671",
+      "size_bytes": 19342466
+    },
+    "source-intake/2026-10-09-chapter-1/media/Energy_Causes_Change__The_Energy_Detective.mp4": {
+      "sha256": "21a290001b8b2a71c57ecc1f528186eff9c153565e5f2baeb69cab0dca5d14fe",
+      "size_bytes": 29076171
+    },
+    "source-intake/2026-10-09-chapter-1/media/Energy_Detective.mp4": {
+      "sha256": "45fb876643b64267fdb83ded20629889ab1e59e1ccd03a108ab147235a6ed910",
+      "size_bytes": 26989192
+    },
+    "source-intake/2026-10-09-chapter-1/media/Energy_Detectives.mp4": {
+      "sha256": "e341dec3242ed232617f9b7b6c0ed5e3cd62db7dfc34b24b7f92eeb9bac807ce",
+      "size_bytes": 40516861
+    },
+    "source-intake/2026-10-09-chapter-1/media/Energy_Detectives_Briefing.mp4": {
+      "sha256": "a018652d4262fd37d520dde8768a85fc5a19b27b858371ccee29906c00b4d028",
+      "size_bytes": 45073636
+    },
+    "source-intake/2026-10-09-chapter-1/media/How_Change_Proves_Energy_Exists.mp4": {
+      "sha256": "8d0880d707660f6a27c78a30444c8c3f8da54f07513da0694f1f87223183a904",
+      "size_bytes": 9081636
+    },
+    "source-intake/2026-10-09-chapter-1/media/How_Physical_Change_Proves_Energy_Exists.mp4": {
+      "sha256": "0d00e203ffa21846634410926296aba4cb1054644040bee4630bd83074c7292d",
+      "size_bytes": 10914391
+    },
+    "source-intake/2026-10-09-chapter-1/media/How_Scientists_Spot_Invisible_Energy.mp4": {
+      "sha256": "3b47afea3aaee36aba05dd276cec9c211242924c789be067bc518f43bccba914",
+      "size_bytes": 6183642
+    },
+    "source-intake/2026-10-09-chapter-1/media/Stored_Energy.mp4": {
+      "sha256": "38381321a79e16ae602d1b9f16c5bab7975aea75d6560926a727052a9e78e674",
+      "size_bytes": 21733498
+    },
+    "source-intake/2026-10-09-chapter-1/media/The_Energy_Detective-2.mp4": {
+      "sha256": "647f10389edcfcfc5ed6e5d57c44984970ed0c39c64c4d7c1f2d4363a9724a37",
+      "size_bytes": 29282394
+    },
+    "source-intake/2026-10-09-chapter-1/media/The_Energy_Detective-3.mp4": {
+      "sha256": "2bc2e5f21c9552ab1023ae1311d3730c33e5a6a41cd8d4689e4c1531c50c873b",
+      "size_bytes": 31581582
+    },
+    "source-intake/2026-10-09-chapter-1/media/The_Energy_Detective-4.mp4": {
+      "sha256": "1f0ab58a9b27f4e927a621253bc5db4add7288d992c7667ca119865ac717fde1",
+      "size_bytes": 31884045
+    },
+    "source-intake/2026-10-09-chapter-1/media/The_Energy_Detective.mp4": {
+      "sha256": "4396afabfe42127b4e3fd83298ad38188a2857f8582e38d5b8216e3d52309403",
+      "size_bytes": 33677981
+    },
+    "source-intake/2026-10-09-chapter-1/media/The_Invisible_Boss_of_Change.mp4": {
+      "sha256": "9636469cbd32fcf174acb502c58bf7d568bcaadaa816b01e16e4127dc9fc4b91",
+      "size_bytes": 23019061
+    },
+    "source-intake/2026-10-09-chapter-1/media/The_Unseen_Mover.mp4": {
+      "sha256": "8e6a056b66600c4670a2a5fe9b3f458bac2f4c85e2165992799283ef73b2e583",
+      "size_bytes": 25880128
+    }
+  },
+  "generated_for": "Phase 2 classroom-artifact-preservation",
+  "total_size_bytes": 1998357128
+}
