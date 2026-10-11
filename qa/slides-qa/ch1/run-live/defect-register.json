@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-10T18:58:05Z",
+  "defects": [
+    {
+      "slide": 1,
+      "slideId": "s01",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-01.png"
+      ],
+      "expected": "",
+      "actual": "'Discovery / Evidence' and 'Unit 1 \u00b7 Energy Transfer & Transformation' text may be too small for back-of-classroom readability",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 2,
+      "slideId": "s02",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-02.png"
+      ],
+      "expected": "",
+      "actual": "'Big Question' text appears too small for projection in a classroom setting",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 3,
+      "slideId": "s03",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-03.png"
+      ],
+      "expected": "",
+      "actual": "Instruction text 'Write 1\u20132 quick ideas. No wrong answer yet.' appears too small for classroom projection.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 4,
+      "slideId": "s04",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-04.png"
+      ],
+      "expected": "",
+      "actual": "The slide states \"light fills the room\" as the change, revealing the answer to \"What changed?\".",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 6,
+      "slideId": "s06",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-06.png"
+      ],
+      "expected": "",
+      "actual": "The text 'Look closely. What do you see? What do you hear?' appears smaller than the main content and may be hard to read from the back of a classroom.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 9,
+      "slideId": "s09",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-09.png"
+      ],
+      "expected": "",
+      "actual": "text in 'BEFORE' and 'AFTER' boxes is too small for classroom projection",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 9,
+      "slideId": "s09",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-09.png"
+      ],
+      "expected": "",
+      "actual": "CHANGES section lists the answers to 'What changed?', revealing the expected response",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 10,
+      "slideId": "s10",
+      "category": "LABEL_BADGE",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-10.png"
+      ],
+      "expected": "",
+      "actual": "'D' next to 'EXPLAIN' is unclear or possibly a typo",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 10,
+      "slideId": "s10",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-10.png"
+      ],
+      "expected": "",
+      "actual": "The slide states 'Those changes are clues that energy was involved.' which reveals the answer to the 'How do we know energy was involved?' question.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 12,
+      "slideId": "s12",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-12.png"
+      ],
+      "expected": "",
+      "actual": "'Guided Notes \u00b7 Reader p. 1' text appears smaller than main definitions, potentially hard to read from back of classroom",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 13,
+      "slideId": "s13",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-13.png"
+      ],
+      "expected": "",
+      "actual": "The text 'Guided Notes \u00b7 Reader p. 1' and 'change \u00b7 different' appears too small for classroom projection.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 13,
+      "slideId": "s13",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-13.png"
+      ],
+      "expected": "",
+      "actual": "The slide defines 'energy' and 'change', revealing the answers students should be predicting.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 14,
+      "slideId": "s14",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-14.png"
+      ],
+      "expected": "",
+      "actual": "The slide directly states 'Energy is the ability to cause change.' which reveals the answer students should be predicting/writing on their own",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 15,
+      "slideId": "s15",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-15.png"
+      ],
+      "expected": "",
+      "actual": "The body text 'Read Reader p. 2. Waves move. Sand shifts. Water makes sound. What are these changes a clue about?' may be too small for projection in a classroom setting.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 17,
+      "slideId": "s17",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-17.png"
+      ],
+      "expected": "",
+      "actual": "The instruction text 'Now write the same word in the last box of your model.' appears smaller than main content text, potentially hard to read from back of classroom.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 17,
+      "slideId": "s17",
+      "category": "SCIENCE_ERROR",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-17.png"
+      ],
+      "expected": "",
+      "actual": "The slide states 'When you see a change, you are seeing evidence of energy' but the model flow (ENERGY \u2192 CHANGE \u2192 EVIDENCE) incorrectly separates 'evidence' from 'change', as the change itself is the evidence of energy (so the model should end with 'CHANGE', not 'EVIDENCE').",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 17,
+      "slideId": "s17",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-17.png"
+      ],
+      "expected": "",
+      "actual": "The word 'evidence' is highlighted in the text 'you are seeing evidence of energy', revealing the answer students are supposed to write in the last box of their model.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 21,
+      "slideId": "s21",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-21.png"
+      ],
+      "expected": "",
+      "actual": "The slide provides the definition of 'stored energy', which may reveal the answer students were supposed to predict in a prior activity.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 23,
+      "slideId": "s23",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-23.png"
+      ],
+      "expected": "",
+      "actual": "The slide provides the definition of 'stored energy' ('energy that has the ability to cause change at a later time'), which is likely an answer students should be predicting or writing themselves in a guided activity.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 26,
+      "slideId": "s26",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-26.png"
+      ],
+      "expected": "",
+      "actual": "Body text (e.g., 'Stretch a rubber band \u2014 it now stores energy. Let it go. What change will you see and hear?') may be too small for classroom projection.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 28,
+      "slideId": "s28",
+      "category": "HIERARCHY_ALIGNMENT",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-28.png"
+      ],
+      "expected": "",
+      "actual": "Title is centered, body text is left-aligned, image is centered\u2014alignment inconsistent",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 30,
+      "slideId": "s30",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-30.png"
+      ],
+      "expected": "",
+      "actual": "The 'WHAT CHANGE COULD HAPPEN LATER?' section displays specific answers (e.g., 'the flashlight lights up', 'it snaps and makes a sound', 'it falls down'), revealing responses students should predict independently.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 32,
+      "slideId": "s32",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-32.png"
+      ],
+      "expected": "",
+      "actual": "'draw' text in BEFORE and AFTER boxes is too small for classroom projection",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 34,
+      "slideId": "s34",
+      "category": "FONT_READABILITY",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-34.png"
+      ],
+      "expected": "",
+      "actual": "Sample text in 'SAMPLE' box is too small for projection",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 34,
+      "slideId": "s34",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-34.png"
+      ],
+      "expected": "",
+      "actual": "Sample answer provided in 'SAMPLE' box reveals expected response",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 38,
+      "slideId": "s38",
+      "category": "ANSWER_LEAK",
+      "severity": "HIGH",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-38.png"
+      ],
+      "expected": "",
+      "actual": "The slide displays 'Review 1 \u2014 answer' and the correct answer with explanation ('Energy is the ability to cause change (Reader p. 1).')",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 38,
+      "slideId": "s38",
+      "category": "ANSWER_LEAK",
+      "severity": "HIGH",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-38.png"
+      ],
+      "expected": "",
+      "actual": "The selected option (C) is highlighted, revealing the answer before students can predict it.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 40,
+      "slideId": "s40",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-40.png"
+      ],
+      "expected": "",
+      "actual": "The answer box at the bottom reveals the correct answer: 'The pencil becomes shorter and sharper \u2014 a change.'",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 42,
+      "slideId": "s42",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-42.png"
+      ],
+      "expected": "",
+      "actual": "The slide is labeled 'Review 3 \u2013 answer' and provides the explanation 'The rubber band stores energy; it changes when released.' which reveals the correct answer.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 44,
+      "slideId": "s44",
+      "category": "ANSWER_LEAK",
+      "severity": "HIGH",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-44.png"
+      ],
+      "expected": "",
+      "actual": "The slide shows 'Review 4 \u2013 answer' and the explanation 'The spinning is motion; the music is sound (Reader p. 3).' which reveals the correct answer before students can predict it.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 46,
+      "slideId": "s46",
+      "category": "ANSWER_LEAK",
+      "severity": "MEDIUM",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-46.png"
+      ],
+      "expected": "",
+      "actual": "The slide is labeled 'Review 5 \u2014 answer' and includes a box with the correct answer ('We see a change \u2014 like movement \u2014 as evidence.'), which reveals the answer students should be predicting.",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    },
+    {
+      "slide": 48,
+      "slideId": "s48",
+      "category": "ANSWER_LEAK",
+      "severity": "HIGH",
+      "evidence": [
+        "qa/slides-qa/ch1/renders/slide-48.png"
+      ],
+      "expected": "",
+      "actual": "The slide shows 'Review 6 \u2014 answer' and highlights the correct option (C) with a gold border, plus provides the explanation 'A battery stores energy. It can cause a change later.'",
+      "proposedRepair": "review slide and correct the issue",
+      "repairStatus": "OPEN",
+      "retestResult": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "summary": "Slide has no text/image issues but reveals the answer for a student prediction task.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide directly states 'Energy is the ability to cause change.' which reveals the answer students should be predicting/writing on their own"
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

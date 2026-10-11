@@ -1,0 +1,13 @@
+{
+  "summary": "Slide is visually clear with no text, image, or structural issues for Grade 4 science content.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

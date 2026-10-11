@@ -1,0 +1,15 @@
+{
+  "summary": "Slide reviewed for Grade 4 science presentation with no critical issues found.",
+  "text_issues": [],
+  "readability_issues": [
+    "Body text (e.g., 'Stretch a rubber band \u2014 it now stores energy. Let it go. What change will you see and hear?') may be too small for classroom projection."
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

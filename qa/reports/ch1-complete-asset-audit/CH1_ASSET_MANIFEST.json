@@ -1,0 +1,144 @@
+{
+  "schema": "ch1-complete-asset-manifest.v1",
+  "generated": "2026-10-09",
+  "scope": "Chapter 1 visual asset audit (investigation only; no rebuild, no promotion)",
+  "authority": {
+    "canonical_slide_sequence": "production/slides/01-ch1-energy-causes-change-slides.pptx (FROZEN v1.1)",
+    "content_authority_order": [
+      "CKSci Student Reader / Teacher Guide",
+      "Canonical Guided Notes",
+      "Canonical Chapter 1 slide wording (v1.1)",
+      "Accepted teacher key / review / assessment",
+      "Visual-generation blueprint"
+    ]
+  },
+  "canonical_deck": {
+    "file": "production/slides/01-ch1-energy-causes-change-slides.pptx",
+    "version": "UNIT1_CH1_GOLD_STANDARD_VERSION=1.1",
+    "status": "FROZEN",
+    "slides": 45,
+    "slide_size_in": [13.333, 7.5],
+    "fonts": ["Avenir Next"],
+    "embedded_images": 0,
+    "sha256_pptx": "5278f96c7dfab4f4b6809a3677f714c566c212e7c74af3d03f502abb77f022f7"
+  },
+  "codex_candidates": [
+    {
+      "name": "visual-candidate-v5",
+      "slides": 45,
+      "embedded_media_entries": 29,
+      "unique_images": 11,
+      "fonts": ["Avenir Next", "Georgia"],
+      "sha256": "fdcc0efb9df13318d231ca36289b2a29ca34d47425d578a2cd41b17760ccbb54",
+      "note": "current candidate"
+    },
+    {
+      "name": "visual-candidate-v4",
+      "slides": 45,
+      "embedded_media_entries": 29,
+      "unique_images": 11,
+      "note": "identical artwork to v5"
+    },
+    {
+      "name": "visual-candidate-v3",
+      "slides": 45,
+      "embedded_media_entries": 29,
+      "unique_images": 11,
+      "note": "identical artwork to v5"
+    },
+    {
+      "name": "visual-candidate-v2",
+      "slides": 45,
+      "embedded_media_entries": 29,
+      "unique_images": 0,
+      "note": "media placeholders only (0 bytes); no artwork to recover"
+    }
+  ],
+  "codex_unique_images": [
+    {"file": "assets/ch1/candidate-v2/slide-01-opener.png", "dims": [1672, 941], "sha256": "9d491261d7e4f43b9e663a0875d4d8d32aa02d4800cdc81bc2a702eb1a4ef61a", "use": "opener"},
+    {"file": "assets/ch1/candidate-v2/slide-04-dark-bright.png", "dims": [1672, 941], "sha256": "f8cd572a10ecd07eb6086888ac6e3134a0818ac5ec4bbe67a099346ef49a8be3", "use": "dark-bright"},
+    {"file": "assets/ch1/candidate-v2/slide-09-pencil-before-after.png", "dims": [1942, 809], "sha256": "920594e1fe1a2aa7e62d78cafe00fc31c6b04fc53326d251064f6b5d2215e5ad", "use": "pencil before/after + change vocab + review Q2"},
+    {"file": "assets/ch1/candidate-v2/slide-10-energy.png", "dims": [1448, 1086], "sha256": "3428887527e4804d6d49d4f55ed570c996b9855f0cdfd64bc00699b910502be1", "use": "energy vocab"},
+    {"file": "assets/ch1/candidate-v2/slide-14-seashore.png", "dims": [1672, 941], "sha256": "0ddcef14e62f147a6d6a169dabde0d6f902fd0a8a8c2bed7f8aa077d7c1d880c", "use": "seashore bridge"},
+    {"file": "assets/ch1/candidate-v2/slide-17-five-forms.png", "dims": [2172, 724], "sha256": "a66f6048cac9e51a939c03d7d4ffd95660ce19f69f6ac51afb58eb2be6f5434d", "use": "five forms strip"},
+    {"file": "assets/ch1/candidate-v2/slide-22-stored-energy.png", "dims": [1448, 1086], "sha256": "ee367676a83039c20caba4685d56421f735a76008bbffa561452b2084449ebaa", "use": "stored-energy vocab + review Q3"},
+    {"file": "assets/ch1/candidate-v2/slide-25-stored-examples.png", "dims": [2172, 724], "sha256": "f054ae252604a34b35e63b5b17a93b15d373c49911000f5aff1089e59c6a20b2", "use": "battery/rubber/apple strip + review Q6"},
+    {"file": "assets/ch1/candidate-v2/slide-28-evidence.png", "dims": [1942, 809], "sha256": "c3778532ebff7cdd4eacdd0335ee1370a4a288023cb607ac552f7878da017bc3", "use": "evidence 3-panel"},
+    {"file": "assets/ch1/candidate-v2/slide-33-reflection.png", "dims": [1672, 941], "sha256": "2c47ce305436324b95d298d3922dd9953ab58d5451f1a27eb64c4a6de2c91dde", "use": "BQ reflection"},
+    {"file": "assets/ch1/candidate-v2/slide-45-close.png", "dims": [1672, 941], "sha256": "60762733c1b9853ab1c2cf8b1fbb78317f1fa46d08451e40bb627f198e7dc93f", "use": "chapter close"},
+    {"file": "assets/ch1/candidate-v2/slide-06-pencil-before.png", "dims": [1536, 1024], "sha256": "5d78ecfb518c0e7136dba6a3db1a3e0c66eded38c84d6ca04605495d2a674dc9", "use": "REJECTED (no matched comparison)"}
+  ],
+  "gemini_decks": [
+    {"deck": "Energy_Causes_Change", "slides": 10, "editable": false, "media_res": "1376x768"},
+    {"deck": "Energy_Causes_Change-2", "slides": 16, "editable": false, "media_res": "1376x768"},
+    {"deck": "Energy_Causes_Change-3", "slides": 15, "editable": false, "media_res": "1376x768"},
+    {"deck": "Forms_of_Energy", "slides": 11, "editable": false, "media_res": "1376x768"},
+    {"deck": "Forms_of_Energy-2", "slides": 11, "editable": false, "media_res": "1376x768"}
+  ],
+  "standalone_intake_images": [
+    {"file": "source-intake/2026-10-09-chapter-1/images/candidate-a-clean-chapter-opener-v2.jpg", "dims": [1920, 1080], "sha256": "1aa312b8abc0e555b647a453cf17e883bb8adeef5aca0f98fc1d1f9536a0ac3c"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/candidate-a-lamp-lit-chapter-opener-final.jpg", "dims": [1920, 1080], "sha256": "5d5057a9bac2da76d3441f33e5917b8dd28202cacc77438679d61f3752e47894"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-dark-bright-01.jpg", "dims": [1920, 1080], "sha256": "e89df9e6dc2e45763c648b166a0cddc042ccc94f4f46d7dfc172fa5b18e907e6"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-forms-electrical-01.jpg", "dims": [1440, 1080], "sha256": "80492b51dadeeaae977775e7b16c8475859f6505c47430306054fd077125a699"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-forms-heat-01.jpg", "dims": [1440, 1080], "sha256": "d2fb09efbe55a04857539fc3a69df558955ce1d48ac686c60b044b3384c39f41"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-forms-light-01.jpg", "dims": [1536, 1152], "sha256": "ab7ac8d0cc41a0bb78a9994a9ab484a026b45935579cbbef1ab52dfad2116b7d"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-forms-light-02.jpg", "dims": [1536, 1152], "sha256": "d25d99a7055b16b900034a8e39dd84b49526aa0afc86689798ad3e74eacd601b"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-forms-motion-01.jpg", "dims": [1440, 1080], "sha256": "f012d73cbb9df9e116a73a9ab06ce0be70d21c3cff27bf492c79cc8d197f455c"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-forms-motion-03.jpg", "dims": [1440, 1080], "sha256": "2e173441450fa0256142ca09e18855860a1f0ff8deeb8fe90128e0e7265ce2b1"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-forms-sound-02.jpg", "dims": [1536, 1152], "sha256": "6bc0fffa3cf89021c4ddc31dde2b89eddbad590984fd8dc691d84e5450b32cdf"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-model-ece-01.jpg", "dims": [1920, 1080], "sha256": "de5c900ce96e13b7f52fd1f4593f78ae24609336b0726590d7400819a6c02fa1", "duplicate_of": "ch1-model-ece-01 (1).jpg"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-pencil-evidence-01.jpg", "dims": [1920, 1234], "sha256": "5cbc1f445d21a7484aa523c827019d12c115bf36f911bfb26163afcfebd7b002"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-stored-battery-01.jpg", "dims": [1920, 1440], "sha256": "da87d7477898bdd7d12fd74faf27b0965f2d0f1f2fd5052a15d45c14bcdf3b1d"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-stored-raised-apple-01.jpg", "dims": [1440, 1920], "sha256": "d1f861b2f4b60fbb705a0a91ad75e60e74e1196545ed36f571ef81cc890dfaff"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-voc-change-01-refined.jpg", "dims": [1920, 1234], "sha256": "9d675286cb120861b93a7be176f7f311a70ea47f733e556b3dc4b64e7559cb09"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-voc-energy-01-refined.jpg", "dims": [1918, 1233], "sha256": "9cd49cc384618d5dc60f5b6cdcbd52c1980768787c25f57d4d7ea69c9feb93a9"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-voc-energy-01.jpg", "dims": [1918, 1233], "sha256": "126b975aea3655ea0b8a261880d7b7b62bb19e1856d209de55353e588e72225d"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/ch1-voc-stored-energy-01.jpg", "dims": [1920, 1234], "sha256": "583d901dc0d76d900d2f36eeb4cc03a6623a0fb55f056b54a890964dde97b3d7"},
+    {"file": "source-intake/2026-10-09-chapter-1/images/science-chapter-opener.jpg", "dims": [1920, 1088], "sha256": "93105343739e4a65682bab0bcb153e88dfa3615225a935b458fdd9da5daecf41", "flag": "baked title text (watermark risk)"}
+  ],
+  "panel_assets": [
+    {"file": "assets/ch1/panel-01-bedroom-light.png", "dims": [1650, 795]},
+    {"file": "assets/ch1/panel-02-single-bulb.png", "dims": [1190, 795]},
+    {"file": "assets/ch1/panel-03-candle-change.png", "dims": [1340, 795]},
+    {"file": "assets/ch1/panel-04-flashlight-cut.png", "dims": [1307, 577]},
+    {"file": "assets/ch1/panel-05-rubber-band.png", "dims": [1400, 577]},
+    {"file": "assets/ch1/panel-06-apple-drop.png", "dims": [1472, 577]},
+    {"file": "assets/ch1/panel-07-change-cards.png", "dims": [1190, 515]},
+    {"file": "assets/ch1/panel-08-forms-of-energy.png", "dims": [1635, 515]},
+    {"file": "assets/ch1/panel-09-blank-model-chain.png", "dims": [1355, 515]},
+    {"file": "assets/ch1/panel-10-living-room.png", "dims": [1370, 465]},
+    {"file": "assets/ch1/panel-11-three-stored.png", "dims": [1470, 465]},
+    {"file": "assets/ch1/panel-12-diurnal-energy.png", "dims": [1340, 465]}
+  ],
+  "videos": [
+    {"file": "Chapter_1_Review.mp4", "dur_s": 436.9, "res": "1280x720", "codec": "h264/aac", "sha256": "501b8e7e3450e9d664d827fd0c73bfc5b860044e21ee32212fcb22cb684dc8ef"},
+    {"file": "Chapter_1_Science_Notebook.mp4", "dur_s": 505.9, "res": "1280x720", "codec": "h264/aac", "sha256": "90266f21fc1ab475713355c3413a82535521546913eca9a9258b5d4daeeac65a"},
+    {"file": "Energy_Causes_Change__The_Electric_Pencil_Sharpener.mp4", "dur_s": 185.3, "res": "1280x720", "codec": "h264/aac", "sha256": "ec61b59dd1aa844b0cf558b9d7f623cbbc4957d84ba05b80f375bcf32f41b671"},
+    {"file": "Energy_Causes_Change__The_Energy_Detective.mp4", "dur_s": 228.6, "res": "1280x720", "codec": "h264/aac", "sha256": "21a290001b8b2a71c57ecc1f528186eff9c153565e5f2baeb69cab0dca5d14fe"},
+    {"file": "Energy_Causes_Change.mp4", "dur_s": 403.3, "res": "1280x720", "codec": "h264/aac", "sha256": "514b434431ee34185241d17b1eceb879f4b6518a0fafcf6bc359ba8ce2df2a95"},
+    {"file": "Energy_Detective.mp4", "dur_s": 347.9, "res": "1280x720", "codec": "h264/aac", "sha256": "45fb876643b64267fdb83ded20629889ab1e59e1ccd03a108ab147235a6ed910"},
+    {"file": "Energy_Detectives_Briefing.mp4", "dur_s": 472.6, "res": "1280x720", "codec": "h264/aac", "sha256": "a018652d4262fd37d520dde8768a85fc5a19b27b858371ccee29906c00b4d028"},
+    {"file": "Energy_Detectives.mp4", "dur_s": 437.4, "res": "1280x720", "codec": "h264/aac", "sha256": "e341dec3242ed232617f9b7b6c0ed5e3cd62db7dfc34b24b7f92eeb9bac807ce"},
+    {"file": "How_Change_Proves_Energy_Exists.mp4", "dur_s": 83.4, "res": "720x1280", "codec": "h264/aac", "orientation": "portrait", "sha256": "8d0880d707660f6a27c78a30444c8c3f8da54f07513da0694f1f87223183a904"},
+    {"file": "How_Physical_Change_Proves_Energy_Exists.mp4", "dur_s": 78.8, "res": "720x1280", "codec": "h264/aac", "orientation": "portrait", "sha256": "0d00e203ffa21846634410926296aba4cb1054644040bee4630bd83074c7292d"},
+    {"file": "How_Scientists_Spot_Invisible_Energy.mp4", "dur_s": 76.0, "res": "720x1280", "codec": "h264/aac", "orientation": "portrait", "sha256": "3b47afea3aaee36aba05dd276cec9c211242924c789be067bc518f43bccba914", "flag": "REJECTED (misleading proof/technical language)"},
+    {"file": "Stored_Energy.mp4", "dur_s": 276.7, "res": "1280x720", "codec": "h264/aac", "sha256": "38381321a79e16ae602d1b9f16c5bab7975aea75d6560926a727052a9e78e674"},
+    {"file": "The_Energy_Detective-2.mp4", "dur_s": 406.7, "res": "1280x720", "codec": "h264/aac", "sha256": "647f10389edcfcfc5ed6e5d57c44984970ed0c39c64c4d7c1f2d4363a9724a37"},
+    {"file": "The_Energy_Detective-3.mp4", "dur_s": 332.1, "res": "1280x720", "codec": "h264/aac", "sha256": "2bc2e5f21c9552ab1023ae1311d3730c33e5a6a41cd8d4689e4c1531c50c873b"},
+    {"file": "The_Energy_Detective-4.mp4", "dur_s": 355.0, "res": "1280x720", "codec": "h264/aac", "sha256": "1f0ab58a9b27f4e927a621253bc5db4add7288d992c7667ca119865ac717fde1"},
+    {"file": "The_Energy_Detective.mp4", "dur_s": 404.8, "res": "1280x720", "codec": "h264/aac", "sha256": "4396afabfe42127b4e3fd83298ad38188a2857f8582e38d5b8216e3d52309403"},
+    {"file": "The_Invisible_Boss_of_Change.mp4", "dur_s": 170.3, "res": "1280x720", "codec": "h264/aac", "sha256": "9636469cbd32fcf174acb502c58bf7d568bcaadaa816b01e16e4127dc9fc4b91"},
+    {"file": "The_Unseen_Mover.mp4", "dur_s": 326.8, "res": "1280x720", "codec": "h264/aac", "sha256": "8e6a056b66600c4670a2a5fe9b3f458bac2f4c85e2165992799283ef73b2e583"}
+  ],
+  "produced_contact_sheets": [
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/codex-v5-slides.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/canonical-ch1-slides.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/codex-v5-assets.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/gemini-ecc.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/gemini-ecc2.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/gemini-ecc3.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/gemini-foe.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/gemini-foe2.png",
+    "qa/reports/ch1-complete-asset-audit/_contact_sheets/source-images.png"
+  ]
+}

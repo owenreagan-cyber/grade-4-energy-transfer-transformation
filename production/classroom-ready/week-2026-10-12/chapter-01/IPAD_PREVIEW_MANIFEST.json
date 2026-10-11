@@ -1,0 +1,67 @@
+{
+  "schema": "ipad-artifact-manifest-1.1",
+  "chapter": 1,
+  "buildId": "ch1-classroom-ready-2026-10-08",
+  "candidateHash": "classroom-ready-wrapper-v1",
+  "derivedFrom": "production/releases/chapter-01/RELEASE_MANIFEST.json",
+  "renderStatus": "FROZEN_RELEASE_COPIES",
+  "renderNote": "Preview-only spot checks for the classroom-ready wrapper. Not certification evidence.",
+  "artifacts": [
+    {
+      "artifactId": "ch1-classroom-notes",
+      "artifactType": "GUIDED_NOTES",
+      "sourcePath": "production/classroom-ready/week-2026-10-12/chapter-01/02_STUDENT_PRINT/Chapter_1_Guided_Notes.pdf",
+      "masterPath": "production/premium-notes/01-ch1-energy-causes-change-guided-notes.docx",
+      "artifactSHA256": "8fc5e40063f31f5fd3639fb73ae8e93c8e974c2024ea8f19bb3a46762f1c4702",
+      "expectedPages": 3,
+      "orientation": "portrait",
+      "viewMode": "fit-page",
+      "studentOrTeacher": "student",
+      "chapter": 1,
+      "captureRequired": true,
+      "captureReason": "First and densest notes-page spot check."
+    },
+    {
+      "artifactId": "ch1-classroom-practice",
+      "artifactType": "PRACTICE",
+      "sourcePath": "production/classroom-ready/week-2026-10-12/chapter-01/02_STUDENT_PRINT/Chapter_1_Practice.pdf",
+      "masterPath": "production/worksheets/01-ch1-energy-causes-change-practice.docx",
+      "artifactSHA256": "86fa932222276183ce0eb75dee0061aab171835c1d7f207219b4401f2f8c993f",
+      "expectedPages": 2,
+      "orientation": "portrait",
+      "viewMode": "fit-page",
+      "studentOrTeacher": "student",
+      "chapter": 1,
+      "captureRequired": true,
+      "captureReason": "Practice spot check."
+    },
+    {
+      "artifactId": "ch1-classroom-check",
+      "artifactType": "QUIZ",
+      "sourcePath": "production/classroom-ready/week-2026-10-12/chapter-01/02_STUDENT_PRINT/Chapter_1_Check.pdf",
+      "masterPath": "production/quizzes/01-ch1-energy-causes-change-quiz.docx",
+      "artifactSHA256": "dc4a51df57c37e4bbccc13c10e6ad2a19fb8b48214b7d8d80ba864159b46d6d3",
+      "expectedPages": 2,
+      "orientation": "portrait",
+      "viewMode": "fit-page",
+      "studentOrTeacher": "student",
+      "chapter": 1,
+      "captureRequired": true,
+      "captureReason": "Scored check spot check."
+    },
+    {
+      "artifactId": "ch1-classroom-slides",
+      "artifactType": "SLIDE_PDF",
+      "sourcePath": "production/classroom-ready/week-2026-10-12/chapter-01/03_SLIDES/Chapter_1_Slides.pdf",
+      "masterPath": "production/slides/01-ch1-energy-causes-change-slides.pptx",
+      "artifactSHA256": "4ce8ce22a6e664f106a33efb4c585b601d5697cc6acaa56c45bb46db02355f34",
+      "expectedPages": 45,
+      "orientation": "landscape",
+      "viewMode": "fit-page",
+      "studentOrTeacher": "teacher",
+      "chapter": 1,
+      "captureRequired": true,
+      "captureReason": "Projection spot check: title, vocabulary, write, reveal, densest slide."
+    }
+  ]
+}

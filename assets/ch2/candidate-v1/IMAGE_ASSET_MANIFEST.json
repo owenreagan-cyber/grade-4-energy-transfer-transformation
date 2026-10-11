@@ -1,0 +1,136 @@
+{
+  "schema_version": "ch2-image-asset-manifest.v1",
+  "chapter": 2,
+  "asset_set": "candidate-v1",
+  "generation_mode": "OpenAI built-in image generation (gpt-image)",
+  "generated_at_local": "2026-10-10",
+  "global_prompt_constraints": [
+    "premium realistic educational photography",
+    "Grade 4 classroom appropriate",
+    "scientifically plausible motion and cause/effect",
+    "widescreen 16:9 composition",
+    "no words, labels, logos, watermarks, borders, or glow effects"
+  ],
+  "assets": [
+    {
+      "asset_id": "CH2-HERO-01",
+      "file": "assets/ch2/candidate-v1/ch2-hero-01.png",
+      "sha256": "2513beca0be5e2c884da65012fed5964e3f95151aeee2aafb740a4bd87471530",
+      "dimensions_px": [1672, 941],
+      "source_class": "CUSTOM",
+      "slides": [1],
+      "prompt": "Premium realistic educational photograph for a Grade 4 science lesson. Two glass marbles on a smooth wooden classroom table; one is still and one is visibly rolling toward it, with subtle physically plausible motion blur only on the moving marble. Warm natural classroom light, shallow depth of field, and dark negative space on the left for title copy. Widescreen 16:9. No text, arrows, labels, logos, watermark, glow, or visible student faces.",
+      "crop_use": "full bleed with a dark left overlay",
+      "science_review": "PASS — one moving object and a target object communicate the chapter phenomenon without asserting speed–energy or transfer vocabulary.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-MARBLE-BEFORE-AFTER-01",
+      "file": "assets/ch2/candidate-v1/ch2-marble-before-after-01.png",
+      "sha256": "5428fbc96c7dbabc75207c14f5a5e7516d74ca13b1dc54517d824be71ed932b5",
+      "dimensions_px": [1672, 941],
+      "source_class": "ADAPTED",
+      "slides": [4, 7, 48],
+      "prompt": "Matched before-and-after educational photo diptych on one continuous wooden classroom tabletop. Before: a blue marble is rolling toward a still green target marble. After: the target marble has begun moving. Keep the same camera, light, table, marbles, and scale across both halves; show motion only with subtle directional blur. Widescreen 16:9. No text, arrows, labels, logos, watermark, glow, hands, or faces.",
+      "crop_use": "left-half crop on slide 4; full matched diptych on slides 7 and 48",
+      "science_review": "PASS — the visual encodes observable change from still to moving; slide copy avoids claiming direct visibility of energy.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-VOC-MOTION-01",
+      "file": "assets/ch2/candidate-v1/ch2-voc-motion-01.png",
+      "sha256": "6b67fcd3d2fd3e7a9d93834f3f291be3c3d62519871be43c933ab3caeeb5b581",
+      "dimensions_px": [1672, 941],
+      "source_class": "CUSTOM",
+      "slides": [9],
+      "prompt": "Premium realistic educational photograph of one orange playground ball changing position across a school gym floor, shown as a controlled photographic multiple-exposure sequence with the final position sharp. Clear floor reference line, uncluttered background, natural gym light, widescreen 16:9. No text, arrows, labels, logos, watermark, glow, or people.",
+      "crop_use": "right-side vocabulary image",
+      "science_review": "PASS — the sequence is a visual model of changing position; the slide definition prevents interpreting the frames as separate balls.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-OWN-OUTSIDE-MOTION-01",
+      "file": "assets/ch2/candidate-v1/ch2-own-outside-motion-01.png",
+      "sha256": "b571c57bde3c8d53572a1aa9d496dac652750bdf1446793a33bc268e874d73c7",
+      "dimensions_px": [1672, 941],
+      "source_class": "ADAPTED",
+      "slides": [12],
+      "prompt": "Realistic educational split-scene photograph in the same school gym. Left: a Grade 4-aged student shown from shoulders down running under their own motion. Right: a sneaker contacting a still soccer ball to put it into motion. Clear, safe, modest school clothing; no visible faces. Widescreen 16:9. No text, arrows, labels, logos, watermark, or glow.",
+      "crop_use": "full-width split image",
+      "science_review": "PASS — contrasts a person producing their own motion with an object set in motion by an outside action.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-BASKETBALL-NET-01",
+      "file": "assets/ch2/candidate-v1/ch2-basketball-net-01.png",
+      "sha256": "106fd78352c26af5481dd43e20502512e20550a3f3f7b5e9f32415a813f452bb",
+      "dimensions_px": [1672, 941],
+      "source_class": "ADAPTED",
+      "slides": [15],
+      "prompt": "Premium realistic close-up sports photograph of a basketball moving through a hoop and visibly bending the net. School gym context, physically plausible ball and net, high detail, natural light, widescreen 16:9 with negative space on the left. No text, logos, watermark, glow, or people.",
+      "crop_use": "full bleed with dark left overlay",
+      "science_review": "PASS — the moving ball and changed net are visually unambiguous; no unsupported energy form is shown.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-VOC-ENERGY-OF-MOTION-01",
+      "file": "assets/ch2/candidate-v1/ch2-voc-energy-motion-01.png",
+      "sha256": "9323b54b16e1f3c81f23b1d459e79dc76fc596309af0d1d40f9c091d3913fa67",
+      "dimensions_px": [1672, 941],
+      "source_class": "CUSTOM",
+      "slides": [16],
+      "prompt": "Premium realistic educational photograph of a soccer ball rolling across short grass on a school field. The ball is mostly sharp with a subtle grass-level motion cue; background fence and trees softly blurred. Bright natural daylight, widescreen 16:9. No text, arrows, labels, logos, watermark, glow, players, or faces.",
+      "crop_use": "right-side vocabulary image",
+      "science_review": "PASS — depicts a moving object without encoding a speed comparison.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-N3-HAMMER-01",
+      "file": "assets/ch2/candidate-v1/ch2-n3-hammer-01.png",
+      "sha256": "ba06fe0e938fb35c7f71cd8fa01c3d278990ebcd0ad1dcbd5b001d8458e81eb3",
+      "dimensions_px": [1672, 941],
+      "source_class": "ADAPTED",
+      "slides": [23],
+      "prompt": "Realistic educational close-up of a claw hammer moving down toward a nail in a wood block, the nail partly driven into the wood, safe workshop setup, hand only partially visible, physically plausible scale and contact. Widescreen 16:9. No text, labels, logos, watermark, sparks, glow, or injury.",
+      "crop_use": "card crop",
+      "science_review": "PASS — supports Reader p. 10: the swinging hammer drives a nail into wood.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-N3-PENDULUM-01",
+      "file": "assets/ch2/candidate-v1/ch2-n3-pendulum-01.png",
+      "sha256": "2ab350cdd9b67b5b04ba81053d30c4b70d2f355b6157e9dcbb352c3e0a93a43e",
+      "dimensions_px": [1672, 941],
+      "source_class": "ADAPTED",
+      "slides": [23],
+      "prompt": "Premium realistic photograph of a traditional wooden pendulum clock with the pendulum clearly visible below the clock face, warm indoor light, uncluttered neutral wall, educational and historically plausible. Widescreen 16:9. No text, logos, watermark, glow, or people.",
+      "crop_use": "card crop",
+      "science_review": "PASS — supports Reader p. 11; the pendulum mechanism is visually identifiable.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-N3-WIND-01",
+      "file": "assets/ch2/candidate-v1/ch2-n3-wind-01.png",
+      "sha256": "63c0afd516ec83e1729f7e837db824f46b42c43b6f227a92dda130ecd21528ed",
+      "dimensions_px": [1672, 941],
+      "source_class": "ADAPTED",
+      "slides": [23],
+      "prompt": "Premium realistic educational landscape photograph of modern three-blade wind turbines in a grassy field under a clear blue sky. The nearest turbine is prominent and physically plausible; distant turbines add context. Widescreen 16:9. No text, logos, watermark, lightning, glow, or people.",
+      "crop_use": "card crop",
+      "science_review": "PASS — supports Reader p. 12: moving air spins turbine blades.",
+      "approval": "selected"
+    },
+    {
+      "asset_id": "CH2-MOVING-MARBLES-01",
+      "file": "assets/ch2/candidate-v1/ch2-moving-marbles-01.png",
+      "sha256": "837dc19d832d8db95729884316e485b103e1addb6557e03304173ab9fdc9eff1",
+      "dimensions_px": [1672, 941],
+      "source_class": "EXTENSION",
+      "slides": [42, 43],
+      "prompt": "Realistic Grade 4 classroom tabletop activity setup: two identical glass marbles at opposite ends of a straight blue-tape testing lane, a sharpened pencil, and a blank open student sheet. Calm empty classroom background, safe uncluttered setup, widescreen 16:9. No text, labels, rulers, measurements, logos, watermark, glow, hands, or faces.",
+      "crop_use": "full bleed on slide 42; left-side setup crop on slide 43",
+      "science_review": "PASS — the identical-marble, fixed-lane setup avoids mass and speed comparisons and is clearly optional enrichment.",
+      "approval": "selected"
+    }
+  ]
+}

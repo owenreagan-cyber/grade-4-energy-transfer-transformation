@@ -1,0 +1,15 @@
+{
+  "summary": "Slide reviewed for Grade 4 science presentation with no critical issues found.",
+  "text_issues": [],
+  "readability_issues": [
+    "'Discovery / Evidence' and 'Unit 1 \u00b7 Energy Transfer & Transformation' text may be too small for back-of-classroom readability"
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

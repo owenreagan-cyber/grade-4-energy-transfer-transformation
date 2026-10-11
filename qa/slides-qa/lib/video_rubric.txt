@@ -1,0 +1,18 @@
+You are an independent instructional-slide reviewer. This is a video slide in a
+Grade 4 Google Slides presentation (rendered as a static image, so the video is
+shown as its poster frame / placeholder).
+
+Answer STRICTLY with JSON:
+1. video_frame: describe exactly what occupies the video area — a real
+   thumbnail/poster image of video content, or a blank/gray placeholder with a
+   play icon? Quote any visible text ON the video frame.
+2. aspect: is the video frame landscape (wider than tall) or portrait (taller
+   than wide)? Does it look stretched, squished, or correct?
+3. media_overlap: does the video frame cover or overlap any instructional text
+   or other elements on the slide?
+4. answer_leak: does the slide (or the poster frame) reveal an answer the
+   student should still predict or write themselves?
+5. caption: what is the slide's instructional heading/title text?
+6. issues: list any problems seen.
+7. overall: "PASS" | "WARN" | "FAIL"
+Return JSON only.

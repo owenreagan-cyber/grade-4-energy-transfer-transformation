@@ -1,0 +1,42 @@
+[
+ {
+  "name": "image1.png",
+  "bytes": 1567857,
+  "sha256": "9d491261d7e4f43b9e663a0875d4d8d32aa02d4800cdc81bc2a702eb1a4ef61a"
+ },
+ {
+  "name": "image2.png",
+  "bytes": 675050,
+  "sha256": "cfc8950c448df8fda97f1efe1d94df3c20a1403956d6ac285b5cfa71d9e45f3a"
+ },
+ {
+  "name": "image3.png",
+  "bytes": 851552,
+  "sha256": "695cd1f527c5b0ed25d2594842d833920a9faff354d49677a4c6d83c03a9d7fa"
+ },
+ {
+  "name": "image4.png",
+  "bytes": 883944,
+  "sha256": "389ac35b307e941e80de962a4e2d218d9e4390127f1f710ac1cd5d0c05ad21e3"
+ },
+ {
+  "name": "image5.png",
+  "bytes": 899284,
+  "sha256": "92ea9b4fb4f729bf5651ace298065235f60eff7c44d4dc46f5f6283abeb2aef7"
+ },
+ {
+  "name": "image6.png",
+  "bytes": 567807,
+  "sha256": "cbcdb16c17dedf3feb51725d24b62bda1375f9dfdf7f5b2c3d5beb315eb78d3e"
+ },
+ {
+  "name": "image7.png",
+  "bytes": 598802,
+  "sha256": "2b67e0ee6fa3cd046433035cb7b6905fe36af9c43108253b668a4e9e074321a5"
+ },
+ {
+  "name": "image8.png",
+  "bytes": 557393,
+  "sha256": "d508fa9afd0e4b117ec255d52459ac2a2c850a5e2c026e6ba2b2435f9aff6ede"
+ }
+]

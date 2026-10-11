@@ -1,0 +1,15 @@
+{
+  "summary": "Slide has no text, readability, image, overlap, label, hierarchy, or science issues but reveals a vocabulary definition that may leak an answer.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide provides the definition of 'stored energy', which may reveal the answer students were supposed to predict in a prior activity."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

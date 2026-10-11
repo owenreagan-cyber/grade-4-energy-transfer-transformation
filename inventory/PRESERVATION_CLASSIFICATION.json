@@ -1,0 +1,180 @@
+{
+  "schema_version": "preservation-classification.v1",
+  "generated": "2026-10-10",
+  "phase": "Phase 2 classroom-artifact-preservation",
+  "repository": "grade-4-energy-transfer-transformation",
+  "head_before": "e31118057925e7db0df6f5a99a5feff376b005b8",
+  "counts": {
+    "tracked_files": 1591,
+    "untracked_files": 3070,
+    "untracked_bytes": 2147483648,
+    "ignored_files": 44577,
+    "ignored_bytes": 3221225472,
+    "media_files": 75,
+    "media_bytes": 2000000000
+  },
+  "categories": [
+    {"id": 1, "name": "CANONICAL_SOURCE"},
+    {"id": 2, "name": "OWNER_APPROVED"},
+    {"id": 3, "name": "FROZEN_RELEASE"},
+    {"id": 4, "name": "ACTIVE_CANDIDATE"},
+    {"id": 5, "name": "HISTORICAL_PROVENANCE"},
+    {"id": 6, "name": "UNIQUE_QA_EVIDENCE"},
+    {"id": 7, "name": "REPRODUCIBLE_OUTPUT"},
+    {"id": 8, "name": "TEMPORARY_CACHE"},
+    {"id": 9, "name": "REJECTED"},
+    {"id": 10, "name": "UNRESOLVED"}
+  ],
+  "families": [
+    {
+      "path": "assets/ch1/",
+      "files": 25, "bytes": 28400000, "category": "ACTIVE_CANDIDATE",
+      "storage": "GIT (commit 1)",
+      "note": "Chapter 1 candidate source imagery + IMAGE_GENERATION_MANIFEST; source for premium-hybrid build"
+    },
+    {
+      "path": "assets/ch2/",
+      "files": 12, "bytes": 17800000, "category": "ACTIVE_CANDIDATE",
+      "storage": "GIT (commit 1)",
+      "note": "Chapter 2 candidate source imagery + IMAGE_ASSET_MANIFEST"
+    },
+    {
+      "path": "assets/Cinematic Energy Concepts Storyboard (1).png",
+      "files": 1, "bytes": 1900000, "category": "HISTORICAL_PROVENANCE",
+      "storage": "GIT (commit 1)",
+      "note": "Early cinematic storyboard design artifact; unique"
+    },
+    {
+      "path": "curriculum/handouts/",
+      "files": 1, "bytes": 12700, "category": "CANONICAL_SOURCE",
+      "storage": "GIT (commit 1)",
+      "note": "ch1-energy-causes-change-worksheet.html editable source"
+    },
+    {
+      "path": "curriculum/slides/",
+      "files": 1, "bytes": 10700, "category": "CANONICAL_SOURCE",
+      "storage": "GIT (commit 1)",
+      "note": "01-ch1-energy-causes-change.md editable source"
+    },
+    {
+      "path": "docs/build-prompts/",
+      "files": 17, "bytes": 143000, "category": "CANONICAL_SOURCE",
+      "storage": "GIT (commit 1)",
+      "note": "Unit-1 build prompt sources (documents + unit1/)"
+    },
+    {
+      "path": "source-intake/2026-10-09-chapter-1/documents+images+SHA256SUMS+verification.log",
+      "files": 28, "bytes": 40000000, "category": "HISTORICAL_PROVENANCE",
+      "storage": "GIT (commit 1)",
+      "note": "Chapter 1 intake source documents + source photography + verified SHA256SUMS"
+    },
+    {
+      "path": "source-intake/2026-10-09-chapter-1/slideshows/",
+      "files": 10, "bytes": 115000000, "category": "HISTORICAL_PROVENANCE",
+      "storage": "EXTERNAL (not Git)",
+      "note": "Gemini AI draft slideshows (Level 4 idea bank); large; archive externally"
+    },
+    {
+      "path": "source-intake/2026-10-09-chapter-1/media/",
+      "files": 18, "bytes": 590000000, "category": "HISTORICAL_PROVENANCE",
+      "storage": "EXTERNAL (media storage, NOT Git)",
+      "note": "Chapter 1 intake MP4 media"
+    },
+    {
+      "path": "source-intake/2026-10-10-chapter-1-approved-notes/",
+      "files": 4, "bytes": 200000, "category": "OWNER_APPROVED",
+      "storage": "GIT (commit 1)",
+      "note": "Guided Notes approval evidence (student v2 + teacher key v2 + REGISTRATION + SHA256SUMS)"
+    },
+    {
+      "path": "production/candidates/ (final candidates only)",
+      "files": 12, "bytes": 150000000, "category": "ACTIVE_CANDIDATE",
+      "storage": "GIT (commit 2)",
+      "note": "Latest per-chapter candidate masters: ch1 premium-hybrid-v6-embedded-media, ch2 visual-candidate-v6-media"
+    },
+    {
+      "path": "production/candidates/ (intermediate versions v1-v5 + nested previews/assets/media)",
+      "files": 498, "bytes": 500000000, "category": "HISTORICAL_PROVENANCE",
+      "storage": "EXTERNAL (archive)",
+      "note": "Superseded candidate versions + reproducible previews + nested media"
+    },
+    {
+      "path": "production/classroom-ready/",
+      "files": 22, "bytes": 2000000, "category": "ACTIVE_CANDIDATE",
+      "storage": "GIT (commit 2)",
+      "note": "Week 2026-10-12 Chapter 1 classroom packet (DOCX/PDF + keys + reports)"
+    },
+    {
+      "path": "qa/reports/ (text .md/.json/.txt/.py)",
+      "files": 129, "bytes": 3000000, "category": "UNIQUE_QA_EVIDENCE",
+      "storage": "GIT (commit 3)",
+      "note": "CH1/CH2 candidate QA reports + phase5 audit reports"
+    },
+    {
+      "path": "qa/reports/ (png renders/contact sheets)",
+      "files": 139, "bytes": 90000000, "category": "REPRODUCIBLE_OUTPUT",
+      "storage": "EXTERNAL (archive; re-renderable)",
+      "note": "Contact sheets + visual QA renders"
+    },
+    {
+      "path": "qa/slides-qa/ (source .py/.md/.swift/.xcodeproj)",
+      "files": 40, "bytes": 1000000, "category": "UNIQUE_QA_EVIDENCE",
+      "storage": "GIT (commit 3)",
+      "note": "Slides QA harness source + README"
+    },
+    {
+      "path": "qa/slides-qa/ (.xcresult + png frames)",
+      "files": 527, "bytes": 285000000, "category": "REPRODUCIBLE_OUTPUT",
+      "storage": "EXTERNAL (not Git)",
+      "note": "Xcode test-result bundles + captured frames"
+    },
+    {
+      "path": "qa/ipad-artifact-qa/",
+      "files": 10, "bytes": 37700, "category": "UNIQUE_QA_EVIDENCE",
+      "storage": "GIT (commit 3)",
+      "note": "iPad artifact QA Xcode project (Swift + project.yml + manifests/ch3-current.json)"
+    },
+    {
+      "path": "inventory/ (analysis .md/.csv < 1MB)",
+      "files": 20, "bytes": 1000000, "category": "UNIQUE_QA_EVIDENCE",
+      "storage": "GIT (commit 4)",
+      "note": "Recovery analysis reports + classifications"
+    },
+    {
+      "path": "inventory/ (large .txt dumps > 1MB)",
+      "files": 20, "bytes": 48000000, "category": "REPRODUCIBLE_OUTPUT",
+      "storage": "EXTERNAL (not Git)",
+      "note": "Regenerable hash/listing dumps"
+    },
+    {
+      "path": "previews/",
+      "files": 196, "bytes": 93000000, "category": "REPRODUCIBLE_OUTPUT",
+      "storage": "EXTERNAL (not Git)",
+      "note": "Rendered slide PNG previews"
+    },
+    {
+      "path": ".codex-build/",
+      "files": 183, "bytes": 411000000, "category": "HISTORICAL_PROVENANCE",
+      "storage": "EXTERNAL (not Git)",
+      "note": "Codex candidate build snapshots (superseded by production/candidates)"
+    },
+    {
+      "path": "work/ (QA evidence scripts + reports)",
+      "files": 1162, "bytes": 152000000, "category": "UNIQUE_QA_EVIDENCE",
+      "storage": "GIT (commit 3, text only) / EXTERNAL (renders)",
+      "note": "Build + QA working artifacts; text/scripts preserved, renders external"
+    },
+    {
+      "path": "assets/supplemental/ (incl media)",
+      "files": 122, "bytes": 1700000000, "category": "HISTORICAL_PROVENANCE",
+      "storage": "EXTERNAL (media storage, NOT Git)",
+      "note": "Supplemental library + 1.3GB video library (ignored by policy)"
+    },
+    {
+      "path": ".venv/, node_modules/, tmp/, __pycache__/, .DS_Store, qa/work/, _review_renders/",
+      "files": 44200, "bytes": 3000000000, "category": "TEMPORARY_CACHE",
+      "storage": "NONE (regenerable)",
+      "note": "Dependencies, bytecode, caches, OS artifacts"
+    }
+  ]
+}

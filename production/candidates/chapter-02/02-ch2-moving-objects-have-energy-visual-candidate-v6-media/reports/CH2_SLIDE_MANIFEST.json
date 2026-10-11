@@ -1,0 +1,700 @@
+{
+  "schema_version": "ch2-slide-manifest.v2",
+  "build_id": "CH2-VISUAL-CANDIDATE-V6-MEDIA",
+  "slide_count": 49,
+  "slide_size_px": [
+    1280,
+    720
+  ],
+  "fonts": [
+    "Avenir Next",
+    "Georgia"
+  ],
+  "design_tokens": {
+    "teal": "#0F5A5C",
+    "aqua": "#0E8A97",
+    "dark": "#092F34",
+    "media": "#071E23",
+    "ink": "#22313A",
+    "soft": "#61727C",
+    "white": "#FFFFFF",
+    "warm": "#FBFCFA",
+    "pale": "#EAF7F7",
+    "border": "#D8E3E3",
+    "muted": "#EFF3F3",
+    "gold": "#A67C16"
+  },
+  "slides": [
+    {
+      "slide_id": "CH2-S01-OPENER",
+      "slide_number": 1,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "visual_asset_ids": [
+        "CH2-HERO-01"
+      ],
+      "layout_component": "chapter-opener",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S02-BQ",
+      "slide_number": 2,
+      "session": "1 and 2",
+      "required": true,
+      "notes_anchor": "BQ",
+      "concept_ids": [],
+      "visual_asset_ids": [],
+      "layout_component": "big-question",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S03-BQ-WRITE",
+      "slide_number": 3,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "BQ",
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "student-response",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S04-MARBLE-BEFORE",
+      "slide_number": 4,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "visual_asset_ids": [
+        "CH2-MARBLE-BEFORE-AFTER-01"
+      ],
+      "layout_component": "phenomenon-observe",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S05-PREDICT",
+      "slide_number": 5,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "prediction",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S06-MEDIA",
+      "slide_number": 6,
+      "session": "1 \u2014 Wednesday",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "media-shell",
+      "media_embedded": true
+    },
+    {
+      "slide_id": "CH2-S07-WHAT-CHANGED",
+      "slide_number": 7,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [
+        "CH2-MARBLE-BEFORE-AFTER-01"
+      ],
+      "layout_component": "before-after",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S08-EVIDENCE-MODEL",
+      "slide_number": 8,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "editable-model",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S09-V1-TEACH",
+      "slide_number": 9,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "V1",
+      "concept_ids": [
+        "CH2-V1-MOTION",
+        "CH2-C1-MOTION-POSITION"
+      ],
+      "visual_asset_ids": [
+        "CH2-VOC-MOTION-01"
+      ],
+      "layout_component": "vocabulary-hero",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S10-V1-WRITE",
+      "slide_number": 10,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "V1",
+      "concept_ids": [
+        "CH2-V1-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "write",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S11-V1-CHECK",
+      "slide_number": 11,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "V1",
+      "concept_ids": [
+        "CH2-V1-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "check",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S12-MOTION-BEGIN",
+      "slide_number": 12,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C6-OWN-OUTSIDE-MOTION"
+      ],
+      "visual_asset_ids": [
+        "CH2-OWN-OUTSIDE-MOTION-01"
+      ],
+      "layout_component": "split-visual",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S13-N1-WRITE",
+      "slide_number": 13,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "N1",
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C6-OWN-OUTSIDE-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "write",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S14-N1-CHECK",
+      "slide_number": 14,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "N1",
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C6-OWN-OUTSIDE-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "check",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S15-BASKETBALL",
+      "slide_number": 15,
+      "session": "1 \u2014 Wednesday",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "visual_asset_ids": [
+        "CH2-BASKETBALL-NET-01"
+      ],
+      "layout_component": "photo-application",
+      "media_embedded": true
+    },
+    {
+      "slide_id": "CH2-S16-V2-TEACH",
+      "slide_number": 16,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "V2",
+      "concept_ids": [
+        "CH2-V2-ENERGY-OF-MOTION",
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "visual_asset_ids": [
+        "CH2-VOC-ENERGY-OF-MOTION-01"
+      ],
+      "layout_component": "vocabulary-hero",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S17-V2-WRITE",
+      "slide_number": 17,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "V2",
+      "concept_ids": [
+        "CH2-V2-ENERGY-OF-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "write",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S18-V2-CHECK",
+      "slide_number": 18,
+      "session": "1 \u2014 Wednesday",
+      "required": true,
+      "notes_anchor": "V2",
+      "concept_ids": [
+        "CH2-V2-ENERGY-OF-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "check",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S19-N2-MODEL",
+      "slide_number": 19,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "editable-model",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S20-N2-WRITE",
+      "slide_number": 20,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "N2",
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "write-model",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S21-N2-DRAW",
+      "slide_number": 21,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "N2",
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "before-after-draw",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S22-N2-CHECK",
+      "slide_number": 22,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "N2",
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "check-model",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S23-N3-OVERVIEW",
+      "slide_number": 23,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "visual_asset_ids": [
+        "CH2-N3-HAMMER-01",
+        "CH2-N3-PENDULUM-01",
+        "CH2-N3-WIND-01"
+      ],
+      "layout_component": "three-image-concept",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S24-N3-WRITE",
+      "slide_number": 24,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "N3",
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "native-table",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S25-N3-CHECK",
+      "slide_number": 25,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "N3",
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "native-table",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S26-CHECK-WRITE",
+      "slide_number": 26,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "CHECK",
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "student-response",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S27-CHECK-REVEAL",
+      "slide_number": 27,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "CHECK",
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "sample-reveal",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S28-OPTIONAL-APPLY",
+      "slide_number": 28,
+      "session": "2 \u2014 Thursday",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "application",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S29-OBS-INFER",
+      "slide_number": 29,
+      "session": "2 \u2014 Thursday",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "comparison",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S30-BQ-NOW",
+      "slide_number": 30,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": "BQ \u00b7 NOW I THINK",
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "student-response",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S31-QUIZ",
+      "slide_number": 31,
+      "session": "2 \u2014 Thursday",
+      "required": true,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C1-MOTION-POSITION",
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE",
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "assessment-directions",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S32-REVIEW-1-Q",
+      "slide_number": 32,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-question",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S33-REVIEW-1-A",
+      "slide_number": 33,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-reveal",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S34-REVIEW-2-Q",
+      "slide_number": 34,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-question",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S35-REVIEW-2-A",
+      "slide_number": 35,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-reveal",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S36-REVIEW-3-Q",
+      "slide_number": 36,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-question",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S37-REVIEW-3-A",
+      "slide_number": 37,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-reveal",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S38-REVIEW-4-Q",
+      "slide_number": 38,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-question",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S39-REVIEW-4-A",
+      "slide_number": 39,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-reveal",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S40-REVIEW-5-Q",
+      "slide_number": 40,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-question",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S41-REVIEW-5-A",
+      "slide_number": 41,
+      "session": "Optional review after quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "review-reveal",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S42-FLEX-OPENER",
+      "slide_number": 42,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": "FLEX",
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "visual_asset_ids": [
+        "CH2-MOVING-MARBLES-01"
+      ],
+      "layout_component": "extension-opener",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S43-FLEX-MATERIALS",
+      "slide_number": 43,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "visual_asset_ids": [
+        "CH2-MOVING-MARBLES-01"
+      ],
+      "layout_component": "activity-setup",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S44-FLEX-PREDICT",
+      "slide_number": 44,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "prediction",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S45-FLEX-TRIAL",
+      "slide_number": 45,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "procedure",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S46-FLEX-RECORD",
+      "slide_number": 46,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "before-after-draw",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S47-FLEX-DISCUSS",
+      "slide_number": 47,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "discussion",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S48-FLEX-SAMPLE",
+      "slide_number": 48,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "visual_asset_ids": [
+        "CH2-MARBLE-BEFORE-AFTER-01"
+      ],
+      "layout_component": "sample-check",
+      "media_embedded": false
+    },
+    {
+      "slide_id": "CH2-S49-CLOSE",
+      "slide_number": 49,
+      "session": "After quiz or later",
+      "required": false,
+      "notes_anchor": null,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "visual_asset_ids": [],
+      "layout_component": "chapter-close",
+      "media_embedded": false
+    }
+  ]
+}

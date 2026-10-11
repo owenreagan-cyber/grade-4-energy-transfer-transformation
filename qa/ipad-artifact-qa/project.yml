@@ -1,0 +1,58 @@
+name: ScienceArtifactQA
+options:
+  bundleIdPrefix: com.qa.science
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CODE_SIGNING_ALLOWED: "NO"
+    CODE_SIGN_IDENTITY: ""
+
+targets:
+  ScienceArtifactQA:
+    type: application
+    platform: iOS
+    sources:
+      - ScienceArtifactQA
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.qa.science.ScienceArtifactQA
+        GENERATE_INFOPLIST_FILE: "YES"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UIStatusBarHidden: "YES"
+        INFOPLIST_KEY_UILaunchScreen_Generation: "YES"
+        INFOPLIST_KEY_CFBundleDisplayName: "Science Artifact QA"
+        TARGETED_DEVICE_FAMILY: "2"
+        SUPPORTS_MACCATALYST: "NO"
+        INFOPLIST_KEY_UIRequiresFullScreen: "YES"
+
+  ScienceArtifactQAUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - ScienceArtifactQAUITests
+    dependencies:
+      - target: ScienceArtifactQA
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.qa.science.ScienceArtifactQAUITests
+        GENERATE_INFOPLIST_FILE: "YES"
+        TEST_TARGET_NAME: ScienceArtifactQA
+        TARGETED_DEVICE_FAMILY: "2"
+
+schemes:
+  ScienceArtifactQA:
+    build:
+      targets:
+        ScienceArtifactQA: all
+        ScienceArtifactQAUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - ScienceArtifactQAUITests

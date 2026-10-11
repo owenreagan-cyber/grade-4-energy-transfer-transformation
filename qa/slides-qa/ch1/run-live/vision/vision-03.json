@@ -1,0 +1,15 @@
+{
+  "summary": "Slide has minor readability issue with instruction text size but no other critical problems.",
+  "text_issues": [],
+  "readability_issues": [
+    "Instruction text 'Write 1\u20132 quick ideas. No wrong answer yet.' appears too small for classroom projection."
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "WARN"
+}

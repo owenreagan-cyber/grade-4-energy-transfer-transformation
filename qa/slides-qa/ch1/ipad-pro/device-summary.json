@@ -1,0 +1,34 @@
+{
+  "device": "ipad-pro",
+  "discoveredAt": "2026-10-10T20:14:00Z",
+  "marketingName": "iPad Pro 13-inch (M4)",
+  "productType": "iPad16,6",
+  "chip": "Apple M4 (10-core CPU, arm64e)",
+  "osVersion": "26.7.1",
+  "osBuild": "23H30",
+  "udid": "00008132-001A10A23A05001C",
+  "serialNumber": "FKQ3LKXPDY",
+  "storageBytes": 1000555581440,
+  "biometrics": "Face ID",
+  "display": {
+    "nativeSize": "2752x2064",
+    "pointScale": 2,
+    "points": "1376x1032",
+    "type": "LCD (integrated)"
+  },
+  "connection": {
+    "transport": "wired (USB)",
+    "pairingState": "paired",
+    "authenticationType": "manualPairing",
+    "deviceState": "connected",
+    "bootState": "booted"
+  },
+  "developerMode": "Enabled",
+  "preparednessState": 7,
+  "googleSlides": {
+    "bundleId": "com.google.Slides",
+    "installed": true,
+    "presentationOpen": true,
+    "presentationTitle": "Energy Causes Change"
+  }
+}

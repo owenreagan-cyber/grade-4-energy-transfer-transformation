@@ -1,0 +1,15 @@
+{
+  "summary": "Slide is visually clear with no major issues but has small text in drawing boxes.",
+  "text_issues": [],
+  "readability_issues": [
+    "'draw' text in BEFORE and AFTER boxes is too small for classroom projection"
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

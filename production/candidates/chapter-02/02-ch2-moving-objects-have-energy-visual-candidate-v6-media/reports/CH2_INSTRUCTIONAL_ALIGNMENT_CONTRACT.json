@@ -1,0 +1,1449 @@
+{
+  "schema_version": "ch2-instructional-alignment.v2",
+  "chapter": 2,
+  "candidate": "02-ch2-moving-objects-have-energy-visual-candidate-v6-media.pptx",
+  "slides": [
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S01-OPENER",
+      "slide_number": 1,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Chapter opener",
+      "required": true,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "content_source_refs": [
+        "SR-CH2 pp. 7\u20139"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S01-OPENER-NOTES",
+      "media_id": null,
+      "layout_component": "chapter-opener",
+      "visual_asset_ids": [
+        "CH2-HERO-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S02-BQ",
+      "slide_number": 2,
+      "session": "1 and 2",
+      "instructional_mode": "Big Question discussion",
+      "required": true,
+      "concept_ids": [],
+      "content_source_refs": [
+        "SR-CH2 p. 7",
+        "GN-CH2 p. 1"
+      ],
+      "notes_anchor": "BQ",
+      "notes_page": 1,
+      "teacher_key_ref": null,
+      "exact_student_text": "How are energy, change, and movement of objects related?",
+      "prompt_id": null,
+      "response_type": "oral discussion",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 7",
+      "teacher_notes_id": "CH2-S02-BQ-NOTES",
+      "media_id": null,
+      "layout_component": "big-question",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S03-BQ-WRITE",
+      "slide_number": 3,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Guided Notes write",
+      "required": true,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 1"
+      ],
+      "notes_anchor": "BQ",
+      "notes_page": 1,
+      "teacher_key_ref": "GNK-CH2 p. 1",
+      "exact_student_text": "How are energy, change, and movement of objects related?",
+      "prompt_id": null,
+      "response_type": "1\u20132 written ideas",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S30-BQ-NOW",
+      "reader_reference": "p. 7",
+      "teacher_notes_id": "CH2-S03-BQ-WRITE-NOTES",
+      "media_id": null,
+      "layout_component": "student-response",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S04-MARBLE-BEFORE",
+      "slide_number": 4,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Demonstration observe",
+      "required": true,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "content_source_refs": [
+        "TG-L3 step 1"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "TG Lesson 3",
+      "teacher_notes_id": "CH2-S04-MARBLE-BEFORE-NOTES",
+      "media_id": null,
+      "layout_component": "phenomenon-observe",
+      "visual_asset_ids": [
+        "CH2-MARBLE-BEFORE-AFTER-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S05-PREDICT",
+      "slide_number": 5,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Prediction",
+      "required": true,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "content_source_refs": [
+        "TG-L3 step 1"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": "oral prediction",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S07-WHAT-CHANGED",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S05-PREDICT-NOTES",
+      "media_id": null,
+      "layout_component": "prediction",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S06-MEDIA",
+      "slide_number": 6,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Media support or live demonstration",
+      "required": false,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "content_source_refs": [
+        "TG-L3 step 1"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S06-MEDIA-NOTES",
+      "media_id": "CH2-MARBLE-COLLISION-VIDEO-A",
+      "layout_component": "media-shell",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED",
+      "video": {
+        "file": "media/ch2-videoA-marble-collision.mp4",
+        "source": "assets/supplemental/media/chapter-02/Marble_Collisions__Investigating_Motion_Energy.mp4",
+        "runtime_s": 40.0,
+        "codec": "H.264+AAC",
+        "poster": "media/posters/poster-A-marble.jpg",
+        "playback": "teacher-controlled (no autoplay)",
+        "qa_status": "EMBEDDED"
+      }
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S07-WHAT-CHANGED",
+      "slide_number": 7,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Demonstration observe",
+      "required": true,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "TG-L3 step 1",
+        "GNK-CH2 p. 2"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S07-WHAT-CHANGED-NOTES",
+      "media_id": null,
+      "layout_component": "before-after",
+      "visual_asset_ids": [
+        "CH2-MARBLE-BEFORE-AFTER-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S08-EVIDENCE-MODEL",
+      "slide_number": 8,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Evidence explanation",
+      "required": true,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "SR-CH2 p. 9",
+        "TG-L3 pp. 28\u201331"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S08-EVIDENCE-MODEL-NOTES",
+      "media_id": null,
+      "layout_component": "editable-model",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S09-V1-TEACH",
+      "slide_number": 9,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Vocabulary teach",
+      "required": true,
+      "concept_ids": [
+        "CH2-V1-MOTION",
+        "CH2-C1-MOTION-POSITION"
+      ],
+      "content_source_refs": [
+        "SR-CH2 p. 7"
+      ],
+      "notes_anchor": "V1",
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 7",
+      "teacher_notes_id": "CH2-S09-V1-TEACH-NOTES",
+      "media_id": null,
+      "layout_component": "vocabulary-hero",
+      "visual_asset_ids": [
+        "CH2-VOC-MOTION-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S10-V1-WRITE",
+      "slide_number": 10,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Guided Notes write",
+      "required": true,
+      "concept_ids": [
+        "CH2-V1-MOTION"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 1"
+      ],
+      "notes_anchor": "V1",
+      "notes_page": 1,
+      "teacher_key_ref": "GNK-CH2 p. 1",
+      "exact_student_text": "motion \u2014 the process of an object changing ______________ .",
+      "prompt_id": null,
+      "response_type": "one-word cloze",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S11-V1-CHECK",
+      "reader_reference": "p. 7",
+      "teacher_notes_id": "CH2-S10-V1-WRITE-NOTES",
+      "media_id": null,
+      "layout_component": "write",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S11-V1-CHECK",
+      "slide_number": 11,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Guided Notes check",
+      "required": true,
+      "concept_ids": [
+        "CH2-V1-MOTION"
+      ],
+      "content_source_refs": [
+        "GNK-CH2 p. 1"
+      ],
+      "notes_anchor": "V1",
+      "notes_page": 1,
+      "teacher_key_ref": "GNK-CH2 p. 1",
+      "exact_student_text": "motion \u2014 the process of an object changing position .",
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 7",
+      "teacher_notes_id": "CH2-S11-V1-CHECK-NOTES",
+      "media_id": null,
+      "layout_component": "check",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S12-MOTION-BEGIN",
+      "slide_number": 12,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Reader bridge",
+      "required": true,
+      "concept_ids": [
+        "CH2-C6-OWN-OUTSIDE-MOTION"
+      ],
+      "content_source_refs": [
+        "SR-CH2 p. 8"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 8",
+      "teacher_notes_id": "CH2-S12-MOTION-BEGIN-NOTES",
+      "media_id": null,
+      "layout_component": "split-visual",
+      "visual_asset_ids": [
+        "CH2-OWN-OUTSIDE-MOTION-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S13-N1-WRITE",
+      "slide_number": 13,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Guided Notes write",
+      "required": true,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C6-OWN-OUTSIDE-MOTION"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 1"
+      ],
+      "notes_anchor": "N1",
+      "notes_page": 1,
+      "teacher_key_ref": "GNK-CH2 p. 1",
+      "exact_student_text": "A moving object can cause a ______________ . / Some objects cause their own motion. Other objects are put into motion by ____________ motion.",
+      "prompt_id": null,
+      "response_type": "two-word cloze",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S14-N1-CHECK",
+      "reader_reference": "p. 8",
+      "teacher_notes_id": "CH2-S13-N1-WRITE-NOTES",
+      "media_id": null,
+      "layout_component": "write",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S14-N1-CHECK",
+      "slide_number": 14,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Guided Notes check",
+      "required": true,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C6-OWN-OUTSIDE-MOTION"
+      ],
+      "content_source_refs": [
+        "GNK-CH2 p. 1"
+      ],
+      "notes_anchor": "N1",
+      "notes_page": 1,
+      "teacher_key_ref": "GNK-CH2 p. 1",
+      "exact_student_text": "A moving object can cause a change . / Some objects cause their own motion. Other objects are put into motion by outside motion.",
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 8",
+      "teacher_notes_id": "CH2-S14-N1-CHECK-NOTES",
+      "media_id": null,
+      "layout_component": "check",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S15-BASKETBALL",
+      "slide_number": 15,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Reader application",
+      "required": false,
+      "concept_ids": [
+        "CH2-C2-MOVING-CAUSES-CHANGE"
+      ],
+      "content_source_refs": [
+        "SR-CH2 p. 9"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "pp. 8\u20139",
+      "teacher_notes_id": "CH2-S15-BASKETBALL-NOTES",
+      "media_id": "CH2-MOTION-IN-ACTION-VIDEO-B",
+      "layout_component": "photo-application",
+      "visual_asset_ids": [
+        "CH2-BASKETBALL-NET-01"
+      ],
+      "qa_status": "VERIFIED",
+      "video": {
+        "file": "media/ch2-videoB-motion-in-action.mp4",
+        "source": "assets/supplemental/media/chapter-02/Ch_2__Motion_Energy_in_Action.mp4",
+        "runtime_s": 40.0,
+        "codec": "H.264+AAC",
+        "poster": "media/posters/poster-B-motion.jpg",
+        "playback": "teacher-controlled (no autoplay)",
+        "qa_status": "EMBEDDED"
+      }
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S16-V2-TEACH",
+      "slide_number": 16,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Vocabulary teach",
+      "required": true,
+      "concept_ids": [
+        "CH2-V2-ENERGY-OF-MOTION",
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "content_source_refs": [
+        "SR-CH2 p. 9"
+      ],
+      "notes_anchor": "V2",
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S16-V2-TEACH-NOTES",
+      "media_id": null,
+      "layout_component": "vocabulary-hero",
+      "visual_asset_ids": [
+        "CH2-VOC-ENERGY-OF-MOTION-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S17-V2-WRITE",
+      "slide_number": 17,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Guided Notes write",
+      "required": true,
+      "concept_ids": [
+        "CH2-V2-ENERGY-OF-MOTION"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 2"
+      ],
+      "notes_anchor": "V2",
+      "notes_page": 2,
+      "teacher_key_ref": "GNK-CH2 p. 2",
+      "exact_student_text": "energy of motion \u2014 the energy an object possesses while it is ______________ .",
+      "prompt_id": null,
+      "response_type": "one-word cloze",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S18-V2-CHECK",
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S17-V2-WRITE-NOTES",
+      "media_id": null,
+      "layout_component": "write",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S18-V2-CHECK",
+      "slide_number": 18,
+      "session": "1 \u2014 Wednesday",
+      "instructional_mode": "Guided Notes check",
+      "required": true,
+      "concept_ids": [
+        "CH2-V2-ENERGY-OF-MOTION"
+      ],
+      "content_source_refs": [
+        "GNK-CH2 p. 2"
+      ],
+      "notes_anchor": "V2",
+      "notes_page": 2,
+      "teacher_key_ref": "GNK-CH2 p. 2",
+      "exact_student_text": "energy of motion \u2014 the energy an object possesses while it is moving .",
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S18-V2-CHECK-NOTES",
+      "media_id": null,
+      "layout_component": "check",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S19-N2-MODEL",
+      "slide_number": 19,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Reader model",
+      "required": true,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "SR-CH2 p. 9"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S19-N2-MODEL-NOTES",
+      "media_id": null,
+      "layout_component": "editable-model",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S20-N2-WRITE",
+      "slide_number": 20,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Guided Notes write",
+      "required": true,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 2"
+      ],
+      "notes_anchor": "N2",
+      "notes_page": 2,
+      "teacher_key_ref": "GNK-CH2 p. 2",
+      "exact_student_text": "All moving objects have energy of ______________ .",
+      "prompt_id": null,
+      "response_type": "one-word cloze",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S22-N2-CHECK",
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S20-N2-WRITE-NOTES",
+      "media_id": null,
+      "layout_component": "write-model",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S21-N2-DRAW",
+      "slide_number": 21,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Guided Notes draw and observe",
+      "required": true,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 2"
+      ],
+      "notes_anchor": "N2",
+      "notes_page": 2,
+      "teacher_key_ref": "GNK-CH2 p. 2",
+      "exact_student_text": "OBSERVE Marble collision \u2014 one moving marble rolls into a target marble. BEFORE / AFTER / What changed?",
+      "prompt_id": null,
+      "response_type": "before/after drawing plus one written observation",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S22-N2-CHECK",
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S21-N2-DRAW-NOTES",
+      "media_id": null,
+      "layout_component": "before-after-draw",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S22-N2-CHECK",
+      "slide_number": 22,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Guided Notes check",
+      "required": true,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "GNK-CH2 p. 2"
+      ],
+      "notes_anchor": "N2",
+      "notes_page": 2,
+      "teacher_key_ref": "GNK-CH2 p. 2",
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": "p. 9",
+      "teacher_notes_id": "CH2-S22-N2-CHECK-NOTES",
+      "media_id": null,
+      "layout_component": "check-model",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S23-N3-OVERVIEW",
+      "slide_number": 23,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Reader examples",
+      "required": true,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "content_source_refs": [
+        "SR-CH2 pp. 10\u201312"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": "pp. 10\u201312",
+      "teacher_notes_id": "CH2-S23-N3-OVERVIEW-NOTES",
+      "media_id": null,
+      "layout_component": "three-image-concept",
+      "visual_asset_ids": [
+        "CH2-N3-HAMMER-01",
+        "CH2-N3-PENDULUM-01",
+        "CH2-N3-WIND-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S24-N3-WRITE",
+      "slide_number": 24,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Guided Notes table",
+      "required": true,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 3"
+      ],
+      "notes_anchor": "N3",
+      "notes_page": 3,
+      "teacher_key_ref": "GNK-CH2 p. 3",
+      "exact_student_text": "Write or draw the change each moving object causes.",
+      "prompt_id": null,
+      "response_type": "three-row table",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S25-N3-CHECK",
+      "reader_reference": "pp. 10\u201312",
+      "teacher_notes_id": "CH2-S24-N3-WRITE-NOTES",
+      "media_id": null,
+      "layout_component": "native-table",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S25-N3-CHECK",
+      "slide_number": 25,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Guided Notes check",
+      "required": true,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "content_source_refs": [
+        "GNK-CH2 p. 3"
+      ],
+      "notes_anchor": "N3",
+      "notes_page": 3,
+      "teacher_key_ref": "GNK-CH2 p. 3",
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": "pp. 10\u201312",
+      "teacher_notes_id": "CH2-S25-N3-CHECK-NOTES",
+      "media_id": null,
+      "layout_component": "native-table",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S26-CHECK-WRITE",
+      "slide_number": 26,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Guided Notes synthesis write",
+      "required": true,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 3"
+      ],
+      "notes_anchor": "CHECK",
+      "notes_page": 3,
+      "teacher_key_ref": "GNK-CH2 p. 3",
+      "exact_student_text": "How do we know a moving object has energy? Start with: \u201cWe know because the moving object causes \u2026\u201d",
+      "prompt_id": null,
+      "response_type": "written explanation",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S27-CHECK-REVEAL",
+      "reader_reference": "pp. 7\u201312",
+      "teacher_notes_id": "CH2-S26-CHECK-WRITE-NOTES",
+      "media_id": null,
+      "layout_component": "student-response",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S27-CHECK-REVEAL",
+      "slide_number": 27,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Guided Notes sample reveal",
+      "required": true,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "GNK-CH2 p. 3"
+      ],
+      "notes_anchor": "CHECK",
+      "notes_page": 3,
+      "teacher_key_ref": "GNK-CH2 p. 3",
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": "pp. 7\u201312",
+      "teacher_notes_id": "CH2-S27-CHECK-REVEAL-NOTES",
+      "media_id": null,
+      "layout_component": "sample-reveal",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S28-OPTIONAL-APPLY",
+      "slide_number": 28,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Optional application",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "CUSTOM application grounded in SR-CH2 p. 9"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S28-OPTIONAL-APPLY-NOTES",
+      "media_id": null,
+      "layout_component": "application",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S29-OBS-INFER",
+      "slide_number": 29,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Optional reasoning support",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "ADAPTED from TG-L3 change-as-evidence framing"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S29-OBS-INFER-NOTES",
+      "media_id": null,
+      "layout_component": "comparison",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S30-BQ-NOW",
+      "slide_number": 30,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Final Guided Notes synthesis",
+      "required": true,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "GN-CH2 p. 3"
+      ],
+      "notes_anchor": "BQ \u00b7 NOW I THINK",
+      "notes_page": 3,
+      "teacher_key_ref": "GNK-CH2 p. 3",
+      "exact_student_text": "How are energy, change, and movement of objects related?",
+      "prompt_id": null,
+      "response_type": "written synthesis",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": null,
+      "reader_reference": "pp. 7\u201312",
+      "teacher_notes_id": "CH2-S30-BQ-NOW-NOTES",
+      "media_id": null,
+      "layout_component": "student-response",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S31-QUIZ",
+      "slide_number": 31,
+      "session": "2 \u2014 Thursday",
+      "instructional_mode": "Assessment transition",
+      "required": true,
+      "concept_ids": [
+        "CH2-C1-MOTION-POSITION",
+        "CH2-C2-MOVING-CAUSES-CHANGE",
+        "CH2-C3-ENERGY-OF-MOTION",
+        "CH2-C4-CHANGE-AS-EVIDENCE",
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "content_source_refs": [
+        "PACE-CH2",
+        "production/quizzes/02-ch2-moving-objects-have-energy-quiz.pdf"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S31-QUIZ-NOTES",
+      "media_id": null,
+      "layout_component": "assessment-directions",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S32-REVIEW-1-Q",
+      "slide_number": 32,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 1 question",
+      "required": false,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q1",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S33-REVIEW-1-A",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S32-REVIEW-1-Q-NOTES",
+      "media_id": null,
+      "layout_component": "review-question",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S33-REVIEW-1-A",
+      "slide_number": 33,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 1 answer",
+      "required": false,
+      "concept_ids": [
+        "CH2-C3-ENERGY-OF-MOTION"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q1",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S33-REVIEW-1-A-NOTES",
+      "media_id": null,
+      "layout_component": "review-reveal",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S34-REVIEW-2-Q",
+      "slide_number": 34,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 2 question",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q2",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S35-REVIEW-2-A",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S34-REVIEW-2-Q-NOTES",
+      "media_id": null,
+      "layout_component": "review-question",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S35-REVIEW-2-A",
+      "slide_number": 35,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 2 answer",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q2",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S35-REVIEW-2-A-NOTES",
+      "media_id": null,
+      "layout_component": "review-reveal",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S36-REVIEW-3-Q",
+      "slide_number": 36,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 3 question",
+      "required": false,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q3",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S37-REVIEW-3-A",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S36-REVIEW-3-Q-NOTES",
+      "media_id": null,
+      "layout_component": "review-question",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S37-REVIEW-3-A",
+      "slide_number": 37,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 3 answer",
+      "required": false,
+      "concept_ids": [
+        "CH2-C5-USEFUL-MOTION"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q3",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S37-REVIEW-3-A-NOTES",
+      "media_id": null,
+      "layout_component": "review-reveal",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S38-REVIEW-4-Q",
+      "slide_number": 38,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 4 question",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q4",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S39-REVIEW-4-A",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S38-REVIEW-4-Q-NOTES",
+      "media_id": null,
+      "layout_component": "review-question",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S39-REVIEW-4-A",
+      "slide_number": 39,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 4 answer",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q4",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S39-REVIEW-4-A-NOTES",
+      "media_id": null,
+      "layout_component": "review-reveal",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S40-REVIEW-5-Q",
+      "slide_number": 40,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 5 question",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q5",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S41-REVIEW-5-A",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S40-REVIEW-5-Q-NOTES",
+      "media_id": null,
+      "layout_component": "review-question",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S41-REVIEW-5-A",
+      "slide_number": 41,
+      "session": "Optional review after quiz or later",
+      "instructional_mode": "Review 5 answer",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "Canonical Chapter 2 review slides 28\u201337"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-REVIEW-Q5",
+      "response_type": "A/B/C/D vote",
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S41-REVIEW-5-A-NOTES",
+      "media_id": null,
+      "layout_component": "review-reveal",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S42-FLEX-OPENER",
+      "slide_number": 42,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional extension opener",
+      "required": false,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "content_source_refs": [
+        "ADAPTED TG-L3 / AP 3.1"
+      ],
+      "notes_anchor": "FLEX",
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": "CH2-MOVING-MARBLES",
+      "response_type": "oral prediction",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S42-FLEX-OPENER-NOTES",
+      "media_id": null,
+      "layout_component": "extension-opener",
+      "visual_asset_ids": [
+        "CH2-MOVING-MARBLES-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S43-FLEX-MATERIALS",
+      "slide_number": 43,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional activity setup",
+      "required": false,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "content_source_refs": [
+        "production/worksheets/02-ch2-moving-marbles-student.pdf"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S43-FLEX-MATERIALS-NOTES",
+      "media_id": null,
+      "layout_component": "activity-setup",
+      "visual_asset_ids": [
+        "CH2-MOVING-MARBLES-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S44-FLEX-PREDICT",
+      "slide_number": 44,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional activity prediction",
+      "required": false,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "content_source_refs": [
+        "production/worksheets/02-ch2-moving-marbles-student.pdf"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": "written prediction",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S48-FLEX-SAMPLE",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S44-FLEX-PREDICT-NOTES",
+      "media_id": null,
+      "layout_component": "prediction",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S45-FLEX-TRIAL",
+      "slide_number": 45,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional activity procedure",
+      "required": false,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "content_source_refs": [
+        "production/worksheets/02-ch2-moving-marbles-student.pdf"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S45-FLEX-TRIAL-NOTES",
+      "media_id": null,
+      "layout_component": "procedure",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S46-FLEX-RECORD",
+      "slide_number": 46,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional activity drawing",
+      "required": false,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "content_source_refs": [
+        "production/worksheets/02-ch2-moving-marbles-student.pdf"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": "before/after drawing and observation",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S48-FLEX-SAMPLE",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S46-FLEX-RECORD-NOTES",
+      "media_id": null,
+      "layout_component": "before-after-draw",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S47-FLEX-DISCUSS",
+      "slide_number": 47,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional evidence discussion",
+      "required": false,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "content_source_refs": [
+        "ADAPTED TG-L3 / AP 3.1"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": "oral explanation",
+      "answer_visibility": "HIDDEN",
+      "reveal_partner_id": "CH2-S48-FLEX-SAMPLE",
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S47-FLEX-DISCUSS-NOTES",
+      "media_id": null,
+      "layout_component": "discussion",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S48-FLEX-SAMPLE",
+      "slide_number": 48,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional activity sample check",
+      "required": false,
+      "concept_ids": [
+        "CH2-C7-MARBLE-EXTENSION"
+      ],
+      "content_source_refs": [
+        "ADAPTED TG-L3 / AP 3.1"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "VISIBLE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S48-FLEX-SAMPLE-NOTES",
+      "media_id": null,
+      "layout_component": "sample-check",
+      "visual_asset_ids": [
+        "CH2-MARBLE-BEFORE-AFTER-01"
+      ],
+      "qa_status": "VERIFIED"
+    },
+    {
+      "chapter": 2,
+      "slide_id": "CH2-S49-CLOSE",
+      "slide_number": 49,
+      "session": "After quiz or later",
+      "instructional_mode": "Optional closure and bridge",
+      "required": false,
+      "concept_ids": [
+        "CH2-C4-CHANGE-AS-EVIDENCE"
+      ],
+      "content_source_refs": [
+        "CUSTOM bridge to Chapter 3"
+      ],
+      "notes_anchor": null,
+      "notes_page": null,
+      "teacher_key_ref": null,
+      "exact_student_text": null,
+      "prompt_id": null,
+      "response_type": null,
+      "answer_visibility": "NONE",
+      "reveal_partner_id": null,
+      "reader_reference": null,
+      "teacher_notes_id": "CH2-S49-CLOSE-NOTES",
+      "media_id": null,
+      "layout_component": "chapter-close",
+      "visual_asset_ids": [],
+      "qa_status": "VERIFIED"
+    }
+  ],
+  "media_summary": {
+    "videoA_marble_collision": {
+      "slide": 6,
+      "status": "EMBEDDED"
+    },
+    "videoB_motion_in_action": {
+      "slide": 15,
+      "status": "EMBEDDED"
+    },
+    "videoC_things_on_the_move": {
+      "status": "STANDALONE_FALLBACK",
+      "note": "Selected + validated; no clean embed slot in 49-slide layout (slide 23 is a dense 3-panel concept). Teacher plays from media folder during N3 discussion."
+    }
+  }
+}

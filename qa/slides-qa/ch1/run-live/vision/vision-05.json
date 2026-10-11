@@ -1,0 +1,13 @@
+{
+  "summary": "The slide is visually clear, text is readable, and content aligns with Grade 4 science inquiry goals without issues.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [],
+  "composition_issues": [],
+  "overall": "PASS"
+}

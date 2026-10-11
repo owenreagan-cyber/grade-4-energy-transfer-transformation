@@ -1,0 +1,43 @@
+[0000.0-0004.4] Energy is all around us, but we can't actually see it.
+[0004.4-0009.2] Instead, we know it is present because of the physical footprints it leaves behind.
+[0009.2-0012.0] That brings us to the golden rule for this unit.
+[0012.0-0015.0] Whenever you see a change happen anywhere in the world,
+[0015.0-0019.0] that change is your direct evidence that energy is involved.
+[0019.0-0022.8] We define energy as the ability to cause a change,
+[0022.8-0026.2] meaning an object or environment becomes different.
+[0026.2-0030.2] To study energy, we have to build a habit of rigorous observation.
+[0030.2-0036.2] We need to look closely at our environment and identify exactly when and how things become different.
+[0036.2-0040.7] Let's test our observation skills on a standard piece of classroom equipment.
+[0040.7-0043.2] First, let's establish our baseline.
+[0043.2-0045.7] Look closely at the pencil and sharpener.
+[0045.7-0049.7] The room is perfectly quiet and everything is sitting completely still.
+[0049.7-0053.2] Because the scene is quiet and nothing is altering its shape,
+[0053.2-0056.7] we do not have any active evidence of energy at work.
+[0056.7-0060.7] Now watch what happens when a hand pushes the pencil into the machine.
+[0060.7-0062.7] The silence breaks immediately.
+[0062.7-0065.7] A loud, grinding motor noise takes over the room.
+[0065.7-0073.2] At the exact same time, the physical shape of the wood is carved down from a flat cylinder into a sharp pointed cone.
+[0073.2-0075.7] Now it is your turn to log the evidence.
+[0075.7-0081.2] Pause the video, open your science notebook, and write down every detail you just noticed changing.
+[0081.2-0087.2] Forcing ourselves to list exactly what we see and hear stops us from jumping to conclusions too early.
+[0087.2-0090.7] Good scientific claims rely on hard evidence.
+[0090.7-0091.7] Welcome back.
+[0091.7-0095.2] Looking at your list, you likely noted the obvious physical change.
+[0095.2-0097.7] The wood went from dull to razor sharp.
+[0097.7-0104.7] You also probably wrote down the noise, going from a completely silent room to a loud, grinding motor is a major shift.
+[0104.7-0108.2] Sound is a valid and crucial piece of scientific evidence.
+[0108.2-0115.7] We cannot see the electrical current flowing from the wall outlet into the sharpener, but we know that electricity powers a motor inside,
+[0115.7-0118.7] which in turn, spins a set of metal blades.
+[0118.7-0125.7] Those spinning blades do physical work against the wood, shaving it down and vibrating the air to make sound.
+[0125.7-0135.7] Because we can see the new shape and hear the loud noise, we have undeniable proof that invisible energy transferred into this machine to cause those changes.
+[0135.7-0140.7] To track this process moving forward, we use a formal three-step model.
+[0140.7-0145.7] Energy flows in, it causes a change, and that change provides our evidence.
+[0145.7-0149.7] For our sharpener, electrical energy powers the spinning blades.
+[0149.7-0153.7] That motion creates a pointed tip and loud noise.
+[0153.7-0156.7] Notice the difference between the ends of this chain.
+[0156.7-0161.7] The evidence box contains what we can directly observe with our eyes and ears.
+[0161.7-0166.7] The energy box is how we explain what caused those observations to happen.
+[0166.7-0168.7] Let's review what we just documented.
+[0168.7-0175.7] What exactly changed with the pencil and how does that specific evidence prove energy was present?
+[0175.7-0179.7] Every change you observe is direct evidence of energy at work.
+[0179.7-0181.7] Your teacher will take it from here to discuss your answers.

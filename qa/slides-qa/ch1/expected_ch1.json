@@ -1,0 +1,75 @@
+{
+  "chapter": 1,
+  "title": "Energy Causes Change",
+  "presentationId": "1txs8WOyV_Ndi6E9Z6-mUlNsvw5ZDDeXW6FZv_OVRHPI",
+  "expected": {
+    "totalSlides": 48,
+    "instructionalSlides": 45,
+    "videoSlides": 3
+  },
+  "bigQuestion": "Where can we observe evidence of energy causing change?",
+  "vocabulary": [
+    {
+      "group": "V1",
+      "readerPage": "p. 1",
+      "terms": [
+        { "term": "energy", "definition": "the ability to cause change", "blank": "change" },
+        { "term": "change", "definition": "to become different", "blank": "different" }
+      ]
+    },
+    {
+      "group": "V2",
+      "readerPage": "p. 4",
+      "terms": [
+        { "term": "stored energy", "definition": "energy that has the ability to cause change at a later time", "blank": "later" }
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "id": "N1",
+      "title": "Energy Causes Change",
+      "readerPages": "pp. 1-2",
+      "statement": "Energy has the ability to cause change.",
+      "fill": "When you see a change, you are seeing evidence of energy.",
+      "blank": "evidence",
+      "model": ["ENERGY", "CHANGE", "EVIDENCE"]
+    },
+    {
+      "id": "N2",
+      "title": "Energy Occurs in Different Forms",
+      "readerPages": "p. 3",
+      "forms": ["motion", "sound", "light", "heat", "electrical energy"]
+    },
+    {
+      "id": "N3",
+      "title": "Objects Can Store Energy",
+      "readerPages": "pp. 4-5",
+      "model": ["STORED ENERGY", "RELEASE", "CHANGE"],
+      "examples": ["battery (in a flashlight)", "stretched rubber band", "raised object (apple)"],
+      "blank": "position"
+    },
+    {
+      "id": "N4",
+      "title": "Recognizing Evidence",
+      "readerPages": "pp. 1-5",
+      "components": ["BEFORE", "AFTER", "What changed?", "CHECK YOUR THINKING"]
+    }
+  ],
+  "demo": {
+    "object": "Electric Pencil Sharpener",
+    "sequence": ["observe", "predict", "run + BEFORE/AFTER", "changes are clues"]
+  },
+  "videoExpectations": [
+    { "name": "Pencil-sharpener video", "position": "after prediction (slide 7/8)", "reader": "demo support" },
+    { "name": "Stored Energy video", "position": "after stored-energy explanation (slide ~25)", "reader": "N3 support" },
+    { "name": "Why Still Objects Secretly Have Energy video", "position": "after stored-energy explanation, before N3 writing (before slide 26)", "reader": "N3 retrieval" }
+  ],
+  "reviewAnswers": {
+    "range": "34-45",
+    "correctLetters": ["C", "A", "D", "B", "A", "C"]
+  },
+  "bannedVocabulary": ["kinetic", "potential", "gravitational potential", "mechanical", "radiant", "compression wave", "inertia"],
+  "forbiddenWord": "proof",
+  "allowedAlternative": "evidence"
+}

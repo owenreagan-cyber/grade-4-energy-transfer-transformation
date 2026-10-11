@@ -1,0 +1,19 @@
+{
+  "summary": "Slide has science and answer leak issues but no text/image/overlap problems.",
+  "text_issues": [],
+  "readability_issues": [
+    "The instruction text 'Now write the same word in the last box of your model.' appears smaller than main content text, potentially hard to read from back of classroom."
+  ],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [],
+  "hierarchy_issues": [],
+  "science_issues": [
+    "The slide states 'When you see a change, you are seeing evidence of energy' but the model flow (ENERGY \u2192 CHANGE \u2192 EVIDENCE) incorrectly separates 'evidence' from 'change', as the change itself is the evidence of energy (so the model should end with 'CHANGE', not 'EVIDENCE')."
+  ],
+  "answer_leak": [
+    "The word 'evidence' is highlighted in the text 'you are seeing evidence of energy', revealing the answer students are supposed to write in the last box of their model."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

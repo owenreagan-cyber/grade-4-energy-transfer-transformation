@@ -1,0 +1,17 @@
+{
+  "summary": "Slide has an answer leak and unclear 'D' label but otherwise acceptable.",
+  "text_issues": [],
+  "readability_issues": [],
+  "image_issues": [],
+  "overlap_issues": [],
+  "label_issues": [
+    "'D' next to 'EXPLAIN' is unclear or possibly a typo"
+  ],
+  "hierarchy_issues": [],
+  "science_issues": [],
+  "answer_leak": [
+    "The slide states 'Those changes are clues that energy was involved.' which reveals the answer to the 'How do we know energy was involved?' question."
+  ],
+  "composition_issues": [],
+  "overall": "WARN"
+}

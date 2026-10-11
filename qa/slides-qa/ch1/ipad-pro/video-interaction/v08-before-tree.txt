@@ -1,0 +1,59 @@
+Attributes: Application, 0x109f557c0, pid: 5556, label: 'Slides'
+Element subtree:
+ →Application, 0x109f557c0, pid: 5556, label: 'Slides'
+    Window (Main), 0x109f548c0, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x109f54780, {{0.0, 0.0}, {1376.0, 1032.0}}
+        Other, 0x109f54640, {{0.0, 0.0}, {1376.0, 1032.0}}
+          Other, 0x109f54500, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x109f543c0, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x109f54280, {{0.0, 0.0}, {1376.0, 1032.0}}
+        Other, 0x109f54140, {{0.0, 0.0}, {1376.0, 1032.0}}
+          Other, 0x109f54000, {{0.0, 0.0}, {1376.0, 1032.0}}
+            Other, 0x109f57200, {{0.0, 0.0}, {1376.0, 1032.0}}
+              Other, 0x109f575c0, {{0.0, 0.0}, {1376.0, 1032.0}}
+                Button, 0x109f57700, {{0.0, 0.0}, {1376.0, 92.0}}, label: 'Show controls'
+                Other, 0x109f57840, {{0.0, 0.0}, {1376.0, 1032.0}}
+                  WebView, 0x109f57980, {{0.0, 0.0}, {1376.0, 1032.0}}
+                    WebView, 0x109f57ac0, {{0.0, 0.0}, {1376.0, 1032.0}}
+                      WebView, 0x109f57c00, {{0.0, 0.0}, {1376.0, 1032.0}}
+                        Other, 0x109f57d40, {{0.0, 0.0}, {1376.0, 1032.0}}
+                          Other, 0x109f57e80, {{0.0, 0.0}, {1376.0, 1032.0}}
+                            Other, 0x109f56e40, {{0.0, 0.0}, {1376.0, 1032.0}}
+                              Other, 0x109f56bc0, {{0.0, 0.0}, {1376.0, 1032.0}}, label: 'Copy of 01-ch1-energy-causes-change-premium-hybrid-v6-embedded-media copy - Google Slides', Focused
+                                Other, 0x109f56440, {{0.0, 0.0}, {1376.0, 1032.0}}, Focused
+                                  Other, 0x109f566c0, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                    Other, 0x109f56800, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                      Other, 0x109f56940, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                        Other, 0x109f56a80, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                          Image, 0x109f56d00, {{0.0, 128.0}, {1376.0, 775.0}}, label: 'Slide 8 of 48:', Focused
+                                          Other, 0x109f55540, {{0.0, 128.0}, {1376.0, 775.0}}, Focused
+                                            Image, 0x109f56f80, {{71.0, 164.0}, {1205.0, 94.0}}, label: 'WATCH & OBSERVE — Pencil Sharpening', Focused
+                                            Image, 0x109f570c0, {{71.0, 269.0}, {1227.0, 87.0}}, label: 'Find out: What changes about the pencil? What do you see and hear?', Focused
+                                          Other, 0x109f55040, {{222.0, 365.0}, {933.0, 525.0}}, label: 'Chapter 1 - Pencil Sharpener Quick Visual.mp4', Focused
+                                            Other, 0x109f54dc0, {{222.0, 365.0}, {932.0, 524.0}}, Focused
+                                              Other, 0x109f54b40, {{222.0, 365.0}, {932.0, 524.0}}, label: 'Chapter 1 - Pencil Sharpener Quick Visual.mp4', Focused
+                                                Other, 0x109f54a00, {{222.0, 365.0}, {932.0, 524.0}}, label: 'YouTube Video Player', Focused
+                                                  Other, 0x109f57480, {{222.0, 365.0}, {932.0, 10.0}}, Focused
+                                                  Other, 0x109f57340, {{222.0, 365.0}, {932.0, 10.0}}, Focused
+                                                  Other, 0x109f82f80, {{222.0, 365.0}, {932.0, 524.0}}, Focused
+                                                    Other, 0x106d7b340, {{222.0, 365.0}, {932.0, 524.0}}, Focused
+                                                    Button, 0x106d7b480, {{658.0, 597.0}, {60.0, 60.0}}, label: 'Play', Focused
+                                                  Other, 0x106d7b700, {{222.0, 365.0}, {932.0, 10.0}}, Focused
+                      Other, 0x106d7b200, {{1343.0, 30.0}, {30.0, 972.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x106d7bac0, {{1370.0, 1000.0}, {3.0, 7.0}}
+                      Other, 0x106d7bc00, {{30.0, 999.0}, {1316.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x106d7bd40, {{1346.0, 1026.0}, {7.0, 3.0}}
+                      Other, 0x106d7b840, {{1343.0, 30.0}, {30.0, 972.0}}, label: 'Vertical scroll bar, 1 page', value: 0%
+                        Other, 0x106d792c0, {{1370.0, 1000.0}, {3.0, 7.0}}
+                      Other, 0x106d7be80, {{30.0, 999.0}, {1316.0, 30.0}}, label: 'Horizontal scroll bar, 1 page', value: 0%
+                        Other, 0x106d7b5c0, {{1346.0, 1026.0}, {7.0, 3.0}}
+    Window, 0x106d7b980, {{0.0, 0.0}, {1376.0, 1032.0}}
+      Other, 0x109edf480, {{0.0, 0.0}, {1376.0, 1032.0}}
+        Other, 0x109edde00, {{0.0, 0.0}, {1376.0, 1032.0}}
+Path to element:
+ →Application, 0x109f557c0, pid: 5556, label: 'Slides'
+Query chain:
+ →Find: Application 'com.google.Slides'
+  Output: {
+    Application, 0x109ede1c0, pid: 5556, label: 'Slides'
+  }

@@ -1,0 +1,8 @@
+{
+  "summary": "The screenshot shows the iOS Settings app (Developer section), not a Google Slides presentation. No presentation slide content is visible.",
+  "content": "iOS Settings app (Developer section)",
+  "issues": [
+    "No Google Slides presentation slide is visible; the screen shows the iOS Settings app instead"
+  ],
+  "overall": "FAIL"
+}

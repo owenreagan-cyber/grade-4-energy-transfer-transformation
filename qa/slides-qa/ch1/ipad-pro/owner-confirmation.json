@@ -1,0 +1,28 @@
+{
+  "recordType": "OWNER_CONFIRMATION",
+  "schemaVersion": 1,
+  "chapter": 1,
+  "chapterTitle": "Energy Causes Change",
+  "presentationId": "1txs8WOyV_Ndi6E9Z6-mUlNsvw5ZDDeXW6FZv_OVRHPI",
+  "device": {
+    "model": "iPad Pro 13-inch (M4)",
+    "productType": "iPad16,6",
+    "udid": "00008132-001A10A23A05001C"
+  },
+  "confirmedAt": "2026-10-10T21:15:00Z",
+  "confirmationSource": "OWNER (Owen Reagan) — personally listened during the physical iPad Pro XCUITest session",
+  "evidenceClass": "OWNER_VERIFIED",
+  "separatedFrom": "instrumented XCUITest measurements (see walkthrough/video-interaction evidence)",
+  "findings": [
+    { "check": "audio_playback", "slides": [8, 27, 28], "result": "PASS", "source": "OWNER_VERIFIED" },
+    { "check": "video_play_pause_resume", "slides": [8, 27, 28], "result": "PASS", "source": "OWNER_VERIFIED + functional" },
+    { "check": "full_slide_walkthrough", "slides": "48/48", "result": "PASS", "source": "INSTRUMENTED (position-verified)" },
+    { "check": "physical_device_playback_acceptance", "result": "APPROVED", "source": "OWNER" }
+  ],
+  "audioIssueClosed": true,
+  "audioIssueNote": "Audio-verification issue closed by owner confirmation. No further audio capture requested.",
+  "goldCertification": {
+    "autoAwarded": false,
+    "note": "This record closes the physical-device audio gap only. Unrelated visual, curriculum, and release gates remain and are not affected by this confirmation."
+  }
+}
